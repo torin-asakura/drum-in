@@ -1,0 +1,10 @@
+{
+  "name": "@site/social",
+  "packageManager": "yarn@3.0.0",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17"
+  }
+}
