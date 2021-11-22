@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "build": "yarn app renderer build --export",
-    "dev": "yarn app renderer dev"
+    "build": "next build",
+    "dev": "next dev"
   },
   "dependencies": {
     "@apollo/client": "^3.3.21",
