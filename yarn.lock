@@ -1181,7 +1181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.4.1":
+"@emotion/react@npm:^11.4.1, @emotion/react@npm:^11.6.0":
   version: 11.6.0
   resolution: "@emotion/react@npm:11.6.0"
   dependencies:
@@ -1224,7 +1224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.3.0":
+"@emotion/styled@npm:^11.3.0, @emotion/styled@npm:^11.6.0":
   version: 11.6.0
   resolution: "@emotion/styled@npm:11.6.0"
   dependencies:
@@ -1733,15 +1733,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@site/about-instructor@workspace:site/about-instructor":
+"@site/about-instructor-fragment@workspace:site/about-instructor-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/about-instructor@workspace:site/about-instructor"
+  resolution: "@site/about-instructor-fragment@workspace:site/about-instructor-fragment"
   languageName: unknown
   linkType: soft
 
-"@site/adress@workspace:site/adress":
+"@site/address-fragment@workspace:site/address-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/adress@workspace:site/adress"
+  resolution: "@site/address-fragment@workspace:site/address-fragment"
   languageName: unknown
   linkType: soft
 
@@ -1786,15 +1786,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/course-description@workspace:site/course-description":
+"@site/course-description-fragment@workspace:site/course-description-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/course-description@workspace:site/course-description"
+  resolution: "@site/course-description-fragment@workspace:site/course-description-fragment"
   languageName: unknown
   linkType: soft
 
-"@site/education@workspace:site/education":
+"@site/education-fragment@workspace:site/education-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/education@workspace:site/education"
+  resolution: "@site/education-fragment@workspace:site/education-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/header-fragment@workspace:site/header-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/header-fragment@workspace:site/header-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@site/ui": "workspace:site/ui"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 
@@ -1809,42 +1824,57 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/individual-lessons@workspace:site/individual-lessons":
+"@site/individual-lessons-fragment@workspace:site/individual-lessons-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/individual-lessons@workspace:site/individual-lessons"
+  resolution: "@site/individual-lessons-fragment@workspace:site/individual-lessons-fragment"
   languageName: unknown
   linkType: soft
 
-"@site/portfolio@workspace:site/portfolio":
+"@site/portfolio-fragment@workspace:site/portfolio-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/portfolio@workspace:site/portfolio"
+  resolution: "@site/portfolio-fragment@workspace:site/portfolio-fragment"
   languageName: unknown
   linkType: soft
 
-"@site/reviews@workspace:site/reviews":
+"@site/reviews-fragment@workspace:site/reviews-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/reviews@workspace:site/reviews"
+  resolution: "@site/reviews-fragment@workspace:site/reviews-fragment"
   languageName: unknown
   linkType: soft
 
-"@site/skills-presentation@workspace:site/skills-presentation":
+"@site/skills-presentation-fragment@workspace:site/skills-presentation-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/skills-presentation@workspace:site/skills-presentation"
+  resolution: "@site/skills-presentation-fragment@workspace:site/skills-presentation-fragment"
   languageName: unknown
   linkType: soft
 
-"@site/skills-to-learn@workspace:site/skills-to-learn":
+"@site/skills-to-learn-fragment@workspace:site/skills-to-learn-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/skills-to-learn@workspace:site/skills-to-learn"
+  resolution: "@site/skills-to-learn-fragment@workspace:site/skills-to-learn-fragment"
   languageName: unknown
   linkType: soft
 
-"@site/social@workspace:site/social":
+"@site/social-fragment@workspace:site/social-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/social@workspace:site/social"
+  resolution: "@site/social-fragment@workspace:site/social-fragment"
   dependencies:
     "@types/react": ^17
     react: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@site/ui@workspace:site/ui":
+  version: 0.0.0-use.local
+  resolution: "@site/ui@workspace:site/ui"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 

@@ -23,69 +23,79 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
-        "name": "@site/about-instructor",
-        "reference": "workspace:site/about-instructor"
+        "name": "@site/about-instructor-fragment",
+        "reference": "workspace:site/about-instructor-fragment"
       },
       {
-        "name": "@site/adress",
-        "reference": "workspace:site/adress"
+        "name": "@site/address-fragment",
+        "reference": "workspace:site/address-fragment"
       },
       {
         "name": "@site/app",
         "reference": "workspace:site/app"
       },
       {
-        "name": "@site/course-description",
-        "reference": "workspace:site/course-description"
+        "name": "@site/course-description-fragment",
+        "reference": "workspace:site/course-description-fragment"
       },
       {
-        "name": "@site/education",
-        "reference": "workspace:site/education"
+        "name": "@site/education-fragment",
+        "reference": "workspace:site/education-fragment"
+      },
+      {
+        "name": "@site/header-fragment",
+        "reference": "workspace:site/header-fragment"
       },
       {
         "name": "@site/index-page",
         "reference": "workspace:site/index-page"
       },
       {
-        "name": "@site/individual-lessons",
-        "reference": "workspace:site/individual-lessons"
+        "name": "@site/individual-lessons-fragment",
+        "reference": "workspace:site/individual-lessons-fragment"
       },
       {
-        "name": "@site/portfolio",
-        "reference": "workspace:site/portfolio"
+        "name": "@site/portfolio-fragment",
+        "reference": "workspace:site/portfolio-fragment"
       },
       {
-        "name": "@site/reviews",
-        "reference": "workspace:site/reviews"
+        "name": "@site/reviews-fragment",
+        "reference": "workspace:site/reviews-fragment"
       },
       {
-        "name": "@site/skills-presentation",
-        "reference": "workspace:site/skills-presentation"
+        "name": "@site/skills-presentation-fragment",
+        "reference": "workspace:site/skills-presentation-fragment"
       },
       {
-        "name": "@site/skills-to-learn",
-        "reference": "workspace:site/skills-to-learn"
+        "name": "@site/skills-to-learn-fragment",
+        "reference": "workspace:site/skills-to-learn-fragment"
       },
       {
-        "name": "@site/social",
-        "reference": "workspace:site/social"
+        "name": "@site/social-fragment",
+        "reference": "workspace:site/social-fragment"
+      },
+      {
+        "name": "@site/ui",
+        "reference": "workspace:site/ui"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@site/about-instructor", ["workspace:site/about-instructor"]],
-      ["@site/adress", ["workspace:site/adress"]],
+      ["@site/about-instructor-fragment", ["workspace:site/about-instructor-fragment"]],
+      ["@site/address-fragment", ["workspace:site/address-fragment"]],
       ["@site/app", ["workspace:site/app"]],
-      ["@site/course-description", ["workspace:site/course-description"]],
-      ["@site/education", ["workspace:site/education"]],
+      ["@site/course-description-fragment", ["workspace:site/course-description-fragment"]],
+      ["@site/education-fragment", ["workspace:site/education-fragment"]],
+      ["@site/header-fragment", ["workspace:site/header-fragment"]],
       ["@site/index-page", ["workspace:site/index-page"]],
-      ["@site/individual-lessons", ["workspace:site/individual-lessons"]],
-      ["@site/portfolio", ["workspace:site/portfolio"]],
-      ["@site/reviews", ["workspace:site/reviews"]],
-      ["@site/skills-presentation", ["workspace:site/skills-presentation"]],
-      ["@site/skills-to-learn", ["workspace:site/skills-to-learn"]],
-      ["@site/social", ["workspace:site/social"]],
+      ["@site/individual-lessons-fragment", ["workspace:site/individual-lessons-fragment"]],
+      ["@site/portfolio-fragment", ["workspace:site/portfolio-fragment"]],
+      ["@site/reviews-fragment", ["workspace:site/reviews-fragment"]],
+      ["@site/skills-presentation-fragment", ["workspace:site/skills-presentation-fragment"]],
+      ["@site/skills-to-learn-fragment", ["workspace:site/skills-to-learn-fragment"]],
+      ["@site/social-fragment", ["workspace:site/social-fragment"]],
+      ["@site/ui", ["workspace:site/ui"]],
       ["root-workspace-0b6124", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -2858,20 +2868,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@site/about-instructor", [
-        ["workspace:site/about-instructor", {
-          "packageLocation": "./site/about-instructor/",
+      ["@site/about-instructor-fragment", [
+        ["workspace:site/about-instructor-fragment", {
+          "packageLocation": "./site/about-instructor-fragment/",
           "packageDependencies": [
-            ["@site/about-instructor", "workspace:site/about-instructor"]
+            ["@site/about-instructor-fragment", "workspace:site/about-instructor-fragment"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/adress", [
-        ["workspace:site/adress", {
-          "packageLocation": "./site/adress/",
+      ["@site/address-fragment", [
+        ["workspace:site/address-fragment", {
+          "packageLocation": "./site/address-fragment/",
           "packageDependencies": [
-            ["@site/adress", "workspace:site/adress"]
+            ["@site/address-fragment", "workspace:site/address-fragment"]
           ],
           "linkType": "SOFT",
         }]
@@ -2919,20 +2929,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/course-description", [
-        ["workspace:site/course-description", {
-          "packageLocation": "./site/course-description/",
+      ["@site/course-description-fragment", [
+        ["workspace:site/course-description-fragment", {
+          "packageLocation": "./site/course-description-fragment/",
           "packageDependencies": [
-            ["@site/course-description", "workspace:site/course-description"]
+            ["@site/course-description-fragment", "workspace:site/course-description-fragment"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/education", [
-        ["workspace:site/education", {
-          "packageLocation": "./site/education/",
+      ["@site/education-fragment", [
+        ["workspace:site/education-fragment", {
+          "packageLocation": "./site/education-fragment/",
           "packageDependencies": [
-            ["@site/education", "workspace:site/education"]
+            ["@site/education-fragment", "workspace:site/education-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/header-fragment", [
+        ["workspace:site/header-fragment", {
+          "packageLocation": "./site/header-fragment/",
+          "packageDependencies": [
+            ["@site/header-fragment", "workspace:site/header-fragment"],
+            ["@emotion/react", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:11.6.0"],
+            ["@site/ui", "workspace:site/ui"],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@types/styled-system", "npm:5.1.13"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:887211c014720666c298d0cc784ecaa83812ffcd25ea845e45c78a76af51fbbe4424e2dbb0855c6fb8d782e71e93cf9a0cc67f81bc8ad6b9f88a687cea152a75#npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
           ],
           "linkType": "SOFT",
         }]
@@ -2950,58 +2977,75 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/individual-lessons", [
-        ["workspace:site/individual-lessons", {
-          "packageLocation": "./site/individual-lessons/",
+      ["@site/individual-lessons-fragment", [
+        ["workspace:site/individual-lessons-fragment", {
+          "packageLocation": "./site/individual-lessons-fragment/",
           "packageDependencies": [
-            ["@site/individual-lessons", "workspace:site/individual-lessons"]
+            ["@site/individual-lessons-fragment", "workspace:site/individual-lessons-fragment"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/portfolio", [
-        ["workspace:site/portfolio", {
-          "packageLocation": "./site/portfolio/",
+      ["@site/portfolio-fragment", [
+        ["workspace:site/portfolio-fragment", {
+          "packageLocation": "./site/portfolio-fragment/",
           "packageDependencies": [
-            ["@site/portfolio", "workspace:site/portfolio"]
+            ["@site/portfolio-fragment", "workspace:site/portfolio-fragment"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/reviews", [
-        ["workspace:site/reviews", {
-          "packageLocation": "./site/reviews/",
+      ["@site/reviews-fragment", [
+        ["workspace:site/reviews-fragment", {
+          "packageLocation": "./site/reviews-fragment/",
           "packageDependencies": [
-            ["@site/reviews", "workspace:site/reviews"]
+            ["@site/reviews-fragment", "workspace:site/reviews-fragment"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/skills-presentation", [
-        ["workspace:site/skills-presentation", {
-          "packageLocation": "./site/skills-presentation/",
+      ["@site/skills-presentation-fragment", [
+        ["workspace:site/skills-presentation-fragment", {
+          "packageLocation": "./site/skills-presentation-fragment/",
           "packageDependencies": [
-            ["@site/skills-presentation", "workspace:site/skills-presentation"]
+            ["@site/skills-presentation-fragment", "workspace:site/skills-presentation-fragment"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/skills-to-learn", [
-        ["workspace:site/skills-to-learn", {
-          "packageLocation": "./site/skills-to-learn/",
+      ["@site/skills-to-learn-fragment", [
+        ["workspace:site/skills-to-learn-fragment", {
+          "packageLocation": "./site/skills-to-learn-fragment/",
           "packageDependencies": [
-            ["@site/skills-to-learn", "workspace:site/skills-to-learn"]
+            ["@site/skills-to-learn-fragment", "workspace:site/skills-to-learn-fragment"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/social", [
-        ["workspace:site/social", {
-          "packageLocation": "./site/social/",
+      ["@site/social-fragment", [
+        ["workspace:site/social-fragment", {
+          "packageLocation": "./site/social-fragment/",
           "packageDependencies": [
-            ["@site/social", "workspace:site/social"],
+            ["@site/social-fragment", "workspace:site/social-fragment"],
             ["@types/react", "npm:17.0.36"],
             ["react", "npm:17.0.2"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/ui", [
+        ["workspace:site/ui", {
+          "packageLocation": "./site/ui/",
+          "packageDependencies": [
+            ["@site/ui", "workspace:site/ui"],
+            ["@emotion/react", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:11.6.0"],
+            ["@emotion/styled", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:11.6.0"],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@types/styled-system", "npm:5.1.13"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:887211c014720666c298d0cc784ecaa83812ffcd25ea845e45c78a76af51fbbe4424e2dbb0855c6fb8d782e71e93cf9a0cc67f81bc8ad6b9f88a687cea152a75#npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
           ],
           "linkType": "SOFT",
         }]

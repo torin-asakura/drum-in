@@ -1,5 +1,5 @@
 {
-  "name": "@site/reviews",
+  "name": "@site/course-description-fragment",
   "version": "0.0.0",
   "main": "src/index.ts",
   "packageManager": "yarn@3.0.0"

@@ -7684,7 +7684,6 @@
       }
     })
   }
-
   ;(function () {
     var input = document.createElement('input'),
       select = document.createElement('select'),
@@ -17697,7 +17696,6 @@ jQuery.migrateMute === void 0 && (jQuery.migrateMute = !0),
     return _
   }
 })
-
 ;(function ($) {
   const Component = function (container) {
     this.$container = $(container)
@@ -17770,7 +17768,6 @@ jQuery.migrateMute === void 0 && (jQuery.migrateMute = !0),
     instance.init()
   })
 })(jQuery)
-
 ;(function ($) {
   const $showBtn = $('.show-btn')
   $showBtn.on('click', function () {
@@ -17778,7 +17775,6 @@ jQuery.migrateMute === void 0 && (jQuery.migrateMute = !0),
     $showBtn.hide()
   })
 })(jQuery)
-
 ;(function ($) {
   const Component = function (container) {
     this.$container = $(container)

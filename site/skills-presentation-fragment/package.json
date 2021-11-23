@@ -1,5 +1,5 @@
 {
-  "name": "@site/skills-presentation",
+  "name": "@site/skills-presentation-fragment",
   "version": "0.0.0",
   "main": "src/index.ts",
   "packageManager": "yarn@3.0.0"
