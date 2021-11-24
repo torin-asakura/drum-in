@@ -4,11 +4,18 @@
   "main": "src/index.ts",
   "packageManager": "yarn@3.0.0",
   "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@site/header-fragment": "workspace:site/header-fragment",
+    "@ui/layout": "workspace:ui/layout",
+    "@ui/theme": "workspace:ui/theme",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@types/react": "^17",
-    "@types/react-dom": "^17"
+    "@types/react-dom": "^17",
+    "@types/styled-system": "^5"
   }
 }

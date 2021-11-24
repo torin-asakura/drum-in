@@ -1803,10 +1803,10 @@ __metadata:
   resolution: "@site/header-fragment@workspace:site/header-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
-    "@site/ui": "workspace:site/ui"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
+    "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -1817,10 +1817,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/index-page@workspace:site/index-page"
   dependencies:
+    "@emotion/react": ^11.6.0
+    "@emotion/styled": ^11.6.0
+    "@site/header-fragment": "workspace:site/header-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/theme": "workspace:ui/theme"
     react: ^17.0.2
     react-dom: ^17.0.2
+    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 
@@ -1860,21 +1867,6 @@ __metadata:
   dependencies:
     "@types/react": ^17
     react: ^17.0.2
-  languageName: unknown
-  linkType: soft
-
-"@site/ui@workspace:site/ui":
-  version: 0.0.0-use.local
-  resolution: "@site/ui@workspace:site/ui"
-  dependencies:
-    "@emotion/react": ^11.6.0
-    "@emotion/styled": ^11.6.0
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@types/styled-system": ^5
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 
@@ -2529,6 +2521,33 @@ __metadata:
   checksum: 59953e474ad4610c1aa23b2b1a964445e2c6201521da6367752f37939d854352bbfced5c04ea539274065e012b1337ba3ffa49c2647a240a4e87155378ba9873
   languageName: node
   linkType: hard
+
+"@ui/layout@workspace:ui/layout":
+  version: 0.0.0-use.local
+  resolution: "@ui/layout@workspace:ui/layout"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
+"@ui/theme@workspace:ui/theme":
+  version: 0.0.0-use.local
+  resolution: "@ui/theme@workspace:ui/theme"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
 
 "@webassemblyjs/ast@npm:1.11.1":
   version: 1.11.1
