@@ -1,17 +1,17 @@
-import React      from 'react'
+import React        from 'react'
 import { FC }       from 'react'
 import { useState } from 'react'
 
-import { Box }    from '@ui/layout'
-import { Row }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
-import { Text }   from '@ui/layout'
-import { Button } from '@ui/button'
+import { Box }      from '@ui/layout'
+import { Row }      from '@ui/layout'
+import { Column }   from '@ui/layout'
+import { Layout }   from '@ui/layout'
+import { Text }     from '@ui/layout'
+import { Button }   from '@ui/button'
 
 const CourseDescription: FC = () => {
-    const [show,setShow] = useState('none')
-      // TODO Modal appearacnce logic
+  const [show, setShow] = useState('none')
+  // TODO Modal appearacnce logic
   return (
     <Box width='1440px' border='1px solid black'>
       <Layout flexBasis={137} />
@@ -36,7 +36,12 @@ const CourseDescription: FC = () => {
             <Text>course description</Text>
           </Layout>
           <Layout flexBasis={60} />
-          <Button onClick={()=>setShow('flex')} border='1px solid black' width='426px' height='70px'>
+          <Button
+            onClick={() => setShow('flex')}
+            border='1px solid black'
+            width='426px'
+            height='70px'
+          >
             <Layout>
               <Text>sign up</Text>
             </Layout>

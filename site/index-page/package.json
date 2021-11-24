@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.6.0",
     "@site/course-description-fragment": "workspace:site/course-description-fragment",
     "@site/header-fragment": "workspace:site/header-fragment",
+    "@site/skills-to-learn-fragment": "workspace:site/skills-to-learn-fragment",
     "@ui/layout": "workspace:ui/layout",
     "@ui/theme": "workspace:ui/theme",
     "react": "^17.0.2",
