@@ -1,9 +1,8 @@
 import styled                         from '@emotion/styled'
-import { space, flex, layout, color, border } from 'styled-system'
+import { space, flexbox , layout, color, border,position } from 'styled-system'
 
-export const Box: any = styled('div')({ flex, color, space, layout,border })
+export const Box: any = styled('div')( flexbox, color, space, layout, border, position )
 
 Box.defaultProps = {
-  display: 'flex',
-  width: '100%',
+  display: 'flex'
 }

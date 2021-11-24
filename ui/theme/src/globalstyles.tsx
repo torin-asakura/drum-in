@@ -21,7 +21,7 @@ export const GlobalStyles = () => (
                 display: flex;
                 min-height: 100%;
                 flex-direction: column;
-                background-color: #f7f7fa;
+                background-color: #FFFFFF;
                 overflow-x: hidden;
               }
         `}

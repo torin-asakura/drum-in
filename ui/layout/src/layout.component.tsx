@@ -1,9 +1,8 @@
 import styled                  from '@emotion/styled'
-import { space, flex, layout } from 'styled-system'
+import { space, flexbox , layout } from 'styled-system'
 
-export const Layout: any = styled('div')({ space, flex }, layout)
+export const Layout: any = styled('div')( space, flexbox , layout)
 
 Layout.defaultProps = {
-  width: '100%',
   display: 'flex',
 }
