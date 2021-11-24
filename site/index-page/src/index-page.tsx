@@ -7,6 +7,7 @@ import { CourseDescription } from '@site/course-description-fragment'
 import { Column }            from '@ui/layout'
 import { SkillsToLearn }     from '@site/skills-to-learn-fragment'
 import { IndividualLessons } from '@site/individual-lessons-fragment'
+import { SkillsPresentation } from '@site/skills-presentation-fragment'
 
 const IndexPage = () => {
   return (
@@ -16,7 +17,8 @@ const IndexPage = () => {
         <Header />
         <CourseDescription />
         <SkillsToLearn />
-        <IndividualLessons/>
+        <IndividualLessons />
+        <SkillsPresentation/>
       </Column>
     </Row>
   )

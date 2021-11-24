@@ -1,4 +1,4 @@
-import React    from 'react'
+import React      from 'react'
 
 import { Box }    from '@ui/layout'
 import { Column } from '@ui/layout'
@@ -8,11 +8,11 @@ import { Text }   from '@ui/layout'
 
 const SkillsToLearn = () => {
   return (
-    <Box width='1440px' border = '1px solid black' >
+    <Box width='1440px' border='1px solid black'>
       <Column width='100%'>
         <Row justifyContent='center'>
           <Column>
-          <Layout flexBasis={59}/>
+            <Layout flexBasis={59} />
             <Row>
               <Box borderRadius={50} height='18px' width='18px' border='1px solid black' />
               <Layout flexBasis={20} flexShrink={0} />
@@ -44,16 +44,16 @@ const SkillsToLearn = () => {
         </Row>
         <Row justifyContent='center'>
           <Column alignItems='center'>
-          <Layout flexBasis={10}/>
+            <Layout flexBasis={10} />
             <Box height='61px' width='375px' border='1px solid black' />
             <Box width='490px' height='500px' border='1px solid black'>
               <Layout>photo</Layout>
             </Box>
             <Box height='64px' width='375px' border='1px solid black' />
           </Column>
-          <Layout flexBasis={138}/>
+          <Layout flexBasis={138} />
           <Column>
-          <Layout flexBasis={60}/>
+            <Layout flexBasis={60} />
             <Row>
               <Box borderRadius={50} height='18px' width='18px' border='1px solid black' />
               <Layout flexBasis={20} flexShrink={0} />
@@ -83,7 +83,7 @@ const SkillsToLearn = () => {
                 </Layout>
               </Box>
             </Row>
-            <Layout flexBasis={67}/>
+            <Layout flexBasis={67} />
           </Column>
         </Row>
       </Column>

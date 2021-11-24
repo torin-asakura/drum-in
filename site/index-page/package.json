@@ -9,6 +9,7 @@
     "@site/course-description-fragment": "workspace:site/course-description-fragment",
     "@site/header-fragment": "workspace:site/header-fragment",
     "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment",
+    "@site/skills-presentation-fragment": "workspace:site/skills-presentation-fragment",
     "@site/skills-to-learn-fragment": "workspace:site/skills-to-learn-fragment",
     "@ui/layout": "workspace:ui/layout",
     "@ui/theme": "workspace:ui/theme",
