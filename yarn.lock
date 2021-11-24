@@ -1832,6 +1832,7 @@ __metadata:
     "@emotion/styled": ^11.6.0
     "@site/course-description-fragment": "workspace:site/course-description-fragment"
     "@site/header-fragment": "workspace:site/header-fragment"
+    "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment"
     "@site/skills-to-learn-fragment": "workspace:site/skills-to-learn-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -1847,6 +1848,16 @@ __metadata:
 "@site/individual-lessons-fragment@workspace:site/individual-lessons-fragment":
   version: 0.0.0-use.local
   resolution: "@site/individual-lessons-fragment@workspace:site/individual-lessons-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    "@ui/button": "workspace:ui/button"
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 

@@ -5,7 +5,8 @@ import { GlobalStyles }      from '@ui/theme'
 import { Row }               from '@ui/layout'
 import { CourseDescription } from '@site/course-description-fragment'
 import { Column }            from '@ui/layout'
-import { SkillsToLearn }     from '../../skills-to-learn-fragment/src'
+import { SkillsToLearn }     from '@site/skills-to-learn-fragment'
+import { IndividualLessons } from '@site/individual-lessons-fragment'
 
 const IndexPage = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage = () => {
         <Header />
         <CourseDescription />
         <SkillsToLearn />
+        <IndividualLessons/>
       </Column>
     </Row>
   )

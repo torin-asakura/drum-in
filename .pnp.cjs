@@ -2998,6 +2998,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],
             ["@site/course-description-fragment", "workspace:site/course-description-fragment"],
             ["@site/header-fragment", "workspace:site/header-fragment"],
+            ["@site/individual-lessons-fragment", "workspace:site/individual-lessons-fragment"],
             ["@site/skills-to-learn-fragment", "workspace:site/skills-to-learn-fragment"],
             ["@types/react", "npm:17.0.36"],
             ["@types/react-dom", "npm:17.0.11"],
@@ -3015,7 +3016,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:site/individual-lessons-fragment", {
           "packageLocation": "./site/individual-lessons-fragment/",
           "packageDependencies": [
-            ["@site/individual-lessons-fragment", "workspace:site/individual-lessons-fragment"]
+            ["@site/individual-lessons-fragment", "workspace:site/individual-lessons-fragment"],
+            ["@emotion/react", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@types/styled-system", "npm:5.1.13"],
+            ["@ui/button", "workspace:ui/button"],
+            ["@ui/layout", "workspace:ui/layout"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
           ],
           "linkType": "SOFT",
         }]
