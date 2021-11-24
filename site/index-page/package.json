@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@site/course-description-fragment": "workspace:site/course-description-fragment",
     "@site/header-fragment": "workspace:site/header-fragment",
     "@ui/layout": "workspace:ui/layout",
     "@ui/theme": "workspace:ui/theme",

@@ -1,13 +1,11 @@
 {
-  "name": "@site/course-description-fragment",
+  "name": "@ui/button",
+  "packageManager": "yarn@3.0.0",
   "version": "0.0.0",
   "main": "src/index.ts",
-  "packageManager": "yarn@3.0.0",
   "dependencies": {
     "@emotion/react": "^11.6.0",
-    "@ui/button": "workspace:ui/button",
-    "@ui/input": "workspace:ui/input",
-    "@ui/layout": "workspace:ui/layout",
+    "@emotion/styled": "^11.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5"
