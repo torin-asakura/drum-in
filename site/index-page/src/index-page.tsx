@@ -9,7 +9,8 @@ import { SkillsToLearn }      from '@site/skills-to-learn-fragment'
 import { IndividualLessons }  from '@site/individual-lessons-fragment'
 import { SkillsPresentation } from '@site/skills-presentation-fragment'
 import { About }              from '@site/about-fragment'
-import { Education } from '../../education-fragment/src'
+import { Education }          from '@site/education-fragment'
+import { Portfolio }          from '@site/portfolio-fragment'
 
 const IndexPage = () => {
   return (
@@ -22,7 +23,8 @@ const IndexPage = () => {
         <IndividualLessons />
         <SkillsPresentation />
         <About />
-        <Education/>
+        <Education />
+        <Portfolio />
       </Column>
     </Row>
   )

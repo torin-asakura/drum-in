@@ -1862,6 +1862,7 @@ __metadata:
     "@site/education-fragment": "workspace:site/education-fragment"
     "@site/header-fragment": "workspace:site/header-fragment"
     "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment"
+    "@site/portfolio-fragment": "workspace:site/portfolio-fragment"
     "@site/skills-presentation-fragment": "workspace:site/skills-presentation-fragment"
     "@site/skills-to-learn-fragment": "workspace:site/skills-to-learn-fragment"
     "@types/react": ^17
@@ -1894,6 +1895,13 @@ __metadata:
 "@site/portfolio-fragment@workspace:site/portfolio-fragment":
   version: 0.0.0-use.local
   resolution: "@site/portfolio-fragment@workspace:site/portfolio-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
