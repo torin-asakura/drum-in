@@ -3029,6 +3029,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/header-fragment", "workspace:site/header-fragment"],
             ["@site/individual-lessons-fragment", "workspace:site/individual-lessons-fragment"],
             ["@site/portfolio-fragment", "workspace:site/portfolio-fragment"],
+            ["@site/reviews-fragment", "workspace:site/reviews-fragment"],
             ["@site/skills-presentation-fragment", "workspace:site/skills-presentation-fragment"],
             ["@site/skills-to-learn-fragment", "workspace:site/skills-to-learn-fragment"],
             ["@types/react", "npm:17.0.36"],
@@ -3080,7 +3081,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:site/reviews-fragment", {
           "packageLocation": "./site/reviews-fragment/",
           "packageDependencies": [
-            ["@site/reviews-fragment", "workspace:site/reviews-fragment"]
+            ["@site/reviews-fragment", "workspace:site/reviews-fragment"],
+            ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@ui/layout", "workspace:ui/layout"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]

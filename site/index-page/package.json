@@ -12,6 +12,7 @@
     "@site/header-fragment": "workspace:site/header-fragment",
     "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment",
     "@site/portfolio-fragment": "workspace:site/portfolio-fragment",
+    "@site/reviews-fragment": "workspace:site/reviews-fragment",
     "@site/skills-presentation-fragment": "workspace:site/skills-presentation-fragment",
     "@site/skills-to-learn-fragment": "workspace:site/skills-to-learn-fragment",
     "@ui/layout": "workspace:ui/layout",
