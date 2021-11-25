@@ -1733,9 +1733,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@site/about-instructor-fragment@workspace:site/about-instructor-fragment":
+"@site/about-fragment@workspace:site/about-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/about-instructor-fragment@workspace:site/about-instructor-fragment"
+  resolution: "@site/about-fragment@workspace:site/about-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 
@@ -1830,6 +1839,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
+    "@site/about-fragment": "workspace:site/about-fragment"
     "@site/course-description-fragment": "workspace:site/course-description-fragment"
     "@site/header-fragment": "workspace:site/header-fragment"
     "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment"
