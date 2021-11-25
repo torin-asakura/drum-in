@@ -8,7 +8,8 @@ import { Column }             from '@ui/layout'
 import { SkillsToLearn }      from '@site/skills-to-learn-fragment'
 import { IndividualLessons }  from '@site/individual-lessons-fragment'
 import { SkillsPresentation } from '@site/skills-presentation-fragment'
-import { About } from '@site/about-fragment'
+import { About }              from '@site/about-fragment'
+import { Education } from '../../education-fragment/src'
 
 const IndexPage = () => {
   return (
@@ -21,6 +22,7 @@ const IndexPage = () => {
         <IndividualLessons />
         <SkillsPresentation />
         <About />
+        <Education/>
       </Column>
     </Row>
   )

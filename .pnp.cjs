@@ -43,6 +43,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:site/education-fragment"
       },
       {
+        "name": "@site/footer-fragment",
+        "reference": "workspace:site/footer"
+      },
+      {
         "name": "@site/header-fragment",
         "reference": "workspace:site/header-fragment"
       },
@@ -71,10 +75,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:site/skills-to-learn-fragment"
       },
       {
-        "name": "@site/social-fragment",
-        "reference": "workspace:site/social-fragment"
-      },
-      {
         "name": "@ui/button",
         "reference": "workspace:ui/button"
       },
@@ -99,6 +99,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@site/app", ["workspace:site/app"]],
       ["@site/course-description-fragment", ["workspace:site/course-description-fragment"]],
       ["@site/education-fragment", ["workspace:site/education-fragment"]],
+      ["@site/footer-fragment", ["workspace:site/footer"]],
       ["@site/header-fragment", ["workspace:site/header-fragment"]],
       ["@site/index-page", ["workspace:site/index-page"]],
       ["@site/individual-lessons-fragment", ["workspace:site/individual-lessons-fragment"]],
@@ -106,7 +107,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@site/reviews-fragment", ["workspace:site/reviews-fragment"]],
       ["@site/skills-presentation-fragment", ["workspace:site/skills-presentation-fragment"]],
       ["@site/skills-to-learn-fragment", ["workspace:site/skills-to-learn-fragment"]],
-      ["@site/social-fragment", ["workspace:site/social-fragment"]],
       ["@ui/button", ["workspace:ui/button"]],
       ["@ui/input", ["workspace:ui/input"]],
       ["@ui/layout", ["workspace:ui/layout"]],
@@ -2975,7 +2975,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:site/education-fragment", {
           "packageLocation": "./site/education-fragment/",
           "packageDependencies": [
-            ["@site/education-fragment", "workspace:site/education-fragment"]
+            ["@site/education-fragment", "workspace:site/education-fragment"],
+            ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@types/styled-system", "npm:5.1.13"],
+            ["@ui/layout", "workspace:ui/layout"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/footer-fragment", [
+        ["workspace:site/footer", {
+          "packageLocation": "./site/footer/",
+          "packageDependencies": [
+            ["@site/footer-fragment", "workspace:site/footer"],
+            ["@types/react", "npm:17.0.36"],
+            ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -3006,6 +3025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@site/about-fragment", "workspace:site/about-fragment"],
             ["@site/course-description-fragment", "workspace:site/course-description-fragment"],
+            ["@site/education-fragment", "workspace:site/education-fragment"],
             ["@site/header-fragment", "workspace:site/header-fragment"],
             ["@site/individual-lessons-fragment", "workspace:site/individual-lessons-fragment"],
             ["@site/skills-presentation-fragment", "workspace:site/skills-presentation-fragment"],
@@ -3084,17 +3104,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "workspace:ui/layout"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
-      ["@site/social-fragment", [
-        ["workspace:site/social-fragment", {
-          "packageLocation": "./site/social-fragment/",
-          "packageDependencies": [
-            ["@site/social-fragment", "workspace:site/social-fragment"],
-            ["@types/react", "npm:17.0.36"],
-            ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]
