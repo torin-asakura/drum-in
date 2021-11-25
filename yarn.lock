@@ -1831,8 +1831,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/footer-fragment@workspace:site/footer"
   dependencies:
+    "@emotion/react": ^11.6.0
     "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -1860,6 +1864,7 @@ __metadata:
     "@site/about-fragment": "workspace:site/about-fragment"
     "@site/course-description-fragment": "workspace:site/course-description-fragment"
     "@site/education-fragment": "workspace:site/education-fragment"
+    "@site/footer-fragment": "workspace:site/footer"
     "@site/header-fragment": "workspace:site/header-fragment"
     "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment"
     "@site/portfolio-fragment": "workspace:site/portfolio-fragment"

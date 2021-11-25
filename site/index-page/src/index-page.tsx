@@ -11,7 +11,8 @@ import { SkillsPresentation } from '@site/skills-presentation-fragment'
 import { About }              from '@site/about-fragment'
 import { Education }          from '@site/education-fragment'
 import { Portfolio }          from '@site/portfolio-fragment'
-import { Reviews } from '@site/reviews-fragment'
+import { Reviews }            from '@site/reviews-fragment'
+import { Footer } from '@site/footer-fragment'
 
 const IndexPage = () => {
   return (
@@ -27,6 +28,7 @@ const IndexPage = () => {
         <Education />
         <Portfolio />
         <Reviews />
+        <Footer/>
       </Column>
     </Row>
   )

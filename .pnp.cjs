@@ -2993,8 +2993,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./site/footer/",
           "packageDependencies": [
             ["@site/footer-fragment", "workspace:site/footer"],
+            ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@types/react", "npm:17.0.36"],
-            ["react", "npm:17.0.2"]
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@ui/layout", "workspace:ui/layout"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -3026,6 +3030,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/about-fragment", "workspace:site/about-fragment"],
             ["@site/course-description-fragment", "workspace:site/course-description-fragment"],
             ["@site/education-fragment", "workspace:site/education-fragment"],
+            ["@site/footer-fragment", "workspace:site/footer"],
             ["@site/header-fragment", "workspace:site/header-fragment"],
             ["@site/individual-lessons-fragment", "workspace:site/individual-lessons-fragment"],
             ["@site/portfolio-fragment", "workspace:site/portfolio-fragment"],

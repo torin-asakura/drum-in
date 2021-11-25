@@ -9,6 +9,7 @@
     "@site/about-fragment": "workspace:site/about-fragment",
     "@site/course-description-fragment": "workspace:site/course-description-fragment",
     "@site/education-fragment": "workspace:site/education-fragment",
+    "@site/footer-fragment": "workspace:site/footer",
     "@site/header-fragment": "workspace:site/header-fragment",
     "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment",
     "@site/portfolio-fragment": "workspace:site/portfolio-fragment",
