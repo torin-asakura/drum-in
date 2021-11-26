@@ -3,7 +3,7 @@ import React               from 'react'
 import { Box }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Column }          from '@ui/layout'
-import { Row }               from '@ui/layout'
+import { Row }             from '@ui/layout'
 
 import { TextComponent }   from './text.component'
 import { SliderComponent } from './slider.component'
@@ -41,34 +41,34 @@ const AboutMobile = () => {
         </Row>
         <Layout flexBasis={20} flexShrink={0} />
         <SliderComponent height='320px' width='320px' marginV='10px' />
-        <Layout flexBasis={20}/>
+        <Layout flexBasis={20} />
         <Row>
-        <Layout flexBasis={44} flexShrink={0}/>
-        <TextComponent
-              height='376px'
-              width='237px'
-              display={'none'}
-              headerWidth={0}
-              headerHeight={0}
-              mainHeight='376px'
-              mainWidth='237px'
-            />
-            <Layout flexBasis={44} flexShrink={0}/>
-            </Row>
-            <Layout flexBasis={15} flexShrink={0} />
-            <Row>
-             <Layout flexBasis={44} flexShrink={0}/> 
-             <TextComponent
-              height='25px'
-              width='129px'
-              display={'none'}
-              headerWidth={0}
-              headerHeight={0}
-              mainHeight='25px'
-              mainWidth='129px'
-            />
-             <Layout flexBasis={44} flexShrink={0}/>        
-            </Row>
+          <Layout flexBasis={44} flexShrink={0} />
+          <TextComponent
+            height='376px'
+            width='237px'
+            display={'none'}
+            headerWidth={0}
+            headerHeight={0}
+            mainHeight='376px'
+            mainWidth='237px'
+          />
+          <Layout flexBasis={44} flexShrink={0} />
+        </Row>
+        <Layout flexBasis={15} flexShrink={0} />
+        <Row>
+          <Layout flexBasis={44} flexShrink={0} />
+          <TextComponent
+            height='25px'
+            width='129px'
+            display={'none'}
+            headerWidth={0}
+            headerHeight={0}
+            mainHeight='25px'
+            mainWidth='129px'
+          />
+          <Layout flexBasis={44} flexShrink={0} />
+        </Row>
         <Layout flexBasis={25} flexShrink={0} />
       </Column>
     </Box>
