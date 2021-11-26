@@ -1,6 +1,9 @@
 {
   "private": true,
   "license": "BSD-3-Clause",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.50",
     "@types/node": "16",

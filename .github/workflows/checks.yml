@@ -29,9 +29,7 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: TypeCheck
-        run: yarn checks typecheck
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+        run: yarn run typecheck
 
       - name: TestUnit
         run: yarn checks test unit
@@ -40,10 +38,5 @@ jobs:
 
       - name: TestIntegration
         run: yarn checks test integration
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-
-      - name: Release
-        run: yarn checks release
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
