@@ -35,9 +35,9 @@ const HeaderMobile = () => {
           </Box>
           <Layout flexBasis={14} flexShrink={0} />
           <Box judtifyContent='center' width='255px' height='21px' border='1px solid black'>
-            <layout>
+            <Layout>
               <Text> text</Text>
-            </layout>
+            </Layout>
           </Box>
           <Layout flexBasis={14} flexShrink={0} />
           <Box judtifyContent='center' width='255px' height='21px' border='1px solid black'>
@@ -46,7 +46,7 @@ const HeaderMobile = () => {
             </layout>
           </Box>
           <Layout flexBasis={14} flexShrink={0} />
-          <Box judtifyContent='center' width='255px' height='21px' border='1px solid black'>
+          <Box justifyContent='center' width='255px' height='21px' border='1px solid black'>
             <layout>
               <Text> text</Text>
             </layout>
@@ -63,7 +63,6 @@ const HeaderMobile = () => {
         left={215}
         position='absolute'
         width='105px'
-        id='ololo'
         height='354px'
         border='1px solid black'
         zIndex={-1}

@@ -27,9 +27,9 @@ const CourseDescription: FC = () => {
           </Layout>
           <Layout flexBasis={39} />
           <Box width='572px' height='311px' border='1px solid black'>
-            <layout>
+            <Layout>
               <Text>text</Text>
-            </layout>
+            </Layout>
           </Box>
           <Layout flexBasis={70} />
           <Layout>

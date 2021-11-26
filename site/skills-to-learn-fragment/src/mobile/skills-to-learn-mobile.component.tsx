@@ -22,7 +22,7 @@ const SkillsToLearnMobile = () => {
           headerWidth='255px'
         />
         <Layout flexBasis={6} flexShrink={0} />
-        <SliderComponent marginV={6} height='320px' width='320px' />
+        <SliderComponent marginY={6} height='320px' width='320px' />
         <Layout flexBasis={5} flexShrink={0} />
         <TextComponent
           height='435px'
@@ -42,7 +42,7 @@ const SkillsToLearnMobile = () => {
           mainWidth='258px'
         />
         <Layout flexBasis={20} flexShrink={0} />
-        <SliderComponent height='320px' width='320px' marginV={6} />
+        <SliderComponent height='320px' width='320px' marginY={6} />
         <Layout flexBasis={15} flexShrink={0} />
         <TextComponent
           height='425px'

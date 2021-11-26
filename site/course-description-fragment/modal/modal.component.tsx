@@ -7,8 +7,9 @@ import { Column } from '@ui/layout'
 import { Text }   from '@ui/layout'
 import { Input }  from '@ui/input'
 import { Button } from '@ui/button'
+import { Modal } from './modal.interface'
 
-const Modal: FC = ({ show }) => {
+const Modal: FC<Modal> = ({ show }) => {
   return (
     <Box display={show} width='611px' height='461px' border='1px solid black'>
       <Layout flexBasis={92} />

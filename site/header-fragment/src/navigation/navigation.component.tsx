@@ -25,7 +25,7 @@ const Navigation = () => {
         <Layout>
           <Text>отзывы</Text>
         </Layout>
-        <Layout flrxBasis={11} />
+        <Layout flexBasis={11} />
       </Row>
     </Box>
   )
