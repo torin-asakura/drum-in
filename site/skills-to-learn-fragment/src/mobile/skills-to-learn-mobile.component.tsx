@@ -1,8 +1,8 @@
 import React               from 'react'
 
 import { Box }             from '@ui/layout'
-import { Column }            from '@ui/layout'
-import { Layout }            from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
 
 import { TextComponent }   from './text.component'
 import { SliderComponent } from './slider.component'
@@ -61,15 +61,20 @@ const SkillsToLearnMobile = () => {
           mainHeight='339px'
           mainWidth='264px'
         />
-        <Layout flexBasis={45}/>
+        <Layout flexBasis={45} />
         <Box width='320px' height='320px' border='1px solid black'>
-            <Layout>
-                img
-            </Layout>
+          <Layout>img</Layout>
         </Box>
-        <Layout flexBasis={30}/>
+        <Layout flexBasis={30} />
       </Column>
-      <Box width='105px' height='100%' border='1px solid black' position='absolute' zIndex={-1} left='215px'/>
+      <Box
+        width='105px'
+        height='100%'
+        border='1px solid black'
+        position='absolute'
+        zIndex={-1}
+        left='215px'
+      />
     </Box>
   )
 }

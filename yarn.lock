@@ -1204,6 +1204,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/react@npm:^11.7.0":
+  version: 11.7.0
+  resolution: "@emotion/react@npm:11.7.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/cache": ^11.6.0
+    "@emotion/serialize": ^1.0.2
+    "@emotion/sheet": ^1.1.0
+    "@emotion/utils": ^1.0.0
+    "@emotion/weak-memoize": ^0.2.5
+    hoist-non-react-statics: ^3.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 8b50d61caabe04ae413ae23b98c170da643754ec89f25eb001464095685686585d0f88988bc36432f231e6de6abdbee73308c42ba427de9eaaf5a54d7f2f6ae5
+  languageName: node
+  linkType: hard
+
 "@emotion/serialize@npm:^1.0.0, @emotion/serialize@npm:^1.0.2":
   version: 1.0.2
   resolution: "@emotion/serialize@npm:1.0.2"
@@ -1748,12 +1771,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/address-fragment@workspace:site/address-fragment":
-  version: 0.0.0-use.local
-  resolution: "@site/address-fragment@workspace:site/address-fragment"
-  languageName: unknown
-  linkType: soft
-
 "@site/app@workspace:site/app":
   version: 0.0.0-use.local
   resolution: "@site/app@workspace:site/app"
@@ -1792,6 +1809,20 @@ __metadata:
     recompose: ^0.30.0
     styled-system: ^5.1.5
     typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
+"@site/ask-a-question-fragment@workspace:site/ask-a-question-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/ask-a-question-fragment@workspace:site/ask-a-question-fragment"
+  dependencies:
+    "@emotion/react": ^11.7.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/button": "workspace:ui/button"
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -1862,6 +1893,7 @@ __metadata:
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@site/about-fragment": "workspace:site/about-fragment"
+    "@site/ask-a-question-fragment": "workspace:site/ask-a-question-fragment"
     "@site/course-description-fragment": "workspace:site/course-description-fragment"
     "@site/education-fragment": "workspace:site/education-fragment"
     "@site/footer-fragment": "workspace:site/footer"

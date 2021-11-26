@@ -27,12 +27,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:site/about-fragment"
       },
       {
-        "name": "@site/address-fragment",
-        "reference": "workspace:site/address-fragment"
-      },
-      {
         "name": "@site/app",
         "reference": "workspace:site/app"
+      },
+      {
+        "name": "@site/ask-a-question-fragment",
+        "reference": "workspace:site/ask-a-question-fragment"
       },
       {
         "name": "@site/course-description-fragment",
@@ -95,8 +95,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["@site/about-fragment", ["workspace:site/about-fragment"]],
-      ["@site/address-fragment", ["workspace:site/address-fragment"]],
       ["@site/app", ["workspace:site/app"]],
+      ["@site/ask-a-question-fragment", ["workspace:site/ask-a-question-fragment"]],
       ["@site/course-description-fragment", ["workspace:site/course-description-fragment"]],
       ["@site/education-fragment", ["workspace:site/education-fragment"]],
       ["@site/footer-fragment", ["workspace:site/footer"]],
@@ -2185,10 +2185,41 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["npm:11.7.0", {
+          "packageLocation": "./.yarn/cache/@emotion-react-npm-11.7.0-a1c3b50c2a-8b50d61caa.zip/node_modules/@emotion/react/",
+          "packageDependencies": [
+            ["@emotion/react", "npm:11.7.0"]
+          ],
+          "linkType": "SOFT",
+        }],
         ["virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0", {
           "packageLocation": "./.yarn/__virtual__/@emotion-react-virtual-3c022e90cb/0/cache/@emotion-react-npm-11.6.0-e19eba9c1a-4fb2d108dc.zip/node_modules/@emotion/react/",
           "packageDependencies": [
             ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
+            ["@babel/core", null],
+            ["@babel/runtime", "npm:7.16.3"],
+            ["@emotion/cache", "npm:11.6.0"],
+            ["@emotion/serialize", "npm:1.0.2"],
+            ["@emotion/sheet", "npm:1.1.0"],
+            ["@emotion/utils", "npm:1.0.0"],
+            ["@emotion/weak-memoize", "npm:0.2.5"],
+            ["@types/babel__core", null],
+            ["@types/react", "npm:17.0.36"],
+            ["hoist-non-react-statics", "npm:3.3.2"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@babel/core",
+            "@types/babel__core",
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:31bb1d9dcd5648d4c4e070ceeec5bb06e699378a852ea4ce7182c0c00398b9514547a1e9622c065a431ee08faf0019cd5594d8e3d622b4795c409cc224d3ca46#npm:11.7.0", {
+          "packageLocation": "./.yarn/__virtual__/@emotion-react-virtual-e7df5b64c2/0/cache/@emotion-react-npm-11.7.0-a1c3b50c2a-8b50d61caa.zip/node_modules/@emotion/react/",
+          "packageDependencies": [
+            ["@emotion/react", "virtual:31bb1d9dcd5648d4c4e070ceeec5bb06e699378a852ea4ce7182c0c00398b9514547a1e9622c065a431ee08faf0019cd5594d8e3d622b4795c409cc224d3ca46#npm:11.7.0"],
             ["@babel/core", null],
             ["@babel/runtime", "npm:7.16.3"],
             ["@emotion/cache", "npm:11.6.0"],
@@ -2900,15 +2931,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
-      ["@site/address-fragment", [
-        ["workspace:site/address-fragment", {
-          "packageLocation": "./site/address-fragment/",
-          "packageDependencies": [
-            ["@site/address-fragment", "workspace:site/address-fragment"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
       ["@site/app", [
         ["workspace:site/app", {
           "packageLocation": "./site/app/",
@@ -2948,6 +2970,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["recompose", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.30.0"],
             ["styled-system", "npm:5.1.5"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/ask-a-question-fragment", [
+        ["workspace:site/ask-a-question-fragment", {
+          "packageLocation": "./site/ask-a-question-fragment/",
+          "packageDependencies": [
+            ["@site/ask-a-question-fragment", "workspace:site/ask-a-question-fragment"],
+            ["@emotion/react", "virtual:31bb1d9dcd5648d4c4e070ceeec5bb06e699378a852ea4ce7182c0c00398b9514547a1e9622c065a431ee08faf0019cd5594d8e3d622b4795c409cc224d3ca46#npm:11.7.0"],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@ui/button", "workspace:ui/button"],
+            ["@ui/layout", "workspace:ui/layout"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -3028,6 +3066,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@emotion/styled", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@site/about-fragment", "workspace:site/about-fragment"],
+            ["@site/ask-a-question-fragment", "workspace:site/ask-a-question-fragment"],
             ["@site/course-description-fragment", "workspace:site/course-description-fragment"],
             ["@site/education-fragment", "workspace:site/education-fragment"],
             ["@site/footer-fragment", "workspace:site/footer"],

@@ -18,6 +18,8 @@ import { IndividualLessonsMobile }  from '@site/individual-lessons-fragment'
 import { SkillsPresentationMobile } from '@site/skills-presentation-fragment'
 import { CourseDescriptionMobile }  from '@site/course-description-fragment'
 import { SkillsToLearnMobile }      from '@site/skills-to-learn-fragment'
+import { AskQuestion }              from '@site/ask-a-question-fragment'
+import { AboutMobile }              from '@site/about-fragment'
 
 const IndexPage = () => {
   return (
@@ -29,6 +31,8 @@ const IndexPage = () => {
         <SkillsPresentationMobile />
         <CourseDescriptionMobile />
         <SkillsToLearnMobile />
+        <AskQuestion />
+        <AboutMobile />
       </Column>
     </Row>
   )
