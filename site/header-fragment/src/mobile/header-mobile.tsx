@@ -6,13 +6,12 @@ import { Text }   from '@ui/layout'
 import { Column } from '@ui/layout'
 
 const HeaderMobile = () => {
-    //TODO two colors for main container
   return (
-    <Box width='320px' height='354px' border='1px solid black'>
-        <Layout flexBasis={38} flexShrink={0}/>
-      <Box>
+    <Box width='320px' height='354px' border='1px solid black' position='relative' zIndex={1}>
+      <Layout flexBasis={38} flexShrink={0} />
+      <Box zIndex={1}>
         <Column width='100%' alignItems='center'>
-            <Layout flexBasis={30}/>
+          <Layout flexBasis={30} />
           <Box judtifyContent='center' width='244px' height='11px' border='1px solid black'>
             <Layout>
               <Text>test</Text>
@@ -60,6 +59,7 @@ const HeaderMobile = () => {
           </Box>
         </Column>
       </Box>
+      <Box   left={215} position='absolute' width='105px'  id ='ololo' height='354px' border='1px solid black'  zIndex={-1} flexShrink={0}/>
     </Box>
   )
 }

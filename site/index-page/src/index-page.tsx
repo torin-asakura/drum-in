@@ -13,14 +13,16 @@ import { Education }          from '@site/education-fragment'
 import { Portfolio }          from '@site/portfolio-fragment'
 import { Reviews }            from '@site/reviews-fragment'
 import { Footer }             from '@site/footer-fragment'
-import { HeaderMobile } from '@site/header-fragment'
+import { HeaderMobile }       from '@site/header-fragment'
+import { IndividualLessonsMobile } from '@site/individual-lessons-fragment'
 
 const IndexPage = () => {
   return (
     <Row justifyContent='center'>
       <GlobalStyles />
       <Column width='100%' alignItems='center'>
-       <HeaderMobile/>
+        <HeaderMobile />
+        <IndividualLessonsMobile/>
       </Column>
     </Row>
   )
