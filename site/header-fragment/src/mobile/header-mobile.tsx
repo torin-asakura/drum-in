@@ -59,7 +59,16 @@ const HeaderMobile = () => {
           </Box>
         </Column>
       </Box>
-      <Box   left={215} position='absolute' width='105px'  id ='ololo' height='354px' border='1px solid black'  zIndex={-1} flexShrink={0}/>
+      <Box
+        left={215}
+        position='absolute'
+        width='105px'
+        id='ololo'
+        height='354px'
+        border='1px solid black'
+        zIndex={-1}
+        flexShrink={0}
+      />
     </Box>
   )
 }

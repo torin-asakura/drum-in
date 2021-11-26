@@ -4,10 +4,11 @@ import { Box }    from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Text }   from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { Button }   from '@ui/button'
+import { Row }    from '@ui/layout'
+import { Button } from '@ui/button'
 
 const IndividualLessonsMobile = () => {
+  //TODO slider logic
   return (
     <Box width='320px' height='390px' border='1px solid black'>
       <Column width='100%'>
@@ -34,7 +35,7 @@ const IndividualLessonsMobile = () => {
             <Layout flexBasis={152} flexShrink={0} />
             <Layout flexBasis={16} flexShrink={0} alignItems='flex-end'>
               <Box height='3px' width='6px' borderRadius={50} border='1px solid black' />
-              <Layout flexBasis={10} flexShrink={0}/>
+              <Layout flexBasis={10} flexShrink={0} />
               <Box height='3px' width='6px' borderRadius={50} border='1px solid black' />
               <Layout flexBasis={47} flexShrink={0} />
               <Box width='105px' height='30px' border='1px solid black' />
