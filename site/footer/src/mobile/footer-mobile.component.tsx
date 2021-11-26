@@ -4,8 +4,8 @@ import { Box }    from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Text }   from '@ui/layout'
-import { Button }   from '@ui/button'
-import {Row}  from '@ui/layout'
+import { Button } from '@ui/button'
+import { Row }      from '@ui/layout'
 
 const FooterMobile = () => {
   return (
@@ -45,44 +45,34 @@ const FooterMobile = () => {
               </Button>
             </Layout>
             <Layout flexBasis={30} />
-            <Row justifyContent='center'> 
-            <Box width='172px' height='23px' border='1px solid black'>
+            <Row justifyContent='center'>
+              <Box width='172px' height='23px' border='1px solid black'>
                 <Layout>
-                    <Text>
-                        phone number
-                    </Text>
+                  <Text>phone number</Text>
                 </Layout>
-            </Box>
+              </Box>
             </Row>
-            <Layout flexBasis={50} flexShrink={0}/>
+            <Layout flexBasis={50} flexShrink={0} />
             <Row judtifyContent='center'>
-            <Column>
-            <Box width='48px' height='48px' border='1px solid black'>
-                <Layout>
-                    img
-                </Layout>
-            </Box>
-            <Layout flexBasis={50} flexShrink={0}/>
-            <Box width='48px' height='48px' border='1px solid black'>
-                <Layout>
-                    img
-                </Layout>
-            </Box>
-            </Column>
-            <Layout flexBasis={100} flexShrink={0}/>
-            <Column>
-            <Box width='48px' height='48px' border='1px solid black'>
-                <Layout>
-                    img
-                </Layout>
-            </Box>
-            <Layout flexBasis={50} flexShrink={0}/>
-            <Box width='48px' height='48px' border='1px solid black'>
-                <Layout>
-                    img
-                </Layout>
-            </Box>
-            </Column>
+              <Column>
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>img</Layout>
+                </Box>
+                <Layout flexBasis={50} flexShrink={0} />
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>img</Layout>
+                </Box>
+              </Column>
+              <Layout flexBasis={100} flexShrink={0} />
+              <Column>
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>img</Layout>
+                </Box>
+                <Layout flexBasis={50} flexShrink={0} />
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>img</Layout>
+                </Box>
+              </Column>
             </Row>
           </Column>
           <Layout flexBasis={40} flexShrink={0} />

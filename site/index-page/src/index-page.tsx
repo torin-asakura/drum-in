@@ -21,7 +21,7 @@ import { SkillsToLearnMobile }      from '@site/skills-to-learn-fragment'
 import { AskQuestion }              from '@site/ask-a-question-fragment'
 import { AboutMobile }              from '@site/about-fragment'
 import { ReviewsMobile }            from '@site/reviews-fragment'
-import { FooterMobile } from '@site/footer-fragment'
+import { FooterMobile }             from '@site/footer-fragment'
 
 const IndexPage = () => {
   return (
@@ -36,7 +36,7 @@ const IndexPage = () => {
         <AskQuestion />
         <AboutMobile />
         <ReviewsMobile />
-        <FooterMobile/>
+        <FooterMobile />
       </Column>
     </Row>
   )
