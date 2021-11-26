@@ -37,9 +37,9 @@ const IndividualLessonsMobile = () => {
               <Box height='3px' width='6px' borderRadius={50} border='1px solid black' />
               <Layout flexBasis={10} flexShrink={0} />
               <Box height='3px' width='6px' borderRadius={50} border='1px solid black' />
-              <Layout flexBasis={47} flexShrink={0} />
-              <Box width='105px' height='30px' border='1px solid black' />
             </Layout>
+            <Layout flexBasis={47} flexShrink={0} />
+            <Box width='105px' height='30px' border='1px solid black'  />
           </Row>
         </Box>
         <Layout flexBasis={30} />
