@@ -16,7 +16,8 @@ import { Footer }                   from '@site/footer-fragment'
 import { HeaderMobile }             from '@site/header-fragment'
 import { IndividualLessonsMobile }  from '@site/individual-lessons-fragment'
 import { SkillsPresentationMobile } from '@site/skills-presentation-fragment'
-import { CourseDescriptionMobile } from '@site/course-description-fragment'
+import { CourseDescriptionMobile }  from '@site/course-description-fragment'
+import { SkillsToLearnMobile }      from '@site/skills-to-learn-fragment'
 
 const IndexPage = () => {
   return (
@@ -26,7 +27,8 @@ const IndexPage = () => {
         <HeaderMobile />
         <IndividualLessonsMobile />
         <SkillsPresentationMobile />
-        <CourseDescriptionMobile/>
+        <CourseDescriptionMobile />
+        <SkillsToLearnMobile />
       </Column>
     </Row>
   )
