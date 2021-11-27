@@ -1,13 +1,14 @@
 import React      from 'react'
+import { FC }       from 'react'
 
 import { Box }    from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
-import { Text }   from '@ui/layout'
+import { Text }   from '@ui/text'
 import { Button } from '@ui/button'
-import { Row }      from '@ui/layout'
+import { Row }    from '@ui/layout'
 
-const FooterMobile = () => {
+const FooterMobile: FC = () => {
   return (
     <Box width='320px' height='745px' border='1px solid black'>
       <Column width='100%'>

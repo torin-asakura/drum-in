@@ -1,11 +1,12 @@
 import React      from 'react'
+import { FC }       from 'react'
 
 import { Box }    from '@ui/layout'
 import { Layout } from '@ui/layout'
-import { Text }   from '@ui/layout'
+import { Text }   from '@ui/text'
 import { Column } from '@ui/layout'
 
-const HeaderMobile = () => {
+const HeaderMobile: FC = () => {
   return (
     <Box width='320px' height='354px' border='1px solid black' position='relative' zIndex={1}>
       <Layout flexBasis={38} flexShrink={0} />

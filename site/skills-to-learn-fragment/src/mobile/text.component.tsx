@@ -4,7 +4,7 @@ import { Box }    from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Row }    from '@ui/layout'
-import { Text }   from '@ui/layout'
+import { Text }   from '@ui/text'
 
 const TextComponent = ({ headerHeight, headerWidth, mainHeight, mainWidth, height, width }) => {
   //TODO change props for work with content

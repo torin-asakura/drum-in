@@ -103,6 +103,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/layout@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls-ui-parts/layout@npm:0.0.2"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+  checksum: 0c1e7eff5e46cf2dd865fec7070fdfea03f18430b3ed37b23bbb4d639a7b14134ff00e7bc94f2877f09ae8266f6b7ab7cd9c0f5522921ae3529e49cb8f4be124
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/text@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@atls-ui-parts/text@npm:0.0.6"
+  dependencies:
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+  checksum: c6f2b47fff82236c8fe3b376151b820be7b7138f43c41dd15a6d62598a4790ab7b57ddc530d8c70d42b0eb4ab6dddbc740f42cc0b9f5ac4bd8484bea67620f3b
+  languageName: node
+  linkType: hard
+
 "@atls/actl-cli@npm:^0.4.48, @atls/actl-cli@npm:^0.4.50":
   version: 0.4.50
   resolution: "@atls/actl-cli@npm:0.4.50"
@@ -1765,6 +1788,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/styled-system": ^5
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -1821,6 +1845,7 @@ __metadata:
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1837,6 +1862,7 @@ __metadata:
     "@ui/button": "workspace:ui/button"
     "@ui/input": "workspace:ui/input"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -1852,6 +1878,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/styled-system": ^5
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -1867,6 +1894,7 @@ __metadata:
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1881,6 +1909,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/styled-system": ^5
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -1925,6 +1954,7 @@ __metadata:
     "@types/styled-system": ^5
     "@ui/button": "workspace:ui/button"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -1939,6 +1969,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1952,6 +1983,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1965,6 +1997,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1978,6 +2011,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -2669,7 +2703,24 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
+    "@atls-ui-parts/layout": ^0.0.2
     "@emotion/react": ^11.6.0
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
+"@ui/text@workspace:ui/text":
+  version: 0.0.0-use.local
+  resolution: "@ui/text@workspace:ui/text"
+  dependencies:
+    "@atls-ui-parts/text": ^0.0.6
+    "@emotion/react": ^11.7.0
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17

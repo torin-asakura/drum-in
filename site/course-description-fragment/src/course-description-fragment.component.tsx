@@ -6,11 +6,10 @@ import { Box }      from '@ui/layout'
 import { Row }      from '@ui/layout'
 import { Column }   from '@ui/layout'
 import { Layout }   from '@ui/layout'
-import { Text }     from '@ui/layout'
+import { Text }     from '@ui/text'
 import { Button }   from '@ui/button'
 
 const CourseDescription: FC = () => {
-  const [show, setShow] = useState('none')
   // TODO Modal appearacnce logic
   return (
     <Box width='1440px' border='1px solid black'>

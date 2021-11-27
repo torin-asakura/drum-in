@@ -1,4 +1,5 @@
 import React               from 'react'
+import { FC }                from 'react'
 
 import { Box }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
@@ -8,7 +9,7 @@ import { Row }             from '@ui/layout'
 import { TextComponent }   from './text.component'
 import { SliderComponent } from './slider.component'
 
-const AboutMobile = () => {
+const AboutMobile: FC = () => {
   //TODO add interfaces, move text component to ui
   return (
     <Box width='320px' height='1595px' border='1px solid black'>

@@ -1,3 +1,3 @@
 export interface Modal {
-    show:string
+  show: string
 }

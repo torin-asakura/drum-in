@@ -1,12 +1,13 @@
 import React      from 'react'
+import { FC }       from 'react'
 
 import { Box }    from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Column } from '@ui/layout'
-import { Text }   from '@ui/layout'
+import { Text }   from '@ui/text'
 import { Button } from '@ui/button'
 
-const AskQuestion = () => {
+const AskQuestion: FC = () => {
   return (
     <Box width='320px' height='464px' border='1px solid black'>
       <Layout flexShrink={0} flexBasis={20} />

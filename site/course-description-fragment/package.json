@@ -7,6 +7,7 @@
     "@ui/button": "workspace:ui/button",
     "@ui/input": "workspace:ui/input",
     "@ui/layout": "workspace:ui/layout",
+    "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5"

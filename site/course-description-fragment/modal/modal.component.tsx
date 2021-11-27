@@ -4,10 +4,10 @@ import { FC }     from 'react'
 import { Box }    from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Column } from '@ui/layout'
-import { Text }   from '@ui/layout'
+import { Text }   from '@ui/text'
 import { Input }  from '@ui/input'
 import { Button } from '@ui/button'
-import { Modal } from './modal.interface'
+import { Modal }  from './modal.interface'
 
 const Modal: FC<Modal> = ({ show }) => {
   return (

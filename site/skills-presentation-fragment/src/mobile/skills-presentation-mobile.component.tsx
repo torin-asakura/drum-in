@@ -1,11 +1,12 @@
 import React      from 'react'
+import { FC }       from 'react'
 
 import { Box }    from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
-import { Text }   from '@ui/layout'
+import { Text }   from '@ui/text'
 
-const SkillsPresentationMobile = () => {
+const SkillsPresentationMobile: FC = () => {
   //TODO img render automation
   return (
     <Box width='320px' height='992px' border='1px solid black'>

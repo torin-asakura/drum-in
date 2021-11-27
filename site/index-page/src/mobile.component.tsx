@@ -12,7 +12,7 @@ import { ReviewsMobile }            from '@site/reviews-fragment'
 import { FooterMobile }             from '@site/footer-fragment'
 
 const Mobile = () => {
-    <Column width='100%' alignItems='center'>
+  ;<Column width='100%' alignItems='center'>
     <HeaderMobile />
     <IndividualLessonsMobile />
     <SkillsPresentationMobile />
@@ -24,4 +24,4 @@ const Mobile = () => {
     <FooterMobile />
   </Column>
 }
-export {Mobile}
+export { Mobile }

@@ -1,4 +1,5 @@
 import React               from 'react'
+import { FC }                from 'react'
 
 import { Box }             from '@ui/layout'
 import { Column }          from '@ui/layout'
@@ -7,8 +8,7 @@ import { Layout }          from '@ui/layout'
 import { TextComponent }   from './text.component'
 import { SliderComponent } from './slider.component'
 
-const SkillsToLearnMobile = () => {
-  //TODO add interfaces
+const SkillsToLearnMobile: FC = () => {
   return (
     <Box width='320px' border='1px solid black' position='relative' zIndex={1}>
       <Column width='100%' alignItems='center'>

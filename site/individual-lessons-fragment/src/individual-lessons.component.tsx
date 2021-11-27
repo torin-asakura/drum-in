@@ -1,13 +1,14 @@
 import React      from 'react'
+import { FC }       from 'react'
 
 import { Box }    from '@ui/layout'
 import { Row }    from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
-import { Text }   from '@ui/layout'
+import { Text }   from '@ui/text'
 import { Button } from '@ui/button'
 
-const IndividualLessons = () => {
+const IndividualLessons: FC = () => {
   return (
     <Box width='1440px' height='581px' border='1px solid black'>
       <Row justifyContent='center'>
