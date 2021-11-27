@@ -103,6 +103,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/conditional-render@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@atls-ui-parts/conditional-render@npm:0.0.1"
+  peerDependencies:
+    react: ^17.0.1
+  checksum: f770730caabacacd69cadf0137b44f2ef16be4e6021c431bcc313b1584adebd22652080c28fcbd502459c325de0c4409d22b4489c2dd31e96a102b70eec511a4
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/layout@npm:^0.0.2":
   version: 0.0.2
   resolution: "@atls-ui-parts/layout@npm:0.0.2"
@@ -444,7 +453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-app-with-emotion@npm:^0.2.67":
+"@atls/next-app-with-emotion@npm:^0.2.68":
   version: 0.2.68
   resolution: "@atls/next-app-with-emotion@npm:0.2.68"
   peerDependencies:
@@ -1803,7 +1812,7 @@ __metadata:
     "@apollo/react-ssr": ^4.0.0
     "@atls/actl-cli": ^0.4.48
     "@atls/next-app-with-apollo": ^0.2.70
-    "@atls/next-app-with-emotion": ^0.2.67
+    "@atls/next-app-with-emotion": ^0.2.68
     "@atls/next-app-with-helmet": ^0.2.64
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
     "@atls/next-document-with-helmet": ^0.2.64
@@ -1822,6 +1831,7 @@ __metadata:
     "@types/react-helmet": ^6
     "@types/recompose": ^0
     "@types/styled-system": ^5
+    "@ui/theme": "workspace:ui/theme"
     events: ^3.3.0
     express: ^4.17.1
     graphql: ^15.5.1
@@ -1936,6 +1946,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
+    "@ui/condition": "workspace:ui/condition"
     "@ui/layout": "workspace:ui/layout"
     "@ui/theme": "workspace:ui/theme"
     react: ^17.0.2
@@ -2681,6 +2692,16 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
+"@ui/condition@workspace:ui/condition":
+  version: 0.0.0-use.local
+  resolution: "@ui/condition@workspace:ui/condition"
+  dependencies:
+    "@atls-ui-parts/conditional-render": ^0.0.1
+    "@types/react": ^17
+    react: ^17.0.2
   languageName: unknown
   linkType: soft
 

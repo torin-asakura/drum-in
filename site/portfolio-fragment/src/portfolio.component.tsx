@@ -37,7 +37,7 @@ const Portfolio: FC = () => {
           </Column>
           <Layout flexBasis={143} flexShrink={0} />
         </Row>
-        <layout flexBasis={60} />
+        <Layout flexBasis={60} />
       </Column>
     </Box>
   )

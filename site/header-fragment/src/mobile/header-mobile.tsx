@@ -42,21 +42,21 @@ const HeaderMobile: FC = () => {
           </Box>
           <Layout flexBasis={14} flexShrink={0} />
           <Box judtifyContent='center' width='255px' height='21px' border='1px solid black'>
-            <layout>
+            <Layout>
               <Text> text</Text>
-            </layout>
+            </Layout>
           </Box>
           <Layout flexBasis={14} flexShrink={0} />
           <Box justifyContent='center' width='255px' height='21px' border='1px solid black'>
-            <layout>
+            <Layout>
               <Text> text</Text>
-            </layout>
+            </Layout>
           </Box>
           <Layout flexBasis={14} flexShrink={0} />
           <Box judtifyContent='center' width='255px' height='21px' border='1px solid black'>
-            <layout>
+            <Layout>
               <Text> text</Text>
-            </layout>
+            </Layout>
           </Box>
         </Column>
       </Box>

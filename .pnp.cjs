@@ -79,6 +79,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui/button"
       },
       {
+        "name": "@ui/condition",
+        "reference": "workspace:ui/condition"
+      },
+      {
         "name": "@ui/input",
         "reference": "workspace:ui/input"
       },
@@ -112,6 +116,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@site/skills-presentation-fragment", ["workspace:site/skills-presentation-fragment"]],
       ["@site/skills-to-learn-fragment", ["workspace:site/skills-to-learn-fragment"]],
       ["@ui/button", ["workspace:ui/button"]],
+      ["@ui/condition", ["workspace:ui/condition"]],
       ["@ui/input", ["workspace:ui/input"]],
       ["@ui/layout", ["workspace:ui/layout"]],
       ["@ui/text", ["workspace:ui/text"]],
@@ -357,6 +362,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@arcanis/slice-ansi", "npm:1.0.2"],
             ["grapheme-splitter", "npm:1.0.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@atls-ui-parts/conditional-render", [
+        ["npm:0.0.1", {
+          "packageLocation": "./.yarn/cache/@atls-ui-parts-conditional-render-npm-0.0.1-c51c7b273a-f770730caa.zip/node_modules/@atls-ui-parts/conditional-render/",
+          "packageDependencies": [
+            ["@atls-ui-parts/conditional-render", "npm:0.0.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:6894898156b24e42098ab098b27d33565d2500f221e20b77c3a966f91ef4579148521ce4d5d2faa657858568602f0d35343e6f05be718b739c25f0e3fb455bd2#npm:0.0.1", {
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-conditional-render-virtual-c267fa9124/0/cache/@atls-ui-parts-conditional-render-npm-0.0.1-c51c7b273a-f770730caa.zip/node_modules/@atls-ui-parts/conditional-render/",
+          "packageDependencies": [
+            ["@atls-ui-parts/conditional-render", "virtual:6894898156b24e42098ab098b27d33565d2500f221e20b77c3a966f91ef4579148521ce4d5d2faa657858568602f0d35343e6f05be718b739c25f0e3fb455bd2#npm:0.0.1"],
+            ["@types/react", "npm:17.0.36"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
           ],
           "linkType": "HARD",
         }]
@@ -3048,6 +3075,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-helmet", "npm:6.1.4"],
             ["@types/recompose", "npm:0.30.9"],
             ["@types/styled-system", "npm:5.1.13"],
+            ["@ui/theme", "workspace:ui/theme"],
             ["events", "npm:3.3.0"],
             ["express", "npm:4.17.1"],
             ["graphql", "npm:15.7.2"],
@@ -3174,6 +3202,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.36"],
             ["@types/react-dom", "npm:17.0.11"],
             ["@types/styled-system", "npm:5.1.13"],
+            ["@ui/condition", "workspace:ui/condition"],
             ["@ui/layout", "workspace:ui/layout"],
             ["@ui/theme", "workspace:ui/theme"],
             ["react", "npm:17.0.2"],
@@ -4153,6 +4182,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"],
             ["styled-system", "npm:5.1.5"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@ui/condition", [
+        ["workspace:ui/condition", {
+          "packageLocation": "./ui/condition/",
+          "packageDependencies": [
+            ["@ui/condition", "workspace:ui/condition"],
+            ["@atls-ui-parts/conditional-render", "virtual:6894898156b24e42098ab098b27d33565d2500f221e20b77c3a966f91ef4579148521ce4d5d2faa657858568602f0d35343e6f05be718b739c25f0e3fb455bd2#npm:0.0.1"],
+            ["@types/react", "npm:17.0.36"],
+            ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]

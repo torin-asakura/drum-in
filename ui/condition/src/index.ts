@@ -1,1 +1,1 @@
-export * from '@atls-ui-parts/conditional-render'
+export * from './condition.component'
