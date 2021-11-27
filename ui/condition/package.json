@@ -1,0 +1,8 @@
+{
+  "name": "@ui/condition",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@atls-ui-parts/conditional-render": "^0.0.1"
+  }
+}
