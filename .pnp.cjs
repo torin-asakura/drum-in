@@ -957,40 +957,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@atls/next-app-with-emotion", [
-        ["npm:0.2.68", {
-          "packageLocation": "./.yarn/cache/@atls-next-app-with-emotion-npm-0.2.68-fda28b32a7-023c0d6f6a.zip/node_modules/@atls/next-app-with-emotion/",
-          "packageDependencies": [
-            ["@atls/next-app-with-emotion", "npm:0.2.68"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.68", {
-          "packageLocation": "./.yarn/__virtual__/@atls-next-app-with-emotion-virtual-dd402aa73a/0/cache/@atls-next-app-with-emotion-npm-0.2.68-fda28b32a7-023c0d6f6a.zip/node_modules/@atls/next-app-with-emotion/",
-          "packageDependencies": [
-            ["@atls/next-app-with-emotion", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.68"],
-            ["@emotion/cache", "npm:11.6.0"],
-            ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
-            ["@types/emotion__cache", null],
-            ["@types/emotion__react", null],
-            ["@types/next", null],
-            ["@types/react", "npm:17.0.36"],
-            ["next", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:10.2.3"],
-            ["react", "npm:17.0.2"]
-          ],
-          "packagePeers": [
-            "@emotion/cache",
-            "@emotion/react",
-            "@types/emotion__cache",
-            "@types/emotion__react",
-            "@types/next",
-            "@types/react",
-            "next",
-            "react"
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["@atls/next-app-with-helmet", [
         ["npm:0.2.65", {
           "packageLocation": "./.yarn/cache/@atls-next-app-with-helmet-npm-0.2.65-cb707ded54-537b7c54dc.zip/node_modules/@atls/next-app-with-helmet/",
@@ -3056,7 +3022,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/react-ssr", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:4.0.0"],
             ["@atls/actl-cli", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.4.50"],
             ["@atls/next-app-with-apollo", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.71"],
-            ["@atls/next-app-with-emotion", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.68"],
             ["@atls/next-app-with-helmet", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.65"],
             ["@atls/next-config-with-pnp-workspaces", "npm:0.0.1"],
             ["@atls/next-document-with-helmet", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.66"],
@@ -6116,9 +6081,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.16.6-a20cef1ca7-3dffc86892.zip/node_modules/browserslist/",
           "packageDependencies": [
             ["browserslist", "npm:4.16.6"],
-            ["caniuse-lite", "npm:1.0.30001282"],
+            ["caniuse-lite", "npm:1.0.30001283"],
             ["colorette", "npm:1.4.0"],
-            ["electron-to-chromium", "npm:1.3.904"],
+            ["electron-to-chromium", "npm:1.4.4"],
             ["escalade", "npm:3.1.1"],
             ["node-releases", "npm:1.1.77"]
           ],
@@ -6346,6 +6311,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001282-49173a42dd-62797fd756.zip/node_modules/caniuse-lite/",
           "packageDependencies": [
             ["caniuse-lite", "npm:1.0.30001282"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.0.30001283", {
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001283-fd8e072fdc-a13916f1b5.zip/node_modules/caniuse-lite/",
+          "packageDependencies": [
+            ["caniuse-lite", "npm:1.0.30001283"]
           ],
           "linkType": "HARD",
         }]
@@ -7111,7 +7083,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["cssnano-preset-simple", "virtual:fdf0a77dbfb7dd4374c0fb0fe5efd49d1f475d60e7f649e764bdcef582ea8355c709129fc4575f94b37e853a97c36ebc4428829fdf17818ad2f398079b61a8ac#npm:2.0.0"],
             ["@types/postcss", null],
-            ["caniuse-lite", "npm:1.0.30001282"],
+            ["caniuse-lite", "npm:1.0.30001283"],
             ["postcss", "npm:8.2.13"]
           ],
           "packagePeers": [
@@ -7608,6 +7580,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.904-6df4468fc3-51cd8de455.zip/node_modules/electron-to-chromium/",
           "packageDependencies": [
             ["electron-to-chromium", "npm:1.3.904"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.4.4", {
+          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.4.4-a7c069ae1e-df54c523cf.zip/node_modules/electron-to-chromium/",
+          "packageDependencies": [
+            ["electron-to-chromium", "npm:1.4.4"]
           ],
           "linkType": "HARD",
         }]
@@ -11860,7 +11839,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserify-zlib", "npm:0.2.0"],
             ["browserslist", "npm:4.16.6"],
             ["buffer", "npm:5.6.0"],
-            ["caniuse-lite", "npm:1.0.30001282"],
+            ["caniuse-lite", "npm:1.0.30001283"],
             ["chalk", "npm:2.4.2"],
             ["chokidar", "npm:3.5.1"],
             ["constants-browserify", "npm:1.0.0"],
