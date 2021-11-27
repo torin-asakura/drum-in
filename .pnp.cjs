@@ -404,6 +404,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/emotion__styled", null],
             ["@types/react", "npm:17.0.36"],
             ["@types/styled-system", "npm:5.1.13"],
+            ["csstype", "npm:3.0.10"],
             ["react", "npm:17.0.2"],
             ["styled-system", "npm:5.1.5"]
           ],
