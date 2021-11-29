@@ -1833,21 +1833,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/ask-a-question-fragment@workspace:site/ask-a-question-fragment":
-  version: 0.0.0-use.local
-  resolution: "@site/ask-a-question-fragment@workspace:site/ask-a-question-fragment"
-  dependencies:
-    "@emotion/react": ^11.7.0
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@ui/button": "workspace:ui/button"
-    "@ui/layout": "workspace:ui/layout"
-    "@ui/text": "workspace:ui/text"
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  languageName: unknown
-  linkType: soft
-
 "@site/course-description-fragment@workspace:site/course-description-fragment":
   version: 0.0.0-use.local
   resolution: "@site/course-description-fragment@workspace:site/course-description-fragment"
@@ -1920,7 +1905,6 @@ __metadata:
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@site/about-fragment": "workspace:site/about-fragment"
-    "@site/ask-a-question-fragment": "workspace:site/ask-a-question-fragment"
     "@site/course-description-fragment": "workspace:site/course-description-fragment"
     "@site/education-fragment": "workspace:site/education-fragment"
     "@site/footer-fragment": "workspace:site/footer"
