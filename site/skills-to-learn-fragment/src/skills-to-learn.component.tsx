@@ -208,11 +208,11 @@ const SkillsToLearn = () => {
           <Layout flexBasis={[15, 15, 52]} flexShrink={0} />
         </Row>
         <Row justifyContent='flex-end' display={['none', 'none', 'flex']}>
-          <Layout flexBasis={50} flexShrink={0}/>
+          <Layout flexBasis={50} flexShrink={0} />
           <Column alignItems='center' display={['none', 'none', 'flex']} width='100%'>
             <Layout flexBasis={[11, 11, 20]} flexShrink={0} />
             <Row judtifyContent='center'>
-              <Layout flexBasis={[100,100,15]} flexShrink={0}  />
+              <Layout flexBasis={[100, 100, 15]} flexShrink={0} />
               <Box
                 borderRadius={50}
                 height={['11px', '11px', '18px']}
@@ -229,7 +229,7 @@ const SkillsToLearn = () => {
                   <Text>text</Text>
                 </Layout>
               </Box>
-              <Layout flexBasis={15} flexShrink={0}  />
+              <Layout flexBasis={15} flexShrink={0} />
             </Row>
             <Layout flexBasis={[11, 11, 20]} flexShrink={0} />
             <Row judtifyContent='center'>
@@ -252,14 +252,14 @@ const SkillsToLearn = () => {
               </Box>
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
             </Row>
-            <Layout flexBasis={50} flexShrink={0}/>
+            <Layout flexBasis={50} flexShrink={0} />
             <Box height='67px' width='375px' border='1px solid black' />
             <Box width='461px' height='500px' border='1px solid black'>
               <Layout>photo</Layout>
             </Box>
             <Box height='61px' width='375px' border='1px solid black' />
           </Column>
-          <Layout flexBasis ={52} flexShrink={0}/>
+          <Layout flexBasis={52} flexShrink={0} />
           <Column alignItems='center' display={['none', 'none', 'flex']} width='100%'>
             <Box height='67px' width='375px' border='1px solid black' />
             <Box width='461px' height='500px' border='1px solid black'>
@@ -277,7 +277,7 @@ const SkillsToLearn = () => {
               />
               <Layout flexBasis={[11, 11, 20]} flexShrink={0} />
               <Box
-                width={['280px', '280px','670px']}
+                width={['280px', '280px', '670px']}
                 height={['472px', '472px', '358px']}
                 border='1px solid black'
               >

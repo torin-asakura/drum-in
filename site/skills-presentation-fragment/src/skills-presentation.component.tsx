@@ -5,11 +5,16 @@ import { Box }    from '@ui/layout'
 import { Row }    from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
+import { Text }     from '@ui/text'
 
 const SkillsPresentation: FC = () => {
   return (
-    <Box width='1440px' height='585px' border='1px solid black'>
-      <Column width='100%'>
+    <Box
+      width={['320px', '320px', '1440px']}
+      height={['1075px', '1075px', '585px']}
+      border='1px solid black'
+    >
+      <Column width='100%' display={['none', 'none', 'flex']}>
         <Layout flexBasis={65} />
         <Row>
           <Column>
@@ -91,6 +96,68 @@ const SkillsPresentation: FC = () => {
             <Layout>text</Layout>
           </Box>
         </Row>
+      </Column>
+      <Column width='100%' display={['flex', 'flex', 'none']} alignItems='center'>
+        <Layout flexBasis={130} flexShrink={0} />
+        <Layout>
+          <Column>
+            <Box width='68px' height='58px' border='1px solid black'>
+              <Layout>img</Layout>
+            </Box>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Layout>
+              <Text>text</Text>
+            </Layout>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Box width='68px' height='58px' border='1px solid black'>
+              <Layout>img</Layout>
+            </Box>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Layout>
+              <Text>text</Text>
+            </Layout>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Box width='68px' height='58px' border='1px solid black'>
+              <Layout>img</Layout>
+            </Box>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Layout>
+              <Text>text</Text>
+            </Layout>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Box width='68px' height='58px' border='1px solid black'>
+              <Layout>img</Layout>
+            </Box>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Layout>
+              <Text>text</Text>
+            </Layout>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Box width='68px' height='58px' border='1px solid black'>
+              <Layout>img</Layout>
+            </Box>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Layout>
+              <Text>text</Text>
+            </Layout>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Box width='68px' height='58px' border='1px solid black'>
+              <Layout>img</Layout>
+            </Box>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Layout>
+              <Text>text</Text>
+            </Layout>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Box width='68px' height='58px' border='1px solid black'>
+              <Layout>img</Layout>
+            </Box>
+            <Layout flexBasis={30} flexShrink={0} />
+            <Layout>
+              <Text>text</Text>
+            </Layout>
+          </Column>
+        </Layout>
       </Column>
     </Box>
   )
