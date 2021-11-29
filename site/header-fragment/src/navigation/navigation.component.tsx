@@ -7,7 +7,14 @@ import { Text }   from '@ui/text'
 
 const Navigation = () => {
   return (
-    <Box width='1015px' zIndex={10} position='absolute' top='200px' flexShrink={0}>
+    <Box
+      width='1015px'
+      zIndex={10}
+      position='absolute'
+      top='200px'
+      flexShrink={0}
+      display={['none', 'none', 'flex']}
+    >
       <Row>
         <Layout flexBasis={11} />
         <Layout>
