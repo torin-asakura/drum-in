@@ -98,56 +98,45 @@ const Footer: FC = () => {
           <Layout>yandex map</Layout>
         </Box>
         <Box width='320px' height='400px' border='1px solid black'>
-         
           <Row justifyContent='center'>
-          <Layout flexBasis={30}/>
-          <Column width='100%' alignItems='center'> 
-          <Layout flexBasis={30}/>
-            <Layout>
-              <Button width='237px' height='40px' border='1px solid black' >
-                <Layout>
-                  <Text>sign up</Text>
-                </Layout>
-              </Button>
-            </Layout>
-            <Layout flexBasis={30}/>
-            <Box border='1px solid black'>
+            <Layout flexBasis={30} />
+            <Column width='100%' alignItems='center'>
+              <Layout flexBasis={30} />
               <Layout>
-                <Text>
-                  phone number
-                </Text>
+                <Button width='237px' height='40px' border='1px solid black'>
+                  <Layout>
+                    <Text>sign up</Text>
+                  </Layout>
+                </Button>
               </Layout>
-            </Box>
-            <Layout flexBasis={50}/>
-            <Row justifyContent='center'>
-              <Box width='48px' height='48px' border='1px solid black'>
-                  <Layout>
-                    icon
-                  </Layout>
+              <Layout flexBasis={30} />
+              <Box border='1px solid black'>
+                <Layout>
+                  <Text>phone number</Text>
+                </Layout>
               </Box>
-              <Layout flexBasis={100} flexShrink={0}/>
-              <Box width='48px' height='48px' border='1px solid black'>
-                  <Layout>
-                    icon
-                  </Layout>
-              </Box>
-            </Row>
-            <Layout flexBasis={100} flexShrink={0}/>
-            <Row justifyContent='center'>
-              <Box width='48px' height='48px' border='1px solid black'>
-                  <Layout>
-                    icon
-                  </Layout>
-              </Box>
-              <Layout flexBasis={100} flexShrink={0}/>
-              <Box width='48px' height='48px' border='1px solid black'>
-                  <Layout>
-                    icon
-                  </Layout>
-              </Box>
-            </Row>
-          </Column>
-          <Layout flexBasis={30}/>
+              <Layout flexBasis={50} />
+              <Row justifyContent='center'>
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>icon</Layout>
+                </Box>
+                <Layout flexBasis={100} flexShrink={0} />
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>icon</Layout>
+                </Box>
+              </Row>
+              <Layout flexBasis={100} flexShrink={0} />
+              <Row justifyContent='center'>
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>icon</Layout>
+                </Box>
+                <Layout flexBasis={100} flexShrink={0} />
+                <Box width='48px' height='48px' border='1px solid black'>
+                  <Layout>icon</Layout>
+                </Box>
+              </Row>
+            </Column>
+            <Layout flexBasis={30} />
           </Row>
         </Box>
       </Column>

@@ -29,63 +29,60 @@ const Header: FC = () => {
           <Layout> {/* Logo */} </Layout>
         </Box>
         <Layout flexBasis={22} flexShrink={0} display={['none', 'none', 'flex']} />
-        <Column
-          width='100%'
-          zIndex={[1, 1, 5]}
-          position={['relative', 'relative', 'relative']}
-          alignItems={['center', 'center', 'flex-start']}
-        >
-          <Layout flexBasis={[30, 30, 66]} flexShrink={0} />
-          <Layout>
-            <Text> барабанный инструктор </Text>
-          </Layout>
-          <Layout flexBasis={[14, 14, 20]} flexShrink={0} />
-          <Layout>
-            <Text> чуприкова марина </Text>
-          </Layout>
-          <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-          <Layout display={['flex', 'flex', 'none']}>
-            <Text> phone number </Text>
-          </Layout>
-          <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-          <Box
-            display={['flex', 'flex', 'none']}
-            width='78px'
-            height='78px'
-            border='1px solid black'
-            flexShrink={0}
-          >
-            <Layout>logo</Layout>
-          </Box>
-          <Layout flexBasis={[20, 20, 35]} flexShrink={0} />
-          <Layout display={['none', 'none', 'flex']}>
-            <Text> написать в whatsapp </Text>
-          </Layout>
-          <Column
-            width='100%'
-            display={['flex', 'flex', 'none']}
-            alignItems='center'
-            justifyContent='center'
-          >
-            <Layout display={['flex', 'flex', 'none']}>
-              <Text> ударная установка </Text>
+        <Box width='100%' zIndex={[1, 1, 5]} position={['relative', 'relative', 'relative']}>
+          <Column width='100%' alignItems={['center', 'center', 'flex-start']}>
+            <Layout flexBasis={[30, 30, 66]} flexShrink={0} />
+            <Layout>
+              <Text> барабанный инструктор </Text>
+            </Layout>
+            <Layout flexBasis={[14, 14, 20]} flexShrink={0} />
+            <Layout>
+              <Text> чуприкова марина </Text>
             </Layout>
             <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
             <Layout display={['flex', 'flex', 'none']}>
-              <Text> ритм сольфеджо </Text>
+              <Text> phone number </Text>
             </Layout>
             <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-            <Layout display={['flex', 'flex', 'none']}>
-              <Text> о преподавателе </Text>
+            <Box
+              display={['flex', 'flex', 'none']}
+              width='78px'
+              height='78px'
+              border='1px solid black'
+              flexShrink={0}
+            >
+              <Layout>logo</Layout>
+            </Box>
+            <Layout flexBasis={[20, 20, 35]} flexShrink={0} />
+            <Layout display={['none', 'none', 'flex']}>
+              <Text> написать в whatsapp </Text>
             </Layout>
-            <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-            <Layout display={['flex', 'flex', 'none']}>
-              <Text> отзывы </Text>
-            </Layout>
+            <Column
+              width='100%'
+              display={['flex', 'flex', 'none']}
+              alignItems='center'
+              justifyContent='center'
+            >
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text> ударная установка </Text>
+              </Layout>
+              <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text> ритм сольфеджо </Text>
+              </Layout>
+              <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text> о преподавателе </Text>
+              </Layout>
+              <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text> отзывы </Text>
+              </Layout>
+            </Column>
+            <Layout flexBasis={[20, 20, 35]} flexShrink={0} display={['none', 'none', 'flex']} />
+            <Navigation />
           </Column>
-          <Layout flexBasis={[20, 20, 35]} flexShrink={0} display={['none', 'none', 'flex']} />
-          <Navigation />
-        </Column>
+        </Box>
         <Box
           width={['105px', '105px', '375px']}
           height={['355px', '355px', '285px']}

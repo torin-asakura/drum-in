@@ -12,7 +12,7 @@ const SkillsToLearn = () => {
     <Box
       width={['320px', '320px', '1440px']}
       border='1px solid black'
-      position='realtive'
+      position='relative'
       zIndex={1}
     >
       <Box
@@ -28,7 +28,7 @@ const SkillsToLearn = () => {
         <Layout flexBasis={25} flexShrink={0} />
         <Row justifyContent='center' display={['flex', 'flex', 'none']}>
           <Column width='100%'>
-            <Layout flexBa0sis={59} />
+            <Layout flexBasis={59} />
             <Row>
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
               <Box
@@ -149,7 +149,7 @@ const SkillsToLearn = () => {
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
             </Row>
             <Layout flexBasis={10} display={['flex', 'flex', 'none']} />
-            <Row judtifyContent='center'>
+            <Row justifyContent='center'>
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
               <Box
                 borderRadius={50}
@@ -211,7 +211,7 @@ const SkillsToLearn = () => {
           <Layout flexBasis={50} flexShrink={0} />
           <Column alignItems='center' display={['none', 'none', 'flex']} width='100%'>
             <Layout flexBasis={[11, 11, 20]} flexShrink={0} />
-            <Row judtifyContent='center'>
+            <Row justifyContent='center'>
               <Layout flexBasis={[100, 100, 15]} flexShrink={0} />
               <Box
                 borderRadius={50}
@@ -232,7 +232,7 @@ const SkillsToLearn = () => {
               <Layout flexBasis={15} flexShrink={0} />
             </Row>
             <Layout flexBasis={[11, 11, 20]} flexShrink={0} />
-            <Row judtifyContent='center'>
+            <Row justifyContent='center'>
               <Layout flexBasis={15} flexShrink={0} />
               <Box
                 borderRadius={50}
@@ -267,7 +267,7 @@ const SkillsToLearn = () => {
             </Box>
             <Box height='61px' width='375px' border='1px solid black' />
             <Layout flexBasis={[11, 11, 275]} flexShrink={0} />
-            <Row judtifyContent='center'>
+            <Row justifyContent='center'>
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
               <Box
                 borderRadius={50}
@@ -288,7 +288,7 @@ const SkillsToLearn = () => {
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
             </Row>
             <Layout flexBasis={[11, 11, 20]} flexShrink={0} />
-            <Row judtifyContent='center'>
+            <Row justifyContent='center'>
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
               <Box
                 borderRadius={50}
@@ -309,7 +309,7 @@ const SkillsToLearn = () => {
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
             </Row>
             <Layout flexBasis={[11, 11, 20]} flexShrink={0} />
-            <Row judtifyContent='center'>
+            <Row justifyContent='center'>
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
               <Box
                 borderRadius={50}

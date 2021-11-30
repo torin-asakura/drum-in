@@ -53,9 +53,9 @@ const IndividualLessons: FC = () => {
       </Row>
       <Column width='100%' alignItems='center' display={['flex', 'flex', 'none']}>
         <Box border='1px solid black' width='320px' height='290px'>
-          <Layout flexBasis={20} flexSHrink={0} />
+          <Layout flexBasis={20} flexShrink={0} />
           <Column width='100%'>
-            <Layout flexBasis={25} flexSHrink={0} />
+            <Layout flexBasis={25} flexShrink={0} />
             <Box border='1px solid black'>
               <Layout>
                 <Text>header</Text>
@@ -77,9 +77,9 @@ const IndividualLessons: FC = () => {
               </Layout>
               <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
             </Row>
-            <Layout flexBasis={25} flexSHrink={0} />
+            <Layout flexBasis={25} flexShrink={0} />
           </Column>
-          <Layout flexBasis={20} flexSHrink={0} />
+          <Layout flexBasis={20} flexShrink={0} />
         </Box>
         <Layout flexBasis={55} flexShrink={0} />
         <Layout>
