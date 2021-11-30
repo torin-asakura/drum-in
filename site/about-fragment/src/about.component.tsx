@@ -8,8 +8,8 @@ import { Column } from '@ui/layout'
 
 const About = () => {
   return (
-    <Box width='1440px' border='1px solid black'>
-      <Row>
+    <Box width={['320px', '320px', '1440px']} border='1px solid black'>
+      <Row display={['none', 'none', 'flex']}>
         <Layout flexBasis={138} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={56} />
@@ -35,6 +35,29 @@ const About = () => {
         </Column>
         <Layout flexBasis={74} flexShrink={0} />
       </Row>
+      <Column width='100%' display={['flex', 'flex', 'none']}>
+        <Layout flexBasis={25} flexShrink={0} />
+        <Row>
+          <Layout flexBasis={44} flexShrink={0} />
+          <Column width='100%'>
+            <Box border='1px solid black'>
+              <Layout>
+                <Text>header text</Text>
+              </Layout>
+            </Box>
+            <Layout flexBasis={12}/>
+            <Box border='1px solid black'>
+              <Layout>
+                <Text>
+                  main text
+                </Text>
+              </Layout>
+            </Box>
+          </Column>
+          <Layout flexBasis={44} flexShrink={0} />
+        </Row>
+        <Layout flexBasis={25} flexShrink={0} />
+      </Column>
     </Box>
   )
 }
