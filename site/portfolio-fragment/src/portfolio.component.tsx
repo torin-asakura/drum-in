@@ -9,7 +9,7 @@ import { Text }   from '@ui/text'
 
 const Portfolio: FC = () => {
   return (
-    <Box width='1440px' height='1100px' border='1px solid black'>
+    <Box width='1440px' height='1100px' border='1px solid black' display={['none','none','flex']}>
       <Column width='100%'>
         <Row>
           <Layout flexBasis={65} flexShrink={0} />
