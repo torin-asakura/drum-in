@@ -1,10 +1,10 @@
-import React      from 'react'
+import React                    from 'react'
 
-import { Box }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
+import { Box }                  from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Layout }               from '@ui/layout'
 
-import { SkillsToLearnMobile } from './skills-to-learn-mobile.component'
+import { SkillsToLearnMobile }  from './skills-to-learn-mobile.component'
 import { SkillsToLearnDesktop } from './skills-to-learn-desktop.component'
 
 const SkillsToLearn = () => (
@@ -20,8 +20,8 @@ const SkillsToLearn = () => (
     />
     <Column width='100%' alignItems='center'>
       <Layout flexBasis={25} flexShrink={0} />
-      <SkillsToLearnMobile/>
-      <SkillsToLearnDesktop/>
+      <SkillsToLearnMobile />
+      <SkillsToLearnDesktop />
     </Column>
   </Box>
 )

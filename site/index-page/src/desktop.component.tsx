@@ -12,21 +12,19 @@ import { Portfolio }          from '@site/portfolio-fragment'
 import { Reviews }            from '@site/reviews-fragment'
 import { Footer }             from '@site/footer-fragment'
 
-const Desktop = () => {
-  return (
-    <Column width='100%' alignItems='center'>
-      <Header />
-      <CourseDescription />
-      <SkillsToLearn />
-      <IndividualLessons />
-      <SkillsPresentation />
-      <About />
-      <Education />
-      <Portfolio />
-      <Reviews />
-      <Footer />
-    </Column>
-  )
-}
+const Desktop = () => (
+  <Column width='100%' alignItems='center'>
+    <Header />
+    <CourseDescription />
+    <SkillsToLearn />
+    <IndividualLessons />
+    <SkillsPresentation />
+    <About />
+    <Education />
+    <Portfolio />
+    <Reviews />
+    <Footer />
+  </Column>
+)
 
 export { Desktop }

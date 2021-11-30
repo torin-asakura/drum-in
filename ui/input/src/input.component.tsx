@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Input = () => {
+const Input = () => (
   // TODO change Input
-  return <Input />
-}
+  <Input />
+)
+
 export { Input }

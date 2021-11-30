@@ -23,10 +23,10 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
-#      - name: Lint
-#        run: yarn checks lint
-#        env:
-#          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      #      - name: Lint
+      #        run: yarn checks lint
+      #        env:
+      #          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: TypeCheck
         run: yarn checks typecheck

@@ -67,7 +67,7 @@ const SkillsToLearnMobile = () => (
         <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
       </Row>
       <Layout flexBasis={10} display={['flex', 'flex', 'none']} />
-      <Row justifyContent={'center'}>
+      <Row justifyContent='center'>
         <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
         <Box
           borderRadius={50}

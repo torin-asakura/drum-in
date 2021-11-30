@@ -100,7 +100,7 @@ const Header: FC = () => (
               width='18px'
               border='1px solid black'
               display={['none', 'none', 'flex']}
-            ></Box>
+            />
             <Layout flexBasis={[14, 14, 52]} flexShrink={0} />
             <Box
               height='17px'
