@@ -45,12 +45,10 @@ const About = () => {
                 <Text>header text</Text>
               </Layout>
             </Box>
-            <Layout flexBasis={12}/>
+            <Layout flexBasis={12} />
             <Box border='1px solid black'>
               <Layout>
-                <Text>
-                  main text
-                </Text>
+                <Text>main text</Text>
               </Layout>
             </Box>
           </Column>

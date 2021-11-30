@@ -9,8 +9,8 @@ import { Text }   from '@ui/text'
 
 const Education: FC = () => {
   return (
-    <Box width='1440px' height='490px' border='1px solid black'>
-      <Column width='100%'>
+    <Box width={['320px', '320px', '1440px']} border='1px solid black'>
+      <Column width='100%' display={['none', 'none', 'flex']}>
         <Layout flexBasis={60} flexShrink={0} />
         <Row>
           <Layout flexBasis={138} flexShrink={0} />
@@ -34,6 +34,27 @@ const Education: FC = () => {
           <Layout flexBasis={74} flexShrink={0} />
         </Row>
         <Layout flexBasis={65} />
+      </Column>
+      <Column width='100%' display={['flex', 'flex', 'none']}>
+        <Layout flexBasis={25} flexShrink={0} />
+        <Row>
+          <Layout flexBasis={44} flexShrink={0} />
+          <Column width='100%'>
+            <Box border='1px solid black'>
+              <Layout>
+                <Text>header text</Text>
+              </Layout>
+            </Box>
+            <Layout flexBasis={12} />
+            <Box border='1px solid black'>
+              <Layout>
+                <Text>main text</Text>
+              </Layout>
+            </Box>
+          </Column>
+          <Layout flexBasis={44} flexShrink={0} />
+        </Row>
+        <Layout flexBasis={25} flexShrink={0} />
       </Column>
     </Box>
   )
