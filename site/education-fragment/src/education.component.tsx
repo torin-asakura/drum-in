@@ -35,7 +35,7 @@ const Education: FC = () => {
         </Row>
         <Layout flexBasis={65} />
       </Column>
-      <Column width='100%' display={['flex', 'flex', 'none']}>
+      <Column width='100%' display={['flex', 'flex', 'none']} alignItems='center'>
         <Layout flexBasis={25} flexShrink={0} />
         <Row>
           <Layout flexBasis={44} flexShrink={0} />
@@ -51,9 +51,31 @@ const Education: FC = () => {
                 <Text>main text</Text>
               </Layout>
             </Box>
+            <Layout flexBasis={20}/>
           </Column>
           <Layout flexBasis={44} flexShrink={0} />
         </Row>
+        <Box width='320px' height='320px' border='1px solid black'>
+              <Layout>
+                img
+              </Layout>
+            </Box>
+            <Layout flexBasis={30}/>
+            <Row justifyContent='center'>
+              <Layout flexBasis={44} flexShrink={0}/>
+              <Box border='1px solid black'>
+              <Layout>
+                <Text> text</Text>
+              </Layout>
+            </Box>
+              <Layout flexBasis={44} flexShrink={0}/>
+            </Row>
+            <Layout flexBasis={15}/>
+            <Box border='1px solid black'>
+              <Layout>
+                <Text> link text</Text>
+              </Layout>
+            </Box>
         <Layout flexBasis={25} flexShrink={0} />
       </Column>
     </Box>
