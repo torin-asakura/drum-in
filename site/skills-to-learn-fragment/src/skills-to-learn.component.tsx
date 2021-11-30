@@ -5,7 +5,7 @@ import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Row }    from '@ui/layout'
 import { Text }   from '@ui/text'
-import { Button } from '../../../ui/button/src'
+import { Button } from '@ui/button'
 
 const SkillsToLearn = () => {
   return (
