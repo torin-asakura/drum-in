@@ -1,11 +1,11 @@
-import React      from 'react'
-import {FC} from 'react'
+import React               from 'react'
+import { FC }                from 'react'
 
-import { Box }    from '@ui/layout'
-import { Layout } from '@ui/layout'
+import { Box }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
 import { ImageBlockProps } from './image-block.interface'
 
-const ImageBlock:FC<ImageBlockProps> = ({ top, left, position, zIndex }) => (
+const ImageBlock: FC<ImageBlockProps> = ({ top, left, position, zIndex }) => (
   <Box
     top={top}
     left={left}
