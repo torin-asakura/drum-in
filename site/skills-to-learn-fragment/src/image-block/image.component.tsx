@@ -3,6 +3,7 @@ import { FC }              from 'react'
 
 import { Box }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
+
 import { ImageBlockProps } from './image-block.interface'
 
 const ImageBlock: FC<ImageBlockProps> = ({ top, left, position, zIndex }) => (
