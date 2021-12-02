@@ -8,48 +8,38 @@ import { Column } from '@ui/layout'
 
 const About = () => (
   <Box width={['320px', '320px', '1440px']} border='1px solid black'>
-    <Row display={['none', 'none', 'flex']}>
+    <Row display={['none', 'none', 'flex']} style={{ border: '1px solid black' }}>
       <Layout flexBasis={138} flexShrink={0} />
-      <Column width='100%'>
+      <Column width='100%' style={{ border: '1px solid black' }}>
         <Layout flexBasis={56} />
-        <Box width='575px' height='21px' border='1px solid black'>
-          <Layout>
-            <Text>text</Text>
-          </Layout>
-        </Box>
+        <Layout style={{ border: '1px solid black' }}>
+          <Text>text</Text>
+        </Layout>
         <Layout flexBasis={50} />
-        <Box width='575px' height='250px' border='1px solid black'>
-          <Layout>
-            <Text>text</Text>
-          </Layout>
-        </Box>
+        <Layout style={{ border: '1px solid black' }}>
+          <Text>text</Text>
+        </Layout>
       </Column>
       <Layout flexBasis={115} flexShrink={0} />
       <Column>
         <Layout flexBasis={64} />
-        <Box width='536px' height='311px' border='1px solid black'>
-          <Layout>img</Layout>
-        </Box>
+        <Layout style={{ border: '1px solid black' }}>img</Layout>
         <Layout flexBasis={64} />
       </Column>
       <Layout flexBasis={74} flexShrink={0} />
     </Row>
-    <Column width='100%' display={['flex', 'flex', 'none']}>
+    <Column width='100%' display={['flex', 'flex', 'none']} style={{ border: '1px solid black' }}>
       <Layout flexBasis={25} flexShrink={0} />
-      <Row>
+      <Row style={{ border: '1px solid black' }}>
         <Layout flexBasis={44} flexShrink={0} />
-        <Column width='100%'>
-          <Box border='1px solid black'>
-            <Layout>
-              <Text>header text</Text>
-            </Layout>
-          </Box>
+        <Column width='100%' style={{ border: '1px solid black' }}>
+          <Layout style={{ border: '1px solid black' }}>
+            <Text>header text</Text>
+          </Layout>
           <Layout flexBasis={12} />
-          <Box border='1px solid black'>
-            <Layout>
-              <Text>main text</Text>
-            </Layout>
-          </Box>
+          <Layout style={{ border: '1px solid black' }}>
+            <Text>main text</Text>
+          </Layout>
         </Column>
         <Layout flexBasis={44} flexShrink={0} />
       </Row>

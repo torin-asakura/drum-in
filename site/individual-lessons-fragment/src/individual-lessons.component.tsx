@@ -14,22 +14,22 @@ const IndividualLessons: FC = () => (
     height={['290px', '290px', '581px']}
     border='1px solid black'
   >
-    <Row justifyContent='center' display={['none', 'none', 'flex']}>
+    <Row
+      justifyContent='center'
+      display={['none', 'none', 'flex']}
+      style={{ border: '1px solid black' }}
+    >
       <Layout flexBasis={138} flexShrink={0} />
-      <Column width='100%'>
+      <Column width='100%' style={{ border: '1px solid black' }}>
         <Layout flexBasis={60} />
-        <Box width='570px' height='105px' border='1px solid black'>
-          <Layout>
-            <Text>individual lessons</Text>
-          </Layout>
-        </Box>
+        <Layout style={{ border: '1px solid black' }}>
+          <Text>individual lessons</Text>
+        </Layout>
         <Layout />
         <Layout flexBasis={20} />
-        <Box width='570px' height='313px' border='1px solid black'>
-          <Layout>
-            <Text>individual lessons description</Text>
-          </Layout>
-        </Box>
+        <Layout style={{ border: '1px solid black' }}>
+          <Text>individual lessons description</Text>
+        </Layout>
         <Layout flexBasis={20} />
         <Layout>
           <Button width='426px' height='70px' border='1px solid black'>
@@ -41,35 +41,38 @@ const IndividualLessons: FC = () => (
         <Layout flexBasis={60} />
       </Column>
       <Layout flexBasis={120} flexShrink={0} />
-      <Column>
+      <Column style={{ border: '1px solid black' }}>
         <Layout flexBasis={60} />
-        <Box width='538px' height='500px' border='1px solid black'>
-          <Layout>video</Layout>
-        </Box>
+        <Layout style={{ border: '1px solid black' }}>video</Layout>
         <Layout flexBasis={20} />
       </Column>
       <Layout flexBasis={77} />
     </Row>
-    <Column width='100%' alignItems='center' display={['flex', 'flex', 'none']}>
+    <Column
+      width='100%'
+      alignItems='center'
+      display={['flex', 'flex', 'none']}
+      style={{ border: '1px solid black' }}
+    >
       <Box border='1px solid black' width='320px' height='290px'>
         <Layout flexBasis={20} flexShrink={0} />
-        <Column width='100%'>
+        <Column width='100%' style={{ border: '1px solid black' }}>
           <Layout flexBasis={25} flexShrink={0} />
-          <Box border='1px solid black'>
-            <Layout>
-              <Text>header</Text>
-            </Layout>
-          </Box>
+          <Layout style={{ border: '1px solid black' }}>
+            <Text>header</Text>
+          </Layout>
           <Layout flexBasis={30} flexShrink={0} />
-          <Box border='1px solid black'>
-            <Layout>
-              <Text>main text</Text>
-            </Layout>
-          </Box>
+          <Layout style={{ border: '1px solid black' }}>
+            <Text>main text</Text>
+          </Layout>
           <Layout flexBasis={180} flexShrink={0} />
-          <Row justifyContent='center' display={['flex', 'flex', 'none']}>
+          <Row
+            justifyContent='center'
+            display={['flex', 'flex', 'none']}
+            style={{ border: '1px solid black' }}
+          >
             <Layout flexBasis={15} flexShrink={0} display={['flex', 'flex', 'none']} />
-            <Layout width='26px' height='6px'>
+            <Layout width='26px' height='6px' style={{ border: '1px solid black' }}>
               <Layout>
                 <Box width='3px' height='3px' border='1px solid black' borderRadius={50} />
               </Layout>

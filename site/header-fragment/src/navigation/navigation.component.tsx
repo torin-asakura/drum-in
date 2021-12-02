@@ -14,21 +14,21 @@ const Navigation = () => (
     flexShrink={0}
     display={['none', 'none', 'flex']}
   >
-    <Row>
+    <Row style={{ border: '1px solid black' }}>
       <Layout flexBasis={11} />
-      <Layout>
+      <Layout style={{ border: '1px solid black' }}>
         <Text> открытие ритма </Text>
       </Layout>
       <Layout flexBasis={130} />
-      <Layout>
+      <Layout style={{ border: '1px solid black' }}>
         <Text>ударная установка</Text>
       </Layout>
       <Layout flexBasis={130} />
-      <Layout>
+      <Layout style={{ border: '1px solid black' }}>
         <Text>о преподавателе</Text>
       </Layout>
       <Layout flexBasis={130} />
-      <Layout>
+      <Layout style={{ border: '1px solid black' }}>
         <Text>отзывы</Text>
       </Layout>
       <Layout flexBasis={11} />
