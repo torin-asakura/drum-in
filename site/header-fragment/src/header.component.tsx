@@ -13,7 +13,7 @@ const Header: FC = () => (
     width={['320px', '320px', '1440px']}
     height={['355px', '355px', '285px']}
     border='1px solid black'
-    position={['relative', 'relative', 'relative']}
+    position='relative'
     zIndex={0}
   >
     <Row>
@@ -32,7 +32,7 @@ const Header: FC = () => (
         <Column width='100%' alignItems={['center', 'center', 'flex-start']}>
           <Layout flexBasis={[30, 30, 66]} flexShrink={0} />
           <Layout>
-            <Text> барабанный инструктор </Text>
+            <Text border='1px solid black'> барабанный инструктор </Text>
           </Layout>
           <Layout flexBasis={[14, 14, 20]} flexShrink={0} />
           <Layout>
