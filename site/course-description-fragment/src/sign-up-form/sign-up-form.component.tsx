@@ -4,29 +4,23 @@ import { FC }     from 'react'
 import { Box }    from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Column } from '@ui/layout'
-import { Text }   from '@ui/text'
 import { Input }  from '@ui/input'
-import { Button } from '@ui/button'
 
-const RegistrationPopup: FC = () => (
+const SignUpFrom: FC = () => (
   <Box width='611px' height='461px' border='1px solid black'>
     <Layout flexBasis={92} />
-    <Column>
+    <Column style={{ border: '1pxsolid black' }}>
       <Layout flexBasis={64} />
-      <Layout>
+      <Layout style={{ border: '1pxsolid black' }}>
         <Input />
       </Layout>
       <Layout flexBasis={64} />
-      <Layout>
+      <Layout style={{ border: '1pxsolid black' }}>
         <Input />
       </Layout>
       <Layout flexBasis={64} />
-      <Layout>
-        <Button border='1px solid black' width='426px' height='70px'>
-          <Layout>
-            <Text>sign up</Text>
-          </Layout>
-        </Button>
+      <Layout style={{ border: '1pxsolid black' }} width='426px' height='70px'>
+        sign up
       </Layout>
       <Layout flexBasis={64} />
     </Column>
@@ -34,4 +28,4 @@ const RegistrationPopup: FC = () => (
   </Box>
 )
 
-export { RegistrationPopup }
+export { SignUpFrom }

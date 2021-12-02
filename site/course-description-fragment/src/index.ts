@@ -1,1 +1,1 @@
-export * from './course-description-fragment.component'
+export * from './course-description.component'
