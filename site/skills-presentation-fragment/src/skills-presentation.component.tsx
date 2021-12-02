@@ -25,9 +25,9 @@ const SkillsPresentation: FC = () => {
       border='1px solid black'
     >
       <Layout flexBasis={80} flexShrink={0} />
-      <Column width='100%' justifyContent='center'>
+      <Column width='100%' justifyContent='center' style={{ border: '1px solid black' }}>
         <Layout flexBasis={65} />
-        <Row flexWrap='wrap' justifyContent='center'>
+        <Row flexWrap='wrap' justifyContent='center' style={{ border: '1px solid black' }}>
           {skills.map((item) => (
             <>
               <Item item={item} />

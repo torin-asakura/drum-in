@@ -1,18 +1,13 @@
 import React      from 'react'
 
-import { Box }    from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Row }    from '@ui/layout'
 
 const Item = ({ item }) => (
-  <Row>
-    <Box width='68px' height='58px' border='1px solid black'>
-      <Layout>img</Layout>
-    </Box>
+  <Row style={{ border: '1px solid black' }}>
+    <Layout style={{ border: '1px solid black' }}>img</Layout>
     <Layout flexBasis={36} />
-    <Box width='320px' height='25px' border='1px solid black'>
-      <Layout>{item}</Layout>
-    </Box>
+    <Layout style={{ border: '1px solid black' }}>{item}</Layout>
   </Row>
 )
 
