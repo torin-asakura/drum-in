@@ -5,7 +5,6 @@ import { Box }    from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Row }    from '@ui/layout'
-import { Text }   from '@ui/text'
 
 import { Item }   from './item.component'
 
@@ -27,16 +26,19 @@ const SkillsPresentation: FC = () => {
     >
       <Layout flexBasis={80} flexShrink={0} />
       <Column width='100%' justifyContent='center'>
-        <Layout flexBasis={65} />
-        <Row flexWrap='wrap' justifyContent='center'>
+        <Layout flexBasis={[120, 120, 65]} flexShrink={0} />
+        <Row width='100%' flexWrap='wrap' justifyContent='center'>
           {skills.map((item) => (
             <>
-              <Item item={item} />
-              <Layout flexBasis={200} />
+              <Layout flexBasis={[30, 30, 100]} />
+              <Layout width='420px' height='140px'>
+                <Item item={item} />
+              </Layout>
+              <Layout flexBasis={[30, 30, 100]} />
             </>
           ))}
         </Row>
-        <Layout flexBasis={65} />
+        <Layout flexBasis={[30, 30, 65]} flexShrink={0} />
       </Column>
       <Layout flexBasis={80} flexShrink={0} />
     </Box>
