@@ -6,14 +6,16 @@ import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
 import { Text }   from '@ui/text'
 
-const Item: FC = () => (
+import { ItemProps } from './item.interface'
+
+const Item: FC<ItemProps> = ({ header, main }) => (
   <Box border='1px solid black' zIndex={0}>
     <Column>
       <Layout>
-        <Text>header text</Text>
+        <Text>{header}</Text>
       </Layout>
       <Layout>
-        <Text>text</Text>
+        <Text>{main}</Text>
       </Layout>
     </Column>
   </Box>
