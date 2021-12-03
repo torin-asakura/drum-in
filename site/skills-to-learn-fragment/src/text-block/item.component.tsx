@@ -1,15 +1,13 @@
-import React              from 'react'
-import { FC }             from 'react'
+import React      from 'react'
+import { FC }     from 'react'
 
-import { Box }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { Text }           from '@ui/text'
+import { Box }    from '@ui/layout'
+import { Column } from '@ui/layout'
+import { Layout } from '@ui/layout'
+import { Text }   from '@ui/text'
 
-import { TextBlockProps } from './text-block.interface'
-
-const Item: FC<TextBlockProps> = ({ display }) => (
-  <Box border='1px solid black' display={display} zIndex={0}>
+const Item: FC = () => (
+  <Box border='1px solid black' zIndex={0}>
     <Column>
       <Layout>
         <Text>header text</Text>

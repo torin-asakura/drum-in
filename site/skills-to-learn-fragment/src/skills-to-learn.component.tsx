@@ -41,7 +41,7 @@ const SkillsToLearn = () => (
               justifyContent='center'
               alignItems='center'
             >
-              <ImageBlock style={{ border: '1px solid black' }} />
+              <ImageBlock />
             </Box>
           </Layout>
           <Layout flexBasis={275} flexShrink={0} />
@@ -61,7 +61,7 @@ const SkillsToLearn = () => (
               justifyContent='center'
               alignItems='center'
             >
-              <ImageBlock style={{ border: '1px solid black' }} />
+              <ImageBlock />
             </Box>
           </Layout>
           <Layout flexBasis={620} flexShrink={0} />
