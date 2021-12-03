@@ -91,6 +91,159 @@ const SkillsToLearn = () => (
         <Layout flexBasis={120} flexShrink={0} />
       </Row>
     </Column>
+    <Column display={['flex', 'flex', 'none']}>
+      <Layout style={{ position: 'relative' }} height='480px'>
+        <Box
+          width='105px'
+          height='480px'
+          position='absolute'
+          zIndex={-1}
+          backgroundColor='red'
+          left={215}
+        />
+        <Layout flexBasis={20} flexShrink={0} />
+        <Column>
+          <Layout flexBasis={25} flexShrink={0} />
+          <Row>
+            <ListItem />
+            <Layout flexBasis={11} flexShrink={0} />
+            <Item />
+          </Row>
+          <Layout flexBasis={25} flexShrink={0} />
+        </Column>
+      </Layout>
+      <Layout>
+        <Column>
+          <ImageBlock />
+          <Layout style={{ position: 'relative' }} height='30px'>
+            <Box
+              width='105px'
+              height='35px'
+              position='absolute'
+              zIndex={-1}
+              backgroundColor='red'
+              left={215}
+            />
+            <Column width='100%'>
+              <Layout flexBasis={10} flexShrink={0} />
+              <SliderControls />
+              <Layout flexBasis={10} flexShrink={0} />
+            </Column>
+          </Layout>
+        </Column>
+      </Layout>
+      <Layout style={{ position: 'relative' }} height='480px'>
+        <Box
+          width='105px'
+          height='480px'
+          position='absolute'
+          zIndex={-1}
+          backgroundColor='red'
+          left={215}
+        />
+        <Layout flexBasis={20} flexShrink={0} />
+        <Column>
+          <Layout flexBasis={25} flexShrink={0} />
+          <Row>
+            <ListItem />
+            <Layout flexBasis={11} flexShrink={0} />
+            <Item />
+          </Row>
+          <Layout flexBasis={25} flexShrink={0} />
+        </Column>
+      </Layout>
+      <Layout style={{ position: 'relative' }} height='480px'>
+        <Box
+          width='105px'
+          height='480px'
+          position='absolute'
+          zIndex={-1}
+          backgroundColor='red'
+          left={215}
+        />
+        <Layout flexBasis={20} flexShrink={0} />
+        <Column>
+          <Layout flexBasis={25} flexShrink={0} />
+          <Row>
+            <ListItem />
+            <Layout flexBasis={11} flexShrink={0} />
+            <Item />
+          </Row>
+          <Layout flexBasis={25} flexShrink={0} />
+        </Column>
+      </Layout>
+      <Layout>
+        <Column>
+          <ImageBlock />
+          <Layout style={{ position: 'relative' }} height='30px'>
+            <Box
+              width='105px'
+              height='35px'
+              position='absolute'
+              zIndex={-1}
+              backgroundColor='red'
+              left={215}
+            />
+            <Column width='100%'>
+              <Layout flexBasis={10} flexShrink={0} />
+              <SliderControls />
+              <Layout flexBasis={10} flexShrink={0} />
+            </Column>
+          </Layout>
+        </Column>
+      </Layout>
+      <Layout style={{ position: 'relative' }} height='480px'>
+        <Box
+          width='105px'
+          height='480px'
+          position='absolute'
+          zIndex={-1}
+          backgroundColor='red'
+          left={215}
+        />
+        <Layout flexBasis={20} flexShrink={0} />
+        <Column>
+          <Layout flexBasis={25} flexShrink={0} />
+          <Row>
+            <ListItem />
+            <Layout flexBasis={11} flexShrink={0} />
+            <Item />
+          </Row>
+          <Layout flexBasis={25} flexShrink={0} />
+        </Column>
+      </Layout>
+      <Layout style={{ position: 'relative' }} height='480px'>
+        <Box
+          width='105px'
+          height='480px'
+          position='absolute'
+          zIndex={-1}
+          backgroundColor='red'
+          left={215}
+        />
+        <Layout flexBasis={20} flexShrink={0} />
+        <Column>
+          <Layout flexBasis={25} flexShrink={0} />
+          <Row>
+            <ListItem />
+            <Layout flexBasis={11} flexShrink={0} />
+            <Item />
+          </Row>
+          <Layout flexBasis={25} flexShrink={0} />
+        </Column>
+      </Layout>
+      <ImageBlock />
+      <Layout style={{ position: 'relative' }} height='30px'>
+        <Box
+          width='105px'
+          height='31px'
+          position='absolute'
+          zIndex={-1}
+          backgroundColor='red'
+          left={215}
+        />
+      </Layout>
+    </Column>
   </Box>
 )
 

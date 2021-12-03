@@ -1,10 +1,8 @@
-import React    from 'react'
+import React      from 'react'
 import { FC }     from 'react'
 
 import { Layout } from '@ui/layout'
 import { Box }    from '@ui/layout'
-
-import { Item } from '../text-block'
 
 const ListItem: FC = () => (
   <Layout>
