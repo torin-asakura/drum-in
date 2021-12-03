@@ -3,4 +3,5 @@ export interface ImageBlockProps {
   left?: string | number | string[] | number[]
   position?: any
   zIndex?: string | number | string[] | number[]
+  style?: {}
 }
