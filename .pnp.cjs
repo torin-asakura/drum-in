@@ -27,6 +27,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:site/about-fragment"
       },
       {
+        "name": "@site/address-fragment",
+        "reference": "workspace:site/address-fragment"
+      },
+      {
         "name": "@site/app",
         "reference": "workspace:site/app"
       },
@@ -99,6 +103,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["@site/about-fragment", ["workspace:site/about-fragment"]],
+      ["@site/address-fragment", ["workspace:site/address-fragment"]],
       ["@site/app", ["workspace:site/app"]],
       ["@site/course-description-fragment", ["workspace:site/course-description-fragment"]],
       ["@site/education-fragment", ["workspace:site/education-fragment"]],
@@ -2940,6 +2945,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["@site/address-fragment", [
+        ["workspace:site/address-fragment", {
+          "packageLocation": "./site/address-fragment/",
+          "packageDependencies": [
+            ["@site/address-fragment", "workspace:site/address-fragment"],
+            ["@emotion/react", "virtual:59c0e4b05210872ec6d6436536e5afcd8da95a2b3c2ebfdac70d49a46d55072979067e807b3ba8d05446bf35dc05d494f5733115fa0bd40b8bc50357eabbd9a0#npm:11.7.0"],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["@ui/layout", "workspace:ui/layout"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@site/app", [
         ["workspace:site/app", {
           "packageLocation": "./site/app/",
@@ -3064,6 +3084,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@emotion/styled", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@site/about-fragment", "workspace:site/about-fragment"],
+            ["@site/address-fragment", "workspace:site/address-fragment"],
             ["@site/course-description-fragment", "workspace:site/course-description-fragment"],
             ["@site/education-fragment", "workspace:site/education-fragment"],
             ["@site/footer-fragment", "workspace:site/footer"],

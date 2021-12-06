@@ -1792,6 +1792,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@site/address-fragment@workspace:site/address-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/address-fragment@workspace:site/address-fragment"
+  dependencies:
+    "@emotion/react": ^11.7.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@site/app@workspace:site/app":
   version: 0.0.0-use.local
   resolution: "@site/app@workspace:site/app"
@@ -1905,6 +1918,7 @@ __metadata:
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@site/about-fragment": "workspace:site/about-fragment"
+    "@site/address-fragment": "workspace:site/address-fragment"
     "@site/course-description-fragment": "workspace:site/course-description-fragment"
     "@site/education-fragment": "workspace:site/education-fragment"
     "@site/footer-fragment": "workspace:site/footer"
