@@ -1,3 +1,4 @@
 export interface SkillsProps {
-    skills: any
+    //TODO strict type
+    items: any
 }

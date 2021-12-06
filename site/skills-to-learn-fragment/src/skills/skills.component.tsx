@@ -5,11 +5,11 @@ import { Layout } from '@ui/layout'
 import { Row }    from '@ui/layout'
 import { Box }    from '@ui/layout'
 
-import { Item }   from '../item'
+import { Item }   from './item'
 import { SkillsProps } from './skills.interface'
 
-const Skills:FC<SkillsProps> = ({ skills }) => {
-  return skills.map((item) => (
+const Skills:FC<SkillsProps> = ({ items }) => {
+  return items.map((item) => (
     <>
       <Row style={{ border: '1px solid black' }}>
         <Layout>
