@@ -5,7 +5,6 @@ import { Box }    from '@ui/layout'
 import { Row }    from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Layout } from '@ui/layout'
-import { Text }   from '@ui/text'
 
 const Education: FC = () => (
   <Box width={['320px', '320px', '1440px']} border='1px solid black'>
@@ -14,16 +13,14 @@ const Education: FC = () => (
       <Row style={{ border: '1px solid black' }}>
         <Layout flexBasis={138} flexShrink={0} />
         <Column width='100%' style={{ border: '1px solid black' }}>
-          <Layout style={{ border: '1px solid black' }}>
-            <Text>text</Text>
-          </Layout>
+          <Layout style={{ border: '1px solid black' }}>text</Layout>
           <Layout flexBasis={50} />
-          <Layout style={{ border: '1px solid black' }}>
-            <Text>text</Text>
-          </Layout>
+          <Layout style={{ border: '1px solid black' }}>text</Layout>
         </Column>
         <Layout flexBasis={118} flexShrink={0} />
-        <Layout style={{ border: '1px solid black' }}>img</Layout>
+        <Layout style={{ border: '1px solid black' }} width='538px' height='364px'>
+          img
+        </Layout>
         <Layout flexBasis={74} flexShrink={0} />
       </Row>
       <Layout flexBasis={65} />
@@ -38,13 +35,9 @@ const Education: FC = () => (
       <Row>
         <Layout flexBasis={44} flexShrink={0} />
         <Column width='100%' style={{ border: '1px solid black' }}>
-          <Layout style={{ border: '1px solid black' }}>
-            <Text>header text</Text>
-          </Layout>
+          <Layout style={{ border: '1px solid black' }}>header text</Layout>
           <Layout flexBasis={12} />
-          <Layout style={{ border: '1px solid black' }}>
-            <Text>main text</Text>
-          </Layout>
+          <Layout style={{ border: '1px solid black' }}>main text</Layout>
           <Layout flexBasis={20} />
         </Column>
         <Layout flexBasis={44} flexShrink={0} />
@@ -53,15 +46,11 @@ const Education: FC = () => (
       <Layout flexBasis={30} />
       <Row justifyContent='center' style={{ border: '1px solid black' }}>
         <Layout flexBasis={44} flexShrink={0} />
-        <Layout style={{ border: '1px solid black' }}>
-          <Text> text</Text>
-        </Layout>
+        <Layout style={{ border: '1px solid black' }}>text</Layout>
         <Layout flexBasis={44} flexShrink={0} />
       </Row>
       <Layout flexBasis={15} />
-      <Layout style={{ border: '1px solid black' }}>
-        <Text> link text</Text>
-      </Layout>
+      <Layout style={{ border: '1px solid black' }}>link text</Layout>
       <Layout flexBasis={25} flexShrink={0} />
     </Column>
   </Box>
