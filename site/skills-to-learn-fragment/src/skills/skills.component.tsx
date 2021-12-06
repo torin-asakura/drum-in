@@ -1,15 +1,15 @@
-import React      from 'react'
-import {FC} from 'react'
+import React           from 'react'
+import { FC }          from 'react'
 
-import { Layout } from '@ui/layout'
-import { Row }    from '@ui/layout'
-import { Box }    from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Box }         from '@ui/layout'
 
-import { Item }   from './item'
+import { Item }        from './item'
 import { SkillsProps } from './skills.interface'
 
-const Skills:FC<SkillsProps> = ({ items }) => {
-  return items.map((item) => (
+const Skills: FC<SkillsProps> = ({ items }) =>
+  items.map((item) => (
     <>
       <Row style={{ border: '1px solid black' }}>
         <Layout>
@@ -27,6 +27,5 @@ const Skills:FC<SkillsProps> = ({ items }) => {
       <Layout flexBasis={40} flexShrink={0} />
     </>
   ))
-}
 
 export { Skills }

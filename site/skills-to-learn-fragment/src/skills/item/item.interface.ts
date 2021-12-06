@@ -1,4 +1,4 @@
 export interface ItemProps {
-    header?:string
-    main:string
+  header?: string
+  main: string
 }

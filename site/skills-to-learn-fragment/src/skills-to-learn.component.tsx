@@ -19,9 +19,16 @@ const SkillsToLearn = () => {
     ['header3', 'main3'],
     ['header41', 'main4'],
   ]
-  const firstMobileBlock = [['header','text']]
-  const secondMobileBlock = [['header','text'],['header1','text1'],['header2','text2']]
-  const thirdMobileBlock = [['header3','text3'],['header4','text4']]
+  const firstMobileBlock = [['header', 'text']]
+  const secondMobileBlock = [
+    ['header', 'text'],
+    ['header1', 'text1'],
+    ['header2', 'text2'],
+  ]
+  const thirdMobileBlock = [
+    ['header3', 'text3'],
+    ['header4', 'text4'],
+  ]
   return (
     <Box width={['320px', '320px', '1440px']} border='1px solid black'>
       <Column style={{ border: '1px solid black' }} width='100%' display={['none', 'none', 'flex']}>
@@ -54,15 +61,15 @@ const SkillsToLearn = () => {
           <Layout flexBasis={120} flexShrink={0} />
         </Row>
       </Column>
-       <Column display={['flex', 'flex', 'none']}>
-        <Skills items={firstMobileBlock}/>
-        <ImageBlock/>
-        <Skills items={secondMobileBlock}/>
-        <ImageBlock/>
-        <Skills items={thirdMobileBlock}/>
-        <ImageBlock/>
-        <Layout flexBasis={30}/>
-       </Column> 
+      <Column display={['flex', 'flex', 'none']}>
+        <Skills items={firstMobileBlock} />
+        <ImageBlock />
+        <Skills items={secondMobileBlock} />
+        <ImageBlock />
+        <Skills items={thirdMobileBlock} />
+        <ImageBlock />
+        <Layout flexBasis={30} />
+      </Column>
     </Box>
   )
 }

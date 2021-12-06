@@ -1,4 +1,4 @@
+/* TODO strict type */
 export interface SkillsProps {
-    //TODO strict type
-    items: any
+  items: any
 }
