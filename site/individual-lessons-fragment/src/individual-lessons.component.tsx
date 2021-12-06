@@ -27,7 +27,6 @@ const IndividualLessons: FC = () => (
         </Layout>
         <Layout flexBasis={20} />
         <Layout> sign up</Layout>
-
         <Layout flexBasis={60} />
       </Column>
       <Layout flexBasis={120} flexShrink={0} />
