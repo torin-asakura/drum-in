@@ -1,1 +1,1 @@
-export * from './adress.component'
+export * from './address.component'

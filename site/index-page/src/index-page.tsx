@@ -13,7 +13,7 @@ import { Education }          from '@site/education-fragment'
 import { Portfolio }          from '@site/portfolio-fragment'
 import { Reviews }            from '@site/reviews-fragment'
 import { Footer }             from '@site/footer-fragment'
-import { Adress }             from '@site/address-fragment'
+import { Address }            from '@site/address-fragment'
 
 const IndexPage = () => (
   <Row justifyContent='center'>
@@ -28,7 +28,7 @@ const IndexPage = () => (
         <Education />
         <Portfolio />
         <Reviews />
-        <Adress />
+        <Address />
         <Footer />
       </Column>
     </Layout>
