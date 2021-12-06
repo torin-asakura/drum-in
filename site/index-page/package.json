@@ -6,6 +6,7 @@
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@site/about-fragment": "workspace:site/about-fragment",
+    "@site/address-fragment": "workspace:site/address-fragment",
     "@site/course-description-fragment": "workspace:site/course-description-fragment",
     "@site/education-fragment": "workspace:site/education-fragment",
     "@site/footer-fragment": "workspace:site/footer",
