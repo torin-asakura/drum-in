@@ -1,4 +1,5 @@
 import React                  from 'react'
+import { IntlProvider }       from 'react-intl'
 
 import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
@@ -16,23 +17,25 @@ import { Footer }             from '@site/footer-fragment'
 import { Address }            from '@site/address-fragment'
 
 const IndexPage = () => (
-  <Row justifyContent='center'>
-    <Layout width={['320px', '320px', '1440px']}>
-      <Column width='100%' alignItems='center'>
-        <Header />
-        <CourseDescription />
-        <SkillsToLearn />
-        <IndividualLessons />
-        <SkillsPresentation />
-        <About />
-        <Education />
-        <Portfolio />
-        <Reviews />
-        <Address />
-        <Footer />
-      </Column>
-    </Layout>
-  </Row>
+  <IntlProvider locale='ru'>
+    <Row justifyContent='center'>
+      <Layout width={['320px', '320px', '1440px']}>
+        <Column width='100%' alignItems='center'>
+          <Header />
+          <CourseDescription />
+          <SkillsToLearn />
+          <IndividualLessons />
+          <SkillsPresentation />
+          <About />
+          <Education />
+          <Portfolio />
+          <Reviews />
+          <Address />
+          <Footer />
+        </Column>
+      </Layout>
+    </Row>
+  </IntlProvider>
 )
 
 export default IndexPage
