@@ -59,11 +59,9 @@ const IndividualLessons: FC = () => {
           <Column>
             <Layout flexBasis={25} flexShrink={0} />
             <Layout style={{ border: '1px solid black' }}>
-              {' '}
               {intl.formatMessage(messages.individualLessonsHeader)}
             </Layout>
             <Layout style={{ border: '1px solid black' }}>
-              {' '}
               {intl.formatMessage(messages.individualLessonsContent)}
             </Layout>
             <Layout flexBasis={25} flexShrink={0} />
@@ -71,10 +69,7 @@ const IndividualLessons: FC = () => {
           <Layout flexBasis={20} flexShrink={0} />
         </Box>
         <Layout flexBasis={60} />
-        <Layout style={{ border: '1px solid black' }}>
-          {' '}
-          {intl.formatMessage(messages.signUp)}
-        </Layout>
+        <Layout style={{ border: '1px solid black' }}>{intl.formatMessage(messages.signUp)}</Layout>
       </Column>
     </Box>
   )
