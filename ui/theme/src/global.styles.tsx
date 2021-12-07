@@ -17,9 +17,7 @@ export const GlobalStyles = () => (
         overflow-x: hidden;
       }
       #__next {
-        display: flex;
         min-height: 100%;
-        flex-direction: column;
         background-color: #ffffff;
         overflow-x: hidden;
       }
