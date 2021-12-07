@@ -137,7 +137,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/styles@npm:0.0.1":
+"@atls-ui-parts/styles@npm:0.0.1, @atls-ui-parts/styles@npm:^0.0.1":
   version: 0.0.1
   resolution: "@atls-ui-parts/styles@npm:0.0.1"
   peerDependencies:
@@ -2825,6 +2825,7 @@ __metadata:
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
     "@atls-ui-parts/button": ^0.0.4
+    "@atls-ui-parts/styles": ^0.0.1
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
@@ -2833,6 +2834,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   languageName: unknown
   linkType: soft
 
@@ -11697,6 +11699,13 @@ resolve@^2.0.0-next.3:
     "@styled-system/variant": ^5.1.5
     object-assign: ^4.1.1
   checksum: e1345f88e0962ad785a500b656c9b7120d87e12ab16b7c107cf745d676190918b169a849eacdf3b09b2f765d9e22838c00211200f6ebbb3cde8eaddce3535054
+  languageName: node
+  linkType: hard
+
+"styled-tools@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "styled-tools@npm:1.7.2"
+  checksum: 00cc1796085589b8d95d5a4183806d45b1d332fbc1dcf19922b01b81bd871c5a499fce64e82bb63bbead5bb8fe317f60a6e91c2fe01bf1ed79f5953977a05065
   languageName: node
   linkType: hard
 

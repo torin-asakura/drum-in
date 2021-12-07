@@ -1,9 +1,19 @@
-import styled                                              from '@emotion/styled'
-import { space, flexbox, layout, color, border, position } from 'styled-system'
+import React                from 'react'
+import styled               from '@emotion/styled'
+import { FC }               from 'react'
+import { layout }           from 'styled-system'
+import { space }            from 'styled-system'
 
-export const Button = styled('div')(space, flexbox, layout, color, border, position, () => ({
-  cursor: 'pointer',
-}))
-Button.defaultProps = {
-  display: 'flex',
-}
+import { baseStyles }       from './button.styles'
+import { shapeStyles }      from './button.styles'
+import { appearanceStyles } from './button.styles'
+
+export const ButtonElement = styled.button<any>(
+  baseStyles,
+  shapeStyles,
+  appearanceStyles,
+  layout,
+  space
+)
+
+export const Button: FC = ({ ...props }) => <ButtonElement {...props} />

@@ -383,7 +383,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-button-virtual-697af3dd33/0/cache/@atls-ui-parts-button-npm-0.0.4-59fad3ac18-f6ed83e8ab.zip/node_modules/@atls-ui-parts/button/",
           "packageDependencies": [
             ["@atls-ui-parts/button", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.4"],
-            ["@atls-ui-parts/styles", "virtual:697af3dd3372ecd909c1fb94777a3e239fe1aa730d91ee2b3d1665b46e221287bee79f03e5a875901e52600e00a5f041e8794711fe6ebf19c0cd67ee67d6b6b8#npm:0.0.1"],
+            ["@atls-ui-parts/styles", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.1"],
             ["@emotion/styled", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@types/emotion__styled", null],
             ["@types/react", "npm:17.0.36"],
@@ -391,7 +391,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/styled-tools", null],
             ["react", "npm:17.0.2"],
             ["styled-system", "npm:5.1.5"],
-            ["styled-tools", null]
+            ["styled-tools", "npm:1.7.2"]
           ],
           "packagePeers": [
             "@emotion/styled",
@@ -467,10 +467,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:697af3dd3372ecd909c1fb94777a3e239fe1aa730d91ee2b3d1665b46e221287bee79f03e5a875901e52600e00a5f041e8794711fe6ebf19c0cd67ee67d6b6b8#npm:0.0.1", {
-          "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-styles-virtual-6869793b5f/0/cache/@atls-ui-parts-styles-npm-0.0.1-aac2f1c683-06a333d67b.zip/node_modules/@atls-ui-parts/styles/",
+        ["virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.1", {
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-styles-virtual-7d56350360/0/cache/@atls-ui-parts-styles-npm-0.0.1-aac2f1c683-06a333d67b.zip/node_modules/@atls-ui-parts/styles/",
           "packageDependencies": [
-            ["@atls-ui-parts/styles", "virtual:697af3dd3372ecd909c1fb94777a3e239fe1aa730d91ee2b3d1665b46e221287bee79f03e5a875901e52600e00a5f041e8794711fe6ebf19c0cd67ee67d6b6b8#npm:0.0.1"],
+            ["@atls-ui-parts/styles", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.1"],
             ["@types/styled-system", "npm:5.1.13"],
             ["styled-system", "npm:5.1.5"]
           ],
@@ -4229,6 +4229,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@ui/button", "workspace:ui/button"],
             ["@atls-ui-parts/button", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.4"],
+            ["@atls-ui-parts/styles", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.1"],
             ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@emotion/styled", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@types/react", "npm:17.0.36"],
@@ -4236,7 +4237,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/styled-system", "npm:5.1.13"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"],
-            ["styled-system", "npm:5.1.5"]
+            ["styled-system", "npm:5.1.5"],
+            ["styled-tools", "npm:1.7.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -14754,6 +14756,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@styled-system/typography", "npm:5.1.2"],
             ["@styled-system/variant", "npm:5.1.5"],
             ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["styled-tools", [
+        ["npm:1.7.2", {
+          "packageLocation": "./.yarn/cache/styled-tools-npm-1.7.2-97a33384f1-00cc179608.zip/node_modules/styled-tools/",
+          "packageDependencies": [
+            ["styled-tools", "npm:1.7.2"]
           ],
           "linkType": "HARD",
         }]

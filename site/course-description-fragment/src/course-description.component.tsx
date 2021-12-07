@@ -6,6 +6,7 @@ import { Box }     from '@ui/layout'
 import { Row }     from '@ui/layout'
 import { Column }  from '@ui/layout'
 import { Layout }  from '@ui/layout'
+import { Button }  from '@ui/button'
 
 import messages    from './messages'
 
@@ -17,6 +18,7 @@ const CourseDescription: FC = () => {
       height={['290px', '290px', '722px']}
       border='1px solid black'
     >
+      <Button />
       <Layout flexBasis={[20, 20, 137]} />
       <Row style={{ border: '1px solid black' }}>
         <Column alignItems='center' style={{ border: '1px solid black' }} width='100%'>
