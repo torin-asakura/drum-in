@@ -1894,6 +1894,7 @@ __metadata:
     "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intl: ^5.23.0
   languageName: unknown
   linkType: soft
 
