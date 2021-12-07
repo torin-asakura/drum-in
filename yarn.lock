@@ -2052,6 +2052,7 @@ __metadata:
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intl: ^5.23.0
     styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
