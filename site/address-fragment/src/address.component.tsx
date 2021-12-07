@@ -1,11 +1,11 @@
-import React      from 'react'
-import { useIntl }  from 'react-intl'
+import React       from 'react'
+import { useIntl } from 'react-intl'
 
-import { Row }    from '@ui/layout'
-import { Box }    from '@ui/layout'
-import { Layout } from '@ui/layout'
-import { Column } from '@ui/layout'
-import messages   from './messages'
+import { Row }     from '@ui/layout'
+import { Box }     from '@ui/layout'
+import { Layout }  from '@ui/layout'
+import { Column }  from '@ui/layout'
+import messages    from './messages'
 
 const Address = () => {
   const intl = useIntl()
