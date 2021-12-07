@@ -103,6 +103,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/button@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@atls-ui-parts/button@npm:0.0.4"
+  dependencies:
+    "@atls-ui-parts/styles": 0.0.1
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: f6ed83e8abeea46b87f15ee503bcabf6067fa99a981ee0a1d83afcd344384aff471b61ffcbba7c9f5da40a8de83d1f66de9a8e189d759c5e2ae66878b517e3aa
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/conditional-render@npm:^0.0.1":
   version: 0.0.1
   resolution: "@atls-ui-parts/conditional-render@npm:0.0.1"
@@ -120,6 +134,15 @@ __metadata:
     react: ^17.0.1
     styled-system: ^5.1.5
   checksum: 0c1e7eff5e46cf2dd865fec7070fdfea03f18430b3ed37b23bbb4d639a7b14134ff00e7bc94f2877f09ae8266f6b7ab7cd9c0f5522921ae3529e49cb8f4be124
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/styles@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@atls-ui-parts/styles@npm:0.0.1"
+  peerDependencies:
+    styled-system: ^5.1.5
+  checksum: 06a333d67bd87ec26ceb21bc48a670365fe93789e5bec457a9a389a679345693d4bf34d1557c8668c8c9a6495cddf5d38a2dedd610c3310a19f97ef72bb8f5d0
   languageName: node
   linkType: hard
 
@@ -1959,6 +1982,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@site/data@workspace:site/data":
+  version: 0.0.0-use.local
+  resolution: "@site/data@workspace:site/data"
+  languageName: unknown
+  linkType: soft
+
 "@site/education-fragment@workspace:site/education-fragment":
   version: 0.0.0-use.local
   resolution: "@site/education-fragment@workspace:site/education-fragment"
@@ -2106,6 +2135,7 @@ __metadata:
   resolution: "@site/skills-to-learn-fragment@workspace:site/skills-to-learn-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
+    "@site/data": "workspace:site/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
@@ -2113,6 +2143,7 @@ __metadata:
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intl: ^5.23.0
   languageName: unknown
   linkType: soft
 
@@ -2793,6 +2824,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
+    "@atls-ui-parts/button": ^0.0.4
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@types/react": ^17

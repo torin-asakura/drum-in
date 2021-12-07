@@ -39,6 +39,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:site/course-description-fragment"
       },
       {
+        "name": "@site/data",
+        "reference": "workspace:site/data"
+      },
+      {
         "name": "@site/education-fragment",
         "reference": "workspace:site/education-fragment"
       },
@@ -106,6 +110,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@site/address-fragment", ["workspace:site/address-fragment"]],
       ["@site/app", ["workspace:site/app"]],
       ["@site/course-description-fragment", ["workspace:site/course-description-fragment"]],
+      ["@site/data", ["workspace:site/data"]],
       ["@site/education-fragment", ["workspace:site/education-fragment"]],
       ["@site/footer-fragment", ["workspace:site/footer"]],
       ["@site/header-fragment", ["workspace:site/header-fragment"]],
@@ -366,6 +371,41 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@atls-ui-parts/button", [
+        ["npm:0.0.4", {
+          "packageLocation": "./.yarn/cache/@atls-ui-parts-button-npm-0.0.4-59fad3ac18-f6ed83e8ab.zip/node_modules/@atls-ui-parts/button/",
+          "packageDependencies": [
+            ["@atls-ui-parts/button", "npm:0.0.4"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.4", {
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-button-virtual-697af3dd33/0/cache/@atls-ui-parts-button-npm-0.0.4-59fad3ac18-f6ed83e8ab.zip/node_modules/@atls-ui-parts/button/",
+          "packageDependencies": [
+            ["@atls-ui-parts/button", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.4"],
+            ["@atls-ui-parts/styles", "virtual:697af3dd3372ecd909c1fb94777a3e239fe1aa730d91ee2b3d1665b46e221287bee79f03e5a875901e52600e00a5f041e8794711fe6ebf19c0cd67ee67d6b6b8#npm:0.0.1"],
+            ["@emotion/styled", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
+            ["@types/emotion__styled", null],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/styled-system", "npm:5.1.13"],
+            ["@types/styled-tools", null],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"],
+            ["styled-tools", null]
+          ],
+          "packagePeers": [
+            "@emotion/styled",
+            "@types/emotion__styled",
+            "@types/react",
+            "@types/styled-system",
+            "@types/styled-tools",
+            "react",
+            "styled-system",
+            "styled-tools"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@atls-ui-parts/conditional-render", [
         ["npm:0.0.1", {
           "packageLocation": "./.yarn/cache/@atls-ui-parts-conditional-render-npm-0.0.1-c51c7b273a-f770730caa.zip/node_modules/@atls-ui-parts/conditional-render/",
@@ -414,6 +454,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react",
             "@types/styled-system",
             "react",
+            "styled-system"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@atls-ui-parts/styles", [
+        ["npm:0.0.1", {
+          "packageLocation": "./.yarn/cache/@atls-ui-parts-styles-npm-0.0.1-aac2f1c683-06a333d67b.zip/node_modules/@atls-ui-parts/styles/",
+          "packageDependencies": [
+            ["@atls-ui-parts/styles", "npm:0.0.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:697af3dd3372ecd909c1fb94777a3e239fe1aa730d91ee2b3d1665b46e221287bee79f03e5a875901e52600e00a5f041e8794711fe6ebf19c0cd67ee67d6b6b8#npm:0.0.1", {
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-styles-virtual-6869793b5f/0/cache/@atls-ui-parts-styles-npm-0.0.1-aac2f1c683-06a333d67b.zip/node_modules/@atls-ui-parts/styles/",
+          "packageDependencies": [
+            ["@atls-ui-parts/styles", "virtual:697af3dd3372ecd909c1fb94777a3e239fe1aa730d91ee2b3d1665b46e221287bee79f03e5a875901e52600e00a5f041e8794711fe6ebf19c0cd67ee67d6b6b8#npm:0.0.1"],
+            ["@types/styled-system", "npm:5.1.13"],
+            ["styled-system", "npm:5.1.5"]
+          ],
+          "packagePeers": [
+            "@types/styled-system",
             "styled-system"
           ],
           "linkType": "HARD",
@@ -3154,6 +3216,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["@site/data", [
+        ["workspace:site/data", {
+          "packageLocation": "./site/data/",
+          "packageDependencies": [
+            ["@site/data", "workspace:site/data"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@site/education-fragment", [
         ["workspace:site/education-fragment", {
           "packageLocation": "./site/education-fragment/",
@@ -3318,13 +3389,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@site/skills-to-learn-fragment", "workspace:site/skills-to-learn-fragment"],
             ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
+            ["@site/data", "workspace:site/data"],
             ["@types/react", "npm:17.0.36"],
             ["@types/react-dom", "npm:17.0.11"],
             ["@ui/button", "workspace:ui/button"],
             ["@ui/layout", "workspace:ui/layout"],
             ["@ui/text", "workspace:ui/text"],
             ["react", "npm:17.0.2"],
-            ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"]
+            ["react-dom", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:17.0.2"],
+            ["react-intl", "virtual:ed0135c654f52493347d9819126192f3471c84e8296a872e419a566cfbfc48536d7d05da476e3016c0b8905c81c8263b90c8839581424e93e3a720bc5ef420b5#npm:5.23.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -4155,6 +4228,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui/button/",
           "packageDependencies": [
             ["@ui/button", "workspace:ui/button"],
+            ["@atls-ui-parts/button", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.0.4"],
             ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@emotion/styled", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],
             ["@types/react", "npm:17.0.36"],

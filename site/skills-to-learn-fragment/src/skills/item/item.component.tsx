@@ -4,19 +4,17 @@ import { FC }        from 'react'
 import { Box }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
-import { Text }      from '@ui/text'
 
 import { ItemProps } from './item.interface'
+import { List }      from './list.component'
 
 const Item: FC<ItemProps> = ({ header, main }) => (
   <Box border='1px solid black' zIndex={0}>
     <Column>
-      <Layout>
-        <Text>{header}</Text>
-      </Layout>
-      <Layout>
-        <Text>{main}</Text>
-      </Layout>
+      <Layout>{header}</Layout>
+      <Column>
+        <List main={main} />
+      </Column>
     </Column>
   </Box>
 )
