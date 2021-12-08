@@ -7,6 +7,7 @@
     "@atls-ui-parts/styles": "^0.0.1",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@ui/theme": "workspace:ui/theme",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5",

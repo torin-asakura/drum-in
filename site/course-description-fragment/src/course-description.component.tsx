@@ -18,7 +18,6 @@ const CourseDescription: FC = () => {
       height={['290px', '290px', '722px']}
       border='1px solid black'
     >
-      <Button />
       <Layout flexBasis={[20, 20, 137]} />
       <Row style={{ border: '1px solid black' }}>
         <Column alignItems='center' style={{ border: '1px solid black' }} width='100%'>
