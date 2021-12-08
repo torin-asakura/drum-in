@@ -6,9 +6,11 @@
     "@atls-ui-parts/input": "^0.0.6",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
   },
   "devDependencies": {
     "@types/react": "^17",

@@ -28,6 +28,10 @@ export default defineMessages({
     id: `${name}.course_name_mobile`,
     defaultMessage: 'ритмсольфеджио',
   },
+  buyCourse: {
+    id: `${name}.buy_course`,
+    defaultMessage: 'купить курс',
+  },
   courseDescriptionMobile: {
     id: `${name}.course_description_mobile`,
     defaultMessage:

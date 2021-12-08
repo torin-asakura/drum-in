@@ -1,15 +1,18 @@
-import React          from 'react'
+import React                 from 'react'
 
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { before }     from '@site/data'
-import { after }      from '@site/data'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { before }            from '@site/data'
+import { after }             from '@site/data'
+import { firstMobileBlock }  from '@site/data'
+import { secondMobileBlock } from '@site/data'
+import { thirdMobileBlock }  from '@site/data'
 
-import { ImageBlock } from './image-block'
+import { ImageBlock }        from './image-block'
 
-import { Skills }     from './skills'
+import { Skills }            from './skills'
 
 const SkillsToLearn = () => (
   <Box width={['320px', '320px', '1440px']} border='1px solid black'>
@@ -44,11 +47,11 @@ const SkillsToLearn = () => (
       </Row>
     </Column>
     <Column display={['flex', 'flex', 'none']}>
-      {/*       <Skills items={firstMobileBlock} /> */}
+      <Skills items={firstMobileBlock} />
       <ImageBlock />
-      {/*   <Skills items={secondMobileBlock} /> */}
+      <Skills items={secondMobileBlock} />
       <ImageBlock />
-      {/*    <Skills items={thirdMobileBlock} /> */}
+      <Skills items={thirdMobileBlock} />
       <ImageBlock />
       <Layout flexBasis={30} />
     </Column>

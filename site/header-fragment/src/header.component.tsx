@@ -18,7 +18,7 @@ const Header: FC = () => {
     <Box
       width={['320px', '320px', '1440px']}
       height={['355px', '355px', '285px']}
-      border='1px solid black'
+      overflow='hidden'
       position='relative'
       zIndex={0}
     >
@@ -33,7 +33,6 @@ const Header: FC = () => {
             <Layout flexBasis={[30, 30, 50]} flexShrink={0} />
             <Layout>
               <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
-                {' '}
                 {intl.formatMessage(messages.instructor)}
               </Text>
             </Layout>
@@ -46,7 +45,6 @@ const Header: FC = () => {
             <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
             <Layout display={['flex', 'flex', 'none']}>
               <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
-                {' '}
                 {intl.formatMessage(messages.linkMobile)}{' '}
               </Text>
             </Layout>
@@ -54,7 +52,6 @@ const Header: FC = () => {
             <Layout flexBasis={[0, 0, 35]} flexShrink={0} />
             <Layout display={['none', 'none', 'flex']}>
               <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
-                {' '}
                 {intl.formatMessage(messages.whatsUp)}
               </Text>
             </Layout>
@@ -72,14 +69,12 @@ const Header: FC = () => {
               <Layout flexBasis={10} />
               <Layout display={['flex', 'flex', 'none']}>
                 <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
-                  {' '}
                   {intl.formatMessage(messages.drum)}{' '}
                 </Text>
               </Layout>
               <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
               <Layout display={['flex', 'flex', 'none']}>
                 <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
-                  {' '}
                   {intl.formatMessage(messages.rythmMobile)}
                 </Text>
               </Layout>
