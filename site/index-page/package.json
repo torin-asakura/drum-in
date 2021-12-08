@@ -1,0 +1,31 @@
+{
+  "name": "@site/index-page",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@site/about-fragment": "workspace:site/about-fragment",
+    "@site/address-fragment": "workspace:site/address-fragment",
+    "@site/course-description-fragment": "workspace:site/course-description-fragment",
+    "@site/education-fragment": "workspace:site/education-fragment",
+    "@site/footer-fragment": "workspace:site/footer",
+    "@site/header-fragment": "workspace:site/header-fragment",
+    "@site/individual-lessons-fragment": "workspace:site/individual-lessons-fragment",
+    "@site/portfolio-fragment": "workspace:site/portfolio-fragment",
+    "@site/reviews-fragment": "workspace:site/reviews-fragment",
+    "@site/skills-presentation-fragment": "workspace:site/skills-presentation-fragment",
+    "@site/skills-to-learn-fragment": "workspace:site/skills-to-learn-fragment",
+    "@ui/condition": "workspace:ui/condition",
+    "@ui/layout": "workspace:ui/layout",
+    "@ui/theme": "workspace:ui/theme",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "@types/styled-system": "^5"
+  }
+}

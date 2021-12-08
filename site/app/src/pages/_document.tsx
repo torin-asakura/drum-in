@@ -1,8 +1,7 @@
-import Document          from 'next/document'
-import compose           from 'recompose/compose'
-import { withOpenGraph } from '@atls/next-document-with-opengraph'
-import { withIcons }     from '@atls/next-document-with-icons'
-import { withHelmet }    from '@atls/next-document-with-helmet'
+import Document       from 'next/document'
+import compose        from 'recompose/compose'
+import { withIcons }  from '@atls/next-document-with-icons'
+import { withHelmet } from '@atls/next-document-with-helmet'
 
 const withProviders = compose(
   // withOpenGraph({ image: '' }),
