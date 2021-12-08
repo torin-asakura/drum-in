@@ -4,6 +4,8 @@ import { useIntl } from 'react-intl'
 import { Box }     from '@ui/layout'
 import { Row }     from '@ui/layout'
 import { Layout }  from '@ui/layout'
+import { Text }    from '@ui/text'
+
 import messages    from '../messages'
 
 const Navigation = () => {
@@ -16,19 +18,32 @@ const Navigation = () => {
       top='200px'
       flexShrink={0}
       display={['none', 'none', 'flex']}
+      backgroundColor='semiTransparent'
     >
-      <Row style={{ border: '1px solid black' }}>
+      <Row justifyContent='center'>
         <Layout flexBasis={11} />
-        <Layout style={{ border: '1px solid black' }}>{intl.formatMessage(messages.rythm)}</Layout>
-        <Layout flexBasis={130} />
-        <Layout style={{ border: '1px solid black' }}>{intl.formatMessage(messages.drum)}</Layout>
-        <Layout flexBasis={130} />
-        <Layout style={{ border: '1px solid black' }}>
-          {intl.formatMessage(messages.instructorAbout)}
+        <Layout>
+          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+            {intl.formatMessage(messages.rythm)}
+          </Text>
         </Layout>
-        <Layout flexBasis={130} />
-        <Layout style={{ border: '1px solid black' }}>
-          {intl.formatMessage(messages.reviews)}
+        <Layout flexBasis={180} />
+        <Layout>
+          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+            {intl.formatMessage(messages.drum)}
+          </Text>
+        </Layout>
+        <Layout flexBasis={180} />
+        <Layout>
+          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+            {intl.formatMessage(messages.instructorAbout)}{' '}
+          </Text>
+        </Layout>
+        <Layout flexBasis={180} />
+        <Layout>
+          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+            {intl.formatMessage(messages.reviews)}
+          </Text>
         </Layout>
         <Layout flexBasis={11} />
       </Row>

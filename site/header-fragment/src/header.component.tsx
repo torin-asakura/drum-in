@@ -6,6 +6,8 @@ import { Box }        from '@ui/layout'
 import { Layout }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { Column }     from '@ui/layout'
+import { Text }       from '@ui/text'
+import { ImageBlock } from '@ui/image'
 
 import { Navigation } from './navigation'
 import messages       from './messages'
@@ -20,78 +22,98 @@ const Header: FC = () => {
       position='relative'
       zIndex={0}
     >
-      <Row style={{ border: '1px solid black' }}>
+      <Row justifyContent='center'>
         <Layout flexBasis={20} display={['none', 'none', 'flex']} />
-        <Layout style={{ border: '1px solid black' }}> {/* Logo */} </Layout>
-        <Layout flexBasis={22} flexShrink={0} display={['none', 'none', 'flex']} />
-        <Box
-          width='100%'
-          zIndex={[1, 1, 5]}
-          position='relative'
-          style={{ border: '1px solid black' }}
-        >
-          <Column
-            width='100%'
-            alignItems={['center', 'center', 'flex-start']}
-            style={{ border: '1px solid black' }}
-          >
-            <Layout flexBasis={[30, 30, 66]} flexShrink={0} />
-            <Layout style={{ border: '1px solid black' }}>
-              {intl.formatMessage(messages.instructor)}
+        <Layout width='214px' height='216px' display={['none', 'none', 'flex']}>
+          <ImageBlock />
+        </Layout>
+        <Layout flexBasis={20} display={['none', 'none', 'flex']} />
+        <Box zIndex={[1, 1, 5]} position='relative'>
+          <Column width='100%' alignItems={['center', 'center', 'flex-start']}>
+            <Layout flexBasis={[30, 30, 50]} flexShrink={0} />
+            <Layout>
+              <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
+                {' '}
+                {intl.formatMessage(messages.instructor)}
+              </Text>
             </Layout>
             <Layout flexBasis={[14, 14, 20]} flexShrink={0} />
-            <Layout style={{ border: '1px solid black' }}>
-              {intl.formatMessage(messages.instructorName)}
+            <Layout>
+              <Text color='dullRed' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
+                {intl.formatMessage(messages.instructorName)}
+              </Text>
             </Layout>
             <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-            <Layout display={['flex', 'flex', 'none']} style={{ border: '1px solid black' }}>
-              {intl.formatMessage(messages.linkMobile)}
+            <Layout display={['flex', 'flex', 'none']}>
+              <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
+                {' '}
+                {intl.formatMessage(messages.linkMobile)}{' '}
+              </Text>
             </Layout>
             <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-            <Layout style={{ border: '1px solid black' }}>logo</Layout>
-            <Layout flexBasis={[20, 20, 35]} flexShrink={0} />
-            <Layout display={['none', 'none', 'flex']} style={{ border: '1px solid black' }}>
-              {intl.formatMessage(messages.whatsUp)}
+            <Layout flexBasis={[0, 0, 35]} flexShrink={0} />
+            <Layout display={['none', 'none', 'flex']}>
+              <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
+                {' '}
+                {intl.formatMessage(messages.whatsUp)}
+              </Text>
             </Layout>
+            <Layout flexBasis={35} flexShrink={0} display={['none', 'none', 'flex']} />
+
             <Column
               width='100%'
               display={['flex', 'flex', 'none']}
               alignItems='center'
               justifyContent='center'
-              style={{ border: '1px solid black' }}
             >
-              <Layout display={['flex', 'flex', 'none']} style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.drum)}
+              <Layout width='80px' height='80px' display={['flex', 'flex', 'none']}>
+                <ImageBlock />
+              </Layout>
+              <Layout flexBasis={10} />
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
+                  {' '}
+                  {intl.formatMessage(messages.drum)}{' '}
+                </Text>
               </Layout>
               <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-              <Layout display={['flex', 'flex', 'none']} style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.rythmMobile)}
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
+                  {' '}
+                  {intl.formatMessage(messages.rythmMobile)}
+                </Text>
               </Layout>
               <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-              <Layout display={['flex', 'flex', 'none']} style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.instructorAbout)}
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
+                  {intl.formatMessage(messages.instructorAbout)}{' '}
+                </Text>
               </Layout>
               <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
-              <Layout display={['flex', 'flex', 'none']} style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.reviews)}
+              <Layout display={['flex', 'flex', 'none']}>
+                <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
+                  {intl.formatMessage(messages.reviews)}{' '}
+                </Text>
               </Layout>
             </Column>
-            <Layout flexBasis={[20, 20, 35]} flexShrink={0} display={['none', 'none', 'flex']} />
-            <Navigation />
+            <Layout>
+              <Navigation />
+            </Layout>
           </Column>
         </Box>
+        <Layout flexBasis={490} display={['none', 'none', 'flex']} />
         <Box
           width={['105px', '105px', '375px']}
           height={['355px', '355px', '285px']}
           flexShrink={0}
-          border='1px solid black'
+          backgroundColor='dullRed'
           position={['absolute', 'absolute', 'relative']}
           left={[215, 215, 0]}
           zIndex={[-1, -1, 0]}
         >
-          <Column width='100%' style={{ border: '1px solid black' }}>
+          <Column width='100%'>
             <Layout flexBasis={106} />
-            <Row style={{ border: '1px solid black' }}>
+            <Row>
               <Layout flexBasis={[14, 14, 71]} flexShrink={0} />
               <Box
                 height='17px'
@@ -106,7 +128,7 @@ const Header: FC = () => {
                 border='1px solid black'
                 display={['none', 'none', 'flex']}
               >
-                <Layout style={{ border: '1px solid black' }}>{/* inst */}</Layout>
+                <Layout>{/* inst */}</Layout>
               </Box>
               <Layout flexBasis={[14, 14, 52]} flexShrink={0} />
               <Box
@@ -115,7 +137,7 @@ const Header: FC = () => {
                 border='1px solid black'
                 display={['none', 'none', 'flex']}
               >
-                <Layout style={{ border: '1px solid black' }}>{/* whatsapp */}</Layout>
+                <Layout>{/* whatsapp */}</Layout>
               </Box>
               <Layout flexBasis={[14, 14, 52]} flexShrink={0} />
               <Box
@@ -124,7 +146,7 @@ const Header: FC = () => {
                 border='1px solid black'
                 display={['none', 'none', 'flex']}
               >
-                <Layout style={{ border: '1px solid black' }}>{/* vk */}</Layout>
+                <Layout>{/* vk */}</Layout>
               </Box>
               <Layout flexBasis={[14, 14, 78]} flexShrink={0} />
             </Row>
