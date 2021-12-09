@@ -28,27 +28,27 @@ const CourseDescription: FC = () => {
               <Layout flexBasis={[25, 25, 53]} />
               <Layout display={['none', 'none', 'flex']}>
                 <Text color='white' fontWeight='normal' fontSize='big' lineHeight='regular'>
-                  {intl.formatMessage(messages.onlineCourse)}{' '}
+                  {intl.formatMessage(messages.onlineCourse)}
                 </Text>
               </Layout>
               <Layout flexBasis={30} display={['none', 'none', 'flex']} />
               <Layout display={['none', 'none', 'flex']}>
                 <Text fontSize='large' color='white' fontWeight='bold' lineHeight='regular'>
-                  {intl.formatMessage(messages.courseName)}{' '}
+                  {intl.formatMessage(messages.courseName)}
                 </Text>
               </Layout>
               <Layout display={['flex', 'flex', 'none']}>
                 <Text color='white'> {intl.formatMessage(messages.courseNameMobile)} </Text>
               </Layout>
               <Layout flexBasis={[30, 30, 39]} />
-              <Layout width='517px' height='311px' display={['none', 'none', 'flex']}>
+              <Layout display={['none', 'none', 'flex']}>
                 <Text color='white' fontWeight='semiBold' lineHeight='large' fontSize='normal'>
-                  {intl.formatMessage(messages.courseDescriptionContent)}{' '}
+                  {intl.formatMessage(messages.courseDescriptionContent)}
                 </Text>
               </Layout>
-              <Layout width='517px' height='311px' display={['flex', 'flex', 'none']}>
+              <Layout display={['flex', 'flex', 'none']}>
                 <Text color='white' fontSize='mini' fontWeight='normal' lineHeight='large'>
-                  {intl.formatMessage(messages.courseDescriptionMobile)}{' '}
+                  {intl.formatMessage(messages.courseDescriptionMobile)}
                 </Text>
               </Layout>
               <Layout flexBasis={24} flexShrink={0} display={['flex', 'flex', 'none']} />
@@ -63,7 +63,7 @@ const CourseDescription: FC = () => {
               </Row>
               <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
-              <Layout>
+              <Layout display={['none', 'none', 'flex']}>
                 <Text> {intl.formatMessage(messages.courseDescriptionLink)} </Text>
               </Layout>
               <Layout flexBasis={60} display={['none', 'none', 'flex']} />
