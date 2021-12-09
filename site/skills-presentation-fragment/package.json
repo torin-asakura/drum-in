@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.6.0",
+    "@site/data": "workspace:site/data",
+    "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
@@ -12,5 +13,8 @@
   "devDependencies": {
     "@types/react": "^17",
     "@types/react-dom": "^17"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*"
   }
 }

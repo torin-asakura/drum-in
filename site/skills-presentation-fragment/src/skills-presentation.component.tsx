@@ -1,22 +1,18 @@
-import React      from 'react'
-import { FC }     from 'react'
+import React           from 'react'
+import { FC }          from 'react'
 
-import { Box }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
-import { Row }    from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { columnLeft }  from '@site/data'
+import { columnRight } from '@site/data'
 
-import { Item }   from './item'
+import { Item }        from './item'
 
 const SkillsPresentation: FC = () => {
-  const columnLeft = ['постановка рук', 'постановка ног', 'развитие координации']
-  const columnRight = ['чтение с листа', 'игра под музыку', 'построение партий']
   return (
-    <Box
-      width={['320px', '320px', '1440px']}
-      height={['1075px', '1075px', '585px']}
-      border='1px solid black'
-    >
+    <Box width={['320px', '320px', '1440px']} height={['1075px', '1075px', '585px']}>
       <Layout flexBasis={80} flexShrink={0} />
       <Column width='100%'>
         <Layout justifyContent='center'>

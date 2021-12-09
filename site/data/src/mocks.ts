@@ -111,3 +111,5 @@ export const thirdMobileBlock = [
     ],
   ],
 ]
+export const columnLeft = ['постановка рук', 'постановка ног', 'развитие координации']
+export const columnRight = ['чтение с листа', 'игра под музыку', 'построение партий']
