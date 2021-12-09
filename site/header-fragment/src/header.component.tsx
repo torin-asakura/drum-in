@@ -30,21 +30,36 @@ const Header: FC = () => {
         <Layout flexBasis={20} display={['none', 'none', 'flex']} />
         <Box zIndex={[1, 1, 5]} position='relative'>
           <Column width='100%' alignItems={['center', 'center', 'flex-start']}>
-            <Layout flexBasis={[30, 30, 50]} flexShrink={0} />
+            <Layout flexBasis={[30, 30, 30]} flexShrink={0} />
             <Layout>
-              <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
+              <Text
+                color='dullBlack'
+                fontSize={['small', 'small', 'large']}
+                fontWeight='bold'
+                lineHeight='semiNormal'
+              >
                 {intl.formatMessage(messages.instructor)}
               </Text>
             </Layout>
             <Layout flexBasis={[14, 14, 20]} flexShrink={0} />
             <Layout>
-              <Text color='dullRed' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
+              <Text
+                color={['dullBlack', 'dullBlack', 'dullRed']}
+                fontSize={['small', 'small', 'large']}
+                fontWeight='bold'
+                lineHeight='semiNormal'
+              >
                 {intl.formatMessage(messages.instructorName)}
               </Text>
             </Layout>
             <Layout display={['flex', 'flex', 'none']} flexBasis={14} flexShrink={0} />
             <Layout display={['flex', 'flex', 'none']}>
-              <Text color='dullBlack' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
+              <Text
+                color='dullBlack'
+                fontSize={['small', 'small', 'large']}
+                fontWeight='bold'
+                lineHeight={['semiSmall', 'semiSmall', 'semiNormal']}
+              >
                 {intl.formatMessage(messages.linkMobile)}{' '}
               </Text>
             </Layout>
@@ -96,7 +111,7 @@ const Header: FC = () => {
             </Layout>
           </Column>
         </Box>
-        <Layout flexBasis={490} display={['none', 'none', 'flex']} />
+        <Layout flexBasis={425} display={['none', 'none', 'flex']} />
         <Box
           width={['105px', '105px', '375px']}
           height={['355px', '355px', '285px']}

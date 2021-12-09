@@ -6,6 +6,7 @@
     "@emotion/react": "^11.6.0",
     "@site/data": "workspace:site/data",
     "@ui/button": "workspace:ui/button",
+    "@ui/condition": "workspace:ui/condition",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",

@@ -1,16 +1,16 @@
-import React        from 'react'
-import { FC }       from 'react'
-import { useIntl }  from 'react-intl'
+import React          from 'react'
+import { FC }         from 'react'
+import { useIntl }    from 'react-intl'
 
-import { Box }      from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { Column }   from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { Button }   from '@ui/button'
+import { Box }        from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Button }     from '@ui/button'
 import { Text }       from '@ui/text'
 import { ImageBlock } from '@ui/image'
 
-import messages     from './messages'
+import messages       from './messages'
 
 const CourseDescription: FC = () => {
   const intl = useIntl()
@@ -34,7 +34,6 @@ const CourseDescription: FC = () => {
               <Layout flexBasis={30} display={['none', 'none', 'flex']} />
               <Layout display={['none', 'none', 'flex']}>
                 <Text fontSize='large' color='white' fontWeight='bold' lineHeight='regular'>
-                  {' '}
                   {intl.formatMessage(messages.courseName)}{' '}
                 </Text>
               </Layout>
@@ -44,13 +43,11 @@ const CourseDescription: FC = () => {
               <Layout flexBasis={[30, 30, 39]} />
               <Layout width='517px' height='311px' display={['none', 'none', 'flex']}>
                 <Text color='white' fontWeight='semiBold' lineHeight='large' fontSize='normal'>
-                  {' '}
                   {intl.formatMessage(messages.courseDescriptionContent)}{' '}
                 </Text>
               </Layout>
               <Layout width='517px' height='311px' display={['flex', 'flex', 'none']}>
                 <Text color='white' fontSize='mini' fontWeight='normal' lineHeight='large'>
-                  {' '}
                   {intl.formatMessage(messages.courseDescriptionMobile)}{' '}
                 </Text>
               </Layout>

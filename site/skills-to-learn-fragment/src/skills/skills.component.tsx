@@ -12,12 +12,12 @@ const Skills: FC<SkillsProps> = ({ items }) =>
   items !== null
     ? items.map((item) => (
         <>
-          <Row style={{ border: '1px solid black' }}>
+          <Row>
             <Layout>
               <Box
                 height={['11px', '11px', '18px']}
                 width={['11px', '11px', '18px']}
-                border='1px solid black'
+                backgroundColor='dullRed'
                 borderRadius={50}
               />
             </Layout>
