@@ -24,7 +24,7 @@ const CourseDescription: FC = () => {
         >
           <Layout flexBasis={[20, 20, 137]} />
           <Row>
-            <Column alignItems='center' width='100%'>
+            <Column width='100%'>
               <Layout flexBasis={[25, 25, 53]} />
               <Layout display={['none', 'none', 'flex']}>
                 <Text color='white' fontWeight='normal' fontSize='big' lineHeight='regular'>
@@ -64,13 +64,24 @@ const CourseDescription: FC = () => {
               <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
               <Layout display={['none', 'none', 'flex']}>
-                <Text> {intl.formatMessage(messages.courseDescriptionLink)} </Text>
+                <Text
+                  style={{ textDecoration: 'underline' }}
+                  color='dullRed'
+                  fontWeight='bold'
+                  fontSize='huge'
+                  lineHeight='big'
+                >
+                  {' '}
+                  {intl.formatMessage(messages.courseDescriptionLink)}{' '}
+                </Text>
               </Layout>
               <Layout flexBasis={60} display={['none', 'none', 'flex']} />
               <Layout display={['none', 'none', 'flex']}>
                 <Button size='big' width='426px'>
                   <Layout>
-                    <Text>{intl.formatMessage(messages.signUp)} </Text>
+                    <Text color='white' fontWeight='bold' lineHeight='big' fontSize='huge'>
+                      {intl.formatMessage(messages.signUp)}{' '}
+                    </Text>
                   </Layout>
                 </Button>
               </Layout>
