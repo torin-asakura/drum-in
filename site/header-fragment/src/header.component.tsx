@@ -19,8 +19,6 @@ const Header: FC = () => {
       width={['320px', '320px', '1440px']}
       height={['355px', '355px', '285px']}
       overflow='hidden'
-      position='relative'
-      zIndex={0}
     >
       <Row justifyContent='center'>
         <Layout flexBasis={20} display={['none', 'none', 'flex']} />
@@ -28,7 +26,7 @@ const Header: FC = () => {
           <ImageBlock />
         </Layout>
         <Layout flexBasis={20} display={['none', 'none', 'flex']} />
-        <Box zIndex={[1, 1, 5]} position='relative'>
+        <Box>
           <Column width='100%' alignItems={['center', 'center', 'flex-start']}>
             <Layout flexBasis={[30, 30, 30]} flexShrink={0} />
             <Layout>
@@ -117,9 +115,6 @@ const Header: FC = () => {
           height={['355px', '355px', '285px']}
           flexShrink={0}
           backgroundColor='dullRed'
-          position={['absolute', 'absolute', 'relative']}
-          left={[215, 215, 0]}
-          zIndex={[-1, -1, 0]}
         >
           <Column width='100%'>
             <Layout flexBasis={106} />

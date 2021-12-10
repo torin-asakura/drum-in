@@ -10,7 +10,6 @@ export const withProviders = compose(
     uri: process.env.WP_ENDPOINT || 'https://misik.pro/graphql',
     onUnauthenticated: () => {},
   }),
-
   withHelmet()
 )
 
