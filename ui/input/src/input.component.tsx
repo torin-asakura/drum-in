@@ -14,14 +14,12 @@ import { baseStyles }               from './input.styles'
 import { shapeStyles }              from './input.styles'
 import { appearanceStyles }         from './input.styles'
 import { transitionStyles }         from './input.styles'
-import { borderBottomStyles }       from './input.styles'
 
 export const InputElement = styled.div<any>(
   baseStyles,
   shapeStyles,
   appearanceStyles,
   transitionStyles,
-  borderBottomStyles,
   layout
 )
 

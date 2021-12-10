@@ -29,9 +29,3 @@ export const shapeStyles = switchProp(prop('size', 'normal'), {
 })
 
 export const transitionStyles = { transition: '.2s' }
-
-export const borderBottomStyles = {
-  borderTop: '0px',
-  borderRight: '0px',
-  borderLeft: '0px',
-}
