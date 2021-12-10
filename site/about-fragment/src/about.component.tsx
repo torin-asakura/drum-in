@@ -5,7 +5,7 @@ import { Row }        from '@ui/layout'
 import { Box }        from '@ui/layout'
 import { Layout }     from '@ui/layout'
 import { Column }     from '@ui/layout'
-import { Text }         from '@ui/text'
+import { Text }       from '@ui/text'
 import { ImageBlock } from '@ui/image'
 
 import messages       from './messages'
@@ -46,9 +46,23 @@ const About = () => {
         <Row>
           <Layout flexBasis={44} flexShrink={0} />
           <Column width='100%'>
-            <Layout>{intl.formatMessage(messages.aboutHeader)}</Layout>
+            <Layout>
+              <Text color='black' fontWeight='bold' lineHeight='normal' fontSize='small'>
+                {intl.formatMessage(messages.aboutHeader)}
+              </Text>
+            </Layout>
             <Layout flexBasis={12} />
-            <Layout>{intl.formatMessage(messages.aboutContent)}</Layout>
+            <Layout>
+              <Text color='semiBlack' fontWeight='semiBold' lineHeight='normal' fontSize='regular'>
+                {intl.formatMessage(messages.experience)}
+              </Text>
+            </Layout>
+            <Layout flexBasis={40} />
+            <Layout>
+              <Text color='semiBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
+                {intl.formatMessage(messages.aboutContent)}
+              </Text>
+            </Layout>
           </Column>
           <Layout flexBasis={44} flexShrink={0} />
         </Row>

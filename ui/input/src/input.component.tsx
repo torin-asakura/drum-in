@@ -43,6 +43,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   const changeValue = useChangeValue(disabled, onChange, onChangeNative)
 
   if (!ref) {
+    // @ts-ignore
     ref = useRef(null) // eslint-disable-line
   }
 
