@@ -7,7 +7,7 @@ import { Column }     from '@ui/layout'
 import { Layout }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { ImageBlock } from '@ui/image'
-import { Text }         from '@ui/text'
+import { Text }       from '@ui/text'
 
 import messages       from './messages'
 

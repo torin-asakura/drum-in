@@ -5,65 +5,81 @@ import { Row }     from '@ui/layout'
 import { Box }     from '@ui/layout'
 import { Layout }  from '@ui/layout'
 import { Column }  from '@ui/layout'
+import { Text }      from '@ui/text'
+
 import messages    from './messages'
 
 const Address = () => {
   const intl = useIntl()
   return (
     <>
-      <Row style={{ border: '1px solid black' }} display={['none', 'none', 'flex']}>
+      <Row display={['none', 'none', 'flex']}>
         <Box
           width='720px'
           height='255px'
-          border='1px solid black'
+          backgroundColor='dullBlack'
           display={['none', 'none', 'flex']}
         >
           <Layout flexBasis={138} />
-          <Column width='100%' style={{ border: '1px solid black' }}>
+          <Column width='100%'>
             <Layout flexBasis={52} />
-            <Layout style={{ border: '1px solid black' }}>
-              {intl.formatMessage(messages.addressHeader)}
+            <Layout>
+              <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='large'>
+                {intl.formatMessage(messages.addressHeader)}
+              </Text>
             </Layout>
             <Layout flexBasis={60} />
-            <Layout style={{ border: '1px solid black' }}>
-              {intl.formatMessage(messages.addressCity)}
+            <Layout>
+              <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='semiNormal'>
+                {intl.formatMessage(messages.addressCity)}
+              </Text>
             </Layout>
             <Layout flexBasis={20} />
-            <Layout style={{ border: '1px solid black' }}>
-              {intl.formatMessage(messages.addressStreet)}
+            <Layout>
+              <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='semiNormal'>
+                {intl.formatMessage(messages.addressStreet)}
+              </Text>
             </Layout>
             <Layout flexBasis={52} />
           </Column>
           <Layout flexBasis={119} />
         </Box>
-        <Layout width='720px' height='255px' style={{ border: '1px solid black' }}>
+        <Layout width='720px' height='255px'>
           yandex map
         </Layout>
       </Row>
       <Layout display={['flex', 'flex', 'none']} width='320px'>
         <Column width='100%'>
-          <Box border='1px solid black' width='320' height='160px'>
+          <Box backgroundColor='dullBlack' width='320' height='160px'>
             <Layout flexBasis={40} />
-            <Column width='100%' style={{ border: '1px solid black' }}>
+            <Column width='100%'>
               <Layout flexBasis={25} />
-              <Layout style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.addressHeaderMobile)}
+              <Layout>
+                <Text color='white' fontSize='large' fontWeight='bold'>
+                  {intl.formatMessage(messages.addressHeaderMobile)}
+                </Text>
               </Layout>
               <Layout flexBasis={25} />
-              <Layout style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.addressMobile)}
+              <Layout>
+                <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
+                  {intl.formatMessage(messages.addressMobile)}
+                </Text>
               </Layout>
-              <Layout style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.addressStreetMobile)}
+              <Layout>
+                <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
+                  {intl.formatMessage(messages.addressStreetMobile)}
+                </Text>
               </Layout>
-              <Layout style={{ border: '1px solid black' }}>
-                {intl.formatMessage(messages.addressLaneMobule)}
+              <Layout>
+                <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
+                  {intl.formatMessage(messages.addressLaneMobule)}
+                </Text>
               </Layout>
               <Layout flexBasis={25} />
             </Column>
             <Layout flexBasis={20} />
           </Box>
-          <Layout style={{ border: '1px solid black' }}>yandex map</Layout>
+          <Layout>yandex map</Layout>
         </Column>
       </Layout>
     </>

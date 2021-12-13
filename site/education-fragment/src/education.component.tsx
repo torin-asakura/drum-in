@@ -52,7 +52,7 @@ const Education: FC = () => {
         </Row>
         <Layout flexBasis={65} />
       </Column>
-      <Column width='100%' display={['flex', 'flex', 'none']} >
+      <Column width='100%' display={['flex', 'flex', 'none']}>
         <Layout flexBasis={25} flexShrink={0} />
         <Row>
           <Layout flexBasis={44} flexShrink={0} />
@@ -115,11 +115,14 @@ const Education: FC = () => {
           <Layout flexBasis={44} flexShrink={0} />
         </Row>
         <Layout flexBasis={15} />
-       <Row>
-         <Layout flexBasis={40}/>
-        <Layout>
-          <Text  color= 'dullRed'fontWeight='semiBold' lineHeight='normal' fontSize='regular'> {intl.formatMessage(messages.link)}</Text>
-        </Layout>
+        <Row>
+          <Layout flexBasis={40} />
+          <Layout>
+            <Text color='dullRed' fontWeight='semiBold' lineHeight='normal' fontSize='regular'>
+              {' '}
+              {intl.formatMessage(messages.link)}
+            </Text>
+          </Layout>
         </Row>
         <Layout flexBasis={25} flexShrink={0} />
       </Column>

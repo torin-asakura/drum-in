@@ -6,22 +6,19 @@ import { Box }     from '@ui/layout'
 import { Column }  from '@ui/layout'
 import { Layout }  from '@ui/layout'
 import { Row }     from '@ui/layout'
-import {Text} from '@ui/text'
+import { Text }      from '@ui/text'
 
 import messages    from './messages'
 
 const Reviews: FC = () => {
   const intl = useIntl()
   return (
-    <Box
-      width={['320px', '320px', '1440px']}
-      height={['240px', '240px', '430px']}
-    >
+    <Box width={['320px', '320px', '1440px']} height={['240px', '240px', '430px']}>
       <Layout flexBasis={138} flexShrink={0} display={['none', 'none', 'flex']} />
       <Column width='100%' display={['none', 'none', 'flex']}>
         <Layout>
-           <Text color='black' fontWeight='bold' fontSize='24px' lineHeight='normal'> 
-          {intl.formatMessage(messages.reviews)}
+          <Text color='black' fontWeight='bold' fontSize='large' lineHeight='normal'>
+            {intl.formatMessage(messages.reviews)}
           </Text>
         </Layout>
         <Layout flexBasis={56} flexShrink={0} />
@@ -42,8 +39,8 @@ const Reviews: FC = () => {
         <Column width='100%'>
           <Layout flexBasis={15} />
           <Layout>
-            <Text color='black' fontWeight='bold' fontSize='24px' lineHeight='normal'>
-            {intl.formatMessage(messages.reviews)}
+            <Text color='black' fontWeight='bold' fontSize='small' lineHeight='normal'>
+              {intl.formatMessage(messages.reviews)}
             </Text>
           </Layout>
           <Layout flexBasis={15} />
