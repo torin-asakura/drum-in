@@ -40,55 +40,55 @@ const Portfolio: FC = () => {
                     {intl.formatMessage(messages.orchestra)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.jazz)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.blues)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.rock)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.raggey)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.trance)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.ethnic)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.girlsCover)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.albums)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={40} />
                 <Layout>
                   <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
                     {intl.formatMessage(messages.groups)}
