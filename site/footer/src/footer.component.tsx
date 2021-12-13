@@ -6,6 +6,10 @@ import { Box }     from '@ui/layout'
 import { Column }  from '@ui/layout'
 import { Row }     from '@ui/layout'
 import { Layout }  from '@ui/layout'
+import { Button } from '@ui/button'
+import {ImageBlock} from '@ui/image'
+import {Text} from '@ui/text'
+
 import messages    from './messages'
 
 const Footer: FC = () => {
@@ -15,52 +19,62 @@ const Footer: FC = () => {
       <Box
         width='1440px'
         height='252px'
-        border='1px solid black'
         display={['none', 'none', 'flex']}
+        backgroundColor='dullBlack'
       >
-        <Row style={{ border: '1px solid black' }}>
+        <Row>
           <Layout flexBasis='138px' flexShrink={0} />
-          <Column style={{ border: '1px solid black' }}>
+          <Column>
             <Layout flexBasis={60} />
-            <Layout style={{ border: '1px solid black' }}>
+            <Layout>
+              <Text color='white' fontWeight='bold' fontSize='large' lineHeight='semiNormal'>
               {intl.formatMessage(messages.whatsUp)}
+              </Text>
             </Layout>
             <Layout flexBasis={56} />
-            <Row style={{ border: '1px solid black' }}>
-              <Layout style={{ border: '1px solid black' }}>icon</Layout>
+            <Row>
+              <Layout width='48px' height='48px'><ImageBlock/></Layout>
               <Layout flexBasis={103} flexShrink={0} />
-              <Layout style={{ border: '1px solid black' }}>icon</Layout>
+              <Layout width='48px' height='48px'><ImageBlock/></Layout>
               <Layout flexBasis={103} flexShrink={0} />
-              <Layout style={{ border: '1px solid black' }}>icon</Layout>
+              <Layout width='48px' height='48px'><ImageBlock/></Layout>
               <Layout flexBasis={103} flexShrink={0} />
-              <Layout style={{ border: '1px solid black' }}>icon</Layout>
+              <Layout width='48px' height='48px'><ImageBlock/></Layout>
             </Row>
           </Column>
           <Layout flexBasis='800px' flexShrink={0} />
         </Row>
       </Box>
-      <Box width='320px' height='400px' border='1px solid black' display={['flex', 'flex', 'none']}>
+      <Box width='320px' height='400px' display={['flex', 'flex', 'none']} backgroundColor='dullBlack'>
         <Layout flexBasis={30} />
-        <Column width='100%' alignItems='center' style={{ border: '1px solid black' }}>
+        <Column width='100%' alignItems='center'>
           <Layout flexBasis={30} />
-          <Layout style={{ border: '1px solid black' }}>
+          <Layout>
+            <Button size='normal' width='240px'>
+              <Layout>
+              <Text color='white' fontWeight='bold' fontSize='normal' lineHeight='semiRegular'>
             {intl.formatMessage(messages.signUp)}
+            </Text>
+              </Layout>
+            </Button>
           </Layout>
           <Layout flexBasis={30} />
-          <Layout style={{ border: '1px solid black' }}>
+          <Layout>
+            <Text color='white' fontWeight='bold' fontSize='regular' lineHeight='small'>
             {intl.formatMessage(messages.linkMobile)}
+            </Text>
           </Layout>
           <Layout flexBasis={50} />
-          <Row justifyContent='center' style={{ border: '1px solid black' }}>
-            <Layout style={{ border: '1px solid black' }}>icon</Layout>
+          <Row justifyContent='center'>
+            <Layout width='48px' height='48px'><ImageBlock/></Layout>
             <Layout flexBasis={100} flexShrink={0} />
-            <Layout style={{ border: '1px solid black' }}>icon</Layout>
+            <Layout width='48px' height='48px'><ImageBlock/></Layout>
           </Row>
           <Layout flexBasis={100} flexShrink={0} />
-          <Row justifyContent='center' style={{ border: '1px solid black' }}>
-            <Layout style={{ border: '1px solid black' }}>icon</Layout>
+          <Row justifyContent='center'>
+            <Layout width='48px' height='48px'><ImageBlock/></Layout>
             <Layout flexBasis={100} flexShrink={0} />
-            <Layout style={{ border: '1px solid black' }}>icon</Layout>
+            <Layout width='48px' height='48px'><ImageBlock/></Layout>
           </Row>
         </Column>
         <Layout flexBasis={30} />

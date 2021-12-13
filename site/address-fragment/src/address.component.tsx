@@ -13,6 +13,8 @@ const Address = () => {
   const intl = useIntl()
   return (
     <>
+    <Layout>
+    <Column> 
       <Row display={['none', 'none', 'flex']}>
         <Box
           width='720px'
@@ -48,6 +50,9 @@ const Address = () => {
           yandex map
         </Layout>
       </Row>
+      <Layout flexBasis={60} flexShrink={0}/>
+      </Column>
+      </Layout>
       <Layout display={['flex', 'flex', 'none']} width='320px'>
         <Column width='100%'>
           <Box backgroundColor='dullBlack' width='320' height='160px'>

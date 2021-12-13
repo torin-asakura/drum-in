@@ -2065,6 +2065,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
+    "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
