@@ -12,16 +12,16 @@
     "@atls/next-app-with-apollo": "^0.2.70",
     "@atls/next-app-with-emotion": "^0.2.68",
     "@atls/next-app-with-helmet": "^0.2.64",
-    "@atls/next-app-with-intl": "^0.2.75",
     "@atls/next-config-with-pnp-workspaces": "^0.0.1",
     "@atls/next-document-with-helmet": "^0.2.64",
     "@atls/next-document-with-icons": "^0.0.2",
     "@atls/next-document-with-opengraph": "^0.0.2",
-    "@atls/react-locale": "^0.1.40",
     "@emotion/cache": "^11.4.0",
     "@emotion/css": "^11.1.3",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@monstrs/next-app-with-intl": "^0.3.13",
+    "@monstrs/react-locale": "^0.1.0",
     "@site/index-page": "workspace:site/index-page",
     "@ui/theme": "workspace:ui/theme",
     "events": "^3.3.0",
@@ -35,7 +35,8 @@
     "react-intl": "^5.23.0",
     "recompose": "^0.30.0",
     "styled-system": "^5.1.5",
-    "typescript": "4.3.5"
+    "typescript": "4.3.5",
+    "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",
