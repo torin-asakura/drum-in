@@ -1144,6 +1144,44 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@atls/next-app-with-intl", [
+        ["npm:0.2.75", {
+          "packageLocation": "./.yarn/cache/@atls-next-app-with-intl-npm-0.2.75-d1d7bda784-bdf9c5a0b2.zip/node_modules/@atls/next-app-with-intl/",
+          "packageDependencies": [
+            ["@atls/next-app-with-intl", "npm:0.2.75"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.75", {
+          "packageLocation": "./.yarn/__virtual__/@atls-next-app-with-intl-virtual-f014a86f08/0/cache/@atls-next-app-with-intl-npm-0.2.75-d1d7bda784-bdf9c5a0b2.zip/node_modules/@atls/next-app-with-intl/",
+          "packageDependencies": [
+            ["@atls/next-app-with-intl", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.75"],
+            ["@atls/react-locale", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.1.40"],
+            ["@types/atls__react-locale", null],
+            ["@types/next", null],
+            ["@types/react", "npm:17.0.36"],
+            ["@types/react-intl", null],
+            ["@types/universal-cookie", null],
+            ["next", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:10.2.3"],
+            ["react", "npm:17.0.2"],
+            ["react-intl", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:5.23.0"],
+            ["universal-cookie", null]
+          ],
+          "packagePeers": [
+            "@atls/react-locale",
+            "@types/atls__react-locale",
+            "@types/next",
+            "@types/react-intl",
+            "@types/react",
+            "@types/universal-cookie",
+            "next",
+            "react-intl",
+            "react",
+            "universal-cookie"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@atls/next-config-with-pnp-workspaces", [
         ["npm:0.0.1", {
           "packageLocation": "./.yarn/cache/@atls-next-config-with-pnp-workspaces-npm-0.0.1-7840558445-f91fab47ea.zip/node_modules/@atls/next-config-with-pnp-workspaces/",
@@ -1282,6 +1320,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/prettier",
             "globby",
             "prettier"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@atls/react-locale", [
+        ["npm:0.1.40", {
+          "packageLocation": "./.yarn/cache/@atls-react-locale-npm-0.1.40-4456797e7e-d082b375aa.zip/node_modules/@atls/react-locale/",
+          "packageDependencies": [
+            ["@atls/react-locale", "npm:0.1.40"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.1.40", {
+          "packageLocation": "./.yarn/__virtual__/@atls-react-locale-virtual-eed4f78e46/0/cache/@atls-react-locale-npm-0.1.40-4456797e7e-d082b375aa.zip/node_modules/@atls/react-locale/",
+          "packageDependencies": [
+            ["@atls/react-locale", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.1.40"],
+            ["@types/react", "npm:17.0.36"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
           ],
           "linkType": "HARD",
         }]
@@ -3353,10 +3413,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls/next-app-with-apollo", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.71"],
             ["@atls/next-app-with-emotion", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.68"],
             ["@atls/next-app-with-helmet", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.65"],
+            ["@atls/next-app-with-intl", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.75"],
             ["@atls/next-config-with-pnp-workspaces", "npm:0.0.1"],
             ["@atls/next-document-with-helmet", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.2.66"],
             ["@atls/next-document-with-icons", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.0.2"],
             ["@atls/next-document-with-opengraph", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.0.2"],
+            ["@atls/react-locale", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.1.40"],
             ["@emotion/cache", "npm:11.6.0"],
             ["@emotion/css", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:11.5.0"],
             ["@emotion/react", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:11.6.0"],

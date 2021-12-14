@@ -1,5 +1,4 @@
 import React                  from 'react'
-import { IntlProvider }       from 'react-intl'
 
 import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
@@ -17,7 +16,6 @@ import { Footer }             from '@site/footer-fragment'
 import { Address }            from '@site/address-fragment'
 
 const IndexPage = () => (
-  <IntlProvider locale='ru'>
     <Row justifyContent='center'>
       <Layout width={['320px', '320px', '100%']}>
         <Column width='100%' alignItems='center'>
@@ -35,7 +33,6 @@ const IndexPage = () => (
         </Column>
       </Layout>
     </Row>
-  </IntlProvider>
 )
 
 export default IndexPage
