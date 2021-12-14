@@ -5,7 +5,7 @@ import { Row }     from '@ui/layout'
 import { Box }     from '@ui/layout'
 import { Layout }  from '@ui/layout'
 import { Column }  from '@ui/layout'
-import { Text }      from '@ui/text'
+import { Text }    from '@ui/text'
 
 import messages    from './messages'
 
@@ -13,45 +13,58 @@ const Address = () => {
   const intl = useIntl()
   return (
     <>
-    <Layout width='100%'>
-    <Column width='100%'> 
-      <Row display={['none', 'none', 'flex']}>
-        <Box
-          width='100%'
-          height='255px'
-          backgroundColor='dullBlack'
-          display={['none', 'none', 'flex']}
-        >
-          <Layout flexBasis={138} />
-          <Column width='100%'>
-            <Layout flexBasis={52} />
-            <Layout>
-              <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='large'>
-                {intl.formatMessage(messages.addressHeader)}
-              </Text>
+      <Layout width='100%'>
+        <Column width='100%'>
+          <Row display={['none', 'none', 'flex']}>
+            <Box
+              width='100%'
+              height='255px'
+              backgroundColor='dullBlack'
+              justifyContent='flex-end'
+              display={['none', 'none', 'flex']}
+            >
+              <Layout width='720px'>
+                <Layout flexBasis={138} />
+                <Column width='100%'>
+                  <Layout flexBasis={52} />
+                  <Layout>
+                    <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='large'>
+                      {intl.formatMessage(messages.addressHeader)}
+                    </Text>
+                  </Layout>
+                  <Layout flexBasis={60} />
+                  <Layout>
+                    <Text
+                      color='white'
+                      fontWeight='semiBold'
+                      fontSize='big'
+                      lineHeight='semiNormal'
+                    >
+                      {intl.formatMessage(messages.addressCity)}
+                    </Text>
+                  </Layout>
+                  <Layout flexBasis={20} />
+                  <Layout>
+                    <Text
+                      color='white'
+                      fontWeight='semiBold'
+                      fontSize='big'
+                      lineHeight='semiNormal'
+                    >
+                      {intl.formatMessage(messages.addressStreet)}
+                    </Text>
+                  </Layout>
+                  <Layout flexBasis={52} />
+                </Column>
+                <Layout flexBasis={119} />
+              </Layout>
+            </Box>
+            <Layout width='100%' height='255px'>
+              yandex map
             </Layout>
-            <Layout flexBasis={60} />
-            <Layout>
-              <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='semiNormal'>
-                {intl.formatMessage(messages.addressCity)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={20} />
-            <Layout>
-              <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='semiNormal'>
-                {intl.formatMessage(messages.addressStreet)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={52} />
-          </Column>
-          <Layout flexBasis={119} />
-        </Box>
-        <Layout width='100%' height='255px'>
-          yandex map
-        </Layout>
-      </Row>
-      <Layout flexBasis={60} flexShrink={0}/>
-      </Column>
+          </Row>
+          <Layout flexBasis={60} flexShrink={0} />
+        </Column>
       </Layout>
       <Layout display={['flex', 'flex', 'none']} width='320px'>
         <Column width='100%'>
