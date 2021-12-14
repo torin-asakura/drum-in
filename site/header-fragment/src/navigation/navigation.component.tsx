@@ -13,8 +13,9 @@ const Navigation = () => {
   return (
     <Box
       width='1015px'
-      top='200px'
+      height='44px'
       flexShrink={0}
+      alignItems='center'
       display={['none', 'none', 'flex']}
       backgroundColor='semiTransparent'
     >
