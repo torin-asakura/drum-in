@@ -15,7 +15,7 @@ import { ImageBlock }        from './image-block'
 import { Skills }            from './skills'
 
 const SkillsToLearn = () => (
-  <Box width={['320px', '320px', '1440px']} border='1px solid black'>
+  <Box width={['320px', '320px', '100%']} border='1px solid black'>
     <Column style={{ border: '1px solid black' }} width='100%' display={['none', 'none', 'flex']}>
       <Row style={{ border: '1px solid black' }}>
         <Layout flexBasis={120} flexShrink={0} />

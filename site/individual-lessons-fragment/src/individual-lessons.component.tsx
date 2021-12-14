@@ -14,10 +14,10 @@ import messages    from './messages'
 const IndividualLessons: FC = () => {
   const intl = useIntl()
   return (
-    <Layout>
+    <Layout width='100%'>
       <Column width='100%' alignItems='center'>
         <Box
-          width={['320px', '320px', '1440px']}
+          width={['320px', '320px', '100%']}
           height={['290px', '290px', '581px']}
           backgroundColor='dullBlack'
         >
@@ -40,7 +40,7 @@ const IndividualLessons: FC = () => {
               <Layout>
                 <Button size='big' width='426px'>
                   <Text fontWeight='bold' fontSize='huge' lineHeight='big'>
-                    {intl.formatMessage(messages.signUp)}{' '}
+                    {intl.formatMessage(messages.signUp)}
                   </Text>
                 </Button>
               </Layout>
@@ -79,7 +79,6 @@ const IndividualLessons: FC = () => {
                     lineHeight='semiRegular'
                     fontWeight='semiNormal'
                   >
-                    {' '}
                     {intl.formatMessage(messages.individualLessonsContent)}
                   </Text>
                 </Layout>
@@ -94,8 +93,8 @@ const IndividualLessons: FC = () => {
         <Layout display={['flex', 'flex', 'none']}>
           <Button size='normal' width='240px'>
             <Text fontWeight='bold' fotnSize='normal' lineHeight='semiRegular'>
-              {intl.formatMessage(messages.signUp)}{' '}
-            </Text>{' '}
+              {intl.formatMessage(messages.signUp)}
+            </Text>
           </Button>
         </Layout>
         <Layout flexBasis={30} display={['flex', 'flex', 'none']} />

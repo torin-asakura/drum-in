@@ -15,10 +15,10 @@ import messages       from './messages'
 const CourseDescription: FC = () => {
   const intl = useIntl()
   return (
-    <Layout width={['320px', '320px', '1440px']}>
+    <Layout width={['320px', '320px', '100%']}>
       <Column width='100%'>
         <Box
-          width={['320px', '320px', '1440px']}
+          width={['320px', '320px', '100%']}
           height={['290px', '290px', '722px']}
           backgroundColor='softBlack'
         >
@@ -71,8 +71,7 @@ const CourseDescription: FC = () => {
                   fontSize='huge'
                   lineHeight='big'
                 >
-                  {' '}
-                  {intl.formatMessage(messages.courseDescriptionLink)}{' '}
+                  {intl.formatMessage(messages.courseDescriptionLink)}
                 </Text>
               </Layout>
               <Layout flexBasis={60} display={['none', 'none', 'flex']} />
@@ -80,7 +79,7 @@ const CourseDescription: FC = () => {
                 <Button size='big' width='426px'>
                   <Layout>
                     <Text color='white' fontWeight='bold' lineHeight='big' fontSize='huge'>
-                      {intl.formatMessage(messages.signUp)}{' '}
+                      {intl.formatMessage(messages.signUp)}
                     </Text>
                   </Layout>
                 </Button>

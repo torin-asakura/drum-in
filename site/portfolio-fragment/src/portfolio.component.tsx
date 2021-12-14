@@ -14,7 +14,7 @@ import messages       from './messages'
 const Portfolio: FC = () => {
   const intl = useIntl()
   return (
-    <Box width='1440px' height='1100px' display={['none', 'none', 'flex']}>
+    <Box width='100%' height='1100px' display={['none', 'none', 'flex']}>
       <Column width='100%'>
         <Row>
           <Layout flexBasis={65} flexShrink={0} />

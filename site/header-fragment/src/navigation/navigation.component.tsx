@@ -34,7 +34,7 @@ const Navigation = () => {
         <Layout flexBasis={150} />
         <Layout>
           <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
-            {intl.formatMessage(messages.instructorAbout)}{' '}
+            {intl.formatMessage(messages.instructorAbout)}
           </Text>
         </Layout>
         <Layout flexBasis={150} />

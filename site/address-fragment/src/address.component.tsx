@@ -13,11 +13,11 @@ const Address = () => {
   const intl = useIntl()
   return (
     <>
-    <Layout>
-    <Column> 
+    <Layout width='100%'>
+    <Column width='100%'> 
       <Row display={['none', 'none', 'flex']}>
         <Box
-          width='720px'
+          width='100%'
           height='255px'
           backgroundColor='dullBlack'
           display={['none', 'none', 'flex']}
@@ -46,7 +46,7 @@ const Address = () => {
           </Column>
           <Layout flexBasis={119} />
         </Box>
-        <Layout width='720px' height='255px'>
+        <Layout width='100%' height='255px'>
           yandex map
         </Layout>
       </Row>

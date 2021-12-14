@@ -19,7 +19,7 @@ import { Address }            from '@site/address-fragment'
 const IndexPage = () => (
   <IntlProvider locale='ru'>
     <Row justifyContent='center'>
-      <Layout width={['320px', '320px', '1440px']}>
+      <Layout width={['320px', '320px', '100%']}>
         <Column width='100%' alignItems='center'>
           <Header />
           <CourseDescription />

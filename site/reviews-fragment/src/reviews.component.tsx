@@ -13,7 +13,7 @@ import messages    from './messages'
 const Reviews: FC = () => {
   const intl = useIntl()
   return (
-    <Box width={['320px', '320px', '1440px']} height={['240px', '240px', '430px']}>
+    <Box width={['320px', '320px', '100%']} height={['240px', '240px', '430px']}>
       <Layout flexBasis={138} flexShrink={0} display={['none', 'none', 'flex']} />
       <Column width='100%' display={['none', 'none', 'flex']}>
         <Layout>
@@ -26,7 +26,7 @@ const Reviews: FC = () => {
           <Layout width='527px' height='284px'>
             yotube player
           </Layout>
-          <Layout flexBasis={92} flexShrink={0} />
+          <Layout flexBasis='80%' flexShrink={0} />
           <Layout width='527px' height='284px'>
             yotube player
           </Layout>

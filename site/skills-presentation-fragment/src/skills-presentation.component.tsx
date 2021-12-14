@@ -11,7 +11,7 @@ import { columnRight } from '@site/data'
 import { Item }        from './item'
 
 const SkillsPresentation: FC = () => (
-  <Box width={['320px', '320px', '1440px']} height={['1075px', '1075px', '585px']}>
+  <Box width={['320px', '320px', '100%']} height={['1075px', '1075px', '585px']}>
     <Layout flexBasis={80} flexShrink={0} />
     <Column width='100%'>
       <Layout justifyContent='center'>

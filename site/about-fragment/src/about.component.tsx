@@ -13,7 +13,7 @@ import messages       from './messages'
 const About = () => {
   const intl = useIntl()
   return (
-    <Box width={['320px', '320px', '1440px']} backgroundColor={['white', 'white', 'dullBlack']}>
+    <Box width={['320px', '320px', '100%']} backgroundColor={['white', 'white', 'dullBlack']}>
       <Row display={['none', 'none', 'flex']}>
         <Layout flexBasis={138} flexShrink={0} />
         <Column width='100%'>

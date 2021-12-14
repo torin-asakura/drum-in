@@ -15,10 +15,10 @@ import messages    from './messages'
 const Footer: FC = () => {
   const intl = useIntl()
   return (
-    <Layout width={['320px', '320px', '1440px']} height={['730px', '730px', '570px']}>
+    <Layout width={['320px', '320px', '100%']} height={['730px', '730px', '570px']}>
       <Box
-        width='1440px'
-        height='252px'
+        width='100%'
+        height='100%'
         display={['none', 'none', 'flex']}
         backgroundColor='dullBlack'
       >

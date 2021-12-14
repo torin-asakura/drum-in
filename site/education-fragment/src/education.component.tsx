@@ -14,7 +14,7 @@ import messages       from './messages'
 const Education: FC = () => {
   const intl = useIntl()
   return (
-    <Box width={['320px', '320px', '1440px']}>
+    <Box width={['320px', '320px', '100%']}>
       <Column width='100%' display={['none', 'none', 'flex']}>
         <Layout flexBasis={60} flexShrink={0} />
         <Row>
@@ -28,7 +28,7 @@ const Education: FC = () => {
             <Layout flexBasis={50} />
             <Layout>
               <Text color='dullBlack' fontSize='normal' fontWeight='normal' lineHeight='normal'>
-                {intl.formatMessage(messages.drumClass)}{' '}
+                {intl.formatMessage(messages.drumClass)}
               </Text>
             </Layout>
             <Layout flexBasis={25} />
@@ -59,25 +59,25 @@ const Education: FC = () => {
           <Column width='100%'>
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='semiBold' fontSize='regular'>
-                {intl.formatMessage(messages.educationHeader)}{' '}
+                {intl.formatMessage(messages.educationHeader)}
               </Text>
             </Layout>
             <Layout flexBasis={12} />
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.drumClass)}{' '}
+                {intl.formatMessage(messages.drumClass)}
               </Text>
             </Layout>
             <Layout flexBasis={25} />
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.drumWorkshop)}{' '}
+                {intl.formatMessage(messages.drumWorkshop)}
               </Text>
             </Layout>
             <Layout flexBasis={25} />
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.maimonid)}{' '}
+                {intl.formatMessage(messages.maimonid)}
               </Text>
             </Layout>
             <Layout flexBasis={20} />
@@ -93,22 +93,22 @@ const Education: FC = () => {
           <Column>
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.experienceHeader)}{' '}
+                {intl.formatMessage(messages.experienceHeader)}
               </Text>
             </Layout>
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.firstAlbum)}{' '}
+                {intl.formatMessage(messages.firstAlbum)}
               </Text>
             </Layout>
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.concerts)}{' '}
+                {intl.formatMessage(messages.concerts)}
               </Text>
             </Layout>
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.orchestra)}{' '}
+                {intl.formatMessage(messages.orchestra)}
               </Text>
             </Layout>
           </Column>
@@ -119,7 +119,6 @@ const Education: FC = () => {
           <Layout flexBasis={40} />
           <Layout>
             <Text color='dullRed' fontWeight='semiBold' lineHeight='normal' fontSize='regular'>
-              {' '}
               {intl.formatMessage(messages.link)}
             </Text>
           </Layout>
