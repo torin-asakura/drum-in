@@ -4,7 +4,7 @@ import { FC }        from 'react'
 import { Box }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
-import { Text }        from '@ui/text'
+import { Text }      from '@ui/text'
 
 import { ItemProps } from './item.interface'
 import { List }      from './list.component'

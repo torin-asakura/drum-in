@@ -11,12 +11,14 @@ import { Text }       from '@ui/text'
 import { ImageBlock } from '@ui/image'
 
 import messages       from './messages'
+import { SignUpFrom } from './sign-up-form'
 
 const CourseDescription: FC = () => {
   const intl = useIntl()
   return (
     <Layout width={['320px', '320px', '100%']}>
       <Column width='100%'>
+        <SignUpFrom />
         <Box
           width={['320px', '320px', '100%']}
           height={['290px', '290px', '722px']}

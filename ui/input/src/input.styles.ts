@@ -4,22 +4,43 @@ import { createAppearanceStyles } from '@atls-ui-parts/input'
 import { switchProp }             from 'styled-tools'
 import { prop }                   from 'styled-tools'
 
-const normalSizeStyles = createShapeStyles({
-  fontWeight: 400,
-  size: 62,
-  fontSize: 16,
-  rounding: 0,
-  paddingLeft: 1,
+import * as theme                 from '@ui/theme'
+
+const normalSizeStyles = ({ theme }) => ({
+  ...createShapeStyles({
+    fontWeight: theme.fontWeights.normal,
+    size: 70,
+    fontSize: theme.fontSizes.normal,
+    rounding: 0,
+    paddingLeft: 10,
+  })(),
+
+  '& >input::placeholder': {
+    // @ts-ignore
+    ...createShapeStyles({
+      fontSize: theme.fontSizes.large,
+      fontWeight: theme.fontWeights.normal,
+      paddingLeft: 150,
+    })(),
+  },
 })
 
 export const baseStyles = createBaseStyles()
 
-export const primaryColorsStyles = () => ({
+export const primaryColorsStyles = ({ theme }) => ({
   ...createAppearanceStyles({
-    fontColor: 'black',
-    backgroundColor: 'green',
-    borderColor: 'red',
+    fontColor: theme.colors.input.primary.fontColor,
+    backgroundColor: theme.colors.input.primary.default,
+    borderColor: theme.colors.input.primary.borderColor,
   })(),
+
+  '& >input::placeholder': {
+    // @ts-ignore
+    ...createAppearanceStyles({
+      fontColor: theme.colors.fontColor,
+    })(),
+    lineHeight: theme.lineHeights.semiNormal,
+  },
 })
 
 export const appearanceStyles = primaryColorsStyles

@@ -4,9 +4,9 @@ import { prop }                   from 'styled-tools'
 
 const getPrimaryColorsStyles = (): styleFn => {
   const primaryDefaultColorStyles: styleFn = createAppearanceStyles({
-    fontColor: 'white',
+    fontColor: prop('theme.colors.button.primary.fontColor'),
     backgroundColor: prop('theme.colors.button.primary.default'),
-    borderColor: 'red',
+    borderColor: prop('theme.colors.button.primary.default'),
   })
   return primaryDefaultColorStyles
 }
