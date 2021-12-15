@@ -1,20 +1,27 @@
-import React           from 'react'
-import { FC }          from 'react'
-import { useIntl }     from 'react-intl'
+import React          from 'react'
+import { FC }         from 'react'
+import { useIntl }    from 'react-intl'
 
-import { Box }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Text }        from '@ui/text'
-import { ImageBlock }  from '@ui/image'
-import { phoneNumber } from '@site/data'
+import { Box }        from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Text }       from '@ui/text'
+import { ImageBlock } from '@ui/image'
 
-import { Navigation }  from './navigation'
-import messages        from './messages'
+import { Navigation } from './navigation'
+import messages       from './messages'
+import { Social }     from './social'
 
 const Header: FC = () => {
   const intl = useIntl()
+  const textMobileTop = [messages.instructor, messages.instructorName, messages.linkMobile]
+  const textMobileBottom = [
+    messages.drum,
+    messages.rythmMobile,
+    messages.instructorAbout,
+    messages.reviews,
+  ]
   return (
     <Box
       width={['320px', '320px', '100%']}
@@ -69,25 +76,7 @@ const Header: FC = () => {
           <Box backgroundColor='dullRed' width='375px' height='285px' flexShrink={0}>
             <Column width='100%'>
               <Layout flexBasis={102} />
-              <Row>
-                <Layout flexBasis={80} />
-                <Layout width='18px' height='18px'>
-                  <ImageBlock />
-                </Layout>
-                <Layout flexBasis={50} />
-                <Layout width='18px' height='18px'>
-                  <ImageBlock />
-                </Layout>
-                <Layout flexBasis={50} />
-                <Layout width='18px' height='18px'>
-                  <ImageBlock />
-                </Layout>
-                <Layout flexBasis={50} />
-                <Layout width='18px' height='18px'>
-                  <ImageBlock />
-                </Layout>
-                <Layout flexBasis={80} />
-              </Row>
+              <Social />
             </Column>
           </Box>
           <Layout flexBasis={120} flexShrink={0} />
@@ -104,56 +93,42 @@ const Header: FC = () => {
         >
           <Column width='100%' alignItems='center'>
             <Layout flexBasis={30} />
-            <Layout flexShrink={0} style={{ whiteSpace: 'nowrap' }}>
-              <Text color='dullBlack' fontSize='small' fontWeight='bold' lineHeight='semiNormal'>
-                {intl.formatMessage(messages.instructor)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={14} />
-            <Layout style={{ whiteSpace: 'nowrap' }}>
-              <Text color='dullBlack' fontSize='small' fontWeight='bold' lineHeight='semiNormal'>
-                {intl.formatMessage(messages.instructorName)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={14} />
-            <Layout style={{ whiteSpace: 'nowrap' }}>
-              <Text
-                color='dullBlack'
-                fontSize='small'
-                fontWeight='bold'
-                lineHeight={['semiSmall', 'semiSmall', 'semiNormal']}
-              >
-                {phoneNumber}
-              </Text>
-            </Layout>
-            <Layout flexBasis={14} />
+            {textMobileTop.map((item) => (
+              <>
+                <Layout>
+                  <Text
+                    whiteSpace='nowrap'
+                    color='dullBlack'
+                    fontSize='small'
+                    fontWeight='bold'
+                    lineHeight='semiNormal'
+                  >
+                    {intl.formatMessage(item)}
+                  </Text>
+                </Layout>
+                <Layout flexBasis={14} />
+              </>
+            ))}
             <Layout width='80px' height='80px'>
               <ImageBlock />
             </Layout>
             <Layout flexBasis={14} />
-            <Layout style={{ whiteSpace: 'nowrap' }}>
-              <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
-                {intl.formatMessage(messages.drum)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={14} flexShrink={0} />
-            <Layout style={{ whiteSpace: 'nowrap' }}>
-              <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
-                {intl.formatMessage(messages.rythmMobile)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={14} flexShrink={0} />
-            <Layout style={{ whiteSpace: 'nowrap' }}>
-              <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
-                {intl.formatMessage(messages.instructorAbout)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={14} flexShrink={0} />
-            <Layout style={{ whiteSpace: 'nowrap' }}>
-              <Text color='dullBlack' fontSize='small' lineHeight='semiSmall' fontWeight='normal'>
-                {intl.formatMessage(messages.reviews)}
-              </Text>
-            </Layout>
+            {textMobileBottom.map((item) => (
+              <>
+                <Layout>
+                  <Text
+                    whiteSpace='nowrap'
+                    color='dullBlack'
+                    fontSize='small'
+                    lineHeight='semiSmall'
+                    fontWeight='normal'
+                  >
+                    {intl.formatMessage(item)}
+                  </Text>
+                </Layout>
+                <Layout flexBasis={14} flexShrink={0} />
+              </>
+            ))}
           </Column>
         </Layout>
         <Box backgroundColor='dullRed' width='105px' flexShrink={0} />

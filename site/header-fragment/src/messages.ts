@@ -1,5 +1,7 @@
 import { defineMessages } from 'react-intl'
 
+import { phoneNumber }    from '@site/data'
+
 import { name }           from '../package.json'
 
 export default defineMessages({
@@ -37,6 +39,6 @@ export default defineMessages({
   },
   linkMobile: {
     id: `${name}.link_mobile`,
-    defaultMessage: '+7-926-246-47-59',
+    defaultMessage: phoneNumber,
   },
 })

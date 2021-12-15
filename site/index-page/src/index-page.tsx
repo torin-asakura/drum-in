@@ -16,23 +16,23 @@ import { Footer }             from '@site/footer-fragment'
 import { Address }            from '@site/address-fragment'
 
 const IndexPage = () => (
-    <Row justifyContent='center'>
-      <Layout width={['320px', '320px', '100%']}>
-        <Column width='100%' alignItems='center'>
-          <Header />
-          <CourseDescription />
-          <SkillsToLearn />
-          <IndividualLessons />
-          <SkillsPresentation />
-          <About />
-          <Education />
-          <Portfolio />
-          <Reviews />
-          <Address />
-          <Footer />
-        </Column>
-      </Layout>
-    </Row>
+  <Row justifyContent='center'>
+    <Layout width={['320px', '320px', '100%']}>
+      <Column width='100%' alignItems='center'>
+        <Header />
+        <CourseDescription />
+        <SkillsToLearn />
+        <IndividualLessons />
+        <SkillsPresentation />
+        <About />
+        <Education />
+        <Portfolio />
+        <Reviews />
+        <Address />
+        <Footer />
+      </Column>
+    </Layout>
+  </Row>
 )
 
 export default IndexPage
