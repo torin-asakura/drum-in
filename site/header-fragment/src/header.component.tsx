@@ -22,6 +22,7 @@ const Header: FC = () => {
     messages.instructorAbout,
     messages.reviews,
   ]
+  const textDesktop = [messages.instructor, messages.instructorName, messages.whatsUp]
   return (
     <Box
       width={['320px', '320px', '100%']}
@@ -38,33 +39,21 @@ const Header: FC = () => {
             <Layout flexBasis={66} />
             <Row>
               <Column>
-                <Layout>
-                  <Text
-                    color='dullBlack'
-                    fontSize='large'
-                    fontWeight='bold'
-                    lineHeight='semiNormal'
-                  >
-                    {intl.formatMessage(messages.instructor)}
-                  </Text>
-                </Layout>
-                <Layout flexBasis={20} />
-                <Layout>
-                  <Text color='dullRed' fontSize='large' fontWeight='bold' lineHeight='semiNormal'>
-                    {intl.formatMessage(messages.instructorName)}
-                  </Text>
-                </Layout>
-                <Layout flexBasis={25} />
-                <Layout>
-                  <Text
-                    color='dullBlack'
-                    fontSize='large'
-                    fontWeight='bold'
-                    lineHeight='semiNormal'
-                  >
-                    {intl.formatMessage(messages.whatsUp)}
-                  </Text>
-                </Layout>
+                {textDesktop.map((item) => (
+                  <>
+                    <Layout>
+                      <Text
+                        color={item === messages.instructorName ? 'dullRed' : 'dullBlack'}
+                        fontSize='large'
+                        fontWeight='bold'
+                        lineHeight='semiNormal'
+                      >
+                        {intl.formatMessage(item)}
+                      </Text>
+                    </Layout>
+                    <Layout flexBasis={20} />
+                  </>
+                ))}
               </Column>
               <Layout flexBasis={250} flexShrink={0} />
             </Row>
