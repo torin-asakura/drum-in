@@ -65,7 +65,6 @@ export const firstMobileBlock = [
       'Играть и петь свинг',
     ],
   ],
-  null,
 ]
 export const secondMobileBlock = [
   [
@@ -94,7 +93,7 @@ export const thirdMobileBlock = [
     'вы освоите',
     [
       'Ритмы разных стран мира - Африка, Куба,Латинская Америка,Испания, Индия и др.',
-      'Ритмы разных сузыкальных стилей - Roc,POP,R-N_B,Funck,Latina,Jazz,Trance,Chill,Reggae,Downtempo,DNB,HipHop',
+      'Ритмы разных сузыкальных стилей - Roc, POP, R-N_B, Funck, Latina, Jazz, Trance, Chill, Reggae, Downtempo, DNB, HipHop',
       'Различные школы ритма',
       'Конокол',
     ],

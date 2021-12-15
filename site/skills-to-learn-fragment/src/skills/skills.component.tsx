@@ -2,32 +2,33 @@ import React           from 'react'
 import { FC }          from 'react'
 
 import { Layout }      from '@ui/layout'
+import { Column }      from '@ui/layout'
 import { Row }         from '@ui/layout'
 import { Box }         from '@ui/layout'
 
 import { Item }        from './item'
 import { SkillsProps } from './skills.interface'
 
-const Skills: FC<SkillsProps> = ({ items }) =>
-  items !== null
-    ? items.map((item) => (
-        <>
-          <Row>
-            <Layout>
-              <Box
-                height={['11px', '11px', '18px']}
-                width={['11px', '11px', '18px']}
-                backgroundColor='dullRed'
-                borderRadius={50}
-              />
-            </Layout>
-            <Layout flexBasis={['11px', '11px', '18px']} flexShrink={0} />
-            <Layout flexBasis={['11px', '11px', '18px']} />
-            <Item header={item !== null ? item[0] : null} main={item !== null ? item[1] : null} />
-          </Row>
-          <Layout flexBasis={40} flexShrink={0} />
-        </>
-      ))
-    : null
+const Skills: FC<SkillsProps> = ({ items }) => (
+  <Layout width={['280px', '280px', '730px']} flexGrow={0}>
+    <Column>
+      {items.map((item) => (
+        <Row>
+          <Layout height='20px' alignItems='flex-end'>
+            <Box
+              backgroundColor='dullRed'
+              borderRadius='circle'
+              width={['11px', '11px', '18px']}
+              height={['11px', '11px', '18px']}
+              flexShrink={0}
+            />
+          </Layout>
+          <Layout flexBasis={['11px', '11px', '18px']} flexShrink={0} />
+          <Item header={item[0]} mainText={item[1]} />
+        </Row>
+      ))}
+    </Column>
+  </Layout>
+)
 
 export { Skills }

@@ -15,46 +15,81 @@ import { ImageBlock }        from './image-block'
 import { Skills }            from './skills'
 
 const SkillsToLearn = () => (
-  <Box width={['320px', '320px', '100%']} border='1px solid black'>
-    <Column style={{ border: '1px solid black' }} width='100%' display={['none', 'none', 'flex']}>
-      <Row style={{ border: '1px solid black' }}>
-        <Layout flexBasis={120} flexShrink={0} />
-        <Column>
-          <Layout flexBasis={60} flexShrink={0} />
-          <Skills items={before} />
-        </Column>
-        <Layout flexBasis={215} flexShrink={0} />
-        <Layout flexBasis={520} />
-        <Column>
-          <ImageBlock />
-          <Layout flexBasis={275} flexShrink={0} />
-        </Column>
-        <Layout flexBasis={120} flexShrink={0} />
-      </Row>
-      <Layout flexBasis={40} flexShrink={0} />
-      <Row>
-        <Layout flexBasis={120} flexShrink={0} />
-        <Column>
-          <ImageBlock />
-          <Layout flexBasis={620} flexShrink={0} />
-        </Column>
-        <Layout flexBasis={140} flexShrink={0} />
-        <Layout flexBasis={300} />
-        <Column>
-          <Skills items={after} />
-        </Column>
-        <Layout flexBasis={120} flexShrink={0} />
-      </Row>
+  <Box width={['320px', '320px', '100%']}>
+    <Column width='100%' alignItems='center' display={['none', 'none', 'flex']}>
+      <Layout width='1440px'>
+        <Layout>
+          <Layout flexBasis={100} flexShrink={0} />
+          <Column width='100%'>
+            <Layout flexBasis={60} flexShrink={0} />
+            <Skills items={before} />
+          </Column>
+          <Layout flexBasis={55} flexShrink={0} />
+          <Column width='100%' alignItems='center'>
+            <Box backgroundColor='dullRed' height='60px' width='375px' />
+            <Layout width='490px' height='500px'>
+              <ImageBlock />
+            </Layout>
+            <Box backgroundColor='dullRed' height='60px' width='375px' />
+          </Column>
+        </Layout>
+      </Layout>
+      <Layout width='1440px' display={['none', 'none', 'flex']}>
+        <Layout>
+          <Column width='100%' alignItems='center'>
+            <Box backgroundColor='dullRed' height='60px' width='375px' />
+            <Layout width='490px' height='500px'>
+              <ImageBlock />
+            </Layout>
+            <Box backgroundColor='dullRed' height='60px' width='375px' />
+          </Column>
+          <Layout flexBasis={140} flexShrink={0} />
+          <Column width='100%'>
+            <Layout flexBasis={60} flexShrink={0} />
+            <Skills items={after} />
+          </Column>
+          <Layout flexBasis={55} flexShrink={0} />
+        </Layout>
+      </Layout>
     </Column>
-    <Column display={['flex', 'flex', 'none']}>
-      <Skills items={firstMobileBlock} />
-      <ImageBlock />
-      <Skills items={secondMobileBlock} />
-      <ImageBlock />
-      <Skills items={thirdMobileBlock} />
-      <ImageBlock />
-      <Layout flexBasis={30} />
-    </Column>
+    <Layout display={['flex', 'flex', 'none']}>
+      <Layout width='115px' overflow='visible' style={{ zIndex: 1 }}>
+        <Column>
+          <Row>
+            <Layout flexBasis={15} flexShrink={0} />
+            <Skills items={firstMobileBlock} />
+            <Layout flexBasis={15} flexShrink={0} />
+          </Row>
+          <Layout flexBasis={20} flexShrink={0} />
+          <Layout width='320px' height='320px'>
+            <ImageBlock />
+          </Layout>
+          <Layout flexBasis={20} flexShrink={0} />
+          <Row>
+            <Layout flexBasis={15} flexShrink={0} />
+            <Skills items={secondMobileBlock} />
+            <Layout flexBasis={15} flexShrink={0} />
+          </Row>
+          <Layout flexBasis={20} flexShrink={0} />
+          <Layout width='320px' height='320px'>
+            <ImageBlock />
+          </Layout>
+          <Layout flexBasis={20} flexShrink={0} />
+          <Row>
+            <Layout flexBasis={15} flexShrink={0} />
+            <Skills items={thirdMobileBlock} />
+            <Layout flexBasis={15} flexShrink={0} />
+          </Row>
+          <Layout width='320px' height='320px'>
+            <ImageBlock />
+          </Layout>
+          <Layout flexBasis={40} flexShrink={0} />
+          <Layout flexBasis={30} />
+        </Column>
+      </Layout>
+      <Box width='100px' backgroundColor='transparent' />
+      <Box width='105px' backgroundColor='dullRed' />
+    </Layout>
   </Box>
 )
 

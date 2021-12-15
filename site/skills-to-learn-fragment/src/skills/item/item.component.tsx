@@ -4,16 +4,28 @@ import { FC }        from 'react'
 import { Box }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
+import { Text }        from '@ui/text'
 
 import { ItemProps } from './item.interface'
 import { List }      from './list.component'
 
-const Item: FC<ItemProps> = ({ header, main }) => (
-  <Box border='1px solid black' zIndex={0}>
+const Item: FC<ItemProps> = ({ header, mainText }) => (
+  <Box>
     <Column>
-      <Layout>{header}</Layout>
+      <Layout>
+        <Text
+          color='dullBlack'
+          fontsize={['small', 'small', 'big']}
+          fontWeight='bold'
+          lineHeight={['normal', 'normal', 'large']}
+        >
+          {header}
+        </Text>
+      </Layout>
+      <Layout flexBasis={20} />
       <Column>
-        <List main={main} />
+        <List mainText={mainText} />
+        <Layout flexBasis={40} />
       </Column>
     </Column>
   </Box>
