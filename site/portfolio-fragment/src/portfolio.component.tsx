@@ -13,6 +13,18 @@ import messages       from './messages'
 
 const Portfolio: FC = () => {
   const intl = useIntl()
+  const genres = [
+    messages.orchestra,
+    messages.jazz,
+    messages.blues,
+    messages.rock,
+    messages.raggey,
+    messages.trance,
+    messages.ethnic,
+    messages.girlsCover,
+    messages.albums,
+    messages.groups,
+  ]
   return (
     <Box width='100%' height='1100px' display={['none', 'none', 'flex']} justifyContent='center'>
       <Layout width='1440px'>
@@ -36,115 +48,21 @@ const Portfolio: FC = () => {
               <Layout flexBasis='126px' />
               <Layout>
                 <Column>
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.orchestra)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.jazz)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.blues)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.rock)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.raggey)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.trance)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.ethnic)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.girlsCover)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.albums)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={40} />
-                  <Layout>
-                    <Text
-                      color='dullBlack'
-                      fontWeight='normal'
-                      fontSize='normal'
-                      lineHeight='normal'
-                    >
-                      {intl.formatMessage(messages.groups)}
-                    </Text>
-                  </Layout>
+                  {genres.map((item) => (
+                    <>
+                      <Layout>
+                        <Text
+                          color='dullBlack'
+                          fontWeight='normal'
+                          fontSize='normal'
+                          lineHeight='normal'
+                        >
+                          {intl.formatMessage(item)}
+                        </Text>
+                      </Layout>
+                      <Layout flexBasis={40} />
+                    </>
+                  ))}
                 </Column>
               </Layout>
               <Layout flexBasis={82} />
