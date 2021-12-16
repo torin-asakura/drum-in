@@ -1,23 +1,32 @@
-import React       from 'react'
+import React         from 'react'
 
-import { Layout }  from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Layout }    from '@ui/layout'
+import { Column }    from '@ui/layout'
+import { Text }      from '@ui/text'
 import { Condition } from '@ui/condition'
 
 const List = ({ content }) => (
-  <Condition match={Array.isArray(content)}>
-    {content.map((item) => (
-      <Column>
-        <Layout>
-          <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
-            {item}
-          </Text>
-        </Layout>
-        <Layout flexBasis={20} />
-      </Column>
-    ))}
-  </Condition>
+  <>
+    <Condition match={Array.isArray(content)}>
+      {content.map((item) => (
+        <Column>
+          <Layout>
+            <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
+              {item}
+            </Text>
+          </Layout>
+          <Layout flexBasis={20} />
+        </Column>
+      ))}
+    </Condition>
+    <Condition>
+      <Layout>
+        <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
+          {content}
+        </Text>
+      </Layout>
+    </Condition>
+  </>
 )
 
 export { List }

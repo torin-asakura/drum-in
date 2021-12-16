@@ -37,5 +37,4 @@ export default defineMessages({
     id: `${name}.rythm_mobile`,
     defaultMessage: 'ритмсольфеджо',
   },
-
 })

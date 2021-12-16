@@ -6,8 +6,8 @@ import { Column }     from '@ui/layout'
 import { Layout }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { ImageBlock } from '@ui/image'
-import { Text }       from '@ui/text'
-import { genres }     from '@site/data'
+
+import { GenreList }  from './genre-list'
 
 const Portfolio: FC = () => (
   <Box width='100%' height='1100px' display={['none', 'none', 'flex']} justifyContent='center'>
@@ -31,23 +31,7 @@ const Portfolio: FC = () => (
           <Column>
             <Layout flexBasis='126px' />
             <Layout>
-              <Column>
-                {genres.map((item) => (
-                  <>
-                    <Layout>
-                      <Text
-                        color='dullBlack'
-                        fontWeight='normal'
-                        fontSize='normal'
-                        lineHeight='normal'
-                      >
-                        {item}
-                      </Text>
-                    </Layout>
-                    <Layout flexBasis={40} />
-                  </>
-                ))}
-              </Column>
+              <GenreList />
             </Layout>
             <Layout flexBasis={82} />
           </Column>

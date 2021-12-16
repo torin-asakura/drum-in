@@ -1,19 +1,18 @@
-import React          from 'react'
-import { FC }         from 'react'
-import { useIntl }    from 'react-intl'
+import React           from 'react'
+import { FC }          from 'react'
+import { useIntl }     from 'react-intl'
 
-import { Box }        from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { ImageBlock } from '@ui/image'
+import { Box }         from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Text }        from '@ui/text'
+import { ImageBlock }  from '@ui/image'
 import { phoneNumber } from '@site/data'
 
-import { Navigation } from './navigation'
-import messages       from './messages'
-import { Social }     from './social'
-
+import { Navigation }  from './navigation'
+import messages        from './messages'
+import { Social }      from './social'
 
 const Header: FC = () => {
   const intl = useIntl()
@@ -94,24 +93,24 @@ const Header: FC = () => {
                     fontWeight='bold'
                     lineHeight='semiNormal'
                   >
-                      {intl.formatMessage(item)}
+                    {intl.formatMessage(item)}
                   </Text>
                 </Layout>
                 <Layout flexBasis={14} />
               </>
             ))}
-              <Layout>
-                  <Text
-                    whiteSpace='nowrap'
-                    color='dullBlack'
-                    fontSize='small'
-                    fontWeight='bold'
-                    lineHeight='semiNormal'
-                  >
-                      {phoneNumber}
-                  </Text>
-                </Layout>
-                <Layout flexBasis={14} />
+            <Layout>
+              <Text
+                whiteSpace='nowrap'
+                color='dullBlack'
+                fontSize='small'
+                fontWeight='bold'
+                lineHeight='semiNormal'
+              >
+                {phoneNumber}
+              </Text>
+            </Layout>
+            <Layout flexBasis={14} />
             <Layout width='80px' height='80px'>
               <ImageBlock />
             </Layout>
