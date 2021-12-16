@@ -1,6 +1,5 @@
 import React          from 'react'
 import { FC }         from 'react'
-import { useIntl }    from 'react-intl'
 
 import { Box }        from '@ui/layout'
 import { Column }     from '@ui/layout'

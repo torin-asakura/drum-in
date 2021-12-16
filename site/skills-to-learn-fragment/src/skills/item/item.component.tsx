@@ -9,7 +9,7 @@ import { Text }      from '@ui/text'
 import { ItemProps } from './item.interface'
 import { List }      from './list.component'
 
-const Item: FC<ItemProps> = ({ header, mainText }) => (
+const Item: FC<ItemProps> = ({ header, content }) => (
   <Box>
     <Column>
       <Layout>
@@ -24,7 +24,7 @@ const Item: FC<ItemProps> = ({ header, mainText }) => (
       </Layout>
       <Layout flexBasis={20} />
       <Column>
-        <List mainText={mainText} />
+        <List content={content} />
         <Layout flexBasis={40} />
       </Column>
     </Column>

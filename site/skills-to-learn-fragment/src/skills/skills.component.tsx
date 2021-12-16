@@ -24,7 +24,7 @@ const Skills: FC<SkillsProps> = ({ items }) => (
             />
           </Layout>
           <Layout flexBasis={['11px', '11px', '18px']} flexShrink={0} />
-          <Item header={item[0]} mainText={item[1]} />
+          <Item header={item[0]} content={item[1]} />
         </Row>
       ))}
     </Column>

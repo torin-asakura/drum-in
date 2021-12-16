@@ -2148,6 +2148,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
+    "@ui/condition": "workspace:ui/condition"
     "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
     "@ui/text": "workspace:ui/text"

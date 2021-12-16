@@ -37,8 +37,5 @@ export default defineMessages({
     id: `${name}.rythm_mobile`,
     defaultMessage: 'ритмсольфеджо',
   },
-  linkMobile: {
-    id: `${name}.link_mobile`,
-    defaultMessage: phoneNumber,
-  },
+
 })

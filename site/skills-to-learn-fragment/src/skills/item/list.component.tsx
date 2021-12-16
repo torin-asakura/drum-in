@@ -5,9 +5,9 @@ import { Column }  from '@ui/layout'
 import { Text }    from '@ui/text'
 import { Condition } from '@ui/condition'
 
-const List = ({ mainText }) => (
-  <Condition match={Array.isArray(mainText)}>
-    {mainText.map((item) => (
+const List = ({ content }) => (
+  <Condition match={Array.isArray(content)}>
+    {content.map((item) => (
       <Column>
         <Layout>
           <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
