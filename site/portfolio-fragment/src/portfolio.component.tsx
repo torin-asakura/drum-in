@@ -8,24 +8,9 @@ import { Layout }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { ImageBlock } from '@ui/image'
 import { Text }       from '@ui/text'
+import { genres }       from '@site/data'
 
-import messages       from './messages'
-
-const Portfolio: FC = () => {
-  const intl = useIntl()
-  const genres = [
-    messages.orchestra,
-    messages.jazz,
-    messages.blues,
-    messages.rock,
-    messages.raggey,
-    messages.trance,
-    messages.ethnic,
-    messages.girlsCover,
-    messages.albums,
-    messages.groups,
-  ]
-  return (
+const Portfolio: FC = () => 
     <Box width='100%' height='1100px' display={['none', 'none', 'flex']} justifyContent='center'>
       <Layout width='1440px'>
         <Column width='100%'>
@@ -57,7 +42,7 @@ const Portfolio: FC = () => {
                           fontSize='normal'
                           lineHeight='normal'
                         >
-                          {intl.formatMessage(item)}
+                          {item}
                         </Text>
                       </Layout>
                       <Layout flexBasis={40} />
@@ -73,7 +58,5 @@ const Portfolio: FC = () => {
         </Column>
       </Layout>
     </Box>
-  )
-}
 
 export { Portfolio }

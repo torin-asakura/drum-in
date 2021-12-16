@@ -2214,6 +2214,7 @@ __metadata:
   resolution: "@site/portfolio-fragment@workspace:site/portfolio-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
+    "@site/data": "workspace:site/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:ui/image"

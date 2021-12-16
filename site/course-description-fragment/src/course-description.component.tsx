@@ -18,7 +18,6 @@ const CourseDescription: FC = () => {
   return (
     <Layout width={['320px', '320px', '100%']}>
       <Column width='100%'>
-        <SignUpFrom />
         <Box
           width={['320px', '320px', '100%']}
           height={['290px', '290px', '722px']}

@@ -1,4 +1,4 @@
 export interface ItemProps {
-  header?: string
-  mainText: any[]
+  header?: string | string[]
+  mainText: string | string[]
 }
