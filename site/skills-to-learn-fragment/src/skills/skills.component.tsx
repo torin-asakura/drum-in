@@ -12,9 +12,9 @@ import { SkillsProps } from './skills.interface'
 const Skills: FC<SkillsProps> = ({ items }) => (
   <Layout width={['280px', '280px', '730px']} flexGrow={0}>
     <Column>
-      {items.map((item) => (
+      {items.textBlock.map((item) => (
         <Row>
-          <Layout height='20px' alignItems='flex-end'>
+          <Layout height={['20px', '20px', '30px']} alignItems='flex-end'>
             <Box
               backgroundColor='dullRed'
               borderRadius='circle'
@@ -24,7 +24,7 @@ const Skills: FC<SkillsProps> = ({ items }) => (
             />
           </Layout>
           <Layout flexBasis={['11px', '11px', '18px']} flexShrink={0} />
-          <Item header={item[0]} content={item[1]} />
+          <Item header={item.header} content={item.content} />
         </Row>
       ))}
     </Column>

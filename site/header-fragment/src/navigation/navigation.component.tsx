@@ -26,19 +26,19 @@ const Navigation = () => {
             {intl.formatMessage(messages.rythm)}
           </Text>
         </Layout>
-        <Layout flexBasis={150} />
+        <Layout flexBasis={100} />
         <Layout>
           <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
             {intl.formatMessage(messages.drum)}
           </Text>
         </Layout>
-        <Layout flexBasis={150} />
+        <Layout flexBasis={100} />
         <Layout>
           <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
             {intl.formatMessage(messages.instructorAbout)}
           </Text>
         </Layout>
-        <Layout flexBasis={150} />
+        <Layout flexBasis={100} />
         <Layout>
           <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
             {intl.formatMessage(messages.reviews)}

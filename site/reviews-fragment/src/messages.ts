@@ -5,6 +5,6 @@ import { name }           from '../package.json'
 export default defineMessages({
   reviews: {
     id: `${name}.reviews`,
-    defaultMessage: 'отзывы',
+    defaultMessage: 'ОТЗЫВЫ',
   },
 })

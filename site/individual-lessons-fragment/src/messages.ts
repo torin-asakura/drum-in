@@ -14,6 +14,6 @@ export default defineMessages({
   },
   signUp: {
     id: `${name}.sign_up`,
-    defaultMessage: 'записаться',
+    defaultMessage: 'ЗАПИСАТЬСЯ',
   },
 })

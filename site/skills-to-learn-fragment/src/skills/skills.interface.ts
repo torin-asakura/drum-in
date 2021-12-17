@@ -1,5 +1,10 @@
 /* TODO strict type */
 
 export interface SkillsProps {
-  items: (string | string[])[][]
+  items: {
+    textBlock: {
+      header: string
+      content: string[]
+    }[]
+  }
 }

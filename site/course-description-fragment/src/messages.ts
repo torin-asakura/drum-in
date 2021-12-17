@@ -5,11 +5,11 @@ import { name }           from '../package.json'
 export default defineMessages({
   onlineCourse: {
     id: `${name}.online_course`,
-    defaultMessage: 'он-лайн курс',
+    defaultMessage: 'ОН-ЛАЙН КУРС',
   },
   courseName: {
     id: `${name}.course_name`,
-    defaultMessage: 'открытие ритма',
+    defaultMessage: 'ОТКРЫТИЕ РИТМА',
   },
   courseDescriptionContent: {
     id: `${name}.course_description_content`,
@@ -18,19 +18,19 @@ export default defineMessages({
   },
   courseDescriptionLink: {
     id: `${name}.course_description_link`,
-    defaultMessage: 'описание курса в pdf',
+    defaultMessage: 'ОПИСАНИЕ КУРСА В PDF',
   },
   signUp: {
     id: `${name}.sign_up`,
-    defaultMessage: 'записаться',
+    defaultMessage: 'ЗАПИСАТЬСЯ',
   },
   courseNameMobile: {
     id: `${name}.course_name_mobile`,
-    defaultMessage: 'ритмсольфеджио',
+    defaultMessage: 'РИТМСОЛЬФЕДЖО',
   },
   buyCourse: {
     id: `${name}.buy_course`,
-    defaultMessage: 'купить курс',
+    defaultMessage: 'КУПИТЬ КУРС',
   },
   courseDescriptionMobile: {
     id: `${name}.course_description_mobile`,

@@ -1,40 +1,38 @@
 import { defineMessages } from 'react-intl'
 
-import { phoneNumber }    from '@site/data'
-
 import { name }           from '../package.json'
 
 export default defineMessages({
   instructor: {
     id: `${name}.instructor`,
-    defaultMessage: 'барабанный инструктор',
+    defaultMessage: 'БАРАБАННЫЙ ИНСТРУКТОР',
   },
   instructorName: {
     id: `${name}.instructor_name`,
-    defaultMessage: 'чуприкова марина',
+    defaultMessage: 'ЧУПРИКОВА МАРИНА',
   },
   whatsUp: {
     id: `${name}.whats_up`,
-    defaultMessage: 'написать в whatsapp',
+    defaultMessage: 'НАПИСАТЬ В WHATSAPP',
   },
   rythm: {
     id: `${name}.rythm`,
-    defaultMessage: 'открытие ритма',
+    defaultMessage: 'ОТКРЫТИЕ РИТМА',
   },
   drum: {
     id: `${name}.drum`,
-    defaultMessage: 'ударная установка',
+    defaultMessage: 'УДАРНАЯ УСТАНОВКА',
   },
   instructorAbout: {
     id: `${name}.instructor_about`,
-    defaultMessage: 'о преподавателе',
+    defaultMessage: 'О ПРЕПОДАВАТЕЛЕ',
   },
   reviews: {
     id: `${name}`,
-    defaultMessage: 'отзывы',
+    defaultMessage: 'ОТЗЫВЫ',
   },
   rythmMobile: {
     id: `${name}.rythm_mobile`,
-    defaultMessage: 'ритмсольфеджо',
+    defaultMessage: 'РИТМСОЛЬФЕДЖО',
   },
 })

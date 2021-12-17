@@ -1,18 +1,17 @@
-import React           from 'react'
-import { FC }          from 'react'
-import { useIntl }     from 'react-intl'
+import React          from 'react'
+import { FC }         from 'react'
+import { useIntl }    from 'react-intl'
 
-import { Box }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Text }        from '@ui/text'
-import { ImageBlock }  from '@ui/image'
-import { phoneNumber } from '@site/data'
+import { Box }        from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Text }       from '@ui/text'
+import { ImageBlock } from '@ui/image'
 
-import { Navigation }  from './navigation'
-import messages        from './messages'
-import { Social }      from './social'
+import { Navigation } from './navigation'
+import messages       from './messages'
+import { Social }     from './social'
 
 const Header: FC = () => {
   const intl = useIntl()
@@ -24,6 +23,7 @@ const Header: FC = () => {
     messages.reviews,
   ]
   const textDesktop = [messages.instructor, messages.instructorName, messages.whatsUp]
+  const phoneNumber = '+7-926-246-47-59'
   return (
     <Box
       width={['320px', '320px', '100%']}

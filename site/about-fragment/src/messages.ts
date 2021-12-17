@@ -5,7 +5,7 @@ import { name }           from '../package.json'
 export default defineMessages({
   aboutHeader: {
     id: `${name}.about_header`,
-    defaultMessage: 'О преподавателе',
+    defaultMessage: 'О ПРЕПОДАВАТЕЛЕ',
   },
   aboutContent: {
     id: `${name}.about_content`,

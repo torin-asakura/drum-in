@@ -4,7 +4,7 @@ import { name }           from '../package.json'
 export default defineMessages({
   whatsUp: {
     id: `${name}.whats_up`,
-    defaultMessage: 'написать в whatsapp',
+    defaultMessage: 'НАПИСАТЬ В WHATSAPP',
   },
   linkMobile: {
     id: `${name}.link_mobile`,
@@ -12,6 +12,6 @@ export default defineMessages({
   },
   signUp: {
     id: `${name}.sign_up`,
-    defaultMessage: 'записаться',
+    defaultMessage: 'ЗАПИСАТЬСЯ',
   },
 })

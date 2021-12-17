@@ -5,7 +5,7 @@ import { name }           from '../package.json'
 export default defineMessages({
   addressHeader: {
     id: `${name}.address_header`,
-    defaultMessage: 'Адрес:',
+    defaultMessage: 'АДРЕС:',
   },
   addressCity: {
     id: `${name}.address_city`,
@@ -17,11 +17,11 @@ export default defineMessages({
   },
   addressHeaderMobile: {
     id: `${name}.address_header_mobile`,
-    defaultMessage: 'схема проезда',
+    defaultMessage: 'СХЕМА ПРОЕЗДА',
   },
   addressMobile: {
     id: `${name}.address_mobile`,
-    defaultMessage: 'Адрес:',
+    defaultMessage: 'АДРЕС:',
   },
   addressStreetMobile: {
     id: `${name}.address_street_mobile`,

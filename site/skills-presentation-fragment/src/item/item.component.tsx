@@ -14,7 +14,13 @@ const Item = ({ item }) => (
       </Layout>
       <Layout flexBasis={36} />
       <Layout width='320px' height='25px'>
-        <Text color='dullBlack' fontWeight='normal' lineHeight='semiRegular' fontSize='normal'>
+        <Text
+          textAlign='center'
+          color='dullBlack'
+          fontWeight='normal'
+          lineHeight='semiRegular'
+          fontSize='normal'
+        >
           {item}
         </Text>
       </Layout>

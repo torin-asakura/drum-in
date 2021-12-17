@@ -5,7 +5,7 @@ import { name }           from '../package.json'
 export default defineMessages({
   educationHeader: {
     id: `${name}.education_header`,
-    defaultMessage: ' образование',
+    defaultMessage: ' ОБРАЗОВАНИЕ',
   },
   drumClass: {
     id: `${name}.drum_class`,
