@@ -11,7 +11,6 @@ import { Text }       from '@ui/text'
 import { ImageBlock } from '@ui/image'
 
 import messages       from './messages'
-import { SignUpFrom } from './sign-up-form'
 
 const CourseDescription: FC = () => {
   const intl = useIntl()

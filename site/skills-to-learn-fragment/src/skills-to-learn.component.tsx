@@ -46,7 +46,7 @@ const SkillsToLearn = () => (
           <Layout flexBasis={140} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={60} flexShrink={0} />
-            <Skills items={after} />
+            {/* <Skills items={after} /> */}
           </Column>
           <Layout flexBasis={55} flexShrink={0} />
         </Layout>
@@ -57,7 +57,7 @@ const SkillsToLearn = () => (
         <Column>
           <Row>
             <Layout flexBasis={15} flexShrink={0} />
-            <Skills items={firstMobileBlock} />
+            {/* <Skills items={firstMobileBlock} />  */}
             <Layout flexBasis={15} flexShrink={0} />
           </Row>
           <Layout flexBasis={20} flexShrink={0} />
@@ -67,7 +67,7 @@ const SkillsToLearn = () => (
           <Layout flexBasis={20} flexShrink={0} />
           <Row>
             <Layout flexBasis={15} flexShrink={0} />
-            <Skills items={secondMobileBlock} />
+            {/* <Skills items={secondMobileBlock} /> */}
             <Layout flexBasis={15} flexShrink={0} />
           </Row>
           <Layout flexBasis={20} flexShrink={0} />
@@ -77,7 +77,7 @@ const SkillsToLearn = () => (
           <Layout flexBasis={20} flexShrink={0} />
           <Row>
             <Layout flexBasis={15} flexShrink={0} />
-            <Skills items={thirdMobileBlock} />
+            {/* <Skills items={thirdMobileBlock} /> */}
             <Layout flexBasis={15} flexShrink={0} />
           </Row>
           <Layout width='320px' height='320px'>

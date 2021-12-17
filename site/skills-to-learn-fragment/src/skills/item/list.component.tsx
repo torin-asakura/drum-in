@@ -19,7 +19,7 @@ const List = ({ content }) => (
         </Column>
       ))}
     </Condition>
-    <Condition>
+    <Condition match={typeof content === 'string'}>
       <Layout>
         <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
           {content}
