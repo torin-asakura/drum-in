@@ -6,6 +6,7 @@ import { css }    from '@emotion/react'
 export const GlobalStyles = () => (
   <Global
     styles={css`
+      @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Noto+Sans+Display:ital,wght@1,100&family=Source+Sans+3:ital,wght@1,300;1,400')
       html {
         height: 100%;
       }

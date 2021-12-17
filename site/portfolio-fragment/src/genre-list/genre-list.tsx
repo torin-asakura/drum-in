@@ -1,8 +1,8 @@
 import React      from 'react'
-import { FC }       from 'react'
+import { FC }     from 'react'
 
-import { Column }   from '@ui/layout'
-import { Layout }   from '@ui/layout'
+import { Column } from '@ui/layout'
+import { Layout } from '@ui/layout'
 import { Text }   from '@ui/text'
 import { genres } from '@site/data'
 
