@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.6.0",
-    "@site/data": "workspace:site/data",
     "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",
     "@ui/layout": "workspace:ui/layout",
@@ -17,6 +15,7 @@
     "@types/react-dom": "^17"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "react-intl": "*"
   }
 }

@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@site/about-fragment": "workspace:site/about-fragment",
     "@site/address-fragment": "workspace:site/address-fragment",
@@ -29,6 +28,7 @@
     "@types/styled-system": "^5"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "react-intl": "*"
   }
 }

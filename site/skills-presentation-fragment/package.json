@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@site/data": "workspace:site/data",
     "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",

@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.6.0",
     "@ui/button": "workspace:ui/button",
     "@ui/image": "workspace:ui/image",
     "@ui/input": "workspace:ui/input",
@@ -19,6 +18,7 @@
     "@types/styled-system": "^5"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "react-intl": "*"
   }
 }

@@ -5,7 +5,6 @@
   "dependencies": {
     "@atls-ui-parts/button": "^0.0.4",
     "@atls-ui-parts/styles": "^0.0.1",
-    "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@ui/theme": "workspace:ui/theme",
     "react": "^17.0.2",
@@ -17,5 +16,8 @@
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "@types/styled-system": "^5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*"
   }
 }

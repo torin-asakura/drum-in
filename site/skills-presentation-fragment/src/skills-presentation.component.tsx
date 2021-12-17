@@ -11,6 +11,7 @@ import { Item }   from './item'
 const SkillsPresentation: FC = () => {
   const columnLeft = ['ПОСТАНОВКА РУК', 'ПОСТАНОВКА НОГ', 'РАЗВИТИЕ КООРДИНАЦИИ']
   const columnRight = ['ЧТЕНИЕ С ЛИСТА', 'ИГРА ПОД МУЗЫКУ', 'ПОСТРОЕНИЕ ПАРТИЙ']
+  const rythm = 'РАЗВИТИЕ ЧУВСТВА ВРЕМЕНИ'
   return (
     <Box width={['320px', '320px', '100%']} height={['1075px', '1075px', '585px']}>
       <Layout flexBasis={80} flexShrink={0} />
@@ -66,7 +67,7 @@ const SkillsPresentation: FC = () => {
             </Layout>
           </Column>
         </Layout>
-        <Item item={['РАЗВИТИЕ ЧУВСТВА ВРЕМЕНИ']} />
+        <Item item={[rythm]} />
       </Column>
       <Layout flexBasis={80} flexShrink={0} />
     </Box>

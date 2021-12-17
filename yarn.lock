@@ -1186,7 +1186,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.5.0, @emotion/cache@npm:^11.6.0":
+"@emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.5.0":
   version: 11.6.0
   resolution: "@emotion/cache@npm:11.6.0"
   dependencies:
@@ -1281,52 +1281,6 @@ __metadata:
   version: 0.7.5
   resolution: "@emotion/memoize@npm:0.7.5"
   checksum: 83da8d4a7649a92c72f960817692bc6be13cc13e107b9f7e878d63766525ed4402881bfeb3cda61145c050281e7e260f114a0a2870515527346f2ef896b915b3
-  languageName: node
-  linkType: hard
-
-"@emotion/react@npm:^11.6.0":
-  version: 11.6.0
-  resolution: "@emotion/react@npm:11.6.0"
-  dependencies:
-    "@babel/runtime": ^7.13.10
-    "@emotion/cache": ^11.6.0
-    "@emotion/serialize": ^1.0.2
-    "@emotion/sheet": ^1.1.0
-    "@emotion/utils": ^1.0.0
-    "@emotion/weak-memoize": ^0.2.5
-    hoist-non-react-statics: ^3.3.1
-  peerDependencies:
-    "@babel/core": ^7.0.0
-    react: ">=16.8.0"
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    "@types/react":
-      optional: true
-  checksum: 4fb2d108dc32716d1f162026ac5fdbd0662e3b435a34fb324629d72bb6bff61b18ac8975b51457c16ffa41543bade5d07558566ab76420b3926fbb9159441232
-  languageName: node
-  linkType: hard
-
-"@emotion/react@npm:^11.7.0":
-  version: 11.7.0
-  resolution: "@emotion/react@npm:11.7.0"
-  dependencies:
-    "@babel/runtime": ^7.13.10
-    "@emotion/cache": ^11.6.0
-    "@emotion/serialize": ^1.0.2
-    "@emotion/sheet": ^1.1.0
-    "@emotion/utils": ^1.0.0
-    "@emotion/weak-memoize": ^0.2.5
-    hoist-non-react-statics: ^3.3.1
-  peerDependencies:
-    "@babel/core": ^7.0.0
-    react: ">=16.8.0"
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    "@types/react":
-      optional: true
-  checksum: 8b50d61caabe04ae413ae23b98c170da643754ec89f25eb001464095685686585d0f88988bc36432f231e6de6abdbee73308c42ba427de9eaaf5a54d7f2f6ae5
   languageName: node
   linkType: hard
 
@@ -1998,7 +1952,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/about-fragment@workspace:site/about-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2009,6 +1962,7 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2017,7 +1971,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/address-fragment@workspace:site/address-fragment"
   dependencies:
-    "@emotion/react": ^11.7.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
@@ -2025,6 +1978,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2079,7 +2033,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/course-description-fragment@workspace:site/course-description-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2092,13 +2045,8 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@site/data@workspace:site/data":
-  version: 0.0.0-use.local
-  resolution: "@site/data@workspace:site/data"
   languageName: unknown
   linkType: soft
 
@@ -2106,7 +2054,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/education-fragment@workspace:site/education-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2117,6 +2064,7 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2125,7 +2073,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/footer-fragment@workspace:site/footer"
   dependencies:
-    "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
@@ -2135,6 +2082,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2143,8 +2091,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/header-fragment@workspace:site/header-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
-    "@site/data": "workspace:site/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2156,6 +2102,7 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2164,7 +2111,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/index-page@workspace:site/index-page"
   dependencies:
-    "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@site/about-fragment": "workspace:site/about-fragment"
     "@site/address-fragment": "workspace:site/address-fragment"
@@ -2187,6 +2133,7 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2195,7 +2142,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/individual-lessons-fragment@workspace:site/individual-lessons-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2206,6 +2152,7 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2214,8 +2161,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/portfolio-fragment@workspace:site/portfolio-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
-    "@site/data": "workspace:site/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:ui/image"
@@ -2224,6 +2169,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2232,7 +2178,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/reviews-fragment@workspace:site/reviews-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
@@ -2240,6 +2185,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2248,7 +2194,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/skills-presentation-fragment@workspace:site/skills-presentation-fragment"
   dependencies:
-    "@site/data": "workspace:site/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:ui/image"
@@ -2265,8 +2210,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/skills-to-learn-fragment@workspace:site/skills-to-learn-fragment"
   dependencies:
-    "@emotion/react": ^11.6.0
-    "@site/data": "workspace:site/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
@@ -2276,6 +2219,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2966,7 +2910,6 @@ __metadata:
   dependencies:
     "@atls-ui-parts/button": ^0.0.4
     "@atls-ui-parts/styles": ^0.0.1
-    "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2976,6 +2919,8 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
   languageName: unknown
   linkType: soft
 
@@ -2994,7 +2939,6 @@ __metadata:
   resolution: "@ui/image@workspace:ui/image"
   dependencies:
     "@atls-ui-parts/image": ^0.0.1
-    "@emotion/react": ^11.7.0
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -3002,6 +2946,8 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
   languageName: unknown
   linkType: soft
 
@@ -3010,7 +2956,6 @@ __metadata:
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
     "@atls-ui-parts/input": ^0.0.6
-    "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -3021,6 +2966,8 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
   languageName: unknown
   linkType: soft
 
@@ -3029,7 +2976,6 @@ __metadata:
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
     "@atls-ui-parts/layout": ^0.0.2
-    "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -3037,6 +2983,8 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
   languageName: unknown
   linkType: soft
 
@@ -3061,7 +3009,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
-    "@emotion/react": ^11.6.0
+    "@emotion/react": ^11.7.1
     "@types/react": ^17
     "@types/react-dom": ^17
     react: ^17.0.2
