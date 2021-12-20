@@ -1,10 +1,8 @@
 /* TODO strict type */
-
+interface Item {
+  header: string
+  content: string[]
+}
 export interface SkillsProps {
-  items: {
-    textBlock: {
-      header: string
-      content: string[]
-    }[]
-  }
+  items: { texts: Item[] }
 }

@@ -2094,6 +2094,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
+    "@ui/background-field": "workspace:ui/backgound-field"
     "@ui/condition": "workspace:ui/condition"
     "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
@@ -2212,6 +2213,7 @@ __metadata:
   dependencies:
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/background-field": "workspace:ui/backgound-field"
     "@ui/button": "workspace:ui/button"
     "@ui/condition": "workspace:ui/condition"
     "@ui/layout": "workspace:ui/layout"
@@ -2903,6 +2905,20 @@ __metadata:
   checksum: 59953e474ad4610c1aa23b2b1a964445e2c6201521da6367752f37939d854352bbfced5c04ea539274065e012b1337ba3ffa49c2647a240a4e87155378ba9873
   languageName: node
   linkType: hard
+
+"@ui/background-field@workspace:ui/backgound-field":
+  version: 0.0.0-use.local
+  resolution: "@ui/background-field@workspace:ui/backgound-field"
+  dependencies:
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@emotion/react": "*"
+  languageName: unknown
+  linkType: soft
 
 "@ui/button@workspace:ui/button":
   version: 0.0.0-use.local

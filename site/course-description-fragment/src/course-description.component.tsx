@@ -33,7 +33,7 @@ const CourseDescription: FC = () => {
                     {intl.formatMessage(messages.onlineCourse)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={30} display={['none', 'none', 'flex']} />
+                <Layout flexBasis={30} flexShrink={0} />
                 <Layout display={['none', 'none', 'flex']}>
                   <Text fontSize='large' color='white' fontWeight='bold' lineHeight='regular'>
                     {intl.formatMessage(messages.courseName)}

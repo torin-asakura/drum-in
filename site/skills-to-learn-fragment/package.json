@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/background-field": "workspace:ui/backgound-field",
     "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",
     "@ui/layout": "workspace:ui/layout",

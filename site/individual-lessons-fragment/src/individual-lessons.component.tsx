@@ -21,6 +21,7 @@ const IndividualLessons: FC = () => {
           height={['290px', '290px', '581px']}
           backgroundColor='dullBlack'
           justifyContent='center'
+          zIndex={1}
         >
           <Layout width='1440px' display={['none', 'none', 'flex']}>
             <Row justifyContent='center'>

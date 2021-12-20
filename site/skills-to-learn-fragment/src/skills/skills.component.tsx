@@ -12,7 +12,8 @@ import { SkillsProps } from './skills.interface'
 const Skills: FC<SkillsProps> = ({ items }) => (
   <Layout width={['280px', '280px', '730px']} flexGrow={0}>
     <Column>
-      {items.textBlock.map((item) => (
+      <Layout flexBasis={20} flexShrink={0} />
+      {items.texts.map((item) => (
         <Row>
           <Layout height={['20px', '20px', '30px']} alignItems='flex-end'>
             <Box
