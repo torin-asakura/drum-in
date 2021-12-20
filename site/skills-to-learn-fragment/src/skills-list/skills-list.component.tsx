@@ -1,14 +1,14 @@
-import React               from 'react'
-import { FC }              from 'react'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Row }             from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Row }        from '@ui/layout'
 
-import { ImageBlock }      from '../image-block'
+import { ImageBlock } from '../image-block'
 
-import { Skills }          from '../skills'
-import { BackgroundField } from '@ui/background-field'
+import { Skills }     from '../skills'
+import { Background } from '../background'
 
 const SkillsList: FC = () => {
   const before = {
@@ -74,9 +74,9 @@ const SkillsList: FC = () => {
       <Column display={['flex', 'flex', 'none']}>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <BackgroundField>
+          <Background height={['905px', '905px', '0px']}>
             <Skills items={before} />
-          </BackgroundField>
+          </Background>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
@@ -84,9 +84,11 @@ const SkillsList: FC = () => {
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <BackgroundField>
-            <Skills items={before} />
-          </BackgroundField>
+          <Layout flexBasis={900}>
+            <Background height={['925px', '925px', '0px']}>
+              <Skills items={before} />
+            </Background>
+          </Layout>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout flexBasis={20} flexShrink={0} />
@@ -95,15 +97,19 @@ const SkillsList: FC = () => {
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <BackgroundField>
-            <Skills items={before} />
-          </BackgroundField>
+          <Layout flexBasis={900}>
+            <Background height={['925px', '925px', '0px']}>
+              <Skills items={before} />
+            </Background>
+          </Layout>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
           <ImageBlock />
         </Layout>
-        <Layout flexBasis={30} flexShrink={0} />
+        <Layout flexBasis={30} flexShrink={0}>
+          <Background height='30px' />
+        </Layout>
       </Column>
     </>
   )

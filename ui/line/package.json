@@ -1,5 +1,5 @@
 {
-  "name": "@ui/background-field",
+  "name": "@ui/line",
   "version": "0.0.0",
   "main": "src/index.ts",
   "peerDependencies": {

@@ -14,7 +14,7 @@ const SkillsPresentation: FC = () => {
   const rythm = 'РАЗВИТИЕ ЧУВСТВА ВРЕМЕНИ'
   return (
     <Box width={['320px', '320px', '100%']} height={['1075px', '1075px', '585px']}>
-      <Layout flexBasis={80} flexShrink={0} />
+      <Layout flexBasis={70} flexShrink={0} />
       <Column width='100%'>
         <Layout justifyContent='center'>
           <Row display={['none', 'none', 'flex']} justifyContent='center'>
@@ -42,7 +42,7 @@ const SkillsPresentation: FC = () => {
               </Column>
             </Layout>
           </Row>
-          <Column display={['flex', 'flex', 'none']}>
+          <Column display={['flex', 'flex', 'none']} width='100%'>
             <Layout>
               <Column>
                 <Layout flexBasis={65} />
@@ -68,6 +68,7 @@ const SkillsPresentation: FC = () => {
           </Column>
         </Layout>
         <Item item={[rythm]} />
+        <Layout flexBasis={20} flexShrink={0} />
       </Column>
       <Layout flexBasis={80} flexShrink={0} />
     </Box>

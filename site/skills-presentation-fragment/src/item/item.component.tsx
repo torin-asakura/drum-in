@@ -30,7 +30,7 @@ const Item = ({ item }) => (
         <ImageBlock />
       </Layout>
       <Layout flexBasis={18} />
-      <Layout width={['180px', '180px', '320px']} height='25px' justifyContent='center'>
+      <Layout width={['200px', '200px', '320px']} height='25px' justifyContent='center'>
         <Text color='dullBlack' fontWeight='normal' lineHeight='semiSmall' fontSize='small'>
           {item}
         </Text>

@@ -77,17 +77,19 @@ const Address = () => {
                   {intl.formatMessage(messages.addressHeaderMobile)}
                 </Text>
               </Layout>
-              <Layout flexBasis={25} />
+              <Layout flexBasis={25} flexShrink={0} />
               <Layout>
                 <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
                   {intl.formatMessage(messages.addressMobile)}
                 </Text>
               </Layout>
+              <Layout flexBasis={25} flexShrink={0} />
               <Layout>
                 <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
                   {intl.formatMessage(messages.addressStreetMobile)}
                 </Text>
               </Layout>
+              <Layout flexBasis={25} flexShrink={0} />
               <Layout>
                 <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
                   {intl.formatMessage(messages.addressLaneMobule)}

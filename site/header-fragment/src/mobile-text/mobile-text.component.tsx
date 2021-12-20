@@ -21,7 +21,7 @@ const MobileText = () => {
   return (
     <Layout
       justifyContent='center'
-      width='100px'
+      width='300px'
       overflow='visible'
       style={{ zIndex: 1 }}
       flexShrink={0}

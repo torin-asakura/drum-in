@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/background-field": "workspace:ui/backgound-field",
     "@ui/condition": "workspace:ui/condition",
     "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
+    "@ui/line": "workspace:ui/line",
     "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

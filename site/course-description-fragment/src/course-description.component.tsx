@@ -22,6 +22,7 @@ const CourseDescription: FC = () => {
           height={['290px', '290px', '722px']}
           backgroundColor='softBlack'
           justifyContent='center'
+          zIndex={1}
         >
           <Layout width={['320px', '320px', '1440px']}>
             <Layout flexBasis={[20, 20, 137]} />

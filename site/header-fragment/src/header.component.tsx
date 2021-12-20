@@ -1,22 +1,23 @@
-import React               from 'react'
-import { FC }              from 'react'
+import React           from 'react'
+import { FC }          from 'react'
 
-import { Box }             from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { ImageBlock }      from '@ui/image'
+import { Box }         from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { ImageBlock }  from '@ui/image'
 
-import { Navigation }      from './navigation'
-import { Social }          from './social'
-import { DesktopText }     from './desktop-text'
-import { MobileText }      from './mobile-text'
-import { BackgroundField } from '@ui/background-field'
+import { Navigation }  from './navigation'
+import { Social }      from './social'
+import { DesktopText } from './desktop-text'
+import { MobileText }  from './mobile-text'
+
+import { Background }  from './background'
 
 const Header: FC = () => (
   <Box
     width={['320px', '320px', '100%']}
-    height={['355px', '355px', '285px']}
+    height={['345px', '345px', '285px']}
     justifyContent='center'
   >
     <Layout width='1440px' display={['none', 'none', 'flex']}>
@@ -46,7 +47,9 @@ const Header: FC = () => (
       </Row>
     </Layout>
     <Row display={['flex', 'flex', 'none']} justifyContent='center'>
+      <Background height={['355px', '355px', '285px']}>
         <MobileText />
+      </Background>
     </Row>
   </Box>
 )
