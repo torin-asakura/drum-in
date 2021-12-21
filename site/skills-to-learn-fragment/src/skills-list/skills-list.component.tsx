@@ -8,7 +8,7 @@ import { Row }        from '@ui/layout'
 import { ImageBlock } from '../image-block'
 
 import { Skills }     from '../skills'
-import { Background } from '../background'
+import { Container }  from '../container'
 
 const SkillsList: FC = () => {
   const before = {
@@ -74,9 +74,9 @@ const SkillsList: FC = () => {
       <Column display={['flex', 'flex', 'none']}>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <Background height={['905px', '905px', '0px']}>
+          <Container height={['905px', '905px', '0px']}>
             <Skills items={before} />
-          </Background>
+          </Container>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
@@ -85,9 +85,9 @@ const SkillsList: FC = () => {
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
           <Layout flexBasis={900}>
-            <Background height={['925px', '925px', '0px']}>
+            <Container height={['925px', '925px', '0px']}>
               <Skills items={before} />
-            </Background>
+            </Container>
           </Layout>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
@@ -98,9 +98,9 @@ const SkillsList: FC = () => {
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
           <Layout flexBasis={900}>
-            <Background height={['925px', '925px', '0px']}>
+            <Container height={['925px', '925px', '0px']}>
               <Skills items={before} />
-            </Background>
+            </Container>
           </Layout>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
@@ -108,7 +108,7 @@ const SkillsList: FC = () => {
           <ImageBlock />
         </Layout>
         <Layout flexBasis={30} flexShrink={0}>
-          <Background height='30px' />
+          <Container height='30px' />
         </Layout>
       </Column>
     </>

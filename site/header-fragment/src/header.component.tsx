@@ -12,7 +12,7 @@ import { Social }      from './social'
 import { DesktopText } from './desktop-text'
 import { MobileText }  from './mobile-text'
 
-import { Background }  from './background'
+import { Container }   from './container'
 
 const Header: FC = () => (
   <Box
@@ -21,35 +21,37 @@ const Header: FC = () => (
     justifyContent='center'
   >
     <Layout width='1440px' display={['none', 'none', 'flex']}>
-      <Row>
-        <Layout width='214px' height='216px' flexShrink={0}>
-          <ImageBlock />
+      <Layout width='214px' height='216px' flexShrink={0}>
+        <ImageBlock />
+      </Layout>
+      <Layout flexBasis={22} flexShrink={0} />
+      <Column width='100%'>
+        <Layout flexBasis={60} flexShrink={0} />
+        <Row>
+          <DesktopText />
+        </Row>
+        <Layout flexBasis={18} />
+        <Layout width='300px' overflow='visible' style={{ zIndex: 1 }}>
+          <Navigation />
         </Layout>
-        <Layout flexBasis={22} flexShrink={0} />
-        <Column width='100%'>
-          <Layout flexBasis={66} />
-          <Row>
-            <DesktopText />
-            <Layout flexBasis={250} flexShrink={0} />
-          </Row>
-          <Layout flexBasis={18} />
-          <Layout width='300px' overflow='visible' style={{ zIndex: 1 }}>
-            <Navigation />
+        <Layout flexBasis={60} flexShrink={0} />
+      </Column>
+      <Row style={{ position: 'relative' }}>
+        <Container height='285px'>
+          <Layout width='350px'>
+            <Column width='100%'>
+              <Layout flexBasis={102} />
+              <Social />
+            </Column>
           </Layout>
-        </Column>
-        <Box backgroundColor='dullRed' width='375px' height='285px' flexShrink={0}>
-          <Column width='100%'>
-            <Layout flexBasis={102} />
-            <Social />
-          </Column>
-        </Box>
-        <Layout flexBasis={120} flexShrink={0} />
+        </Container>
       </Row>
+      <Layout flexBasis={120} flexShrink={0} />
     </Layout>
     <Row display={['flex', 'flex', 'none']} justifyContent='center'>
-      <Background height={['355px', '355px', '285px']}>
+      <Container height={['355px', '355px', '285px']}>
         <MobileText />
-      </Background>
+      </Container>
     </Row>
   </Box>
 )

@@ -6,29 +6,27 @@ import { Layout }       from '@ui/layout'
 
 import { SkillsList }   from './skills-list'
 import { AskQuestions } from './ask-questions'
-import { Background }   from './background'
+import { Container }    from './container'
 
-const SkillsToLearn = () => {
-  return (
-    <Layout>
-      <Column width='100%'>
-        <Box width={['320px', '320px', '100%']} justifyContent='center'>
-          <Layout display={['none', 'none', 'flex']}>
-            <SkillsList />
-          </Layout>
-          <Layout display={['flex', 'flex', 'none']}>
-            <SkillsList />
-          </Layout>
-        </Box>
+const SkillsToLearn = () => (
+  <Layout>
+    <Column width='100%'>
+      <Box width={['320px', '320px', '100%']} justifyContent='center'>
+        <Layout display={['none', 'none', 'flex']}>
+          <SkillsList />
+        </Layout>
         <Layout display={['flex', 'flex', 'none']}>
-          <AskQuestions />
+          <SkillsList />
         </Layout>
-        <Layout flexBasis={30} flexShrink={0}>
-          <Background height='30px' />
-        </Layout>
-      </Column>
-    </Layout>
-  )
-}
+      </Box>
+      <Layout display={['flex', 'flex', 'none']}>
+        <AskQuestions />
+      </Layout>
+      <Layout flexBasis={30} flexShrink={0}>
+        <Container height='30px' />
+      </Layout>
+    </Column>
+  </Layout>
+)
 
 export { SkillsToLearn }
