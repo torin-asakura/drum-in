@@ -6,6 +6,7 @@ import { Column }     from '@ui/layout'
 import { Layout }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { ImageBlock } from '@ui/image'
+import { Container }    from './container'
 
 import { GenreList }  from './genre-list'
 
@@ -17,15 +18,27 @@ const Portfolio: FC = () => (
           <Layout flexBasis={65} flexShrink={0} />
           <Column alignItems='center'>
             <Layout flexBasis={70} />
-            <Box width='355px' height='64px' backgroundColor='dullRed' />
+            <Layout width='500px' flexBasis={60} justifyContent='center'>
+              <Layout width='375px' style={{ position: 'relative' }}>
+                <Container height='60px' />
+              </Layout>
+            </Layout>
             <Layout width='505px' height='392px'>
               <ImageBlock />
             </Layout>
-            <Box width='355px' height='74px' backgroundColor='dullRed' />
+            <Layout width='500px' flexBasis={60} justifyContent='center'>
+              <Layout width='375px' style={{ position: 'relative' }}>
+                <Container height='60px' />
+              </Layout>
+            </Layout>
             <Layout width='505px' height='392px'>
               <ImageBlock />
             </Layout>
-            <Box width='355px' height='45px' backgroundColor='dullRed' />
+            <Layout width='500px' flexBasis={60} justifyContent='center'>
+              <Layout width='375px' style={{ position: 'relative' }}>
+                <Container height='60px' />
+              </Layout>
+            </Layout>
           </Column>
           <Layout flexBasis={160} flexShrink={0} />
           <Column>

@@ -22,7 +22,7 @@ const SkillsToLearn = () => (
       <Layout display={['flex', 'flex', 'none']}>
         <AskQuestions />
       </Layout>
-      <Layout flexBasis={30} flexShrink={0}>
+      <Layout flexBasis={30} flexShrink={0} display={['flex', 'flex', 'none']}>
         <Container height='30px' />
       </Layout>
     </Column>
