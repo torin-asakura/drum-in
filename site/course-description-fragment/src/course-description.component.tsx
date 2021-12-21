@@ -30,12 +30,13 @@ const CourseDescription: FC = () => {
             <Row>
               <Column width='100%'>
                 <Layout flexBasis={[25, 25, 53]} />
-                <Layout display={['flex', 'flex', 'none']}>
-                  <CourseContent mobile={true} />
-                </Layout>
                 <Layout display={['none', 'none', 'flex']}>
-                  <CourseContent mobile={false} />
+                  <Text fontSize='big' color='white' fontWeight='normal' lineHeight='regular'>
+                    {intl.formatMessage(messages.onlineCourse)}
+                  </Text>
                 </Layout>
+                <Layout flexBasis={[30, 30, 39]} />
+                <CourseContent mobile={false} />
                 <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
                 <Layout display={['none', 'none', 'flex']}>
                   <Text

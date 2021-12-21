@@ -1,14 +1,15 @@
-import React          from 'react'
-import { FC }         from 'react'
+import React                    from 'react'
+import { FC }                   from 'react'
 
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { ImageBlock } from '@ui/image'
+import { Box }                  from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Layout }               from '@ui/layout'
+import { Row }                  from '@ui/layout'
+import { ImageBlock }           from '@ui/image'
 
-import { Container }  from './container'
-import { GenreList }  from './genre-list'
+import { Container }            from './container'
+import { GenreList }            from './genre-list'
+import { ContainerMobileSized } from './mobile-sized-container'
 
 const Portfolio: FC = () => (
   <Box width='100%' height='1100px' display={['none', 'none', 'flex']} justifyContent='center'>
@@ -19,25 +20,25 @@ const Portfolio: FC = () => (
           <Column alignItems='center'>
             <Layout flexBasis={70} />
             <Layout width='500px' flexBasis={60} justifyContent='center'>
-              <Layout width='375px' style={{ position: 'relative' }}>
+              <ContainerMobileSized width='375px'>
                 <Container height='60px' />
-              </Layout>
+              </ContainerMobileSized>
             </Layout>
             <Layout width='505px' height='392px'>
               <ImageBlock />
             </Layout>
             <Layout width='500px' flexBasis={60} justifyContent='center'>
-              <Layout width='375px' style={{ position: 'relative' }}>
+              <ContainerMobileSized width='375px'>
                 <Container height='60px' />
-              </Layout>
+              </ContainerMobileSized>
             </Layout>
             <Layout width='505px' height='392px'>
               <ImageBlock />
             </Layout>
             <Layout width='500px' flexBasis={60} justifyContent='center'>
-              <Layout width='375px' style={{ position: 'relative' }}>
+              <ContainerMobileSized width='375px'>
                 <Container height='60px' />
-              </Layout>
+              </ContainerMobileSized>
             </Layout>
           </Column>
           <Layout flexBasis={160} flexShrink={0} />

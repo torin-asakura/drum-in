@@ -9,7 +9,7 @@ import { ContainerProps } from './container.interface'
 
 const Container: FC<ContainerProps> = ({ children, height }) => (
   <Row>
-    <Layout style={{ zIndex: 1 }}>{children}</Layout>
+    <Layout>{children}</Layout>
     <Line height={height} />
   </Row>
 )

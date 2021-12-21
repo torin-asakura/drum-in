@@ -1,12 +1,13 @@
-import React            from 'react'
+import React                    from 'react'
 
-import { Box }          from '@ui/layout'
-import { Column }       from '@ui/layout'
-import { Layout }       from '@ui/layout'
+import { Box }                  from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Layout }               from '@ui/layout'
 
-import { SkillsList }   from './skills-list'
-import { AskQuestions } from './ask-questions'
-import { Container }    from './container'
+import { SkillsList }           from './skills-list'
+import { AskQuestions }         from './ask-questions'
+import { Container }            from './container'
+import { ContainerMobileSized } from './mobile-sized-container'
 
 const SkillsToLearn = () => (
   <Layout>
@@ -22,14 +23,10 @@ const SkillsToLearn = () => (
       <Layout display={['flex', 'flex', 'none']}>
         <AskQuestions />
       </Layout>
-      <Layout
-        width='320px'
-        flexBasis={30}
-        flexShrink={0}
-        display={['flex', 'flex', 'none']}
-        style={{ position: 'relative' }}
-      >
-        <Container height='30px' />
+      <Layout flexBasis={30} flexShrink={0} display={['flex', 'flex', 'none']}>
+        <ContainerMobileSized width='320px'>
+          <Container height='30px' />
+        </ContainerMobileSized>
       </Layout>
     </Column>
   </Layout>
