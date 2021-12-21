@@ -1,16 +1,17 @@
-import React          from 'react'
-import { FC }         from 'react'
-import { useIntl }    from 'react-intl'
+import React             from 'react'
+import { FC }            from 'react'
+import { useIntl }       from 'react-intl'
 
-import { Box }        from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Button }     from '@ui/button'
-import { Text }       from '@ui/text'
-import { ImageBlock } from '@ui/image'
+import { Box }           from '@ui/layout'
+import { Row }           from '@ui/layout'
+import { Column }        from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Button }        from '@ui/button'
+import { Text }          from '@ui/text'
+import { ImageBlock }    from '@ui/image'
 
-import messages       from './messages'
+import messages          from './messages'
+import { CourseContent } from './course-description-content'
 
 const CourseDescription: FC = () => {
   const intl = useIntl()
@@ -29,43 +30,13 @@ const CourseDescription: FC = () => {
             <Row>
               <Column width='100%'>
                 <Layout flexBasis={[25, 25, 53]} />
-                <Layout display={['none', 'none', 'flex']}>
-                  <Text color='white' fontWeight='normal' fontSize='big' lineHeight='regular'>
-                    {intl.formatMessage(messages.onlineCourse)}
-                  </Text>
-                </Layout>
-                <Layout flexBasis={30} flexShrink={0} />
-                <Layout display={['none', 'none', 'flex']}>
-                  <Text fontSize='large' color='white' fontWeight='bold' lineHeight='regular'>
-                    {intl.formatMessage(messages.courseName)}
-                  </Text>
-                </Layout>
                 <Layout display={['flex', 'flex', 'none']}>
-                  <Text color='white'> {intl.formatMessage(messages.courseNameMobile)} </Text>
+                  <CourseContent mobile={true} />
                 </Layout>
-                <Layout flexBasis={[30, 30, 39]} />
                 <Layout display={['none', 'none', 'flex']}>
-                  <Text color='white' fontWeight='semiBold' lineHeight='large' fontSize='normal'>
-                    {intl.formatMessage(messages.courseDescriptionContent)}
-                  </Text>
+                  <CourseContent mobile={false} />
                 </Layout>
-                <Layout display={['flex', 'flex', 'none']}>
-                  <Text color='white' fontSize='mini' fontWeight='normal' lineHeight='large'>
-                    {intl.formatMessage(messages.courseDescriptionMobile)}
-                  </Text>
-                </Layout>
-                <Layout flexBasis={24} flexShrink={0} display={['flex', 'flex', 'none']} />
-                <Row justifyContent='center' display={['flex', 'flex', 'none']}>
-                  <Layout>
-                    <Box width='3px' height='3px' border='1px solid black' borderRadius={50} />
-                  </Layout>
-                  <Layout flexBasis={10} flexShrink={0} />
-                  <Layout>
-                    <Box width='3px' height='3px' border='1px solid black' borderRadius={50} />
-                  </Layout>
-                </Row>
                 <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
-                <Layout flexBasis={70} display={['none', 'none', 'flex']} />
                 <Layout display={['none', 'none', 'flex']}>
                   <Text
                     style={{ textDecoration: 'underline' }}

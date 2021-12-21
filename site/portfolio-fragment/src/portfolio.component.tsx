@@ -6,8 +6,8 @@ import { Column }     from '@ui/layout'
 import { Layout }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { ImageBlock } from '@ui/image'
-import { Container }    from './container'
 
+import { Container }  from './container'
 import { GenreList }  from './genre-list'
 
 const Portfolio: FC = () => (

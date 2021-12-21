@@ -94,9 +94,11 @@ const SkillsList: FC = () => {
       <Column display={['flex', 'flex', 'none']}>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <Container height={['905px', '905px', '0px']}>
-            <Skills items={before} />
-          </Container>
+          <Layout width='320px' style={{ position: 'relative' }}>
+            <Container height={['905px', '905px', '0px']}>
+              <Skills items={before} />
+            </Container>
+          </Layout>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
@@ -104,7 +106,7 @@ const SkillsList: FC = () => {
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <Layout flexBasis={900}>
+          <Layout width='320px' style={{ position: 'relative' }}>
             <Container height={['925px', '925px', '0px']}>
               <Skills items={before} />
             </Container>
@@ -117,7 +119,7 @@ const SkillsList: FC = () => {
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <Layout flexBasis={900}>
+          <Layout width='320px' style={{ position: 'relative' }}>
             <Container height={['925px', '925px', '0px']}>
               <Skills items={before} />
             </Container>
@@ -127,7 +129,7 @@ const SkillsList: FC = () => {
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
           <ImageBlock />
         </Layout>
-        <Layout flexBasis={30} flexShrink={0}>
+        <Layout width='320px' flexBasis={30} flexShrink={0} style={{ position: 'relative' }}>
           <Container height='30px' />
         </Layout>
       </Column>

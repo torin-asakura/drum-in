@@ -22,7 +22,13 @@ const SkillsToLearn = () => (
       <Layout display={['flex', 'flex', 'none']}>
         <AskQuestions />
       </Layout>
-      <Layout flexBasis={30} flexShrink={0} display={['flex', 'flex', 'none']}>
+      <Layout
+        width='320px'
+        flexBasis={30}
+        flexShrink={0}
+        display={['flex', 'flex', 'none']}
+        style={{ position: 'relative' }}
+      >
         <Container height='30px' />
       </Layout>
     </Column>

@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@ui/button": "workspace:ui/button",
+    "@ui/condition": "workspace:ui/condition",
     "@ui/image": "workspace:ui/image",
     "@ui/input": "workspace:ui/input",
     "@ui/layout": "workspace:ui/layout",

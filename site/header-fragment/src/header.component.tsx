@@ -49,9 +49,11 @@ const Header: FC = () => (
       <Layout flexBasis={120} flexShrink={0} />
     </Layout>
     <Row display={['flex', 'flex', 'none']} justifyContent='center'>
-      <Container height={['355px', '355px', '285px']}>
-        <MobileText />
-      </Container>
+      <Layout width='320px' style={{ position: 'relative' }}>
+        <Container height={['355px', '355px', '285px']}>
+          <MobileText />
+        </Container>
+      </Layout>
     </Row>
   </Box>
 )

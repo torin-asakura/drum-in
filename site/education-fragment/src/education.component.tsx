@@ -1,15 +1,17 @@
-import React          from 'react'
-import { FC }         from 'react'
-import { useIntl }    from 'react-intl'
+import React                from 'react'
+import { FC }               from 'react'
+import { useIntl }          from 'react-intl'
 
-import { Box }        from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { ImageBlock } from '@ui/image'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Text }             from '@ui/text'
+import { ImageBlock }       from '@ui/image'
 
-import messages       from './messages'
+import messages             from './messages'
+import { EducationContent } from './education-content'
+import { ExperienceMobile } from './experience-mobile'
 
 const Education: FC = () => {
   const intl = useIntl()
@@ -27,23 +29,7 @@ const Education: FC = () => {
                 </Text>
               </Layout>
               <Layout flexBasis={50} />
-              <Layout>
-                <Text color='dullBlack' fontSize='normal' fontWeight='normal' lineHeight='normal'>
-                  {intl.formatMessage(messages.drumClass)}
-                </Text>
-              </Layout>
-              <Layout flexBasis={25} />
-              <Layout>
-                <Text color='dullBlack' fontSize='normal' fontWeight='normal' lineHeight='normal'>
-                  {intl.formatMessage(messages.drumWorkshop)}
-                </Text>
-              </Layout>
-              <Layout flexBasis={25} />
-              <Layout>
-                <Text color='dullBlack' fontSize='normal' fontWeight='normal' lineHeight='normal'>
-                  {intl.formatMessage(messages.maimonid)}
-                </Text>
-              </Layout>
+              <EducationContent />
             </Column>
             <Layout flexBasis={118} flexShrink={0} />
             <Layout width='538px' height='364px'>
@@ -65,23 +51,7 @@ const Education: FC = () => {
               </Text>
             </Layout>
             <Layout flexBasis={12} />
-            <Layout>
-              <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.drumClass)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={25} />
-            <Layout>
-              <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.drumWorkshop)}
-              </Text>
-            </Layout>
-            <Layout flexBasis={25} />
-            <Layout>
-              <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.maimonid)}
-              </Text>
-            </Layout>
+            <EducationContent />
             <Layout flexBasis={20} />
           </Column>
           <Layout flexBasis={44} flexShrink={0} />
@@ -93,26 +63,7 @@ const Education: FC = () => {
         <Row justifyContent='center'>
           <Layout flexBasis={44} flexShrink={0} />
           <Column>
-            <Layout>
-              <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.experienceHeader)}
-              </Text>
-            </Layout>
-            <Layout>
-              <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.firstAlbum)}
-              </Text>
-            </Layout>
-            <Layout>
-              <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.concerts)}
-              </Text>
-            </Layout>
-            <Layout>
-              <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
-                {intl.formatMessage(messages.orchestra)}
-              </Text>
-            </Layout>
+            <ExperienceMobile />
           </Column>
           <Layout flexBasis={44} flexShrink={0} />
         </Row>

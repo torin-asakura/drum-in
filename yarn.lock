@@ -2037,6 +2037,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/styled-system": ^5
     "@ui/button": "workspace:ui/button"
+    "@ui/condition": "workspace:ui/condition"
     "@ui/image": "workspace:ui/image"
     "@ui/input": "workspace:ui/input"
     "@ui/layout": "workspace:ui/layout"
