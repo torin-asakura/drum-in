@@ -11,6 +11,10 @@ export default defineMessages({
     id: `${name}.instructor_name`,
     defaultMessage: 'ЧУПРИКОВА МАРИНА',
   },
+  instructorNameMobile: {
+    id: `${name}.instructor_name_mobile`,
+    defaultMessage: 'ЧУПРИКОВА МАРИНА',
+  },
   whatsUp: {
     id: `${name}.whats_up`,
     defaultMessage: 'НАПИСАТЬ В WHATSAPP',

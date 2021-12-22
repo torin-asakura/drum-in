@@ -23,6 +23,7 @@
     "@monstrs/next-app-with-intl": "^0.3.13",
     "@monstrs/react-locale": "^0.1.0",
     "@site/index-page": "workspace:site/index-page",
+    "@ui/line": "workspace:ui/line",
     "@ui/theme": "workspace:ui/theme",
     "events": "^3.3.0",
     "express": "^4.17.1",

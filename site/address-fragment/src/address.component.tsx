@@ -91,7 +91,13 @@ const Address = () => {
               </Layout>
               <Layout flexBasis={25} flexShrink={0} />
               <Layout>
-                <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
+                <Text
+                  color='white'
+                  whiteSpace='nowrap'
+                  fontSize='large'
+                  fontWeight='normal'
+                  lineHeight='semiSmall'
+                >
                   {intl.formatMessage(messages.addressLaneMobule)}
                 </Text>
               </Layout>

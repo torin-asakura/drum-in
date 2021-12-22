@@ -1,28 +1,23 @@
-import React       from 'react'
-import { FC }      from 'react'
-import { useIntl } from 'react-intl'
+import React         from 'react'
+import { FC }        from 'react'
+import { useIntl }   from 'react-intl'
 
-import { Box }     from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Button }  from '@ui/button'
-import { Text }    from '@ui/text'
+import { Box }       from '@ui/layout'
+import { Row }       from '@ui/layout'
+import { Column }    from '@ui/layout'
+import { Layout }    from '@ui/layout'
+import { Button }    from '@ui/button'
+import { Text }      from '@ui/text'
 
-import messages    from './messages'
+import { Container } from './container'
+import messages      from './messages'
 
 const IndividualLessons: FC = () => {
   const intl = useIntl()
   return (
     <Layout width='100%'>
       <Column width='100%' alignItems='center'>
-        <Box
-          width={['320px', '320px', '100%']}
-          height={['290px', '290px', '581px']}
-          backgroundColor='dullBlack'
-          justifyContent='center'
-          zIndex={1}
-        >
+        <Container>
           <Layout width='1440px' display={['none', 'none', 'flex']}>
             <Row justifyContent='center'>
               <Layout flexBasis={138} flexShrink={0} />
@@ -92,7 +87,7 @@ const IndividualLessons: FC = () => {
             </Box>
             <Layout flexBasis={60} display={['none', 'none', 'flex']} />
           </Column>
-        </Box>
+        </Container>
         <Layout flexBasis={50} display={['flex', 'flex', 'none']} />
         <Layout display={['flex', 'flex', 'none']}>
           <Button size='normal' width='240px'>

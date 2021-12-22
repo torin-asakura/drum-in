@@ -36,11 +36,11 @@ const CourseDescription: FC = () => {
                   </Text>
                 </Layout>
                 <Layout flexBasis={[30, 30, 39]} />
-                <CourseContent mobile={false} />
+                <CourseContent />
                 <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
                 <Layout display={['none', 'none', 'flex']}>
                   <Text
-                    style={{ textDecoration: 'underline' }}
+                    textDecoration='underline'
                     color='dullRed'
                     fontWeight='bold'
                     fontSize='huge'

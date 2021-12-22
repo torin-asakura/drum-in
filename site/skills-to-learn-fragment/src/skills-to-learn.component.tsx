@@ -1,16 +1,15 @@
-import React                    from 'react'
+import React            from 'react'
 
-import { Box }                  from '@ui/layout'
-import { Column }               from '@ui/layout'
-import { Layout }               from '@ui/layout'
+import { Box }          from '@ui/layout'
+import { Column }       from '@ui/layout'
+import { Layout }       from '@ui/layout'
+import { Line }         from '@ui/line'
 
-import { SkillsList }           from './skills-list'
-import { AskQuestions }         from './ask-questions'
-import { Container }            from './container'
-import { ContainerMobileSized } from './mobile-sized-container'
+import { SkillsList }   from './skills-list'
+import { AskQuestions } from './ask-questions'
 
 const SkillsToLearn = () => (
-  <Layout>
+  <Layout style={{ position: 'relative' }}>
     <Column width='100%'>
       <Box width={['320px', '320px', '100%']} justifyContent='center'>
         <Layout display={['none', 'none', 'flex']}>
@@ -24,9 +23,7 @@ const SkillsToLearn = () => (
         <AskQuestions />
       </Layout>
       <Layout flexBasis={30} flexShrink={0} display={['flex', 'flex', 'none']}>
-        <ContainerMobileSized width='320px'>
-          <Container height='30px' />
-        </ContainerMobileSized>
+        <Line height='30px' />
       </Layout>
     </Column>
   </Layout>

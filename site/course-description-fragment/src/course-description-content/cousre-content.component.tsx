@@ -1,27 +1,17 @@
-import React                  from 'react'
-import { FC }                 from 'react'
-import { useIntl }            from 'react-intl'
+import React       from 'react'
+import { FC }      from 'react'
+import { useIntl } from 'react-intl'
 
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
-import { Condition }          from '@ui/condition'
+import { Column }  from '@ui/layout'
+import { Layout }  from '@ui/layout'
+import { Text }    from '@ui/text'
 
-import messages               from '../messages'
-import { CourseContentProps } from './course-content.interface'
+import messages    from '../messages'
 
-const CourseContent: FC<CourseContentProps> = ({ mobile }) => {
+const CourseContent: FC = () => {
   const intl = useIntl()
-  const content = [
-    messages.courseName,
-    messages.courseDescriptionContent,
-    messages.courseNameMobile,
-    messages.courseDescriptionMobile,
-  ]
-
   return (
-    <Column alignItems='center'>
+    <Column>
       <Layout display={['flex', 'flex', 'none']}>
         <Text fontSize='small' color='white' fontWeight='bold' lineHeight='semiRegular'>
           {intl.formatMessage(messages.courseNameMobile)}

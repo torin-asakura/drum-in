@@ -1,15 +1,14 @@
-import React                    from 'react'
-import { FC }                   from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { Column }               from '@ui/layout'
-import { Layout }               from '@ui/layout'
-import { Row }                  from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
 
-import { ImageBlock }           from '../image-block'
+import { ImageBlock }        from '../image-block'
 
-import { Skills }               from '../skills'
-import { Container }            from '../container'
-import { ContainerMobileSized } from '../mobile-sized-container'
+import { Skills }            from '../skills'
+import { ContainerRelative } from '../container-relative'
 
 const SkillsList: FC = () => {
   const before = {
@@ -50,38 +49,14 @@ const SkillsList: FC = () => {
             </Column>
             <Layout flexBasis={55} flexShrink={0} />
             <Column width='100%'>
-              <Layout width='500px' flexBasis={60} justifyContent='center'>
-                <ContainerMobileSized width='375px'>
-                  <Container height='60px' />
-                </ContainerMobileSized>
-              </Layout>
-              <Layout width='490px' height='500px'>
-                <ImageBlock />
-              </Layout>
-              <Layout width='500px' flexBasis={60} justifyContent='center'>
-                <ContainerMobileSized width='375px'>
-                  <Container height='60px' />
-                </ContainerMobileSized>
-              </Layout>
+              <ImageBlock stripes={true} />
             </Column>
           </Layout>
         </Layout>
         <Layout width='1440px' display={['none', 'none', 'flex']}>
           <Layout>
             <Column width='100%' alignItems='center'>
-              <Layout width='500px' flexBasis={60} justifyContent='center'>
-                <ContainerMobileSized width='375px'>
-                  <Container height='60px' />
-                </ContainerMobileSized>
-              </Layout>
-              <Layout width='490px' height='500px'>
-                <ImageBlock />
-              </Layout>
-              <Layout width='500px' flexBasis={60} justifyContent='center'>
-                <ContainerMobileSized width='375px'>
-                  <Container height='60px' />
-                </ContainerMobileSized>
-              </Layout>
+              <ImageBlock stripes={true} />
             </Column>
             <Layout flexBasis={140} flexShrink={0} />
             <Column width='100%'>
@@ -95,11 +70,9 @@ const SkillsList: FC = () => {
       <Column display={['flex', 'flex', 'none']}>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <ContainerMobileSized width='320px'>
-            <Container height={['905px', '905px', '0px']}>
-              <Skills items={before} />
-            </Container>
-          </ContainerMobileSized>
+          <ContainerRelative height={['905px', '905px', '0px']}>
+            <Skills items={before} />
+          </ContainerRelative>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
@@ -107,11 +80,9 @@ const SkillsList: FC = () => {
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <ContainerMobileSized width='320px'>
-            <Container height={['925px', '925px', '0px']}>
-              <Skills items={before} />
-            </Container>
-          </ContainerMobileSized>
+          <ContainerRelative height={['925px', '925px', '0px']}>
+            <Skills items={before} />
+          </ContainerRelative>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout flexBasis={20} flexShrink={0} />
@@ -120,19 +91,15 @@ const SkillsList: FC = () => {
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
-          <ContainerMobileSized width='320px'>
-            <Container height={['925px', '925px', '0px']}>
-              <Skills items={before} />
-            </Container>
-          </ContainerMobileSized>
+          <ContainerRelative height={['925px', '925px', '0px']}>
+            <Skills items={before} />
+          </ContainerRelative>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
           <ImageBlock />
         </Layout>
-        <ContainerMobileSized width='320px'>
-          <Container height='30px' />
-        </ContainerMobileSized>
+        <ContainerRelative height='30px' />
       </Column>
     </>
   )
