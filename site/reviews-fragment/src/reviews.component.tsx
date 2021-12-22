@@ -44,11 +44,14 @@ const Reviews: FC = () => {
         <Layout flexBasis={10} />
         <Column width='100%'>
           <Layout flexBasis={15} />
-          <Layout>
-            <Text color='black' fontWeight='bold' fontSize='small' lineHeight='normal'>
-              {intl.formatMessage(messages.reviews)}
-            </Text>
-          </Layout>
+          <Row>
+            <Layout flexBasis={35} flexShrink={0} />
+            <Layout>
+              <Text color='black' fontWeight='bold' fontSize='small' lineHeight='normal'>
+                {intl.formatMessage(messages.reviews)}
+              </Text>
+            </Layout>
+          </Row>
           <Layout flexBasis={15} />
           <Layout width={300} height={160}>
             youtube player

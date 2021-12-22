@@ -32,7 +32,7 @@ const Education: FC = () => {
               <EducationContent />
             </Column>
             <Layout flexBasis={118} flexShrink={0} />
-            <Layout width='538px' height='364px'>
+            <Layout width='538px' height='364px' flexShrink={0}>
               <ImageBlock />
             </Layout>
             <Layout flexBasis={74} flexShrink={0} />

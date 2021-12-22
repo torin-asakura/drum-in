@@ -15,7 +15,7 @@ import messages       from './messages'
 const Footer: FC = () => {
   const intl = useIntl()
   return (
-    <Layout width={['320px', '320px', '100%']} height={['400px', '400px', '570px']}>
+    <Layout width={['320px', '320px', '100%']} height={['400px', '400px', '252px']}>
       <Box
         width='100%'
         height='100%'
@@ -26,7 +26,7 @@ const Footer: FC = () => {
         <Layout width='1440px'>
           <Row>
             <Layout flexBasis='138px' flexShrink={0} />
-            <Column>
+            <Column width='100%'>
               <Layout flexBasis={60} />
               <Layout>
                 <Text color='white' fontWeight='bold' fontSize='large' lineHeight='semiNormal'>
@@ -36,7 +36,7 @@ const Footer: FC = () => {
               <Layout flexBasis={56} />
               <Row>
                 <Layout width='48px' height='48px'>
-                  <ImageBlock />
+                  <ImageBlock/>
                 </Layout>
                 <Layout flexBasis={103} flexShrink={0} />
                 <Layout width='48px' height='48px'>
@@ -83,7 +83,7 @@ const Footer: FC = () => {
           <Layout flexBasis={50} />
           <Row justifyContent='center'>
             <Layout width='48px' height='48px'>
-              <ImageBlock />
+              <ImageBlock  />
             </Layout>
             <Layout flexBasis={100} flexShrink={0} />
             <Layout width='48px' height='48px'>

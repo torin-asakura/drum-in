@@ -11,7 +11,7 @@ import messages    from '../messages'
 const CourseContent: FC = () => {
   const intl = useIntl()
   return (
-    <Column>
+    <Column alignItems={['center', 'center', 'flex-start']}>
       <Layout display={['flex', 'flex', 'none']}>
         <Text fontSize='small' color='white' fontWeight='bold' lineHeight='semiRegular'>
           {intl.formatMessage(messages.courseNameMobile)}
