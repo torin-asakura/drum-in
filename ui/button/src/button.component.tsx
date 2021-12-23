@@ -9,12 +9,10 @@ import { shapeStyles }      from './button.styles'
 import { appearanceStyles } from './button.styles'
 import { ButtonProps }      from './button.interface'
 
-export const ButtonElement = styled.button<any>(
+export const Button = styled.button<ButtonProps>(
   baseStyles,
   shapeStyles,
   appearanceStyles,
   layout,
   space
 )
-
-export const Button: FC<ButtonProps> = ({ ...props }) => <ButtonElement {...props} />

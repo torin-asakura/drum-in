@@ -1,23 +1,19 @@
-import { CSSObject }              from '@emotion/css'
 import { createBaseStyles }       from '@atls-ui-parts/button'
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { createShapeStyles }      from '@atls-ui-parts/button'
+import { combine } from '@atls-ui-parts/styles'
+import { prop } from 'styled-tools'
+import { switchProp } from 'styled-tools'
 
 export const baseStyles = createBaseStyles()
 
-export const baseSelectStyles: CSSObject = {
-  position: 'relative',
-  width: '100%',
-  justifyContent: 'flex-start',
-}
-
-export const appearanceStyles = createAppearanceStyles({
+export const primaryAppearanceStyles = createAppearanceStyles({
   fontColor: ({ theme }) =>  theme.colors.dullRed,
   backgroundColor: ({ theme }) => theme.colors.dullRed,
   borderColor: ({ theme }) => theme.colors.dullRed,
 })
 
-export const hoverAppearanceStyles = (props) => ({
+export const primaryHoverAppearanceStyles = (props) => ({
   '&:hover': createAppearanceStyles({
     fontColor: ({ theme }) =>
    theme.colors.dullRed,
@@ -26,10 +22,15 @@ export const hoverAppearanceStyles = (props) => ({
   })(props),
 })
 
-export const shapeStyles = createShapeStyles({
+export const normalSizeStyles = createShapeStyles({
   size: 56,
   fontSize: ({ theme }) => theme.fontSizes.default,
-  rounding: (({ theme }) => theme.radii.intermediate) as any,
-  paddingLeft: 16,
-  paddingRight: 16,
+})
+
+export const appearanceStyles = switchProp(prop('variant', 'primary'), {
+  primary: combine(primaryAppearanceStyles, primaryHoverAppearanceStyles)
+})
+
+export const shapeStyles = switchProp(prop('size', 'normal'), {
+  normal: normalSizeStyles
 })
