@@ -24,7 +24,13 @@ const GenreList: FC = () => {
       {genres.map((item) => (
         <>
           <Layout>
-            <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
+            <Text
+              color='dullBlack'
+              fontWeight='normal'
+              fontSize='normal'
+              lineHeight='normal'
+              textAlign='justify'
+            >
               {item}
             </Text>
           </Layout>

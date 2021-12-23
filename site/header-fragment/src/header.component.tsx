@@ -33,15 +33,16 @@ const Header: FC = () => {
       justifyContent='center'
     >
       <Layout width='1440px' display={['none', 'none', 'flex']}>
+        <Layout flexBasis={20} flexShrink={0} />
         <Layout width='214px' height='216px' flexShrink={0}>
           <ImageBlock />
         </Layout>
         <Layout flexBasis={22} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={60} flexShrink={0} />
-          <Row>
+          <Layout width='450px'>
             <ContentRender array={textDesktop} />
-          </Row>
+          </Layout>
           <Layout flexBasis={18} />
           <Layout width='300px' overflow='visible' style={{ zIndex: 1 }}>
             <Navigation />
@@ -79,7 +80,8 @@ const Header: FC = () => {
                     color='dullBlack'
                     fontSize='small'
                     fontWeight='bold'
-                    lineHeight='semiNormal'
+                    lineHeight='semiSmall'
+                    letterSpacing='0.15em'
                   >
                     {phoneNumber}
                   </Text>
@@ -98,6 +100,7 @@ const Header: FC = () => {
                         fontSize='small'
                         lineHeight='semiSmall'
                         fontWeight='normal'
+                        letterSpacing='0.15em'
                       >
                         {intl.formatMessage(item)}
                       </Text>

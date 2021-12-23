@@ -37,7 +37,7 @@ const Address = () => {
                     <Text
                       color='white'
                       fontWeight='semiBold'
-                      fontSize='big'
+                      fontSize='large'
                       lineHeight='semiNormal'
                     >
                       {intl.formatMessage(messages.addressCity)}
@@ -48,7 +48,7 @@ const Address = () => {
                     <Text
                       color='white'
                       fontWeight='semiBold'
-                      fontSize='big'
+                      fontSize='large'
                       lineHeight='semiNormal'
                     >
                       {intl.formatMessage(messages.addressStreet)}
@@ -69,23 +69,23 @@ const Address = () => {
       <Layout display={['flex', 'flex', 'none']} width='320px'>
         <Column width='100%'>
           <Box backgroundColor='dullBlack' width='320' height='160px'>
-            <Layout flexBasis={40} />
+            <Layout flexBasis={40} flexShrink={0} />
             <Column width='100%'>
               <Layout flexBasis={25} />
               <Layout>
-                <Text color='white' fontSize='large' fontWeight='bold'>
+                <Text color='white' fontSize='small' lineHeight='semiSmall' fontWeight='bold'>
                   {intl.formatMessage(messages.addressHeaderMobile)}
                 </Text>
               </Layout>
               <Layout flexBasis={25} flexShrink={0} />
               <Layout>
-                <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
+                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='semiSmall'>
                   {intl.formatMessage(messages.addressMobile)}
                 </Text>
               </Layout>
               <Layout flexBasis={25} flexShrink={0} />
               <Layout>
-                <Text color='white' fontSize='large' fontWeight='normal' lineHeight='semiSmall'>
+                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='semiSmall'>
                   {intl.formatMessage(messages.addressStreetMobile)}
                 </Text>
               </Layout>
@@ -94,7 +94,7 @@ const Address = () => {
                 <Text
                   color='white'
                   whiteSpace='nowrap'
-                  fontSize='large'
+                  fontSize='small'
                   fontWeight='normal'
                   lineHeight='semiSmall'
                 >
@@ -103,9 +103,9 @@ const Address = () => {
               </Layout>
               <Layout flexBasis={25} />
             </Column>
-            <Layout flexBasis={20} />
+            <Layout flexBasis={20} flexShrink={0} />
           </Box>
-          <Layout>yandex map</Layout>
+          <Layout height='183px'>yandex map</Layout>
         </Column>
       </Layout>
     </>

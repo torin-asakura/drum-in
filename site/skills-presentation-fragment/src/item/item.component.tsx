@@ -13,13 +13,14 @@ const Item = ({ item }) => (
         <ImageBlock />
       </Layout>
       <Layout flexBasis={36} />
-      <Layout width='320px' height='25px'>
+      <Layout width='365px' height='25px'>
         <Text
           textAlign='center'
           color='dullBlack'
           fontWeight='normal'
           lineHeight='semiRegular'
           fontSize='normal'
+          letterSpacing='0.15em'
         >
           {item}
         </Text>
@@ -30,8 +31,14 @@ const Item = ({ item }) => (
         <ImageBlock />
       </Layout>
       <Layout flexBasis={18} />
-      <Layout width={['200px', '200px', '320px']} height='25px' justifyContent='center'>
-        <Text color='dullBlack' fontWeight='normal' lineHeight='semiSmall' fontSize='small'>
+      <Layout width={['265px', '265px', '320px']} height='25px' justifyContent='center'>
+        <Text
+          color='dullBlack'
+          fontWeight='normal'
+          lineHeight='semiSmall'
+          fontSize='small'
+          letterSpacing='0.15em'
+        >
           {item}
         </Text>
       </Layout>

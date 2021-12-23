@@ -16,7 +16,13 @@ const EducationContent: FC = () => {
       {content.map((item) => (
         <>
           <Layout>
-            <Text color='dullBlack' fontSize='normal' fontWeight='normal' lineHeight='normal'>
+            <Text
+              color='dullBlack'
+              fontSize={['regular', 'regular', 'normal']}
+              fontWeight='normal'
+              lineHeight='normal'
+              textAlign='justify'
+            >
               {intl.formatMessage(item)}
             </Text>
           </Layout>

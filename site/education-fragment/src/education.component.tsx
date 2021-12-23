@@ -11,7 +11,7 @@ import { ImageBlock }       from '@ui/image'
 
 import messages             from './messages'
 import { EducationContent } from './education-content'
-import { ExperienceMobile } from './experience-mobile'
+import { Experience }       from './experience'
 
 const Education: FC = () => {
   const intl = useIntl()
@@ -63,7 +63,7 @@ const Education: FC = () => {
         <Row justifyContent='center'>
           <Layout flexBasis={44} flexShrink={0} />
           <Column>
-            <ExperienceMobile />
+            <Experience />
           </Column>
           <Layout flexBasis={44} flexShrink={0} />
         </Row>

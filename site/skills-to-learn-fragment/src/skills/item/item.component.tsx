@@ -15,9 +15,9 @@ const Item: FC<ItemProps> = ({ header, content }) => (
       <Layout>
         <Text
           color='dullBlack'
-          fontsize={['small', 'small', 'big']}
+          fontSize={['small', 'small', 'big']}
           fontWeight='bold'
-          lineHeight={['normal', 'normal', 'large']}
+          lineHeight={['normal', 'normal', 'normal']}
         >
           {header}
         </Text>

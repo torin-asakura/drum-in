@@ -29,14 +29,20 @@ const Footer: FC = () => {
             <Column width='100%'>
               <Layout flexBasis={60} />
               <Layout>
-                <Text color='white' fontWeight='bold' fontSize='large' lineHeight='semiNormal'>
+                <Text
+                  color='white'
+                  fontWeight='bold'
+                  fontSize='large'
+                  lineHeight='semiNormal'
+                  letterSpacing='0.15em'
+                >
                   {intl.formatMessage(messages.whatsUp)}
                 </Text>
               </Layout>
               <Layout flexBasis={56} />
               <Row>
                 <Layout width='48px' height='48px'>
-                  <ImageBlock/>
+                  <ImageBlock />
                 </Layout>
                 <Layout flexBasis={103} flexShrink={0} />
                 <Layout width='48px' height='48px'>
@@ -68,7 +74,13 @@ const Footer: FC = () => {
           <Layout>
             <Button size='normal' width='240px'>
               <Layout>
-                <Text color='white' fontWeight='bold' fontSize='normal' lineHeight='semiRegular'>
+                <Text
+                  color='white'
+                  fontWeight='bold'
+                  fontSize='normal'
+                  lineHeight='semiRegular'
+                  letterSpacing='0.15em'
+                >
                   {intl.formatMessage(messages.signUp)}
                 </Text>
               </Layout>
@@ -76,14 +88,20 @@ const Footer: FC = () => {
           </Layout>
           <Layout flexBasis={30} />
           <Layout>
-            <Text color='white' fontWeight='bold' fontSize='regular' lineHeight='small'>
+            <Text
+              color='white'
+              fontWeight='bold'
+              fontSize='regular'
+              lineHeight='small'
+              letterSpacing='0.15em'
+            >
               {intl.formatMessage(messages.linkMobile)}
             </Text>
           </Layout>
           <Layout flexBasis={50} />
           <Row justifyContent='center'>
             <Layout width='48px' height='48px'>
-              <ImageBlock  />
+              <ImageBlock />
             </Layout>
             <Layout flexBasis={100} flexShrink={0} />
             <Layout width='48px' height='48px'>

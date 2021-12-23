@@ -14,7 +14,7 @@ const SkillsPresentation: FC = () => {
   const rythm = 'РАЗВИТИЕ ЧУВСТВА ВРЕМЕНИ'
   return (
     <Box width={['320px', '320px', '100%']} height={['1075px', '1075px', '585px']}>
-      <Layout flexBasis={70} flexShrink={0} />
+      <Layout flexBasis={40} flexShrink={0} />
       <Column width='100%'>
         <Layout justifyContent='center'>
           <Row display={['none', 'none', 'flex']} justifyContent='center'>

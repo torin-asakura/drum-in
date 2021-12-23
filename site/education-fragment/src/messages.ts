@@ -39,6 +39,6 @@ export default defineMessages({
   },
   link: {
     id: `${name}.link`,
-    defaultMessage: 'Читать далее',
+    defaultMessage: 'Читать далее...',
   },
 })

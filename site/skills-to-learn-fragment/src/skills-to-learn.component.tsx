@@ -19,6 +19,9 @@ const SkillsToLearn = () => (
           <SkillsList />
         </Layout>
       </Box>
+      <Layout flexBasis={30} flexShrink={0} display={['flex', 'flex', 'none']}>
+        <Line height='30px' />
+      </Layout>
       <Layout display={['flex', 'flex', 'none']}>
         <AskQuestions />
       </Layout>

@@ -26,7 +26,13 @@ const About = () => {
             </Layout>
             <Layout flexBasis={50} />
             <Layout>
-              <Text color='white' fontWeight='semiBold' fontSize='normal' lineHeight='large'>
+              <Text
+                color='white'
+                fontWeight='semiBold'
+                fontSize='normal'
+                lineHeight='large'
+                textAlign='justify'
+              >
                 {intl.formatMessage(messages.aboutContent)}
               </Text>
             </Layout>
@@ -55,13 +61,19 @@ const About = () => {
             </Layout>
             <Layout flexBasis={12} />
             <Layout>
-              <Text color='semiBlack' fontWeight='semiBold' lineHeight='normal' fontSize='regular'>
+              <Text color='dullBlack' fontWeight='semiBold' lineHeight='normal' fontSize='regular'>
                 {intl.formatMessage(messages.experience)}
               </Text>
             </Layout>
             <Layout flexBasis={40} />
             <Layout>
-              <Text color='semiBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
+              <Text
+                color='dullBlack'
+                lineHeight='normal'
+                fontWeight='normal'
+                fontSize='regular'
+                textAlign='justify'
+              >
                 {intl.formatMessage(messages.aboutContent)}
               </Text>
             </Layout>

@@ -3,7 +3,7 @@ import { FC }      from 'react'
 import { useIntl } from 'react-intl'
 
 import { Column }  from '@ui/layout'
-import { Row }       from '@ui/layout'
+import { Row }     from '@ui/layout'
 import { Layout }  from '@ui/layout'
 import { Text }    from '@ui/text'
 
@@ -18,7 +18,7 @@ const ContentRender: FC<string[]> = ({ array }) => {
           <Row justifyContent='flex-start'>
             <Layout flexBasis={15} />
             <Layout
-              width={['220px', '220px', '400px']}
+              width={['260px', '260px', '750px']}
               justifyContent={['center', 'center', 'flex-start']}
             >
               <Text
@@ -26,12 +26,13 @@ const ContentRender: FC<string[]> = ({ array }) => {
                 fontSize={['small', 'small', 'large']}
                 fontWeight='bold'
                 lineHeight={['semiSmall', 'semiSmall', 'semiNormal']}
+                letterSpacing='0.15em'
               >
                 {intl.formatMessage(item)}
               </Text>
             </Layout>
           </Row>
-          <Layout flexBasis={[14, 14, 20]} />
+          <Layout flexBasis={item === array[array.length - 1 - 1] ? [14, 14, 35] : [14, 14, 20]} />
         </>
       ))}
     </Column>

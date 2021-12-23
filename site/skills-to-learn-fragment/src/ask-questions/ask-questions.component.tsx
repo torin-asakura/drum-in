@@ -18,7 +18,13 @@ const AskQuestions = () => {
         <Layout flexBasis={30} flexShrink={0} />
         <Row>
           <Layout flexBasis={20} flexShrink={0} />
-          <Text color='white' fontSize='regular' lineHeight='large' fontWeight='semiBold'>
+          <Text
+            color='white'
+            fontSize='regular'
+            lineHeight='large'
+            fontWeight='semiBold'
+            textAlign='center'
+          >
             {intl.formatMessage(messages.courseTime)}
           </Text>
           <Layout flexBasis={20} flexShrink={0} />
@@ -27,7 +33,13 @@ const AskQuestions = () => {
         <Layout>
           <Button width='240px'>
             <Layout>
-              <Text color='white' fontSize='regular' fontWeight='bold' lineHeight='small'>
+              <Text
+                color='white'
+                fontSize='regular'
+                fontWeight='bold'
+                lineHeight='small'
+                letterSpacing='0.15em'
+              >
                 {intl.formatMessage(messages.askQuestion)}
               </Text>
             </Layout>

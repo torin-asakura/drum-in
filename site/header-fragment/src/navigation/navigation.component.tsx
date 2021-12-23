@@ -12,35 +12,63 @@ const Navigation = () => {
   const intl = useIntl()
   return (
     <Box
-      width='1015px'
+      width='995px'
       height='44px'
       flexShrink={0}
       alignItems='center'
       display={['none', 'none', 'flex']}
       backgroundColor='semiTransparent'
     >
+      <Layout flexBasis={11} flexShrink={0} />
       <Row justifyContent='center'>
-        <Layout flexBasis={11} />
         <Layout>
-          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+          <Text
+            color='black'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='regular'
+            letterSpacing='0.15em'
+            whiteSpace='nowrap'
+          >
             {intl.formatMessage(messages.rythm)}
           </Text>
         </Layout>
-        <Layout flexBasis={100} />
+        <Layout flexBasis={45} />
         <Layout>
-          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+          <Text
+            color='black'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='regular'
+            letterSpacing='0.15em'
+            whiteSpace='nowrap'
+          >
             {intl.formatMessage(messages.drum)}
           </Text>
         </Layout>
-        <Layout flexBasis={100} />
+        <Layout flexBasis={45} />
         <Layout>
-          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+          <Text
+            color='black'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='regular'
+            letterSpacing='0.15em'
+            whiteSpace='nowrap'
+          >
             {intl.formatMessage(messages.instructorAbout)}
           </Text>
         </Layout>
-        <Layout flexBasis={100} />
+        <Layout flexBasis={45} />
         <Layout>
-          <Text color='black' fontSize='big' fontWeight='normal' lineHeight='regular'>
+          <Text
+            color='black'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='regular'
+            letterSpacing='0.15em'
+            whiteSpace='nowrap'
+          >
             {intl.formatMessage(messages.reviews)}
           </Text>
         </Layout>

@@ -15,7 +15,7 @@ const Skills: FC<SkillsProps> = ({ items }) => (
       <Layout flexBasis={20} flexShrink={0} />
       {items.texts.map((item) => (
         <Row>
-          <Layout height={['20px', '20px', '30px']} alignItems='flex-end'>
+          <Layout height={['18px', '18px', '22px']} alignItems='flex-end'>
             <Box
               backgroundColor='dullRed'
               borderRadius='circle'

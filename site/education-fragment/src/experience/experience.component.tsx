@@ -8,7 +8,7 @@ import { Text }    from '@ui/text'
 
 import messages    from '../messages'
 
-const ExperienceMobile: FC = () => {
+const Experience: FC = () => {
   const intl = useIntl()
   const content = [
     messages.experienceHeader,
@@ -21,7 +21,13 @@ const ExperienceMobile: FC = () => {
       {content.map((item) => (
         <>
           <Layout>
-            <Text color='dullBlack' lineHeight='normal' fontWeight='normal' fontSize='regular'>
+            <Text
+              color='dullBlack'
+              lineHeight='normal'
+              fontWeight='normal'
+              fontSize='regular'
+              textAlign='justify'
+            >
               {intl.formatMessage(item)}
             </Text>
           </Layout>
@@ -32,4 +38,4 @@ const ExperienceMobile: FC = () => {
   )
 }
 
-export { ExperienceMobile }
+export { Experience }

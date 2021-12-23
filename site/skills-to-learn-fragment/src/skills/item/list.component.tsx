@@ -11,7 +11,12 @@ const List = ({ content }) => (
       {content.map((item) => (
         <Column>
           <Layout>
-            <Text color='dullBlack' fontWeight='normal' fontSize='normal' lineHeight='normal'>
+            <Text
+              color='dullBlack'
+              fontWeight={['semiNormal', 'semiNormal', 'normal']}
+              fontSize='normal'
+              lineHeight='normal'
+            >
               {item}
             </Text>
           </Layout>

@@ -6,7 +6,7 @@ import { css }    from '@emotion/react'
 export const GlobalStyles = () => (
   <Global
     styles={css`
-      @import url('http://fonts.cdnfonts.com/css/gotham-pro');
+      @import url('https://fonts.cdnfonts.com/css/gotham-pro');
 
       html {
         height: 100%;
