@@ -2,10 +2,10 @@ import { styleFn }                from 'styled-system'
 import { switchProp }             from 'styled-tools'
 import { prop }                   from 'styled-tools'
 
-import { getPrimaryColorsStyles } from './abstract'
+import { appearanceStyles } from './abstract'
 
 const getAppearanceColorStyles = ({theme}) => {
-  const primaryColorsStyles = getPrimaryColorsStyles(theme)
+  const primaryColorsStyles = appearanceStyles(theme)
   return switchProp(prop('color', 'primary'), {
     primary: primaryColorsStyles,
   })
