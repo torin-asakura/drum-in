@@ -4,8 +4,8 @@ import { prop }                   from 'styled-tools'
 
 import { getPrimaryColorsStyles } from './abstract'
 
-const getAppearanceColorStyles = (): styleFn => {
-  const primaryColorsStyles = getPrimaryColorsStyles()
+const getAppearanceColorStyles = ({theme}) => {
+  const primaryColorsStyles = getPrimaryColorsStyles(theme)
   return switchProp(prop('color', 'primary'), {
     primary: primaryColorsStyles,
   })

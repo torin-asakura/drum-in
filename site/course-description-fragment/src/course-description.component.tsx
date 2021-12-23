@@ -26,7 +26,7 @@ const CourseDescription: FC = () => {
           zIndex={1}
         >
           <Layout width={['320px', '320px', '1440px']}>
-            <Layout flexBasis={[20, 20, 137]} flexSHrink={0} />
+            <Layout flexBasis={[20, 20, 137]} />
             <Row>
               <Column width='100%'>
                 <Layout flexBasis={[25, 25, 53]} flexShrink={0} />

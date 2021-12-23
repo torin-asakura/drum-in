@@ -1,5 +1,6 @@
 import React       from 'react'
 import { useIntl } from 'react-intl'
+import {useState} from 'react'
 
 import { Box }     from '@ui/layout'
 import { Row }     from '@ui/layout'
@@ -10,6 +11,7 @@ import messages    from '../messages'
 
 const Navigation = () => {
   const intl = useIntl()
+  const [line, setLine]= useState(false)
   return (
     <Box
       width='995px'
@@ -66,6 +68,7 @@ const Navigation = () => {
             fontSize='big'
             fontWeight='normal'
             lineHeight='regular'
+            style={{textDecoration:'underline'}} 
             letterSpacing='0.15em'
             whiteSpace='nowrap'
           >

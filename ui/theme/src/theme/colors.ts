@@ -5,10 +5,12 @@ export const colors = {
   dullBlack: 'rgba(20, 20, 20, 1)',
   softBlack: 'rgba(14, 13, 13, 1)',
   dullRed: 'rgba(234, 9, 5, 1)',
+  duskRed:'rgba(252, 117, 115, 1)',
   button: {
     primary: {
       default: 'rgba(234, 9, 5, 1)',
       fontColor: 'rgba(255, 255, 255, 1)',
+      hover: 'rgba(252, 117, 115, 1)',
     },
   },
   input: {
