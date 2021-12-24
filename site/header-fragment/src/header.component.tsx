@@ -44,7 +44,7 @@ const Header: FC = () => {
             <ContentRender array={textDesktop} />
           </Layout>
           <Layout flexBasis={18} />
-          <Layout width='300px' overflow='visible' style={{ zIndex: 1 }}>
+          <Layout width='300px' overflow='visible' style={{ zIndex: 3 }}>
             <Navigation />
           </Layout>
           <Layout flexBasis={60} flexShrink={0} />

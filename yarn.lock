@@ -2029,6 +2029,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.3.21
     "@apollo/react-ssr": ^4.0.0
+    "@atls-ui-parts/button": ^0.0.4
     "@atls/actl-cli": ^0.4.48
     "@atls/next-app-with-apollo": ^0.2.70
     "@atls/next-app-with-emotion": ^0.2.68
@@ -2136,6 +2137,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
+    "@ui/button": "workspace:ui/button"
     "@ui/condition": "workspace:ui/condition"
     "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
@@ -2145,6 +2147,7 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@atls-ui-parts/button": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
