@@ -3051,6 +3051,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/link@workspace:ui/link":
+  version: 0.0.0-use.local
+  resolution: "@ui/link@workspace:ui/link"
+  dependencies:
+    "@emotion/css": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    "@ui/utils": "workspace:ui/utils"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/text@workspace:ui/text":
   version: 0.0.0-use.local
   resolution: "@ui/text@workspace:ui/text"
@@ -3077,6 +3095,15 @@ __metadata:
     "@types/react-dom": ^17
     react: ^17.0.2
     react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@ui/utils@workspace:ui/utils":
+  version: 0.0.0-use.local
+  resolution: "@ui/utils@workspace:ui/utils"
+  dependencies:
+    "@types/react": ^17
+    react: ^17.0.2
   languageName: unknown
   linkType: soft
 

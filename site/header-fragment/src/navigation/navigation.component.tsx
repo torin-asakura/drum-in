@@ -1,14 +1,14 @@
-import React       from 'react'
-import { useIntl } from 'react-intl'
-import { useState }  from 'react'
+import React        from 'react'
+import { useIntl }  from 'react-intl'
+import { useState } from 'react'
 
-import { Box }     from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Text }    from '@ui/text'
-import { Button }  from '@ui/button'
+import { Box }      from '@ui/layout'
+import { Row }      from '@ui/layout'
+import { Layout }   from '@ui/layout'
+import { Text }     from '@ui/text'
+import { Button }   from '@ui/button'
 
-import messages    from '../messages'
+import messages     from '../messages'
 
 const Navigation = () => {
   const intl = useIntl()
