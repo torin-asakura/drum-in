@@ -4,18 +4,29 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/styled": "^11.6.0",
+<<<<<<< HEAD
     "@ui/utils": "workspace:ui/utils",
+=======
+    "@ui/layout": "workspace:ui/layout",
+>>>>>>> 5026a7e (feature(button): new styles added)
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@emotion/css": "^11.7.1",
+=======
+>>>>>>> 5026a7e (feature(button): new styles added)
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "@types/styled-system": "^5"
   },
   "peerDependencies": {
+<<<<<<< HEAD
+=======
+    "@emotion-react": "*",
+>>>>>>> 5026a7e (feature(button): new styles added)
     "@emotion/react": "*"
   }
 }

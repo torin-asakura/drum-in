@@ -2142,6 +2142,7 @@ __metadata:
     "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
     "@ui/line": "workspace:ui/line"
+    "@ui/link": "workspace:ui/link"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3055,16 +3056,27 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/link@workspace:ui/link"
   dependencies:
+<<<<<<< HEAD
     "@emotion/css": ^11.7.1
+=======
+>>>>>>> 5026a7e (feature(button): new styles added)
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
+<<<<<<< HEAD
     "@ui/utils": "workspace:ui/utils"
+=======
+    "@ui/layout": "workspace:ui/layout"
+>>>>>>> 5026a7e (feature(button): new styles added)
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+<<<<<<< HEAD
+=======
+    "@emotion-react": "*"
+>>>>>>> 5026a7e (feature(button): new styles added)
     "@emotion/react": "*"
   languageName: unknown
   linkType: soft

@@ -24,36 +24,24 @@ const Navigation = () => {
       backgroundColor='semiTransparent'
     >
       <Layout flexBasis={11} flexShrink={0} />
-      <Row justifyContent='center'>
-        <Layout>
-          <Button
-            size='ghost'
-            variant='ghost'
-            onMouseOver={() => setLine('rythm')}
-            onMouseLeave={() => setLine(false)}
-          >
-            <Box height='20px' borderBottom={line === 'rythm' ? '2px solid black' : 'none'}>
-              <Text
+      <Row justifyContent='center'  >
+        <Link onMouseOver={()=>setLine('rythm')} >
+          {console.log(setLine)}
+          <Layout>
+            <Text
                 color='black'
                 fontSize='big'
                 fontWeight='normal'
+                textDecoration ={line==='rythm'?'underline':'none'}
                 lineHeight='regular'
                 letterSpacing='0.15em'
               >
                 {intl.formatMessage(messages.rythm)}
-              </Text>
-            </Box>
-          </Button>
+             </Text>
         </Layout>
+        </Link>
         <Layout flexBasis={20} />
         <Layout>
-          <Button
-            size='ghost'
-            variant='ghost'
-            onMouseOver={() => setLine('drum')}
-            onMouseLeave={() => setLine(false)}
-          >
-            <Box height='20px' borderBottom={line === 'drum' ? '2px solid black' : 'none'}>
               <Text
                 color='black'
                 fontSize='big'
@@ -63,18 +51,9 @@ const Navigation = () => {
               >
                 {intl.formatMessage(messages.drum)}
               </Text>
-            </Box>
-          </Button>
         </Layout>
         <Layout flexBasis={20} />
         <Layout>
-          <Button
-            size='ghost'
-            variant='ghost'
-            onMouseOver={() => setLine('about')}
-            onMouseLeave={() => setLine(false)}
-          >
-            <Box height='20px' borderBottom={line === 'about' ? '2px solid black' : 'none'}>
               <Text
                 color='black'
                 fontSize='big'
@@ -84,18 +63,9 @@ const Navigation = () => {
               >
                 {intl.formatMessage(messages.instructorAbout)}
               </Text>
-            </Box>
-          </Button>
         </Layout>
         <Layout flexBasis={20} />
         <Layout>
-          <Button
-            size='ghost'
-            variant='ghost'
-            onMouseOver={() => setLine('reviews')}
-            onMouseLeave={() => setLine(false)}
-          >
-            <Box height='20px' borderBottom={line === 'reviews' ? '2px solid black' : 'none'}>
               <Text
                 color='black'
                 fontSize='big'
@@ -105,8 +75,6 @@ const Navigation = () => {
               >
                 {intl.formatMessage(messages.reviews)}
               </Text>
-            </Box>
-          </Button>
         </Layout>
         <Layout flexBasis={11} />
       </Row>
