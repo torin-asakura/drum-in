@@ -8,6 +8,7 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Button }    from '@ui/button'
 import { Text }      from '@ui/text'
+import { Link }        from '@ui/link'
 
 import { Container } from './container'
 import messages      from './messages'
@@ -23,17 +24,19 @@ const IndividualLessons: FC = () => {
               <Layout flexBasis={138} flexShrink={0} />
               <Column width='100%'>
                 <Layout flexBasis={60} />
-                <Layout width='500px'>
-                  <Text
-                    color='white'
-                    fontSize='large'
-                    fontWeight='bold'
-                    lineHeight='large'
-                    letterSpacing='0.15em'
-                  >
-                    {intl.formatMessage(messages.individualLessonsHeader)}
-                  </Text>
-                </Layout>
+                <Link id='lessons'>
+                  <Layout width='500px'>
+                    <Text
+                      color='white'
+                      fontSize='large'
+                      fontWeight='bold'
+                      lineHeight='large'
+                      letterSpacing='0.15em'
+                    >
+                      {intl.formatMessage(messages.individualLessonsHeader)}
+                    </Text>
+                  </Layout>
+                </Link>
                 <Layout flexBasis={20} />
                 <Layout>
                   <Text

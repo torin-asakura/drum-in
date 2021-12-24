@@ -1,11 +1,11 @@
-import { CSSObject } from '@emotion/css'
-import { styleFn }   from 'styled-system'
+import { styleFn } from 'styled-system'
 
-export const baseStyles: CSSObject = {
-  textDecoration: 'none',
+export const baseStyles: styleFn = ({ hover }) => ({
+  textDecoration: hover ? 'underline' : 'none',
+  textDecorationColor: 'black',
   cursor: 'pointer',
-}
+})
 
 export const appearanceStyles: styleFn = ({ hover }) => ({
-  color: hover ? 'blue' : 'black',
+  color: hover ? 'red' : 'black',
 })

@@ -9,6 +9,7 @@ import { Layout }        from '@ui/layout'
 import { Button }        from '@ui/button'
 import { Text }          from '@ui/text'
 import { ImageBlock }    from '@ui/image'
+import { Link }            from '@ui/link'
 
 import messages          from './messages'
 import { CourseContent } from './course-description-content'
@@ -30,17 +31,19 @@ const CourseDescription: FC = () => {
             <Row>
               <Column width='100%'>
                 <Layout flexBasis={[25, 25, 53]} flexShrink={0} />
-                <Layout display={['none', 'none', 'flex']}>
-                  <Text
-                    fontSize='big'
-                    color='white'
-                    fontWeight='normal'
-                    lineHeight='regular'
-                    letterSpacing='0.15em'
-                  >
-                    {intl.formatMessage(messages.onlineCourse)}
-                  </Text>
-                </Layout>
+                <Link id='course'>
+                  <Layout display={['none', 'none', 'flex']}>
+                    <Text
+                      fontSize='big'
+                      color='white'
+                      fontWeight='normal'
+                      lineHeight='regular'
+                      letterSpacing='0.15em'
+                    >
+                      {intl.formatMessage(messages.onlineCourse)}
+                    </Text>
+                  </Layout>
+                </Link>
                 <Layout flexBasis={[0, 0, 20]} flexShrink={0} />
                 <Layout>
                   <CourseContent />

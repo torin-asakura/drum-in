@@ -7,6 +7,7 @@ import { Column }  from '@ui/layout'
 import { Layout }  from '@ui/layout'
 import { Row }     from '@ui/layout'
 import { Text }    from '@ui/text'
+import { Link }      from '@ui/link'
 
 import messages    from './messages'
 
@@ -21,11 +22,13 @@ const Reviews: FC = () => {
       <Layout flexBasis={265} display={['none', 'none', 'flex']} />
       <Layout width='1440px' display={['none', 'none', 'flex']}>
         <Column width='100%' display={['none', 'none', 'flex']}>
-          <Layout>
-            <Text color='black' fontWeight='bold' fontSize='large' lineHeight='normal'>
-              {intl.formatMessage(messages.reviews)}
-            </Text>
-          </Layout>
+          <Link id='reviews'>
+            <Layout>
+              <Text color='black' fontWeight='bold' fontSize='large' lineHeight='normal'>
+                {intl.formatMessage(messages.reviews)}
+              </Text>
+            </Layout>
+          </Link>
           <Layout flexBasis={56} flexShrink={0} />
           <Row>
             <Layout width='527px' height='284px'>

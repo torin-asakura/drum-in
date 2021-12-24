@@ -9,6 +9,7 @@ import { Text }     from '@ui/text'
 import { Button }   from '@ui/button'
 
 import messages     from '../messages'
+import { Link }     from '@ui/link'
 
 const Navigation = () => {
   const intl = useIntl()
@@ -24,58 +25,62 @@ const Navigation = () => {
       backgroundColor='semiTransparent'
     >
       <Layout flexBasis={11} flexShrink={0} />
-      <Row justifyContent='center'  >
-        <Link onMouseOver={()=>setLine('rythm')} >
-          {console.log(setLine)}
+      <Row justifyContent='center'>
+        <Link href='#course'>
           <Layout>
             <Text
-                color='black'
-                fontSize='big'
-                fontWeight='normal'
-                textDecoration ={line==='rythm'?'underline':'none'}
-                lineHeight='regular'
-                letterSpacing='0.15em'
-              >
-                {intl.formatMessage(messages.rythm)}
-             </Text>
-        </Layout>
+              color='black'
+              fontSize='big'
+              fontWeight='normal'
+              lineHeight='regular'
+              letterSpacing='0.15em'
+            >
+              {intl.formatMessage(messages.rythm)}
+            </Text>
+          </Layout>
         </Link>
         <Layout flexBasis={20} />
-        <Layout>
-              <Text
-                color='black'
-                fontSize='big'
-                fontWeight='normal'
-                lineHeight='regular'
-                letterSpacing='0.15em'
-              >
-                {intl.formatMessage(messages.drum)}
-              </Text>
-        </Layout>
+        <Link href='#lessons'>
+          <Layout>
+            <Text
+              color='black'
+              fontSize='big'
+              fontWeight='normal'
+              lineHeight='regular'
+              letterSpacing='0.15em'
+            >
+              {intl.formatMessage(messages.drum)}
+            </Text>
+          </Layout>
+        </Link>
         <Layout flexBasis={20} />
-        <Layout>
-              <Text
-                color='black'
-                fontSize='big'
-                fontWeight='normal'
-                lineHeight='regular'
-                letterSpacing='0.15em'
-              >
-                {intl.formatMessage(messages.instructorAbout)}
-              </Text>
-        </Layout>
+        <Link href='#about'>
+          <Layout>
+            <Text
+              color='black'
+              fontSize='big'
+              fontWeight='normal'
+              lineHeight='regular'
+              letterSpacing='0.15em'
+            >
+              {intl.formatMessage(messages.instructorAbout)}
+            </Text>
+          </Layout>
+        </Link>
         <Layout flexBasis={20} />
-        <Layout>
-              <Text
-                color='black'
-                fontSize='big'
-                fontWeight='normal'
-                lineHeight='regular'
-                letterSpacing='0.15em'
-              >
-                {intl.formatMessage(messages.reviews)}
-              </Text>
-        </Layout>
+        <Link href='#reviews'>
+          <Layout>
+            <Text
+              color='black'
+              fontSize='big'
+              fontWeight='normal'
+              lineHeight='regular'
+              letterSpacing='0.15em'
+            >
+              {intl.formatMessage(messages.reviews)}
+            </Text>
+          </Layout>
+        </Link>
         <Layout flexBasis={11} />
       </Row>
     </Box>
