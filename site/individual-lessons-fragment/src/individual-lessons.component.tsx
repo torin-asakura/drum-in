@@ -24,18 +24,16 @@ const IndividualLessons: FC = () => {
               <Layout flexBasis={138} flexShrink={0} />
               <Column width='100%'>
                 <Layout flexBasis={60} />
-                <Link id='lessons'>
-                  <Layout width={['270px', '270px', '500px']}>
-                    <Text
-                      variant='leadTextHeader'
-                      fontSize={['small', 'small', 'large']}
-                      lineHeight={['semiregular', 'semiRegular', 'large']}
-                      textAlign={['center', 'center', 'start']}
-                    >
-                      {intl.formatMessage(messages.individualLessonsHeader)}
-                    </Text>
-                  </Layout>
-                </Link>
+                <Layout id='lessons' width={['270px', '270px', '500px']}>
+                  <Text
+                    variant='leadTextHeader'
+                    fontSize={['small', 'small', 'large']}
+                    lineHeight={['semiregular', 'semiRegular', 'large']}
+                    textAlign={['center', 'center', 'start']}
+                  >
+                    {intl.formatMessage(messages.individualLessonsHeader)}
+                  </Text>
+                </Layout>
                 <Layout flexBasis={20} />
                 <Layout>
                   <Text variant='leadTextContent' fontSize='normal' lineHeight='huge'>

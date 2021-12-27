@@ -31,20 +31,18 @@ const CourseDescription: FC = () => {
             <Row>
               <Column width='100%'>
                 <Layout flexBasis={[25, 25, 53]} flexShrink={0} />
-                <Link id='course'>
-                  <Layout display={['none', 'none', 'flex']}>
-                    <Text
-                      fontSize='big'
-                      color='white'
-                      fontWeight='normal'
-                      lineHeight='regular'
-                      letterSpacing='0.15em'
-                    >
-                      {intl.formatMessage(messages.onlineCourse)}
-                    </Text>
-                  </Layout>
-                  )
-                </Link>
+                <Layout id='course' display={['none', 'none', 'flex']}>
+                  <Text
+                    fontSize='big'
+                    color='white'
+                    fontWeight='normal'
+                    lineHeight='regular'
+                    letterSpacing='0.15em'
+                  >
+                    {intl.formatMessage(messages.onlineCourse)}
+                  </Text>
+                </Layout>
+                )
                 <Layout flexBasis={[0, 0, 20]} flexShrink={0} />
                 <Layout>
                   <CourseContent />
@@ -52,12 +50,11 @@ const CourseDescription: FC = () => {
                 <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
                 <Layout display={['none', 'none', 'flex']}>
                   <Text
-                    style={{ textDecoration: 'underline', cursor: 'pointer' }}
+                    variant='linkContent'
                     color='dullRed'
                     fontWeight='bold'
                     fontSize='huge'
                     lineHeight='big'
-                    letterSpacing='0.15em'
                   >
                     {intl.formatMessage(messages.courseDescriptionLink)}
                   </Text>

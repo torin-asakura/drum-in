@@ -20,13 +20,11 @@ const About = () => {
           <Layout flexBasis={138} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={50} />
-            <Link id='about'>
-              <Layout>
-                <Text variant='leadTextHeader' fontSize='big' lineHeight='large'>
-                  {intl.formatMessage(messages.aboutHeader)}
-                </Text>
-              </Layout>
-            </Link>
+            <Layout id='about'>
+              <Text variant='leadTextHeader' fontSize='big' lineHeight='large'>
+                {intl.formatMessage(messages.aboutHeader)}
+              </Text>
+            </Layout>
             <Layout flexBasis={50} />
             <Layout>
               <Text fontSize='normal' lineHeight='large' variant='leadTextContent'>

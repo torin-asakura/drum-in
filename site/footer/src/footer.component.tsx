@@ -15,7 +15,7 @@ import messages       from './messages'
 const Footer: FC = () => {
   const intl = useIntl()
   return (
-    <Layout width={['320px', '320px', '100%']} height={['400px', '400px', '252px']}>
+    <>
       <Box
         width='100%'
         height='100%'
@@ -121,7 +121,7 @@ const Footer: FC = () => {
         </Column>
         <Layout flexBasis={30} />
       </Box>
-    </Layout>
+    </>
   )
 }
 

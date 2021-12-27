@@ -1,5 +1,5 @@
 import React         from 'react'
-import { FC }          from 'react'
+import { FC }        from 'react'
 
 import { Layout }    from '@ui/layout'
 import { Column }    from '@ui/layout'

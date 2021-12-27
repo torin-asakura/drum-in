@@ -1,6 +1,6 @@
 import { prop }       from 'styled-tools'
 import { switchProp } from 'styled-tools'
-import { styleFn }      from 'styled-system'
+import { styleFn }    from 'styled-system'
 
 export const leadTextHeader: styleFn = ({ theme }) => ({
   color: theme.colors.white,
@@ -28,9 +28,16 @@ export const navigationContent: styleFn = ({ theme }) => ({
   letterSpacing: '0.15em',
 })
 
+export const linkContent: styleFn = ({ theme }) => ({
+  cursor: 'pointer',
+  textDecoration: 'underline',
+  letterSpacing: '0.15em',
+})
+
 export const textStyles = switchProp(prop('variant', 'none'), {
   leadTextHeader: leadTextHeader,
   leadTextContent: leadTextContent,
   buttonContent: buttonContent,
   navigationContent: navigationContent,
+  linkContent: linkContent,
 })

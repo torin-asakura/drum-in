@@ -44,9 +44,9 @@ const Header: FC = () => {
             <ContentRender array={textDesktop} />
           </Layout>
           <Layout flexBasis={18} />
-          <Layout width='300px' overflow='visible' style={{ zIndex: 3 }}>
+          <Box width='300px' overflow='visible' zIndex={2}>
             <Navigation />
-          </Layout>
+          </Box>
           <Layout flexBasis={60} flexShrink={0} />
         </Column>
         <ContainerRelative height='285px'>
@@ -60,7 +60,7 @@ const Header: FC = () => {
         <Layout flexBasis={120} flexShrink={0} />
       </Layout>
       <Row display={['flex', 'flex', 'none']} justifyContent='center'>
-        <Layout width='320px' style={{ position: 'relative' }}>
+        <Box width='320px' style={{ position: 'relative' }}>
           <ContainerRelative height={['355px', '355px', '285px']}>
             <Layout
               justifyContent='center'
@@ -111,7 +111,7 @@ const Header: FC = () => {
               </Column>
             </Layout>
           </ContainerRelative>
-        </Layout>
+        </Box>
       </Row>
     </Box>
   )
