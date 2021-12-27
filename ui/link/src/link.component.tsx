@@ -4,7 +4,7 @@ import styled                           from '@emotion/styled'
 
 import { useHover }                     from '@ui/utils'
 
-import { appearanceStyles, baseStyles } from './link.styles'
+import {  baseStyles } from './link.styles'
 import { LinkProps }                    from './link.interface'
 
 const StyledLink = styled.a(baseStyles)
