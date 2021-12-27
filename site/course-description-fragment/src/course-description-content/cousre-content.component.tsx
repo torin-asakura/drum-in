@@ -14,49 +14,23 @@ const CourseContent: FC = () => {
     <Layout>
       <Column alignItems={['center', 'center', 'flex-start']}>
         <Layout display={['flex', 'flex', 'none']}>
-          <Text
-            fontSize='small'
-            color='white'
-            fontWeight='bold'
-            lineHeight='semiRegular'
-            letterSpacing='0.15em'
-          >
+          <Text fontSize='small' lineHeight='semiRegular' variant='leadTextHeader'>
             {intl.formatMessage(messages.courseNameMobile)}
           </Text>
         </Layout>
         <Layout display={['none', 'none', 'flex']}>
-          <Text
-            fontSize='large'
-            color='white'
-            fontWeight='bold'
-            lineHeight='semiNormal'
-            letterSpacing='0.15em'
-          >
+          <Text fontSize='large' variant='leadTextHeader' lineHeight='semiNormal'>
             {intl.formatMessage(messages.courseName)}
           </Text>
         </Layout>
         <Layout flexBasis={[30, 30, 39]} />
         <Layout display={['flex', 'flex', 'none']}>
-          <Text
-            fontSize='mini'
-            color='white'
-            fontWeight='semiNormal'
-            lineHeight='semiRegular'
-            textAlign='justify'
-            letterSpacing='0.15em'
-          >
+          <Text variant='leadTextContent' fontSize='mini' lineHeight='semiRegular'>
             {intl.formatMessage(messages.courseDescriptionMobile)}
           </Text>
         </Layout>
         <Layout display={['none', 'none', 'flex']}>
-          <Text
-            textAlign='justify'
-            fontSize='normal'
-            color='white'
-            fontWeight='semiBold'
-            lineHeight='large'
-            letterSpacing='0.15em'
-          >
+          <Text variant='leadTextContent' fontSize='normal' lineHeight='large'>
             {intl.formatMessage(messages.courseDescriptionContent)}
           </Text>
         </Layout>

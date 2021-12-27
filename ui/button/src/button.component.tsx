@@ -1,6 +1,4 @@
-import React                from 'react'
 import styled               from '@emotion/styled'
-import { FC }               from 'react'
 import { layout }           from 'styled-system'
 import { space }            from 'styled-system'
 

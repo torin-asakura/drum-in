@@ -6,14 +6,12 @@ import { Box }      from '@ui/layout'
 import { Row }      from '@ui/layout'
 import { Layout }   from '@ui/layout'
 import { Text }     from '@ui/text'
-import { Button }   from '@ui/button'
+import { Link }     from '@ui/link'
 
 import messages     from '../messages'
-import { Link }     from '@ui/link'
 
 const Navigation = () => {
   const intl = useIntl()
-  const [line, setLine] = useState(false)
   return (
     <Box
       width='995px'
@@ -29,53 +27,37 @@ const Navigation = () => {
         <Link href='#course'>
           <Layout>
             <Text
-              color='black'
-              fontSize='big'
-              fontWeight='normal'
-              lineHeight='regular'
-              letterSpacing='0.15em'
+            variant='navigationContent'
             >
               {intl.formatMessage(messages.rythm)}
             </Text>
           </Layout>
         </Link>
-        <Layout flexBasis={20} />
+        <Layout flexBasis={45} />
         <Link href='#lessons'>
           <Layout>
             <Text
-              color='black'
-              fontSize='big'
-              fontWeight='normal'
-              lineHeight='regular'
-              letterSpacing='0.15em'
+          variant='navigationContent'
             >
               {intl.formatMessage(messages.drum)}
             </Text>
           </Layout>
         </Link>
-        <Layout flexBasis={20} />
+        <Layout flexBasis={45} />
         <Link href='#about'>
           <Layout>
             <Text
-              color='black'
-              fontSize='big'
-              fontWeight='normal'
-              lineHeight='regular'
-              letterSpacing='0.15em'
+               variant='navigationContent'
             >
               {intl.formatMessage(messages.instructorAbout)}
             </Text>
           </Layout>
         </Link>
-        <Layout flexBasis={20} />
+        <Layout flexBasis={45} />
         <Link href='#reviews'>
           <Layout>
             <Text
-              color='black'
-              fontSize='big'
-              fontWeight='normal'
-              lineHeight='regular'
-              letterSpacing='0.15em'
+            variant='navigationContent'
             >
               {intl.formatMessage(messages.reviews)}
             </Text>

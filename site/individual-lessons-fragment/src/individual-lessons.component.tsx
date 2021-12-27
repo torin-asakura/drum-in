@@ -8,7 +8,7 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Button }    from '@ui/button'
 import { Text }      from '@ui/text'
-import { Link }        from '@ui/link'
+import { Link }      from '@ui/link'
 
 import { Container } from './container'
 import messages      from './messages'
@@ -25,13 +25,12 @@ const IndividualLessons: FC = () => {
               <Column width='100%'>
                 <Layout flexBasis={60} />
                 <Link id='lessons'>
-                  <Layout width='500px'>
+                  <Layout width={['270px', '270px', '500px']}>
                     <Text
-                      color='white'
-                      fontSize='large'
-                      fontWeight='bold'
-                      lineHeight='large'
-                      letterSpacing='0.15em'
+                      variant='leadTextHeader'
+                      fontSize={['small', 'small', 'large']}
+                      lineHeight={['semiregular', 'semiRegular', 'large']}
+                      textAlign={['center', 'center', 'start']}
                     >
                       {intl.formatMessage(messages.individualLessonsHeader)}
                     </Text>
@@ -39,20 +38,14 @@ const IndividualLessons: FC = () => {
                 </Link>
                 <Layout flexBasis={20} />
                 <Layout>
-                  <Text
-                    color='white'
-                    fontWeight='semiBold'
-                    fontSize='normal'
-                    lineHeight='huge'
-                    textAlign='justify'
-                  >
+                  <Text variant='leadTextContent' fontSize='normal' lineHeight='huge'>
                     {intl.formatMessage(messages.individualLessonsContent)}
                   </Text>
                 </Layout>
                 <Layout flexBasis={40} />
                 <Layout>
                   <Button size='big' width='426px'>
-                    <Text fontWeight='bold' fontSize='huge' lineHeight='big' letterSpacing='0.15em'>
+                    <Text variant='buttonContent' fontSize='huge' lineHeight='semiRegular'>
                       {intl.formatMessage(messages.signUp)}
                     </Text>
                   </Button>
@@ -75,14 +68,12 @@ const IndividualLessons: FC = () => {
               <Layout flexBasis={20} flexShrink={0} />
               <Column>
                 <Layout flexBasis={25} flexShrink={0} />
-                <Layout width='270px'>
+                <Layout width={['270px', '270px', '500px']}>
                   <Text
-                    color='white'
-                    fontWeight='bold'
-                    fontSize='small'
-                    lineHeight='semiRegular'
-                    textAlign='center'
-                    letterSpacing='0.15em'
+                    variant='leadTextHeader'
+                    fontSize={['small', 'small', 'large']}
+                    lineHeight={['semiregular', 'semiRegular', 'large']}
+                    textAlign={['center', 'center', 'start']}
                   >
                     {intl.formatMessage(messages.individualLessonsHeader)}
                   </Text>
@@ -90,12 +81,10 @@ const IndividualLessons: FC = () => {
                 <Layout flexBasis={10} flexShrink={0} />
                 <Layout>
                   <Text
-                    color='white'
+                    variant='leadTextContent'
                     fontSize='mini'
                     lineHeight='semiRegular'
                     fontWeight='semiNormal'
-                    letterSpacing='0.15em'
-                    textAlign='justify'
                   >
                     {intl.formatMessage(messages.individualLessonsContent)}
                   </Text>
@@ -110,12 +99,7 @@ const IndividualLessons: FC = () => {
         <Layout flexBasis={50} display={['flex', 'flex', 'none']} />
         <Layout display={['flex', 'flex', 'none']}>
           <Button size='normal' width='240px'>
-            <Text
-              fontWeight='bold'
-              fotnSize='normal'
-              lineHeight='semiRegular'
-              letterSpacing='0.15em'
-            >
+            <Text fotnSize='normal' lineHeight='small' variant='buttonContent'>
               {intl.formatMessage(messages.signUp)}
             </Text>
           </Button>

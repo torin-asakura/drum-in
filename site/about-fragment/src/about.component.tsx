@@ -7,7 +7,7 @@ import { Layout }     from '@ui/layout'
 import { Column }     from '@ui/layout'
 import { Text }       from '@ui/text'
 import { ImageBlock } from '@ui/image'
-import { Link }         from '@ui/link'
+import { Link }       from '@ui/link'
 
 import messages       from './messages'
 
@@ -22,20 +22,14 @@ const About = () => {
             <Layout flexBasis={50} />
             <Link id='about'>
               <Layout>
-                <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='large'>
+                <Text variant='leadTextHeader' fontSize='big' lineHeight='large'>
                   {intl.formatMessage(messages.aboutHeader)}
                 </Text>
               </Layout>
             </Link>
             <Layout flexBasis={50} />
             <Layout>
-              <Text
-                color='white'
-                fontWeight='semiBold'
-                fontSize='normal'
-                lineHeight='large'
-                textAlign='justify'
-              >
+              <Text fontSize='normal' lineHeight='large' variant='leadTextContent'>
                 {intl.formatMessage(messages.aboutContent)}
               </Text>
             </Layout>

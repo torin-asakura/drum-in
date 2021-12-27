@@ -1,4 +1,3 @@
-import { createBaseStyles }       from '@atls-ui-parts/button'
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { createShapeStyles }      from '@atls-ui-parts/button'
 import { combine }                from '@atls-ui-parts/styles'
@@ -15,6 +14,7 @@ export const baseStyles = {
   outline: 'none',
   padding: 0,
   border: '0px solid transparent',
+  transition: 'background-color 0.2s',
 }
 export const primaryAppearanceStyles = createAppearanceStyles({
   fontColor: ({ theme }) => theme.colors.white,

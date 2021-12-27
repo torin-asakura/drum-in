@@ -11,7 +11,6 @@ const Container: FC = ({ children }) => (
     justifyContent='center'
     zIndex={1}
   >
-    {' '}
     {children}
   </Box>
 )

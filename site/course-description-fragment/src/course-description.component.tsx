@@ -9,7 +9,7 @@ import { Layout }        from '@ui/layout'
 import { Button }        from '@ui/button'
 import { Text }          from '@ui/text'
 import { ImageBlock }    from '@ui/image'
-import { Link }            from '@ui/link'
+import { Link }          from '@ui/link'
 
 import messages          from './messages'
 import { CourseContent } from './course-description-content'
@@ -43,6 +43,7 @@ const CourseDescription: FC = () => {
                       {intl.formatMessage(messages.onlineCourse)}
                     </Text>
                   </Layout>
+                  )
                 </Link>
                 <Layout flexBasis={[0, 0, 20]} flexShrink={0} />
                 <Layout>
@@ -65,13 +66,7 @@ const CourseDescription: FC = () => {
                 <Layout display={['none', 'none', 'flex']}>
                   <Button size='big' width='426px'>
                     <Layout>
-                      <Text
-                        color='white'
-                        fontWeight='bold'
-                        lineHeight='big'
-                        fontSize='huge'
-                        letterSpacing='0.15em'
-                      >
+                      <Text lineHeight='big' fontSize='huge' variant='buttonContent'>
                         {intl.formatMessage(messages.signUp)}
                       </Text>
                     </Layout>
@@ -94,8 +89,8 @@ const CourseDescription: FC = () => {
         <Layout display={['flex', 'flex', 'none']} justifyContent='center'>
           <Button size='normal' width='240px'>
             <Layout>
-              <Text fontWeight='bold' fontSize='normal' lineHeight='semiRegular'>
-                {intl.formatMessage(messages.buyCourse)}{' '}
+              <Text variant='buttonContent' fontSize='normal' lineHeight='semiRegular'>
+                {intl.formatMessage(messages.buyCourse)}
               </Text>
             </Layout>
           </Button>
