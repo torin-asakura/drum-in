@@ -1,11 +1,14 @@
 import React         from 'react'
+import { FC }          from 'react'
 
 import { Layout }    from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Text }      from '@ui/text'
 import { Condition } from '@ui/condition'
 
-const List = ({ content }) => (
+import { ListProps } from './list.interface'
+
+const List: FC<ListProps> = ({ content }) => (
   <>
     <Condition match={Array.isArray(content)}>
       {content.map((item) => (

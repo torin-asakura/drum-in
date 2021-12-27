@@ -13,6 +13,7 @@
   },
   "workspaces": [
     "site/**/*",
-    "ui/**/*"
+    "ui/**/*",
+    "globals/**/*"
   ]
 }

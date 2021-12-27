@@ -3,7 +3,7 @@ import { LayoutProps }                    from 'styled-system'
 import { SpaceProps }                     from 'styled-system'
 
 type ButtonVariant = 'primary'
-type ButtonSize = 'normal'
+type ButtonSize = 'normal' | 'big'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   width?: number | string | number[] | string[]

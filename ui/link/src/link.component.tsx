@@ -1,11 +1,11 @@
-import React                            from 'react'
-import { FC }                           from 'react'
-import styled                           from '@emotion/styled'
+import React          from 'react'
+import { FC }         from 'react'
+import styled         from '@emotion/styled'
 
-import { useHover }                     from '@ui/utils'
+import { useHover }   from '@ui/utils'
 
-import {  baseStyles } from './link.styles'
-import { LinkProps }                    from './link.interface'
+import { baseStyles } from './link.styles'
+import { LinkProps }  from './link.interface'
 
 const StyledLink = styled.a(baseStyles)
 

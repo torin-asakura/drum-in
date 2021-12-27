@@ -1,10 +1,11 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { createShapeStyles }      from '@atls-ui-parts/button'
+import { createBaseStyles }       from '@atls-ui-parts/button'
 import { combine }                from '@atls-ui-parts/styles'
 import { prop }                   from 'styled-tools'
 import { switchProp }             from 'styled-tools'
 
-export const baseStyles = {
+export const baseStyles = createBaseStyles({
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
@@ -15,7 +16,7 @@ export const baseStyles = {
   padding: 0,
   border: '0px solid transparent',
   transition: 'background-color 0.2s',
-}
+})
 export const primaryAppearanceStyles = createAppearanceStyles({
   fontColor: ({ theme }) => theme.colors.white,
   backgroundColor: ({ theme }) => theme.colors.dullRed,

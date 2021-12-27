@@ -20,7 +20,7 @@ const Portfolio: FC = () => (
           <Column alignItems='center'>
             <Layout flexBasis={70} />
             <Layout width='500px' flexBasis={60} justifyContent='center'>
-              <ContainerRelative width='375px'>
+              <ContainerRelative width='375px' height='60px'>
                 <Line height='60px' />
               </ContainerRelative>
             </Layout>
@@ -28,7 +28,7 @@ const Portfolio: FC = () => (
               <ImageBlock />
             </Layout>
             <Layout width='500px' flexBasis={60} justifyContent='center'>
-              <ContainerRelative width='375px'>
+              <ContainerRelative width='375px' height='60px'>
                 <Line height='60px' />
               </ContainerRelative>
             </Layout>
@@ -36,7 +36,7 @@ const Portfolio: FC = () => (
               <ImageBlock />
             </Layout>
             <Layout width='500px' flexBasis={60} justifyContent='center'>
-              <ContainerRelative width='375px'>
+              <ContainerRelative width='375px' height='60px'>
                 <Line height='60px' />
               </ContainerRelative>
             </Layout>

@@ -1,3 +1,3 @@
 export interface LineProps {
-  height: string | string[] | number
+  height?: string | string[] | number
 }

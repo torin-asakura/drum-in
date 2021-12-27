@@ -99,7 +99,7 @@ const IndividualLessons: FC = () => {
         <Layout flexBasis={50} display={['flex', 'flex', 'none']} />
         <Layout display={['flex', 'flex', 'none']}>
           <Button size='normal' width='240px'>
-            <Text fotnSize='normal' lineHeight='small' variant='buttonContent'>
+            <Text fontSize='normal' lineHeight='small' variant='buttonContent'>
               {intl.formatMessage(messages.signUp)}
             </Text>
           </Button>

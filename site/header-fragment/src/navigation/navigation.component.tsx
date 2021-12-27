@@ -26,41 +26,25 @@ const Navigation = () => {
       <Row justifyContent='center'>
         <Link href='#course'>
           <Layout>
-            <Text
-            variant='navigationContent'
-            >
-              {intl.formatMessage(messages.rythm)}
-            </Text>
+            <Text variant='navigationContent'>{intl.formatMessage(messages.rythm)}</Text>
           </Layout>
         </Link>
         <Layout flexBasis={45} />
         <Link href='#lessons'>
           <Layout>
-            <Text
-          variant='navigationContent'
-            >
-              {intl.formatMessage(messages.drum)}
-            </Text>
+            <Text variant='navigationContent'>{intl.formatMessage(messages.drum)}</Text>
           </Layout>
         </Link>
         <Layout flexBasis={45} />
         <Link href='#about'>
           <Layout>
-            <Text
-               variant='navigationContent'
-            >
-              {intl.formatMessage(messages.instructorAbout)}
-            </Text>
+            <Text variant='navigationContent'>{intl.formatMessage(messages.instructorAbout)}</Text>
           </Layout>
         </Link>
         <Layout flexBasis={45} />
         <Link href='#reviews'>
           <Layout>
-            <Text
-            variant='navigationContent'
-            >
-              {intl.formatMessage(messages.reviews)}
-            </Text>
+            <Text variant='navigationContent'>{intl.formatMessage(messages.reviews)}</Text>
           </Layout>
         </Link>
         <Layout flexBasis={11} />

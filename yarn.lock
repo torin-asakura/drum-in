@@ -5,7 +5,7 @@ __metadata:
   version: 4
   cacheKey: 8
 
-"@apollo/client@npm:^3.0.0-beta.23, @apollo/client@npm:^3.3.21, @apollo/client@npm:latest":
+"@apollo/client@npm:^3.0.0-beta.23, @apollo/client@npm:^3.3.21, @apollo/client@npm:^3.5.6, @apollo/client@npm:latest":
   version: 3.5.6
   resolution: "@apollo/client@npm:3.5.6"
   dependencies:
@@ -1436,6 +1436,19 @@ __metadata:
   checksum: d05081e0887a49c178b75ee3067bd6ee086f73c154d121b854fb2e044e8a89cb1cbb6de3a0dd93a519b80f0531fda68b099dd7256205f7fbb3490324342f2217
   languageName: node
   linkType: hard
+
+"@globals/data@workspace:globals/data":
+  version: 0.0.0-use.local
+  resolution: "@globals/data@workspace:globals/data"
+  dependencies:
+    "@apollo/client": ^3.5.6
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    graphql: ^16.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
 
 "@graphql-typed-document-node/core@npm:^3.0.0":
   version: 3.1.1
@@ -7001,6 +7014,13 @@ __metadata:
   version: 15.8.0
   resolution: "graphql@npm:15.8.0"
   checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^16.2.0":
+  version: 16.2.0
+  resolution: "graphql@npm:16.2.0"
+  checksum: 204b5c9991b82561651a28b13dbb2e0e67514171a6a8c045ca4a527b944087344a14519d0426d661b49f2305584b390591abadc82b942f7b65e64e05cb31a584
   languageName: node
   linkType: hard
 

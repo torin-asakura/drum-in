@@ -1,15 +1,16 @@
-import React       from 'react'
-import { FC }      from 'react'
-import { useIntl } from 'react-intl'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { useIntl }            from 'react-intl'
 
-import { Column }  from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Column }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
 
-import messages    from '../messages'
+import messages               from '../messages'
+import { ContentRenderProps } from './content-render.interface'
 
-const ContentRender: FC<string[]> = ({ array }) => {
+const ContentRender: FC<ContentRenderProps> = ({ array }) => {
   const intl = useIntl()
   return (
     <Column width='100%' alignItems={['center', 'center', 'flex-start']}>

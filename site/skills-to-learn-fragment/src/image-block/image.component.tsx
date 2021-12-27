@@ -7,8 +7,9 @@ import { Column }            from '@ui/layout'
 import { Condition }         from '@ui/condition'
 
 import { ContainerRelative } from '../container-relative'
+import { ImageBlockProps }   from './image-block.interface'
 
-const ImageBlock: FC<boolean> = ({ stripes }) => (
+const ImageBlock: FC<ImageBlockProps> = ({ stripes }) => (
   <>
     <Condition match={stripes}>
       <Column>
