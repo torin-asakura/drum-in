@@ -4,8 +4,6 @@ import { createAppearanceStyles } from '@atls-ui-parts/input'
 import { switchProp }             from 'styled-tools'
 import { prop }                   from 'styled-tools'
 
-import * as theme                 from '@ui/theme'
-
 const normalSizeStyles = ({ theme }) => ({
   ...createShapeStyles({
     fontWeight: theme.fontWeights.normal,

@@ -26,6 +26,7 @@ export const navigationContent: styleFn = ({ theme }) => ({
   fontWeight: theme.fontWeights.normal,
   lineHeight: theme.lineHeights.regular,
   letterSpacing: '0.15em',
+  whiteSpace: 'nowrap',
 })
 
 export const linkContent: styleFn = ({ theme }) => ({
@@ -35,9 +36,9 @@ export const linkContent: styleFn = ({ theme }) => ({
 })
 
 export const textStyles = switchProp(prop('variant', 'none'), {
-  leadTextHeader: leadTextHeader,
-  leadTextContent: leadTextContent,
-  buttonContent: buttonContent,
-  navigationContent: navigationContent,
-  linkContent: linkContent,
+  leadTextHeader,
+  leadTextContent,
+  buttonContent,
+  navigationContent,
+  linkContent,
 })

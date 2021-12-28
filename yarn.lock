@@ -1222,7 +1222,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.7.1":
+"@emotion/react@npm:*, @emotion/react@npm:^11.7.1":
   version: 11.7.1
   resolution: "@emotion/react@npm:11.7.1"
   dependencies:
@@ -2983,6 +2983,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/styled-system": ^5
     "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
     "@ui/utils": "workspace:ui/utils"
     react: ^17.0.2
     react-dom: ^17.0.2

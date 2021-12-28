@@ -1,12 +1,9 @@
-import styled                from '@emotion/styled'
+import styled               from '@emotion/styled'
+import { Text as BaseText } from '@atls-ui-parts/text'
 
-import { typography, color } from 'styled-system'
+import { textStyles }       from './text.styles'
+import { TextProps }        from './text.interface'
 
-import { textStyles }        from './text.styles'
-import { TextProps }         from './text.interface'
+const Text = styled(BaseText)<TextProps>(textStyles)
 
-//@ts-ignore
-export const Text = styled.span<TextProps>(typography, color, textStyles, () => ({
-  textDecoration: true,
-  cursor: true,
-}))
+export { Text }

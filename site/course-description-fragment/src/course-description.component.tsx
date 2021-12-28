@@ -9,19 +9,19 @@ import { Layout }        from '@ui/layout'
 import { Button }        from '@ui/button'
 import { Text }          from '@ui/text'
 import { ImageBlock }    from '@ui/image'
-import { Link }          from '@ui/link'
 
 import messages          from './messages'
 import { CourseContent } from './course-description-content'
 
 const CourseDescription: FC = () => {
   const intl = useIntl()
+
   return (
     <Layout width={['320px', '320px', '100%']}>
       <Column width='100%'>
         <Box
           width={['320px', '320px', '100%']}
-          height={['290px', '290px', '722px']}
+          height={['290px', '290px', 'auto']}
           backgroundColor='softBlack'
           justifyContent='center'
           zIndex={1}
@@ -42,7 +42,6 @@ const CourseDescription: FC = () => {
                     {intl.formatMessage(messages.onlineCourse)}
                   </Text>
                 </Layout>
-                )
                 <Layout flexBasis={[0, 0, 20]} flexShrink={0} />
                 <Layout>
                   <CourseContent />

@@ -8,7 +8,6 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Button }    from '@ui/button'
 import { Text }      from '@ui/text'
-import { Link }      from '@ui/link'
 
 import { Container } from './container'
 import messages      from './messages'

@@ -18,7 +18,7 @@ const Footer: FC = () => {
     <>
       <Box
         width='100%'
-        height='100%'
+        height={252}
         display={['none', 'none', 'flex']}
         justifyContent='center'
         backgroundColor='dullBlack'

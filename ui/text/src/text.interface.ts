@@ -1,10 +1,5 @@
-export interface TextProps {
-  variant?: string
-  fontSize?: string | string[]
-  lineHeight?: string | string[]
-  fontWeight?: string | string[]
-  letterSpacing?: string
-  textAlign?: string | string[]
-  whiteSpace?: 'string'
-  theme?: {}
+import { TextProps as BaseProps } from '@atls-ui-parts/text'
+
+export interface TextProps extends BaseProps {
+  variant: string
 }

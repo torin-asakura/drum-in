@@ -1,14 +1,13 @@
-import React        from 'react'
-import { useIntl }  from 'react-intl'
-import { useState } from 'react'
+import React       from 'react'
+import { useIntl } from 'react-intl'
 
-import { Box }      from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { Text }     from '@ui/text'
-import { Link }     from '@ui/link'
+import { Box }     from '@ui/layout'
+import { Row }     from '@ui/layout'
+import { Layout }  from '@ui/layout'
+import { Text }    from '@ui/text'
+import { Link }    from '@ui/link'
 
-import messages     from '../messages'
+import messages    from '../messages'
 
 const Navigation = () => {
   const intl = useIntl()
@@ -23,7 +22,7 @@ const Navigation = () => {
       backgroundColor='semiTransparent'
     >
       <Layout flexBasis={11} flexShrink={0} />
-      <Row justifyContent='center'>
+      <Row justifyContent='center' alignItems='center'>
         <Link href='#course'>
           <Layout>
             <Text variant='navigationContent'>{intl.formatMessage(messages.rythm)}</Text>

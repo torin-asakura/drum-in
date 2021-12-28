@@ -49,7 +49,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
     <Container
       type={type}
       // @ts-ignore
-      onClick={() => ref.current.focus()}
+      onClick={() => ref.current.focus()} // eslint-disable-line react/destructuring-assignment
     >
       <InputElement {...props} size={size} error={errorText !== ''}>
         <RawInput

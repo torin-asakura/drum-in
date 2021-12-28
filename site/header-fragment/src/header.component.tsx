@@ -16,6 +16,8 @@ import { ContainerRelative } from './container-relative'
 import messages              from './messages'
 
 const Header: FC = () => {
+  const intl = useIntl()
+
   const textDesktop = [messages.instructor, messages.instructorName, messages.whatsUp]
   const textMobileTop = [messages.instructor, messages.instructorNameMobile]
   const textMobileBottom = [
@@ -25,7 +27,7 @@ const Header: FC = () => {
     messages.reviews,
   ]
   const phoneNumber = '+7-926-246-47-59'
-  const intl = useIntl()
+
   return (
     <Box
       width={['320px', '320px', '100%']}

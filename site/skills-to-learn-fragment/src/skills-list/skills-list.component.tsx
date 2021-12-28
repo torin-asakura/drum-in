@@ -49,14 +49,14 @@ const SkillsList: FC = () => {
             </Column>
             <Layout flexBasis={55} flexShrink={0} />
             <Column width='100%'>
-              <ImageBlock stripes={true} />
+              <ImageBlock stripes />
             </Column>
           </Layout>
         </Layout>
         <Layout width='1440px' display={['none', 'none', 'flex']}>
           <Layout>
             <Column width='100%' alignItems='center'>
-              <ImageBlock stripes={true} />
+              <ImageBlock stripes />
             </Column>
             <Layout flexBasis={140} flexShrink={0} />
             <Column width='100%'>
