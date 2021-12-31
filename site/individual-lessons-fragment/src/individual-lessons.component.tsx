@@ -10,6 +10,7 @@ import { Layout }      from '@ui/layout'
 import { Button }      from '@ui/button'
 import { Text }        from '@ui/text'
 import { ImageBlock }  from '@ui/image'
+import { Form }        from '@ui/form'
 
 import { Container }   from './container'
 import messages        from './messages'
@@ -20,7 +21,7 @@ const IndividualLessons: FC = () => {
   const fragment = useFragment()
 
   return (
-    <Layout width='100%'>
+    <Layout width='100%' id='drum-kit'>
       <Column width='100%' alignItems='center'>
         <Container>
           <Layout width='1440px' display={['none', 'none', 'flex']}>
@@ -46,11 +47,15 @@ const IndividualLessons: FC = () => {
                 </Layout>
                 <Layout flexBasis={40} />
                 <Layout>
-                  <Button size='big' width='426px'>
-                    <Text variant='buttonContent' fontSize='huge' lineHeight='semiRegular'>
-                      {intl.formatMessage(messages.signUp)}
-                    </Text>
-                  </Button>
+                  <Form>
+                    {(open) => (
+                      <Button size='big' width='426px' onClick={open}>
+                        <Text variant='buttonContent' fontSize='huge' lineHeight='semiRegular'>
+                          {intl.formatMessage(messages.signUp)}
+                        </Text>
+                      </Button>
+                    )}
+                  </Form>
                 </Layout>
                 <Layout flexBasis={60} />
               </Column>
@@ -103,11 +108,15 @@ const IndividualLessons: FC = () => {
         </Container>
         <Layout flexBasis={50} display={['flex', 'flex', 'none']} />
         <Layout display={['flex', 'flex', 'none']}>
-          <Button size='normal' width='240px'>
-            <Text fontSize='normal' lineHeight='small' variant='buttonContent'>
-              {intl.formatMessage(messages.signUp)}
-            </Text>
-          </Button>
+          <Form>
+            {(open) => (
+              <Button size='normal' width='240px' onClick={open}>
+                <Text fontSize='normal' lineHeight='small' variant='buttonContent'>
+                  {intl.formatMessage(messages.signUp)}
+                </Text>
+              </Button>
+            )}
+          </Form>
         </Layout>
         <Layout flexBasis={30} display={['flex', 'flex', 'none']} />
       </Column>

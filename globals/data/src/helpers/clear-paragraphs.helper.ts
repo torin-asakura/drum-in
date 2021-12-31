@@ -9,8 +9,8 @@ const clear = (string: string) =>
     .replace(/<br\/>/g, '')
     .replace(/<br \/>/g, '')
 
-const clearParagraphs = (objectPointer, props: string[]) => {
-  let object = { ...objectPointer }
+const clearParagraphs = (_object, props: string[]) => {
+  let object = { ..._object }
   for (const key in object) {
     if (props.indexOf(key) != -1) {
       object[key] = clear(object[key])

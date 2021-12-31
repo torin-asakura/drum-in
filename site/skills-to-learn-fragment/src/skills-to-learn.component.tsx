@@ -1,11 +1,11 @@
-import React            from 'react'
+import React          from 'react'
 
-import { Box }          from '@ui/layout'
-import { Column }       from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Line }         from '@ui/line'
+import { Box }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Line }       from '@ui/line'
 
-import { SkillsList }   from './skills-list'
+import { SkillsList } from './skills-list'
 
 const SkillsToLearn = () => (
   <Layout style={{ position: 'relative' }}>

@@ -1,31 +1,27 @@
 {
-  "name": "@site/course-description-fragment",
+  "name": "@ui/form",
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/data": "workspace:globals/data",
+    "@emotion/styled": "^11.6.0",
     "@ui/button": "workspace:ui/button",
-    "@ui/condition": "workspace:ui/condition",
-    "@ui/form": "workspace:ui/form",
-    "@ui/image": "workspace:ui/image",
     "@ui/input": "workspace:ui/input",
     "@ui/layout": "workspace:ui/layout",
-    "@ui/link": "workspace:ui/link",
     "@ui/text": "workspace:ui/text",
+    "axios": "^0.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.14.4",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@apollo/client": "3.3.21",
     "@types/react": "^17",
     "@types/react-dom": "^17",
+    "@types/react-modal": "^3",
     "@types/styled-system": "^5",
     "react-intl": "^5.24.0"
   },
   "peerDependencies": {
-    "@apollo/client": "*",
-    "@emotion/react": "*",
     "react-intl": "*"
   }
 }

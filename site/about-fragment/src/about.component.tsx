@@ -17,13 +17,17 @@ const About = () => {
   const fragment = useFragment()
 
   return (
-    <Box width={['320px', '320px', '100%']} backgroundColor={['white', 'white', 'dullBlack']}>
+    <Box
+      width={['320px', '320px', '100%']}
+      backgroundColor={['white', 'white', 'dullBlack']}
+      id='about'
+    >
       <Row display={['none', 'none', 'flex']} justifyContent='center'>
         <Layout width='1440px'>
           <Layout flexBasis={138} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={50} />
-            <Layout id='about'>
+            <Layout>
               <Text variant='leadTextHeader' fontSize='big' lineHeight='large'>
                 {fragment?.title}
               </Text>

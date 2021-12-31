@@ -9,6 +9,7 @@ import { Layout }        from '@ui/layout'
 import { Button }        from '@ui/button'
 import { Text }          from '@ui/text'
 import { ImageBlock }    from '@ui/image'
+import { Form }          from '@ui/form'
 import { extractUrl }    from '@globals/data'
 
 import messages          from './messages'
@@ -50,28 +51,19 @@ const CourseDescription: FC = () => {
                 <Layout>
                   <CourseContent fragment={fragment} />
                 </Layout>
-                <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
-                <Layout display={['none', 'none', 'flex']}>
-                  <Text
-                    variant='linkContent'
-                    color='dullRed'
-                    fontWeight='bold'
-                    fontSize='huge'
-                    lineHeight='big'
-                    textTransform='uppercase'
-                  >
-                    {fragment?.addons.suffix}
-                  </Text>
-                </Layout>
                 <Layout flexBasis={40} flexShrink={0} display={['none', 'none', 'flex']} />
                 <Layout display={['none', 'none', 'flex']}>
-                  <Button size='big' width='426px'>
-                    <Layout>
-                      <Text lineHeight='big' fontSize='huge' variant='buttonContent'>
-                        {intl.formatMessage(messages.signUp)}
-                      </Text>
-                    </Layout>
-                  </Button>
+                  <Form>
+                    {(open) => (
+                      <Button size='big' width='426px' onClick={open}>
+                        <Layout>
+                          <Text lineHeight='big' fontSize='huge' variant='buttonContent'>
+                            {intl.formatMessage(messages.signUp)}
+                          </Text>
+                        </Layout>
+                      </Button>
+                    )}
+                  </Form>
                 </Layout>
                 <Layout flexBasis={60} flexShrink={0} display={['none', 'none', 'flex']} />
               </Column>
@@ -91,13 +83,17 @@ const CourseDescription: FC = () => {
         </Box>
         <Layout flexBasis={30} display={['flex', 'flex', 'none']} />
         <Layout display={['flex', 'flex', 'none']} justifyContent='center'>
-          <Button size='normal' width='240px'>
-            <Layout>
-              <Text variant='buttonContent' fontSize='normal' lineHeight='semiRegular'>
-                {intl.formatMessage(messages.buyCourse)}
-              </Text>
-            </Layout>
-          </Button>
+          <Form>
+            {(open) => (
+              <Button size='normal' width='240px' onClick={open}>
+                <Layout>
+                  <Text variant='buttonContent' fontSize='normal' lineHeight='semiRegular'>
+                    {intl.formatMessage(messages.buyCourse)}
+                  </Text>
+                </Layout>
+              </Button>
+            )}
+          </Form>
         </Layout>
         <Layout flexBasis={25} display={['flex', 'flex', 'none']} />
       </Column>

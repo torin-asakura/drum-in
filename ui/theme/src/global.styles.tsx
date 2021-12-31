@@ -17,6 +17,7 @@ export const GlobalStyles = () => (
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        scroll-behavior: smooth;
       }
       #__next {
         min-height: 100%;

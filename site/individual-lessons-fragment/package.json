@@ -5,6 +5,7 @@
   "dependencies": {
     "@globals/data": "workspace:globals/data",
     "@ui/button": "workspace:ui/button",
+    "@ui/form": "workspace:ui/form",
     "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
     "@ui/link": "workspace:ui/link",
