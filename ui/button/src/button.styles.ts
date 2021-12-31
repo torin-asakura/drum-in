@@ -52,6 +52,7 @@ export const ghostSizeStyles = createShapeStyles({
 
 export const appearanceStyles = switchProp(prop('variant', 'primary'), {
   primary: combine(primaryAppearanceStyles, primaryHoverAppearanceStyles),
+  ghost: ghostAppearanceStyles,
 })
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
