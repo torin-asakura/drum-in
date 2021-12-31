@@ -1,17 +1,21 @@
-import React      from 'react'
-import { FC }     from 'react'
+import React         from 'react'
+import { FC }        from 'react'
 
-import { Box }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
-import { Row }    from '@ui/layout'
+import { Box }       from '@ui/layout'
+import { Column }    from '@ui/layout'
+import { Layout }    from '@ui/layout'
+import { Row }       from '@ui/layout'
 
-import { Item }   from './item'
+import { Item }      from './item'
+import { useSkills } from './data'
 
 const SkillsPresentation: FC = () => {
-  const columnLeft = ['ПОСТАНОВКА РУК', 'ПОСТАНОВКА НОГ', 'РАЗВИТИЕ КООРДИНАЦИИ']
-  const columnRight = ['ЧТЕНИЕ С ЛИСТА', 'ИГРА ПОД МУЗЫКУ', 'ПОСТРОЕНИЕ ПАРТИЙ']
-  const rythm = 'РАЗВИТИЕ ЧУВСТВА ВРЕМЕНИ'
+  const skills = useSkills()
+
+  const left = skills.filter((skill) => skill.addons.side === 'left')
+  const right = skills.filter((skill) => skill.addons.side === 'right')
+  const mid = skills.filter((skill) => skill.addons.side === 'unset')
+
   return (
     <Box width={['320px', '320px', '100%']} height={['1075px', '1075px', '585px']}>
       <Layout flexBasis={40} flexShrink={0} />
@@ -21,9 +25,9 @@ const SkillsPresentation: FC = () => {
             <Layout>
               <Column>
                 <Layout flexBasis={65} />
-                {columnLeft.map((item) => (
+                {left.map((item) => (
                   <>
-                    <Item item={item} />
+                    <Item item={item?.title} picture={item?.addons.picture} />
                     <Layout flexBasis={60} />
                   </>
                 ))}
@@ -33,9 +37,9 @@ const SkillsPresentation: FC = () => {
             <Layout>
               <Column>
                 <Layout flexBasis={65} />
-                {columnRight.map((item) => (
+                {right.map((item) => (
                   <>
-                    <Item item={item} />
+                    <Item item={item?.title} picture={item?.addons.picture} />
                     <Layout flexBasis={60} />
                   </>
                 ))}
@@ -46,9 +50,9 @@ const SkillsPresentation: FC = () => {
             <Layout>
               <Column>
                 <Layout flexBasis={65} />
-                {columnLeft.map((item) => (
+                {left.map((item) => (
                   <>
-                    <Item item={item} />
+                    <Item item={item?.title} picture={item?.addons.picture} />
                     <Layout flexBasis={30} />
                   </>
                 ))}
@@ -57,9 +61,9 @@ const SkillsPresentation: FC = () => {
             <Layout>
               <Column>
                 <Layout flexBasis={65} />
-                {columnRight.map((item) => (
+                {right.map((item) => (
                   <>
-                    <Item item={item} />
+                    <Item item={item?.title} picture={item?.addons.picture} />
                     <Layout flexBasis={30} />
                   </>
                 ))}
@@ -67,7 +71,7 @@ const SkillsPresentation: FC = () => {
             </Layout>
           </Column>
         </Layout>
-        <Item item={[rythm]} />
+        <Item item={mid[0]?.title} picture={mid[0]?.addons.picture} />
         <Layout flexBasis={20} flexShrink={0} />
       </Column>
       <Layout flexBasis={80} flexShrink={0} />

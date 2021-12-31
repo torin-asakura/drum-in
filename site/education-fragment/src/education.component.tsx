@@ -2,6 +2,7 @@ import React                from 'react'
 import { FC }               from 'react'
 import { useIntl }          from 'react-intl'
 
+import { extractUrl }       from '@globals/data'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -12,9 +13,12 @@ import { ImageBlock }       from '@ui/image'
 import messages             from './messages'
 import { EducationContent } from './education-content'
 import { Experience }       from './experience'
+import { useEducation }     from './data'
 
 const Education: FC = () => {
   const intl = useIntl()
+  const education = useEducation()
+
   return (
     <Box width={['320px', '320px', '100%']} justifyContent='center'>
       <Layout width='1440px' display={['none', 'none', 'flex']}>
@@ -25,15 +29,18 @@ const Education: FC = () => {
             <Column width='100%'>
               <Layout>
                 <Text color='dullBlack' lineHeight='normal' fontSize='big' fontWeight='semiBold'>
-                  {intl.formatMessage(messages.educationHeader)}
+                  {education?.title}
                 </Text>
               </Layout>
               <Layout flexBasis={50} />
-              <EducationContent />
+              <EducationContent content={education?.content} />
             </Column>
             <Layout flexBasis={118} flexShrink={0} />
             <Layout width='538px' height='364px' flexShrink={0}>
-              <ImageBlock />
+              <ImageBlock
+                src={extractUrl(education?.addons.picture)}
+                alt={education?.addons.picture.altText}
+              />
             </Layout>
             <Layout flexBasis={74} flexShrink={0} />
           </Row>
@@ -47,17 +54,20 @@ const Education: FC = () => {
           <Column width='100%'>
             <Layout>
               <Text color='dullBlack' lineHeight='normal' fontWeight='semiBold' fontSize='regular'>
-                {intl.formatMessage(messages.educationHeader)}
+                {education?.title}
               </Text>
             </Layout>
             <Layout flexBasis={12} />
-            <EducationContent />
+            <EducationContent content={education?.content} />
             <Layout flexBasis={20} />
           </Column>
           <Layout flexBasis={44} flexShrink={0} />
         </Row>
         <Layout>
-          <ImageBlock />
+          <ImageBlock
+            src={extractUrl(education?.addons.picture)}
+            alt={education?.addons.picture.altText}
+          />
         </Layout>
         <Layout flexBasis={30} />
         <Row justifyContent='center'>

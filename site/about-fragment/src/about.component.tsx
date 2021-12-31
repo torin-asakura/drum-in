@@ -1,17 +1,21 @@
-import React          from 'react'
-import { useIntl }    from 'react-intl'
+import React           from 'react'
+import { useIntl }     from 'react-intl'
 
-import { Row }        from '@ui/layout'
-import { Box }        from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { ImageBlock } from '@ui/image'
+import { extractUrl }  from '@globals/data'
+import { Row }         from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Text }        from '@ui/text'
+import { ImageBlock }  from '@ui/image'
 
-import messages       from './messages'
+import messages        from './messages'
+import { useFragment } from './data'
 
 const About = () => {
   const intl = useIntl()
+  const fragment = useFragment()
+
   return (
     <Box width={['320px', '320px', '100%']} backgroundColor={['white', 'white', 'dullBlack']}>
       <Row display={['none', 'none', 'flex']} justifyContent='center'>
@@ -21,13 +25,13 @@ const About = () => {
             <Layout flexBasis={50} />
             <Layout id='about'>
               <Text variant='leadTextHeader' fontSize='big' lineHeight='large'>
-                {intl.formatMessage(messages.aboutHeader)}
+                {fragment?.title}
               </Text>
             </Layout>
             <Layout flexBasis={50} />
             <Layout>
               <Text fontSize='normal' lineHeight='large' variant='leadTextContent'>
-                {intl.formatMessage(messages.aboutContent)}
+                {fragment?.content}
               </Text>
             </Layout>
             <Layout flexBasis={50} />
@@ -36,7 +40,10 @@ const About = () => {
           <Column>
             <Layout flexBasis={64} />
             <Layout width='530px' height='311px'>
-              <ImageBlock />
+              <ImageBlock
+                src={extractUrl(fragment?.addons.picture)}
+                alt={fragment?.addons.picture.altText}
+              />
             </Layout>
             <Layout flexBasis={64} />
           </Column>
@@ -50,7 +57,7 @@ const About = () => {
           <Column width='100%'>
             <Layout>
               <Text color='black' fontWeight='bold' lineHeight='normal' fontSize='small'>
-                {intl.formatMessage(messages.aboutHeader)}
+                {fragment?.title}
               </Text>
             </Layout>
             <Layout flexBasis={12} />
@@ -68,7 +75,7 @@ const About = () => {
                 fontSize='regular'
                 textAlign='justify'
               >
-                {intl.formatMessage(messages.aboutContent)}
+                {fragment?.content}
               </Text>
             </Layout>
           </Column>

@@ -1,19 +1,16 @@
-import React       from 'react'
-import { FC }      from 'react'
-import { useIntl } from 'react-intl'
+import React                     from 'react'
+import { FC }                    from 'react'
 
-import { Layout }  from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Layout }                from '@ui/layout'
+import { Column }                from '@ui/layout'
+import { Text }                  from '@ui/text'
 
-import messages    from '../messages'
+import { EducationContentProps } from './education-content.interface'
 
-const EducationContent: FC = () => {
-  const intl = useIntl()
-  const content = [messages.drumClass, messages.drumWorkshop, messages.maimonid]
+const EducationContent: FC<EducationContentProps> = ({ content }) => {
   return (
     <Column>
-      {content.map((item) => (
+      {content?.split('\n').map((item) => (
         <>
           <Layout>
             <Text
@@ -23,7 +20,7 @@ const EducationContent: FC = () => {
               lineHeight='normal'
               textAlign='justify'
             >
-              {intl.formatMessage(item)}
+              {item}
             </Text>
           </Layout>
           <Layout flexBasis={25} />

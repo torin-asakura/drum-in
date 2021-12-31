@@ -1,16 +1,21 @@
-import React       from 'react'
-import { useIntl } from 'react-intl'
+import React           from 'react'
+import { useIntl }     from 'react-intl'
 
-import { Row }     from '@ui/layout'
-import { Box }     from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Row }         from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Text }        from '@ui/text'
 
-import messages    from './messages'
+import messages        from './messages'
+import { useFragment } from './data'
 
 const Address = () => {
   const intl = useIntl()
+  const fragment = useFragment()
+
+  const Map = () => <iframe src={fragment?.addons.prefix} width='100%' height='100%' />
+
   return (
     <>
       <Layout width='100%'>
@@ -29,7 +34,7 @@ const Address = () => {
                   <Layout flexBasis={52} />
                   <Layout>
                     <Text color='white' fontWeight='semiBold' fontSize='big' lineHeight='large'>
-                      {intl.formatMessage(messages.addressHeader)}
+                      {fragment?.title}
                     </Text>
                   </Layout>
                   <Layout flexBasis={60} />
@@ -40,18 +45,7 @@ const Address = () => {
                       fontSize='large'
                       lineHeight='semiNormal'
                     >
-                      {intl.formatMessage(messages.addressCity)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={20} />
-                  <Layout>
-                    <Text
-                      color='white'
-                      fontWeight='semiBold'
-                      fontSize='large'
-                      lineHeight='semiNormal'
-                    >
-                      {intl.formatMessage(messages.addressStreet)}
+                      {fragment?.content}
                     </Text>
                   </Layout>
                   <Layout flexBasis={52} />
@@ -60,7 +54,7 @@ const Address = () => {
               </Layout>
             </Box>
             <Layout width='100%' height='255px'>
-              yandex map
+              <Map />
             </Layout>
           </Row>
           <Layout flexBasis={60} flexShrink={0} />
@@ -74,38 +68,22 @@ const Address = () => {
               <Layout flexBasis={25} />
               <Layout>
                 <Text color='white' fontSize='small' lineHeight='semiSmall' fontWeight='bold'>
-                  {intl.formatMessage(messages.addressHeaderMobile)}
+                  {fragment?.title}
                 </Text>
               </Layout>
-              <Layout flexBasis={25} flexShrink={0} />
+              <Layout flexBasis={50} flexShrink={0} />
               <Layout>
                 <Text color='white' fontSize='small' fontWeight='normal' lineHeight='semiSmall'>
-                  {intl.formatMessage(messages.addressMobile)}
-                </Text>
-              </Layout>
-              <Layout flexBasis={25} flexShrink={0} />
-              <Layout>
-                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='semiSmall'>
-                  {intl.formatMessage(messages.addressStreetMobile)}
-                </Text>
-              </Layout>
-              <Layout flexBasis={25} flexShrink={0} />
-              <Layout>
-                <Text
-                  color='white'
-                  whiteSpace='nowrap'
-                  fontSize='small'
-                  fontWeight='normal'
-                  lineHeight='semiSmall'
-                >
-                  {intl.formatMessage(messages.addressLaneMobule)}
+                  {fragment?.content}
                 </Text>
               </Layout>
               <Layout flexBasis={25} />
             </Column>
             <Layout flexBasis={20} flexShrink={0} />
           </Box>
-          <Layout height='183px'>yandex map</Layout>
+          <Layout height='183px'>
+            <Map />
+          </Layout>
         </Column>
       </Layout>
     </>

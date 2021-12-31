@@ -1,16 +1,14 @@
-import NextApp           from 'next/app'
-import React             from 'react'
-import compose           from 'recompose/compose'
-import { withApollo }    from '@atls/next-app-with-apollo'
-import { withHelmet }    from '@atls/next-app-with-helmet'
-import { withIntl }      from '@monstrs/next-app-with-intl'
-import { ThemeProvider } from '@ui/theme'
+import NextApp            from 'next/app'
+import { ApolloProvider } from '@apollo/client'
+import { ApolloClient }   from '@apollo/client'
+import { InMemoryCache }  from '@apollo/client'
+import React              from 'react'
+import compose            from 'recompose/compose'
+import { withHelmet }     from '@atls/next-app-with-helmet'
+import { withIntl }       from '@monstrs/next-app-with-intl'
+import { ThemeProvider }  from '@ui/theme'
 
 export const withProviders = compose(
-  withApollo({
-    uri: process.env.WP_ENDPOINT || '',
-    onUnauthenticated: () => {},
-  }),
   withIntl({
     default: 'ru',
   }),
@@ -19,10 +17,18 @@ export const withProviders = compose(
 
 const App = (props) => {
   const WithProviders = withProviders(NextApp)
+
+  const client = new ApolloClient({
+    uri: process.env.WP_ENDPOINT || 'https://wp.drumin.pro/graphql',
+    cache: new InMemoryCache(),
+  })
+
   return (
-    <ThemeProvider>
-      <WithProviders {...props} />
-    </ThemeProvider>
+    <ApolloProvider client={client}>
+      <ThemeProvider>
+        <WithProviders {...props} />
+      </ThemeProvider>
+    </ApolloProvider>
   )
 }
 

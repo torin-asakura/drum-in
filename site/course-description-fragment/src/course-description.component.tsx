@@ -9,19 +9,22 @@ import { Layout }        from '@ui/layout'
 import { Button }        from '@ui/button'
 import { Text }          from '@ui/text'
 import { ImageBlock }    from '@ui/image'
+import { extractUrl }    from '@globals/data'
 
 import messages          from './messages'
 import { CourseContent } from './course-description-content'
+import { useFragment }   from './data'
 
 const CourseDescription: FC = () => {
   const intl = useIntl()
+  const fragment = useFragment()
 
   return (
     <Layout width={['320px', '320px', '100%']}>
       <Column width='100%'>
         <Box
           width={['320px', '320px', '100%']}
-          height={['290px', '290px', 'auto']}
+          height='auto'
           backgroundColor='softBlack'
           justifyContent='center'
           zIndex={1}
@@ -38,13 +41,14 @@ const CourseDescription: FC = () => {
                     fontWeight='normal'
                     lineHeight='regular'
                     letterSpacing='0.15em'
+                    textTransform='uppercase'
                   >
-                    {intl.formatMessage(messages.onlineCourse)}
+                    {fragment?.addons.prefix}
                   </Text>
                 </Layout>
                 <Layout flexBasis={[0, 0, 20]} flexShrink={0} />
                 <Layout>
-                  <CourseContent />
+                  <CourseContent fragment={fragment} />
                 </Layout>
                 <Layout flexBasis={34} flexShrink={0} display={['flex', 'flex', 'none']} />
                 <Layout display={['none', 'none', 'flex']}>
@@ -54,8 +58,9 @@ const CourseDescription: FC = () => {
                     fontWeight='bold'
                     fontSize='huge'
                     lineHeight='big'
+                    textTransform='uppercase'
                   >
-                    {intl.formatMessage(messages.courseDescriptionLink)}
+                    {fragment?.addons.suffix}
                   </Text>
                 </Layout>
                 <Layout flexBasis={40} flexShrink={0} display={['none', 'none', 'flex']} />
@@ -74,7 +79,10 @@ const CourseDescription: FC = () => {
               <Column>
                 <Layout flexBasis={65} />
                 <Layout width='494px' height='596px' display={['none', 'none', 'flex']}>
-                  <ImageBlock />
+                  <ImageBlock
+                    src={extractUrl(fragment?.addons.picture)}
+                    alt={fragment?.addons.picture.altText}
+                  />
                 </Layout>
               </Column>
             </Row>

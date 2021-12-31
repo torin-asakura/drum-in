@@ -5,32 +5,33 @@ __metadata:
   version: 4
   cacheKey: 8
 
-"@apollo/client@npm:^3.0.0-beta.23, @apollo/client@npm:^3.3.21, @apollo/client@npm:^3.5.6, @apollo/client@npm:latest":
-  version: 3.5.6
-  resolution: "@apollo/client@npm:3.5.6"
+"@apollo/client@npm:3.3.21":
+  version: 3.3.21
+  resolution: "@apollo/client@npm:3.3.21"
   dependencies:
     "@graphql-typed-document-node/core": ^3.0.0
+    "@types/zen-observable": ^0.8.0
     "@wry/context": ^0.6.0
     "@wry/equality": ^0.5.0
-    "@wry/trie": ^0.3.0
-    graphql-tag: ^2.12.3
+    fast-json-stable-stringify: ^2.0.0
+    graphql-tag: ^2.12.0
     hoist-non-react-statics: ^3.3.2
-    optimism: ^0.16.1
+    optimism: ^0.16.0
     prop-types: ^15.7.2
     symbol-observable: ^4.0.0
-    ts-invariant: ^0.9.4
-    tslib: ^2.3.0
-    zen-observable-ts: ^1.2.0
+    ts-invariant: ^0.8.0
+    tslib: ^1.10.0
+    zen-observable: ^0.8.14
   peerDependencies:
-    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+    graphql: ^14.0.0 || ^15.0.0
     react: ^16.8.0 || ^17.0.0
-    subscriptions-transport-ws: ^0.9.0 || ^0.11.0
+    subscriptions-transport-ws: ^0.9.0
   peerDependenciesMeta:
     react:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 503cc1f34114be1c0fe411744881078f781c6d33b431199dce3813e7cbf85f4cf2f06fd283b08c00f92c0ccea83ef531aa3c5d2215ba2937fb1cc208fbe83300
+  checksum: cdb501045ce8154fadd2cc38d10e92b90c789f58c1960797244f114fd2ac39f535895228545521407ef6b3e7cea64dc8e7050980ca47df7f54d36cb4ecef35df
   languageName: node
   linkType: hard
 
@@ -464,9 +465,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-app-with-apollo@npm:^0.2.70":
-  version: 0.2.71
-  resolution: "@atls/next-app-with-apollo@npm:0.2.71"
+"@atls/next-app-with-apollo@npm:0.2.70":
+  version: 0.2.70
+  resolution: "@atls/next-app-with-apollo@npm:0.2.70"
   dependencies:
     "@apollo/link-error": ^2.0.0-beta.3
     "@apollo/link-schema": ^2.0.0-beta.3
@@ -475,10 +476,9 @@ __metadata:
     "@apollo/client": ^3.0.0-james.33.0
     "@apollo/react-ssr": ^4.0.0-beta.1
     graphql: ^14.5.0 || ^15.0.0
-    next: "*"
     react: ^16.12.0
     react-dom: ^16.9.0
-  checksum: 8a75f523e0ec42004cee8788b28a88e58bc5a8f4e5b5f45870a54235fb20b7b5b905f0a2cc914dcf04d02c192d2fbc19bb59e3ecd02a9044a877d8cfc2581be4
+  checksum: 8dee9907a2ff7ef435b4fabd7585bfdfef955d5f8be10dfe6cccac5071bd4e0bb2e9a8c54a316cac503f1c8e7da8c6935d7d0f92c66818a76bd1e76299366539
   languageName: node
   linkType: hard
 
@@ -1444,9 +1444,11 @@ __metadata:
     "@apollo/client": ^3.5.6
     "@types/react": ^17
     "@types/react-dom": ^17
-    graphql: ^16.2.0
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    graphql: "*"
   languageName: unknown
   linkType: soft
 
@@ -1903,6 +1905,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/about-fragment@workspace:site/about-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -1915,6 +1919,7 @@ __metadata:
     react-intl: ^5.24.0
     styled-system: ^5.1.5
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -1924,6 +1929,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/address-fragment@workspace:site/address-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
@@ -1932,6 +1939,7 @@ __metadata:
     react-dom: ^17.0.2
     react-intl: ^5.24.0
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -1941,11 +1949,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/app@workspace:site/app"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": 3.3.21
     "@apollo/react-ssr": ^4.0.0
     "@atls-ui-parts/button": ^0.0.4
     "@atls/actl-cli": ^0.4.48
-    "@atls/next-app-with-apollo": ^0.2.70
+    "@atls/next-app-with-apollo": 0.2.70
     "@atls/next-app-with-emotion": ^0.2.68
     "@atls/next-app-with-helmet": ^0.2.64
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
@@ -1971,7 +1979,7 @@ __metadata:
     "@ui/theme": "workspace:ui/theme"
     events: ^3.3.0
     express: ^4.17.1
-    graphql: ^15.5.1
+    graphql: 15
     next: ^10.2.3
     next-compose-plugins: ^2.2.0
     react: ^17.0.2
@@ -1989,6 +1997,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/course-description-fragment@workspace:site/course-description-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2004,6 +2014,7 @@ __metadata:
     react-intl: ^5.24.0
     styled-system: ^5.1.5
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -2013,6 +2024,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/education-fragment@workspace:site/education-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2024,6 +2037,7 @@ __metadata:
     react-intl: ^5.24.0
     styled-system: ^5.1.5
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -2033,16 +2047,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/footer-fragment@workspace:site/footer"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
     "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/link": "workspace:ui/link"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: ^5.24.0
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -2052,6 +2070,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/header-fragment@workspace:site/header-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
@@ -2067,8 +2087,10 @@ __metadata:
     react-intl: ^5.24.0
     styled-system: ^5.1.5
   peerDependencies:
+    "@apollo/client": "*"
     "@atls-ui-parts/button": "*"
     "@emotion/react": "*"
+    graphql: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2099,7 +2121,9 @@ __metadata:
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
+    graphql: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2108,10 +2132,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/individual-lessons-fragment@workspace:site/individual-lessons-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
     "@ui/button": "workspace:ui/button"
+    "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
     "@ui/text": "workspace:ui/text"
@@ -2120,6 +2147,7 @@ __metadata:
     react-intl: ^5.24.0
     styled-system: ^5.1.5
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -2129,6 +2157,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/portfolio-fragment@workspace:site/portfolio-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:ui/image"
@@ -2139,6 +2169,7 @@ __metadata:
     react-dom: ^17.0.2
     react-intl: ^5.24.0
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -2166,6 +2197,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/skills-presentation-fragment@workspace:site/skills-presentation-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:ui/image"
@@ -2175,6 +2208,7 @@ __metadata:
     react-dom: ^17.0.2
     react-intl: ^5.24.0
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
   languageName: unknown
   linkType: soft
@@ -2183,10 +2217,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/skills-to-learn-fragment@workspace:site/skills-to-learn-fragment"
   dependencies:
+    "@apollo/client": 3.3.21
+    "@globals/data": "workspace:globals/data"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
     "@ui/condition": "workspace:ui/condition"
+    "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
     "@ui/line": "workspace:ui/line"
     "@ui/text": "workspace:ui/text"
@@ -2194,6 +2231,7 @@ __metadata:
     react-dom: ^17.0.2
     react-intl: ^5.24.0
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react-intl: "*"
   languageName: unknown
@@ -2768,7 +2806,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/zen-observable@npm:*":
+"@types/zen-observable@npm:*, @types/zen-observable@npm:^0.8.0":
   version: 0.8.3
   resolution: "@types/zen-observable@npm:0.8.3"
   checksum: 08c88354abcf03a2176a2ec32e07da1f25fdad94fbc2f419bea53d77deb04ad4759518b4fe3fc695e61065dd4bdf7c8bd26b5211a6cd5be2233872806bdee48d
@@ -7011,7 +7049,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-tag@npm:^2.12.3":
+"graphql-tag@npm:^2.12.0":
   version: 2.12.6
   resolution: "graphql-tag@npm:2.12.6"
   dependencies:
@@ -7022,17 +7060,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^15.5.1":
-  version: 15.8.0
-  resolution: "graphql@npm:15.8.0"
-  checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^16.2.0":
+"graphql@npm:*":
   version: 16.2.0
   resolution: "graphql@npm:16.2.0"
   checksum: 204b5c9991b82561651a28b13dbb2e0e67514171a6a8c045ca4a527b944087344a14519d0426d661b49f2305584b390591abadc82b942f7b65e64e05cb31a584
+  languageName: node
+  linkType: hard
+
+"graphql@npm:15":
+  version: 15.8.0
+  resolution: "graphql@npm:15.8.0"
+  checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
   languageName: node
   linkType: hard
 
@@ -9773,7 +9811,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"optimism@npm:^0.16.1":
+"optimism@npm:^0.16.0":
   version: 0.16.1
   resolution: "optimism@npm:0.16.1"
   dependencies:
@@ -12214,12 +12252,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-invariant@npm:^0.9.4":
-  version: 0.9.4
-  resolution: "ts-invariant@npm:0.9.4"
+"ts-invariant@npm:^0.8.0":
+  version: 0.8.2
+  resolution: "ts-invariant@npm:0.8.2"
   dependencies:
     tslib: ^2.1.0
-  checksum: c9e5726361fa266916966b2070605f8664b6dd1d8b0ef7565dbf056abb6a87be26195985ef62dd97aeb0894cf2f4ad5b7f0d89dadadc197eaa38e99222afa29c
+  checksum: 783ec7a6aff6cc7c39712f0aa40c63e4a6f1cb3d217a15a639b477251ad019dd945e740e7d769e12ada8ef8df27b2b180f04cd301aeb8df4ab66102b08bd9c87
   languageName: node
   linkType: hard
 
@@ -12315,7 +12353,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
+"tslib@npm:^1.10.0, tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
@@ -13144,16 +13182,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"zen-observable-ts@npm:^1.2.0":
-  version: 1.2.3
-  resolution: "zen-observable-ts@npm:1.2.3"
-  dependencies:
-    zen-observable: 0.8.15
-  checksum: 0548b555c67671f1240fb416755d2c27abf095b74a9e25c1abf23b2e15de40e6b076c678a162021358fe62914864eb9f0a57cd65e203d66c4988a08b220e6172
-  languageName: node
-  linkType: hard
-
-"zen-observable@npm:0.8.15":
+"zen-observable@npm:^0.8.14":
   version: 0.8.15
   resolution: "zen-observable@npm:0.8.15"
   checksum: b7289084bc1fc74a559b7259faa23d3214b14b538a8843d2b001a35e27147833f4107590b1b44bf5bc7f6dfe6f488660d3a3725f268e09b3925b3476153b7821

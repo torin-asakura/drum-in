@@ -28,7 +28,9 @@
     "@types/styled-system": "^5"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
+    "graphql": "*",
     "react-intl": "*"
   }
 }

@@ -1,19 +1,24 @@
-import React         from 'react'
-import { FC }        from 'react'
-import { useIntl }   from 'react-intl'
+import React           from 'react'
+import { FC }          from 'react'
+import { useIntl }     from 'react-intl'
 
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Button }    from '@ui/button'
-import { Text }      from '@ui/text'
+import { extractUrl }  from '@globals/data'
+import { Box }         from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Button }      from '@ui/button'
+import { Text }        from '@ui/text'
+import { ImageBlock }  from '@ui/image'
 
-import { Container } from './container'
-import messages      from './messages'
+import { Container }   from './container'
+import messages        from './messages'
+import { useFragment } from './data'
 
 const IndividualLessons: FC = () => {
   const intl = useIntl()
+  const fragment = useFragment()
+
   return (
     <Layout width='100%'>
       <Column width='100%' alignItems='center'>
@@ -30,13 +35,13 @@ const IndividualLessons: FC = () => {
                     lineHeight={['semiregular', 'semiRegular', 'large']}
                     textAlign={['center', 'center', 'start']}
                   >
-                    {intl.formatMessage(messages.individualLessonsHeader)}
+                    {fragment?.title}
                   </Text>
                 </Layout>
                 <Layout flexBasis={20} />
                 <Layout>
                   <Text variant='leadTextContent' fontSize='normal' lineHeight='huge'>
-                    {intl.formatMessage(messages.individualLessonsContent)}
+                    {fragment?.content}
                   </Text>
                 </Layout>
                 <Layout flexBasis={40} />
@@ -52,8 +57,11 @@ const IndividualLessons: FC = () => {
               <Layout flexBasis={120} flexShrink={0} />
               <Column>
                 <Layout flexBasis={60} />
-                <Layout width='538px' height='500px' style={{ border: '1px solid white' }}>
-                  video
+                <Layout width='538px' height='500px'>
+                  <ImageBlock
+                    src={extractUrl(fragment?.addons.picture)}
+                    alt={fragment?.addons.altText}
+                  />
                 </Layout>
                 <Layout flexBasis={20} />
               </Column>
@@ -72,7 +80,7 @@ const IndividualLessons: FC = () => {
                     lineHeight={['semiregular', 'semiRegular', 'large']}
                     textAlign={['center', 'center', 'start']}
                   >
-                    {intl.formatMessage(messages.individualLessonsHeader)}
+                    {fragment?.title}
                   </Text>
                 </Layout>
                 <Layout flexBasis={10} flexShrink={0} />
@@ -83,7 +91,7 @@ const IndividualLessons: FC = () => {
                     lineHeight='semiRegular'
                     fontWeight='semiNormal'
                   >
-                    {intl.formatMessage(messages.individualLessonsContent)}
+                    {fragment?.content}
                   </Text>
                 </Layout>
                 <Layout flexBasis={25} flexShrink={0} />

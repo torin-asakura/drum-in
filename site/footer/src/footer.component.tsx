@@ -6,14 +6,17 @@ import { Box }        from '@ui/layout'
 import { Column }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { Layout }     from '@ui/layout'
-import { Button }     from '@ui/button'
+import { Link }       from '@ui/link'
 import { ImageBlock } from '@ui/image'
 import { Text }       from '@ui/text'
 
 import messages       from './messages'
+import { useSocials } from './data'
 
 const Footer: FC = () => {
   const intl = useIntl()
+  const socials = useSocials()
+
   return (
     <>
       <Box
@@ -41,83 +44,41 @@ const Footer: FC = () => {
               </Layout>
               <Layout flexBasis={56} />
               <Row>
-                <Layout width='48px' height='48px'>
-                  <ImageBlock />
-                </Layout>
-                <Layout flexBasis={103} flexShrink={0} />
-                <Layout width='48px' height='48px'>
-                  <ImageBlock />
-                </Layout>
-                <Layout flexBasis={103} flexShrink={0} />
-                <Layout width='48px' height='48px'>
-                  <ImageBlock />
-                </Layout>
-                <Layout flexBasis={103} flexShrink={0} />
-                <Layout width='48px' height='48px'>
-                  <ImageBlock />
-                </Layout>
+                {socials.map((social) => (
+                  <>
+                    <Link href={social?.content}>
+                      <ImageBlock
+                        style={{ transform: 'scale(2)' }}
+                        src={social?.url}
+                        alt={social?.alt}
+                      />
+                    </Link>
+                    <Layout flexBasis={103} flexShrink={0} />
+                  </>
+                ))}
               </Row>
             </Column>
             <Layout flexBasis='800px' flexShrink={0} />
           </Row>
         </Layout>
       </Box>
-      <Box
-        width='320px'
-        height='400px'
-        display={['flex', 'flex', 'none']}
-        backgroundColor='dullBlack'
-      >
+      <Box width='320px' display={['flex', 'flex', 'none']} backgroundColor='dullBlack'>
         <Layout flexBasis={30} />
         <Column width='100%' alignItems='center'>
-          <Layout flexBasis={30} />
-          <Layout>
-            <Button size='normal' width='240px'>
-              <Layout>
-                <Text
-                  color='white'
-                  fontWeight='bold'
-                  fontSize='normal'
-                  lineHeight='semiRegular'
-                  letterSpacing='0.15em'
-                >
-                  {intl.formatMessage(messages.signUp)}
-                </Text>
-              </Layout>
-            </Button>
-          </Layout>
-          <Layout flexBasis={30} />
-          <Layout>
-            <Text
-              color='white'
-              fontWeight='bold'
-              fontSize='regular'
-              lineHeight='small'
-              letterSpacing='0.15em'
-            >
-              {intl.formatMessage(messages.linkMobile)}
-            </Text>
-          </Layout>
           <Layout flexBasis={50} />
           <Row justifyContent='center'>
-            <Layout width='48px' height='48px'>
-              <ImageBlock />
-            </Layout>
-            <Layout flexBasis={100} flexShrink={0} />
-            <Layout width='48px' height='48px'>
-              <ImageBlock />
-            </Layout>
+            {socials.map((social) => (
+              <>
+                <Layout flexShrink={0}>
+                  <Link href={social?.content}>
+                    <ImageBlock width='48px' height='48px' src={social?.url} alt={social?.alt} />
+                  </Link>
+                </Layout>
+                <Layout flexBasis={100} />
+              </>
+            ))}
           </Row>
-          <Layout flexBasis={100} flexShrink={0} />
-          <Row justifyContent='center'>
-            <Layout width='48px' height='48px'>
-              <ImageBlock />
-            </Layout>
-            <Layout flexBasis={100} flexShrink={0} />
-            <Layout width='48px' height='48px'>
-              <ImageBlock />
-            </Layout>
-          </Row>
+          <Layout flexBasis={70} />
         </Column>
         <Layout flexBasis={30} />
       </Box>

@@ -1,7 +1,8 @@
-type IntlMessage = {
-  id: string
-  defaultMessage: string
+interface Trait {
+  title: string
+  content: string
 }
+
 export interface ContentRenderProps {
-  array: IntlMessage[]
+  array: Trait[]
 }

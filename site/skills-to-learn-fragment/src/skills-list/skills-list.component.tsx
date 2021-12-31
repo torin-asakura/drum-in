@@ -1,42 +1,31 @@
-import React                 from 'react'
-import { FC }                from 'react'
+import React                    from 'react'
+import { FC }                   from 'react'
 
-import { Column }            from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Row }               from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Layout }               from '@ui/layout'
+import { Row }                  from '@ui/layout'
+import { extractUrl }           from '@globals/data'
 
-import { ImageBlock }        from '../image-block'
-
-import { Skills }            from '../skills'
-import { ContainerRelative } from '../container-relative'
+import { ImageBlock }           from '../image-block'
+import { Skills }               from '../skills'
+import { ContainerRelative }    from '../container-relative'
+import { useCourseDescription } from '../data'
 
 const SkillsList: FC = () => {
-  const before = {
-    texts: [
-      {
-        header: 'ВЫ НАУЧИТЕСЬ',
-        content: [
-          'исполнять и слышать различные виды длительностей (четверти, восьмые, шестнадцатые, триоли, квинтоли и т.д.)',
-          'определять размер такта (в том числе сложные и переменные размеры)',
-          'Читать ритмические тексты',
-          'Делать акценты на любые доли',
-          'Играть полиритмию',
-          'Играть и петь свинг',
-        ],
-      },
-      {
-        header: 'ВЫ ПОЛУЧИТЕ',
-        content: [
-          'преодоление физического двигательного барьера',
-          'развитие обоих полушарий головного мозга',
-          'навык нотной записи ритма',
-          'практику на перкуссии',
-          'практику работы с метрономом',
-          'контроль темпа',
-        ],
-      },
-    ],
+  const courseDescription = useCourseDescription()
+
+  const before = courseDescription.filter((desc) => desc?.addons.side === 'left')
+  const after = courseDescription.filter((desc) => desc?.addons.side === 'right')
+
+  const imageBefore = {
+    url: extractUrl(before[0]?.addons.picture),
+    alt: before[0]?.addons.picture.altText,
   }
+  const imageAfter = {
+    url: extractUrl(after[0]?.addons.picture),
+    alt: after[0]?.addons.picture.altText,
+  }
+
   return (
     <>
       <Column width='100%' alignItems='center' display={['none', 'none', 'flex']}>
@@ -49,19 +38,19 @@ const SkillsList: FC = () => {
             </Column>
             <Layout flexBasis={55} flexShrink={0} />
             <Column width='100%'>
-              <ImageBlock stripes />
+              <ImageBlock stripes src={imageBefore.url} alt={imageBefore.alt} />
             </Column>
           </Layout>
         </Layout>
         <Layout width='1440px' display={['none', 'none', 'flex']}>
           <Layout>
             <Column width='100%' alignItems='center'>
-              <ImageBlock stripes />
+              <ImageBlock stripes src={imageAfter.url} alt={imageAfter.alt} />
             </Column>
             <Layout flexBasis={140} flexShrink={0} />
             <Column width='100%'>
               <Layout flexBasis={60} flexShrink={0} />
-              <Skills items={before} />
+              <Skills items={after} />
             </Column>
             <Layout flexBasis={55} flexShrink={0} />
           </Layout>
@@ -76,7 +65,7 @@ const SkillsList: FC = () => {
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
-          <ImageBlock />
+          <ImageBlock src={imageBefore.url} alt={imageBefore.alt} />
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
@@ -87,7 +76,7 @@ const SkillsList: FC = () => {
         </Row>
         <Layout flexBasis={20} flexShrink={0} />
         <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
-          <ImageBlock />
+          <ImageBlock src={imageAfter.url} alt={imageAfter.alt} />
         </Layout>
         <Row>
           <Layout flexBasis={15} flexShrink={0} />
@@ -96,10 +85,6 @@ const SkillsList: FC = () => {
           </ContainerRelative>
           <Layout flexBasis={15} flexShrink={0} />
         </Row>
-        <Layout width='320px' height='320px' style={{ zIndex: 1 }}>
-          <ImageBlock />
-        </Layout>
-        <ContainerRelative height='30px' />
       </Column>
     </>
   )

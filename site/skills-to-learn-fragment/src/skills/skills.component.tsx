@@ -13,7 +13,7 @@ const Skills: FC<SkillsProps> = ({ items }) => (
   <Layout width={['305px', '305px', '730px']} flexGrow={0}>
     <Column>
       <Layout flexBasis={20} flexShrink={0} />
-      {items.texts.map((item) => (
+      {items.map((item) => (
         <Row>
           <Layout height={['18px', '18px', '22px']} alignItems='flex-end'>
             <Box
@@ -25,7 +25,7 @@ const Skills: FC<SkillsProps> = ({ items }) => (
             />
           </Layout>
           <Layout flexBasis={['11px', '11px', '18px']} flexShrink={0} />
-          <Item header={item.header} content={item.content} />
+          <Item header={item.title} content={item.content} />
         </Row>
       ))}
     </Column>

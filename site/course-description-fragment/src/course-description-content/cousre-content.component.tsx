@@ -1,37 +1,33 @@
-import React       from 'react'
-import { FC }      from 'react'
-import { useIntl } from 'react-intl'
+import React                  from 'react'
+import { FC }                 from 'react'
 
-import { Column }  from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
 
-import messages    from '../messages'
+import { CourseContentProps } from './course-content.interface'
 
-const CourseContent: FC = () => {
-  const intl = useIntl()
+const CourseContent: FC<CourseContentProps> = ({ fragment }) => {
   return (
     <Layout>
       <Column alignItems={['center', 'center', 'flex-start']}>
-        <Layout display={['flex', 'flex', 'none']}>
-          <Text fontSize='small' lineHeight='semiRegular' variant='leadTextHeader'>
-            {intl.formatMessage(messages.courseNameMobile)}
-          </Text>
-        </Layout>
-        <Layout display={['none', 'none', 'flex']}>
-          <Text fontSize='large' variant='leadTextHeader' lineHeight='semiNormal'>
-            {intl.formatMessage(messages.courseName)}
+        <Layout>
+          <Text
+            fontSize={['small', 'small', 'large']}
+            variant='leadTextHeader'
+            lineHeight={['semiRegular', 'semiRegular', 'semiNormal']}
+          >
+            {fragment?.title}
           </Text>
         </Layout>
         <Layout flexBasis={[30, 30, 39]} />
-        <Layout display={['flex', 'flex', 'none']}>
-          <Text variant='leadTextContent' fontSize='mini' lineHeight='semiRegular'>
-            {intl.formatMessage(messages.courseDescriptionMobile)}
-          </Text>
-        </Layout>
-        <Layout display={['none', 'none', 'flex']}>
-          <Text variant='leadTextContent' fontSize='normal' lineHeight='large'>
-            {intl.formatMessage(messages.courseDescriptionContent)}
+        <Layout>
+          <Text
+            variant='leadTextContent'
+            fontSize={['mini', 'mini', 'normal']}
+            lineHeight={['semiRegular', 'semiRegular', 'large']}
+          >
+            {fragment?.content}
           </Text>
         </Layout>
         <Layout flexBasis={[30, 30, 39]} />

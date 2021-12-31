@@ -1,16 +1,15 @@
-import React       from 'react'
-import { useIntl } from 'react-intl'
+import React           from 'react'
 
-import { Box }     from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Text }    from '@ui/text'
-import { Link }    from '@ui/link'
+import { Box }         from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Layout }      from '@ui/layout'
 
-import messages    from '../messages'
+import { useNavlinks } from '../data'
+import { Item }        from './item'
 
 const Navigation = () => {
-  const intl = useIntl()
+  const navlinks = useNavlinks()
+
   return (
     <Box
       width='995px'
@@ -23,29 +22,12 @@ const Navigation = () => {
     >
       <Layout flexBasis={11} flexShrink={0} />
       <Row justifyContent='center' alignItems='center'>
-        <Link href='#course'>
-          <Layout>
-            <Text variant='navigationContent'>{intl.formatMessage(messages.rythm)}</Text>
-          </Layout>
-        </Link>
-        <Layout flexBasis={45} />
-        <Link href='#lessons'>
-          <Layout>
-            <Text variant='navigationContent'>{intl.formatMessage(messages.drum)}</Text>
-          </Layout>
-        </Link>
-        <Layout flexBasis={45} />
-        <Link href='#about'>
-          <Layout>
-            <Text variant='navigationContent'>{intl.formatMessage(messages.instructorAbout)}</Text>
-          </Layout>
-        </Link>
-        <Layout flexBasis={45} />
-        <Link href='#reviews'>
-          <Layout>
-            <Text variant='navigationContent'>{intl.formatMessage(messages.reviews)}</Text>
-          </Layout>
-        </Link>
+        {navlinks.map(({ title, content }) => (
+          <>
+            <Item title={title} anchor={content} />
+            <Layout flexBasis={45} />
+          </>
+        ))}
         <Layout flexBasis={11} />
       </Row>
     </Box>

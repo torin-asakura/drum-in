@@ -9,24 +9,19 @@ import { Column }            from '@ui/layout'
 import { Text }              from '@ui/text'
 import { ImageBlock }        from '@ui/image'
 
+import { useLogo }           from './data'
+import { useTraits }         from './data'
+import { useNavlinks }       from './data'
+import { useSocials }        from './data'
 import { Navigation }        from './navigation'
 import { Social }            from './social'
 import { ContentRender }     from './content-render'
 import { ContainerRelative } from './container-relative'
-import messages              from './messages'
 
 const Header: FC = () => {
-  const intl = useIntl()
-
-  const textDesktop = [messages.instructor, messages.instructorName, messages.whatsUp]
-  const textMobileTop = [messages.instructor, messages.instructorNameMobile]
-  const textMobileBottom = [
-    messages.drum,
-    messages.rythmMobile,
-    messages.instructorAbout,
-    messages.reviews,
-  ]
-  const phoneNumber = '+7-926-246-47-59'
+  const logo = useLogo()
+  const traits = useTraits()
+  const navlinks = useNavlinks()
 
   return (
     <Box
@@ -37,13 +32,13 @@ const Header: FC = () => {
       <Layout width='1440px' display={['none', 'none', 'flex']}>
         <Layout flexBasis={20} flexShrink={0} />
         <Layout width='214px' height='216px' flexShrink={0}>
-          <ImageBlock />
+          <ImageBlock src={logo.url} alt={logo.alt} />
         </Layout>
         <Layout flexBasis={22} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={60} flexShrink={0} />
           <Layout width='450px'>
-            <ContentRender array={textDesktop} />
+            <ContentRender array={traits} />
           </Layout>
           <Layout flexBasis={18} />
           <Box width='300px' overflow='visible' zIndex={2}>
@@ -74,26 +69,14 @@ const Header: FC = () => {
               <Column width='100%' alignItems='center'>
                 <Layout flexBasis={30} />
                 <Layout>
-                  <ContentRender array={textMobileTop} />
-                </Layout>
-                <Layout>
-                  <Text
-                    whiteSpace='nowrap'
-                    color='dullBlack'
-                    fontSize='small'
-                    fontWeight='bold'
-                    lineHeight='semiSmall'
-                    letterSpacing='0.15em'
-                  >
-                    {phoneNumber}
-                  </Text>
+                  <ContentRender array={traits} />
                 </Layout>
                 <Layout flexBasis={14} />
                 <Layout width='80px' height='80px'>
-                  <ImageBlock />
+                  <ImageBlock src={logo.url} alt={logo.alt} />
                 </Layout>
                 <Layout flexBasis={14} />
-                {textMobileBottom.map((item) => (
+                {navlinks.map((item) => (
                   <>
                     <Layout>
                       <Text
@@ -104,7 +87,7 @@ const Header: FC = () => {
                         fontWeight='normal'
                         letterSpacing='0.15em'
                       >
-                        {intl.formatMessage(item)}
+                        {item?.title}
                       </Text>
                     </Layout>
                     <Layout flexBasis={14} flexShrink={0} />
