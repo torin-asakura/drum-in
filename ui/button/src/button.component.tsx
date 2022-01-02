@@ -1,9 +1,16 @@
-import styled                                              from '@emotion/styled'
-import { space, flexbox, layout, color, border, position } from 'styled-system'
+import styled               from '@emotion/styled'
+import { layout }           from 'styled-system'
+import { space }            from 'styled-system'
 
-export const Button = styled('div')(space, flexbox, layout, color, border, position, () => ({
-  cursor: 'pointer',
-}))
-Button.defaultProps = {
-  display: 'flex',
-}
+import { baseStyles }       from './button.styles'
+import { shapeStyles }      from './button.styles'
+import { appearanceStyles } from './button.styles'
+import { ButtonProps }      from './button.interface'
+
+export const Button = styled.button<ButtonProps>(
+  baseStyles,
+  shapeStyles,
+  appearanceStyles,
+  layout,
+  space
+)

@@ -3,16 +3,30 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.6.0",
+    "@globals/data": "workspace:globals/data",
+    "@ui/button": "workspace:ui/button",
+    "@ui/condition": "workspace:ui/condition",
+    "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
+    "@ui/line": "workspace:ui/line",
+    "@ui/link": "workspace:ui/link",
     "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "@apollo/client": "3.3.21",
     "@types/react": "^17",
     "@types/react-dom": "^17",
-    "@types/styled-system": "^5"
+    "@types/styled-system": "^5",
+    "react-intl": "^5.24.0"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "@atls-ui-parts/button": "*",
+    "@emotion/react": "*",
+    "graphql": "*",
+    "react-intl": "*"
   }
 }

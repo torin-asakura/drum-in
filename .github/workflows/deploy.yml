@@ -5,15 +5,23 @@ on:
 
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn workspace @site/app build
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: 37.140.192.245
           username: u1055818_drumin
+          local-dir: "./site/app/out/"
+          server-dir: "/"
           password: ${{ secrets.ftp_password }}

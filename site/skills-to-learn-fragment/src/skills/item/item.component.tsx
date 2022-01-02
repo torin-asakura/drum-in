@@ -7,16 +7,26 @@ import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
 
 import { ItemProps } from './item.interface'
+import { List }      from './list.component'
 
-const Item: FC<ItemProps> = ({ header, main }) => (
-  <Box border='1px solid black' zIndex={0}>
+const Item: FC<ItemProps> = ({ header, content }) => (
+  <Box>
     <Column>
       <Layout>
-        <Text>{header}</Text>
+        <Text
+          color='dullBlack'
+          fontSize={['small', 'small', 'big']}
+          fontWeight='bold'
+          lineHeight={['normal', 'normal', 'normal']}
+        >
+          {header}
+        </Text>
       </Layout>
-      <Layout>
-        <Text>{main}</Text>
-      </Layout>
+      <Layout flexBasis={20} />
+      <Column>
+        <List content={content} />
+        <Layout flexBasis={40} />
+      </Column>
     </Column>
   </Box>
 )

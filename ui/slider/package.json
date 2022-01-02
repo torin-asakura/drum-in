@@ -1,0 +1,17 @@
+{
+  "name": "@ui/slider",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@emotion/styled": "^11.6.0",
+    "@ui/button": "workspace:ui/button",
+    "@ui/layout": "workspace:ui/layout",
+    "@ui/utils": "workspace:ui/utils",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/styled-system": "^5",
+    "styled-system": "^5.1.5"
+  }
+}

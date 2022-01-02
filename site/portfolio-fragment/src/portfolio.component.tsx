@@ -1,38 +1,71 @@
-import React      from 'react'
-import { FC }     from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { Box }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
-import { Row }    from '@ui/layout'
-import { Text }   from '@ui/text'
+import { extractUrl }        from '@globals/data'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { ImageBlock }        from '@ui/image'
+import { Line }              from '@ui/line'
 
-const Portfolio: FC = () => (
-  <Box width='1440px' height='1100px' border='1px solid black' display={['none', 'none', 'flex']}>
-    <Column width='100%' style={{ border: '1px solid black' }}>
-      <Row style={{ border: '1px solid black' }}>
-        <Layout flexBasis={65} flexShrink={0} />
-        <Column alignItems='center' style={{ border: '1px solid black' }}>
-          <Layout flexBasis={70} />
-          <Layout width='355px' height='64px' style={{ border: '1px solid black' }} />
-          <Layout style={{ border: '1px solid black' }}>img</Layout>
-          <Layout width='355px' height='74px' style={{ border: '1px solid black' }} />
-          <Layout style={{ border: '1px solid black' }}>img</Layout>
-          <Box width='355px' height='45px' border='1px solid black' />
+import { GenreList }         from './genre-list'
+import { ContainerRelative } from './container-relative'
+import { usePortfolio }      from './data'
+
+const Portfolio: FC = () => {
+  const portfolio = usePortfolio()
+
+  return (
+    <Box width='100%' height='1100px' display={['none', 'none', 'flex']} justifyContent='center'>
+      <Layout width='1440px'>
+        <Column width='100%'>
+          <Row justifyContent='space-between'>
+            <Layout flexBasis={65} flexShrink={0} />
+            <Column alignItems='center'>
+              <Layout flexBasis={70} />
+              <Layout width='500px' flexBasis={60} justifyContent='center'>
+                <ContainerRelative width='375px' height='60px'>
+                  <Line height='60px' />
+                </ContainerRelative>
+              </Layout>
+              <Layout width='505px' height='392px'>
+                <ImageBlock
+                  src={extractUrl(portfolio?.addons.picture)}
+                  alt={portfolio?.addons.picture.altText}
+                />
+              </Layout>
+              <Layout width='500px' flexBasis={60} justifyContent='center'>
+                <ContainerRelative width='375px' height='60px'>
+                  <Line height='60px' />
+                </ContainerRelative>
+              </Layout>
+              <Layout width='505px' height='392px'>
+                <ImageBlock
+                  src={extractUrl(portfolio?.additionalImage.image)}
+                  alt={portfolio?.additionalImage.altText}
+                />
+              </Layout>
+              <Layout width='500px' flexBasis={60} justifyContent='center'>
+                <ContainerRelative width='375px' height='60px'>
+                  <Line height='60px' />
+                </ContainerRelative>
+              </Layout>
+            </Column>
+            <Layout flexBasis={160} flexShrink={0} />
+            <Column>
+              <Layout flexBasis='126px' />
+              <Layout>
+                <GenreList content={portfolio?.content} />
+              </Layout>
+              <Layout flexBasis={82} />
+            </Column>
+            <Layout flexBasis={143} flexShrink={0} />
+          </Row>
+          <Layout flexBasis={60} />
         </Column>
-        <Layout flexBasis={160} />
-        <Column style={{ border: '1px solid black' }}>
-          <Layout flexBasis='126px' />
-          <Layout style={{ border: '1px solid black' }}>
-            <Text>text</Text>
-          </Layout>
-          <Layout flexBasis={82} />
-        </Column>
-        <Layout flexBasis={143} flexShrink={0} />
-      </Row>
-      <Layout flexBasis={60} />
-    </Column>
-  </Box>
-)
-
+      </Layout>
+    </Box>
+  )
+}
 export { Portfolio }
