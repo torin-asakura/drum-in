@@ -70,6 +70,5 @@ credentials.json
 .ini
 .ignore
 
-# Exclude all wp themes except current one
-wp-content/themes
-wp-content/themes/!misik!/
+# Next static dir
+out
