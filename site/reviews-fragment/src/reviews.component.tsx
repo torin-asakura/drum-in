@@ -17,7 +17,7 @@ const Reviews: FC = () => {
   const reviews = useReviews()
 
   return (
-    <Box width={[0, 0, '100%']} height={[0, 0, '430px']} justifyContent='center'>
+    <Box width='100%' justifyContent='center'>
       <Layout flexBasis={265} display={['none', 'none', 'flex']} />
       <Layout width='1440px' display={['none', 'none', 'flex']}>
         <Column width='100%' display={['none', 'none', 'flex']}>
@@ -34,7 +34,7 @@ const Reviews: FC = () => {
         </Column>
       </Layout>
       <Layout flexBasis={156} flexShrink={0} display={['none', 'none', 'flex']} />
-      <Row display='none'>
+      <Row display={['flex', 'flex', 'none']}>
         <Layout flexBasis={10} />
         <Column width='100%'>
           <Layout flexBasis={15} />

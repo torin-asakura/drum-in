@@ -1,22 +1,27 @@
-import React         from 'react'
-import { useState }  from 'react'
-import { useRef }    from 'react'
-import { useEffect } from 'react'
-import styled        from '@emotion/styled'
+import React          from 'react'
+import { useState }   from 'react'
+import { useRef }     from 'react'
+import { useEffect }  from 'react'
 
-import { useHover }  from '@ui/utils'
-import { Button }    from '@ui/button'
-import { Row }       from '@ui/layout'
-import { Box }       from '@ui/layout'
-import { Layout }    from '@ui/layout'
+import { Button }     from '@ui/button'
+import { Column }     from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Box }        from '@ui/layout'
+import { Layout }     from '@ui/layout'
+
+import { Dot }        from './dot'
+import { ArrowLeft }  from './arrow-left'
+import { ArrowRight } from './arrow-right'
 
 const Slider = ({ reviews = [] }) => {
   const [step, setStep] = useState<number>(0)
   const left = useRef(null)
   const right = useRef(null)
 
+  const rightBorder = reviews.length - 2 > 0 ? reviews.length - 2 : 1
+
   const slideRight = () => {
-    if (step + 1 > reviews.length - 2) {
+    if (step + 1 > rightBorder) {
       setStep(0)
       return
     }
@@ -24,7 +29,7 @@ const Slider = ({ reviews = [] }) => {
   }
   const slideLeft = () => {
     if (step - 1 < 0) {
-      setStep(reviews.length - 2)
+      setStep(rightBorder)
       return
     }
     setStep(step - 1)
@@ -39,52 +44,38 @@ const Slider = ({ reviews = [] }) => {
     }
   }, [reviews, left, right, step])
 
-  const ArrowRight = () => {
-    const [hover, hoverProps] = useHover()
-
-    const StyledArrow = styled(Box)<{ hover: boolean }>(({ theme, hover }) => ({
-      width: 0,
-      height: 0,
-      borderTop: '15px solid transparent',
-      borderBottom: '15px solid transparent',
-      borderLeft: `20px solid ${hover ? theme.colors.button.primary.hover : theme.colors.dullRed}`,
-    }))
-
-    return <StyledArrow hover={hover as boolean} {...hoverProps} />
-  }
-
-  const ArrowLeft = () => {
-    const [hover, hoverProps] = useHover()
-
-    const StyledArrow = styled(Box)<{ hover: boolean }>(({ theme, hover }) => ({
-      width: 0,
-      height: 0,
-      borderTop: '15px solid transparent',
-      borderBottom: '15px solid transparent',
-      borderRight: `20px solid ${hover ? theme.colors.button.primary.hover : theme.colors.dullRed}`,
-    }))
-
-    return <StyledArrow hover={hover as boolean} {...hoverProps} />
-  }
-
   return (
-    <Row justifyContent='center'>
-      <Layout height='100%' alignItems='center'>
-        <Button size='ghost' variant='ghost' onClick={slideLeft}>
-          <ArrowLeft />
-        </Button>
-      </Layout>
-      <Layout flexBasis={30} />
-      <Layout ref={left} />
-      <Layout flexBasis={[0, 0, 92]} />
-      <Layout ref={right} />
-      <Layout flexBasis={30} />
-      <Layout height='100%' alignItems='center'>
-        <Button size='ghost' variant='ghost' onClick={slideRight}>
-          <ArrowRight />
-        </Button>
-      </Layout>
-    </Row>
+    <Column fill>
+      <Row justifyContent='center'>
+        <Layout flexBasis={30} />
+        <Layout width='100%' overflow='hidden' ref={left} />
+        <Layout display={['none', 'none', 'flex']} ref={right} />
+        <Layout flexBasis={30} />
+      </Row>
+      <Layout flexBasis={120} />
+      <Row>
+        <Layout flexBasis={30} />
+        <Layout height='100%' alignItems='center'>
+          <Button size='ghost' variant='ghost' onClick={slideLeft}>
+            <ArrowLeft />
+          </Button>
+        </Layout>
+        <Row justifyContent='center'>
+          {[...Array(rightBorder + 1)].map((i, index) => (
+            <>
+              <Dot active={index === step} />
+              <Layout flexBasis={16} />
+            </>
+          ))}
+        </Row>
+        <Layout height='100%' alignItems='center'>
+          <Button size='ghost' variant='ghost' onClick={slideRight}>
+            <ArrowRight />
+          </Button>
+        </Layout>
+        <Layout flexBasis={30} />
+      </Row>
+    </Column>
   )
 }
 

@@ -5,6 +5,7 @@ export const colors = {
   black: 'rgba(0, 0, 0, 1)',
   dullBlack: 'rgba(20, 20, 20, 1)',
   softBlack: 'rgba(14, 13, 13, 1)',
+  transparentBlack: 'rgba(0,0,0,0.25)',
   dullRed: 'rgba(234, 9, 5, 1)',
   duskRed: 'rgba(252, 117, 115, 1)',
   button: {

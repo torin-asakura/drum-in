@@ -133,14 +133,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/layout@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@atls-ui-parts/layout@npm:0.0.2"
+"@atls-ui-parts/layout@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls-ui-parts/layout@npm:0.0.3"
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
     styled-system: ^5.1.5
-  checksum: 0c1e7eff5e46cf2dd865fec7070fdfea03f18430b3ed37b23bbb4d639a7b14134ff00e7bc94f2877f09ae8266f6b7ab7cd9c0f5522921ae3529e49cb8f4be124
+  checksum: 5562257045e112465c59332d9c1c73b3e01dca0aaabb0c4b0e79b0b2f895dcbee146795aab14e5c252e29677b46abcecec126fcf1b785534ee7d490b066aeacb
   languageName: node
   linkType: hard
 
@@ -3024,7 +3024,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
-    "@atls-ui-parts/layout": ^0.0.2
+    "@atls-ui-parts/layout": ^0.0.3
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -3077,10 +3077,12 @@ __metadata:
   dependencies:
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
+    "@types/styled-system": ^5
     "@ui/button": "workspace:ui/button"
     "@ui/layout": "workspace:ui/layout"
     "@ui/utils": "workspace:ui/utils"
     react: ^17.0.2
+    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 

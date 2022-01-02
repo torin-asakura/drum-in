@@ -28,10 +28,10 @@ jobs:
       #        env:
       #          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
-      - name: TypeCheck
-        run: yarn checks typecheck
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      #      - name: TypeCheck
+      #        run: yarn checks typecheck
+      #        env:
+      #          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: TestUnit
         run: yarn checks test unit
