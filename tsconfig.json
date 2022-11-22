@@ -1,5 +1,4 @@
 {
-  "include": ["site/**/*", "ui/**/*"],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,
@@ -24,5 +23,6 @@
     "sourceMap": false,
     "target": "es2019",
     "jsx": "react"
-  }
+  },
+  "include": []
 }
