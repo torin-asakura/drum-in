@@ -1,0 +1,34 @@
+{
+  "name": "@ui/button",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "scripts": {
+    "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
+  },
+  "dependencies": {
+    "@atls-ui-generators/button": "0.0.10",
+    "@atls-ui-parts/button": "^0.0.10",
+    "@atls-ui-parts/conditional-render": "0.0.1",
+    "@atls-ui-parts/styles": "^0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/theme": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "styled-tools": "^1.7.2"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@types/styled-system": "^5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
+  }
+}

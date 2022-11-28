@@ -1,0 +1,30 @@
+{
+  "name": "@landing/renderer-entrypoint",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "files": [
+    "dist/",
+    "next.config.js"
+  ],
+  "scripts": {
+    "build": "yarn next build src --no-lint",
+    "dev": "yarn next dev src"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.6.0",
+    "next": "^12.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intl": "^6.1.2"
+  },
+  "devDependencies": {
+    "@landing/index-page": "workspace:0.0.1",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.0",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "^17.0.11",
+    "@ui/theme": "workspace:0.0.1",
+    "typescript": "^4.8.4"
+  }
+}

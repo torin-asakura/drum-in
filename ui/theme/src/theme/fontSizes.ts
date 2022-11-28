@@ -1,0 +1,27 @@
+const fontSizes = {
+  semiMicro: 11,
+  micro: 12,
+  semiMedium: 14,
+  medium: 16,
+  semiRegular: 18,
+  regular: 20,
+  semiLarge: 22,
+  large: 24,
+  semiModerate: 28,
+  moderate: 32,
+  semiIncreased: 38,
+  increased: 40,
+  semiBig: 44,
+  big: 48,
+  semiExtra: 56,
+  extra: 60,
+  semiMassive: 64,
+  massive: 68,
+  godzilla: 70,
+  semiHuge: 76,
+  huge: 80,
+  semiGiant: 86,
+  giant: 96,
+}
+
+export { fontSizes }
