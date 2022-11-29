@@ -8,12 +8,12 @@ const colors = {
       },
       hover: {
         background: 'transparent',
-        font: 'rgb(242,242,242)',
+        font: 'rgb(154,101,242)',
         border: 'transparent',
       },
       pressed: {
         background: 'transparent',
-        font: 'rgb(242,242,242)',
+        font: 'rgb(154,101,242)',
         border: 'transparent',
       },
       disabled: {

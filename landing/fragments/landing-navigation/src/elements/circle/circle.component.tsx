@@ -7,11 +7,8 @@ import { Text }        from '@ui/text'
 
 import { CircleProps } from './circle.interfaces'
 
-const Circle: FC<CircleProps> = ({ firstLine, secondLine}) => (
-  <Background
-    gradient='blueWhiteGradient'
-    borderRadius='max'
-  >
+const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
+  <Background gradient='blueWhiteGradient' borderRadius='max'>
     <Box
       display='flex'
       flexDirection='column'
@@ -28,7 +25,10 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine}) => (
             fontWeight='bold'
             fontSize='big'
             color='text.blackAmber'
-          > {firstLine} </Text>
+          >
+            {' '}
+            {firstLine}{' '}
+          </Text>
         </Box>
       ) : null}
       <Box width={140} justifyContent='center'>
@@ -39,7 +39,10 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine}) => (
           fontWeight='bold'
           fontSize='micro'
           color='text.blackAmber'
-        > {secondLine} </Text>
+        >
+          {' '}
+          {secondLine}{' '}
+        </Text>
       </Box>
     </Box>
   </Background>

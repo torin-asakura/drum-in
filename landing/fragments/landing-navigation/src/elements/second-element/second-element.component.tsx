@@ -62,7 +62,7 @@ const SecondElement = () => {
           />
         </Box>
       </Condition>
-      <Box opacity={secondElemHover ? 1 : .3}>
+      <Box opacity={secondElemHover ? 1 : 0.3}>
         <Background
           display='flex'
           alignItems='center'

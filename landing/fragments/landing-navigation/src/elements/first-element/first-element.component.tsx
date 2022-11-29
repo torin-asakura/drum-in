@@ -2,10 +2,8 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
-import { Background }       from '@ui/background'
 import { Condition }        from '@ui/condition'
 import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
@@ -15,57 +13,64 @@ import { Circle }           from '../circle'
 import { Rectangle }        from '../rectangle'
 import { Square }           from '../square'
 
-const FifthElement = () => {
-  const [fifthElemHover, fifthElemHoverProps] = useHover()
+const FirstElement = () => {
+  const [firstElemHover, firstElemHoverProps] = useHover()
   const { formatMessage } = useIntl()
 
   return (
-    <Box width='max-content' {...fifthElemHoverProps}>
-      <Condition match={fifthElemHover}>
-        <Box position='absolute' right={227} bottom={163}>
+    <Box width='max-content' {...firstElemHoverProps}>
+      <Condition match={firstElemHover}>
+        <Box position='absolute' right={192} bottom={141}>
+          <Circle
+            firstLine={formatMessage({
+              id: 'landing_header.three',
+              defaultMessage: '3',
+            })}
+            secondLine={formatMessage({
+              id: 'landing_header.levels',
+              defaultMessage: 'уровня',
+            })}
+          />
+        </Box>
+        <Box position='absolute' right={2} bottom={27}>
           <Rectangle
             color='transparentPurpleGradient'
             firstLine={formatMessage({
-              id: 'landing_header.fourth',
-              defaultMessage: '4',
+              id: 'landing_header.fifteen',
+              defaultMessage: '15',
             })}
             secondLine={formatMessage({
-              id: 'landing_header.months_with_different_ending',
-              defaultMessage: 'месяца',
+              id: 'landing_header.months',
+              defaultMessage: 'месяцев',
             })}
-            rotate={-15}
+            rotate={7}
           />
         </Box>
-        <Box position='absolute' right={203} bottom={1}>
-          <Circle
-            secondLine={formatMessage({
-              id: 'landing_header.bonus_module',
-              defaultMessage: 'бонус-модуль',
-            })}
-          />
-        </Box>
-        <Box position='absolute' right={25} bottom={112}>
+        <Box position='absolute' right={350} bottom={2}>
           <Square
             firstLine={formatMessage({
-              id: 'landing_header.sixth',
-              defaultMessage: '6',
+              id: 'landing_header.thirty_nine',
+              defaultMessage: '39',
             })}
             secondLine={formatMessage({
               id: 'landing_header.video_lessons',
               defaultMessage: 'видео-уроков',
             })}
-            rotate={15}
+            rotate={-4}
           />
         </Box>
       </Condition>
-      <Box opacity={fifthElemHover ? 1 : .3}>
+      <Box opacity={firstElemHover ? 1 : 0.3}>
         <NextLink path='/'>
           <Text
             fontFamily='DrukWideCy'
             fontWeight='bold'
             fontSize={['medium', 'semiIncreased', 'big']}
           >
-            <FormattedMessage id='landing_header.connacol' defaultMessage='Коннакол' />
+            <FormattedMessage
+              id='landing_header.opening_the_rhythm'
+              defaultMessage='Открытие ритма'
+            />
           </Text>
         </NextLink>
       </Box>
@@ -73,4 +78,4 @@ const FifthElement = () => {
   )
 }
 
-export { FifthElement }
+export { FirstElement }

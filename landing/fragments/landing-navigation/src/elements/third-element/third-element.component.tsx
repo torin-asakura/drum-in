@@ -20,7 +20,7 @@ const ThirdElement = () => {
   const { formatMessage } = useIntl()
 
   return (
-    <Box width='max-content'{...thirdElemHoverProps} alignItems='start'>
+    <Box width='max-content' {...thirdElemHoverProps} alignItems='start'>
       <Condition match={thirdElemHover}>
         <Box position='absolute' right={400} bottom={121}>
           <Circle
@@ -62,7 +62,7 @@ const ThirdElement = () => {
           />
         </Box>
       </Condition>
-      <Box opacity={thirdElemHover ? 1 : .3}>
+      <Box opacity={thirdElemHover ? 1 : 0.3}>
         <Background
           display='flex'
           alignItems='center'

@@ -50,7 +50,7 @@ const SixthElement = () => {
           />
         </Box>
       </Condition>
-      <Box opacity={sixthElemHover ? 1 : .3}>
+      <Box opacity={sixthElemHover ? 1 : 0.3}>
         <NextLink path='/'>
           <Text
             fontFamily='DrukWideCy'

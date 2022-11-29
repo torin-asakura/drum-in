@@ -1575,9 +1575,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
   dependencies:
+    "@landing/navigation-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/button": "workspace:0.0.1"
-    "@ui/drawer": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
@@ -1616,6 +1616,31 @@ __metadata:
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/navigation-fragment@workspace:0.0.1, @landing/navigation-fragment@workspace:landing/fragments/landing-navigation":
+  version: 0.0.0-use.local
+  resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
+  dependencies:
+    "@types/react": 18.0.21
+    "@ui/background": "workspace:0.0.1"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/drawer": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/logo": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: ^7.6.2
+    react-intl: ^6.1.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    react: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2581,15 +2606,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react-dom": ^17
     "@types/styled-system": ^5.1.12
-    "@ui/background": "workspace:0.0.1"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
-    "@ui/logo": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
     framer-motion: 7.6.2
     react: ^17.0.2
     react-dom: 17.0.2
