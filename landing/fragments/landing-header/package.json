@@ -10,6 +10,7 @@
     "@ui/link": "workspace:0.0.1",
     "@ui/logo": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
     "framer-motion": "^7.6.2"
   },
   "devDependencies": {

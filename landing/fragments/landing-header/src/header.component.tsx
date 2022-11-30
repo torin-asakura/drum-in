@@ -1,7 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
-import { useEffect }        from 'react'
+import { useHover }         from '@ui/utils'
 
 import { NavigationBlock }  from '@landing/navigation-fragment'
 import { Button }           from '@ui/button'
@@ -16,6 +16,7 @@ import { Text }             from '@ui/text'
 
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
+  const [hoverArrow, hoverArrowProps] = useHover()
   return (
     <>
       <NavigationBlock visible={visibleNav} setVisible={setVisibleNav} />
@@ -28,11 +29,11 @@ const HeaderBlock = () => {
               <Logo />
             </Box>
             <Layout flexBasis={94} />
-            <Box flexShrink={0} width={83}>
+            <Box flexShrink={0} width={83} {...hoverArrowProps}>
               <Button
                 size='withoutPaddingMicroHeight'
                 variant='transparentBackground'
-                iconSvg={<ArrowBottomIcon />}
+                iconSvg={<ArrowBottomIcon color={hoverArrow ? 'rgb(154,101,242)' : ''} />}
                 valueWidth={[0, 0, 16]}
                 valueHeight={[0, 0, 16]}
                 horizontalLocation='left'

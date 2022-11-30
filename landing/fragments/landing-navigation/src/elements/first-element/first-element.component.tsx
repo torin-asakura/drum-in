@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
 import { Condition }        from '@ui/condition'
-import { Row }              from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
