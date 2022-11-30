@@ -19,7 +19,7 @@ const Drawer: FC<DrawerProps> = ({ children, active, onClose }) => {
 
   useEffect(() => {
     sequence()
-  }, [])
+  }, [active])
 
   // console.log(stateAnimation)
 
@@ -37,9 +37,6 @@ const Drawer: FC<DrawerProps> = ({ children, active, onClose }) => {
       <motion.div
         style={{ position: 'fixed', left: 0, top: '-100%', width: '100%', zIndex: 9999 }}
         animate={controls}
-        exit={{ top: '-100%' }}
-        transition={{ duration: 0.5 }}
-        id='drawer'
       >
         {children}
       </motion.div>
