@@ -26,8 +26,7 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
             fontSize='big'
             color='text.blackAmber'
           >
-            {' '}
-            {firstLine}{' '}
+            {firstLine}
           </Text>
         </Box>
       ) : null}
@@ -40,8 +39,7 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
           fontSize='micro'
           color='text.blackAmber'
         >
-          {' '}
-          {secondLine}{' '}
+          {secondLine}
         </Text>
       </Box>
     </Box>

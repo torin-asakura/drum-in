@@ -25,8 +25,7 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, secondLine, rotate })
           fontSize='big'
           color='text.smokyWhite'
         >
-          {' '}
-          {firstLine}{' '}
+          {firstLine}
         </Text>
       </Box>
       <Box>
@@ -37,8 +36,7 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, secondLine, rotate })
           fontSize='micro'
           color='text.smokyWhite'
         >
-          {' '}
-          {secondLine}{' '}
+          {secondLine}
         </Text>
       </Box>
     </Box>

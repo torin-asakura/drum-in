@@ -1,4 +1,5 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
@@ -9,17 +10,18 @@ import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
 import { Circle }           from '../circle'
+import { ElementProps }     from '../element.interfaces'
 import { Rectangle }        from '../rectangle'
 import { Square }           from '../square'
 
-const FifthElement = () => {
+const FifthElement: FC<ElementProps> = ({ stateHover }) => {
   const [fifthElemHover, fifthElemHoverProps] = useHover()
   const { formatMessage } = useIntl()
 
   return (
-    <Box width='max-content' {...fifthElemHoverProps}>
+    <Box width='max-content' {...(stateHover ? fifthElemHoverProps : null)}>
       <Condition match={fifthElemHover}>
-        <Box position='absolute' right={227} bottom={163}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={227} bottom={163}>
           <Rectangle
             color='transparentPurpleGradient'
             firstLine={formatMessage({
@@ -33,7 +35,7 @@ const FifthElement = () => {
             rotate={-15}
           />
         </Box>
-        <Box position='absolute' right={203} bottom={1}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={203} bottom={1}>
           <Circle
             secondLine={formatMessage({
               id: 'landing_header.bonus_module',
@@ -41,7 +43,7 @@ const FifthElement = () => {
             })}
           />
         </Box>
-        <Box position='absolute' right={25} bottom={112}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={25} bottom={112}>
           <Square
             firstLine={formatMessage({
               id: 'landing_header.sixth',
@@ -55,12 +57,12 @@ const FifthElement = () => {
           />
         </Box>
       </Condition>
-      <Box opacity={fifthElemHover ? 1 : 0.3}>
+      <Box opacity={[1, 1, fifthElemHover ? 1 : 0.3]}>
         <NextLink path='/'>
           <Text
             fontFamily='DrukWideCy'
             fontWeight='bold'
-            fontSize={['medium', 'semiIncreased', 'big']}
+            fontSize={['medium', 'semiModerate', 'big']}
           >
             <FormattedMessage id='landing_header.connacol' defaultMessage='Коннакол' />
           </Text>

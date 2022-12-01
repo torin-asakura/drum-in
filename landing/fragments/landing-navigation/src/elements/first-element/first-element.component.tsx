@@ -1,4 +1,5 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
@@ -9,17 +10,18 @@ import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
 import { Circle }           from '../circle'
+import { ElementProps }     from '../element.interfaces'
 import { Rectangle }        from '../rectangle'
 import { Square }           from '../square'
 
-const FirstElement = () => {
+const FirstElement: FC<ElementProps> = ({ stateHover }) => {
   const [firstElemHover, firstElemHoverProps] = useHover()
   const { formatMessage } = useIntl()
 
   return (
-    <Box width='max-content' {...firstElemHoverProps}>
+    <Box width='max-content' {...(stateHover ? firstElemHoverProps : null)}>
       <Condition match={firstElemHover}>
-        <Box position='absolute' right={192} bottom={141}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={192} bottom={141}>
           <Circle
             firstLine={formatMessage({
               id: 'landing_header.three',
@@ -31,7 +33,7 @@ const FirstElement = () => {
             })}
           />
         </Box>
-        <Box position='absolute' right={2} bottom={27}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={2} bottom={27}>
           <Rectangle
             color='transparentPurpleGradient'
             firstLine={formatMessage({
@@ -45,7 +47,7 @@ const FirstElement = () => {
             rotate={7}
           />
         </Box>
-        <Box position='absolute' right={350} bottom={2}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={350} bottom={2}>
           <Square
             firstLine={formatMessage({
               id: 'landing_header.thirty_nine',
@@ -59,12 +61,12 @@ const FirstElement = () => {
           />
         </Box>
       </Condition>
-      <Box opacity={firstElemHover ? 1 : 0.3}>
+      <Box opacity={[1, 1, firstElemHover ? 1 : 0.3]}>
         <NextLink path='/'>
           <Text
             fontFamily='DrukWideCy'
             fontWeight='bold'
-            fontSize={['medium', 'semiIncreased', 'big']}
+            fontSize={['medium', 'semiModerate', 'big']}
           >
             <FormattedMessage
               id='landing_header.opening_the_rhythm'

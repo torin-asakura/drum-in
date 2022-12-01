@@ -49,7 +49,8 @@ export const Button: FC<ButtonProps> = forwardRef(({ children, active, ...props 
         />
       </ButtonElement>
     )
-  } else if (props.horizontalLocation === 'left') {
+  }
+  if (props.horizontalLocation === 'left') {
     return (
       <ButtonElement
         hover={hover}
@@ -71,4 +72,17 @@ export const Button: FC<ButtonProps> = forwardRef(({ children, active, ...props 
       </ButtonElement>
     )
   }
+  return (
+    <ButtonElement
+      hover={hover}
+      pressed={pressed || active}
+      onMouseDown={() => setPressed(true)}
+      onMouseUp={() => setPressed(false)}
+      {...hoverProps}
+      {...props}
+      ref={ref}
+    >
+      <Content divider={8}>{children}</Content>
+    </ButtonElement>
+  )
 })

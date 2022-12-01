@@ -1,27 +1,26 @@
-import React           from 'react'
-import { useEffect }           from 'react'
-import { FC }          from 'react'
-import { motion, useAnimationControls }      from 'framer-motion'
+import React                    from 'react'
+import { FC }                   from 'react'
+import { motion }               from 'framer-motion'
+import { useAnimationControls } from 'framer-motion'
+import { useEffect }            from 'react'
+import { useState }             from 'react'
 
-import { Backdrop }    from './backdrop'
-import { DrawerProps } from './drawer.interfaces'
-import { Renderer }    from './renderer'
+import { Backdrop }             from './backdrop'
+import { DrawerProps }          from './drawer.interfaces'
+import { Renderer }             from './renderer'
 
-const Drawer: FC<DrawerProps> = ({ children, active, onClose }) => {
+const Drawer: FC<DrawerProps> = ({ active, onClose, children }) => {
   const controls = useAnimationControls()
-
-  let stateAnimation = false
+  const [hover, setHover] = useState<boolean>(false)
 
   const sequence = async () => {
     await controls.start({ top: 0 })
-    return stateAnimation = true
+    return active ? setHover(true) : setHover(false)
   }
 
   useEffect(() => {
     sequence()
   }, [active])
-
-  // console.log(stateAnimation)
 
   return (
     <Renderer active={active}>
@@ -38,7 +37,7 @@ const Drawer: FC<DrawerProps> = ({ children, active, onClose }) => {
         style={{ position: 'fixed', left: 0, top: '-100%', width: '100%', zIndex: 9999 }}
         animate={controls}
       >
-        {children}
+        {typeof children === 'function' ? children(hover) : children}
       </motion.div>
     </Renderer>
   )

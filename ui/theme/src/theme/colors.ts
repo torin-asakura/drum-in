@@ -48,6 +48,7 @@ const colors = {
   text: {
     smokyWhite: 'rgb(242,242,242)',
     blackAmber: 'rgb(15,12,12)',
+    gray: 'rgb(128, 127, 127)',
   },
   background: {
     blackAmber: 'rgb(15,12,12)',

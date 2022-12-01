@@ -1,28 +1,26 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
-import { Background }       from '@ui/background'
 import { Condition }        from '@ui/condition'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
-import { Circle }           from '../circle'
+import { ElementProps }     from '../element.interfaces'
 import { Rectangle }        from '../rectangle'
 import { Square }           from '../square'
 
-const SixthElement = () => {
+const SixthElement: FC<ElementProps> = ({ stateHover }) => {
   const [sixthElemHover, sixthElemHoverProps] = useHover()
   const { formatMessage } = useIntl()
 
   return (
-    <Box width='max-content' {...sixthElemHoverProps}>
+    <Box width='max-content' {...(stateHover ? sixthElemHoverProps : null)}>
       <Condition match={sixthElemHover}>
-        <Box position='absolute' right={2} bottom={35}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={2} bottom={35}>
           <Rectangle
             color='transparentPurpleGradient'
             firstLine={formatMessage({
@@ -36,7 +34,7 @@ const SixthElement = () => {
             rotate={10}
           />
         </Box>
-        <Box position='absolute' right={368} bottom={0}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={368} bottom={0}>
           <Square
             firstLine={formatMessage({
               id: 'landing_header.fifth',
@@ -50,12 +48,12 @@ const SixthElement = () => {
           />
         </Box>
       </Condition>
-      <Box opacity={sixthElemHover ? 1 : 0.3}>
+      <Box opacity={[1, 1, sixthElemHover ? 1 : 0.3]}>
         <NextLink path='/'>
           <Text
             fontFamily='DrukWideCy'
             fontWeight='bold'
-            fontSize={['medium', 'semiIncreased', 'big']}
+            fontSize={['medium', 'semiModerate', 'big']}
           >
             <FormattedMessage
               id='landing_header.polyrhythmic_keys'

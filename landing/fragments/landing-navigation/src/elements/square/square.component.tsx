@@ -29,8 +29,7 @@ const Square: FC<SquareProps> = ({ firstLine, secondLine, rotate }) => (
           fontSize='big'
           color='text.blackAmber'
         >
-          {' '}
-          {firstLine}{' '}
+          {firstLine}
         </Text>
       </Box>
       <Box>
@@ -41,8 +40,7 @@ const Square: FC<SquareProps> = ({ firstLine, secondLine, rotate }) => (
           fontSize='micro'
           color='text.blackAmber'
         >
-          {' '}
-          {secondLine}{' '}
+          {secondLine}
         </Text>
       </Box>
     </Box>

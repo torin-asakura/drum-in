@@ -1,11 +1,11 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
-import { useHover }         from '@ui/utils'
 
 import { NavigationBlock }  from '@landing/navigation-fragment'
 import { Button }           from '@ui/button'
 import { ArrowBottomIcon }  from '@ui/icons'
+import { MenuIcon }         from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -13,6 +13,7 @@ import { Row }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
+import { useHover }         from '@ui/utils'
 
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
@@ -25,11 +26,21 @@ const HeaderBlock = () => {
         <Box width='100%'>
           <Layout flexBasis={[26, 33, 40]} />
           <Row alignItems='center'>
-            <Box width={[120, 170, 220]} height={[24, 34, 44]}>
+            <Box display={['flex', 'flex', 'none']} flexShrink={0}>
+              <Button
+                size='withoutPaddingMicroHeight'
+                variant='transparentBackground'
+                onClick={() => setVisibleNav(true)}
+              >
+                <MenuIcon width={40} height={40} />
+              </Button>
+            </Box>
+            <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
+            <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
               <Logo />
             </Box>
-            <Layout flexBasis={94} />
-            <Box flexShrink={0} width={83} {...hoverArrowProps}>
+            <Layout flexBasis={94} display={['none', 'none', 'flex']} />
+            <Box display={['none', 'none', 'flex']} flexShrink={0} width={83} {...hoverArrowProps}>
               <Button
                 size='withoutPaddingMicroHeight'
                 variant='transparentBackground'
@@ -48,13 +59,13 @@ const HeaderBlock = () => {
                     lineHeight='default'
                     color='smokyWhite'
                   >
-                    <FormattedMessage id='landing_section_courses.courses' defaultMessage='Курсы' />
+                    <FormattedMessage id='landing_header.courses' defaultMessage='Курсы' />
                   </Text>
                 </Row>
               </Button>
             </Box>
-            <Layout flexBasis={70} />
-            <Box>
+            <Layout flexBasis={70} display={['none', 'none', 'flex']} />
+            <Box display={['none', 'none', 'flex']}>
               <NextLink path='/'>
                 <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
               </NextLink>

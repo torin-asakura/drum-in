@@ -1,10 +1,10 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
 import { Background }       from '@ui/background'
 import { Condition }        from '@ui/condition'
-import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
@@ -12,17 +12,18 @@ import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
 import { Circle }           from '../circle'
+import { ElementProps }     from '../element.interfaces'
 import { Rectangle }        from '../rectangle'
 import { Square }           from '../square'
 
-const SecondElement = () => {
+const SecondElement: FC<ElementProps> = ({ stateHover }) => {
   const [secondElemHover, secondElemHoverProps] = useHover()
   const { formatMessage } = useIntl()
 
   return (
-    <Box width='max-content' {...secondElemHoverProps} alignItems='start'>
+    <Box width='max-content' {...(stateHover ? secondElemHoverProps : null)} alignItems='start'>
       <Condition match={secondElemHover}>
-        <Box position='absolute' right={202} bottom={1}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={202} bottom={1}>
           <Circle
             firstLine={formatMessage({
               id: 'landing_header.twenty',
@@ -34,7 +35,7 @@ const SecondElement = () => {
             })}
           />
         </Box>
-        <Box position='absolute' right={218} bottom={172}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={218} bottom={172}>
           <Rectangle
             color='transparentBlueGradient'
             firstLine={formatMessage({
@@ -48,7 +49,7 @@ const SecondElement = () => {
             rotate={-8}
           />
         </Box>
-        <Box position='absolute' right={12} bottom={30}>
+        <Box display={['none', 'none', 'flex']} position='absolute' right={12} bottom={30}>
           <Square
             firstLine={formatMessage({
               id: 'landing_header.thirteens',
@@ -62,7 +63,7 @@ const SecondElement = () => {
           />
         </Box>
       </Condition>
-      <Box opacity={secondElemHover ? 1 : 0.3}>
+      <Box opacity={[1, 1, secondElemHover ? 1 : 0.3]}>
         <Background
           display='flex'
           alignItems='center'
@@ -83,16 +84,21 @@ const SecondElement = () => {
             <FormattedMessage id='landing_header.level_one' defaultMessage='ур. 1' />
           </Text>
         </Background>
-        <Layout flexBasis={12} />
-        <NextLink path='/'>
-          <Text
-            fontFamily='DrukWideCy'
-            fontWeight='bold'
-            fontSize={['medium', 'semiIncreased', 'big']}
-          >
-            <FormattedMessage id='landing_header.sense_of_time' defaultMessage='Ощущение времени' />
-          </Text>
-        </NextLink>
+        <Layout flexBasis={[8, 10, 12]} />
+        <Box>
+          <NextLink path='/'>
+            <Text
+              fontFamily='DrukWideCy'
+              fontWeight='bold'
+              fontSize={['medium', 'semiModerate', 'big']}
+            >
+              <FormattedMessage
+                id='landing_header.sense_of_time'
+                defaultMessage='Ощущение времени'
+              />
+            </Text>
+          </NextLink>
+        </Box>
       </Box>
     </Box>
   )
