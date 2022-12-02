@@ -20,9 +20,12 @@ const Drawer: FC<DrawerProps> = ({ active, onClose, children }) => {
     return active ? setHover(true) : setHover(false)
   }
 
-  useEffect(() => {
-    sequence()
-  }, [active])
+  useEffect(
+    () => {
+      sequence()
+    }, // eslint-disable-next-line
+    [active]
+  )
 
   return (
     <Renderer active={active}>

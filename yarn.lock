@@ -1082,7 +1082,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.10.4, @emotion/styled@npm:^11.3.0, @emotion/styled@npm:^11.6.0, @emotion/styled@npm:^11.9.3":
+"@emotion/styled@npm:^11.10.0, @emotion/styled@npm:^11.10.4, @emotion/styled@npm:^11.3.0, @emotion/styled@npm:^11.6.0, @emotion/styled@npm:^11.9.3":
   version: 11.10.5
   resolution: "@emotion/styled@npm:11.10.5"
   dependencies:
@@ -1621,6 +1621,7 @@ __metadata:
   dependencies:
     "@landing/banner-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
+    "@landing/tape-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
@@ -1689,6 +1690,24 @@ __metadata:
     react-dom: ^17.0.2
     react-intl: ^6.1.2
     typescript: ^4.8.4
+  languageName: unknown
+  linkType: soft
+
+"@landing/tape-fragment@workspace:0.0.1, @landing/tape-fragment@workspace:landing/fragments/landing-tape":
+  version: 0.0.0-use.local
+  resolution: "@landing/tape-fragment@workspace:landing/fragments/landing-tape"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.10.0
+    "@types/react": 18.0.21
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-tools: ^1.7.2
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 

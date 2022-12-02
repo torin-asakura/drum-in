@@ -2,6 +2,7 @@ import React           from 'react'
 
 import { BannerBlock } from '@landing/banner-fragment'
 import { HeaderBlock } from '@landing/header-fragment'
+import { TapeBlock }   from '@landing/tape-fragment'
 import { Background }  from '@ui/background'
 
 const Hero = () => (
@@ -14,6 +15,7 @@ const Hero = () => (
   >
     <HeaderBlock />
     <BannerBlock />
+    <TapeBlock />
   </Background>
 )
 

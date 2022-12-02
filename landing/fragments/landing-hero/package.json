@@ -5,6 +5,7 @@
   "dependencies": {
     "@landing/banner-fragment": "workspace:0.0.1",
     "@landing/header-fragment": "workspace:0.0.1",
+    "@landing/tape-fragment": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1"
   },
   "devDependencies": {
