@@ -14,7 +14,9 @@ const Drawer: FC<DrawerProps> = ({ active, onClose, children }) => {
   const [hover, setHover] = useState<boolean>(false)
 
   const sequence = async () => {
-    await controls.start({ top: 0 })
+    if (active) {
+      await controls.start({ top: 0 })
+    }
     return active ? setHover(true) : setHover(false)
   }
 
@@ -36,6 +38,7 @@ const Drawer: FC<DrawerProps> = ({ active, onClose, children }) => {
       <motion.div
         style={{ position: 'fixed', left: 0, top: '-100%', width: '100%', zIndex: 9999 }}
         animate={controls}
+        exit={{ top: '-100%' }}
       >
         {typeof children === 'function' ? children(hover) : children}
       </motion.div>

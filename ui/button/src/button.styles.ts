@@ -16,9 +16,17 @@ const withoutPaddingMicroHeightStyles = createShapeStyles({
   paddingRight: 0,
 })
 
+const mediumPaddingNormalHeightStyles = createShapeStyles({
+  size: 56,
+  rounding: prop('theme.radii.medium') as unknown as number,
+  paddingLeft: 20,
+  paddingRight: 8,
+})
+
 export const baseStyles = createBaseStyles()
 export const contentStyles = createContentStyles()
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
   withoutPaddingMicroHeight: withoutPaddingMicroHeightStyles,
+  mediumPaddingNormalHeight: mediumPaddingNormalHeightStyles,
 })

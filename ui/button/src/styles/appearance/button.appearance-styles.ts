@@ -52,6 +52,30 @@ const appearanceTransparentBackgroundPurpleTextDisabledStyles = createAppearance
   borderColor: prop('theme.colors.button.transparentBackgroundPurpleText.disabled.border'),
 })
 
+const appearanceDarkToPurpleBackgroundDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackground.default.font'),
+  backgroundColor: prop('theme.colors.button.darkToPurpleBackground.default.background'),
+  borderColor: prop('theme.colors.button.darkToPurpleBackground.default.border'),
+})
+
+const appearanceDarkToPurpleBackgroundHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackground.hover.font'),
+  backgroundColor: prop('theme.colors.button.darkToPurpleBackground.hover.background'),
+  borderColor: prop('theme.colors.button.darkToPurpleBackground.hover.border'),
+})
+
+const appearanceDarkToPurpleBackgroundPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackground.pressed.font'),
+  backgroundColor: prop('theme.colors.button.darkToPurpleBackground.pressed.background'),
+  borderColor: prop('theme.colors.button.darkToPurpleBackground.pressed.border'),
+})
+
+const appearanceDarkToPurpleBackgroundDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackground.disabled.font'),
+  backgroundColor: prop('theme.colors.button.darkToPurpleBackground.disabled.background'),
+  borderColor: prop('theme.colors.button.darkToPurpleBackground.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   transparentBackground: ifProp(
     prop('disabled', false),
@@ -76,6 +100,19 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearanceTransparentBackgroundPurpleTextHoverStyles,
         appearanceTransparentBackgroundPurpleTextDefaultStyles
+      )
+    )
+  ),
+  darkToPurpleBackground: ifProp(
+    prop('disabled', false),
+    appearanceDarkToPurpleBackgroundDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceDarkToPurpleBackgroundPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceDarkToPurpleBackgroundHoverStyles,
+        appearanceDarkToPurpleBackgroundDefaultStyles
       )
     )
   ),

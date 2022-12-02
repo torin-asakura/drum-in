@@ -3,12 +3,15 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@landing/header-fragment": "0.0.1"
+    "@landing/banner-fragment": "workspace:0.0.1",
+    "@landing/header-fragment": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1"
   },
   "devDependencies": {
     "@types/react": "18.0.21"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "react": "*",
     "react-intl": "*"
   }

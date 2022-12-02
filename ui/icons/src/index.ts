@@ -1,4 +1,7 @@
 export * from './ArrowBottomIcon'
 export * from './ArrowTopIcon'
+export * from './ComputerMouseIcon'
 export * from './CrossMenuIcon'
+export * from './MarinaChuprikovaIcon'
 export * from './MenuIcon'
+export * from './RhythmSchoolIcon'

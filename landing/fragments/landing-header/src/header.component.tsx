@@ -21,65 +21,72 @@ const HeaderBlock = () => {
   return (
     <>
       <NavigationBlock visible={visibleNav} setVisible={setVisibleNav} />
-      <Column width='100%' alignItems='center'>
-        <Layout flexBasis={[24, 28, 32]} />
-        <Box width='100%'>
-          <Layout flexBasis={[26, 33, 40]} />
-          <Row alignItems='center'>
-            <Box display={['flex', 'flex', 'none']} flexShrink={0}>
-              <Button
-                size='withoutPaddingMicroHeight'
-                variant='transparentBackground'
-                onClick={() => setVisibleNav(true)}
+      <Row justifyContent='center'>
+        <Column width={['100%', '100%', 1920]} alignItems='center'>
+          <Layout flexBasis={[24, 28, 32]} />
+          <Box width='100%'>
+            <Layout flexBasis={[26, 33, 40]} />
+            <Row alignItems='center'>
+              <Box display={['flex', 'flex', 'none']} flexShrink={0}>
+                <Button
+                  size='withoutPaddingMicroHeight'
+                  variant='transparentBackground'
+                  onClick={() => setVisibleNav(true)}
+                >
+                  <MenuIcon width={40} height={40} />
+                </Button>
+              </Box>
+              <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
+              <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
+                <Logo />
+              </Box>
+              <Layout flexBasis={94} display={['none', 'none', 'flex']} />
+              <Box
+                display={['none', 'none', 'flex']}
+                flexShrink={0}
+                width={83}
+                {...hoverArrowProps}
               >
-                <MenuIcon width={40} height={40} />
-              </Button>
-            </Box>
-            <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
-            <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
-              <Logo />
-            </Box>
-            <Layout flexBasis={94} display={['none', 'none', 'flex']} />
-            <Box display={['none', 'none', 'flex']} flexShrink={0} width={83} {...hoverArrowProps}>
-              <Button
-                size='withoutPaddingMicroHeight'
-                variant='transparentBackground'
-                iconSvg={<ArrowBottomIcon color={hoverArrow ? 'rgb(154,101,242)' : ''} />}
-                valueWidth={[0, 0, 16]}
-                valueHeight={[0, 0, 16]}
-                horizontalLocation='left'
-                onClick={() => setVisibleNav(true)}
-                fill
-              >
-                <Row justifyContent='end'>
-                  <Text
-                    textTransform='uppercase'
-                    fontWeight='semiBold'
-                    fontSize='medium'
-                    lineHeight='default'
-                    color='smokyWhite'
-                  >
-                    <FormattedMessage id='landing_header.courses' defaultMessage='Курсы' />
-                  </Text>
-                </Row>
-              </Button>
-            </Box>
-            <Layout flexBasis={70} display={['none', 'none', 'flex']} />
-            <Box display={['none', 'none', 'flex']}>
-              <NextLink path='/'>
-                <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
-              </NextLink>
-            </Box>
-            <Row justifyContent='end'>
-              <NextLink path='/'>
-                <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
-              </NextLink>
+                <Button
+                  size='withoutPaddingMicroHeight'
+                  variant='transparentBackground'
+                  iconSvg={<ArrowBottomIcon color={hoverArrow ? 'rgb(154,101,242)' : ''} />}
+                  valueWidth={[0, 0, 16]}
+                  valueHeight={[0, 0, 16]}
+                  horizontalLocation='left'
+                  onClick={() => setVisibleNav(true)}
+                  fill
+                >
+                  <Row justifyContent='end'>
+                    <Text
+                      textTransform='uppercase'
+                      fontWeight='semiBold'
+                      fontSize='medium'
+                      lineHeight='default'
+                      color='smokyWhite'
+                    >
+                      <FormattedMessage id='landing_header.courses' defaultMessage='Курсы' />
+                    </Text>
+                  </Row>
+                </Button>
+              </Box>
+              <Layout flexBasis={70} display={['none', 'none', 'flex']} />
+              <Box display={['none', 'none', 'flex']}>
+                <NextLink path='/'>
+                  <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
+                </NextLink>
+              </Box>
+              <Row justifyContent='end'>
+                <NextLink path='/'>
+                  <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                </NextLink>
+              </Row>
             </Row>
-          </Row>
-          <Layout flexBasis={[26, 33, 40]} />
-        </Box>
-        <Layout flexBasis={[24, 28, 32]} />
-      </Column>
+            <Layout flexBasis={[26, 33, 40]} />
+          </Box>
+          <Layout flexBasis={[24, 28, 32]} />
+        </Column>
+      </Row>
     </>
   )
 }

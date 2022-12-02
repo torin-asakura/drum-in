@@ -17,7 +17,7 @@ export const GlobalStyles = () => {
         @font-face {
           font-family: 'SF Pro Display';
           src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
-              url('/fonts/sf-pro-display-600.ttf') format('truetype');
+              url('/fonts/sf-pro-display-500.ttf') format('truetype');
           font-weight: 500;
           font-style: normal;
         }
@@ -46,6 +46,57 @@ export const GlobalStyles = () => {
         display: flex;
         flex-direction: column;
       }
+      
+       @keyframes firstAnimationMouse {
+          from {
+            top: -100%
+          }
+          to {
+            top: 0
+          }
+        }
+        @keyframes firstRevertAnimationMouse {
+          from {
+            top: 0
+          }
+          to {
+            top: -100%
+          }
+        }
+
+        @keyframes secondAnimationMouse {
+          from {
+            top: -100%
+          }
+          to {
+            top: 100%
+          }
+        }
+        @keyframes secondRevertAnimationMouse {
+          from {
+            top: 100%
+          }
+          to {
+            top: -100%
+          }
+        }
+        
+        @keyframes thirdAnimationMouse {
+          from {
+            top: 0
+          }
+          to {
+            top: 100%
+          }
+        }
+        @keyframes thirdRevertAnimationMouse {
+          from {
+            top: 100%
+          }
+          to {
+            top: 0
+          }
+        }
 `}
     />
   )
