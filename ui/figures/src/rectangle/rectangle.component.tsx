@@ -14,15 +14,15 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, secondLine, rotate })
       flexDirection='column'
       alignItems='center'
       justifyContent='center'
-      width={357}
-      height={100}
+      width={[203, 275, 357]}
+      height={[57, 78, 100]}
     >
       <Box>
         <Text
           textTransform='uppercase'
           fontFamily='DrukWideCy'
           fontWeight='bold'
-          fontSize='big'
+          fontSize={['semiModerate', 'semiIncreased', 'big']}
           color='text.smokyWhite'
         >
           {firstLine}
@@ -33,7 +33,7 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, secondLine, rotate })
           textTransform='uppercase'
           fontFamily='DrukWideCy'
           fontWeight='bold'
-          fontSize='micro'
+          fontSize={['semiTiny', 'tiny', 'micro']}
           color='text.smokyWhite'
         >
           {secondLine}

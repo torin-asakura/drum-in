@@ -1,9 +1,10 @@
-import React           from 'react'
+import React                 from 'react'
 
-import { BannerBlock } from '@landing/banner-fragment'
-import { HeaderBlock } from '@landing/header-fragment'
-import { TapeBlock }   from '@landing/tape-fragment'
-import { Background }  from '@ui/background'
+import { BannerBlock }       from '@landing/banner-fragment'
+import { ChooseCourseBlock } from '@landing/choose-course-fragment'
+import { HeaderBlock }       from '@landing/header-fragment'
+import { TapeBlock }         from '@landing/tape-fragment'
+import { Background }        from '@ui/background'
 
 const Hero = () => (
   <Background
@@ -16,6 +17,7 @@ const Hero = () => (
     <HeaderBlock />
     <BannerBlock />
     <TapeBlock />
+    <ChooseCourseBlock />
   </Background>
 )
 

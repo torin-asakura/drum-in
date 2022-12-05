@@ -14,8 +14,8 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
       flexDirection='column'
       alignItems='center'
       justifyContent='center'
-      width={180}
-      height={180}
+      width={[102, 139, 180]}
+      height={[102, 139, 180]}
     >
       {firstLine ? (
         <Box>
@@ -23,20 +23,20 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
             textTransform='uppercase'
             fontFamily='DrukWideCy'
             fontWeight='bold'
-            fontSize='big'
+            fontSize={['semiModerate', 'semiIncreased', 'big']}
             color='text.blackAmber'
           >
             {firstLine}
           </Text>
         </Box>
       ) : null}
-      <Box width={140} justifyContent='center'>
+      <Box width={['auto', 'auto', 140]} justifyContent='center'>
         <Text
           textAlign='center'
           textTransform='uppercase'
           fontFamily='DrukWideCy'
           fontWeight='bold'
-          fontSize='micro'
+          fontSize={['semiTiny', 'tiny', 'micro']}
           color='text.blackAmber'
         >
           {secondLine}

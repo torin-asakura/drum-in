@@ -5,16 +5,16 @@ import { useIntl }          from 'react-intl'
 
 import { Background }       from '@ui/background'
 import { Condition }        from '@ui/condition'
+import { Circle }           from '@ui/figures'
+import { Rectangle }        from '@ui/figures'
+import { Square }           from '@ui/figures'
 import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
-import { Circle }           from '../circle'
 import { ElementProps }     from '../element.interfaces'
-import { Rectangle }        from '../rectangle'
-import { Square }           from '../square'
 
 const FourthElement: FC<ElementProps> = ({ stateHover }) => {
   const [fourthElemHover, fourthElemHoverProps] = useHover()

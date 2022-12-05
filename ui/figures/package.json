@@ -1,0 +1,18 @@
+{
+  "name": "@ui/figures",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/background": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.21"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*",
+    "react-intl": "*"
+  }
+}

@@ -10,7 +10,6 @@ import { MusiciansIcon } from '@ui/icons'
 import { TeachersIcon }  from '@ui/icons'
 import { VocalistsIcon } from '@ui/icons'
 import { Box }           from '@ui/layout'
-import { Column }        from '@ui/layout'
 import { Layout }        from '@ui/layout'
 import { Repeater }      from '@ui/utils'
 
@@ -28,7 +27,7 @@ const TapeBlock = () => {
   )
 
   return (
-    <Column>
+    <Box flexDirection='column'>
       <Layout flexBasis={70} />
       <Box
         height={[38, 65, 92]}
@@ -66,7 +65,7 @@ const TapeBlock = () => {
         </AnimationBox>
       </Box>
       <Layout flexBasis={80} />
-    </Column>
+    </Box>
   )
 }
 

@@ -10,7 +10,7 @@ import { SquareProps } from './square.interfaces'
 const Square: FC<SquareProps> = ({ firstLine, secondLine, rotate }) => (
   <Background
     gradient='grayWhiteGradient'
-    borderRadius='bigger'
+    borderRadius={['big', 'extra', 'bigger']}
     style={{ transform: `rotate(${rotate}deg)` }}
   >
     <Box
@@ -18,15 +18,15 @@ const Square: FC<SquareProps> = ({ firstLine, secondLine, rotate }) => (
       flexDirection='column'
       alignItems='center'
       justifyContent='center'
-      width={180}
-      height={180}
+      width={[102, 139, 180]}
+      height={[102, 139, 180]}
     >
       <Box>
         <Text
           textTransform='uppercase'
           fontFamily='DrukWideCy'
           fontWeight='bold'
-          fontSize='big'
+          fontSize={['semiModerate', 'semiIncreased', 'big']}
           color='text.blackAmber'
         >
           {firstLine}
@@ -37,7 +37,7 @@ const Square: FC<SquareProps> = ({ firstLine, secondLine, rotate }) => (
           textTransform='uppercase'
           fontFamily='DrukWideCy'
           fontWeight='bold'
-          fontSize='micro'
+          fontSize={['semiTiny', 'tiny', 'micro']}
           color='text.blackAmber'
         >
           {secondLine}

@@ -4,14 +4,14 @@ import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
 import { Condition }        from '@ui/condition'
+import { Rectangle }        from '@ui/figures'
+import { Square }           from '@ui/figures'
 import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
 import { ElementProps }     from '../element.interfaces'
-import { Rectangle }        from '../rectangle'
-import { Square }           from '../square'
 
 const SixthElement: FC<ElementProps> = ({ stateHover }) => {
   const [sixthElemHover, sixthElemHoverProps] = useHover()

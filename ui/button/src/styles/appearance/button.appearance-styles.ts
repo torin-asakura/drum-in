@@ -76,6 +76,30 @@ const appearanceDarkToPurpleBackgroundDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.darkToPurpleBackground.disabled.border'),
 })
 
+const appearancePurpleBackgroundDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.purpleBackground.default.font'),
+  backgroundColor: prop('theme.colors.button.purpleBackground.default.background'),
+  borderColor: prop('theme.colors.button.purpleBackground.default.border'),
+})
+
+const appearancePurpleBackgroundHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.purpleBackground.hover.font'),
+  backgroundColor: prop('theme.colors.button.purpleBackground.hover.background'),
+  borderColor: prop('theme.colors.button.purpleBackground.hover.border'),
+})
+
+const appearancePurpleBackgroundPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.purpleBackground.pressed.font'),
+  backgroundColor: prop('theme.colors.button.purpleBackground.pressed.background'),
+  borderColor: prop('theme.colors.button.purpleBackground.pressed.border'),
+})
+
+const appearancePurpleBackgroundDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.purpleBackground.disabled.font'),
+  backgroundColor: prop('theme.colors.button.purpleBackground.disabled.background'),
+  borderColor: prop('theme.colors.button.purpleBackground.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   transparentBackground: ifProp(
     prop('disabled', false),
@@ -113,6 +137,19 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearanceDarkToPurpleBackgroundHoverStyles,
         appearanceDarkToPurpleBackgroundDefaultStyles
+      )
+    )
+  ),
+  purpleBackground: ifProp(
+    prop('disabled', false),
+    appearancePurpleBackgroundDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearancePurpleBackgroundPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearancePurpleBackgroundHoverStyles,
+        appearancePurpleBackgroundDefaultStyles
       )
     )
   ),

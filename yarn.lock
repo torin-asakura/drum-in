@@ -152,6 +152,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/swiper@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls-ui-parts/swiper@npm:0.0.3"
+  dependencies:
+    nanoid: ^4.0.0
+  peerDependencies:
+    "@emotion/css": "*"
+    react: ^17.0.1
+    swiper: ^8.3.1
+  checksum: fd2de967ab4bcae5ab677e4ce7faf79970b438a9fe8047c55365de9245b4b4f456fc7542e640b503349c3f4798595857d6da99872130f2a6ee80c817eba4a16c
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/text@npm:0.0.10, @atls-ui-parts/text@npm:^0.0.10":
   version: 0.0.10
   resolution: "@atls-ui-parts/text@npm:0.0.10"
@@ -960,7 +973,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css@npm:^11.10.0":
+"@emotion/css@npm:^11.10.0, @emotion/css@npm:^11.9.0":
   version: 11.10.5
   resolution: "@emotion/css@npm:11.10.5"
   dependencies:
@@ -1592,6 +1605,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/choose-course-fragment@workspace:0.0.1, @landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course":
+  version: 0.0.0-use.local
+  resolution: "@landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/slider": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-tools: ^1.7.2
+    swiper: ^8.3.1
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/header-fragment@workspace:0.0.1, @landing/header-fragment@workspace:landing/fragments/landing-header":
   version: 0.0.0-use.local
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
@@ -1620,6 +1654,7 @@ __metadata:
   resolution: "@landing/hero-fragment@workspace:landing/fragments/landing-hero"
   dependencies:
     "@landing/banner-fragment": "workspace:0.0.1"
+    "@landing/choose-course-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/tape-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
@@ -1657,6 +1692,7 @@ __metadata:
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/drawer": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
@@ -2668,6 +2704,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/figures@workspace:0.0.1, @ui/figures@workspace:ui/figures":
+  version: 0.0.0-use.local
+  resolution: "@ui/figures@workspace:ui/figures"
+  dependencies:
+    "@types/react": 18.0.21
+    "@ui/background": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/icons@workspace:0.0.1, @ui/icons@workspace:^, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
@@ -2765,6 +2816,27 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/slider@workspace:0.0.1, @ui/slider@workspace:ui/slider":
+  version: 0.0.0-use.local
+  resolution: "@ui/slider@workspace:ui/slider"
+  dependencies:
+    "@atls-ui-parts/swiper": ^0.0.3
+    "@emotion/css": ^11.9.0
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.3.0
+    "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+    swiper: ^8.4.3
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -4354,6 +4426,15 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"dom7@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "dom7@npm:4.0.4"
+  dependencies:
+    ssr-window: ^4.0.0
+  checksum: b38604f74e915b4d05b6634f9ff239a708c468180f498a28ff67f2a61233697d9bd7192703b788a24541c3591e7f1a6e83a2cbf70bc871a85e033f82e19abc31
   languageName: node
   linkType: hard
 
@@ -6613,6 +6694,15 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "nanoid@npm:4.0.0"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 7d5946df5c6d383694195b781ae7b5067c149d164ec71e910d6b06676309c3459b68af570b944fb5ecd5065d19df464f05700d141d70bb712ff8ca06642fd8df
+  languageName: node
+  linkType: hard
+
 "natural-compare@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
@@ -7648,6 +7738,13 @@ resolve@^1.20.0:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: df182600927f4f3225224cf8c02338ea637c9750519505bbfb9a9236741a2a7ec088386fb948bca7b447b8303d9109e7dc7672e3de041c79ac2a0e03665af7d2
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^6.0.1":
   version: 6.0.2
   resolution: "ssri@npm:6.0.2"
@@ -7881,6 +7978,16 @@ resolve@^1.20.0:
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4"
   checksum: b3de6653048212f2ae7afe4a423e04a76ec6d2d06e1bf7eacc618a7c5f7df7faa5105561c57b94579ec831fbbdbf5f190ba56a9205ff39ed13eabdf8ab086ddf
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^8.3.1, swiper@npm:^8.4.3":
+  version: 8.4.5
+  resolution: "swiper@npm:8.4.5"
+  dependencies:
+    dom7: ^4.0.4
+    ssr-window: ^4.0.2
+  checksum: 7b790b897c4aeb616cae02517a1137dc3f8d552bcc3ecb2942ddf8e4ae75f2efeb28816d3d4e648248c3a24eb3611f2700f555372c15f7163cc2434da3ef8317
   languageName: node
   linkType: hard
 
