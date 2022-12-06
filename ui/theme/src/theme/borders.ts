@@ -5,4 +5,5 @@ export const borders = {
   mediumBoldSmokyWhite: '2px solid rgba(242, 242, 242)',
   veryBoldSmokyWhite: '4px solid rgba(242, 242, 242)',
   normalBoldDark: '1px solid rgb(15, 12, 12)',
+  normalSmokyWhite: '1px solid rgb(242,242,242)',
 }

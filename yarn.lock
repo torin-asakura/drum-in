@@ -1617,6 +1617,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/slider": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react-intl: ^6.1.2
     styled-tools: ^1.7.2
     swiper: ^8.3.1

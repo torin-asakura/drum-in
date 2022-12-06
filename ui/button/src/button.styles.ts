@@ -33,8 +33,8 @@ const giantPaddingBigHeightStyles = createShapeStyles({
 const hugePaddingMediumHeightStyles = createShapeStyles({
   size: 40,
   rounding: prop('theme.radii.medium') as unknown as number,
-  paddingLeft: 99,
-  paddingRight: 99,
+  paddingLeft: 0,
+  paddingRight: 0,
 })
 
 export const baseStyles = createBaseStyles()

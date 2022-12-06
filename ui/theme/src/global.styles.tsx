@@ -97,6 +97,37 @@ export const GlobalStyles = () => {
             top: 0
           }
         }
+        
+        .choose-courses-slider .swiper-slide {
+          width: auto !important;
+        }
+        .swiper-pagination {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+        transition: .3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+      }
+      .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background: #807F7F;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: scale(0);
+        transform-origin: left top;
+      }
+      .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+        width: 335px;
+        height: 2px;
+        background: rgba(242, 242, 242, 0.15);
+        bottom: 0;
+        left: 0;
+      }
 `}
     />
   )

@@ -4,6 +4,7 @@ const fontSizes = {
   semiMicro: 11,
   micro: 12,
   semiMedium: 14,
+  middling: 15,
   medium: 16,
   semiRegular: 18,
   regular: 20,

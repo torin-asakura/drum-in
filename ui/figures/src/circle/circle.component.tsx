@@ -30,7 +30,7 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
           </Text>
         </Box>
       ) : null}
-      <Box width={['auto', 'auto', 140]} justifyContent='center'>
+      <Box width={[90, 120, 140]} justifyContent='center'>
         <Text
           textAlign='center'
           textTransform='uppercase'

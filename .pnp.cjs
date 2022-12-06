@@ -3104,6 +3104,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:b05bc822a8d19eceac7d0a92f9749412ff4090c50f59e2c8c03a79ee0b4e602e1dfba977d18c9d326d738be134d35804c3e93a8e645a7c5673dccaa860a2be17#workspace:ui/layout"],\
             ["@ui/slider", "virtual:761353a2211621fe2d5ee15039f5b02dde8dc4a5d9df32beeca8c71054b56bfcd4dd9c4d2b54fd6b12339ceb39dff2aa170f2d196ad5e4c4f018a1d1fdec24ee#workspace:ui/slider"],\
             ["@ui/text", "virtual:b05bc822a8d19eceac7d0a92f9749412ff4090c50f59e2c8c03a79ee0b4e602e1dfba977d18c9d326d738be134d35804c3e93a8e645a7c5673dccaa860a2be17#workspace:ui/text"],\
+            ["@ui/utils", "virtual:b05bc822a8d19eceac7d0a92f9749412ff4090c50f59e2c8c03a79ee0b4e602e1dfba977d18c9d326d738be134d35804c3e93a8e645a7c5673dccaa860a2be17#workspace:ui/utils"],\
             ["react", "npm:18.2.0"],\
             ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"],\
             ["styled-tools", "npm:1.7.2"],\
@@ -3130,6 +3131,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/layout"],\
             ["@ui/slider", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/slider"],\
             ["@ui/text", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/text"],\
+            ["@ui/utils", "virtual:b05bc822a8d19eceac7d0a92f9749412ff4090c50f59e2c8c03a79ee0b4e602e1dfba977d18c9d326d738be134d35804c3e93a8e645a7c5673dccaa860a2be17#workspace:ui/utils"],\
             ["react", null],\
             ["react-intl", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#npm:5.24.3"],\
             ["styled-tools", "npm:1.7.2"],\
@@ -3154,6 +3156,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/layout"],\
             ["@ui/slider", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/slider"],\
             ["@ui/text", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/text"],\
+            ["@ui/utils", "virtual:b05bc822a8d19eceac7d0a92f9749412ff4090c50f59e2c8c03a79ee0b4e602e1dfba977d18c9d326d738be134d35804c3e93a8e645a7c5673dccaa860a2be17#workspace:ui/utils"],\
             ["react-intl", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#npm:5.24.3"],\
             ["styled-tools", "npm:1.7.2"],\
             ["swiper", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:8.4.5"]\
