@@ -28,13 +28,13 @@ export const DrumIcon = (props: IconProps) => {
         width={61}
         height={61}
       >
-        <rect x={0.793945} y={0.569092} width={60} height={60} fill='url(#pattern0)' />
+        <rect x={0.793945} y={0.569092} width={60} height={60} fill='url(#pattern-drum0)' />
       </mask>
       <g mask='url(#DrumIcon_1923_19352)'>
         <rect x={0.793945} y={0.569092} width={60} height={60} fill='#0F0C0C' />
       </g>
       <defs>
-        <pattern id='pattern0' patternContentUnits='objectBoundingBox' width={1} height={1}>
+        <pattern id='pattern-drum0' patternContentUnits='objectBoundingBox' width={1} height={1}>
           <use xlinkHref='#image0_1923_19352' transform='scale(0.00195312)' />
         </pattern>
         <image
