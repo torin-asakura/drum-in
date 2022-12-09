@@ -13,6 +13,7 @@ const fontSizes = {
   semiModerate: 28,
   small: 30,
   moderate: 32,
+  mild: 36,
   semiIncreased: 38,
   increased: 40,
   semiBig: 44,
@@ -25,7 +26,7 @@ const fontSizes = {
   semiHuge: 76,
   huge: 80,
   semiGiant: 86,
-  giant: 96,
+  giant: 110,
 }
 
 export { fontSizes }

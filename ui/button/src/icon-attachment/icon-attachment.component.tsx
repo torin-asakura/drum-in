@@ -12,20 +12,20 @@ import { IconAttachmentProps } from './icon-attachment.interface'
 const IconAttachment: FC<IconAttachmentProps> = ({
   iconSvg,
   valueRadius,
+  valueBackground,
   valueWidth,
   valueHeight,
-  valueBackground,
 }) => {
   const Attachment = useMemo(() => styled(ConditionalRender())(), [])
 
   return iconSvg !== undefined ? (
     <Attachment>
       <Box
-        width={valueWidth}
-        height={valueHeight}
         justifyContent='center'
         alignItems='center'
         borderRadius={valueRadius || 0}
+        width={valueWidth || 'auto'}
+        height={valueHeight || 'auto'}
         backgroundColor={valueBackground || 'transparent'}
       >
         {iconSvg}

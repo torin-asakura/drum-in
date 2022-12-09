@@ -50,9 +50,13 @@ const HeaderBlock = () => {
                 <Button
                   size='withoutPaddingMicroHeight'
                   variant='transparentBackground'
-                  iconSvg={<ArrowBottomIcon color={hoverArrow ? 'rgb(154,101,242)' : ''} />}
-                  valueWidth={[0, 0, 16]}
-                  valueHeight={[0, 0, 16]}
+                  iconSvg={
+                    <ArrowBottomIcon
+                      width={16}
+                      height={16}
+                      color={hoverArrow ? 'rgb(154,101,242)' : ''}
+                    />
+                  }
                   horizontalLocation='left'
                   onClick={() => setVisibleNav(true)}
                   fill

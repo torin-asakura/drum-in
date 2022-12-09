@@ -10,6 +10,8 @@ const backgrounds = {
   transparentPinkGradient: 'linear-gradient(263.61deg, #FF64BF -2.1%, #390725 127.32%)',
   purpleBlueImageGradient: 'url("/img/bg-hero-main-page.png")',
   purpleBlueSmallImageGradient: 'url("/img/mobile-bg-hero-main-page.png")',
+  purpleBlueCirclesImage: 'url("/img/bg-middle-main-page.png")',
+  purpleBlueCirclesSmallImage: 'url("/img/mobile-bg-middle-main-page.png")',
 }
 
 export { backgrounds }

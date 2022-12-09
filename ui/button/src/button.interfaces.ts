@@ -5,12 +5,15 @@ export type ButtonVariant =
   | 'transparentBackgroundPurpleText'
   | 'darkToPurpleBackground'
   | 'purpleBackground'
+  | 'whiteBackground'
 
 export type ButtonSize =
   | 'withoutPaddingMicroHeight'
   | 'mediumPaddingNormalHeight'
-  | 'giantPaddingBigHeight'
-  | 'hugePaddingMediumHeight'
+  | 'withoutPaddingBigHeight'
+  | 'withoutPaddingMediumHeight'
+  | 'mediumPaddingBigHeight'
+  | 'middlingPaddingNormalHeight'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
@@ -18,9 +21,9 @@ export interface ButtonProps extends BaseButtonProps {
   active?: boolean
   ref?: any
   iconSvg?: object
-  valueRadius?: object
-  valueWidth?: object
-  valueHeight?: object
-  valueBackground?: object
-  horizontalLocation?: string
+  valueRadius?: string | object
+  valueWidth?: string | object
+  valueHeight?: string | object
+  valueBackground?: string | object
+  horizontalLocation?: 'left' | 'right'
 }

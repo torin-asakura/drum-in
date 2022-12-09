@@ -112,14 +112,14 @@ const Slide: FC<SlideProps> = ({
                 border={colorBorder ? 'normalSmokyWhite' : 'normalBoldDark'}
                 {...colorBorderProps}
               >
-                <Button size='giantPaddingBigHeight' variant='purpleBackground' fill>
+                <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
                   <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
                     {price}
                   </Text>
                 </Button>
               </Box>
               <Row display={['flex', 'flex', 'none']}>
-                <Button size='hugePaddingMediumHeight' variant='purpleBackground' fill>
+                <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
                   <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
                     {price}
                   </Text>

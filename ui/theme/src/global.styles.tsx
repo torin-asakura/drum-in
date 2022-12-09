@@ -128,6 +128,10 @@ export const GlobalStyles = () => {
         bottom: 0;
         left: 0;
       }
+      
+      .teacher-slider .swiper-slide {
+          width: auto !important;
+        }
 `}
     />
   )

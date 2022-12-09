@@ -23,18 +23,32 @@ const mediumPaddingNormalHeightStyles = createShapeStyles({
   paddingRight: 8,
 })
 
-const giantPaddingBigHeightStyles = createShapeStyles({
+const withoutPaddingBigHeightStyles = createShapeStyles({
   size: 68,
   rounding: prop('theme.radii.extra') as unknown as number,
   paddingLeft: 0,
   paddingRight: 0,
 })
 
-const hugePaddingMediumHeightStyles = createShapeStyles({
+const withoutPaddingMediumHeightStyles = createShapeStyles({
   size: 40,
   rounding: prop('theme.radii.medium') as unknown as number,
   paddingLeft: 0,
   paddingRight: 0,
+})
+
+const mediumPaddingBigHeightStyles = createShapeStyles({
+  size: 61,
+  rounding: prop('theme.radii.bigger') as unknown as number,
+  paddingLeft: 32,
+  paddingRight: 32,
+})
+
+const middlingPaddingNormalHeightStyles = createShapeStyles({
+  size: 50,
+  rounding: prop('theme.radii.max') as unknown as number,
+  paddingLeft: 16,
+  paddingRight: 16,
 })
 
 export const baseStyles = createBaseStyles()
@@ -43,6 +57,8 @@ export const contentStyles = createContentStyles()
 export const shapeStyles = switchProp(prop('size', 'normal'), {
   withoutPaddingMicroHeight: withoutPaddingMicroHeightStyles,
   mediumPaddingNormalHeight: mediumPaddingNormalHeightStyles,
-  giantPaddingBigHeight: giantPaddingBigHeightStyles,
-  hugePaddingMediumHeight: hugePaddingMediumHeightStyles,
+  withoutPaddingBigHeight: withoutPaddingBigHeightStyles,
+  withoutPaddingMediumHeight: withoutPaddingMediumHeightStyles,
+  mediumPaddingBigHeight: mediumPaddingBigHeightStyles,
+  middlingPaddingNormalHeight: middlingPaddingNormalHeightStyles,
 })

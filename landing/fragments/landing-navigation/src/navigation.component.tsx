@@ -49,9 +49,7 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => (
               <Button
                 size='withoutPaddingMicroHeight'
                 variant='transparentBackgroundPurpleText'
-                iconSvg={<ArrowTopIcon />}
-                valueWidth={[0, 0, 16]}
-                valueHeight={[0, 0, 16]}
+                iconSvg={<ArrowTopIcon width={16} height={16} />}
                 horizontalLocation='left'
                 onClick={() => setVisible(false)}
                 fill

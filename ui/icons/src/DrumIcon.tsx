@@ -5,47 +5,33 @@ import React         from 'react'
 
 import { IconProps } from '../icons.interfaces'
 
-export const DramsIcon = (props: IconProps) => {
+export const DrumIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
       width='1em'
       height='1em'
-      viewBox='0 0 64 64'
+      viewBox='0 0 61 61'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       {...props}
     >
       <mask
-        id='DramsIcon_1923_19352'
+        id='DrumIcon_1923_19352'
         style={{
           maskType: 'alpha',
         }}
         maskUnits='userSpaceOnUse'
         x={0}
         y={0}
-        width={64}
-        height={64}
+        width={61}
+        height={61}
       >
-        <rect
-          x={0.264648}
-          y={3.18018}
-          width={60}
-          height={60}
-          transform='rotate(-3 0.264648 3.18018)'
-          fill='url(#pattern0)'
-        />
+        <rect x={0.793945} y={0.569092} width={60} height={60} fill='url(#pattern0)' />
       </mask>
-      <g mask='url(#DramsIcon_1923_19352)'>
-        <rect
-          x={0.264648}
-          y={3.18018}
-          width={60}
-          height={60}
-          transform='rotate(-3 0.264648 3.18018)'
-          fill='#0F0C0C'
-        />
+      <g mask='url(#DrumIcon_1923_19352)'>
+        <rect x={0.793945} y={0.569092} width={60} height={60} fill='#0F0C0C' />
       </g>
       <defs>
         <pattern id='pattern0' patternContentUnits='objectBoundingBox' width={1} height={1}>

@@ -1,0 +1,33 @@
+import React            from 'react'
+
+import { TeacherBlock } from '@landing/teacher-fragment'
+import { Background }   from '@ui/background'
+
+const Middle = () => (
+  <>
+    <Background
+      display={['none', 'none', 'flex']}
+      flexDirection='column'
+      width='100%'
+      gradient='purpleBlueCirclesImage'
+      backgroundSize='contain'
+      backgroundRepeat='no-repeat'
+      backgroundPosition='center center'
+    >
+      <TeacherBlock />
+    </Background>
+    <Background
+      display={['flex', 'flex', 'none']}
+      flexDirection='column'
+      width='100%'
+      gradient='purpleBlueCirclesSmallImage'
+      backgroundSize='100% auto'
+      backgroundRepeat='no-repeat'
+      backgroundPosition='center top'
+    >
+      <TeacherBlock />
+    </Background>
+  </>
+)
+
+export { Middle }

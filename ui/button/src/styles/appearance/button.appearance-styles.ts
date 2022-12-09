@@ -100,6 +100,30 @@ const appearancePurpleBackgroundDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.purpleBackground.disabled.border'),
 })
 
+const appearanceWhiteBackgroundDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.whiteBackground.default.font'),
+  backgroundColor: prop('theme.colors.button.whiteBackground.default.background'),
+  borderColor: prop('theme.colors.button.whiteBackground.default.border'),
+})
+
+const appearanceWhiteBackgroundHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.whiteBackground.hover.font'),
+  backgroundColor: prop('theme.colors.button.whiteBackground.hover.background'),
+  borderColor: prop('theme.colors.button.whiteBackground.hover.border'),
+})
+
+const appearanceWhiteBackgroundPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.whiteBackground.pressed.font'),
+  backgroundColor: prop('theme.colors.button.whiteBackground.pressed.background'),
+  borderColor: prop('theme.colors.button.whiteBackground.pressed.border'),
+})
+
+const appearanceWhiteBackgroundDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.whiteBackground.disabled.font'),
+  backgroundColor: prop('theme.colors.button.whiteBackground.disabled.background'),
+  borderColor: prop('theme.colors.button.whiteBackground.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   transparentBackground: ifProp(
     prop('disabled', false),
@@ -150,6 +174,19 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearancePurpleBackgroundHoverStyles,
         appearancePurpleBackgroundDefaultStyles
+      )
+    )
+  ),
+  whiteBackground: ifProp(
+    prop('disabled', false),
+    appearanceWhiteBackgroundDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceWhiteBackgroundPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceWhiteBackgroundHoverStyles,
+        appearanceWhiteBackgroundDefaultStyles
       )
     )
   ),

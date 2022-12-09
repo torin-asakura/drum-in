@@ -13,7 +13,7 @@ const Hero = () => (
       flexDirection='column'
       width='100%'
       gradient='purpleBlueImageGradient'
-      backgroundSize='cover'
+      backgroundSize='100% 100%'
       backgroundRepeat='no-repeat'
       backgroundPosition='center top'
     >

@@ -88,17 +88,41 @@ const colors = {
         border: 'rgba(15, 12, 12, 0.12)',
       },
     },
+    whiteBackground: {
+      default: {
+        background: 'rgb(242,242,242)',
+        font: 'rgb(15, 12, 12)',
+        border: 'rgb(242,242,242)',
+      },
+      hover: {
+        background: 'rgb(156, 101, 242)',
+        font: 'rgb(242,242,242)',
+        border: 'rgb(242,242,242)',
+      },
+      pressed: {
+        background: 'rgb(156, 101, 242)',
+        font: 'rgb(242,242,242)',
+        border: 'rgb(242,242,242)',
+      },
+      disabled: {
+        background: 'rgb(128, 127, 127)',
+        font: 'rgba(242, 242, 242, 0.5)',
+        border: 'rgb(128, 127, 127)',
+      },
+    },
   },
   text: {
     smokyWhite: 'rgb(242,242,242)',
     transparentSmokyWhite: 'rgba(242, 242, 242, 0.5)',
     blackAmber: 'rgb(15,12,12)',
     gray: 'rgb(128, 127, 127)',
+    purple: 'rgb(156, 101, 242)',
   },
   background: {
     blackAmber: 'rgb(15,12,12)',
     transparentWhite: 'rgba(242, 242, 242, 0.15)',
     smokyWhite: 'rgb(242,242,242)',
+    purple: 'rgb(156, 101, 242)',
   },
   drawer: {
     backdrop: 'rgba(72, 72, 72, 0.6)',
