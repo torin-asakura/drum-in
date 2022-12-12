@@ -11,7 +11,7 @@ import { Slide }          from './slide'
 const SliderBlock = () => (
   <>
     <Box position='relative' display={['none', 'none', 'flex']}>
-      <Box position='absolute' top={-30} right={200}>
+      <Box position='absolute' top={-109} right={247}>
         <DrumsticksIcon width={182} height={182} />
       </Box>
       <Swiper

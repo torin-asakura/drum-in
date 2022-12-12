@@ -49,6 +49,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:landing/fragments/landing-navigation"\
       },\
       {\
+        "name": "@landing/private-lesson-fragment",\
+        "reference": "workspace:landing/fragments/landing-private-lesson"\
+      },\
+      {\
         "name": "@landing/tape-fragment",\
         "reference": "workspace:landing/fragments/landing-tape"\
       },\
@@ -127,6 +131,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@landing/index-page", ["virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:landing/pages/index-page", "workspace:landing/pages/index-page"]],\
       ["@landing/middle-fragment", ["virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-middle", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:landing/fragments/landing-middle", "workspace:landing/fragments/landing-middle"]],\
       ["@landing/navigation-fragment", ["virtual:abee025a86778e60f1149224d1c5f1f53e13e3150627c79913fe0105ada076348d9f153c31dab2f19d3e170f803bd2274bce24f1e84c9078abe9b3f55211f190#workspace:landing/fragments/landing-navigation", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:landing/fragments/landing-navigation", "workspace:landing/fragments/landing-navigation"]],\
+      ["@landing/private-lesson-fragment", ["virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-private-lesson", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-private-lesson", "workspace:landing/fragments/landing-private-lesson"]],\
       ["@landing/renderer-entrypoint", ["workspace:landing/entrypoints/renderer"]],\
       ["@landing/tape-fragment", ["virtual:c305568b4e8c77c0cbc45f56f83041ebd434acb72b675b4cee03f4c921649a0db1925c930cead8c7c1a52da495844bba119dfb2bd4a2ba3588fd66ed5bba50b3#workspace:landing/fragments/landing-tape", "virtual:fe87c7ee4826dbb915372f99c3e96b277bbb9cecdfdac3fd48fb26bb469b007fe6f8ebbd00132daf42a4894703bf9a44da5fdb9acf93829ba9f1fbefc9486e84#workspace:landing/fragments/landing-tape", "workspace:landing/fragments/landing-tape"]],\
       ["@landing/teacher-fragment", ["virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-teacher", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-teacher", "workspace:landing/fragments/landing-teacher"]],\
@@ -3369,6 +3374,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@landing/middle-fragment", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-middle"],\
             ["@emotion/react", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
+            ["@landing/private-lesson-fragment", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-private-lesson"],\
             ["@landing/teacher-fragment", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-teacher"],\
             ["@types/emotion__react", null],\
             ["@types/react", "npm:17.0.47"],\
@@ -3392,6 +3398,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@landing/middle-fragment", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:landing/fragments/landing-middle"],\
             ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+            ["@landing/private-lesson-fragment", "virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-private-lesson"],\
             ["@landing/teacher-fragment", "virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-teacher"],\
             ["@types/emotion__react", null],\
             ["@types/react", "npm:17.0.47"],\
@@ -3414,6 +3421,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./landing/fragments/landing-middle/",\
           "packageDependencies": [\
             ["@landing/middle-fragment", "workspace:landing/fragments/landing-middle"],\
+            ["@landing/private-lesson-fragment", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-private-lesson"],\
             ["@landing/teacher-fragment", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-teacher"],\
             ["@types/react", "npm:17.0.47"],\
             ["@ui/background", "virtual:6489af0a7645e234183291ffe7ba080bfb9ca0e2dbf257b23d6f1cbdd418ce83d9cea19744ee4a37f069c222b4a9b39d92fb1b3b8a17ca923a1c3df3779406d8#workspace:ui/background"]\
@@ -3504,6 +3512,62 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-intl", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#npm:5.24.3"],\
             ["styled-system", "npm:5.1.5"],\
             ["styled-tools", "npm:1.7.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@landing/private-lesson-fragment", [\
+        ["virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-private-lesson", {\
+          "packageLocation": "./.yarn/__virtual__/@landing-private-lesson-fragment-virtual-2fffa6dd46/1/landing/fragments/landing-private-lesson/",\
+          "packageDependencies": [\
+            ["@landing/private-lesson-fragment", "virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-private-lesson"],\
+            ["@types/react", "npm:17.0.47"],\
+            ["@types/react-intl", null],\
+            ["@ui/button", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/button"],\
+            ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
+            ["@ui/layout", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/layout"],\
+            ["@ui/text", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/text"],\
+            ["react", "npm:18.2.0"],\
+            ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-intl",\
+            "@types/react",\
+            "react-intl",\
+            "react"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-private-lesson", {\
+          "packageLocation": "./.yarn/__virtual__/@landing-private-lesson-fragment-virtual-0591ecebd6/1/landing/fragments/landing-private-lesson/",\
+          "packageDependencies": [\
+            ["@landing/private-lesson-fragment", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-private-lesson"],\
+            ["@types/react", "npm:17.0.47"],\
+            ["@types/react-intl", null],\
+            ["@ui/button", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/button"],\
+            ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
+            ["@ui/layout", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/layout"],\
+            ["@ui/text", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/text"],\
+            ["react", null],\
+            ["react-intl", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#npm:5.24.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-intl",\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["workspace:landing/fragments/landing-private-lesson", {\
+          "packageLocation": "./landing/fragments/landing-private-lesson/",\
+          "packageDependencies": [\
+            ["@landing/private-lesson-fragment", "workspace:landing/fragments/landing-private-lesson"],\
+            ["@types/react", "npm:17.0.47"],\
+            ["@ui/button", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/button"],\
+            ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
+            ["@ui/layout", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/layout"],\
+            ["@ui/text", "virtual:f57c536bfaa948bdfa392418745079b735531a2ceff143d772d8c077dd476046a6b5ff956d5cf5f10f596d319ba8cbce6175f967c8ee43c0782975ac553500e2#workspace:ui/text"],\
+            ["react-intl", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#npm:5.24.3"]\
           ],\
           "linkType": "SOFT"\
         }]\

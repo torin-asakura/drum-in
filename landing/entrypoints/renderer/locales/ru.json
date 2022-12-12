@@ -86,5 +86,15 @@
   "landing_teacher.mkim_by_percussion_class": "МКИМ по классу Ударные",
   "landing_teacher.drumworkshop_saulcrasti": "Drumworkshop Saulcrasti Jazz by Donald Edwards",
   "landing_teacher.begues_jazz_camp": "Begues Jazz Camp",
-  "landing_teacher.stop": "Остановить"
+  "landing_teacher.stop": "Остановить",
+  "landing_private_lesson.private": "Индивидуальное",
+  "landing_private_lesson.lesson": "Занятие",
+  "landing_private_lesson.duration": "Длительность",
+  "landing_private_lesson.dash_ninety_minutes": "— 90 минут",
+  "landing_private_lesson.format": "Формат",
+  "landing_private_lesson.dash_online-lesson_in_zoom": "— онлайн-занятие в Zoom",
+  "landing_private_lesson.study_at_any_convenient_time": "Обучайтесь в любое удобное время",
+  "landing_private_lesson.you_will_get_a_system_of_exercises_and_theoretical_knowledge": "Вы получите систему упражнений и теоретических знаний, необходимых для развития ритмического слуха, контроля темпа, ощущения времени.",
+  "landing_private_lesson.two_thousand_five_hundred": "2 500 ₽",
+  "landing_private_lesson.sign_up": "Записаться"
 }

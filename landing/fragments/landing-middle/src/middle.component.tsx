@@ -1,7 +1,8 @@
-import React            from 'react'
+import React                  from 'react'
 
-import { TeacherBlock } from '@landing/teacher-fragment'
-import { Background }   from '@ui/background'
+import { PrivateLessonBlock } from '@landing/private-lesson-fragment'
+import { TeacherBlock }       from '@landing/teacher-fragment'
+import { Background }         from '@ui/background'
 
 const Middle = () => (
   <>
@@ -15,6 +16,7 @@ const Middle = () => (
       backgroundPosition='center center'
     >
       <TeacherBlock />
+      <PrivateLessonBlock />
     </Background>
     <Background
       display={['flex', 'flex', 'none']}
@@ -26,6 +28,7 @@ const Middle = () => (
       backgroundPosition='center top'
     >
       <TeacherBlock />
+      <PrivateLessonBlock />
     </Background>
   </>
 )
