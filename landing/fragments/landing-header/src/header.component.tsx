@@ -21,7 +21,12 @@ const HeaderBlock = () => {
   return (
     <>
       <NavigationBlock visible={visibleNav} setVisible={setVisibleNav} />
-      <Row justifyContent='center'>
+      <Box
+        width='100%'
+        zIndex={1000}
+        height={[72, 72, 109]}
+        position='fixed'
+        justifyContent='center'>
         <Column width={['100%', '100%', 1920]} alignItems='center'>
           <Layout flexBasis={[24, 28, 32]} />
           <Box width='100%'>
@@ -90,7 +95,7 @@ const HeaderBlock = () => {
           </Box>
           <Layout flexBasis={[24, 28, 32]} />
         </Column>
-      </Row>
+      </Box>
     </>
   )
 }

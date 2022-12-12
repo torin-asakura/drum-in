@@ -21,7 +21,7 @@ const BannerBlock = () => {
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} />
         <Column width='100%'>
-          <Layout order={[1, 1, -1]} flexBasis={[52, 61, 70]} />
+          <Layout order={[1, 1, -1]} flexBasis={[124, 133, 179]} />
           <Row display={['none', 'none', 'flex']} order={-1} justifyContent='center'>
             <RhythmSchoolIcon width='100%' height='100%' />
           </Row>
