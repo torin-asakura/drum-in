@@ -96,5 +96,10 @@
   "landing_private_lesson.study_at_any_convenient_time": "Обучайтесь в любое удобное время",
   "landing_private_lesson.you_will_get_a_system_of_exercises_and_theoretical_knowledge": "Вы получите систему упражнений и теоретических знаний, необходимых для развития ритмического слуха, контроля темпа, ощущения времени.",
   "landing_private_lesson.two_thousand_five_hundred": "2 500 ₽",
-  "landing_private_lesson.sign_up": "Записаться"
+  "landing_private_lesson.sign_up": "Записаться",
+  "landing_learning_process.during_the_training_you_will_find": "Во время обучения вас ждет",
+  "landing_learning_process.practical_video_tasks": "Практические видео-задания",
+  "landing_learning_process.weekly_online_group_classes": "Еженедельные групповые онлайн-занятия",
+  "landing_learning_process.personal_control_of_task_completion": "Личный контроль выполнения заданий",
+  "landing_learning_process.analysis_of_compositions_and_parties_of_different_styles": "Разбор композиций и партий разных стилей"
 }

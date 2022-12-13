@@ -129,6 +129,7 @@ export const GlobalStyles = () => {
         left: 0;
       }
       
+      .learning-process-slider .swiper-slide,
       .teacher-slider .swiper-slide {
           width: auto !important;
         }

@@ -1,8 +1,9 @@
-import React                  from 'react'
+import React                    from 'react'
 
-import { PrivateLessonBlock } from '@landing/private-lesson-fragment'
-import { TeacherBlock }       from '@landing/teacher-fragment'
-import { Background }         from '@ui/background'
+import { LearningProcessBlock } from '@landing/learning-process-fragment'
+import { PrivateLessonBlock }   from '@landing/private-lesson-fragment'
+import { TeacherBlock }         from '@landing/teacher-fragment'
+import { Background }           from '@ui/background'
 
 const Middle = () => (
   <>
@@ -11,12 +12,13 @@ const Middle = () => (
       flexDirection='column'
       width='100%'
       gradient='purpleBlueCirclesImage'
-      backgroundSize='contain'
+      backgroundSize='1800px'
       backgroundRepeat='no-repeat'
-      backgroundPosition='center center'
+      backgroundPosition='center 75%'
     >
       <TeacherBlock />
       <PrivateLessonBlock />
+      <LearningProcessBlock />
     </Background>
     <Background
       display={['flex', 'flex', 'none']}
@@ -25,8 +27,9 @@ const Middle = () => (
       gradient='purpleBlueCirclesSmallImage'
       backgroundSize='100% auto'
       backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
+      backgroundPosition='center center'
     >
+      <LearningProcessBlock />
       <TeacherBlock />
       <PrivateLessonBlock />
     </Background>

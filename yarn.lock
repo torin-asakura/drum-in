@@ -1685,10 +1685,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/learning-process-fragment@workspace:0.0.1, @landing/learning-process-fragment@workspace:landing/fragments/landing-learning-process":
+  version: 0.0.0-use.local
+  resolution: "@landing/learning-process-fragment@workspace:landing/fragments/landing-learning-process"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/slider": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-tools: ^1.7.2
+    swiper: ^8.3.1
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/middle-fragment@workspace:0.0.1, @landing/middle-fragment@workspace:landing/fragments/landing-middle":
   version: 0.0.0-use.local
   resolution: "@landing/middle-fragment@workspace:landing/fragments/landing-middle"
   dependencies:
+    "@landing/learning-process-fragment": "workspace:0.0.1"
     "@landing/private-lesson-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
