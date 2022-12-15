@@ -9,4 +9,7 @@ export const borders = {
   normalSmokyWhite: '1px solid rgb(242,242,242)',
   normalPurple: '1px solid rgb(156, 101, 242)',
   mediumBoldBlackAmber: '2px solid rgb(15,12,12)',
+  mediumBoldSmokyWhiteDashed: '2px dashed rgba(242, 242, 242, 0.5)',
+  veryBoldSmokyWhiteDashed: '3px dashed rgba(242, 242, 242, 0.5)',
+  semiBoldTransparent: '3px solid transparent',
 }

@@ -110,6 +110,50 @@ const colors = {
         border: 'rgb(128, 127, 127)',
       },
     },
+    transparentWhiteToPurpleBackground: {
+      default: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(242, 242, 242)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgb(156, 101, 242)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgb(156, 101, 242)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgb(156, 101, 242)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
+    transparentWhiteToGrayBackground: {
+      default: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(242, 242, 242)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgb(128, 127, 127)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgb(128, 127, 127)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgb(128, 127, 127)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
   },
   text: {
     smokyWhite: 'rgb(242,242,242)',

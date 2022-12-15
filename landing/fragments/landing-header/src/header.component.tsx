@@ -23,7 +23,7 @@ const HeaderBlock = () => {
       <NavigationBlock visible={visibleNav} setVisible={setVisibleNav} />
       <Box
         width='100%'
-        zIndex={1000}
+        zIndex={100}
         height={[72, 72, 109]}
         position='fixed'
         justifyContent='center'

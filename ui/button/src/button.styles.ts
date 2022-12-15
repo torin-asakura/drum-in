@@ -51,6 +51,20 @@ const middlingPaddingNormalHeightStyles = createShapeStyles({
   paddingRight: 16,
 })
 
+const middlingPaddingMediumHeightStyles = createShapeStyles({
+  size: 40,
+  rounding: prop('theme.radii.medium') as unknown as number,
+  paddingLeft: 16,
+  paddingRight: 16,
+})
+
+const littlePaddingMediumHeightStyles = createShapeStyles({
+  size: 44,
+  rounding: prop('theme.radii.max') as unknown as number,
+  paddingLeft: 10,
+  paddingRight: 10,
+})
+
 export const baseStyles = createBaseStyles()
 export const contentStyles = createContentStyles()
 
@@ -61,4 +75,6 @@ export const shapeStyles = switchProp(prop('size', 'normal'), {
   withoutPaddingMediumHeight: withoutPaddingMediumHeightStyles,
   mediumPaddingBigHeight: mediumPaddingBigHeightStyles,
   middlingPaddingNormalHeight: middlingPaddingNormalHeightStyles,
+  middlingPaddingMediumHeight: middlingPaddingMediumHeightStyles,
+  littlePaddingMediumHeight: littlePaddingMediumHeightStyles,
 })

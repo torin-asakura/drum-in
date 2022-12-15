@@ -1,13 +1,13 @@
-import React                      from 'react'
-import { Mousewheel }             from 'swiper'
-import { Pagination } from 'swiper'
-import { useIntl }                from 'react-intl'
+import React           from 'react'
+import { Mousewheel }  from 'swiper'
+import { Pagination }  from 'swiper'
+import { useIntl }     from 'react-intl'
 
-import { Swiper }                 from '@ui/slider'
-import { SwiperSlide }            from '@ui/slider'
+import { Swiper }      from '@ui/slider'
+import { SwiperSlide } from '@ui/slider'
 
-import { SlideImage }             from '../slide-image'
-import { SlideText }              from '../slide-text'
+import { SlideImage }  from '../slide-image'
+import { SlideText }   from '../slide-text'
 
 const SliderTop = () => {
   const { formatMessage } = useIntl()
