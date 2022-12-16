@@ -1,29 +1,29 @@
-import React                      from 'react'
-import { useIntl }                from 'react-intl'
+import React           from 'react'
+import { Pagination }  from 'swiper'
+import { useIntl }     from 'react-intl'
 
-import { MarchingDrumIcon }       from '@ui/icons'
-import { MicrophoneIcon }         from '@ui/icons'
-import { MusicalNotesIcon }       from '@ui/icons'
-import { SaxophoneIcon }          from '@ui/icons'
-import { SaxophoneWithNotesIcon } from '@ui/icons'
-import { ViolinIcon }             from '@ui/icons'
-import { ViolinWithBowIcon }      from '@ui/icons'
-import { DrumTurnedLeftIcon }     from '@ui/icons'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Row }                    from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { Swiper }      from '@ui/slider'
+import { SwiperSlide } from '@ui/slider'
 
-import { BackgroundBlock }        from './background'
-import { CardsSwiper }            from './cards-swiper'
-import { Item }                   from './item'
+import { Item }        from '../item'
 
-const CardsStudent = () => {
+const CardsSwiper = () => {
   const { formatMessage } = useIntl()
 
   return (
-    <>
-      <Column display={['none', 'none', 'flex']}>
-        <Row>
+    <Box display={['flex', 'flex', 'none']}>
+      <Swiper
+        className='students-slider'
+        spaceBetween={16}
+        slidesOffsetAfter={50}
+        slidesPerView='auto'
+        pagination={{ type: 'progressbar' }}
+        modules={[Pagination]}
+        touchEventsTarget='container'
+        autoHeight
+      >
+        <SwiperSlide>
           <Item
             fullName={formatMessage({
               id: 'landing_students.elizaveta_musaelyan',
@@ -42,15 +42,9 @@ const CardsStudent = () => {
               defaultMessage:
                 'Один из перых учеников. Вокалистка, саксофонистка, композитор, бэнд лидер группы Cotton Air, одна из управляющих IndieRockSchool.',
             })}
-            firstIcon={<SaxophoneWithNotesIcon width={110} height={110} />}
-            verticalPositionFirstIcon={-70}
-            horizontalPositionFirstIcon={40}
-            secondIcon={<SaxophoneIcon width={110} height={110} />}
-            verticalPositionSecondIcon={-112}
-            horizontalPositionSecondIcon={220}
-            rotateCard={-4}
           />
-          <Layout flexBasis={40} flexShrink={0} />
+        </SwiperSlide>
+        <SwiperSlide>
           <Item
             fullName={formatMessage({
               id: 'landing_students.alexey_lazarev',
@@ -69,15 +63,9 @@ const CardsStudent = () => {
               defaultMessage:
                 'Уже барабанщик групп Персефона и Птица, пришел в школу 10 лет назад с нуля, обучался игре на барабанах в течении 3-х лет.',
             })}
-            firstIcon={<DrumTurnedLeftIcon width={110} height={110} />}
-            verticalPositionFirstIcon={-70}
-            horizontalPositionFirstIcon={40}
-            secondIcon={<MarchingDrumIcon width={110} height={110} />}
-            verticalPositionSecondIcon={-115}
-            horizontalPositionSecondIcon={220}
-            rotateCard={-4}
           />
-          <Layout flexBasis={40} flexShrink={0} />
+        </SwiperSlide>
+        <SwiperSlide>
           <Item
             fullName={formatMessage({
               id: 'landing_students.maya_gorat',
@@ -96,15 +84,9 @@ const CardsStudent = () => {
               defaultMessage:
                 'Пришла в школу 5 лет назад. Собрала много полезных ритмических приёмов, которые использует сейчас при написании песен и работе в театре.',
             })}
-            firstIcon={<ViolinIcon width={110} height={110} />}
-            verticalPositionFirstIcon={-90}
-            horizontalPositionFirstIcon={60}
-            secondIcon={<ViolinWithBowIcon width={110} height={110} />}
-            verticalPositionSecondIcon={-100}
-            horizontalPositionSecondIcon={265}
-            rotateCard={4}
           />
-          <Layout flexBasis={40} flexShrink={0} />
+        </SwiperSlide>
+        <SwiperSlide>
           <Item
             fullName={formatMessage({
               id: 'landing_students.anfisa_shelekhina',
@@ -123,20 +105,10 @@ const CardsStudent = () => {
               defaultMessage:
                 'Пришла в школу для повышения квалификации. Завершила 2 уровня и спустя 10 месяцев начала применять знания в собственных аранжировках.',
             })}
-            firstIcon={<MicrophoneIcon width={110} height={110} />}
-            verticalPositionFirstIcon={-85}
-            horizontalPositionFirstIcon={80}
-            secondIcon={<MusicalNotesIcon width={110} height={110} />}
-            verticalPositionSecondIcon={-110}
-            horizontalPositionSecondIcon={220}
-            rotateCard={4}
           />
-        </Row>
-        <Layout flexBasis={[64, 70, 42]} />
-        <BackgroundBlock />
-      </Column>
-      <CardsSwiper />
-    </>
+        </SwiperSlide>
+      </Swiper>
+    </Box>
   )
 }
-export { CardsStudent }
+export { CardsSwiper }

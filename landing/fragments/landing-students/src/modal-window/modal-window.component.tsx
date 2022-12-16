@@ -37,12 +37,17 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => (
       id='drawer'
     >
       <Container scroll>
-        <Box width={666}>
+        <Box width={[370, 630, 666]}>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
           <Column width='100%'>
-            <Layout flexBasis={[35, 42, 48]} flexShrink={0} />
-            <Row justifyContent='space-between' alignItems='start'>
-              <Column width={450}>
+            <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
+            <Box
+              width='100%'
+              flexDirection={['column', 'row', 'row']}
+              justifyContent={['start', 'space-between', 'space-between']}
+              alignItems='start'
+            >
+              <Column order={[2, 0, 0]} width={['100%', 450, 450]}>
                 <Box>
                   <Text
                     fontWeight='medium'
@@ -71,7 +76,7 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => (
                   </Text>
                 </Box>
               </Column>
-              <Box>
+              <Box order={[1, 0, 0]} width={['100%', 'auto', 'auto']} justifyContent='end'>
                 <Button
                   size='littlePaddingMediumHeight'
                   variant='transparentWhiteToGrayBackground'
@@ -80,8 +85,8 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => (
                   <CrossMenuIcon width={24} height={24} />
                 </Button>
               </Box>
-            </Row>
-            <Layout flexBasis={29} flexShrink={0} />
+            </Box>
+            <Layout flexBasis={[16, 29, 29]} flexShrink={0} />
             <Row>
               <Layout flexBasis={0} flexGrow={3} />
               <Box>
@@ -89,7 +94,7 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => (
               </Box>
               <Layout flexBasis={0} flexGrow={1} />
             </Row>
-            <Layout flexBasis={48} flexShrink={0} />
+            <Layout flexBasis={[30, 48, 48]} flexShrink={0} />
             <StudentsList />
             <Layout flexBasis={[40, 59, 78]} flexShrink={0} />
           </Column>

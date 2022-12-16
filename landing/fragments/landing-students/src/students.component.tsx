@@ -24,7 +24,12 @@ const StudentsBlock = () => {
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[32, 77, 120]} />
-            <Row alignItems='center' justifyContent='space-between' flexWrap='wrap'>
+            <Box
+              width='100%'
+              alignItems={['start', 'start', 'center']}
+              justifyContent={['start', 'start', 'space-between']}
+              flexDirection={['column', 'column', 'row']}
+            >
               <Box>
                 <Text
                   textTransform='uppercase'
@@ -37,7 +42,8 @@ const StudentsBlock = () => {
                   <FormattedMessage id='landing_students.students' defaultMessage='Ученики' />
                 </Text>
               </Box>
-              <Column width={['100%', '100%', 440]}>
+              <Layout display={['flex', 'flex', 'none']} flexBasis={[8, 12, 0]} />
+              <Column width={[335, 420, 440]}>
                 <Box>
                   <Text
                     fontWeight='medium'
@@ -52,7 +58,7 @@ const StudentsBlock = () => {
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 20, 24]} />
-                <Box>
+                <Box display={['none', 'none', 'flex']}>
                   <Button
                     size='middlingPaddingMediumHeight'
                     variant='transparentWhiteToPurpleBackground'
@@ -68,10 +74,27 @@ const StudentsBlock = () => {
                     </Text>
                   </Button>
                 </Box>
+                <Box display={['flex', 'flex', 'none']}>
+                  <Button
+                    size='littlePaddingSemiMediumHeight'
+                    variant='transparentWhiteToPurpleBackground'
+                    iconSvg={<ArrowRightIcon width={20} height={20} />}
+                    horizontalLocation='right'
+                    onClick={() => setVisibleModal(true)}
+                  >
+                    <Text textTransform='uppercase' fontWeight='semiBold' fontSize='micro'>
+                      <FormattedMessage
+                        id='landing_students.watch_more'
+                        defaultMessage='Смотреть еще'
+                      />
+                    </Text>
+                  </Button>
+                </Box>
               </Column>
-            </Row>
+            </Box>
             <Layout flexBasis={[32, 82, 175]} />
             <CardsStudent />
+            <Layout display={['flex', 'flex', 'none']} flexBasis={[24, 34, 0]} />
           </Column>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         </Box>

@@ -1717,10 +1717,12 @@ __metadata:
     "@types/react": 18.0.21
     "@types/react-dom": ^17
     "@types/styled-system": ^5.1.12
+    "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/slider": "workspace:0.0.1"
+    "@ui/tag": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: 7.6.2
@@ -2947,6 +2949,24 @@ __metadata:
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/tag@workspace:0.0.1, @ui/tag@workspace:ui/tag":
+  version: 0.0.0-use.local
+  resolution: "@ui/tag@workspace:ui/tag"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    next: 12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: ^6.1.2
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 

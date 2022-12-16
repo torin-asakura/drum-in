@@ -5,6 +5,7 @@ import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Box }             from '@ui/layout'
+import { Tag }             from '@ui/tag'
 import { Text }            from '@ui/text'
 import { useHover }        from '@ui/utils'
 
@@ -22,71 +23,41 @@ const OneStudent: FC<OneStudentProps> = ({ fullName, age, profession }) => {
       borderRadius='medium'
       style={{ transition: '0.3s' }}
     >
-      <Layout flexBasis={20} />
+      <Layout flexBasis={[16, 20, 20]} />
       <Column width='100%'>
-        <Layout flexBasis={21} />
-        <Row alignItems='center'>
-          <Box>
+        <Layout flexBasis={[16, 21, 21]} />
+        <Row alignItems='center' flexWrap='wrap'>
+          <Box order={[1, 0, 0]} width={['100%', 'auto', 'auto']}>
             <Text
               fontWeight='medium'
               fontSize='regular'
-              lineHeight='medium'
+              lineHeight={['big', 'medium', 'medium']}
               color={elemHover ? 'text.blackAmber' : 'text.smokyWhite'}
               style={{ transition: '0.3s' }}
             >
               {fullName}
             </Text>
           </Box>
-          <Layout flexBasis={0} flexGrow={3} />
-          <Box
-            backgroundColor={elemHover ? 'background.blackAmber' : 'background.transparentWhite'}
-            borderRadius='semiHuge'
-            style={{ transition: '0.3s' }}
-          >
-            <Layout flexBasis={12} flexShrink={0} />
-            <Column width='100%'>
-              <Layout flexBasis={4} />
-              <Row>
-                <Text
-                  fontWeight='medium'
-                  fontSize='medium'
-                  lineHeight='medium'
-                  color='text.smokyWhite'
-                >
-                  {age}
-                </Text>
-              </Row>
-              <Layout flexBasis={4} />
-            </Column>
-            <Layout flexBasis={12} flexShrink={0} />
-          </Box>
+          <Layout display={['none', 'flex', 'flex']} flexBasis={0} flexGrow={3} />
+          <Tag
+            padding={['4px 12px', '4px 12px', '4px 12px']}
+            fontSize={['semiMedium', 'medium', 'medium']}
+            fontFamily='primary'
+            stateElem={elemHover}
+            text={age}
+          />
           <Layout flexBasis={16} flexShrink={0} />
-          <Box
-            backgroundColor={elemHover ? 'background.blackAmber' : 'background.transparentWhite'}
-            borderRadius='semiHuge'
-            style={{ transition: '0.3s' }}
-          >
-            <Layout flexBasis={12} flexShrink={0} />
-            <Column>
-              <Layout flexBasis={4} />
-              <Box>
-                <Text
-                  fontWeight='medium'
-                  fontSize='medium'
-                  lineHeight='medium'
-                  color='text.smokyWhite'
-                >
-                  {profession}
-                </Text>
-              </Box>
-              <Layout flexBasis={4} />
-            </Column>
-            <Layout flexBasis={12} flexShrink={0} />
-          </Box>
+          <Tag
+            padding={['4px 12px', '4px 12px', '4px 12px']}
+            fontSize={['semiMedium', 'medium', 'medium']}
+            fontFamily='primary'
+            stateElem={elemHover}
+            text={profession}
+          />
         </Row>
-        <Layout flexBasis={21} />
+        <Layout flexBasis={[13, 21, 21]} />
       </Column>
-      <Layout flexBasis={20} />
+      <Layout flexBasis={[16, 20, 20]} />
     </Box>
   )
 }

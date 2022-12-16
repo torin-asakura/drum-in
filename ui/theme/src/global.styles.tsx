@@ -14,6 +14,7 @@ export const GlobalStyles = () => {
     <Global
       styles={css`
         @import url('http://db.onlinewebfonts.com/c/54e947fcd1a1db8af459016676e593e8?family=Druk+Wide+Cy+TT+Bold');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
         @font-face {
           font-family: 'SF Pro Display';
           src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
@@ -98,9 +99,6 @@ export const GlobalStyles = () => {
           }
         }
         
-        .choose-courses-slider .swiper-slide {
-          width: auto !important;
-        }
         .swiper-pagination {
         position: absolute;
         bottom: 0;
@@ -129,6 +127,8 @@ export const GlobalStyles = () => {
         left: 0;
       }
       
+      .choose-courses-slider .swiper-slide,
+      .students-slider .swiper-slide,
       .learning-process-slider .swiper-slide,
       .teacher-slider .swiper-slide {
           width: auto !important;

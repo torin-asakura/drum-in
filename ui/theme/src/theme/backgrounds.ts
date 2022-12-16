@@ -12,6 +12,8 @@ const backgrounds = {
   purpleBlueSmallImageGradient: 'url("/img/mobile-bg-hero-main-page.png")',
   purpleBlueCirclesImage: 'url("/img/bg-middle-main-page.png")',
   purpleBlueCirclesSmallImage: 'url("/img/mobile-bg-middle-main-page.png")',
+  verticalTransparentToBlackGradient:
+    'linear-gradient(360deg, #0F0C0C 0%, rgba(15, 12, 12, 0) 100%)',
 }
 
 export { backgrounds }

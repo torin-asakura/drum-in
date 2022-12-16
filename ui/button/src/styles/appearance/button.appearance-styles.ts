@@ -178,32 +178,6 @@ const appearanceTransparentWhiteToGrayBackgroundDisabledStyles = createAppearanc
   borderColor: prop('theme.colors.button.transparentWhiteToGrayBackground.disabled.border'),
 })
 
-const appearanceTransparentWhiteToBlackBackgroundDefaultStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentWhiteToBlackBackground.default.font'),
-  backgroundColor: prop('theme.colors.button.transparentWhiteToBlackBackground.default.background'),
-  borderColor: prop('theme.colors.button.transparentWhiteToBlackBackground.default.border'),
-})
-
-const appearanceTransparentWhiteToBlackBackgroundHoverStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentWhiteToBlackBackground.hover.font'),
-  backgroundColor: prop('theme.colors.button.transparentWhiteToBlackBackground.hover.background'),
-  borderColor: prop('theme.colors.button.transparentWhiteToBlackBackground.hover.border'),
-})
-
-const appearanceTransparentWhiteToBlackBackgroundPressedStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentWhiteToBlackBackground.pressed.font'),
-  backgroundColor: prop('theme.colors.button.transparentWhiteToBlackBackground.pressed.background'),
-  borderColor: prop('theme.colors.button.transparentWhiteToBlackBackground.pressed.border'),
-})
-
-const appearanceTransparentWhiteToBlackBackgroundDisabledStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentWhiteToBlackBackground.disabled.font'),
-  backgroundColor: prop(
-    'theme.colors.button.transparentWhiteToBlackBackground.disabled.background'
-  ),
-  borderColor: prop('theme.colors.button.transparentWhiteToBlackBackground.disabled.border'),
-})
-
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   transparentBackground: ifProp(
     prop('disabled', false),
@@ -293,19 +267,6 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearanceTransparentWhiteToGrayBackgroundHoverStyles,
         appearanceTransparentWhiteToGrayBackgroundDefaultStyles
-      )
-    )
-  ),
-  transparentWhiteToBlackBackground: ifProp(
-    prop('disabled', false),
-    appearanceTransparentWhiteToBlackBackgroundDisabledStyles,
-    ifProp(
-      prop('pressed', false),
-      appearanceTransparentWhiteToBlackBackgroundPressedStyles,
-      ifProp(
-        prop('hover', false),
-        appearanceTransparentWhiteToBlackBackgroundHoverStyles,
-        appearanceTransparentWhiteToBlackBackgroundDefaultStyles
       )
     )
   ),

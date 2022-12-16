@@ -5,6 +5,7 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Row }       from '@ui/layout'
 import { Box }       from '@ui/layout'
+import { Tag }       from '@ui/tag'
 import { Text }      from '@ui/text'
 import { useHover }  from '@ui/utils'
 
@@ -26,110 +27,96 @@ const Item: FC<ItemProps> = ({
   const [elemHover, elemHoverProps] = useHover()
 
   return (
-    <Box position='relative'>
-      <Box
-        {...elemHoverProps}
-        zIndex={3}
-        width={430}
-        height={447}
-        border={elemHover ? 'semiBoldTransparent' : 'veryBoldSmokyWhiteDashed'}
-        borderRadius='big'
-        backgroundColor={elemHover ? 'background.smokyWhite' : 'background.blackAmber'}
-        style={
-          elemHover
-            ? { transform: `rotate(${rotateCard}deg)`, transition: '0.3s' }
-            : { transform: 'rotate(0deg)', transition: '0.3s' }
-        }
-      >
-        <Layout flexBasis={[16, 22, 23]} flexShrink={0} />
-        <Column>
-          <Layout flexBasis={[16, 22, 28]} />
-          <Row>
-            <Box
-              backgroundColor={elemHover ? 'background.blackAmber' : 'background.transparentWhite'}
-              borderRadius='semiHuge'
-              style={{ transition: '0.3s' }}
-            >
+    <Column>
+      <Box position='relative'>
+        <Box
+          {...elemHoverProps}
+          zIndex={3}
+          width={[300, 380, 430]}
+          height={[300, 375, 447]}
+          border={[
+            'mediumBoldSmokyWhiteDashed',
+            'mediumBoldSmokyWhiteDashed',
+            elemHover ? 'semiBoldTransparent' : 'veryBoldSmokyWhiteDashed',
+          ]}
+          borderRadius={['medium', 'bigger', 'big']}
+          backgroundColor={elemHover ? 'background.smokyWhite' : 'background.blackAmber'}
+          style={
+            elemHover
+              ? { transform: `rotate(${rotateCard}deg)`, transition: '0.3s' }
+              : { transform: 'rotate(0deg)', transition: '0.3s' }
+          }
+        >
+          <Layout flexBasis={[16, 22, 23]} flexShrink={0} />
+          <Column>
+            <Layout flexBasis={[16, 22, 28]} />
+            <Row>
+              <Tag
+                padding={['4px 12px', '6px 14px', '8px 16px']}
+                fontSize={['micro', 'medium', 'regular']}
+                fontFamily={['primary', 'primary', 'inter']}
+                stateElem={elemHover}
+                text={age}
+              />
               <Layout flexBasis={16} flexShrink={0} />
-              <Column width='100%'>
-                <Layout flexBasis={8} />
-                <Row>
-                  <Text
-                    fontWeight='medium'
-                    fontSize='regular'
-                    lineHeight='default'
-                    color='text.smokyWhite'
-                  >
-                    {age}
-                  </Text>
-                </Row>
-                <Layout flexBasis={8} />
-              </Column>
-              <Layout flexBasis={16} flexShrink={0} />
+              <Tag
+                padding={['4px 12px', '6px 14px', '8px 16px']}
+                fontSize={['micro', 'medium', 'regular']}
+                fontFamily={['primary', 'primary', 'inter']}
+                stateElem={elemHover}
+                text={profession}
+              />
+            </Row>
+            <Layout flexBasis={0} flexGrow={2} />
+            <Box>
+              <Text
+                fontWeight='medium'
+                fontSize={['large', 'moderate', 'increased']}
+                lineHeight='default'
+                color={elemHover ? 'text.blackAmber' : 'text.smokyWhite'}
+                style={{ transition: '0.3s' }}
+              >
+                {fullName}
+              </Text>
             </Box>
-            <Layout flexBasis={16} flexShrink={0} />
-            <Box
-              backgroundColor={elemHover ? 'background.blackAmber' : 'background.transparentWhite'}
-              borderRadius='semiHuge'
-              style={{ transition: '0.3s' }}
-            >
-              <Layout flexBasis={16} flexShrink={0} />
-              <Column width='100%'>
-                <Layout flexBasis={8} />
-                <Row>
-                  <Text
-                    fontWeight='medium'
-                    fontSize='regular'
-                    lineHeight='default'
-                    color='text.smokyWhite'
-                  >
-                    {profession}
-                  </Text>
-                </Row>
-                <Layout flexBasis={8} />
-              </Column>
-              <Layout flexBasis={16} flexShrink={0} />
+            <Layout flexBasis={[12, 16, 20]} />
+            <Box>
+              <Text
+                fontWeight='medium'
+                fontSize={['semiMedium', 'semiRegular', 'regular']}
+                lineHeight={['primary', 'primary', 'medium']}
+                color='text.gray'
+              >
+                {description}
+              </Text>
             </Box>
-          </Row>
-          <Layout flexBasis={0} flexGrow={2} />
-          <Box>
-            <Text
-              fontWeight='medium'
-              fontSize='increased'
-              lineHeight='default'
-              color={elemHover ? 'text.blackAmber' : 'text.smokyWhite'}
-              style={{ transition: '0.3s' }}
-            >
-              {fullName}
-            </Text>
+            <Layout flexBasis={[16, 22, 28]} />
+          </Column>
+          <Layout flexBasis={[16, 22, 23]} flexShrink={0} />
+        </Box>
+        {firstIcon ? (
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionFirstIcon : 10}
+            left={horizontalPositionFirstIcon}
+          >
+            {firstIcon}
           </Box>
-          <Layout flexBasis={20} />
-          <Box>
-            <Text fontWeight='medium' fontSize='regular' lineHeight='medium' color='text.gray'>
-              {description}
-            </Text>
+        ) : null}
+        {secondIcon ? (
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionSecondIcon : 10}
+            left={horizontalPositionSecondIcon}
+          >
+            {secondIcon}
           </Box>
-          <Layout flexBasis={[16, 22, 28]} />
-        </Column>
-        <Layout flexBasis={[16, 22, 23]} flexShrink={0} />
+        ) : null}
       </Box>
-      <Box
-        position='absolute'
-        style={{ transition: '0.3s' }}
-        top={elemHover ? verticalPositionFirstIcon : 10}
-        left={horizontalPositionFirstIcon}
-      >
-        {firstIcon}
-      </Box>
-      <Box
-        position='absolute'
-        style={{ transition: '0.3s' }}
-        top={elemHover ? verticalPositionSecondIcon : 10}
-        left={horizontalPositionSecondIcon}
-      >
-        {secondIcon}
-      </Box>
-    </Box>
+      <Layout display={['flex', 'flex', 'none']} flexBasis={24} flexShrink={0} />
+    </Column>
   )
 }
 
