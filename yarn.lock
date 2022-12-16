@@ -1627,6 +1627,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/faq@workspace:0.0.1, @landing/faq@workspace:landing/fragments/landing-faq":
+  version: 0.0.0-use.local
+  resolution: "@landing/faq@workspace:landing/fragments/landing-faq"
+  dependencies:
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/button": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/header-fragment@workspace:0.0.1, @landing/header-fragment@workspace:landing/fragments/landing-header":
   version: 0.0.0-use.local
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
@@ -1673,6 +1694,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
+    "@landing/faq": "workspace:0.0.1"
     "@landing/hero-fragment": "workspace:0.0.1"
     "@landing/learning-students": "workspace:0.0.1"
     "@landing/middle-fragment": "workspace:0.0.1"

@@ -1,5 +1,6 @@
 import React             from 'react'
 
+import { FaqBlock }      from '@landing/faq'
 import { Hero }          from '@landing/hero-fragment'
 import { StudentsBlock } from '@landing/learning-students'
 import { Middle }        from '@landing/middle-fragment'
@@ -10,6 +11,7 @@ export const HomePage = () => (
     <Hero />
     <Middle />
     <StudentsBlock />
+    <FaqBlock />
   </Box>
 )
 
