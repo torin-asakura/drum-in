@@ -1,18 +1,31 @@
-import React          from 'react'
+import React           from 'react'
 
-import { Background } from '@ui/background'
-import { Layout }     from '@ui/layout'
-import { Box }        from '@ui/layout'
+import { Background }  from '@ui/background'
+import { Box }         from '@ui/layout'
+import { Swiper }      from '@ui/slider'
+import { SwiperSlide } from '@ui/slider'
 
 const BackgroundBlock = () => (
   <Box position='relative' height={130} overflow='hidden'>
-    <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
-    <Layout flexBasis={40} flexShrink={0} />
-    <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
-    <Layout flexBasis={40} flexShrink={0} />
-    <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
-    <Layout flexBasis={40} flexShrink={0} />
-    <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
+    <Swiper
+      className='students-slider-desktop'
+      spaceBetween={40}
+      slidesPerView='auto'
+      allowTouchMove={false}
+    >
+      <SwiperSlide>
+        <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
+      </SwiperSlide>
+    </Swiper>
     <Background
       position='absolute'
       width='100%'

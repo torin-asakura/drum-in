@@ -1,0 +1,23 @@
+import React                  from 'react'
+
+import { Row }                from '@ui/layout'
+
+import { DesktopSliderBlock } from './desktop-slider'
+import { MobileSliderBlock }  from './mobile-slider'
+
+const SliderBlock = () => (
+  <>
+    <Row display={['none', 'flex', 'flex']}>
+      <DesktopSliderBlock />
+    </Row>
+<<<<<<< HEAD
+    <Row display={['flex', 'none', 'none']}>{/*<MobileSliderBlock />*/}</Row>
+=======
+    <Row display={['flex', 'none', 'none']}>
+      <MobileSliderBlock />
+    </Row>
+>>>>>>> a163939 (fix: adaptive for small laptops for students-block)
+  </>
+)
+
+export { SliderBlock }

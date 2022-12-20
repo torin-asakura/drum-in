@@ -26,6 +26,7 @@ const StudentsBlock = () => {
             <Layout flexBasis={[32, 77, 120]} />
             <Box
               width='100%'
+              flexWrap={['nowrap', 'nowrap', 'wrap']}
               alignItems={['start', 'start', 'center']}
               justifyContent={['start', 'start', 'space-between']}
               flexDirection={['column', 'column', 'row']}

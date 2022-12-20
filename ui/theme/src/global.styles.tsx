@@ -127,8 +127,12 @@ export const GlobalStyles = () => {
         left: 0;
       }
       
+      .students-slider-desktop {
+        overflow: visible !important;
+      }
       .choose-courses-slider .swiper-slide,
       .students-slider .swiper-slide,
+      .students-slider-desktop .swiper-slide,
       .learning-process-slider .swiper-slide,
       .teacher-slider .swiper-slide {
           width: auto !important;
