@@ -1,5 +1,6 @@
 export interface SlideProps {
   title: string
+  level?: string
   desc: string
   price: string
   squareRotate: number

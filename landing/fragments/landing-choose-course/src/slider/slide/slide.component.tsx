@@ -13,10 +13,12 @@ import { Column }     from '@ui/layout'
 import { Text }       from '@ui/text'
 import { useHover }   from '@ui/utils'
 
+import { SlideLevel } from './slide-with-level'
 import { SlideProps } from './slide.interfaces'
 
 const Slide: FC<SlideProps> = ({
   title,
+  level,
   desc,
   price,
   squareRotate,
@@ -36,6 +38,27 @@ const Slide: FC<SlideProps> = ({
 }) => {
   const { formatMessage } = useIntl()
   const [colorBorder, colorBorderProps] = useHover()
+
+  if (level) {
+    return (
+      <SlideLevel
+        title={title}
+        level={level}
+        desc={desc}
+        price={price}
+        squareRotate={squareRotate}
+        squarePositionX={squarePositionX}
+        squarePositionY={squarePositionY}
+        quantityVideoLessons={quantityVideoLessons}
+        rectangleRotate={rectangleRotate}
+        rectanglePositionX={rectanglePositionX}
+        rectanglePositionY={rectanglePositionY}
+        quantityMonths={quantityMonths}
+        textMonths={textMonths}
+        rectangleColor={rectangleColor}
+      />
+    )
+  }
 
   return (
     <Column>
