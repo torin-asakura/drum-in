@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@shared/data": "workspace:0.0.1",
+    "@ui/accordeon": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",

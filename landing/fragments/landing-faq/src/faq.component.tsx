@@ -22,7 +22,7 @@ const FaqBlock = () => (
             textTransform='uppercase'
             fontFamily='DrukWideCy'
             fontWeight='bold'
-            fontSize={['regular', 'small', 'increased']}
+            fontSize={['regular', 'moderate', 'increased']}
             lineHeight='default'
             color='text.smokyWhite'
           >
@@ -38,7 +38,7 @@ const FaqBlock = () => (
         <Layout flexBasis={[44, 62, 80]} flexShrink={0} />
         <ListDesktop />
         <ListMobile />
-        <Layout flexBasis={[36, 48, 60]} flexShrink={0} />
+        <Layout flexBasis={[20, 37, 60]} flexShrink={0} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Box>

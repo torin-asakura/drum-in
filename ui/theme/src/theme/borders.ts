@@ -1,5 +1,6 @@
 export const borders = {
-  boldTransparentWhite: '2px solid rgba(242, 242, 242, 0.5)',
+  boldTransparentWhite: '1px solid rgba(242, 242, 242, 0.15)',
+  normalTransparentWhite: '2px solid rgba(242, 242, 242, 0.5)',
   veryBoldTransparentWhite: '4px solid rgba(242, 242, 242, 0.5)',
   veryBoldTransparent: '4px solid transparent',
   mediumTransparent: '2px solid transparent',

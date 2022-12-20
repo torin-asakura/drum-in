@@ -158,6 +158,7 @@ const colors = {
   text: {
     smokyWhite: 'rgb(242,242,242)',
     transparentSmokyWhite: 'rgba(242, 242, 242, 0.5)',
+    veryTransparentSmokyWhite: 'rgba(242, 242, 242, 0.15)',
     blackAmber: 'rgb(15,12,12)',
     gray: 'rgb(128, 127, 127)',
     purple: 'rgb(156, 101, 242)',

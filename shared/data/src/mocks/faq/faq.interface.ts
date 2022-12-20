@@ -1,8 +1,6 @@
-export interface ItemProps {
+export interface Faq {
   question: string
   answer: string
   positionVertical: 'top' | 'bottom'
   width: number
-  active: boolean
-  setActive: (newState: boolean) => any
 }

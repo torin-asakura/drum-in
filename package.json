@@ -4,7 +4,8 @@
   "license": "BSD-3-Clause",
   "workspaces": [
     "landing/**/*",
-    "ui/**/*"
+    "ui/**/*",
+    "shared/**/*"
   ],
   "resolutions": {
     "@types/node": "16",
