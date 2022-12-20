@@ -5,15 +5,15 @@ import { useEffect }           from 'react'
 import { useState }            from 'react'
 
 import { Courses as CCourses } from '@shared/data'
-import { Swiper }              from '@ui/slider'
+import { Slider }              from '@ui/slider'
 import { SwiperSlide }         from '@ui/slider'
 import { useMockedCourses }    from '@shared/data'
 
-import { Slide }                from '../slide'
+import { Slide }               from '../slide'
 
 const DesktopSliderBlock = () => {
   const { courses: coursesData } = useMockedCourses()
-  const [courses, setCourses] = useState<CCourses[]>([])
+  const [courses, setCourses] = useState<CCourses[]>(coursesData)
 
   useEffect(() => {
     setCourses(coursesData)
@@ -67,18 +67,11 @@ const DesktopSliderBlock = () => {
   )
 
   return (
-    <Swiper
-      className='choose-courses-slider'
-      spaceBetween={40}
-      slidesPerView='auto'
-      grabCursor
-      touchEventsTarget='container'
-      loop
-    >
+    <Slider clName='choose-courses-slider'>
       {Children.map(coursesChildren, (child) => (
         <SwiperSlide>{child}</SwiperSlide>
       ))}
-    </Swiper>
+    </Slider>
   )
 }
 

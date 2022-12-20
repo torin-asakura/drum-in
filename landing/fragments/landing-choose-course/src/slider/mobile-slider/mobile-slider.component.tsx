@@ -10,7 +10,7 @@ import { Swiper }              from '@ui/slider'
 import { SwiperSlide }         from '@ui/slider'
 import { useMockedCourses }    from '@shared/data'
 
-import { Slide }                from '../slide'
+import { Slide }               from '../slide'
 
 const MobileSliderBlock = () => {
   const { courses: coursesData } = useMockedCourses()
