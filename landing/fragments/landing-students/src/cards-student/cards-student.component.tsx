@@ -12,7 +12,7 @@ import { DrumTurnedLeftIcon }     from '@ui/icons'
 import { Column }                 from '@ui/layout'
 import { Layout }                 from '@ui/layout'
 import { Row }                    from '@ui/layout'
-import { Swiper }                 from '@ui/slider'
+import { Slider }                 from '@ui/slider'
 import { SwiperSlide }            from '@ui/slider'
 
 import { BackgroundBlock }        from './background'
@@ -26,7 +26,7 @@ const CardsStudent = () => {
     <>
       <Column display={['none', 'none', 'flex']}>
         <Row>
-          <Swiper className='students-slider-desktop' spaceBetween={40} slidesPerView='auto'>
+          <Slider clName='students-slider-desktop' spaceBetween={40} slidesPerView='auto'>
             <SwiperSlide>
               <Item
                 fullName={formatMessage({
@@ -139,7 +139,7 @@ const CardsStudent = () => {
                 rotateCard={4}
               />
             </SwiperSlide>
-          </Swiper>
+          </Slider>
         </Row>
         <Layout flexBasis={[64, 70, 42]} />
         <BackgroundBlock />

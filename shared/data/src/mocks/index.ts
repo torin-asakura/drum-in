@@ -1,2 +1,7 @@
 export * from './faq'
 export * from './courses'
+export * from './teacher'
+export * from './learning-process-top'
+export * from './learning-process-bottom'
+export * from './students-modal'
+export * from './students-slider'

@@ -67,7 +67,7 @@ const DesktopSliderBlock = () => {
   )
 
   return (
-    <Slider clName='choose-courses-slider'>
+    <Slider clName='choose-courses-slider' spaceBetween={40} slidesPerView='auto'>
       {Children.map(coursesChildren, (child) => (
         <SwiperSlide>{child}</SwiperSlide>
       ))}

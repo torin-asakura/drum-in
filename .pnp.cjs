@@ -3494,6 +3494,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/learning-process-fragment", "virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-learning-process"],\
             ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
             ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/icons", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:ui/icons"],\
@@ -3521,6 +3522,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/learning-process-fragment", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-learning-process"],\
             ["@emotion/react", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
             ["@emotion/styled", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/icons", "virtual:dc85f4a95c5ecba64b2e017d75da7d3d72faf023096ddbdf194ed636b2a4a9975e410439642a652a9c5b0fc812ac890de447ccb418447df76ab1f1ddcd07deac#workspace:ui/icons"],\
@@ -3547,6 +3549,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/learning-process-fragment", "workspace:landing/fragments/landing-learning-process"],\
             ["@emotion/react", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
             ["@emotion/styled", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@ui/icons", "virtual:dc85f4a95c5ecba64b2e017d75da7d3d72faf023096ddbdf194ed636b2a4a9975e410439642a652a9c5b0fc812ac890de447ccb418447df76ab1f1ddcd07deac#workspace:ui/icons"],\
             ["@ui/image", "workspace:ui/image"],\
@@ -3568,6 +3571,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/learning-students", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-students"],\
             ["@emotion/react", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
             ["@emotion/styled", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.47"],\
@@ -3608,6 +3612,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/learning-students", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:landing/fragments/landing-students"],\
             ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
             ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.47"],\
@@ -3650,6 +3655,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/learning-students", "workspace:landing/fragments/landing-students"],\
             ["@emotion/react", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
             ["@emotion/styled", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.18"],\
             ["@types/styled-system", "npm:5.1.15"],\
@@ -3968,6 +3974,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/teacher-fragment", "virtual:4e19562dfff9616a531e5b552285421564639f2b48b050999b0145108ec485af74779c6d15b53a6dd5a70ef5ee3106240ca213f2fdb00681826ac1940cdfb72a#workspace:landing/fragments/landing-teacher"],\
             ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
             ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/button", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:ui/button"],\
@@ -3996,6 +4003,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/teacher-fragment", "virtual:ef14c0883b2eb5f054a75825d5f029ce03607e71c487e6e95219d6c08acf6e19c03820d6a25a446756350a7c8394c272f3e9202b4995c71886c8f716cce3c56f#workspace:landing/fragments/landing-teacher"],\
             ["@emotion/react", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
             ["@emotion/styled", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/button", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/button"],\
@@ -4023,6 +4031,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@landing/teacher-fragment", "workspace:landing/fragments/landing-teacher"],\
             ["@emotion/react", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
             ["@emotion/styled", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#npm:11.10.5"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@ui/button", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/button"],\
             ["@ui/icons", "virtual:dc85f4a95c5ecba64b2e017d75da7d3d72faf023096ddbdf194ed636b2a4a9975e410439642a652a9c5b0fc812ac890de447ccb418447df76ab1f1ddcd07deac#workspace:ui/icons"],\

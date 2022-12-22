@@ -2,13 +2,13 @@ import React           from 'react'
 
 import { Background }  from '@ui/background'
 import { Box }         from '@ui/layout'
-import { Swiper }      from '@ui/slider'
+import { Slider }      from '@ui/slider'
 import { SwiperSlide } from '@ui/slider'
 
 const BackgroundBlock = () => (
   <Box position='relative' height={130} overflow='hidden'>
-    <Swiper
-      className='students-slider-desktop'
+    <Slider
+      clName='students-slider-desktop'
       spaceBetween={40}
       slidesPerView='auto'
       allowTouchMove={false}
@@ -25,7 +25,7 @@ const BackgroundBlock = () => (
       <SwiperSlide>
         <Box width={430} height={135} border='veryBoldSmokyWhiteDashed' borderRadius='big' />
       </SwiperSlide>
-    </Swiper>
+    </Slider>
     <Background
       position='absolute'
       width='100%'

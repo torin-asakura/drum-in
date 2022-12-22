@@ -1,9 +1,8 @@
 import React           from 'react'
-import { Pagination }  from 'swiper'
 import { useIntl }     from 'react-intl'
 
 import { Box }         from '@ui/layout'
-import { Swiper }      from '@ui/slider'
+import { Slider }      from '@ui/slider'
 import { SwiperSlide } from '@ui/slider'
 
 import { Item }        from '../item'
@@ -13,14 +12,12 @@ const CardsSwiper = () => {
 
   return (
     <Box display={['flex', 'flex', 'none']}>
-      <Swiper
-        className='students-slider'
+      <Slider
+        clName='students-slider'
         spaceBetween={16}
         slidesOffsetAfter={50}
         slidesPerView='auto'
-        pagination={{ type: 'progressbar' }}
-        modules={[Pagination]}
-        touchEventsTarget='container'
+        progressbar
         autoHeight
       >
         <SwiperSlide>
@@ -107,7 +104,7 @@ const CardsSwiper = () => {
             })}
           />
         </SwiperSlide>
-      </Swiper>
+      </Slider>
     </Box>
   )
 }

@@ -1,12 +1,11 @@
 import React                   from 'react'
 import { Children }            from 'react'
-import { Pagination }          from 'swiper'
 import { useMemo }             from 'react'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
 
 import { Courses as CCourses } from '@shared/data'
-import { Swiper }              from '@ui/slider'
+import { Slider }              from '@ui/slider'
 import { SwiperSlide }         from '@ui/slider'
 import { useMockedCourses }    from '@shared/data'
 
@@ -14,7 +13,7 @@ import { Slide }               from '../slide'
 
 const MobileSliderBlock = () => {
   const { courses: coursesData } = useMockedCourses()
-  const [courses, setCourses] = useState<CCourses[]>([])
+  const [courses, setCourses] = useState<CCourses[]>(coursesData)
 
   useEffect(() => {
     setCourses(coursesData)
@@ -68,20 +67,18 @@ const MobileSliderBlock = () => {
   )
 
   return (
-    <Swiper
-      className='choose-courses-slider'
+    <Slider
+      clName='choose-courses-slider'
       spaceBetween={16}
       slidesPerView='auto'
-      pagination={{ type: 'progressbar' }}
-      modules={[Pagination]}
-      touchEventsTarget='container'
+      progressbar
       autoHeight
       loop
     >
       {Children.map(coursesChildren, (child) => (
         <SwiperSlide>{child}</SwiperSlide>
       ))}
-    </Swiper>
+    </Slider>
   )
 }
 

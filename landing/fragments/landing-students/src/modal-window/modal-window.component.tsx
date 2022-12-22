@@ -96,7 +96,7 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => (
             </Row>
             <Layout flexBasis={[30, 48, 48]} flexShrink={0} />
             <StudentsList />
-            <Layout flexBasis={[40, 59, 78]} flexShrink={0} />
+            <Layout flexBasis={[20, 39, 58]} flexShrink={0} />
           </Column>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         </Box>

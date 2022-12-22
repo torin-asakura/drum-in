@@ -10,7 +10,9 @@ const SliderBlock = () => (
     <Row display={['none', 'flex', 'flex']}>
       <DesktopSliderBlock />
     </Row>
-    <Row display={['flex', 'none', 'none']}>{/*<MobileSliderBlock />*/}</Row>
+    <Row display={['flex', 'none', 'none']}>
+      <MobileSliderBlock />
+    </Row>
   </>
 )
 
