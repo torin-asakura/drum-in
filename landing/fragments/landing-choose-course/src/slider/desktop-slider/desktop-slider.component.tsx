@@ -10,6 +10,7 @@ import { SwiperSlide }         from '@ui/slider'
 import { useMockedCourses }    from '@shared/data'
 
 import { Slide }               from '../slide'
+import { getUi }               from '../../helpers'
 
 const DesktopSliderBlock = () => {
   const { courses: coursesData } = useMockedCourses()
@@ -27,38 +28,30 @@ const DesktopSliderBlock = () => {
         level,
         desc,
         price,
-        squareRotate,
-        squarePositionX,
-        squarePositionY,
         quantityVideoLessons,
-        circlePositionX,
-        circlePositionY,
         circleFirstLine,
         circleSecondLine,
-        rectangleRotate,
-        rectanglePositionX,
-        rectanglePositionY,
         quantityMonths,
         textMonths,
-        rectangleColor,
+        itemId,
       }) => (
         <Slide
           title={title}
           level={level}
           desc={desc}
           price={price}
-          squareRotate={squareRotate}
-          squarePositionX={squarePositionX}
-          squarePositionY={squarePositionY}
+          squareRotate={getUi(itemId).squareRotate}
+          squarePositionX={getUi(itemId).squarePositionX}
+          squarePositionY={getUi(itemId).squarePositionY}
           quantityVideoLessons={quantityVideoLessons}
-          rectangleRotate={rectangleRotate}
-          rectanglePositionX={rectanglePositionX}
-          rectanglePositionY={rectanglePositionY}
+          rectangleRotate={getUi(itemId).rectangleRotate}
+          rectanglePositionX={getUi(itemId).rectanglePositionX}
+          rectanglePositionY={getUi(itemId).rectanglePositionY}
           quantityMonths={quantityMonths}
           textMonths={textMonths}
-          rectangleColor={rectangleColor}
-          circlePositionX={circlePositionX}
-          circlePositionY={circlePositionY}
+          rectangleColor={getUi(itemId).rectangleColor}
+          circlePositionX={getUi(itemId).circlePositionX}
+          circlePositionY={getUi(itemId).circlePositionY}
           circleFirstLine={circleFirstLine}
           circleSecondLine={circleSecondLine}
         />

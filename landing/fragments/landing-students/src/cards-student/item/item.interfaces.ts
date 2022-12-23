@@ -3,11 +3,10 @@ export interface ItemProps {
   age: string
   profession: string
   description: string
+  itemId?: string
   rotateCard?: number
-  firstIcon?: object
   verticalPositionFirstIcon?: number
   horizontalPositionFirstIcon?: number
-  secondIcon?: object
   verticalPositionSecondIcon?: number
   horizontalPositionSecondIcon?: number
 }

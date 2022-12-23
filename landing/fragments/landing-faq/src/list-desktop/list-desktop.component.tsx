@@ -22,14 +22,13 @@ const ListDesktop = () => {
 
   return (
     <Box flexWrap='wrap' display={['none', 'none', 'flex']}>
-      {faq.map(({ question, answer, positionVertical, width }, index) => (
+      {faq.map(({ question, answer, positionVertical }, index) => (
         <>
           <Box flexDirection='column'>
             <Item
               question={question}
               answer={answer}
               positionVertical={positionVertical}
-              width={width}
               active={active}
               setActive={setActive}
             />

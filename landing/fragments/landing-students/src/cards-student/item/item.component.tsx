@@ -1,25 +1,33 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React                      from 'react'
+import { FC }                     from 'react'
 
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Box }       from '@ui/layout'
-import { Tag }       from '@ui/tag'
-import { Text }      from '@ui/text'
-import { useHover }  from '@ui/utils'
+import { Condition }              from '@ui/condition'
+import { MarchingDrumIcon }       from '@ui/icons'
+import { MicrophoneIcon }         from '@ui/icons'
+import { MusicalNotesIcon }       from '@ui/icons'
+import { SaxophoneIcon }          from '@ui/icons'
+import { SaxophoneWithNotesIcon } from '@ui/icons'
+import { ViolinIcon }             from '@ui/icons'
+import { ViolinWithBowIcon }      from '@ui/icons'
+import { DrumTurnedLeftIcon }     from '@ui/icons'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Box }                    from '@ui/layout'
+import { Tag }                    from '@ui/tag'
+import { Text }                   from '@ui/text'
+import { useHover }               from '@ui/utils'
 
-import { ItemProps } from './item.interfaces'
+import { ItemProps }              from './item.interfaces'
 
 const Item: FC<ItemProps> = ({
   fullName,
   age,
+  itemId,
   profession,
   description,
-  firstIcon,
   horizontalPositionFirstIcon,
   verticalPositionFirstIcon,
-  secondIcon,
   verticalPositionSecondIcon,
   horizontalPositionSecondIcon,
   rotateCard,
@@ -94,26 +102,78 @@ const Item: FC<ItemProps> = ({
           </Column>
           <Layout flexBasis={[16, 22, 23]} flexShrink={0} />
         </Box>
-        {firstIcon ? (
+        <Condition match={itemId === 'saxophonist'}>
           <Box
             position='absolute'
             style={{ transition: '0.3s' }}
             top={elemHover ? verticalPositionFirstIcon : 10}
             left={horizontalPositionFirstIcon}
           >
-            {firstIcon}
+            <SaxophoneWithNotesIcon width={110} height={110} />
           </Box>
-        ) : null}
-        {secondIcon ? (
           <Box
             position='absolute'
             style={{ transition: '0.3s' }}
             top={elemHover ? verticalPositionSecondIcon : 10}
             left={horizontalPositionSecondIcon}
           >
-            {secondIcon}
+            <SaxophoneIcon width={110} height={110} />
           </Box>
-        ) : null}
+        </Condition>
+        <Condition match={itemId === 'drummer'}>
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionFirstIcon : 10}
+            left={horizontalPositionFirstIcon}
+          >
+            <DrumTurnedLeftIcon width={110} height={110} />
+          </Box>
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionSecondIcon : 10}
+            left={horizontalPositionSecondIcon}
+          >
+            <MarchingDrumIcon width={110} height={110} />
+          </Box>
+        </Condition>
+        <Condition match={itemId === 'violinist'}>
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionFirstIcon : 10}
+            left={horizontalPositionFirstIcon}
+          >
+            <ViolinIcon width={110} height={110} />
+          </Box>
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionSecondIcon : 10}
+            left={horizontalPositionSecondIcon}
+          >
+            <ViolinWithBowIcon width={110} height={110} />
+          </Box>
+        </Condition>
+        <Condition match={itemId === 'vocalist'}>
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionFirstIcon : 10}
+            left={horizontalPositionFirstIcon}
+          >
+            <MicrophoneIcon width={110} height={110} />
+          </Box>
+          <Box
+            position='absolute'
+            style={{ transition: '0.3s' }}
+            top={elemHover ? verticalPositionSecondIcon : 10}
+            left={horizontalPositionSecondIcon}
+          >
+            <MusicalNotesIcon width={110} height={110} />
+          </Box>
+        </Condition>
       </Box>
       <Layout display={['flex', 'flex', 'none']} flexBasis={24} flexShrink={0} />
     </Column>

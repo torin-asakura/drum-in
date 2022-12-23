@@ -1,1 +1,1 @@
-export * from './get-colors.helper'
+export * from './get-color.helper'

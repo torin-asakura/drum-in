@@ -10,6 +10,7 @@ import { SwiperSlide }         from '@ui/slider'
 import { useMockedCourses }    from '@shared/data'
 
 import { Slide }               from '../slide'
+import { getUi }               from '../../helpers'
 
 const MobileSliderBlock = () => {
   const { courses: coursesData } = useMockedCourses()
@@ -27,38 +28,30 @@ const MobileSliderBlock = () => {
         level,
         desc,
         price,
-        squareRotateMobile,
-        squarePositionXMobile,
-        squarePositionYMobile,
         quantityVideoLessons,
-        circlePositionXMobile,
-        circlePositionYMobile,
         circleFirstLine,
         circleSecondLine,
-        rectangleRotateMobile,
-        rectanglePositionXMobile,
-        rectanglePositionYMobile,
         quantityMonths,
         textMonths,
-        rectangleColor,
+        itemId,
       }) => (
         <Slide
           title={title}
           level={level}
           desc={desc}
           price={price}
-          squareRotate={squareRotateMobile}
-          squarePositionX={squarePositionXMobile}
-          squarePositionY={squarePositionYMobile}
+          squareRotate={getUi(itemId).squareRotateMobile}
+          squarePositionX={getUi(itemId).squarePositionXMobile}
+          squarePositionY={getUi(itemId).squarePositionYMobile}
           quantityVideoLessons={quantityVideoLessons}
-          rectangleRotate={rectangleRotateMobile}
-          rectanglePositionX={rectanglePositionXMobile}
-          rectanglePositionY={rectanglePositionYMobile}
+          rectangleRotate={getUi(itemId).rectangleRotateMobile}
+          rectanglePositionX={getUi(itemId).rectanglePositionXMobile}
+          rectanglePositionY={getUi(itemId).rectanglePositionYMobile}
           quantityMonths={quantityMonths}
           textMonths={textMonths}
-          rectangleColor={rectangleColor}
-          circlePositionX={circlePositionXMobile}
-          circlePositionY={circlePositionYMobile}
+          rectangleColor={getUi(itemId).rectangleColor}
+          circlePositionX={getUi(itemId).circlePositionXMobile}
+          circlePositionY={getUi(itemId).circlePositionYMobile}
           circleFirstLine={circleFirstLine}
           circleSecondLine={circleSecondLine}
         />

@@ -12,95 +12,82 @@ import { useHover }                    from '@ui/utils'
 import { usePopover }                  from '@ui/utils'
 
 import { ItemProps }                   from './item.interfaces'
-import { getColorBackground }          from '../../helpers'
-import { getColorBackgroundIcon }      from '../../helpers'
-import { getColorBorder }              from '../../helpers'
-import { getColorIcon }                from '../../helpers'
-import { getColorText }                from '../../helpers'
+import { getColor }                    from '../../helpers'
 
-const Item: FC<ItemProps> = ({ question, answer, positionVertical, width, active, setActive }) => {
+const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setActive }) => {
   const [elemHover, elemHoverProps] = useHover()
   const { isOpen } = usePopover('bottom-center', 0, 'hover')
 
   return (
     <Box
-      width={width}
+      padding='25px 44px'
       borderRadius='extra'
-      border={getColorBorder(isOpen, active, elemHover)}
-      backgroundColor={getColorBackground(isOpen, active, elemHover)}
+      border={getColor(isOpen, active, elemHover).border}
+      backgroundColor={getColor(isOpen, active, elemHover).background}
     >
-      <Layout flexBasis={44} flexShrink={0} />
-      <Column width='100%'>
-        <Layout flexBasis={25} />
-        <Row alignItems='center'>
-          <Row>
-            <Text
-              fontWeight='medium'
-              fontSize='large'
-              lineHeight='primary'
-              color={getColorText(isOpen, active, elemHover)}
-            >
-              {question}
-            </Text>
-          </Row>
+      <Box paddingRight={32}>
+        <Text
+          fontWeight='medium'
+          fontSize='large'
+          lineHeight='primary'
+          color={getColor(isOpen, active, elemHover).text}
+        >
+          {question}
+        </Text>
+      </Box>
+      <Box {...elemHoverProps} position='relative'>
+        <Box
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
+          flexShrink={0}
+          width={32}
+          height={32}
+          alignItems='center'
+          justifyContent='center'
+          borderRadius='semiMedium'
+          backgroundColor={getColor(isOpen, active, elemHover).backgroundIcon}
+        >
+          <InvertedExclamationMarkIcon
+            color={getColor(isOpen, active, elemHover).icon}
+            width={4}
+            height={17}
+          />
+        </Box>
+        <Box
+          zIndex={elemHover ? 2 : -1}
+          opacity={elemHover ? 1 : 0}
+          position='absolute'
+          left={0}
+          top={positionVertical === 'bottom' ? 42 : 'auto'}
+          bottom={positionVertical === 'top' ? 42 : 'auto'}
+          width={750}
+          border='mediumBoldBlackAmber'
+          borderRadius='extra'
+          backgroundColor='background.smokyWhite'
+          style={{ transition: '0.3s' }}
+        >
           <Layout flexBasis={32} flexShrink={0} />
-          <Box {...elemHoverProps} position='relative'>
-            <Box
-              onMouseEnter={() => setActive(true)}
-              onMouseLeave={() => setActive(false)}
-              flexShrink={0}
-              width={32}
-              height={32}
-              alignItems='center'
-              justifyContent='center'
-              borderRadius='semiMedium'
-              backgroundColor={getColorBackgroundIcon(isOpen, active, elemHover)}
-            >
-              <InvertedExclamationMarkIcon
-                color={getColorIcon(isOpen, active, elemHover)}
-                width={4}
-                height={17}
-              />
+          <Column width='100%'>
+            <Layout flexBasis={32} />
+            <Box>
+              <HashtagIcon width={40} height={40} />
             </Box>
-            <Box
-              zIndex={elemHover ? 2 : -1}
-              opacity={elemHover ? 1 : 0}
-              position='absolute'
-              left={0}
-              top={positionVertical === 'bottom' ? 42 : 'auto'}
-              bottom={positionVertical === 'top' ? 42 : 'auto'}
-              width={750}
-              border='mediumBoldBlackAmber'
-              borderRadius='extra'
-              backgroundColor='background.smokyWhite'
-              style={{ transition: '0.3s' }}
-            >
-              <Layout flexBasis={32} flexShrink={0} />
-              <Column width='100%'>
-                <Layout flexBasis={32} />
-                <Box>
-                  <HashtagIcon width={40} height={40} />
-                </Box>
-                <Layout flexBasis={32} flexShrink={0} />
-                <Row>
-                  <Text
-                    fontWeight='medium'
-                    fontSize='large'
-                    lineHeight='primary'
-                    color='text.blackAmber'
-                  >
-                    {answer}
-                  </Text>
-                </Row>
-                <Layout flexBasis={32} />
-              </Column>
-              <Layout flexBasis={32} flexShrink={0} />
-            </Box>
-          </Box>
-        </Row>
-        <Layout flexBasis={25} />
-      </Column>
-      <Layout flexBasis={44} flexShrink={0} />
+            <Layout flexBasis={32} flexShrink={0} />
+            <Row>
+              <Text
+                fontWeight='medium'
+                fontSize='large'
+                lineHeight='primary'
+                color='text.blackAmber'
+              >
+                {answer}
+              </Text>
+            </Row>
+            <Layout flexBasis={32} />
+          </Column>
+          <Layout flexBasis={32} flexShrink={0} />
+        </Box>
+      </Box>
     </Box>
   )
 }
