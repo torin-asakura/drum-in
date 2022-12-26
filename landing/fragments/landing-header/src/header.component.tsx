@@ -27,10 +27,12 @@ const HeaderBlock = () => {
   useEffect(() => {
     if (scroll) {
       scroll.on('scroll', (instance) => {
+        if (instance.scroll.y === 0) {
+          setNavBackground(false)
+        }
         if (instance.delta.y > instance.scroll.y && isNavBackground) {
           setNavBackground(false)
         }
-
         if (instance.delta.y < instance.scroll.y && !isNavBackground) {
           setNavBackground(true)
         }
@@ -48,6 +50,7 @@ const HeaderBlock = () => {
         position='fixed'
         justifyContent='center'
         backgroundColor={isNavBackground ? 'background.blackAmber' : 'transparent'}
+        style={{ transition: '0.3s' }}
       >
         <Column width={['100%', '100%', 1920]} alignItems='center'>
           <Layout flexBasis={[24, 28, 32]} />

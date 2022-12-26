@@ -2,27 +2,28 @@ import React                        from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { Hero }                     from '@landing/hero-fragment'
 import { StudentsBlock }            from '@landing/learning-students'
 import { Middle }                   from '@landing/middle-fragment'
-import { Box }                      from '@ui/layout'
 
 export const HomePage = () => {
   const containerRef = useRef(null)
 
   return (
-    <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
-      <LocomotiveScrollProvider
-        options={{
+    <LocomotiveScrollProvider
+      options={{
+        smooth: true,
+        smartphone: {
           smooth: true,
           smartphone: {
             smooth: true,
           },
           tablet: {
             smooth: true,
-          },
+          }}
         }}
         containerRef={containerRef}
         watch={[]}
@@ -33,9 +34,9 @@ export const HomePage = () => {
           <Middle />
           <StudentsBlock />
           <FaqBlock />
+          <CtaBlock />
       </main>
       </LocomotiveScrollProvider>
-    </Box>
   )
 }
 

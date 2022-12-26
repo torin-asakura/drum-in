@@ -69,5 +69,10 @@
   "landing_students.students": "Ученики",
   "landing_students.more_than_five_hundred_students": "Обучение в нашей школе прошли уже более 500 учеников разного возраста, уровня и специальности.",
   "landing_students.watch_more": "Смотреть еще",
-  "landing_faq.questions_and_answers": "Вопросы и ответы"
+  "landing_faq.questions_and_answers": "Вопросы и ответы",
+  "landing_cta.any_other_questions": "остались вопросы?",
+  "landing_cta.fill_out_the_form_and_get": "Заполните форму и получите",
+  "landing_cta.free": "бесплатную",
+  "landing_cta.advice_from_a_teacher": "консультацию от преподавателя",
+  "landing_cta.fill_out_the_form": "заполнить форму"
 }

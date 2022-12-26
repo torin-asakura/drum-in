@@ -1642,6 +1642,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/cta-fragment@workspace:0.0.1, @landing/cta-fragment@workspace:landing/fragments/landing-cta":
+  version: 0.0.0-use.local
+  resolution: "@landing/cta-fragment@workspace:landing/fragments/landing-cta"
+  dependencies:
+    "@types/react": 18.0.21
+    "@ui/button": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: ^6.1.2
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/faq@workspace:0.0.1, @landing/faq@workspace:landing/fragments/landing-faq":
   version: 0.0.0-use.local
   resolution: "@landing/faq@workspace:landing/fragments/landing-faq"
@@ -1714,13 +1732,13 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-fragment": "workspace:0.0.1"
     "@landing/learning-students": "workspace:0.0.1"
     "@landing/middle-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
-    "@ui/layout": "workspace:0.0.1"
   peerDependencies:
     next: ^12.1.0
     react: ^17.0.2

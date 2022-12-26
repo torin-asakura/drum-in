@@ -5,14 +5,13 @@ import { OpenOvalIcon }     from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
 import { ListDesktop }      from './list-desktop'
 import { ListMobile }       from './list-mobile'
 
 const FaqBlock = () => (
-  <Row justifyContent='center'>
+  <Box width='100%' backgroundColor='background.blackAmber' justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
@@ -42,6 +41,6 @@ const FaqBlock = () => (
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Box>
-  </Row>
+  </Box>
 )
 export { FaqBlock }

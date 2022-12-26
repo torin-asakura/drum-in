@@ -8,10 +8,10 @@ const backgrounds = {
   transparentBlueGradient: 'linear-gradient(261.7deg, #5B68DF 14.84%, #020413 128.52%)',
   transparentGreenGradient: 'linear-gradient(263.11deg, #73E0A9 -4.32%, #03170D 98.56%)',
   transparentPinkGradient: 'linear-gradient(263.61deg, #FF64BF -2.1%, #390725 127.32%)',
-  purpleBlueImageGradient: 'url("/img/bg-hero-main-page.png")',
-  purpleBlueSmallImageGradient: 'url("/img/mobile-bg-hero-main-page.png")',
-  purpleBlueCirclesImage: 'url("/img/bg-middle-main-page.png")',
-  purpleBlueCirclesSmallImage: 'url("/img/mobile-bg-middle-main-page.png")',
+  purpleBlueImageGradient: 'url("/img/bg-hero-main-page.png"), rgb(15,12,12)',
+  purpleBlueSmallImageGradient: 'url("/img/mobile-bg-hero-main-page.png"), rgb(15,12,12)',
+  purpleBlueCirclesImage: 'url("/img/bg-middle-main-page.png"), rgb(15,12,12)',
+  purpleBlueCirclesSmallImage: 'url("/img/mobile-bg-middle-main-page.png"), rgb(15,12,12)',
   verticalTransparentToBlackGradient:
     'linear-gradient(360deg, #0F0C0C 0%, rgba(15, 12, 12, 0) 100%)',
 }
