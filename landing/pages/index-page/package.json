@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@landing/faq": "workspace:0.0.1",
+    "@landing/header-fragment": "workspace:0.0.1",
     "@landing/hero-fragment": "workspace:0.0.1",
     "@landing/learning-students": "workspace:0.0.1",
     "@landing/middle-fragment": "workspace:0.0.1",

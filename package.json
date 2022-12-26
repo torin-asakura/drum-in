@@ -5,7 +5,8 @@
   "workspaces": [
     "landing/**/*",
     "ui/**/*",
-    "shared/**/*"
+    "shared/**/*",
+    "forks/**/*"
   ],
   "resolutions": {
     "@types/node": "16",

@@ -1,23 +1,43 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
+import React                   from 'react'
+import { FormattedMessage }    from 'react-intl'
+import { useState }            from 'react'
+import { useEffect }           from 'react'
 
-import { NavigationBlock }  from '@landing/navigation-fragment'
-import { Button }           from '@ui/button'
-import { ArrowBottomIcon }  from '@ui/icons'
-import { MenuIcon }         from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Logo }             from '@ui/logo'
-import { Text }             from '@ui/text'
-import { useHover }         from '@ui/utils'
+import { NavigationBlock }     from '@landing/navigation-fragment'
+import { Button }              from '@ui/button'
+import { ArrowBottomIcon }     from '@ui/icons'
+import { MenuIcon }            from '@ui/icons'
+import { Box }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { NextLink }            from '@ui/link'
+import { Logo }                from '@ui/logo'
+import { Text }                from '@ui/text'
+import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
+import { useHover }            from '@ui/utils'
 
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
   const [hoverArrow, hoverArrowProps] = useHover()
+
+  const { scroll } = useLocomotiveScroll()
+  const [isNavBackground, setNavBackground] = useState<boolean>(true)
+
+  useEffect(() => {
+    if (scroll) {
+      scroll.on('scroll', (instance) => {
+        if (instance.delta.y > instance.scroll.y && isNavBackground) {
+          setNavBackground(false)
+        }
+
+        if (instance.delta.y < instance.scroll.y && !isNavBackground) {
+          setNavBackground(true)
+        }
+      })
+    }
+  }, [scroll, isNavBackground, setNavBackground])
+
   return (
     <>
       <NavigationBlock visible={visibleNav} setVisible={setVisibleNav} />
@@ -27,6 +47,7 @@ const HeaderBlock = () => {
         height={[72, 72, 109]}
         position='fixed'
         justifyContent='center'
+        backgroundColor={isNavBackground ? 'background.blackAmber' : 'transparent'}
       >
         <Column width={['100%', '100%', 1920]} alignItems='center'>
           <Layout flexBasis={[24, 28, 32]} />
