@@ -1,4 +1,5 @@
 import * as messages     from '../../locales/ru.json'
+import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 import React             from 'react'
 import { IntlProvider }  from 'react-intl'

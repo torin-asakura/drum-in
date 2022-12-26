@@ -27,13 +27,13 @@ export const HomePage = () => {
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
-        <main data-scroll-container ref={containerRef}>
+      <HeaderBlock />
+      <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Hero />
           <Middle />
           <StudentsBlock />
           <FaqBlock />
-        </main>
+      </main>
       </LocomotiveScrollProvider>
     </Box>
   )
