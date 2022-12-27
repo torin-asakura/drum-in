@@ -4055,6 +4055,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@landing-navigation-fragment-virtual-45844110a6/1/landing/fragments/landing-navigation/",\
           "packageDependencies": [\
             ["@landing/navigation-fragment", "virtual:599a7c19ab187f0e4e616cea359efe79a441ed6d479bdecaf848d0ea210c692778d5c5fb4f3fc7a232f3b36059df30fda1010fb132f8439f629ddfba59d67363#workspace:landing/fragments/landing-navigation"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/background", "virtual:45844110a68a6cc8f83a7fcf606b9cb1e039166d5e681858fa445dbb14be088a97eb96897de89a4e70915c9654f169902bf18068be6f135f113c8221109494bd#workspace:ui/background"],\
@@ -4086,6 +4087,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@landing-navigation-fragment-virtual-1217e36dbe/1/landing/fragments/landing-navigation/",\
           "packageDependencies": [\
             ["@landing/navigation-fragment", "virtual:abee025a86778e60f1149224d1c5f1f53e13e3150627c79913fe0105ada076348d9f153c31dab2f19d3e170f803bd2274bce24f1e84c9078abe9b3f55211f190#workspace:landing/fragments/landing-navigation"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/background", "virtual:45844110a68a6cc8f83a7fcf606b9cb1e039166d5e681858fa445dbb14be088a97eb96897de89a4e70915c9654f169902bf18068be6f135f113c8221109494bd#workspace:ui/background"],\
@@ -4117,6 +4119,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./landing/fragments/landing-navigation/",\
           "packageDependencies": [\
             ["@landing/navigation-fragment", "workspace:landing/fragments/landing-navigation"],\
+            ["@shared/data", "virtual:33397c2667137d15820c05f39dad5f49533c1eb735f5394531949f7f640d23330fcf7d856fbb23f6d73bc8644befb407ad687e929d243f8b4f11a0a574c0445f#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@ui/background", "virtual:45844110a68a6cc8f83a7fcf606b9cb1e039166d5e681858fa445dbb14be088a97eb96897de89a4e70915c9654f169902bf18068be6f135f113c8221109494bd#workspace:ui/background"],\
             ["@ui/button", "virtual:599a7c19ab187f0e4e616cea359efe79a441ed6d479bdecaf848d0ea210c692778d5c5fb4f3fc7a232f3b36059df30fda1010fb132f8439f629ddfba59d67363#workspace:ui/button"],\
