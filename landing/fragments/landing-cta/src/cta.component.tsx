@@ -15,7 +15,7 @@ const CtaBlock = () => {
   const [hoverElem, hoverElemProps] = useHover()
 
   return (
-    <Box width='100%' backgroundColor='background.blackAmber' justifyContent='center'>
+    <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%'>
@@ -120,7 +120,7 @@ const CtaBlock = () => {
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       </Box>
-    </Box>
+    </Row>
   )
 }
 export { CtaBlock }

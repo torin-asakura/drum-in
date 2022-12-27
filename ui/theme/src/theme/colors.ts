@@ -154,6 +154,28 @@ const colors = {
         border: 'transparent',
       },
     },
+    borderWhiteToWhiteBackground: {
+      default: {
+        background: 'transparent',
+        font: 'rgb(242, 242, 242)',
+        border: 'rgb(242, 242, 242)',
+      },
+      hover: {
+        background: 'rgb(242, 242, 242)',
+        font: 'rgb(15,12,12)',
+        border: 'rgb(242, 242, 242)',
+      },
+      pressed: {
+        background: 'rgb(128, 127, 127)',
+        font: 'rgb(15,12,12)',
+        border: 'rgb(242, 242, 242)',
+      },
+      disabled: {
+        background: 'rgb(128, 127, 127)',
+        font: 'rgb(15,12,12)',
+        border: 'rgb(242, 242, 242)',
+      },
+    },
   },
   text: {
     smokyWhite: 'rgb(242,242,242)',
