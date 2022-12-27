@@ -12,6 +12,7 @@
     "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2"
   },

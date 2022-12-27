@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl'
 
 import { OpenOvalIcon }     from '@ui/icons'
 import { Box }              from '@ui/layout'
-import { Row }         from '@ui/layout'
+import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
