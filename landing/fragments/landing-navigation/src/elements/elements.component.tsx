@@ -48,6 +48,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
           circleFirstLine,
           circleSecondLine,
           quantityMonths,
+          path,
           textMonths,
           itemId,
         }) => (
@@ -71,6 +72,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
               circlePositionY={getUi(itemId).circlePositionY}
               circleFirstLine={circleFirstLine}
               circleSecondLine={circleSecondLine}
+              path={path}
             />
             <Layout flexBasis={16} />
           </>

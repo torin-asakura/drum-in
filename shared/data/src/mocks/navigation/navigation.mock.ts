@@ -10,6 +10,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '15',
     textMonths: 'месяцев',
     itemId: 'courseOpeningTheRhythm',
+    path: '/opening-the-rhythm',
   },
   {
     title: 'Ощущение времени',
@@ -20,6 +21,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '5',
     textMonths: 'месяцев',
     itemId: 'courseSenseOfTime',
+    path: '/',
   },
   {
     title: 'Пятое измерение',
@@ -30,6 +32,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '5',
     textMonths: 'месяцев',
     itemId: 'courseFifthDimension',
+    path: '/',
   },
   {
     title: 'Седьмое небо',
@@ -40,6 +43,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '5',
     textMonths: 'месяцев',
     itemId: 'courseSeventhHeaven',
+    path: '/',
   },
   {
     title: 'Коннакол',
@@ -50,6 +54,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '4',
     textMonths: 'месяца',
     itemId: 'courseConnacol',
+    path: '/',
   },
   {
     title: 'Ключи полиритмии',
@@ -60,6 +65,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '1',
     textMonths: 'месяц',
     itemId: 'coursePolyrhythmicKeys',
+    path: '/',
   },
 ]
 
