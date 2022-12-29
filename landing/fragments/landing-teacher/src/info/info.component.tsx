@@ -1,4 +1,5 @@
 import React                 from 'react'
+import { FC }                from 'react'
 import { useIntl }           from 'react-intl'
 
 import { ExperianceIcon }    from '@ui/icons'
@@ -6,11 +7,12 @@ import { Box }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Layout }            from '@ui/layout'
 
+import { PlaySongProps }     from '../play-song.interfaces'
 import { EducationList }     from './education-list'
 import { OneCharacteristic } from './one-characteristic'
 import { SongButton }        from './song-button'
 
-const Info = () => {
+const Info: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -19,7 +21,7 @@ const Info = () => {
         <Box height={['auto', 'auto', 543]}>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} order={[1, 1, 0]} />
           <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={1} />
-          <SongButton />
+          <SongButton playSong={playSong} setPlaySong={setPlaySong} />
           <Layout display={['none', 'none', 'flex']} flexBasis={60} flexShrink={14} />
           <Box position='relative' order={[2, 2, 0]} width={['100%', '100%', 822]}>
             <Box

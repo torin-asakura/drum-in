@@ -1,5 +1,6 @@
 import React                  from 'react'
 import { FormattedMessage }   from 'react-intl'
+import { forwardRef }         from 'react'
 
 import { RightDownArrowIcon } from '@ui/icons'
 import { Box }                from '@ui/layout'
@@ -12,8 +13,8 @@ import { Text }               from '@ui/text'
 import { LeftColumn }         from './left-column'
 import { RightColumn }        from './right-column'
 
-const PrivateLessonBlock = () => (
-  <Row justifyContent='center'>
+const PrivateLessonBlock = forwardRef(({ data }: any, ref: any) => (
+  <Row justifyContent='center' ref={ref}>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
@@ -58,5 +59,5 @@ const PrivateLessonBlock = () => (
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Box>
   </Row>
-)
+))
 export { PrivateLessonBlock }

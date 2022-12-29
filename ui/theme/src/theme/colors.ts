@@ -176,6 +176,28 @@ const colors = {
         border: 'rgb(242, 242, 242)',
       },
     },
+    transparentWhiteBackgroundWhiteBorder: {
+      default: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(242, 242, 242)',
+        border: 'rgb(242, 242, 242)',
+      },
+      hover: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(242, 242, 242)',
+        border: 'rgb(242, 242, 242)',
+      },
+      pressed: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(242, 242, 242)',
+        border: 'rgb(242, 242, 242)',
+      },
+      disabled: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(242, 242, 242)',
+        border: 'rgb(242, 242, 242)',
+      },
+    },
   },
   text: {
     smokyWhite: 'rgb(242,242,242)',

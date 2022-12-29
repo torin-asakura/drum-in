@@ -1,12 +1,14 @@
 import React                 from 'react'
+import { forwardRef }        from 'react'
 
 import { BannerBlock }       from '@landing/banner-fragment'
 import { ChooseCourseBlock } from '@landing/choose-course-fragment'
 import { TapeBlock }         from '@landing/tape-fragment'
 import { Background }        from '@ui/background'
+import { Box }               from '@ui/layout'
 
-const Hero = () => (
-  <>
+const Hero = forwardRef(({ data }: any, ref: any) => (
+  <Box ref={ref}>
     <Background
       display={['none', 'flex', 'flex']}
       flexDirection='column'
@@ -33,7 +35,7 @@ const Hero = () => (
       <TapeBlock />
       <ChooseCourseBlock />
     </Background>
-  </>
-)
+  </Box>
+))
 
 export { Hero }

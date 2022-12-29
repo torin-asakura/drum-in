@@ -1738,6 +1738,7 @@ __metadata:
     "@landing/tape-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/background": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
   peerDependencies:
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -1758,10 +1759,15 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-fragment": "workspace:0.0.1"
+    "@landing/learning-process-fragment": "workspace:0.0.1"
     "@landing/learning-students": "workspace:0.0.1"
-    "@landing/middle-fragment": "workspace:0.0.1"
+    "@landing/private-lesson-fragment": "workspace:0.0.1"
+    "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
+    "@ui/background": "workspace:0.0.1"
+    "@ui/intersection-observer": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/spy-scroll": "workspace:0.0.1"
   peerDependencies:
     next: ^12.1.0
     react: ^17.0.2
@@ -1824,22 +1830,6 @@ __metadata:
     react-dom: "*"
     react-intl: "*"
     styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@landing/middle-fragment@workspace:0.0.1, @landing/middle-fragment@workspace:landing/fragments/landing-middle":
-  version: 0.0.0-use.local
-  resolution: "@landing/middle-fragment@workspace:landing/fragments/landing-middle"
-  dependencies:
-    "@landing/learning-process-fragment": "workspace:0.0.1"
-    "@landing/private-lesson-fragment": "workspace:0.0.1"
-    "@landing/teacher-fragment": "workspace:0.0.1"
-    "@types/react": 18.0.21
-    "@ui/background": "workspace:0.0.1"
-  peerDependencies:
-    "@emotion/react": "*"
-    react: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -2553,6 +2543,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/events@npm:^3":
+  version: 3.0.0
+  resolution: "@types/events@npm:3.0.0"
+  checksum: 9a424c2da210957d5636e0763e8c9fc3aaeee35bf411284ddec62a56a6abe31de9c7c2e713dabdd8a76ff98b47db2bd52f61310be6609641d6234cc842ecbbe3
+  languageName: node
+  linkType: hard
+
 "@types/express-serve-static-core@npm:^4.17.18":
   version: 4.17.31
   resolution: "@types/express-serve-static-core@npm:4.17.31"
@@ -2992,6 +2989,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/intersection-observer@workspace:0.0.1, @ui/intersection-observer@workspace:ui/intersection-observer":
+  version: 0.0.0-use.local
+  resolution: "@ui/intersection-observer@workspace:ui/intersection-observer"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    react: ^17.0.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/layout@workspace:0.0.1, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
@@ -3076,6 +3087,34 @@ __metadata:
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/spy-scroll@workspace:0.0.1, @ui/spy-scroll@workspace:ui/spy-scroll":
+  version: 0.0.0-use.local
+  resolution: "@ui/spy-scroll@workspace:ui/spy-scroll"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@shared/data": "workspace:0.0.1"
+    "@types/events": ^3
+    "@types/styled-system": ^5
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    events: ^3.3.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -5029,7 +5068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"events@npm:^3.2.0":
+"events@npm:^3.2.0, events@npm:^3.3.0":
   version: 3.3.0
   resolution: "events@npm:3.3.0"
   checksum: f6f487ad2198aa41d878fa31452f1a3c00958f46e9019286ff4787c84aac329332ab45c9cdc8c445928fc6d7ded294b9e005a7fce9426488518017831b272780

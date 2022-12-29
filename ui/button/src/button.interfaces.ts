@@ -9,6 +9,7 @@ export type ButtonVariant =
   | 'transparentWhiteToPurpleBackground'
   | 'transparentWhiteToGrayBackground'
   | 'borderWhiteToWhiteBackground'
+  | 'transparentWhiteBackgroundWhiteBorder'
 
 export type ButtonSize =
   | 'withoutPaddingMicroHeight'
@@ -22,6 +23,7 @@ export type ButtonSize =
   | 'littlePaddingSemiMediumHeight'
   | 'massivePaddingGiantHeight'
   | 'semiMediumPaddingHugeHeight'
+  | 'littlePaddingSemiRegularHeight'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant

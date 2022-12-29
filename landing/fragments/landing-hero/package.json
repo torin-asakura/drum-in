@@ -6,7 +6,8 @@
     "@landing/banner-fragment": "workspace:0.0.1",
     "@landing/choose-course-fragment": "workspace:0.0.1",
     "@landing/tape-fragment": "workspace:0.0.1",
-    "@ui/background": "workspace:0.0.1"
+    "@ui/background": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {
     "@types/react": "18.0.21"

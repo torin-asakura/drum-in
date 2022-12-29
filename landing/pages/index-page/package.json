@@ -9,9 +9,14 @@
     "@landing/footer-fragment": "workspace:0.0.1",
     "@landing/header-fragment": "workspace:0.0.1",
     "@landing/hero-fragment": "workspace:0.0.1",
+    "@landing/learning-process-fragment": "workspace:0.0.1",
     "@landing/learning-students": "workspace:0.0.1",
-    "@landing/middle-fragment": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1"
+    "@landing/private-lesson-fragment": "workspace:0.0.1",
+    "@landing/teacher-fragment": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1",
+    "@ui/intersection-observer": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/spy-scroll": "workspace:0.0.1"
   },
   "devDependencies": {
     "@emotion/react": "^11.9.3",

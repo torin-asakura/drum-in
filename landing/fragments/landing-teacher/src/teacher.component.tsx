@@ -1,5 +1,7 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import { forwardRef }       from 'react'
 
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -9,10 +11,11 @@ import { Text }             from '@ui/text'
 
 import { EducationMobile }  from './education-mobile'
 import { Info }             from './info'
+import { PlaySongProps }    from './play-song.interfaces'
 import { SliderBlock }      from './slider'
 
-const TeacherBlock = () => (
-  <Row flexWrap='wrap' justifyContent='center'>
+const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => (
+  <Row flexWrap='wrap' justifyContent='center' ref={ref}>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%' alignItems={['start', 'start', 'center']}>
@@ -73,7 +76,8 @@ const TeacherBlock = () => (
         <Layout flexBasis={[24, 70, 155]} />
       </Column>
     </Box>
-    <Info />
+    <Info playSong={playSong} setPlaySong={setPlaySong} />
   </Row>
-)
+))
+
 export { TeacherBlock }

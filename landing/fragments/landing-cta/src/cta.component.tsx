@@ -1,5 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { forwardRef }       from 'react'
 
 import { Button }           from '@ui/button'
 import { PencilIcon }       from '@ui/icons'
@@ -11,11 +12,11 @@ import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
-const CtaBlock = () => {
+const CtaBlock = forwardRef(({ data }: any, ref: any) => {
   const [hoverElem, hoverElemProps] = useHover()
 
   return (
-    <Row justifyContent='center'>
+    <Row justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%'>
@@ -122,5 +123,5 @@ const CtaBlock = () => {
       </Box>
     </Row>
   )
-}
+})
 export { CtaBlock }

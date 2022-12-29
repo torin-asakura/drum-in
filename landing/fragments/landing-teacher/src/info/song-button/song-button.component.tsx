@@ -1,8 +1,6 @@
 import React                      from 'react'
+import { FC }                     from 'react'
 import { FormattedMessage }       from 'react-intl'
-import { useRef }                 from 'react'
-import { useEffect }              from 'react'
-import { useState }               from 'react'
 
 import { Button }                 from '@ui/button'
 import { PlayIcon }               from '@ui/icons'
@@ -15,20 +13,10 @@ import { Layout }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
 import { useHover }               from '@ui/utils'
 
-const SongButton = () => {
-  const [hoverIcon, hoverIconProps] = useHover()
-  const [playSong, setPlaySong] = useState<boolean>(false)
+import { PlaySongProps }          from '../../play-song.interfaces'
 
-  const songElement = useRef<HTMLAudioElement | undefined>(
-    typeof Audio !== 'undefined' ? new Audio('/music/song-1.mp3') : undefined
-  )
-  useEffect(() => {
-    if (playSong) {
-      songElement.current?.play()
-    } else {
-      songElement.current?.pause()
-    }
-  }, [playSong])
+const SongButton: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
+  const [hoverIcon, hoverIconProps] = useHover()
 
   return (
     <>

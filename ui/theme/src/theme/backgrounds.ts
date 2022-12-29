@@ -11,7 +11,6 @@ const backgrounds = {
   purpleBlueImageGradient: 'url("/img/bg-hero-main-page.png")',
   purpleBlueSmallImageGradient: 'url("/img/mobile-bg-hero-main-page.png")',
   purpleBlueCirclesImage: 'url("/img/bg-middle-main-page.png")',
-  purpleBlueCirclesSmallImage: 'url("/img/mobile-bg-middle-main-page.png")',
   purpleBlueSemicircleImage: 'url("/img/bg-desktop-footer.png")',
   purpleBlueTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer.png")',
   verticalTransparentToBlackGradient:

@@ -1,5 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { forwardRef }       from 'react'
 
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -10,8 +11,8 @@ import { Text }             from '@ui/text'
 import { SliderBottom }     from './slider-bottom'
 import { SliderTop }        from './slider-top'
 
-const LearningProcessBlock = () => (
-  <>
+const LearningProcessBlock = forwardRef(({ data }: any, ref: any) => (
+  <Column width='100%' ref={ref}>
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -45,6 +46,6 @@ const LearningProcessBlock = () => (
         <Layout flexBasis={[64, 77, 90]} />
       </Column>
     </Box>
-  </>
-)
+  </Column>
+))
 export { LearningProcessBlock }

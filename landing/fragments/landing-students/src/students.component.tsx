@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
+import { forwardRef }       from 'react'
 
 import { Button }           from '@ui/button'
 import { ArrowRightIcon }   from '@ui/icons'
@@ -13,13 +14,13 @@ import { Text }             from '@ui/text'
 import { CardsStudent }     from './cards-student'
 import { ModalWindow }      from './modal-window'
 
-const StudentsBlock = () => {
+const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
 
   return (
     <>
       <ModalWindow active={visibleModal} onClose={() => setVisibleModal(false)} />
-      <Row justifyContent='center'>
+      <Row justifyContent='center' ref={ref}>
         <Box width={['100%', '100%', 1920]}>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
           <Column width='100%'>
@@ -102,5 +103,5 @@ const StudentsBlock = () => {
       </Row>
     </>
   )
-}
+})
 export { StudentsBlock }

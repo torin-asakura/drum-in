@@ -202,6 +202,38 @@ const appearanceBorderWhiteToWhiteBackgroundDisabledStyles = createAppearanceSty
   borderColor: prop('theme.colors.button.borderWhiteToWhiteBackground.disabled.border'),
 })
 
+const appearanceTransparentWhiteBackgroundWhiteBorderDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.default.font'),
+  backgroundColor: prop(
+    'theme.colors.button.transparentWhiteBackgroundWhiteBorder.default.background'
+  ),
+  borderColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.default.border'),
+})
+
+const appearanceTransparentWhiteBackgroundWhiteBorderHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.hover.font'),
+  backgroundColor: prop(
+    'theme.colors.button.transparentWhiteBackgroundWhiteBorder.hover.background'
+  ),
+  borderColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.hover.border'),
+})
+
+const appearanceTransparentWhiteBackgroundWhiteBorderPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.pressed.font'),
+  backgroundColor: prop(
+    'theme.colors.button.transparentWhiteBackgroundWhiteBorder.pressed.background'
+  ),
+  borderColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.pressed.border'),
+})
+
+const appearanceTransparentWhiteBackgroundWhiteBorderDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.disabled.font'),
+  backgroundColor: prop(
+    'theme.colors.button.transparentWhiteBackgroundWhiteBorder.disabled.background'
+  ),
+  borderColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   transparentBackground: ifProp(
     prop('disabled', false),
@@ -304,6 +336,19 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearanceBorderWhiteToWhiteBackgroundHoverStyles,
         appearanceBorderWhiteToWhiteBackgroundDefaultStyles
+      )
+    )
+  ),
+  transparentWhiteBackgroundWhiteBorder: ifProp(
+    prop('disabled', false),
+    appearanceTransparentWhiteBackgroundWhiteBorderDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceTransparentWhiteBackgroundWhiteBorderPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceTransparentWhiteBackgroundWhiteBorderHoverStyles,
+        appearanceTransparentWhiteBackgroundWhiteBorderDefaultStyles
       )
     )
   ),

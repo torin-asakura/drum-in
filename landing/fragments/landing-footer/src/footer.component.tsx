@@ -1,10 +1,11 @@
 import React             from 'react'
+import { forwardRef }    from 'react'
 
 import { Background }    from '@ui/background'
 
 import { ContentFooter } from './content-footer'
 
-const FooterBlock = () => (
+const FooterBlock = forwardRef(({ data }: any, ref: any) => (
   <>
     <Background
       display={['none', 'none', 'flex']}
@@ -13,6 +14,7 @@ const FooterBlock = () => (
       backgroundSize='80% 100%'
       backgroundRepeat='no-repeat'
       backgroundPosition='left bottom'
+      ref={ref}
     >
       <ContentFooter />
     </Background>
@@ -23,9 +25,10 @@ const FooterBlock = () => (
       backgroundSize='100% 80%'
       backgroundRepeat='no-repeat'
       backgroundPosition='center bottom'
+      ref={ref}
     >
       <ContentFooter />
     </Background>
   </>
-)
+))
 export { FooterBlock }
