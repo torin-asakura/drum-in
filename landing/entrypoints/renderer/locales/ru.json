@@ -64,5 +64,9 @@
   "landing_footer.vk": "VK",
   "landing_footer.up": "вверх",
   "landing_footer.personal_data_processing_policy": "Политика обработки персональных данных",
-  "landing_footer.druminpro_yandex_ru": "druminpro@yandex.ru"
+  "landing_footer.druminpro_yandex_ru": "druminpro@yandex.ru",
+  "landing_banner_course.opening_the_rhythm": "Открытие ритма",
+  "landing_banner_course.course_that_will_help_you_understand": "Курс, который поможет понимать,",
+  "landing_banner_course.perform_and_write_music": "исполнять и писать музыку",
+  "landing_banner_course.basis_course": "#ОСНОВНОЙ КУРС"
 }

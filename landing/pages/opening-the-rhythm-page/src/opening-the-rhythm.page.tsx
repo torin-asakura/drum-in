@@ -8,6 +8,7 @@ import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
+import { HeroCourse }               from '@landing/hero-course-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Box }                      from '@ui/layout'
 
@@ -46,6 +47,7 @@ export const OpeningTheRhythmPage = () => {
       >
         <HeaderBlock />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+          <HeroCourse />
           <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           <FaqBlock />
           <CtaBlock />

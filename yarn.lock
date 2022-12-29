@@ -1051,7 +1051,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.10.4, @emotion/react@npm:^11.4.1, @emotion/react@npm:^11.9.3":
+"@emotion/react@npm:*, @emotion/react@npm:^11.10.4, @emotion/react@npm:^11.4.1, @emotion/react@npm:^11.9.3":
   version: 11.10.5
   resolution: "@emotion/react@npm:11.10.5"
   dependencies:
@@ -1598,6 +1598,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@landing/banner-course-fragment@workspace:0.0.1, @landing/banner-course-fragment@workspace:landing/fragments/landing-banner-course":
+  version: 0.0.0-use.local
+  resolution: "@landing/banner-course-fragment@workspace:landing/fragments/landing-banner-course"
+  dependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/banner-fragment@workspace:0.0.1, @landing/banner-fragment@workspace:landing/fragments/landing-banner":
   version: 0.0.0-use.local
   resolution: "@landing/banner-fragment@workspace:landing/fragments/landing-banner"
@@ -1723,6 +1743,22 @@ __metadata:
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/hero-course-fragment@workspace:0.0.1, @landing/hero-course-fragment@workspace:landing/fragments/landing-hero-course":
+  version: 0.0.0-use.local
+  resolution: "@landing/hero-course-fragment@workspace:landing/fragments/landing-hero-course"
+  dependencies:
+    "@landing/banner-course-fragment": "workspace:0.0.1"
+    "@types/react": 18.0.21
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     react: "*"
     react-intl: "*"
@@ -1871,6 +1907,7 @@ __metadata:
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
+    "@landing/hero-course-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/layout": "workspace:0.0.1"

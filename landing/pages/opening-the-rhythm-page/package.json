@@ -8,6 +8,7 @@
     "@landing/faq": "workspace:0.0.1",
     "@landing/footer-fragment": "workspace:0.0.1",
     "@landing/header-fragment": "workspace:0.0.1",
+    "@landing/hero-course-fragment": "workspace:0.0.1",
     "@landing/teacher-fragment": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1"
   },

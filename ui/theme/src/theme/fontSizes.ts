@@ -29,6 +29,7 @@ const fontSizes = {
   semiGigantic: 103,
   giant: 110,
   gigantic: 120,
+  biggest: 148,
 }
 
 export { fontSizes }
