@@ -5,6 +5,7 @@
   "dependencies": {
     "@landing/after-the-course-fragment": "workspace:0.0.1",
     "@landing/banner-course-fragment": "workspace:0.0.1",
+    "@landing/skills-fragment": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1"
   },
   "devDependencies": {

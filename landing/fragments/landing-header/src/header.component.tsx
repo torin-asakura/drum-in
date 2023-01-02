@@ -98,7 +98,6 @@ const HeaderBlock = () => {
                       fontWeight='semiBold'
                       fontSize='medium'
                       lineHeight='default'
-                      color='smokyWhite'
                     >
                       <FormattedMessage id='landing_header.courses' defaultMessage='Курсы' />
                     </Text>
