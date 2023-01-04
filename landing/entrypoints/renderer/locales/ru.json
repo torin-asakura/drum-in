@@ -74,5 +74,8 @@
   "landing_after_the_course.select_parties_and_control_the_pace": "#Подбирать партии;#Контролировать темп",
   "landing_after_the_course.feel_confident_when_playing_and_recording": "#Уверенно чувствовать себя при игре и записи;#Уверенно чувствовать себя при игре и записи",
   "landing_skills.during_the_course_you_will_master": "На курсе вы освоите",
-  "landing_skills.rhythms_of_different_musical_styles": "Ритмы разных музыкальных стилей и разных стран мира"
+  "landing_skills.rhythms_of_different_musical_styles": "Ритмы разных музыкальных стилей и разных стран мира",
+  "landing_program.course_composition": "Состав курса",
+  "landing_program.you_can_complete_any_level": "Вы можете пройти любой уровень как отдельный курс, в зависимости от вашей подготовки",
+  "landing_program.live-broadcast": "прямых эфиров"
 }

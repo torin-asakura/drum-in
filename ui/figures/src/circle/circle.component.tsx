@@ -7,8 +7,8 @@ import { Text }        from '@ui/text'
 
 import { CircleProps } from './circle.interfaces'
 
-const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
-  <Background gradient='blueWhiteGradient' borderRadius='max'>
+const Circle: FC<CircleProps> = ({ firstLine, secondLine, gradient }) => (
+  <Background gradient={gradient || 'blueWhiteGradient'} borderRadius='max'>
     <Box
       display='flex'
       flexDirection='column'

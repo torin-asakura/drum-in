@@ -1,0 +1,83 @@
+const getUi = (itemId) => {
+  if (itemId === 'level-1')
+    return {
+      squareRotate: 10,
+      squarePositionX: 10,
+      squarePositionY: 17,
+      circlePositionX: 203,
+      circlePositionY: 0,
+      rectangleRotate: -8,
+      rectanglePositionX: 216,
+      rectanglePositionY: 168,
+      rectangleColor: 'transparentBlueGradient',
+      squareRotateMobile: 15,
+      squarePositionXMobile: 9,
+      squarePositionYMobile: 18,
+      rectangleRotateMobile: -15,
+      rectanglePositionXMobile: 90,
+      rectanglePositionYMobile: 101,
+      circlePositionXMobile: 120,
+      circlePositionYMobile: 0,
+    }
+  if (itemId === 'level-2')
+    return {
+      squareRotate: 0,
+      squarePositionX: 4.5,
+      squarePositionY: 3.5,
+      circlePositionX: 402,
+      circlePositionY: 119,
+      rectangleRotate: -15,
+      rectanglePositionX: 189,
+      rectanglePositionY: 47,
+      rectangleColor: 'transparentGreenGradient',
+      squareRotateMobile: 0,
+      squarePositionXMobile: 4.5,
+      squarePositionYMobile: 0,
+      rectangleRotateMobile: -30,
+      rectanglePositionXMobile: 95,
+      rectanglePositionYMobile: 46,
+      circlePositionXMobile: 195,
+      circlePositionYMobile: 86,
+    }
+  if (itemId === 'level-3')
+    return {
+      squareRotate: 0,
+      squarePositionX: 212,
+      squarePositionY: 135,
+      circlePositionX: 370,
+      circlePositionY: 1.5,
+      rectangleRotate: -15,
+      rectanglePositionX: 1,
+      rectanglePositionY: 40,
+      rectangleColor: 'transparentPinkGradient',
+      squareRotateMobile: 0,
+      squarePositionXMobile: 5.5,
+      squarePositionYMobile: 88,
+      rectangleRotateMobile: 30,
+      rectanglePositionXMobile: 26,
+      rectanglePositionYMobile: 44,
+      circlePositionXMobile: 196,
+      circlePositionYMobile: 0,
+    }
+  return {
+    squareRotate: 10,
+    squarePositionX: 10,
+    squarePositionY: 17,
+    circlePositionX: 203,
+    circlePositionY: 0,
+    rectangleRotate: -8,
+    rectanglePositionX: 216,
+    rectanglePositionY: 168,
+    rectangleColor: 'transparentBlueGradient',
+    squareRotateMobile: 15,
+    squarePositionXMobile: 9,
+    squarePositionYMobile: 18,
+    rectangleRotateMobile: -15,
+    rectanglePositionXMobile: 90,
+    rectanglePositionYMobile: 101,
+    circlePositionXMobile: 120,
+    circlePositionYMobile: 0,
+  }
+}
+
+export { getUi }
