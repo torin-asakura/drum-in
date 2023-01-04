@@ -77,5 +77,10 @@
   "landing_skills.rhythms_of_different_musical_styles": "Ритмы разных музыкальных стилей и разных стран мира",
   "landing_program.course_composition": "Состав курса",
   "landing_program.you_can_complete_any_level": "Вы можете пройти любой уровень как отдельный курс, в зависимости от вашей подготовки",
-  "landing_program.live-broadcast": "прямых эфиров"
+  "landing_program.live-broadcast": "прямых эфиров",
+  "landing_course_process.how_is_the_training_going": "как проходит обучениe",
+  "landing_course_process.weekly_meetings_in_zoom": "Еженедельные встречи в Zoom",
+  "landing_course_process.constant_support": "Постоянная поддержка",
+  "landing_course_process.capacious_video_tutorials_on_youtube": "Емкие видеоуроки на YouTube",
+  "landing_course_process.do_practical_tasks": "Выполняете практические задания, получаете обратную связь и закрепляете знания"
 }

@@ -134,6 +134,8 @@ export const GlobalStyles = () => {
       .students-slider-desktop {
         overflow: visible !important;
       }
+      
+      .course-process-slider .swiper-slide,
       .program-slider .swiper-slide,
       .choose-courses-slider .swiper-slide,
       .students-slider .swiper-slide,

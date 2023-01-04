@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@landing/course-process-fragment": "workspace:0.0.1",
     "@landing/cta-fragment": "workspace:0.0.1",
     "@landing/faq": "workspace:0.0.1",
     "@landing/footer-fragment": "workspace:0.0.1",

@@ -4,6 +4,7 @@ import { useEffect }                from 'react'
 import { useState }                 from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { CourseProcessBlock }       from '@landing/course-process-fragment'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
@@ -50,6 +51,7 @@ export const OpeningTheRhythmPage = () => {
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroCourse />
           <ProgramBlock />
+          <CourseProcessBlock />
           <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           <FaqBlock />
           <CtaBlock />
