@@ -12,6 +12,7 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { HeroCourse }               from '@landing/hero-course-fragment'
 import { ProgramBlock }             from '@landing/program-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
+import { Background }               from '@ui/background'
 import { Box }                      from '@ui/layout'
 
 export const OpeningTheRhythmPage = () => {
@@ -52,7 +53,15 @@ export const OpeningTheRhythmPage = () => {
           <HeroCourse />
           <ProgramBlock />
           <CourseProcessBlock />
-          <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+          <Background
+            width='100%'
+            gradient='purpleBlueCirclesImage'
+            backgroundSize={['200%', '200% 100%', '1800px']}
+            backgroundRepeat='no-repeat'
+            backgroundPosition='center top'
+          >
+            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+          </Background>
           <FaqBlock />
           <CtaBlock />
           <FooterBlock />

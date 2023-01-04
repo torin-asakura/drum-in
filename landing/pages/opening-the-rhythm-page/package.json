@@ -12,6 +12,7 @@
     "@landing/hero-course-fragment": "workspace:0.0.1",
     "@landing/program-fragment": "workspace:0.0.1",
     "@landing/teacher-fragment": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {

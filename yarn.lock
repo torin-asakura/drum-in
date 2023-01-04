@@ -1953,6 +1953,7 @@ __metadata:
     "@landing/program-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
+    "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
     next: ^12.1.0
