@@ -10,6 +10,7 @@ import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { HeroCourse }               from '@landing/hero-course-fragment'
+import { PriceBlock }               from '@landing/price-fragment'
 import { ProgramBlock }             from '@landing/program-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Background }               from '@ui/background'
@@ -62,6 +63,7 @@ export const OpeningTheRhythmPage = () => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Background>
+          <PriceBlock />
           <FaqBlock />
           <CtaBlock />
           <FooterBlock />

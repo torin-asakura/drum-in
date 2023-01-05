@@ -6,4 +6,5 @@ export const replacements = {
   PauseIcon: getColorReplacement({ color: '#0F0C0C' }),
   InvertedExclamationMarkIcon: getColorReplacement({ color: '#0F0C0C' }),
   RightDownArrowIcon: getColorReplacement({ color: '#0F0C0C' }),
+  ArrowRightTailIcon: getColorReplacement({ color: '#0F0C0C' }),
 }

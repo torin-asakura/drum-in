@@ -1950,6 +1950,7 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-course-fragment": "workspace:0.0.1"
+    "@landing/price-fragment": "workspace:0.0.1"
     "@landing/program-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
@@ -1959,6 +1960,27 @@ __metadata:
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-fragment@workspace:0.0.1, @landing/price-fragment@workspace:landing/fragments/landing-price":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-fragment@workspace:landing/fragments/landing-price"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-tools: ^1.7.2
+  peerDependencies:
+    react: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
