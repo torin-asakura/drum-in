@@ -234,6 +234,38 @@ const appearanceTransparentWhiteBackgroundWhiteBorderDisabledStyles = createAppe
   borderColor: prop('theme.colors.button.transparentWhiteBackgroundWhiteBorder.disabled.border'),
 })
 
+const appearanceDarkToPurpleBackgroundWithWhiteBorderDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.default.font'),
+  backgroundColor: prop(
+    'theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.default.background'
+  ),
+  borderColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.default.border'),
+})
+
+const appearanceDarkToPurpleBackgroundWithWhiteBorderHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.hover.font'),
+  backgroundColor: prop(
+    'theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.hover.background'
+  ),
+  borderColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.hover.border'),
+})
+
+const appearanceDarkToPurpleBackgroundWithWhiteBorderPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.pressed.font'),
+  backgroundColor: prop(
+    'theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.pressed.background'
+  ),
+  borderColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.pressed.border'),
+})
+
+const appearanceDarkToPurpleBackgroundWithWhiteBorderDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.disabled.font'),
+  backgroundColor: prop(
+    'theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.disabled.background'
+  ),
+  borderColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   transparentBackground: ifProp(
     prop('disabled', false),
@@ -349,6 +381,19 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearanceTransparentWhiteBackgroundWhiteBorderHoverStyles,
         appearanceTransparentWhiteBackgroundWhiteBorderDefaultStyles
+      )
+    )
+  ),
+  darkToPurpleBackgroundWithWhiteBorder: ifProp(
+    prop('disabled', false),
+    appearanceDarkToPurpleBackgroundWithWhiteBorderDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceDarkToPurpleBackgroundWithWhiteBorderPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceDarkToPurpleBackgroundWithWhiteBorderHoverStyles,
+        appearanceDarkToPurpleBackgroundWithWhiteBorderDefaultStyles
       )
     )
   ),

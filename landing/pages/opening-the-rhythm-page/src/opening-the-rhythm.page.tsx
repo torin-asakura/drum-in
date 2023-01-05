@@ -12,6 +12,7 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { HeroCourse }               from '@landing/hero-course-fragment'
 import { PriceBlock }               from '@landing/price-fragment'
 import { ProgramBlock }             from '@landing/program-fragment'
+import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Background }               from '@ui/background'
 import { Box }                      from '@ui/layout'
@@ -68,6 +69,7 @@ export const OpeningTheRhythmPage = () => {
           <CtaBlock />
           <FooterBlock />
         </main>
+        <StartLearningBlock />
       </LocomotiveScrollProvider>
     </Box>
   )

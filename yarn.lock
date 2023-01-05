@@ -1952,6 +1952,7 @@ __metadata:
     "@landing/hero-course-fragment": "workspace:0.0.1"
     "@landing/price-fragment": "workspace:0.0.1"
     "@landing/program-fragment": "workspace:0.0.1"
+    "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/background": "workspace:0.0.1"
@@ -2052,6 +2053,25 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: ^6.1.2
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/start-learning-fragment@workspace:0.0.1, @landing/start-learning-fragment@workspace:landing/fragments/landing-start-learning":
+  version: 0.0.0-use.local
+  resolution: "@landing/start-learning-fragment@workspace:landing/fragments/landing-start-learning"
+  dependencies:
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/button": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
