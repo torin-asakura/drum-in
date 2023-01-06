@@ -1,6 +1,3 @@
-const breakpoints = {
-  laptop: '1200px'
-}
-export default {
-  breakpoints
-}
+export const breakpoints = ['40em', '52em', '64em', '80em', '1200px']
+
+breakpoints.laptop = breakpoints[4]
