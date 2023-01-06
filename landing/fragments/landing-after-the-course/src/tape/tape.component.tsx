@@ -27,7 +27,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
   return (
     <Box
       position='absolute'
-      right={0}
+      right={{laptop: -100, 0: 0, 1: -200, 2: 200}}
       top={[104, 155, 85]}
       width={[266, 570, 940]}
       backgroundColor='background.blackAmber'
