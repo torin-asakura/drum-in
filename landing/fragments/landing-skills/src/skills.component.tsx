@@ -46,11 +46,12 @@ const SkillsBlock = () => (
         </Box>
         <Layout flexBasis={[16, 22, 0]} display={['flex', 'flex', 'none']} />
         <Box
-          width={['100%', 360, '100%']}
+          width={{ _: '100%', tablet: 360, laptop: 1204, wide: '100%' }}
           height={[200, 250, 750]}
           backgroundColor='background.blackAmber'
           border={['normalSmokyWhite', 'mediumBoldSmokyWhite', 'veryBoldSmokyWhite']}
           borderRadius={['medium', 'larger', 'huge']}
+          alignSelf={['start', 'start', 'center']}
           overflow='hidden'
         >
           <Column width='100%'>

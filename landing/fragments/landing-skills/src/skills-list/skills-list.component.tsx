@@ -16,13 +16,18 @@ import { Box }           from '@ui/layout'
 const SkillsList = () => (
   <>
     <Box display={['none', 'none', 'flex']} position='relative' height='100%' width='100%'>
-      <Box position='absolute' bottom={135} left={28}>
+      <Box position='absolute' bottom={{ _: 0, tablet: 0, laptop: 359, wide: 135 }} left={28}>
         <FlagSpainIcon width={116} height={116} />
       </Box>
       <Box position='absolute' bottom={22} left={3} style={{ transform: 'rotate(15deg)' }}>
         <PopIcon width={310} height={85} />
       </Box>
-      <Box position='absolute' bottom={182} left={142} style={{ transform: 'rotate(-15deg)' }}>
+      <Box
+        position='absolute'
+        bottom={{ _: 0, tablet: 0, laptop: 356, wide: 182 }}
+        left={142}
+        style={{ transform: 'rotate(-15deg)' }}
+      >
         <ReggaeIcon width={610} height={85} />
       </Box>
       <Box position='absolute' bottom={30} left={300} style={{ transform: 'rotate(9deg)' }}>
@@ -31,22 +36,39 @@ const SkillsList = () => (
       <Box position='absolute' bottom={118} left={487}>
         <RnBIcon width={409} height={80} />
       </Box>
-      <Box position='absolute' bottom={202} left={765}>
+      <Box
+        position='absolute'
+        bottom={{ _: 0, tablet: 0, laptop: 164, wide: 202 }}
+        left={{ _: 0, tablet: 0, laptop: 936, wide: 765 }}
+      >
         <FlagCubaIcon width={116} height={116} />
       </Box>
-      <Box position='absolute' bottom={9} right={462}>
+      <Box
+        position='absolute'
+        bottom={{ _: 0, tablet: 0, laptop: 221, wide: 9 }}
+        right={{ _: 0, tablet: 0, laptop: 296, wide: 462 }}
+      >
         <TranceIcon width={607} height={82} />
       </Box>
-      <Box position='absolute' bottom={136} right={539} style={{ transform: 'rotate(15deg)' }}>
+      <Box
+        position='absolute'
+        bottom={{ _: 0, tablet: 0, laptop: 152, wide: 136 }}
+        right={{ _: 0, tablet: 0, laptop: 766, wide: 539 }}
+        style={{ transform: 'rotate(15deg)' }}
+      >
         <FunkIcon width={405} height={85} />
       </Box>
-      <Box position='absolute' bottom={147} right={133}>
+      <Box
+        position='absolute'
+        bottom={{ _: 0, tablet: 0, laptop: 327, wide: 147 }}
+        right={{ _: 0, tablet: 0, laptop: 160, wide: 133 }}
+      >
         <ChillIcon width={420} height={82} />
       </Box>
       <Box position='absolute' bottom={41} right={0.5} style={{ transform: 'rotate(-15deg)' }}>
         <JazzIcon width={400} height={85} />
       </Box>
-      <Box position='absolute' bottom={158} right={43}>
+      <Box position='absolute' bottom={{ _: 0, tablet: 0, laptop: 299, wide: 158 }} right={43}>
         <FlagIndiaIcon width={116} height={116} />
       </Box>
     </Box>

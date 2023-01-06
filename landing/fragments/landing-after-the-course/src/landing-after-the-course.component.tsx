@@ -38,13 +38,13 @@ const AfterTheCourseBlock = () => {
             </Box>
             <Layout display={['none', 'none', 'flex']} flexBasis={36} flexShrink={0} />
             <Box
-              display={['none', 'none', 'flex']}
+              display={{ _: 'none', tablet: 'none', laptop: 'none', wide: 'flex' }}
               style={{ transform: 'rotate(195deg) scale(1, -1)' }}
               alignItems='end'
             >
               <TwistedArrowBottomIcon width={252} height={55} />
             </Box>
-            <Box width={[0, 0, 940]}>
+            <Box width={{ _: 0, tablet: 0, laptop: 740, wide: 940 }}>
               <Tape
                 firstLine={formatMessage({
                   id: 'landing_after_the_course.make_rhythmically_interesting_arrangements',
