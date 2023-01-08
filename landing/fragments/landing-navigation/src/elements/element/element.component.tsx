@@ -95,7 +95,7 @@ const Element: FC<ElementProps> = ({
             >
               <Text
                 textTransform='uppercase'
-                fontFamily='DrukWideCy'
+                fontFamily='secondary'
                 fontWeight='bold'
                 fontSize='micro'
                 color='text.smokyWhite'
@@ -108,7 +108,7 @@ const Element: FC<ElementProps> = ({
             <Box>
               <NextLink path='/'>
                 <Text
-                  fontFamily='DrukWideCy'
+                  fontFamily='secondary'
                   fontWeight='bold'
                   fontSize={['medium', 'semiModerate', 'big']}
                 >
@@ -121,7 +121,7 @@ const Element: FC<ElementProps> = ({
         ) : (
           <NextLink path='/'>
             <Text
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['medium', 'semiModerate', 'big']}
             >

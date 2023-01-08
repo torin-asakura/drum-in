@@ -62,7 +62,7 @@ const Item: FC<ItemProps> = ({
               <Tag
                 padding={['4px 12px', '6px 14px', '8px 16px']}
                 fontSize={['micro', 'medium', 'regular']}
-                fontFamily={['primary', 'primary', 'inter']}
+                fontFamily={['primary', 'primary', 'tertiary']}
                 stateElem={elemHover}
                 text={age}
               />
@@ -70,7 +70,7 @@ const Item: FC<ItemProps> = ({
               <Tag
                 padding={['4px 12px', '6px 14px', '8px 16px']}
                 fontSize={['micro', 'medium', 'regular']}
-                fontFamily={['primary', 'primary', 'inter']}
+                fontFamily={['primary', 'primary', 'tertiary']}
                 stateElem={elemHover}
                 text={profession}
               />

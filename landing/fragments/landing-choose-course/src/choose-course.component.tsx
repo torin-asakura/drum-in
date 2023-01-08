@@ -18,7 +18,7 @@ const ChooseCourseBlock = () => (
         <Box width={[270, 500, 630]}>
           <Text
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['regular', 'semiIncreased', 'big']}
             lineHeight='default'

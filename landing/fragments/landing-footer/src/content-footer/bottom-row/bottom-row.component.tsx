@@ -33,7 +33,7 @@ const BottomRow = () => (
     <Layout flexBasis={12} display={['flex', 'flex', 'none']} />
     <Box>
       <Link href='mailto:druminpro@yandex.ru' target='_blank'>
-        <Text fontFamily='DrukWideCy' fontWeight='bold' fontSize={['medium', 'large', 'moderate']}>
+        <Text fontFamily='secondary' fontWeight='bold' fontSize={['medium', 'large', 'moderate']}>
           <FormattedMessage
             id='landing_footer.druminpro_yandex_ru'
             defaultMessage='druminpro@yandex.ru'

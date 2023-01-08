@@ -20,6 +20,7 @@ import { useHover }            from '@ui/utils'
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
   const [hoverArrow, hoverArrowProps] = useHover()
+  const [hoverLink, hoverLinkProps] = useHover()
 
   const { scroll } = useLocomotiveScroll()
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
@@ -105,9 +106,11 @@ const HeaderBlock = () => {
                 </Button>
               </Box>
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
-              <Box display={['none', 'none', 'flex']}>
+              <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
                 <NextLink path='/'>
-                  <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
+                  <Text color={hoverLink ? 'text.purple' : 'text.smokyWhite'} style={{ transition: '0.3s' }}>
+                    <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
+                  </Text>
                 </NextLink>
               </Box>
               <Row justifyContent='end'>

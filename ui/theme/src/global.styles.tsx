@@ -99,6 +99,10 @@ export const GlobalStyles = () => {
           }
         }
         
+        button, a {
+          transition: 0.2s;
+        }
+        
         .swiper-pagination {
         position: absolute;
         bottom: 0;

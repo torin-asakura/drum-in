@@ -21,7 +21,7 @@ const LearningProcessBlock = forwardRef(({ data }: any, ref: any) => (
           <Box width={['100%', '100%', 800]}>
             <Text
               textTransform='uppercase'
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['regular', 'mild', 'big']}
               lineHeight='default'

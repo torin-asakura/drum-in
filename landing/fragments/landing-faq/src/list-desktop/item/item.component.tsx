@@ -24,6 +24,7 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
       borderRadius='extra'
       border={getColor(isOpen, active, elemHover).border}
       backgroundColor={getColor(isOpen, active, elemHover).background}
+      style={{ transition: '0.2s' }}
     >
       <Box paddingRight={32}>
         <Text
@@ -31,6 +32,7 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
           fontSize='large'
           lineHeight='primary'
           color={getColor(isOpen, active, elemHover).text}
+          style={{ transition: '0.2s' }}
         >
           {question}
         </Text>
@@ -46,6 +48,7 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
           justifyContent='center'
           borderRadius='semiMedium'
           backgroundColor={getColor(isOpen, active, elemHover).backgroundIcon}
+          style={{ transition: '0.2s',  cursor: 'pointer', }}
         >
           <InvertedExclamationMarkIcon
             color={getColor(isOpen, active, elemHover).icon}

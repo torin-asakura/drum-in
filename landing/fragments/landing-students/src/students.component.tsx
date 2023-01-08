@@ -35,7 +35,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
               <Box>
                 <Text
                   textTransform='uppercase'
-                  fontFamily='DrukWideCy'
+                  fontFamily='secondary'
                   fontWeight='bold'
                   fontSize={['semiBig', 'huge', 'gigantic']}
                   lineHeight='default'

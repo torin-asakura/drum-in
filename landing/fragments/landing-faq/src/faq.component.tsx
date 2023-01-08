@@ -21,7 +21,7 @@ const FaqBlock = forwardRef(({ data }: any, ref: any) => (
         <Box position='relative' width='max-content'>
           <Text
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['regular', 'moderate', 'increased']}
             lineHeight='default'

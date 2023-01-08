@@ -13,7 +13,7 @@ const LeftColumn = () => (
       <Text
         wordBreak='break-word'
         textTransform='uppercase'
-        fontFamily='DrukWideCy'
+        fontFamily='secondary'
         fontWeight='bold'
         fontSize='big'
         lineHeight='default'
@@ -26,7 +26,7 @@ const LeftColumn = () => (
       <Text
         wordBreak='break-word'
         textTransform='uppercase'
-        fontFamily='DrukWideCy'
+        fontFamily='secondary'
         fontWeight='bold'
         fontSize='big'
         lineHeight='default'

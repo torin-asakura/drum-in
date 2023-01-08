@@ -83,7 +83,7 @@ const SlideLevel: FC<SlideLevelProps> = ({
               <Box>
                 <Text
                   textTransform='uppercase'
-                  fontFamily='DrukWideCy'
+                  fontFamily='secondary'
                   fontWeight='bold'
                   fontSize={['micro', 'medium', 'regular']}
                   lineHeight='extra'
@@ -97,7 +97,7 @@ const SlideLevel: FC<SlideLevelProps> = ({
                 <Text
                   textAlign='center'
                   textTransform='uppercase'
-                  fontFamily='DrukWideCy'
+                  fontFamily='secondary'
                   fontWeight='bold'
                   fontSize={['middling', 'large', 'small']}
                   lineHeight='default'

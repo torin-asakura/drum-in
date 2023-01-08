@@ -23,7 +23,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
         <Row justifyContent={['start', 'start', 'center']}>
           <Text
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['medium', 'moderate', 'big']}
             lineHeight='default'
@@ -37,7 +37,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
           <Text
             textAlign={['start', 'start', 'center']}
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['moderate', 'massive', 'giant']}
             lineHeight='default'

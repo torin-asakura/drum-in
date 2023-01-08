@@ -106,7 +106,7 @@ const Slide: FC<SlideProps> = ({
                 <Text
                   textAlign='center'
                   textTransform='uppercase'
-                  fontFamily='DrukWideCy'
+                  fontFamily='secondary'
                   fontWeight='bold'
                   fontSize={['middling', 'large', 'small']}
                   lineHeight='default'

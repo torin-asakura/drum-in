@@ -1,7 +1,7 @@
 const fonts = {
   primary: 'SF Pro Display',
-  DrukWideCy: 'Druk Wide Cy TT Bold',
-  inter: 'Inter',
+  secondary: 'Druk Wide Cy TT Bold',
+  tertiary: 'Inter',
 }
 
 export { fonts }

@@ -42,7 +42,7 @@ const SlideText: FC<SlideTextProps> = ({ text, activeIcons }) => {
           <Text
             textAlign='center'
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['micro', 'medium', 'regular']}
             lineHeight={['medium', 'medium', 'extra']}

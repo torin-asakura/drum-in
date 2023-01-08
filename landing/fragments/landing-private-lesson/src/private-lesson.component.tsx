@@ -23,7 +23,7 @@ const PrivateLessonBlock = forwardRef(({ data }: any, ref: any) => (
           <Text
             display='inline'
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['regular', 'moderate', 'big']}
             lineHeight='default'

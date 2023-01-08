@@ -79,7 +79,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
         <Box display={['flex', 'flex', 'none']}>
           <NextLink path='/'>
             <Text
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['medium', 'semiModerate', 'big']}
             >
@@ -91,7 +91,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
         <Box display={['flex', 'flex', 'none']}>
           <NextLink path='/'>
             <Text
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['medium', 'semiModerate', 'big']}
             >

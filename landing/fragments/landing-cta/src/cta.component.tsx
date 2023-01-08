@@ -24,7 +24,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
           <Box>
             <Text
               textTransform='uppercase'
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['moderate', 'godzilla', 'semiGigantic']}
               lineHeight='default'

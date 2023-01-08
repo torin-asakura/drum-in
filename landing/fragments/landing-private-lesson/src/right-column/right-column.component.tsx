@@ -91,7 +91,7 @@ const RightColumn = () => (
     </Column>
     <Box order={[1, 1, 0]}>
       <Text
-        fontFamily='DrukWideCy'
+        fontFamily='secondary'
         fontWeight='bold'
         fontSize={['semiBig', 'semiExtra', 'moderate']}
         lineHeight='default'

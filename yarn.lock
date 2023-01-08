@@ -973,7 +973,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css@npm:^11.10.0, @emotion/css@npm:^11.9.0":
+"@emotion/css@npm:^11.9.0":
   version: 11.10.5
   resolution: "@emotion/css@npm:11.10.5"
   dependencies:
@@ -4754,7 +4754,6 @@ __metadata:
   dependencies:
     "@atls/code-service": ^0.0.16
     "@atls/config-jest": ^0.0.5
-    "@emotion/css": ^11.10.0
     "@jest/core": ^28.1.2
     "@types/eslint": ^8
     "@types/jest": ^28.1.3

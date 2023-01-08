@@ -24,7 +24,7 @@ const Square: FC<SquareProps> = ({ firstLine, secondLine, rotate }) => (
       <Box>
         <Text
           textTransform='uppercase'
-          fontFamily='DrukWideCy'
+          fontFamily='secondary'
           fontWeight='bold'
           fontSize={['semiModerate', 'semiIncreased', 'big']}
           color='text.blackAmber'
@@ -35,7 +35,7 @@ const Square: FC<SquareProps> = ({ firstLine, secondLine, rotate }) => (
       <Box>
         <Text
           textTransform='uppercase'
-          fontFamily='DrukWideCy'
+          fontFamily='secondary'
           fontWeight='bold'
           fontSize={['semiTiny', 'tiny', 'micro']}
           color='text.blackAmber'

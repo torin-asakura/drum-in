@@ -21,7 +21,7 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
         <Box>
           <Text
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['semiModerate', 'semiIncreased', 'big']}
             color='text.blackAmber'
@@ -34,7 +34,7 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
         <Text
           textAlign='center'
           textTransform='uppercase'
-          fontFamily='DrukWideCy'
+          fontFamily='secondary'
           fontWeight='bold'
           fontSize={['semiTiny', 'tiny', 'micro']}
           color='text.blackAmber'

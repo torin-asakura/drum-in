@@ -8,7 +8,7 @@ import { LinkSocialProps } from './link-social.interfaces'
 
 const LinkSocial: FC<LinkSocialProps> = ({ text }) => (
   <NextLink path='/'>
-    <Text fontFamily='DrukWideCy' fontWeight='bold' fontSize={['medium', 'regular', 'regular']}>
+    <Text fontFamily='secondary' fontWeight='bold' fontSize={['medium', 'regular', 'regular']}>
       {text}
     </Text>
   </NextLink>

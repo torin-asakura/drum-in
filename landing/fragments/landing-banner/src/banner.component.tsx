@@ -31,7 +31,7 @@ const BannerBlock = () => {
           <Box order={2} display={['flex', 'flex', 'none']}>
             <Text
               textTransform='uppercase'
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['semiBig', 'semiHuge', 'semiHuge']}
               lineHeight='default'
@@ -43,7 +43,7 @@ const BannerBlock = () => {
           <Box order={3} display={['flex', 'flex', 'none']}>
             <Text
               textTransform='uppercase'
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['medium', 'semiModerate', 'semiModerate']}
               lineHeight='default'
