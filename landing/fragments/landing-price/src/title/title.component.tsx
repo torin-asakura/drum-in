@@ -10,7 +10,7 @@ const Title = () => (
     <Box display={['none', 'none', 'flex']}>
       <Text
         textTransform='uppercase'
-        fontFamily='DrukWideCy'
+        fontFamily='secondary'
         fontWeight='bold'
         fontSize='gigantic'
         lineHeight='default'
@@ -26,7 +26,7 @@ const Title = () => (
       <Box flexShrink={0}>
         <Text
           textTransform='uppercase'
-          fontFamily='DrukWideCy'
+          fontFamily='secondary'
           fontWeight='bold'
           fontSize={['semiBig', 'semiExtra', 'semiExtra']}
           lineHeight='default'
@@ -42,7 +42,7 @@ const Title = () => (
       <Box flexShrink={0}>
         <Text
           textTransform='uppercase'
-          fontFamily='DrukWideCy'
+          fontFamily='secondary'
           fontWeight='bold'
           fontSize={['semiRegular', 'semiModerate', 'semiModerate']}
           lineHeight='default'

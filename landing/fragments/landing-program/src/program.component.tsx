@@ -20,7 +20,7 @@ const ProgramBlock = () => (
           <Text
             textTransform='uppercase'
             textAlign={['left', 'left', 'center']}
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['regular', 'semiExtra', 'gigantic']}
             lineHeight='default'

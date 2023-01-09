@@ -34,17 +34,18 @@ const NecessaryKnowledgeBlock: FC<NecessaryKnowledgeProps> = ({
           </Text>
         </Box>
         <Layout flexBasis={16} flexShrink={0} />
-        <Box
-          {...colorHoverElem}
-          position='relative'
-          width={24}
-          height={24}
-          alignItems='center'
-          justifyContent='center'
-          borderRadius='max'
-          backgroundColor='background.smokyWhite'
-        >
-          <InvertedExclamationMarkIcon width={4} height={17} />
+        <Box position='relative' {...colorHoverElem}>
+          <Box
+            width={24}
+            height={24}
+            alignItems='center'
+            justifyContent='center'
+            borderRadius='max'
+            backgroundColor='background.smokyWhite'
+            style={{ cursor: 'pointer' }}
+          >
+            <InvertedExclamationMarkIcon width={4} height={17} />
+          </Box>
           <Box
             opacity={hoverElem ? 1 : 0}
             zIndex={hoverElem ? 10 : -1}

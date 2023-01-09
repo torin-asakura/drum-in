@@ -100,7 +100,7 @@ const Slide: FC<SlideProps> = ({
               <Box>
                 <Text
                   textTransform='uppercase'
-                  fontFamily='DrukWideCy'
+                  fontFamily='secondary'
                   fontWeight='bold'
                   fontSize={['medium', 'regular', 'regular']}
                   lineHeight='default'

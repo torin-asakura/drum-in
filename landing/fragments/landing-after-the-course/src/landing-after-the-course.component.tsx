@@ -24,7 +24,7 @@ const AfterTheCourseBlock = () => {
             <Box width={['100%', 440, 520]}>
               <Text
                 textTransform='uppercase'
-                fontFamily='DrukWideCy'
+                fontFamily='secondary'
                 fontWeight='bold'
                 fontSize={['regular', 'moderate', 'big']}
                 lineHeight='default'

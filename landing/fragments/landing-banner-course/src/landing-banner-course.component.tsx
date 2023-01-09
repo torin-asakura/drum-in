@@ -27,7 +27,7 @@ const BannerCourseBlock = () => {
                   <Text
                     textAlign={['left', 'left', 'right']}
                     textTransform='uppercase'
-                    fontFamily='DrukWideCy'
+                    fontFamily='secondary'
                     fontWeight='bold'
                     fontSize={['moderate', 'huge', 'biggest']}
                     lineHeight={['default', 'default', 'semiSmall']}

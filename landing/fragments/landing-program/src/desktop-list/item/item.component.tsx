@@ -59,7 +59,7 @@ const Item: FC<ItemProps> = ({
           <Box>
             <Text
               textTransform='uppercase'
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize='big'
               lineHeight='default'

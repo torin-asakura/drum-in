@@ -48,7 +48,7 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
           justifyContent='center'
           borderRadius='semiMedium'
           backgroundColor={getColor(isOpen, active, elemHover).backgroundIcon}
-          style={{ transition: '0.2s',  cursor: 'pointer', }}
+          style={{ transition: '0.2s', cursor: 'pointer' }}
         >
           <InvertedExclamationMarkIcon
             color={getColor(isOpen, active, elemHover).icon}
@@ -57,6 +57,8 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
           />
         </Box>
         <Box
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
           zIndex={elemHover ? 2 : -1}
           opacity={elemHover ? 1 : 0}
           position='absolute'

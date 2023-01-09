@@ -19,7 +19,7 @@ const CourseProcessBlock = () => (
         <Box width={['100%', 400, 800]}>
           <Text
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['regular', 'moderate', 'big']}
             lineHeight='default'

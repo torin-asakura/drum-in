@@ -28,7 +28,7 @@ const PriceBlock = () => {
             <Text
               textAlign={['left', 'left', 'center']}
               textTransform='uppercase'
-              fontFamily='DrukWideCy'
+              fontFamily='secondary'
               fontWeight='bold'
               fontSize={['regular', 'increased', 'big']}
               lineHeight='default'
@@ -64,7 +64,12 @@ const PriceBlock = () => {
                 </Button>
               </Box>
               <Layout flexBasis={[44, 70, 96]} />
-              <Box {...hoverElementProps} alignItems='center' flexShrink={0}>
+              <Box
+                {...hoverElementProps}
+                alignItems='center'
+                flexShrink={0}
+                style={{ cursor: 'pointer' }}
+              >
                 <Layout
                   display={['none', 'none', 'flex']}
                   flexBasis={hoverElement ? 20 : 0}
@@ -92,7 +97,7 @@ const PriceBlock = () => {
                 <Box flexShrink={0}>
                   <Text
                     textTransform='uppercase'
-                    fontFamily={['primary', 'primary', 'DrukWideCy']}
+                    fontFamily={['primary', 'primary', 'secondary']}
                     fontWeight={['semiBold', 'semiBold', 'bold']}
                     fontSize={['semiMedium', 'semiRegular', 'regular']}
                     lineHeight={['default', 'default', 'extra']}

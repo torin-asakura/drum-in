@@ -18,7 +18,7 @@ const SkillsBlock = () => (
         <Box display={['flex', 'flex', 'none']}>
           <Text
             textTransform='uppercase'
-            fontFamily='DrukWideCy'
+            fontFamily='secondary'
             fontWeight='bold'
             fontSize={['regular', 'moderate', 'moderate']}
             lineHeight='default'
@@ -59,7 +59,7 @@ const SkillsBlock = () => (
             <Row display={['none', 'none', 'flex']} justifyContent='center'>
               <Text
                 textTransform='uppercase'
-                fontFamily='DrukWideCy'
+                fontFamily='secondary'
                 fontWeight='bold'
                 fontSize='big'
                 lineHeight='default'
