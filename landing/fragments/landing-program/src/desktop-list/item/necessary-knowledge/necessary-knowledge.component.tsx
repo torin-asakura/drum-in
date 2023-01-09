@@ -34,8 +34,9 @@ const NecessaryKnowledgeBlock: FC<NecessaryKnowledgeProps> = ({
           </Text>
         </Box>
         <Layout flexBasis={16} flexShrink={0} />
-        <Box position='relative' {...colorHoverElem}>
+        <Box position='relative'>
           <Box
+            {...colorHoverElem}
             width={24}
             height={24}
             alignItems='center'
@@ -47,6 +48,7 @@ const NecessaryKnowledgeBlock: FC<NecessaryKnowledgeProps> = ({
             <InvertedExclamationMarkIcon width={4} height={17} />
           </Box>
           <Box
+            {...colorHoverElem}
             opacity={hoverElem ? 1 : 0}
             zIndex={hoverElem ? 10 : -1}
             width={335}

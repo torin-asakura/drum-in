@@ -69,7 +69,7 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
           border='mediumBoldBlackAmber'
           borderRadius='extra'
           backgroundColor='background.smokyWhite'
-          style={{ transition: '0.3s' }}
+          style={{ transition: '0.3s', transitionDelay: '2ms' }}
         >
           <Layout flexBasis={32} flexShrink={0} />
           <Column width='100%'>

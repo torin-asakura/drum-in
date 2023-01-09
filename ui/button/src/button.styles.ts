@@ -1,4 +1,3 @@
-import { createBaseStyles }    from '@atls-ui-parts/button'
 import { createShapeStyles }   from '@atls-ui-parts/button'
 import { createContentStyles } from '@atls-ui-parts/button'
 
@@ -6,6 +5,8 @@ import { styleFn }             from 'styled-system'
 import { prop }                from 'styled-tools'
 import { switchProp }          from 'styled-tools'
 import { ifProp }              from 'styled-tools'
+
+import { getBaseStyles }       from './styles'
 
 export const fillStyles: styleFn = ifProp(prop('fill', false), { width: '100%' })
 
@@ -107,7 +108,7 @@ const withoutPaddingSemiRegularHeightStyles = createShapeStyles({
   paddingRight: 0,
 })
 
-export const baseStyles = createBaseStyles()
+export const baseStyles = getBaseStyles()
 export const contentStyles = createContentStyles()
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
