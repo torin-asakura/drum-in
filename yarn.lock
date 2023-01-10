@@ -1744,6 +1744,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/feeling-of-time-page@workspace:0.0.1, @landing/feeling-of-time-page@workspace:landing/pages/feeling-of-time-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/feeling-of-time-page@workspace:landing/pages/feeling-of-time-page"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@landing/course-process-fragment": "workspace:0.0.1"
+    "@landing/cta-fragment": "workspace:0.0.1"
+    "@landing/faq": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/header-fragment": "workspace:0.0.1"
+    "@landing/hero-course-fragment": "workspace:0.0.1"
+    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/start-learning-fragment": "workspace:0.0.1"
+    "@landing/teacher-fragment": "workspace:0.0.1"
+    "@types/react": 18.0.21
+    "@ui/background": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+  peerDependencies:
+    next: ^12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/footer-fragment@workspace:0.0.1, @landing/footer-fragment@workspace:landing/fragments/landing-footer":
   version: 0.0.0-use.local
   resolution: "@landing/footer-fragment@workspace:landing/fragments/landing-footer"
@@ -2029,6 +2056,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.6.0
+    "@landing/feeling-of-time-page": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
     "@landing/opening-the-rhythm-page": "workspace:0.0.1"
     "@types/express": ^4.17.13
