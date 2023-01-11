@@ -1,1 +1,1 @@
-export * from './landing-after-the-course.component'
+export * from './after-the-course.component'
