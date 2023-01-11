@@ -13,7 +13,7 @@ import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
-import { useHover }            from '@ui/utils'
+import { useHover }         from '@ui/utils'
 
 import { Elements }         from './elements'
 import { NavigationProps }  from './navigation.interfaces'
@@ -66,7 +66,10 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
                       lineHeight='default'
                       color='smokyWhite'
                     >
-                      <FormattedMessage id='landing_section_courses.courses' defaultMessage='Курсы' />
+                      <FormattedMessage
+                        id='landing_section_courses.courses'
+                        defaultMessage='Курсы'
+                      />
                     </Text>
                   </Row>
                 </Button>

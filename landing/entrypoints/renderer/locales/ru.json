@@ -100,5 +100,12 @@
   "landing_price.thirty_nine_video_lessons": "• 39 видео-уроков",
   "landing_price.five_months": "• 5 месяцев",
   "landing_price.three_level": "• 3 уровня",
-  "landing_start_learning.start_learning": "начать обучение"
+  "landing_start_learning.start_learning": "начать обучение",
+  "landing_target_audience.this_course_is_for_you_if_you": "Этот курс для вас, если вы",
+  "landing_target_audience.first": "01",
+  "landing_target_audience.second": "02",
+  "landing_target_audience.third": "03",
+  "landing_target_audience.just_starting_your_musical_journey": "Только начинаете свой музыкальный путь",
+  "landing_target_audience.do_you_feel_a_lack": "Ощущаете непонимание музыкального времени",
+  "landing_target_audience.are_you_experiencing_difficulties": "Испытываете сложности при удержании темпа и снятии партий"
 }

@@ -1,1 +1,1 @@
-export * from './landing-banner-course.component'
+export * from './banner-course.component'
