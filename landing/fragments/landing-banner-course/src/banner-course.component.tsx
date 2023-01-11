@@ -1,18 +1,46 @@
-import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useIntl }            from 'react-intl'
+import React                           from 'react'
+import { useRouter }                   from 'next/router'
+import { useEffect }                   from 'react'
+import { useState }                    from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
+import { CoursePages as CCoursePages } from '@shared/data'
+import { RightDownArrowIcon }          from '@ui/icons'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Text }                        from '@ui/text'
+import { useMockedCoursePages }        from '@shared/data'
 
-import { Tape }               from './tape'
+import { BannerCourseProps }           from './banner-course.interfaces'
+import { Tape }                        from './tape'
 
 const BannerCourseBlock = () => {
-  const { formatMessage } = useIntl()
+  const router = useRouter()
+
+  const { coursePages: coursePagesData } = useMockedCoursePages()
+  const [coursePages, setCoursePages] = useState<CCoursePages[]>([])
+
+  useEffect(() => {
+    setCoursePages(coursePagesData)
+    // eslint-disable-next-line
+  }, [])
+
+  let texts: BannerCourseProps = {
+    titleBanner: '',
+    descBanner: '',
+    tapePhrase: '',
+  }
+
+  for (let i = 0; coursePages.length >= i; i += 1) {
+    if (coursePages[i] !== undefined && coursePages[i].pathPage === router.route) {
+      texts = {
+        titleBanner: coursePages[i].titleBanner,
+        descBanner: coursePages[i].descBanner,
+        tapePhrase: coursePages[i].tapePhrase,
+      }
+    }
+  }
 
   return (
     <Box flexDirection='column' width='100%'>
@@ -33,46 +61,25 @@ const BannerCourseBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    <FormattedMessage
-                      id='landing_banner_course.opening_the_rhythm'
-                      defaultMessage='Открытие ритма'
-                    />
+                    {texts.titleBanner}
                   </Text>
                 </Row>
                 <Layout flexBasis={[16, 28, 40]} />
                 <Box width={['100%', '100%', 815]}>
-                  <Text
-                    fontWeight='medium'
-                    fontSize={['semiMedium', 'semiRegular', 'large']}
-                    lineHeight='primary'
-                    color={[
-                      'text.transparentSmokyWhite',
-                      'text.transparentSmokyWhite',
-                      'text.smokyWhite',
-                    ]}
-                  >
-                    <FormattedMessage
-                      id='landing_banner_course.course_that_will_help_you_understand'
-                      defaultMessage='Курс, который поможет понимать,'
-                    />
-                  </Text>
-                </Box>
-                <Box width={['100%', '100%', 815]}>
-                  <Text
-                    fontWeight='medium'
-                    fontSize={['semiMedium', 'semiRegular', 'large']}
-                    lineHeight='primary'
-                    color={[
-                      'text.transparentSmokyWhite',
-                      'text.transparentSmokyWhite',
-                      'text.smokyWhite',
-                    ]}
-                  >
-                    <FormattedMessage
-                      id='landing_banner_course.perform_and_write_music'
-                      defaultMessage='исполнять и писать музыку'
-                    />
-                  </Text>
+                  <Box width={[282, 428, 460]}>
+                    <Text
+                      fontWeight='medium'
+                      fontSize={['semiMedium', 'semiRegular', 'large']}
+                      lineHeight='primary'
+                      color={[
+                        'text.transparentSmokyWhite',
+                        'text.transparentSmokyWhite',
+                        'text.smokyWhite',
+                      ]}
+                    >
+                      {texts.descBanner}
+                    </Text>
+                  </Box>
                 </Box>
               </Column>
               <Box display={['none', 'none', 'flex']} position='absolute' left={150} top={82}>
@@ -93,12 +100,7 @@ const BannerCourseBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape
-        level={formatMessage({
-          id: 'landing_banner_course.basis_course',
-          defaultMessage: '#ОСНОВНОЙ КУРС',
-        })}
-      />
+      <Tape level={texts.tapePhrase} />
     </Box>
   )
 }
