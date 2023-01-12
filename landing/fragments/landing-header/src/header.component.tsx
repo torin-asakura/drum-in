@@ -106,7 +106,7 @@ const HeaderBlock = () => {
               </Box>
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
               <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
-                <NextLink path='/'>
+                <NextLink path='/contact'>
                   <Text
                     color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
                     style={{ transition: '0.3s' }}

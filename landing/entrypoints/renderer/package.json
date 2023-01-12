@@ -20,6 +20,7 @@
     "react-intl": "^6.1.2"
   },
   "devDependencies": {
+    "@landing/contact-page": "workspace:0.0.1",
     "@landing/feeling-of-time-page": "workspace:0.0.1",
     "@landing/index-page": "workspace:0.0.1",
     "@landing/opening-the-rhythm-page": "workspace:0.0.1",
