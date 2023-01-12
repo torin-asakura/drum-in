@@ -1,11 +1,13 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { Box }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Box }        from '@ui/layout'
+import { Space }      from '@ui/text'
+import { Text }       from '@ui/text'
 
-const Title = () => (
+import { TitleProps } from './title.interfaces'
+
+const Title: FC<TitleProps> = ({ costPerMonth, currency }) => (
   <>
     <Box display={['none', 'none', 'flex']}>
       <Text
@@ -16,10 +18,9 @@ const Title = () => (
         lineHeight='default'
         color='text.blackAmber'
       >
-        <FormattedMessage
-          id='landing_price.eight_thousand_seven_hundred_rubles'
-          defaultMessage='8 700 ₽/мес'
-        />
+        {costPerMonth}
+        <Space />
+        {currency}
       </Text>
     </Box>
     <Box display={['flex', 'flex', 'none']}>
@@ -32,10 +33,7 @@ const Title = () => (
           lineHeight='default'
           color='text.blackAmber'
         >
-          <FormattedMessage
-            id='landing_price.eight_thousand_seven_hundred'
-            defaultMessage='8 700'
-          />
+          {costPerMonth}
           <Space />
         </Text>
       </Box>
@@ -48,7 +46,7 @@ const Title = () => (
           lineHeight='default'
           color='text.blackAmber'
         >
-          <FormattedMessage id='landing_price.rubles_per_month' defaultMessage='₽/мес' />
+          {currency}
         </Text>
       </Box>
     </Box>

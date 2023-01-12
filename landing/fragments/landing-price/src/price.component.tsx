@@ -1,22 +1,73 @@
-import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
+import React                           from 'react'
+import { FormattedMessage }            from 'react-intl'
+import { useRouter }                   from 'next/router'
+import { useEffect }                   from 'react'
+import { useState }                    from 'react'
 
-import { Button }             from '@ui/button'
-import { ArrowRightTailIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Space }              from '@ui/text'
-import { Text }               from '@ui/text'
-import { useHover }           from '@ui/utils'
-
-import { Figures }     from './figures'
-import { Specifications }     from './specifications'
-import { Title }              from './title'
+import { PriceCourse as PPriceCourse } from '@shared/data'
+import { Button }                      from '@ui/button'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Space }                       from '@ui/text'
+import { Text }                        from '@ui/text'
+import { useMockedPriceCourse }        from '@shared/data'
+import { Figures }              from './figures'
+import { FullPrice }                   from './full-price'
+import { PriceProps }                  from './price.interfaces'
+import { Specifications }              from './specifications'
+import { Title }                       from './title'
+import { getUi }                       from './helpers'
 
 const PriceBlock = () => {
-  const [hoverElement, hoverElementProps] = useHover()
+  const router = useRouter()
+
+  const { priceCourse: priceCourseData } = useMockedPriceCourse()
+  const [priceCourse, setPriceCourse] = useState<PPriceCourse[]>([])
+
+  useEffect(() => {
+    setPriceCourse(priceCourseData)
+    // eslint-disable-next-line
+  }, [])
+
+  let texts: PriceProps = {
+    costPerMonth: '',
+    currency: '',
+    fullCost: '',
+    economy: '',
+    quantityVideoLessons: '',
+    firstLineCircle: '',
+    secondLineCircle: '',
+    quantityMonths: '',
+    backgroundRectangle: '',
+    squareRotate: 0,
+    circleRotate: 0,
+    rectangleRotate: 0,
+    rectanglePositionX: 0,
+    rectanglePositionY: 0,
+  }
+
+  for (let i = 0; priceCourse.length >= i; i += 1) {
+    if (priceCourse[i] !== undefined && priceCourse[i].pathPage === router.route) {
+      texts = {
+        costPerMonth: priceCourse[i].costPerMonth,
+        currency: priceCourse[i].currency,
+        fullCost: priceCourse[i].fullCost,
+        economy: priceCourse[i].economy,
+        quantityVideoLessons: priceCourse[i].quantityVideoLessons,
+        firstLineCircle: priceCourse[i].firstLineCircle,
+        secondLineCircle: priceCourse[i].secondLineCircle,
+        quantityMonths: priceCourse[i].quantityMonths,
+        backgroundRectangle: getUi(priceCourse[i].pathPage).backgroundRectangle,
+        squareRotate: getUi(priceCourse[i].pathPage).squareRotate,
+        circleRotate: getUi(priceCourse[i].pathPage).circleRotate,
+        rectangleRotate: getUi(priceCourse[i].pathPage).rectangleRotate,
+        rectanglePositionX: getUi(priceCourse[i].pathPage).rectanglePositionX,
+        rectanglePositionY: getUi(priceCourse[i].pathPage).rectanglePositionY,
+      }
+    }
+  }
 
   return (
     <Row justifyContent='center'>
@@ -50,9 +101,14 @@ const PriceBlock = () => {
             <Layout flexBasis={24} flexShrink={0} />
             <Column alignItems={['start', 'start', 'center']} width='100%'>
               <Layout flexBasis={[40, 80, 120]} />
-              <Title />
+              <Title currency={texts.currency} costPerMonth={texts.costPerMonth} />
               <Layout flexBasis={[40, 50, 32]} />
-              <Specifications />
+              <Specifications
+                quantityMonths={texts.quantityMonths}
+                quantityVideoLessons={texts.quantityVideoLessons}
+                firstLineCircle={texts.firstLineCircle}
+                secondLineCircle={texts.secondLineCircle}
+              />
               <Box display={['none', 'none', 'flex']} width={514}>
                 <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
                   <Text fontWeight='semiBold' fontSize='large' textTransform='uppercase'>
@@ -64,52 +120,7 @@ const PriceBlock = () => {
                 </Button>
               </Box>
               <Layout flexBasis={[44, 70, 96]} />
-              <Box
-                {...hoverElementProps}
-                alignItems='center'
-                flexShrink={0}
-                style={{ cursor: 'pointer' }}
-              >
-                <Layout
-                  display={['none', 'none', 'flex']}
-                  flexBasis={hoverElement ? 20 : 0}
-                  flexShrink={0}
-                  style={{ transition: '0.3s' }}
-                />
-                <Box width={[56, 104, 164]} height={[14, 26, 40]} flexShrink={0}>
-                  <ArrowRightTailIcon
-                    width='100%'
-                    height='100%'
-                    color={hoverElement ? 'rgb(156, 101, 242)' : ''}
-                  />
-                </Box>
-                <Layout
-                  flexBasis={[16, 32, hoverElement ? 30 : 50]}
-                  flexShrink={0}
-                  style={{ transition: '0.3s' }}
-                />
-                <Layout
-                  display={['none', 'none', 'flex']}
-                  flexBasis={hoverElement ? 0 : 20}
-                  flexShrink={0}
-                  style={{ transition: '0.3s' }}
-                />
-                <Box flexShrink={0}>
-                  <Text
-                    textTransform='uppercase'
-                    fontFamily={['primary', 'primary', 'secondary']}
-                    fontWeight={['semiBold', 'semiBold', 'bold']}
-                    fontSize={['semiMedium', 'semiRegular', 'regular']}
-                    lineHeight={['default', 'default', 'extra']}
-                    color={hoverElement ? 'text.purple' : 'text.blackAmber'}
-                  >
-                    <FormattedMessage
-                      id='landing_price.the_entire_course_for'
-                      defaultMessage='весь курс за  117 400 ₽'
-                    />
-                  </Text>
-                </Box>
-              </Box>
+              <FullPrice fullCost={texts.fullCost} />
               <Layout flexBasis={[16, 18, 20]} />
               <Box>
                 <Text
@@ -124,29 +135,34 @@ const PriceBlock = () => {
                     defaultMessage='*при разовой оплате курса вы экономите'
                   />
                   <Space />
-                  <Text color='text.green'>
-                    <FormattedMessage
-                      id='landing_price.thirteen_thousand_one_hundred"'
-                      defaultMessage='13 100 ₽  '
-                    />
-                  </Text>
+                  <Text color='text.green'>{texts.economy}</Text>
                 </Text>
               </Box>
               <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
               <Box display={['flex', 'flex', 'none']} width='100%'>
                 <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
                   <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-                    <FormattedMessage
-                      id='landing_price.eight_thousand_seven_hundred_rubles'
-                      defaultMessage='8 700 ₽/мес'
-                    />
+                    {texts.costPerMonth}
+                    <Space />
+                    {texts.currency}
                   </Text>
                 </Button>
               </Box>
               <Layout flexBasis={[23, 48, 74]} />
             </Column>
             <Layout flexBasis={24} flexShrink={0} />
-            <Figures />
+            <Figures
+              quantityMonths={texts.quantityMonths}
+              quantityVideoLessons={texts.quantityVideoLessons}
+              firstLineCircle={texts.firstLineCircle}
+              secondLineCircle={texts.secondLineCircle}
+              rectangleRotate={texts.rectangleRotate}
+              circleRotate={texts.circleRotate}
+              squareRotate={texts.squareRotate}
+              rectanglePositionX={texts.rectanglePositionX}
+              rectanglePositionY={texts.rectanglePositionY}
+              backgroundRectangle={texts.backgroundRectangle}
+            />
           </Box>
           <Layout flexBasis={[24, 32, 120]} />
         </Column>
