@@ -1,5 +1,5 @@
 export interface Faq {
   question: string
   answer: string
-  positionVertical: 'top' | 'bottom'
+  positionVertical: 'top-start' | 'bottom-start'
 }
