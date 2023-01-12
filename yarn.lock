@@ -1787,6 +1787,7 @@ __metadata:
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    next: 12.1.0
     react-intl: ^6.1.2
   peerDependencies:
     "@emotion/react": "*"

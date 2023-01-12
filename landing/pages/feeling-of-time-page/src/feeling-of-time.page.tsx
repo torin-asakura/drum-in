@@ -55,7 +55,7 @@ export const FeelingOfTimePage = () => {
           <CourseProcessBlock />
           <Background
             width='100%'
-            gradient='purpleBlueCirclesImage'
+            gradient='blueTurquoiseCirclesImage'
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
