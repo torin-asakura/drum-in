@@ -14,8 +14,11 @@ const backgrounds = {
   purpleBlueSmallImageGradient: 'url("/img/mobile-bg-hero-main-page.png")',
   blueTurquoiseSmallImageGradient: 'url("/img/mobile-bg-hero-feeling-of-time-page.png")',
   purpleBlueCirclesImage: 'url("/img/bg-middle-main-page.png")',
+  blueTurquoiseCirclesImage: 'url("/img/bg-middle-feeling-of-time-page.png")',
   purpleBlueSemicircleImage: 'url("/img/bg-desktop-footer.png")',
   purpleBlueTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer.png")',
+  blueTurquoiseSemicircleImage: 'url("/img/bg-footer-feeling-of-time-page.png.png")',
+  blueTurquoiseTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer-feeling-of-time-page.png")',
   verticalTransparentToBlackGradient:
     'linear-gradient(360deg, #0F0C0C 0%, rgba(15, 12, 12, 0) 100%)',
 }
