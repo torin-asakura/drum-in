@@ -1,54 +1,52 @@
-import React         from 'react'
-import { useIntl }   from 'react-intl'
+import React            from 'react'
+import { FC }           from 'react'
+import { useIntl }      from 'react-intl'
 
-import { Circle }    from '@ui/figures'
-import { Rectangle } from '@ui/figures'
-import { Square }    from '@ui/figures'
-import { Box }       from '@ui/layout'
+import { Circle }       from '@ui/figures'
+import { Rectangle }    from '@ui/figures'
+import { Square }       from '@ui/figures'
+import { Box }          from '@ui/layout'
 
-const FiguresDesktop = () => {
+import { FiguresProps } from './figures.interfaces'
+
+const FiguresDesktop: FC<FiguresProps> = ({
+  quantityVideoLessons,
+  quantityMonths,
+  firstLineCircle,
+  secondLineCircle,
+  squareRotate,
+  circleRotate,
+  backgroundRectangle,
+  rectangleRotate,
+  rectanglePositionY,
+  rectanglePositionX,
+}) => {
   const { formatMessage } = useIntl()
 
   return (
     <Box display={['none', 'none', 'flex']}>
       <Box position='absolute' left={20} bottom={20}>
         <Square
-          firstLine={formatMessage({
-            id: 'landing_price.thirty_nine',
-            defaultMessage: '39',
-          })}
+          firstLine={quantityVideoLessons}
           secondLine={formatMessage({
             id: 'landing_price.video_lessons',
             defaultMessage: 'видео-уроков',
           })}
-          rotate={20}
+          rotate={squareRotate}
         />
       </Box>
       <Box position='absolute' left={205} bottom={1}>
-        <Circle
-          firstLine={formatMessage({
-            id: 'landing_price.three',
-            defaultMessage: '3',
-          })}
-          secondLine={formatMessage({
-            id: 'landing_price.level',
-            defaultMessage: '"уровня',
-          })}
-          rotate={-20}
-        />
+        <Circle firstLine={firstLineCircle} secondLine={secondLineCircle} rotate={circleRotate} />
       </Box>
-      <Box position='absolute' right={0} bottom={79}>
+      <Box position='absolute' right={rectanglePositionX} bottom={rectanglePositionY}>
         <Rectangle
-          color='transparentPurpleGradient'
-          firstLine={formatMessage({
-            id: 'landing_price.fifteen',
-            defaultMessage: '15',
-          })}
+          color={backgroundRectangle}
+          firstLine={quantityMonths}
           secondLine={formatMessage({
             id: 'landing_price.months',
             defaultMessage: 'месяцев',
           })}
-          rotate={-30}
+          rotate={rectangleRotate}
         />
       </Box>
     </Box>

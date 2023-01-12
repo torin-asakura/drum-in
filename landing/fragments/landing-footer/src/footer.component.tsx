@@ -1,11 +1,11 @@
 import React             from 'react'
+import { useRouter }     from 'next/router'
 import { forwardRef }    from 'react'
-import { useRouter }  from 'next/router'
 
 import { Background }    from '@ui/background'
 
 import { ContentFooter } from './content-footer'
-import { getBg } from "./helpers";
+import { getBg }         from './helpers'
 
 const FooterBlock = forwardRef(({ data }: any, ref: any) => {
   const router = useRouter()
