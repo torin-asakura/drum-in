@@ -6,8 +6,7 @@ import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Space }               from '@ui/text'
-
-import { Text }         from '@ui/text'
+import { Text }                from '@ui/text'
 
 import { SpecificationsProps } from './specifications.interfaces'
 
