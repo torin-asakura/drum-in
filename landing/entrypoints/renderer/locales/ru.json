@@ -100,5 +100,13 @@
   "landing_contact.nickname_telegram": "@marinaaa",
   "landing_contact.vk": "Вконтакте",
   "landing_contact.vk_com": "vk.com/",
-  "landing_contact.nickname_vk": "drumschool"
+  "landing_contact.nickname_vk": "drumschool",
+  "landing_modal_forms.free_consultation_from_a_teacher": "Бесплатная консультация от преподавателя",
+  "landing_modal_forms.fill_out_the_form_and_we_will_contact_you": "Заполните форму и мы свяжемся с вами в ближайшее время",
+  "landing_modal_forms.submit_your_application": "оставить заявку",
+  "landing_modal_forms.give_my_consent_to_the_processing": "Даю согласие на обработку моих персональных данных",
+  "landing_modal_forms.enter_a_name": "Введите имя",
+  "landing_modal_forms.plus_seven": "+7",
+  "landing_modal_forms.we_will_contact_you_as_soon_as_possible": "Мы свяжемся с вами в ближайшее время.",
+  "landing_modal_forms.nickname_telegram": "@telegram"
 }

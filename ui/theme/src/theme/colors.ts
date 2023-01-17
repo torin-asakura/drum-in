@@ -239,6 +239,38 @@ const colors = {
   drawer: {
     backdrop: 'rgba(72, 72, 72, 0.6)',
   },
+  input: {
+    background: 'rgb(242,242,242)',
+    font: 'rgb(128, 127, 127)',
+    border: 'transparent',
+    hover: 'rgb(242,242,242)',
+    focus: 'rgb(242,242,242)',
+    press: 'rgb(242,242,242)',
+    error: 'rgba(226, 29, 29, 1)',
+  },
+  checkbox: {
+    default: {
+      background: 'transparent',
+      border: 'rgba(242, 242, 242, 0.5)',
+    },
+    hover: {
+      background: 'transparent',
+      border: 'rgb(242, 242, 242)',
+    },
+    disabled: {
+      background: 'transparent',
+      border: 'rgba(15, 12, 12, 0.12)',
+    },
+    checked: {
+      background: 'rgb(242, 242, 242)',
+      border: 'rgb(242, 242, 242)',
+      checkmark: 'rgb(15,12,12)',
+    },
+    checkedHover: {
+      background: 'rgb(242, 242, 242)',
+      border: 'rgb(242, 242, 242)',
+    },
+  },
 }
 
 export { colors }

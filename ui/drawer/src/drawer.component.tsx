@@ -30,7 +30,7 @@ const Drawer: FC<DrawerProps> = ({ active, onClose, children }) => {
   return (
     <Renderer active={active}>
       <motion.div
-        style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 900 }}
+        style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 800 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -39,7 +39,7 @@ const Drawer: FC<DrawerProps> = ({ active, onClose, children }) => {
         <Backdrop onClick={onClose} />
       </motion.div>
       <motion.div
-        style={{ position: 'fixed', left: 0, top: '-100%', width: '100%', zIndex: 9999 }}
+        style={{ position: 'fixed', left: 0, top: '-100%', width: '100%', zIndex: 850 }}
         animate={controls}
         exit={{ top: '-100%' }}
       >

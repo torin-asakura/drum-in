@@ -1,6 +1,7 @@
 const radii = {
   zero: 0,
   atomic: 2,
+  semiMicro: 4,
   micro: 6,
   semiMedium: 8,
   medium: 12,

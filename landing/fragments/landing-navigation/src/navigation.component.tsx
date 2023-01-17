@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
 
 import { Button }           from '@ui/button'
 import { Drawer }           from '@ui/drawer'
@@ -12,6 +13,8 @@ import { Row }              from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Logo }             from '@ui/logo'
+import { ModalForms }       from '@ui/modal-forms'
+import { ModalMobileForms } from '@ui/modal-forms'
 import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
@@ -20,6 +23,8 @@ import { NavigationProps }  from './navigation.interfaces'
 
 const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
   const [hoverLink, hoverLinkProps] = useHover()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   return (
     <Drawer active={visible} onClose={() => setVisible(false)}>
@@ -85,11 +90,43 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
                   </Text>
                 </NextLink>
               </Box>
-              <Row justifyContent='end'>
-                <NextLink path='/'>
-                  <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
-                </NextLink>
+              <Row justifyContent='end' display={['none', 'flex', 'flex']}>
+                <Button
+                  size='withoutPaddingMicroHeight'
+                  variant='transparentBackground'
+                  onClick={() => setVisibleModal(true)}
+                >
+                  <Text
+                    textTransform='uppercase'
+                    fontWeight='semiBold'
+                    fontSize={['semiMedium', 'medium', 'medium']}
+                    lineHeight='default'
+                  >
+                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                  </Text>
+                </Button>
               </Row>
+              <Row justifyContent='end' display={['flex', 'none', 'none']}>
+                <Button
+                  size='withoutPaddingMicroHeight'
+                  variant='transparentBackground'
+                  onClick={() => setVisibleModalMobile(true)}
+                >
+                  <Text
+                    textTransform='uppercase'
+                    fontWeight='semiBold'
+                    fontSize={['semiMedium', 'medium', 'medium']}
+                    lineHeight='default'
+                  >
+                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                  </Text>
+                </Button>
+              </Row>
+              <ModalForms active={visibleModal} onClose={() => setVisibleModal(false)} />
+              <ModalMobileForms
+                active={visibleModalMobile}
+                onClose={() => setVisibleModalMobile(false)}
+              />
             </Row>
             <Layout flexBasis={[60, 70, 125]} flexGrow={2} />
             <Elements stateHover={stateHover} />

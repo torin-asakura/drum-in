@@ -27,6 +27,7 @@ export type ButtonSize =
   | 'littlePaddingSemiRegularHeight'
   | 'withoutPaddingSemiGiantHeight'
   | 'withoutPaddingSemiRegularHeight'
+  | 'withoutPaddingSemiBigHeight'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
