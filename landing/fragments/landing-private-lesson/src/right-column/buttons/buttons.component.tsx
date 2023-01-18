@@ -39,8 +39,11 @@ const Buttons = () => {
           </Text>
         </Button>
       </Row>
-      <ModalForms active={visibleModal} onClose={() => setVisibleModal(false)} />
-      <ModalMobileForms active={visibleModalMobile} onClose={() => setVisibleModalMobile(false)} />
+      <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalMobileForms
+        activeRender={visibleModalMobile}
+        onClose={() => setVisibleModalMobile(false)}
+      />
     </>
   )
 }

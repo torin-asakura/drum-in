@@ -129,9 +129,9 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
             </Text>
           </Button>
         </Box>
-        <ModalForms active={visibleModal} onClose={() => setVisibleModal(false)} />
+        <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
         <ModalMobileForms
-          active={visibleModalMobile}
+          activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />
       </Column>

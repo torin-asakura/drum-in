@@ -10,6 +10,8 @@ import { Box }                         from '@ui/layout'
 import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Row }                         from '@ui/layout'
+import { ModalForms }                  from '@ui/modal-forms'
+import { ModalMobileForms }            from '@ui/modal-forms'
 import { Space }                       from '@ui/text'
 import { Text }                        from '@ui/text'
 import { useMockedPriceCourse }        from '@shared/data'
@@ -23,6 +25,8 @@ import { getUi }                       from './helpers'
 
 const PriceBlock = () => {
   const router = useRouter()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const { priceCourse: priceCourseData } = useMockedPriceCourse()
   const [priceCourse, setPriceCourse] = useState<PPriceCourse[]>([])
@@ -111,7 +115,12 @@ const PriceBlock = () => {
                 secondLineCircle={texts.secondLineCircle}
               />
               <Box display={['none', 'none', 'flex']} width={514}>
-                <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
+                <Button
+                  size='withoutPaddingBigHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModal(true)}
+                >
                   <Text fontWeight='semiBold' fontSize='large' textTransform='uppercase'>
                     <FormattedMessage
                       id='landing_price.arrange_an_installment_plan'
@@ -142,13 +151,28 @@ const PriceBlock = () => {
               <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
               <Box display={['flex', 'flex', 'none']} width='100%'>
                 <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
-                  <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
+                  <Text
+                    fontWeight='semiBold'
+                    fontSize='micro'
+                    textTransform='uppercase'
+                    onClick={() => setVisibleModalMobile(true)}
+                  >
                     {texts.costPerMonth}
                     <Space />
                     {texts.currency}
                   </Text>
                 </Button>
               </Box>
+              <ModalForms
+                activeRender={visibleModal}
+                onClose={() => setVisibleModal(false)}
+                display='payment'
+              />
+              <ModalMobileForms
+                activeRender={visibleModalMobile}
+                onClose={() => setVisibleModalMobile(false)}
+                display='payment'
+              />
               <Layout flexBasis={[23, 48, 74]} />
             </Column>
             <Layout flexBasis={24} flexShrink={0} />

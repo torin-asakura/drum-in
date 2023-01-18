@@ -122,9 +122,9 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
                   </Text>
                 </Button>
               </Row>
-              <ModalForms active={visibleModal} onClose={() => setVisibleModal(false)} />
+              <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
               <ModalMobileForms
-                active={visibleModalMobile}
+                activeRender={visibleModalMobile}
                 onClose={() => setVisibleModalMobile(false)}
               />
             </Row>

@@ -18,12 +18,12 @@ import { ModalFormsProps }  from './modal-forms.interfaces'
 import { Renderer }         from './renderer'
 
 const ModalMobileForms: FC<ModalFormsProps> = ({
-  active,
+  activeRender,
   onClose,
   display = 'consultation',
   scroll = true,
 }) => (
-  <Renderer active={active}>
+  <Renderer active={activeRender}>
     <motion.div
       style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 900 }}
       initial={{ opacity: 0 }}

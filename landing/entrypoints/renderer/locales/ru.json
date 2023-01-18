@@ -108,5 +108,12 @@
   "landing_modal_forms.enter_a_name": "Введите имя",
   "landing_modal_forms.plus_seven": "+7",
   "landing_modal_forms.we_will_contact_you_as_soon_as_possible": "Мы свяжемся с вами в ближайшее время.",
-  "landing_modal_forms.nickname_telegram": "@telegram"
+  "landing_modal_forms.nickname_telegram": "@telegram",
+  "landing_modal_forms.buy_a_package_of_courses": "Купить пакет курсов “Открытие ритма”",
+  "landing_modal_forms.pay": "оплатить",
+  "landing_modal_forms.accept": "Принимаю",
+  "landing_modal_forms.offer_agreement": "договор оферты",
+  "landing_modal_forms.and_i_give_my_consent": "и даю согласие на обработку моих персональных данных",
+  "landing_modal_forms.installment_plan": "Рассрочка",
+  "landing_modal_forms.one_time_payment": "Разовый платёж"
 }

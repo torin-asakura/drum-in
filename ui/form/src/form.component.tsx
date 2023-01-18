@@ -7,17 +7,20 @@ import { useIntl }               from 'react-intl'
 import { Button }                from '@ui/button'
 import { Checkbox }              from '@ui/checkbox'
 import { CheckboxMobile }        from '@ui/checkbox'
+import { Condition }             from '@ui/condition'
 import { ArrowLeftDownTailIcon } from '@ui/icons'
 import { Input }                 from '@ui/input'
 import { Box }                   from '@ui/layout'
 import { Column }                from '@ui/layout'
 import { Row }                   from '@ui/layout'
 import { Layout }                from '@ui/layout'
+import { NextLink }              from '@ui/link'
+import { Space }                 from '@ui/text'
 import { Text }                  from '@ui/text'
 
 import { FormProps }             from './form.interfaces'
 
-const Form: FC<FormProps> = ({ arrow = false }) => {
+const Form: FC<FormProps> = ({ arrow = false, form = 'consultation' }) => {
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
@@ -108,30 +111,59 @@ const Form: FC<FormProps> = ({ arrow = false }) => {
       <Box display={['none', 'flex', 'flex']}>
         <Button size='withoutPaddingSemiBigHeight' variant='purpleBackground' fill>
           <Text fontWeight='semiBold' fontSize='medium' textTransform='uppercase'>
-            <FormattedMessage
-              id='landing_modal_forms.submit_your_application'
-              defaultMessage='оставить заявку'
-            />
+            <Condition match={form === 'consultation'}>
+              <FormattedMessage
+                id='landing_modal_forms.submit_your_application'
+                defaultMessage='оставить заявку'
+              />
+            </Condition>
+            <Condition match={form === 'payment'}>
+              <FormattedMessage id='landing_modal_forms.pay' defaultMessage='оплатить' />
+            </Condition>
           </Text>
         </Button>
       </Box>
       <Box display={['flex', 'none', 'none']}>
         <Button size='withoutPaddingSemiRegularHeight' variant='purpleBackground' fill>
           <Text fontWeight='semiBold' fontSize='semiMedium' textTransform='uppercase'>
-            <FormattedMessage
-              id='landing_modal_forms.submit_your_application'
-              defaultMessage='оставить заявку'
-            />
+            <Condition match={form === 'consultation'}>
+              <FormattedMessage
+                id='landing_modal_forms.submit_your_application'
+                defaultMessage='оставить заявку'
+              />
+            </Condition>
+            <Condition match={form === 'payment'}>
+              <FormattedMessage id='landing_modal_forms.pay' defaultMessage='оплатить' />
+            </Condition>
           </Text>
         </Button>
       </Box>
       <Layout flexBasis={[16, 20, 20]} flexShrink={0} />
       <Row display={['none', 'flex', 'flex']}>
         <Checkbox checked={privacyPolicy} onCheck={setPrivacyPolicy}>
-          <FormattedMessage
-            id='landing_modal_forms.give_my_consent_to_the_processing'
-            defaultMessage='Даю согласие на обработку моих персональных данных'
-          />
+          <Condition match={form === 'consultation'}>
+            <FormattedMessage
+              id='landing_modal_forms.give_my_consent_to_the_processing'
+              defaultMessage='Даю согласие на обработку моих персональных данных'
+            />
+          </Condition>
+          <Condition match={form === 'payment'}>
+            <FormattedMessage id='landing_modal_forms.accept' defaultMessage='Принимаю' />
+            <Space />
+            <NextLink path='/'>
+              <Text textTransform='lowercase'>
+                <FormattedMessage
+                  id='landing_modal_forms.offer_agreement'
+                  defaultMessage='договор оферты'
+                />
+              </Text>
+            </NextLink>
+            <Space />
+            <FormattedMessage
+              id='landing_modal_forms.and_i_give_my_consent'
+              defaultMessage='и даю согласие на обработку моих персональных данных'
+            />
+          </Condition>
         </Checkbox>
       </Row>
       <Row display={['flex', 'none', 'none']}>

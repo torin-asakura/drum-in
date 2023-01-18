@@ -2102,6 +2102,7 @@ __metadata:
     "@ui/figures": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/modal-forms": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     next: 12.1.0
@@ -2109,6 +2110,7 @@ __metadata:
     styled-tools: ^1.7.2
   peerDependencies:
     react: "*"
+    react-dom: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -3325,9 +3327,11 @@ __metadata:
     "@types/styled-system": ^5
     "@ui/button": "workspace:0.0.1"
     "@ui/checkbox": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/input": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3494,6 +3498,7 @@ __metadata:
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: 7.6.2
@@ -3556,6 +3561,22 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/switch@workspace:0.0.1, @ui/switch@workspace:ui/switch":
+  version: 0.0.0-use.local
+  resolution: "@ui/switch@workspace:ui/switch"
+  dependencies:
+    "@ui/button": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
