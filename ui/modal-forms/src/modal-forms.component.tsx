@@ -30,6 +30,7 @@ const ModalForms: FC<ModalFormsProps> = ({
   scroll = true,
 }) => {
   const [roleVar, setRole] = useState<Role>(['Рассрочка'])
+  console.log(roleVar)
   const { formatMessage } = useIntl()
   const options = [
     {
@@ -37,14 +38,14 @@ const ModalForms: FC<ModalFormsProps> = ({
         id: 'landing_modal_forms.installment_plan',
         defaultMessage: 'Рассрочка',
       }),
-      mutuallyExclusive: false,
+      mutuallyExclusive: true,
     },
     {
       value: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
         defaultMessage: 'Разовый платёж',
       }),
-      mutuallyExclusive: false,
+      mutuallyExclusive: true,
     },
   ]
   const Content = () => {
