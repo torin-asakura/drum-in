@@ -2,6 +2,7 @@ import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { motion }           from 'framer-motion'
+import { useState }         from 'react'
 import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
@@ -11,6 +12,7 @@ import { CrossMenuIcon }    from '@ui/icons'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
+import { Row }         from '@ui/layout'
 import { Switch }           from '@ui/switch'
 import { Option }           from '@ui/switch'
 import { Text }             from '@ui/text'
@@ -27,13 +29,15 @@ const ModalForms: FC<ModalFormsProps> = ({
   display = 'consultation',
   scroll = true,
 }) => {
-  const roleVar = makeVar<Role>(['All'])
-  const role = useReactiveVar<Role>(roleVar)
+  const [roleVar, setRole] = useState<Role>(['Рассрочка'])
   const { formatMessage } = useIntl()
   const options = [
     {
-      value: formatMessage({ id: 'landing_modal_forms.installment_plan', defaultMessage: 'Рассрочка' }),
-      mutuallyExclusive: true,
+      value: formatMessage({
+        id: 'landing_modal_forms.installment_plan',
+        defaultMessage: 'Рассрочка',
+      }),
+      mutuallyExclusive: false,
     },
     {
       value: formatMessage({
@@ -43,6 +47,15 @@ const ModalForms: FC<ModalFormsProps> = ({
       mutuallyExclusive: false,
     },
   ]
+  const Content = () => {
+    if (roleVar.includes('Разовый платёж')) {
+      return <Box width={40} height={40} backgroundColor='green' />
+    } else if (roleVar.includes('Рассрочка')) {
+      return <Box width={40} height={40} backgroundColor='red' />
+    } else {
+      return null
+    }
+  }
 
   return (
     <Renderer active={activeRender}>
@@ -148,21 +161,37 @@ const ModalForms: FC<ModalFormsProps> = ({
                 </Box>
                 <Layout flexBasis={21} flexShrink={0} />
 
-                <Switch active={role}>
-                  {options.map(({ value, mutuallyExclusive }) => (
-                    <>
-                      <Option
-                        mutuallyExclusive={mutuallyExclusive}
-                        value={value}
-                        onSelect={roleVar}
-                        onUpdate={(active, push) => {
-                          if (mutuallyExclusive && active.length === options.length - 1) push()
-                        }}
-                      />
-                      <Layout flexBasis={8} />
-                    </>
-                  ))}
-                </Switch>
+                <Box
+                  backgroundColor='background.transparentWhite'
+                  borderRadius='bigger'
+                  width={263}
+                >
+                  <Layout flexBasis={5} flexShrink={0} />
+                  <Column>
+                    <Layout flexBasis={5} flexShrink={0} />
+                    <Row>
+                      <Switch active={roleVar}>
+                        {options.map(({ value, mutuallyExclusive }) => (
+                          <>
+                            <Option
+                              mutuallyExclusive={mutuallyExclusive}
+                              value={value}
+                              onSelect={setRole}
+                              onUpdate={(active, push) => {
+                                if (mutuallyExclusive && active.length === options.length - 1)
+                                  push()
+                              }}
+                            />
+                            <Layout flexBasis={8} />
+                          </>
+                        ))}
+                      </Switch>
+                    </Row>
+                    <Layout flexBasis={5} flexShrink={0} />
+                  </Column>
+                  <Layout flexBasis={5} flexShrink={0} />
+                </Box>
+                <Content />
 
                 <Layout flexBasis={67} flexShrink={0} />
                 <Form form='payment' />

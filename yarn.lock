@@ -3569,6 +3569,7 @@ __metadata:
   resolution: "@ui/switch@workspace:ui/switch"
   dependencies:
     "@ui/button": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2

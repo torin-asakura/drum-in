@@ -2,6 +2,7 @@ import React           from 'react'
 import { FC }          from 'react'
 
 import { Button }      from '@ui/button'
+import { Text }        from '@ui/text'
 import { capitalize }  from '@ui/utils'
 
 import { OptionProps } from './option.interface'
@@ -29,14 +30,17 @@ const Option: FC<OptionProps> = ({ onSelect, value, mutuallyExclusive, onUpdate 
 
   return (
     <Button
-      variant='darkToPurpleBackground'
+      variant='smokyWhiteBackground'
+      size='littlePaddingMicroHeight'
       onClick={() => {
         if (includes) remove()
         else push()
       }}
       active={includes}
     >
-      {capitalize(value)}
+      <Text fontWeight='medium' fontSize='medium' lineHeight='medium' whiteSpace='nowrap'>
+        {capitalize(value)}
+      </Text>
     </Button>
   )
 }

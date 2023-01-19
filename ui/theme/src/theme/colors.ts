@@ -220,6 +220,28 @@ const colors = {
         border: 'rgba(15, 12, 12, 0.12)',
       },
     },
+    smokyWhiteBackground: {
+      default: {
+        background: 'rgb(242,242,242)',
+        font: 'rgb(15,12,12)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgb(242,242,242)',
+        font: 'rgb(15,12,12)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(128, 127, 127)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(128, 127, 127)',
+        border: 'transparent',
+      },
+    },
   },
   text: {
     smokyWhite: 'rgb(242,242,242)',
