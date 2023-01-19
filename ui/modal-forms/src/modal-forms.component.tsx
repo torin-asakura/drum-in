@@ -178,10 +178,6 @@ const ModalForms: FC<ModalFormsProps> = ({
                               mutuallyExclusive={mutuallyExclusive}
                               value={value}
                               onSelect={setRole}
-                              onUpdate={(active, push) => {
-                                if (mutuallyExclusive && active.length === options.length - 1)
-                                  push()
-                              }}
                             />
                             <Layout flexBasis={8} />
                           </>
