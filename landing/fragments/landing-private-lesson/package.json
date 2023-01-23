@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@landing/modal-forms": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "@ui/modal-forms": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {

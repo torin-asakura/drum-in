@@ -16,6 +16,7 @@
     "@emotion/react": "*",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "react": "*",
+    "react-dom": "*",
     "react-intl": "*"
   }
 }

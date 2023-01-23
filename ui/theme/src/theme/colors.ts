@@ -222,13 +222,35 @@ const colors = {
     },
     smokyWhiteBackground: {
       default: {
+        background: 'transparent',
+        font: 'rgb(128, 127, 127)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'transparent',
+        font: 'rgb(128, 127, 127)',
+        border: 'transparent',
+      },
+      pressed: {
         background: 'rgb(242,242,242)',
         font: 'rgb(15,12,12)',
         border: 'transparent',
       },
+      disabled: {
+        background: 'transparent',
+        font: 'rgb(128, 127, 127)',
+        border: 'transparent',
+      },
+    },
+    transparentWhiteBackground: {
+      default: {
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(128, 127, 127)',
+        border: 'transparent',
+      },
       hover: {
-        background: 'rgb(242,242,242)',
-        font: 'rgb(15,12,12)',
+        background: 'rgba(242, 242, 242, 0.15)',
+        font: 'rgb(128, 127, 127)',
         border: 'transparent',
       },
       pressed: {
@@ -239,6 +261,28 @@ const colors = {
       disabled: {
         background: 'rgba(242, 242, 242, 0.15)',
         font: 'rgb(128, 127, 127)',
+        border: 'transparent',
+      },
+    },
+    veryTransparentSmokyWhiteBackground: {
+      default: {
+        background: 'rgba(242, 242, 242, 0.05)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(242, 242, 242, 0.05)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(242, 242, 242, 0.05)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(242, 242, 242, 0.05)',
+        font: 'rgb(242,242,242)',
         border: 'transparent',
       },
     },
@@ -255,8 +299,10 @@ const colors = {
   background: {
     blackAmber: 'rgb(15,12,12)',
     transparentWhite: 'rgba(242, 242, 242, 0.15)',
+    veryTransparentSmokyWhite: 'rgba(242, 242, 242, 0.05)',
     smokyWhite: 'rgb(242,242,242)',
     purple: 'rgb(156, 101, 242)',
+    green: 'rgb(18, 195, 142)',
   },
   drawer: {
     backdrop: 'rgba(72, 72, 72, 0.6)',

@@ -3,6 +3,7 @@ export interface ModalFormsProps {
   onClose: () => any
   display?: 'consultation' | 'payment'
   scroll?: boolean
+  typePayment?: 'Разовый платёж' | 'Рассрочка'
 }
 
 export type Role = Array<string>

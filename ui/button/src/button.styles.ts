@@ -17,6 +17,13 @@ const withoutPaddingMicroHeightStyles = createShapeStyles({
   paddingRight: 0,
 })
 
+const middlingPaddingSemiBigHeightStyles = createShapeStyles({
+  size: 53,
+  rounding: prop('theme.radii.medium') as unknown as number,
+  paddingLeft: 17,
+  paddingRight: 17,
+})
+
 const mediumPaddingNormalHeightStyles = createShapeStyles({
   size: 56,
   rounding: prop('theme.radii.medium') as unknown as number,
@@ -87,11 +94,25 @@ const littlePaddingSemiMediumHeightStyles = createShapeStyles({
   paddingRight: 12,
 })
 
+const semiLittlePaddingSemiMediumHeightStyles = createShapeStyles({
+  size: 41,
+  rounding: prop('theme.radii.semiMedium') as unknown as number,
+  paddingLeft: 10,
+  paddingRight: 10,
+})
+
 const littlePaddingMicroHeightStyles = createShapeStyles({
   size: 29,
   rounding: prop('theme.radii.bigger') as unknown as number,
   paddingLeft: 12,
   paddingRight: 12,
+})
+
+const semiLittlePaddingMicroHeightStyles = createShapeStyles({
+  size: 25,
+  rounding: prop('theme.radii.bigger') as unknown as number,
+  paddingLeft: 8,
+  paddingRight: 8,
 })
 
 const littlePaddingMediumHeightStyles = createShapeStyles({
@@ -142,4 +163,7 @@ export const shapeStyles = switchProp(prop('size', 'normal'), {
   withoutPaddingSemiRegularHeight: withoutPaddingSemiRegularHeightStyles,
   withoutPaddingSemiBigHeight: withoutPaddingSemiBigHeightStyles,
   littlePaddingMicroHeight: littlePaddingMicroHeightStyles,
+  middlingPaddingSemiBigHeight: middlingPaddingSemiBigHeightStyles,
+  semiLittlePaddingMicroHeight: semiLittlePaddingMicroHeightStyles,
+  semiLittlePaddingSemiMediumHeight: semiLittlePaddingSemiMediumHeightStyles,
 })

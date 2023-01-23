@@ -7,4 +7,5 @@ export const replacements = {
   InvertedExclamationMarkIcon: getColorReplacement({ color: '#0F0C0C' }),
   RightDownArrowIcon: getColorReplacement({ color: '#0F0C0C' }),
   ArrowRightTailIcon: getColorReplacement({ color: '#0F0C0C' }),
+  CrossMenuIcon: getColorReplacement({ color: '#F2F2F2' }),
 }

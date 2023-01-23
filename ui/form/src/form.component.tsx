@@ -168,10 +168,29 @@ const Form: FC<FormProps> = ({ arrow = false, form = 'consultation' }) => {
       </Row>
       <Row display={['flex', 'none', 'none']}>
         <CheckboxMobile checked={privacyPolicy} onCheck={setPrivacyPolicy}>
-          <FormattedMessage
-            id='landing_modal_forms.give_my_consent_to_the_processing'
-            defaultMessage='Даю согласие на обработку моих персональных данных'
-          />
+          <Condition match={form === 'consultation'}>
+            <FormattedMessage
+              id='landing_modal_forms.give_my_consent_to_the_processing'
+              defaultMessage='Даю согласие на обработку моих персональных данных'
+            />
+          </Condition>
+          <Condition match={form === 'payment'}>
+            <FormattedMessage id='landing_modal_forms.accept' defaultMessage='Принимаю' />
+            <Space />
+            <NextLink path='/'>
+              <Text textTransform='lowercase' fontSize='semiMicro'>
+                <FormattedMessage
+                  id='landing_modal_forms.offer_agreement'
+                  defaultMessage='договор оферты'
+                />
+              </Text>
+            </NextLink>
+            <Space />
+            <FormattedMessage
+              id='landing_modal_forms.and_i_give_my_consent'
+              defaultMessage='и даю согласие на обработку моих персональных данных'
+            />
+          </Condition>
         </CheckboxMobile>
       </Row>
       <Layout flexBasis={[24, 62, 62]} flexShrink={0} />

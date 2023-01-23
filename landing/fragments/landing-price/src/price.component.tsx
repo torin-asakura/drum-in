@@ -4,14 +4,14 @@ import { useRouter }                   from 'next/router'
 import { useEffect }                   from 'react'
 import { useState }                    from 'react'
 
+import { ModalForms }                  from '@landing/modal-forms'
+import { ModalMobileForms }            from '@landing/modal-forms'
 import { PriceCourse as PPriceCourse } from '@shared/data'
 import { Button }                      from '@ui/button'
 import { Box }                         from '@ui/layout'
 import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Row }                         from '@ui/layout'
-import { ModalForms }                  from '@ui/modal-forms'
-import { ModalMobileForms }            from '@ui/modal-forms'
 import { Space }                       from '@ui/text'
 import { Text }                        from '@ui/text'
 import { useMockedPriceCourse }        from '@shared/data'
@@ -149,14 +149,28 @@ const PriceBlock = () => {
                 </Text>
               </Box>
               <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
-              <Box display={['flex', 'flex', 'none']} width='100%'>
-                <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
-                  <Text
-                    fontWeight='semiBold'
-                    fontSize='micro'
-                    textTransform='uppercase'
-                    onClick={() => setVisibleModalMobile(true)}
-                  >
+              <Box display={['none', 'flex', 'none']} width='100%'>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModal(true)}
+                >
+                  <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
+                    {texts.costPerMonth}
+                    <Space />
+                    {texts.currency}
+                  </Text>
+                </Button>
+              </Box>
+              <Box display={['flex', 'none', 'none']} width='100%'>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModalMobile(true)}
+                >
+                  <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
                     {texts.costPerMonth}
                     <Space />
                     {texts.currency}

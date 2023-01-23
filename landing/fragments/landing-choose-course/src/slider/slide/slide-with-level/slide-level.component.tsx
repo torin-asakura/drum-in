@@ -1,19 +1,22 @@
-import React               from 'react'
-import { FC }              from 'react'
-import { useIntl }         from 'react-intl'
+import React                from 'react'
+import { FC }               from 'react'
+import { useState }     from 'react'
+import { useIntl }          from 'react-intl'
 
-import { Button }          from '@ui/button'
-import { Circle }          from '@ui/figures'
-import { Rectangle }       from '@ui/figures'
-import { Square }          from '@ui/figures'
-import { Row }             from '@ui/layout'
-import { Box }             from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Text }            from '@ui/text'
-import { useHover }        from '@ui/utils'
+import { ModalForms }       from '@landing/modal-forms'
+import { ModalMobileForms } from '@landing/modal-forms'
+import { Button }           from '@ui/button'
+import { Circle }           from '@ui/figures'
+import { Rectangle }        from '@ui/figures'
+import { Square }           from '@ui/figures'
+import { Row }              from '@ui/layout'
+import { Box }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Text }             from '@ui/text'
+import { useHover }         from '@ui/utils'
 
-import { SlideLevelProps } from './slide-level.interfaces'
+import { SlideLevelProps }  from './slide-level.interfaces'
 
 const SlideLevel: FC<SlideLevelProps> = ({
   title,
@@ -37,6 +40,8 @@ const SlideLevel: FC<SlideLevelProps> = ({
 }) => {
   const { formatMessage } = useIntl()
   const [colorBorder, colorBorderProps] = useHover()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   return (
     <Column>
@@ -124,6 +129,7 @@ const SlideLevel: FC<SlideLevelProps> = ({
                 display={['none', 'none', 'flex']}
                 borderRadius='extra'
                 border={colorBorder ? 'normalSmokyWhite' : 'normalBoldDark'}
+                onClick={() => setVisibleModal(true)}
                 {...colorBorderProps}
               >
                 <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
@@ -132,13 +138,40 @@ const SlideLevel: FC<SlideLevelProps> = ({
                   </Text>
                 </Button>
               </Box>
-              <Row display={['flex', 'flex', 'none']}>
-                <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
+              <Row display={['none', 'flex', 'none']}>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModal(true)}
+                >
                   <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
                     {price}
                   </Text>
                 </Button>
               </Row>
+              <Row display={['flex', 'none', 'none']}>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModalMobile(true)}
+                >
+                  <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
+                    {price}
+                  </Text>
+                </Button>
+              </Row>
+              <ModalForms
+                display='payment'
+                activeRender={visibleModal}
+                onClose={() => setVisibleModal(false)}
+              />
+              <ModalMobileForms
+                display='payment'
+                activeRender={visibleModalMobile}
+                onClose={() => setVisibleModalMobile(false)}
+              />
               <Layout flexBasis={[20, 28, 36]} />
             </Column>
             <Layout flexBasis={[15, 26, 32]} flexShrink={0} />

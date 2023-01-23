@@ -1,36 +1,39 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { motion }           from 'framer-motion'
-import { useState }         from 'react'
-import { useIntl }          from 'react-intl'
+import React                      from 'react'
+import { FC }                     from 'react'
+import { FormattedMessage }       from 'react-intl'
+import { motion }                 from 'framer-motion'
+import { useState }               from 'react'
+import { useIntl }                from 'react-intl'
 
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { Form }             from '@ui/form'
-import { CrossMenuIcon }    from '@ui/icons'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Switch }           from '@ui/switch'
-import { Option }           from '@ui/switch'
-import { Text }             from '@ui/text'
+import { Button }                 from '@ui/button'
+import { Condition }              from '@ui/condition'
+import { Form }                   from '@ui/form'
+import { CrossMenuIcon }          from '@ui/icons'
+import { ArrowLeftTailIcon }      from '@ui/icons'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Box }                    from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Switch }                 from '@ui/switch'
+import { Option }                 from '@ui/switch'
+import { Text }                   from '@ui/text'
 
-import { Backdrop }         from './backdrop'
-import { Container }        from './container'
-import { Role }             from './modal-forms.interfaces'
-import { ModalFormsProps }  from './modal-forms.interfaces'
-import { Renderer }         from './renderer'
+import { Backdrop }               from './backdrop'
+import { Container }              from './container'
+import { ContentInstallmentPlan } from './content-installment-plan'
+import { ContentOneTimePayment }  from './content-one-time-payment'
+import { Role }                   from './modal-forms.interfaces'
+import { ModalFormsProps }        from './modal-forms.interfaces'
+import { Renderer }               from './renderer'
 
 const ModalForms: FC<ModalFormsProps> = ({
   activeRender,
   onClose,
   display = 'consultation',
   scroll = true,
+  typePayment = 'Рассрочка',
 }) => {
-  const [roleVar, setRole] = useState<Role>(['Рассрочка'])
-  console.log(roleVar)
+  const [roleVar, setRole] = useState<Role>([typePayment])
   const { formatMessage } = useIntl()
   const options = [
     {
@@ -48,15 +51,6 @@ const ModalForms: FC<ModalFormsProps> = ({
       mutuallyExclusive: true,
     },
   ]
-  const Content = () => {
-    if (roleVar.includes('Разовый платёж')) {
-      return <Box width={40} height={40} backgroundColor='green' />
-    } else if (roleVar.includes('Рассрочка')) {
-      return <Box width={40} height={40} backgroundColor='red' />
-    } else {
-      return null
-    }
-  }
 
   return (
     <Renderer active={activeRender}>
@@ -70,7 +64,7 @@ const ModalForms: FC<ModalFormsProps> = ({
         <Backdrop onClick={onClose} />
       </motion.div>
       <motion.div
-        style={{ position: 'fixed', right: '-100%', top: 0, height: '100%', zIndex: 9999 }}
+        style={{ position: 'fixed', right: '-100%', top: 0, height: '100%', zIndex: 950 }}
         animate={{ right: 0 }}
         exit={{ right: '-100%' }}
         transition={{ duration: 0.5 }}
@@ -161,36 +155,62 @@ const ModalForms: FC<ModalFormsProps> = ({
                   </Box>
                 </Box>
                 <Layout flexBasis={21} flexShrink={0} />
-
-                <Box
-                  backgroundColor='background.transparentWhite'
-                  borderRadius='bigger'
-                  width={263}
-                >
-                  <Layout flexBasis={5} flexShrink={0} />
-                  <Column>
+                <Row alignItems='end'>
+                  <Box
+                    backgroundColor='background.transparentWhite'
+                    borderRadius='bigger'
+                    width={263}
+                  >
                     <Layout flexBasis={5} flexShrink={0} />
-                    <Row>
-                      <Switch active={roleVar}>
-                        {options.map(({ value, mutuallyExclusive }) => (
-                          <>
-                            <Option
-                              mutuallyExclusive={mutuallyExclusive}
-                              value={value}
-                              onSelect={setRole}
-                            />
-                            <Layout flexBasis={8} />
-                          </>
-                        ))}
-                      </Switch>
-                    </Row>
+                    <Column width='100%'>
+                      <Layout flexBasis={5} flexShrink={0} />
+                      <Row justifyContent='space-between'>
+                        <Switch active={roleVar}>
+                          {options.map(({ value, mutuallyExclusive }) => (
+                            <>
+                              <Option
+                                mutuallyExclusive={mutuallyExclusive}
+                                value={value}
+                                onSelect={setRole}
+                              />
+                              <Layout flexBasis={8} />
+                            </>
+                          ))}
+                        </Switch>
+                      </Row>
+                      <Layout flexBasis={5} flexShrink={0} />
+                    </Column>
                     <Layout flexBasis={5} flexShrink={0} />
-                  </Column>
-                  <Layout flexBasis={5} flexShrink={0} />
-                </Box>
-                <Content />
-
-                <Layout flexBasis={67} flexShrink={0} />
+                  </Box>
+                  <Layout flexBasis={14} flexShrink={0} />
+                  <Box>
+                    <ArrowLeftTailIcon width={85} height={25} />
+                  </Box>
+                  <Box
+                    alignSelf='start'
+                    padding='4px 8px'
+                    borderRadius='micro'
+                    backgroundColor='background.green'
+                    style={{ transform: 'rotate(15deg)' }}
+                  >
+                    <Text
+                      fontWeight='medium'
+                      fontSize='medium'
+                      lineHeight='medium'
+                      color='text.smokyWhite'
+                    >
+                      <FormattedMessage
+                        id='landing_modal_forms.benefit_of_ten_percent'
+                        defaultMessage='Выгода 10%'
+                      />
+                    </Text>
+                  </Box>
+                </Row>
+                <Layout flexBasis={28} flexShrink={0} />
+                {roleVar.includes(options[0].value) || roleVar.length === 0 ? (
+                  <ContentInstallmentPlan />
+                ) : null}
+                {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
                 <Form form='payment' />
               </Condition>
             </Column>

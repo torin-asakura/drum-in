@@ -115,5 +115,19 @@
   "landing_modal_forms.offer_agreement": "договор оферты",
   "landing_modal_forms.and_i_give_my_consent": "и даю согласие на обработку моих персональных данных",
   "landing_modal_forms.installment_plan": "Рассрочка",
-  "landing_modal_forms.one_time_payment": "Разовый платёж"
+  "landing_modal_forms.one_time_payment": "Разовый платёж",
+  "landing_modal_forms.benefit_of_ten_percent": "Выгода 10%",
+  "landing_modal_forms.course_sense_of_time": "Курс “Ощущение времени”",
+  "landing_modal_forms.course_fifth_dimension": "Курс “Пятое измерение”",
+  "landing_modal_forms.course_seventh_heaven": "Курс “Седьмое небо”",
+  "landing_modal_forms.forty_thousand_rubles": "40 000 ₽",
+  "landing_modal_forms.you_have_deleted_the_seventh_heaven”": "Вы удалили “Седьмое небо”",
+  "landing_modal_forms.amount_is_eighty-thousand_rubles": "Сумма: 80 000 ₽",
+  "landing_modal_forms.course_is_for_experienced_musicians": "Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной",
+  "landing_modal_forms.monthly_payment": "Ежемесячный платёж",
+  "landing_modal_forms.eight_thousand_seven_hundred_rubles_a_month": "8 700 ₽/мес.",
+  "landing_modal_forms.installment_period": "Срок рассрочки",
+  "landing_modal_forms.fifteen_months": "15 месяцев",
+  "landing_modal_forms.total_amount": "Общая сумма",
+  "landing_modal_forms.one_hundred_seventeen_thousand_four_hundred_rubles": "117 400 ₽"
 }

@@ -2,11 +2,11 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
 
+import { ModalForms }       from '@landing/modal-forms'
+import { ModalMobileForms } from '@landing/modal-forms'
 import { Button }           from '@ui/button'
 import { Row }              from '@ui/layout'
 import { Box }              from '@ui/layout'
-import { ModalForms }       from '@ui/modal-forms'
-import { ModalMobileForms } from '@ui/modal-forms'
 import { Text }             from '@ui/text'
 
 const Buttons = () => {
