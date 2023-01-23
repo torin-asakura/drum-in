@@ -5,6 +5,7 @@ import { AfterTheCourseBlock } from '@landing/after-the-course-fragment'
 import { BannerCourseBlock }   from '@landing/banner-course-fragment'
 import { SkillsBlock }         from '@landing/skills-fragment'
 import { TargetAudienceBlock } from '@landing/target-audience-fragment'
+import { ProgramHorizontalBlock } from '@landing/program-horizontal-fragment'
 
 import { ComponentsProps }     from './components.interfaces'
 
@@ -23,6 +24,7 @@ const Components: FC<ComponentsProps> = ({ id }) => {
       <>
         <BannerCourseBlock />
         <TargetAudienceBlock />
+        <ProgramHorizontalBlock />
       </>
     )
 
