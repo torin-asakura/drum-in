@@ -96,14 +96,12 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
       <ModalForms
         activeRender={visibleModal}
         onClose={() => setVisibleModal(false)}
-        display='payment'
-        typePayment='Разовый платёж'
+        display='buy-package-of-courses'
       />
       <ModalMobileForms
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
-        display='payment'
-        typePayment='Разовый платёж'
+        display='buy-package-of-courses'
       />
     </>
   )

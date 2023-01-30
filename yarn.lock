@@ -1735,6 +1735,36 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/consultation@workspace:0.0.1, @landing/consultation@workspace:landing/fragments/landing-consultation":
+  version: 0.0.0-use.local
+  resolution: "@landing/consultation@workspace:landing/fragments/landing-consultation"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5.1.12
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    framer-motion: 7.6.2
+    next: 12.1.0
+    react-intl: ^6.1.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/contact-fragment@workspace:0.0.1, @landing/contact-fragment@workspace:landing/fragments/landing-contact":
   version: 0.0.0-use.local
   resolution: "@landing/contact-fragment@workspace:landing/fragments/landing-contact"
@@ -1796,7 +1826,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/cta-fragment@workspace:landing/fragments/landing-cta"
   dependencies:
-    "@landing/modal-forms": "workspace:0.0.1"
+    "@landing/consultation": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/button": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -1889,7 +1919,7 @@ __metadata:
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
   dependencies:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@landing/modal-forms": "workspace:0.0.1"
+    "@landing/consultation": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/button": "workspace:0.0.1"
@@ -2042,6 +2072,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.9.3
+    "@shared/data": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@types/react-dom": ^17
     "@types/styled-system": ^5.1.12
@@ -2054,12 +2085,14 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: 7.6.2
+    next: 12.1.0
     react-intl: ^6.1.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2071,7 +2104,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
   dependencies:
-    "@landing/modal-forms": "workspace:0.0.1"
+    "@landing/consultation": "workspace:0.0.1"
     "@shared/data": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/background": "workspace:0.0.1"
@@ -2153,7 +2186,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/private-lesson-fragment@workspace:landing/fragments/landing-private-lesson"
   dependencies:
-    "@landing/modal-forms": "workspace:0.0.1"
+    "@landing/consultation": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/button": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"

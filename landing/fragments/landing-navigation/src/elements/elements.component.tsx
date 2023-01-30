@@ -4,8 +4,8 @@ import { FormattedMessage }          from 'react-intl'
 import { useEffect }                 from 'react'
 import { useState }                  from 'react'
 
-import { ModalForms }                from '@landing/modal-forms'
-import { ModalMobileForms }          from '@landing/modal-forms'
+import { Consultation }              from '@landing/consultation'
+import { MobileConsultation }        from '@landing/consultation'
 import { Navigation as NNavigation } from '@shared/data'
 import { Button }                    from '@ui/button'
 import { Column }                    from '@ui/layout'
@@ -129,8 +129,8 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
             </Text>
           </Button>
         </Box>
-        <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-        <ModalMobileForms
+        <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+        <MobileConsultation
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

@@ -1,39 +1,42 @@
-import React                      from 'react'
-import { FC }                     from 'react'
-import { FormattedMessage }       from 'react-intl'
-import { motion }                 from 'framer-motion'
-import { useState }               from 'react'
-import { useIntl }                from 'react-intl'
+import React                                 from 'react'
+import { FC }                                from 'react'
+import { motion }                            from 'framer-motion'
+import { useRouter }                         from 'next/router'
+import { useState }                          from 'react'
+import { useEffect }                         from 'react'
+import { useIntl }                           from 'react-intl'
 
-import { Button }                 from '@ui/button'
-import { Condition }              from '@ui/condition'
-import { Form }                   from '@ui/form'
-import { CrossMenuIcon }          from '@ui/icons'
-import { ArrowLeftTailIcon }      from '@ui/icons'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Box }                    from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { Switch }                 from '@ui/switch'
-import { Option }                 from '@ui/switch'
-import { Text }                   from '@ui/text'
+import { ModalForm as MModalForm }           from '@shared/data'
+import { Condition }                         from '@ui/condition'
+import { Column }                            from '@ui/layout'
+import { Layout }                            from '@ui/layout'
+import { Box }                               from '@ui/layout'
+import { useMockedModalForm }                from '@shared/data'
 
-import { Backdrop }               from './backdrop'
-import { Container }              from './container'
-import { ContentInstallmentPlan } from './content-installment-plan'
-import { ContentOneTimePayment }  from './content-one-time-payment'
-import { Role }                   from './modal-forms.interfaces'
-import { ModalFormsProps }        from './modal-forms.interfaces'
-import { Renderer }               from './renderer'
+import { Backdrop }                          from './backdrop'
+import { BuyPackageContent }                 from './buy-package-content'
+import { Container }                         from './container'
+import { IndividualCourseContent }           from './individual-course-content'
+import { IndividualCourseWithChoiceContent } from './individual-course-with-choice-content'
+import { CurrentDataProps }                  from './modal-forms.interfaces'
+import { ModalFormsProps }                   from './modal-forms.interfaces'
+import { Renderer }                          from './renderer'
+import { getUi }                             from './helpers'
 
 const ModalForms: FC<ModalFormsProps> = ({
   activeRender,
   onClose,
-  display = 'consultation',
   scroll = true,
-  typePayment = 'Рассрочка',
+  display,
+  title,
+  courseContent,
+  finalPriceForOneTimePayment,
+  monthlyPayment,
+  installmentDuration,
+  finalPriceForInstallment,
+  benefit,
 }) => {
-  const [roleVar, setRole] = useState<Role>([typePayment])
+  const [roleVar, setRole] = useState<Array<string>>(['Рассрочка'])
   const { formatMessage } = useIntl()
   const options = [
     {
@@ -51,6 +54,57 @@ const ModalForms: FC<ModalFormsProps> = ({
       mutuallyExclusive: true,
     },
   ]
+
+  const router = useRouter()
+  const { modalForm: modalFormData } = useMockedModalForm()
+  const [modalForm, setModalForm] = useState<MModalForm[]>([])
+
+  useEffect(() => {
+    setModalForm(modalFormData)
+    // eslint-disable-next-line
+  }, [])
+
+  let modalFormCurrentData: CurrentDataProps = {
+    display: getUi(router.route).display,
+    title: '',
+    courseContent: {
+      titles: [''],
+      descriptions: [''],
+      prices: [''],
+    },
+    finalPriceForInstallment: '',
+    finalPriceForOneTimePayment: '',
+    installmentDuration: '',
+    benefit: '',
+    monthlyPayment: '',
+  }
+
+  for (let i = 0; modalForm.length >= i; i += 1) {
+    if (modalForm[i] !== undefined && modalForm[i].pathPage === router.route) {
+      modalFormCurrentData = {
+        display: getUi(modalForm[i].pathPage).display,
+        title: modalForm[i].title,
+        courseContent: modalForm[i].courseContent,
+        finalPriceForInstallment: modalForm[i].finalPriceForInstallment,
+        finalPriceForOneTimePayment: modalForm[i].finalPriceForOneTimePayment,
+        installmentDuration: modalForm[i].installmentDuration,
+        benefit: modalForm[i].benefit,
+        monthlyPayment: modalForm[i].monthlyPayment,
+      }
+    }
+    if (modalForm[i] !== undefined && router.route === '/') {
+      modalFormCurrentData = {
+        display,
+        title,
+        courseContent,
+        finalPriceForInstallment,
+        finalPriceForOneTimePayment,
+        installmentDuration,
+        benefit,
+        monthlyPayment,
+      }
+    }
+  }
 
   return (
     <Renderer active={activeRender}>
@@ -75,143 +129,45 @@ const ModalForms: FC<ModalFormsProps> = ({
             <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
-              <Condition match={display === 'consultation'}>
-                <Box
-                  width='100%'
-                  flexDirection={['column', 'row', 'row']}
-                  justifyContent={['start', 'space-between', 'space-between']}
-                  alignItems='start'
-                >
-                  <Column width={['100%', 450, 450]}>
-                    <Box>
-                      <Text
-                        fontWeight='medium'
-                        fontSize={['large', 'moderate', 'semiIncreased']}
-                        lineHeight='default'
-                        color='text.smokyWhite'
-                      >
-                        <FormattedMessage
-                          id='landing_modal_forms.free_consultation_from_a_teacher'
-                          defaultMessage='Бесплатная консультация от преподавателя'
-                        />
-                      </Text>
-                    </Box>
-                    <Layout flexBasis={[6, 9, 12]} flexShrink={0} />
-                    <Box>
-                      <Text
-                        fontWeight='medium'
-                        fontSize={['semiMedium', 'semiMedium', 'medium']}
-                        lineHeight='medium'
-                        color='text.transparentSmokyWhite'
-                      >
-                        <FormattedMessage
-                          id='landing_modal_forms.fill_out_the_form_and_we_will_contact_you'
-                          defaultMessage='Заполните форму и мы свяжемся с вами в ближайшее время'
-                        />
-                      </Text>
-                    </Box>
-                  </Column>
-                  <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
-                    <Button
-                      size='littlePaddingMediumHeight'
-                      variant='transparentWhiteToGrayBackground'
-                      onClick={onClose}
-                    >
-                      <CrossMenuIcon width={24} height={24} />
-                    </Button>
-                  </Box>
-                </Box>
-                <Layout flexBasis={52} flexShrink={0} />
-                <Form arrow />
+              <Condition match={modalFormCurrentData.display === 'buy-package-of-courses'}>
+                <BuyPackageContent
+                  onClose={onClose}
+                  roleVar={roleVar}
+                  options={options}
+                  setRole={setRole}
+                  title={modalFormCurrentData.title}
+                  courseContent={modalFormCurrentData.courseContent}
+                  finalPriceForOneTimePayment={modalFormCurrentData.finalPriceForOneTimePayment}
+                  monthlyPayment={modalFormCurrentData.monthlyPayment}
+                  installmentDuration={modalFormCurrentData.installmentDuration}
+                  finalPriceForInstallment={modalFormCurrentData.finalPriceForInstallment}
+                  benefit={modalFormCurrentData.benefit}
+                />
               </Condition>
-              <Condition match={display === 'payment'}>
-                <Box
-                  width='100%'
-                  flexDirection={['column', 'row', 'row']}
-                  justifyContent={['start', 'space-between', 'space-between']}
-                  alignItems='start'
-                >
-                  <Box width={['100%', 450, 450]}>
-                    <Text
-                      fontWeight='medium'
-                      fontSize={['large', 'moderate', 'semiIncreased']}
-                      lineHeight='default'
-                      color='text.smokyWhite'
-                    >
-                      <FormattedMessage
-                        id='landing_modal_forms.buy_a_package_of_courses'
-                        defaultMessage='Купить пакет курсов “Открытие ритма”'
-                      />
-                    </Text>
-                  </Box>
-                  <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
-                    <Button
-                      size='littlePaddingMediumHeight'
-                      variant='transparentWhiteToGrayBackground'
-                      onClick={onClose}
-                    >
-                      <CrossMenuIcon width={24} height={24} />
-                    </Button>
-                  </Box>
-                </Box>
-                <Layout flexBasis={21} flexShrink={0} />
-                <Row alignItems='end'>
-                  <Box
-                    backgroundColor='background.transparentWhite'
-                    borderRadius='bigger'
-                    width={263}
-                  >
-                    <Layout flexBasis={5} flexShrink={0} />
-                    <Column width='100%'>
-                      <Layout flexBasis={5} flexShrink={0} />
-                      <Row justifyContent='space-between'>
-                        <Switch active={roleVar}>
-                          {options.map(({ value, mutuallyExclusive }) => (
-                            <>
-                              <Option
-                                mutuallyExclusive={mutuallyExclusive}
-                                value={value}
-                                onSelect={setRole}
-                              />
-                              <Layout flexBasis={8} />
-                            </>
-                          ))}
-                        </Switch>
-                      </Row>
-                      <Layout flexBasis={5} flexShrink={0} />
-                    </Column>
-                    <Layout flexBasis={5} flexShrink={0} />
-                  </Box>
-                  <Layout flexBasis={14} flexShrink={0} />
-                  <Box>
-                    <ArrowLeftTailIcon width={85} height={25} />
-                  </Box>
-                  <Box
-                    alignSelf='start'
-                    padding='4px 8px'
-                    borderRadius='micro'
-                    backgroundColor='background.green'
-                    style={{ transform: 'rotate(15deg)' }}
-                  >
-                    <Text
-                      fontWeight='medium'
-                      fontSize='medium'
-                      lineHeight='medium'
-                      color='text.smokyWhite'
-                    >
-                      <FormattedMessage
-                        id='landing_modal_forms.benefit_of_ten_percent'
-                        defaultMessage='Выгода 10%'
-                      />
-                    </Text>
-                  </Box>
-                </Row>
-                <Layout flexBasis={28} flexShrink={0} />
-                {roleVar.includes(options[0].value) || roleVar.length === 0 ? (
-                  <ContentInstallmentPlan />
-                ) : null}
-                {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
-                <Form form='payment' />
+              <Condition match={modalFormCurrentData.display === 'buy-individual-course'}>
+                <IndividualCourseContent
+                  title={modalFormCurrentData.title}
+                  courseContent={modalFormCurrentData.courseContent}
+                  finalPriceForOneTimePayment={modalFormCurrentData.finalPriceForOneTimePayment}
+                  onClose={onClose}
+                />
+              </Condition>
+              <Condition
+                match={modalFormCurrentData.display === 'buy-individual-course-with-choice'}
+              >
+                <IndividualCourseWithChoiceContent
+                  onClose={onClose}
+                  roleVar={roleVar}
+                  options={options}
+                  setRole={setRole}
+                  title={modalFormCurrentData.title}
+                  courseContent={modalFormCurrentData.courseContent}
+                  finalPriceForOneTimePayment={modalFormCurrentData.finalPriceForOneTimePayment}
+                  monthlyPayment={modalFormCurrentData.monthlyPayment}
+                  installmentDuration={modalFormCurrentData.installmentDuration}
+                  finalPriceForInstallment={modalFormCurrentData.finalPriceForInstallment}
+                  benefit={modalFormCurrentData.benefit}
+                />
               </Condition>
             </Column>
             <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -221,4 +177,5 @@ const ModalForms: FC<ModalFormsProps> = ({
     </Renderer>
   )
 }
+
 export { ModalForms }

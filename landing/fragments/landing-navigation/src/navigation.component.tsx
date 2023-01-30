@@ -1,25 +1,25 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { useState }           from 'react'
 
-import { ModalForms }       from '@landing/modal-forms'
-import { ModalMobileForms } from '@landing/modal-forms'
-import { Button }           from '@ui/button'
-import { Drawer }           from '@ui/drawer'
-import { ArrowTopIcon }     from '@ui/icons'
-import { CrossMenuIcon }    from '@ui/icons'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Logo }             from '@ui/logo'
-import { Text }             from '@ui/text'
-import { useHover }         from '@ui/utils'
+import { Consultation }       from '@landing/consultation'
+import { MobileConsultation } from '@landing/consultation'
+import { Button }             from '@ui/button'
+import { Drawer }             from '@ui/drawer'
+import { ArrowTopIcon }       from '@ui/icons'
+import { CrossMenuIcon }      from '@ui/icons'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Box }                from '@ui/layout'
+import { NextLink }           from '@ui/link'
+import { Logo }               from '@ui/logo'
+import { Text }               from '@ui/text'
+import { useHover }           from '@ui/utils'
 
-import { Elements }         from './elements'
-import { NavigationProps }  from './navigation.interfaces'
+import { Elements }           from './elements'
+import { NavigationProps }    from './navigation.interfaces'
 
 const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
   const [hoverLink, hoverLinkProps] = useHover()
@@ -122,8 +122,8 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
                   </Text>
                 </Button>
               </Row>
-              <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-              <ModalMobileForms
+              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+              <MobileConsultation
                 activeRender={visibleModalMobile}
                 onClose={() => setVisibleModalMobile(false)}
               />

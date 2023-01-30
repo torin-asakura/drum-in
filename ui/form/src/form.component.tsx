@@ -11,7 +11,6 @@ import { Condition }             from '@ui/condition'
 import { ArrowLeftDownTailIcon } from '@ui/icons'
 import { Input }                 from '@ui/input'
 import { Box }                   from '@ui/layout'
-import { Column }                from '@ui/layout'
 import { Row }                   from '@ui/layout'
 import { Layout }                from '@ui/layout'
 import { NextLink }              from '@ui/link'
@@ -28,7 +27,7 @@ const Form: FC<FormProps> = ({ arrow = false, form = 'consultation' }) => {
   const { formatMessage } = useIntl()
 
   return (
-    <Column>
+    <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
       <Box display={['none', 'flex', 'flex']}>
         <Input
           value={name}
@@ -194,7 +193,7 @@ const Form: FC<FormProps> = ({ arrow = false, form = 'consultation' }) => {
         </CheckboxMobile>
       </Row>
       <Layout flexBasis={[24, 62, 62]} flexShrink={0} />
-    </Column>
+    </Box>
   )
 }
 

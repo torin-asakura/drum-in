@@ -1,37 +1,39 @@
-import React                      from 'react'
-import { FC }                     from 'react'
-import { FormattedMessage }       from 'react-intl'
-import { motion }                 from 'framer-motion'
-import { useState }               from 'react'
-import { useIntl }                from 'react-intl'
+import React                                       from 'react'
+import { FC }                                      from 'react'
+import { motion }                                  from 'framer-motion'
+import { useRouter }                               from 'next/router'
+import { useState }                                from 'react'
+import { useEffect }                               from 'react'
+import { useIntl }                                 from 'react-intl'
 
-import { Condition }              from '@ui/condition'
-import { Form }                   from '@ui/form'
-import { RoundedLineIcon }        from '@ui/icons'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { Box }                    from '@ui/layout'
-import { Switch }                 from '@ui/switch'
-import { Option }                 from '@ui/switch'
-import { Text }                   from '@ui/text'
+import { ModalForm as MModalForm }                 from '@shared/data'
+import { Condition }                               from '@ui/condition'
+import { useMockedModalForm }                      from '@shared/data'
 
-import { Backdrop }               from './backdrop'
-import { ContainerMobile }        from './container'
-import { ContentInstallmentPlan } from './content-installment-plan'
-import { ContentOneTimePayment }  from './content-one-time-payment'
-import { ModalFormsProps }        from './modal-forms.interfaces'
-import { Role }                   from './modal-forms.interfaces'
-import { Renderer }               from './renderer'
+import { Backdrop }                                from './backdrop'
+import { MobileBuyPackageContent }                 from './buy-package-content'
+import { ContainerMobile }                         from './container'
+import { MobileIndividualCourseContent }           from './individual-course-content/mobile-individual-course-content.component'
+import { MobileIndividualCourseWithChoiceContent } from './individual-course-with-choice-content'
+import { CurrentDataProps }                        from './modal-forms.interfaces'
+import { ModalFormsProps }                         from './modal-forms.interfaces'
+import { Renderer }                                from './renderer'
+import { getUi }                                   from './helpers'
 
 const ModalMobileForms: FC<ModalFormsProps> = ({
   activeRender,
   onClose,
-  display = 'consultation',
   scroll = true,
-  typePayment = 'Рассрочка',
+  display,
+  title,
+  courseContent,
+  finalPriceForOneTimePayment,
+  monthlyPayment,
+  installmentDuration,
+  finalPriceForInstallment,
+  benefit,
 }) => {
-  const [roleVar, setRole] = useState<Role>([typePayment])
+  const [roleVar, setRole] = useState<Array<string>>(['Рассрочка'])
   const { formatMessage } = useIntl()
   const options = [
     {
@@ -49,6 +51,57 @@ const ModalMobileForms: FC<ModalFormsProps> = ({
       mutuallyExclusive: true,
     },
   ]
+
+  const router = useRouter()
+  const { modalForm: modalFormData } = useMockedModalForm()
+  const [modalForm, setModalForm] = useState<MModalForm[]>([])
+
+  useEffect(() => {
+    setModalForm(modalFormData)
+    // eslint-disable-next-line
+  }, [])
+
+  let modalFormCurrentData: CurrentDataProps = {
+    display: getUi(router.route).display,
+    title: '',
+    courseContent: {
+      titles: [''],
+      descriptions: [''],
+      prices: [''],
+    },
+    finalPriceForInstallment: '',
+    finalPriceForOneTimePayment: '',
+    installmentDuration: '',
+    benefit: '',
+    monthlyPayment: '',
+  }
+
+  for (let i = 0; modalForm.length >= i; i += 1) {
+    if (modalForm[i] !== undefined && modalForm[i].pathPage === router.route) {
+      modalFormCurrentData = {
+        display: getUi(modalForm[i].pathPage).display,
+        title: modalForm[i].title,
+        courseContent: modalForm[i].courseContent,
+        finalPriceForInstallment: modalForm[i].finalPriceForInstallment,
+        finalPriceForOneTimePayment: modalForm[i].finalPriceForOneTimePayment,
+        installmentDuration: modalForm[i].installmentDuration,
+        benefit: modalForm[i].benefit,
+        monthlyPayment: modalForm[i].monthlyPayment,
+      }
+    }
+    if (modalForm[i] !== undefined && router.route === '/') {
+      modalFormCurrentData = {
+        display,
+        title,
+        courseContent,
+        finalPriceForInstallment,
+        finalPriceForOneTimePayment,
+        installmentDuration,
+        benefit,
+        monthlyPayment,
+      }
+    }
+  }
 
   return (
     <Renderer active={activeRender}>
@@ -69,107 +122,43 @@ const ModalMobileForms: FC<ModalFormsProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <Condition match={display === 'consultation'}>
-            <Row height={472}>
-              <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-              <Column width='100%'>
-                <Layout flexBasis={12} flexShrink={0} />
-                <Row justifyContent='center'>
-                  <RoundedLineIcon width={36} height={3} />
-                </Row>
-                <Layout flexBasis={32} flexShrink={0} />
-                <Box width={300}>
-                  <Text
-                    fontWeight='medium'
-                    fontSize='large'
-                    lineHeight='default'
-                    color='text.smokyWhite'
-                  >
-                    <FormattedMessage
-                      id='landing_modal_forms.free_consultation_from_a_teacher'
-                      defaultMessage='Бесплатная консультация от преподавателя'
-                    />
-                  </Text>
-                </Box>
-                <Layout flexBasis={12} flexShrink={0} />
-                <Box>
-                  <Text
-                    fontWeight='medium'
-                    fontSize='micro'
-                    lineHeight='medium'
-                    color='text.transparentSmokyWhite'
-                  >
-                    <FormattedMessage
-                      id='landing_modal_forms.we_will_contact_you_as_soon_as_possible'
-                      defaultMessage='Мы свяжемся с вами в ближайшее время.'
-                    />
-                  </Text>
-                </Box>
-                <Layout flexBasis={32} flexShrink={0} />
-                <Form />
-              </Column>
-              <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-            </Row>
+          <Condition match={modalFormCurrentData.display === 'buy-package-of-courses'}>
+            <MobileBuyPackageContent
+              onClose={onClose}
+              roleVar={roleVar}
+              options={options}
+              setRole={setRole}
+              title={modalFormCurrentData.title}
+              courseContent={modalFormCurrentData.courseContent}
+              finalPriceForOneTimePayment={modalFormCurrentData.finalPriceForOneTimePayment}
+              monthlyPayment={modalFormCurrentData.monthlyPayment}
+              installmentDuration={modalFormCurrentData.installmentDuration}
+              finalPriceForInstallment={modalFormCurrentData.finalPriceForInstallment}
+              benefit={modalFormCurrentData.benefit}
+            />
           </Condition>
-          <Condition match={display === 'payment'}>
-            <Row height={540}>
-              <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-              <Column width='100%'>
-                <Layout flexBasis={12} flexShrink={0} />
-                <Row justifyContent='center'>
-                  <RoundedLineIcon width={36} height={3} />
-                </Row>
-                <Layout flexBasis={20} flexShrink={0} />
-                <Box
-                  alignSelf='center'
-                  backgroundColor='background.transparentWhite'
-                  borderRadius='bigger'
-                  width={200}
-                >
-                  <Layout flexBasis={4} flexShrink={0} />
-                  <Column width='100%'>
-                    <Layout flexBasis={4} flexShrink={0} />
-                    <Row justifyContent='space-between'>
-                      <Switch active={roleVar}>
-                        {options.map(({ value, mutuallyExclusive }) => (
-                          <>
-                            <Option
-                              mutuallyExclusive={mutuallyExclusive}
-                              value={value}
-                              onSelect={setRole}
-                            />
-                            <Layout flexBasis={8} />
-                          </>
-                        ))}
-                      </Switch>
-                    </Row>
-                    <Layout flexBasis={4} flexShrink={0} />
-                  </Column>
-                  <Layout flexBasis={4} flexShrink={0} />
-                </Box>
-                <Layout flexBasis={16} flexShrink={0} />
-                <Box width={['100%', 450, 450]}>
-                  <Text
-                    fontWeight='medium'
-                    fontSize={['large', 'moderate', 'semiIncreased']}
-                    lineHeight='default'
-                    color='text.smokyWhite'
-                  >
-                    <FormattedMessage
-                      id='landing_modal_forms.buy_a_package_of_courses'
-                      defaultMessage='Купить пакет курсов “Открытие ритма”'
-                    />
-                  </Text>
-                </Box>
-                <Layout flexBasis={16} flexShrink={0} />
-                {roleVar.includes(options[0].value) || roleVar.length === 0 ? (
-                  <ContentInstallmentPlan />
-                ) : null}
-                {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
-                <Form form='payment' />
-              </Column>
-              <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-            </Row>
+          <Condition match={modalFormCurrentData.display === 'buy-individual-course'}>
+            <MobileIndividualCourseContent
+              title={modalFormCurrentData.title}
+              courseContent={modalFormCurrentData.courseContent}
+              finalPriceForOneTimePayment={modalFormCurrentData.finalPriceForOneTimePayment}
+              onClose={onClose}
+            />
+          </Condition>
+          <Condition match={modalFormCurrentData.display === 'buy-individual-course-with-choice'}>
+            <MobileIndividualCourseWithChoiceContent
+              onClose={onClose}
+              roleVar={roleVar}
+              options={options}
+              setRole={setRole}
+              title={modalFormCurrentData.title}
+              courseContent={modalFormCurrentData.courseContent}
+              finalPriceForOneTimePayment={modalFormCurrentData.finalPriceForOneTimePayment}
+              monthlyPayment={modalFormCurrentData.monthlyPayment}
+              installmentDuration={modalFormCurrentData.installmentDuration}
+              finalPriceForInstallment={modalFormCurrentData.finalPriceForInstallment}
+              benefit={modalFormCurrentData.benefit}
+            />
           </Condition>
         </ContainerMobile>
       </motion.div>

@@ -1,6 +1,6 @@
 import React                from 'react'
 import { FC }               from 'react'
-import { useState }     from 'react'
+import { useState }         from 'react'
 import { useIntl }          from 'react-intl'
 
 import { ModalForms }       from '@landing/modal-forms'
@@ -37,6 +37,14 @@ const SlideLevel: FC<SlideLevelProps> = ({
   quantityVideoLessons,
   quantityMonths,
   textMonths,
+  display,
+  titleModal,
+  courseContent,
+  finalPriceForOneTimePayment,
+  monthlyPayment,
+  installmentDuration,
+  finalPriceForInstallment,
+  benefit,
 }) => {
   const { formatMessage } = useIntl()
   const [colorBorder, colorBorderProps] = useHover()
@@ -163,14 +171,28 @@ const SlideLevel: FC<SlideLevelProps> = ({
                 </Button>
               </Row>
               <ModalForms
-                display='payment'
                 activeRender={visibleModal}
                 onClose={() => setVisibleModal(false)}
+                display={display}
+                title={titleModal}
+                courseContent={courseContent}
+                finalPriceForOneTimePayment={finalPriceForOneTimePayment}
+                monthlyPayment={monthlyPayment}
+                installmentDuration={installmentDuration}
+                finalPriceForInstallment={finalPriceForInstallment}
+                benefit={benefit}
               />
               <ModalMobileForms
-                display='payment'
                 activeRender={visibleModalMobile}
                 onClose={() => setVisibleModalMobile(false)}
+                display={display}
+                title={titleModal}
+                courseContent={courseContent}
+                finalPriceForOneTimePayment={finalPriceForOneTimePayment}
+                monthlyPayment={monthlyPayment}
+                installmentDuration={installmentDuration}
+                finalPriceForInstallment={finalPriceForInstallment}
+                benefit={benefit}
               />
               <Layout flexBasis={[20, 28, 36]} />
             </Column>

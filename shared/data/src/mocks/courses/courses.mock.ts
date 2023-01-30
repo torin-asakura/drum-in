@@ -26,7 +26,7 @@ const coursesMock: Courses[] = [
     itemId: 'courseSenseOfTime',
   },
   {
-    title: 'Пятое измрение',
+    title: 'Пятое измерение',
     level: 'Уровень 2',
     desc: 'Курс для любителей, которые хотят усовершенствовать своё мастерство',
     price: '8 400 ₽/мес',

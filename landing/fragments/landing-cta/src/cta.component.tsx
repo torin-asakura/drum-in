@@ -1,18 +1,18 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
-import { forwardRef }       from 'react'
+import React                  from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { useState }           from 'react'
+import { forwardRef }         from 'react'
 
-import { ModalForms }       from '@landing/modal-forms'
-import { ModalMobileForms } from '@landing/modal-forms'
-import { Button }           from '@ui/button'
-import { PencilIcon }       from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Consultation }       from '@landing/consultation'
+import { MobileConsultation } from '@landing/consultation'
+import { Button }             from '@ui/button'
+import { PencilIcon }         from '@ui/icons'
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Space }              from '@ui/text'
+import { Text }               from '@ui/text'
 
 const CtaBlock = forwardRef(({ data }: any, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -123,8 +123,8 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   </Text>
                 </Button>
               </Box>
-              <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-              <ModalMobileForms
+              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+              <MobileConsultation
                 activeRender={visibleModalMobile}
                 onClose={() => setVisibleModalMobile(false)}
               />

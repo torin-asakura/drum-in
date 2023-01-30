@@ -1,13 +1,13 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
+import React                  from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { useState }           from 'react'
 
-import { ModalForms }       from '@landing/modal-forms'
-import { ModalMobileForms } from '@landing/modal-forms'
-import { Button }           from '@ui/button'
-import { Row }              from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Consultation }       from '@landing/consultation'
+import { MobileConsultation } from '@landing/consultation'
+import { Button }             from '@ui/button'
+import { Row }                from '@ui/layout'
+import { Box }                from '@ui/layout'
+import { Text }               from '@ui/text'
 
 const Buttons = () => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -39,8 +39,8 @@ const Buttons = () => {
           </Text>
         </Button>
       </Row>
-      <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-      <ModalMobileForms
+      <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <MobileConsultation
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />

@@ -36,23 +36,7 @@ const PriceBlock = () => {
     // eslint-disable-next-line
   }, [])
 
-  let texts: PriceProps = {
-    costPerMonth: '',
-    currency: '',
-    fullCost: '',
-    economy: '',
-    quantityVideoLessons: '',
-    firstLineCircle: '',
-    secondLineCircle: '',
-    quantityMonths: '',
-    backgroundRectangle: '',
-    squareRotate: 0,
-    circleRotate: 0,
-    rectangleRotate: 0,
-    rectanglePositionX: 0,
-    rectanglePositionY: 0,
-  }
-
+  let texts: PriceProps = {}
   for (let i = 0; priceCourse.length >= i; i += 1) {
     if (priceCourse[i] !== undefined && priceCourse[i].pathPage === router.route) {
       texts = {
@@ -177,15 +161,10 @@ const PriceBlock = () => {
                   </Text>
                 </Button>
               </Box>
-              <ModalForms
-                activeRender={visibleModal}
-                onClose={() => setVisibleModal(false)}
-                display='payment'
-              />
+              <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
               <ModalMobileForms
                 activeRender={visibleModalMobile}
                 onClose={() => setVisibleModalMobile(false)}
-                display='payment'
               />
               <Layout flexBasis={[23, 48, 74]} />
             </Column>

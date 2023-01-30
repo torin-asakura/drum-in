@@ -3,8 +3,8 @@ import { FormattedMessage }    from 'react-intl'
 import { useState }            from 'react'
 import { useEffect }           from 'react'
 
-import { ModalForms }          from '@landing/modal-forms'
-import { ModalMobileForms }    from '@landing/modal-forms'
+import { Consultation }        from '@landing/consultation'
+import { MobileConsultation }  from '@landing/consultation'
 import { NavigationBlock }     from '@landing/navigation-fragment'
 import { Button }              from '@ui/button'
 import { ArrowBottomIcon }     from '@ui/icons'
@@ -151,8 +151,8 @@ const HeaderBlock = () => {
                   </Text>
                 </Button>
               </Row>
-              <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-              <ModalMobileForms
+              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+              <MobileConsultation
                 activeRender={visibleModalMobile}
                 onClose={() => setVisibleModalMobile(false)}
               />
