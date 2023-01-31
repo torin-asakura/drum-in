@@ -1710,6 +1710,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/banner-with-tags-fragment@workspace:0.0.1, @landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
+  version: 0.0.0-use.local
+  resolution: "@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags"
+  dependencies:
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/choose-course-fragment@workspace:0.0.1, @landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course":
   version: 0.0.0-use.local
   resolution: "@landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course"
@@ -2016,6 +2035,7 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@landing/banner-with-tags-fragment": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
