@@ -1733,7 +1733,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/banner-with-tags-fragment@workspace:0.0.1, @landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
+"@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
   version: 0.0.0-use.local
   resolution: "@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags"
   dependencies:
@@ -2107,7 +2107,7 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@landing/banner-with-tags-fragment": "workspace:0.0.1"
+    "@landing/advantages-fragment": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"

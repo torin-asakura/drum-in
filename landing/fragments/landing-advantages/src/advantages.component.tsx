@@ -8,8 +8,8 @@ import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
-import { DesktopCards }     from './desktop-cards'
-import { MobileCards }      from './mobile-cards'
+import { DesktopCards }      from './desktop-cards'
+import { MobileCards }       from './mobile-cards'
 
 const AdvantagesBlock = () => (
   <Row justifyContent='center'>

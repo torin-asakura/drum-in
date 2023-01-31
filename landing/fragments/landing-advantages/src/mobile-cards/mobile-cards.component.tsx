@@ -10,7 +10,7 @@ import { Slider }                    from '@ui/slider'
 import { SwiperSlide }               from '@ui/slider'
 import { useMockedAdvantages }       from '@shared/data'
 
-import { Card }                      from '../card'
+import { Card }                       from '../card'
 
 const MobileCards = () => {
   const { advantages: advantagesData } = useMockedAdvantages()
