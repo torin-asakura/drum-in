@@ -131,6 +131,7 @@ export const GlobalStyles = () => {
         overflow: visible !important;
       }
       
+      .advantages-slider .swiper-slide,
       .course-process-slider .swiper-slide,
       .program-slider .swiper-slide,
       .choose-courses-slider .swiper-slide,

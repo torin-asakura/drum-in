@@ -1646,6 +1646,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@landing/advantages-fragment@workspace:0.0.1, @landing/advantages-fragment@workspace:landing/fragments/landing-advantages":
+  version: 0.0.0-use.local
+  resolution: "@landing/advantages-fragment@workspace:landing/fragments/landing-advantages"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.9.3
+    "@shared/data": "workspace:0.0.1"
+    "@types/react": 18.0.21
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/slider": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+    swiper: ^8.3.1
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/after-the-course-fragment@workspace:0.0.1, @landing/after-the-course-fragment@workspace:landing/fragments/landing-after-the-course":
   version: 0.0.0-use.local
   resolution: "@landing/after-the-course-fragment@workspace:landing/fragments/landing-after-the-course"
@@ -1710,7 +1733,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/banner-with-tags-fragment@workspace:0.0.1, @landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
+"@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
   version: 0.0.0-use.local
   resolution: "@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags"
   dependencies:
@@ -2035,7 +2058,7 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@landing/banner-with-tags-fragment": "workspace:0.0.1"
+    "@landing/advantages-fragment": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
