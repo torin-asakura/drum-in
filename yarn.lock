@@ -1733,9 +1733,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
+"@landing/banner-with-tags-fragment@workspace:0.0.1, @landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
   version: 0.0.0-use.local
   resolution: "@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags"
+  dependencies:
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: ^6.1.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/banner-without-tape-fragment@workspace:0.0.1, @landing/banner-without-tape-fragment@workspace:landing/fragments/landing-banner-without-tape":
+  version: 0.0.0-use.local
+  resolution: "@landing/banner-without-tape-fragment@workspace:landing/fragments/landing-banner-without-tape"
   dependencies:
     "@emotion/styled": ^11.9.3
     "@types/react": 18.0.21
@@ -1812,15 +1831,16 @@ __metadata:
     "@emotion/styled": ^11.9.3
     "@types/react": 18.0.21
     "@types/react-dom": ^17
+    "@types/styled-system": ^5.1.12
     "@ui/button": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
-    "@ui/modal": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     framer-motion: 7.6.2
     next: 12.1.0
     react-intl: ^6.1.2
+    styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
@@ -1840,7 +1860,6 @@ __metadata:
     "@types/react": 18.0.21
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: ^6.1.2
     styled-system: ^5.1.5
@@ -2046,6 +2065,7 @@ __metadata:
     "@landing/after-the-course-fragment": "workspace:0.0.1"
     "@landing/banner-course-fragment": "workspace:0.0.1"
     "@landing/banner-with-tags-fragment": "workspace:0.0.1"
+    "@landing/banner-without-tape-fragment": "workspace:0.0.1"
     "@landing/program-horizontal-fragment": "workspace:0.0.1"
     "@landing/skills-fragment": "workspace:0.0.1"
     "@landing/target-audience-fragment": "workspace:0.0.1"
@@ -2087,7 +2107,6 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@landing/advantages-fragment": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
@@ -2176,18 +2195,19 @@ __metadata:
     "@shared/data": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@types/react-dom": ^17
+    "@types/styled-system": ^5.1.12
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
-    "@ui/modal": "workspace:0.0.1"
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: 7.6.2
     next: 12.1.0
     react-intl: ^6.1.2
+    styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
@@ -2244,6 +2264,33 @@ __metadata:
     "@landing/hero-course-fragment": "workspace:0.0.1"
     "@landing/price-fragment": "workspace:0.0.1"
     "@landing/program-fragment": "workspace:0.0.1"
+    "@landing/start-learning-fragment": "workspace:0.0.1"
+    "@landing/teacher-fragment": "workspace:0.0.1"
+    "@types/react": 18.0.21
+    "@ui/background": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+  peerDependencies:
+    next: ^12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/polyrhythmic-keys-page@workspace:0.0.1, @landing/polyrhythmic-keys-page@workspace:landing/pages/polyrhythmic-keys-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/polyrhythmic-keys-page@workspace:landing/pages/polyrhythmic-keys-page"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@landing/course-process-fragment": "workspace:0.0.1"
+    "@landing/cta-fragment": "workspace:0.0.1"
+    "@landing/faq": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/header-fragment": "workspace:0.0.1"
+    "@landing/hero-course-fragment": "workspace:0.0.1"
+    "@landing/price-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
@@ -2351,6 +2398,7 @@ __metadata:
     "@landing/fifth-dimension-page": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
     "@landing/opening-the-rhythm-page": "workspace:0.0.1"
+    "@landing/polyrhythmic-keys-page": "workspace:0.0.1"
     "@landing/seventh-heaven-page": "workspace:0.0.1"
     "@types/express": ^4.17.13
     "@types/node": ^17.0.0
@@ -3691,29 +3739,6 @@ __metadata:
     next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
-    styled-system: ^5.1.5
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    next: "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@ui/modal@workspace:0.0.1, @ui/modal@workspace:ui/modal":
-  version: 0.0.0-use.local
-  resolution: "@ui/modal@workspace:ui/modal"
-  dependencies:
-    "@emotion/react": ^11.10.4
-    "@emotion/styled": ^11.9.3
-    "@types/react": 18.0.21
-    "@types/react-dom": ^17
-    "@types/styled-system": ^5.1.12
-    "@ui/layout": "workspace:0.0.1"
-    framer-motion: 7.6.2
-    next: 12.1.0
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/react": "*"
