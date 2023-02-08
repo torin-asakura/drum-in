@@ -1,6 +1,7 @@
 import React                      from 'react'
 import { FC }                     from 'react'
 
+
 import { ProgramHorizontalBlock } from '@landing/program-horizontal-fragment'
 import { AdvantagesBlock }     from '@landing/advantages-fragment'
 import { AfterTheCourseBlock } from '@landing/after-the-course-fragment'
@@ -36,6 +37,14 @@ const Content: FC<ContentProps> = ({ id }) => {
         <BannerWithTagsBlock />
         <AdvantagesBlock />
         <ProgramHorizontalBlock />
+      </>
+    )
+
+  if (id === 'Advantages')
+    return (
+      <>
+        <BannerWithTagsBlock />
+        <AdvantagesBlock />
       </>
     )
 

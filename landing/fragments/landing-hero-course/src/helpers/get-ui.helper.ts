@@ -50,6 +50,12 @@ const getUi = (idPage) => {
       gradientMobile: 'pinkBlueSmallImageGradient',
       components: 'TargetAudience',
     }
+  if (idPage === '/connacol')
+    return {
+      gradientDesktop: 'transparentPurpleBlueImageGradient',
+      gradientMobile: 'purpleBlueSmallImageGradient',
+      components: 'Advantages',
+    }
 
   return {
     gradientDesktop: 'transparentPurpleBlueImageGradient',
