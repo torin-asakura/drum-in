@@ -43,7 +43,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '5',
     textMonths: 'месяцев',
     itemId: 'courseSeventhHeaven',
-    path: '/',
+    path: '/seventh-heaven',
   },
   {
     title: 'Коннакол',

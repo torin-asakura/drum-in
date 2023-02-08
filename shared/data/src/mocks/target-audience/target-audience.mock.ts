@@ -13,6 +13,12 @@ const targetAudienceMock: TargetAudience[] = [
     secondText: 'Хотите узнать новые пульсации сложные размеры',
     thirdText: 'Хотите узнать новые ритмические паттерны',
   },
+  {
+    pathPage: '/seventh-heaven',
+    firstText: 'Уже успели пройти предыдущие два уровня',
+    secondText: 'Хотите владеть ритмом на профессиональном уровне',
+    thirdText: 'Хотите узнать новые ритмические паттерны',
+  },
 ]
 
 export { targetAudienceMock }

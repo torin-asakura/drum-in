@@ -51,7 +51,7 @@ const BannerCourseBlock = () => {
             <Layout flexBasis={[124, 142, 160]} />
             <Box position='relative'>
               <Column width='100%' alignItems={['start', 'start', 'end']}>
-                <Row>
+                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1790 }}>
                   <Text
                     textAlign={['left', 'left', 'right']}
                     textTransform='uppercase'
@@ -68,7 +68,7 @@ const BannerCourseBlock = () => {
                   >
                     {texts.titleBanner}
                   </Text>
-                </Row>
+                </Box>
                 <Layout flexBasis={[16, 28, 40]} />
                 <Box width={['100%', '100%', 815]}>
                   <Box width={[282, 428, 460]}>

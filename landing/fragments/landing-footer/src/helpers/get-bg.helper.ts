@@ -14,6 +14,11 @@ const getBg = (idPage) => {
       gradientDesktop: 'greenBlueSemicircleImage',
       gradientMobile: 'greenBlueTwoSemicirclesSmallImage',
     }
+  if (idPage === '/seventh-heaven')
+    return {
+      gradientDesktop: 'pinkBlueSemicircleImage',
+      gradientMobile: 'pinkBlueTwoSemicirclesSmallImage',
+    }
 
   return {
     gradientDesktop: 'purpleBlueSemicircleImage',
