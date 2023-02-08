@@ -1,13 +1,12 @@
 import React         from 'react'
-
-import { FC } from 'react'
+import { FC }        from 'react'
 
 import { Box }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
 
-import { CardProps }  from './card.interfaces'
+import { CardProps } from './card.interfaces'
 
 const Card: FC<CardProps> = ({ counter, text }) => (
   <Box

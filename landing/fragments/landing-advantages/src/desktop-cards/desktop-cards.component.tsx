@@ -8,8 +8,8 @@ import { Layout }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
 import { useMockedAdvantages }       from '@shared/data'
 
-import { Card }                       from '../card'
-import { getUi }                      from '../helpers'
+import { Card }                      from '../card'
+import { getUi }                     from '../helpers'
 
 const DesktopCards = () => {
   const { advantages: advantagesData } = useMockedAdvantages()

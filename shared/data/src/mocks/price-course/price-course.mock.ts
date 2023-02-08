@@ -45,6 +45,16 @@ const priceCourseMock: PriceCourse[] = [
     quantityMonths: '5',
     pathPage: '/seventh-heaven',
   },
+  {
+    costPerMonth: '8 700',
+    currency: '₽/мес',
+    fullCost: 'весь курс за 32 000 ₽',
+    economy: '2 800 ₽',
+    quantityVideoLessons: '6',
+    secondLineCircle: 'бонус-модуль',
+    quantityMonths: '4',
+    pathPage: '/connacol',
+  },
 ]
 
 export { priceCourseMock }

@@ -4,7 +4,7 @@ export interface PriceCourse {
   fullCost: string
   economy: string
   quantityVideoLessons: string
-  firstLineCircle: string
+  firstLineCircle?: string
   secondLineCircle: string
   quantityMonths: string
   pathPage: string

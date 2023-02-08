@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@landing/advantages-fragment": "workspace:0.0.1",
     "@landing/after-the-course-fragment": "workspace:0.0.1",
     "@landing/banner-course-fragment": "workspace:0.0.1",
     "@landing/program-horizontal-fragment": "workspace:0.0.1",
+    "@landing/banner-with-tags-fragment": "workspace:0.0.1",
     "@landing/skills-fragment": "workspace:0.0.1",
     "@landing/target-audience-fragment": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1"

@@ -1733,7 +1733,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
+"@landing/banner-with-tags-fragment@workspace:0.0.1, @landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
   version: 0.0.0-use.local
   resolution: "@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags"
   dependencies:
@@ -1773,6 +1773,33 @@ __metadata:
   peerDependencies:
     react: "*"
     react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/connacol-page@workspace:0.0.1, @landing/connacol-page@workspace:landing/pages/connacol-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/connacol-page@workspace:landing/pages/connacol-page"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@landing/course-process-fragment": "workspace:0.0.1"
+    "@landing/cta-fragment": "workspace:0.0.1"
+    "@landing/faq": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/header-fragment": "workspace:0.0.1"
+    "@landing/hero-course-fragment": "workspace:0.0.1"
+    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/start-learning-fragment": "workspace:0.0.1"
+    "@landing/teacher-fragment": "workspace:0.0.1"
+    "@types/react": 18.0.21
+    "@ui/background": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+  peerDependencies:
+    next: ^12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2015,9 +2042,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-course-fragment@workspace:landing/fragments/landing-hero-course"
   dependencies:
+    "@landing/advantages-fragment": "workspace:0.0.1"
     "@landing/after-the-course-fragment": "workspace:0.0.1"
     "@landing/banner-course-fragment": "workspace:0.0.1"
-    "@landing/program-horizontal-fragment": "workspace:0.0.1"
+    "@landing/banner-with-tags-fragment": "workspace:0.0.1"
     "@landing/skills-fragment": "workspace:0.0.1"
     "@landing/target-audience-fragment": "workspace:0.0.1"
     "@types/react": 18.0.21
@@ -2058,7 +2086,6 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@landing/advantages-fragment": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
@@ -2291,31 +2318,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/program-horizontal-fragment@workspace:0.0.1, @landing/program-horizontal-fragment@workspace:landing/fragments/landing-program-horizontal":
-  version: 0.0.0-use.local
-  resolution: "@landing/program-horizontal-fragment@workspace:landing/fragments/landing-program-horizontal"
-  dependencies:
-    "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
-    "@types/react": 18.0.21
-    "@ui/background": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    next: 12.1.0
-    react-intl: ^6.1.2
-  peerDependencies:
-    react: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
 "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer":
   version: 0.0.0-use.local
   resolution: "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer"
   dependencies:
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.6.0
+    "@landing/connacol-page": "workspace:0.0.1"
     "@landing/contact-page": "workspace:0.0.1"
     "@landing/feeling-of-time-page": "workspace:0.0.1"
     "@landing/fifth-dimension-page": "workspace:0.0.1"
