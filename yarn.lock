@@ -1924,6 +1924,7 @@ __metadata:
   resolution: "@landing/footer-fragment@workspace:landing/fragments/landing-footer"
   dependencies:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@shared/data": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
