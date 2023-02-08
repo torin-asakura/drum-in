@@ -1,17 +1,48 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                                 from 'react'
+import { FormattedMessage }                  from 'react-intl'
+import { useRouter }                         from 'next/router'
+import { useEffect }                         from 'react'
+import { useState }                          from 'react'
+import { useIntl }                           from 'react-intl'
 
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { TargetAudience as TTargetAudience } from '@shared/data'
+import { Box }                               from '@ui/layout'
+import { Column }                            from '@ui/layout'
+import { Layout }                            from '@ui/layout'
+import { Row }                               from '@ui/layout'
+import { Text }                              from '@ui/text'
+import { useMockedTargetAudience }           from '@shared/data'
 
-import { ItemCard }         from './item'
+import { ItemCard }                          from './item'
+import { TargetAudienceProps }               from './target-audience.interfaces'
 
 const TargetAudienceBlock = () => {
   const { formatMessage } = useIntl()
+  const router = useRouter()
+
+  const { targetAudience: targetAudienceData } = useMockedTargetAudience()
+  const [targetAudience, setTargetAudience] = useState<TTargetAudience[]>([])
+
+  useEffect(() => {
+    setTargetAudience(targetAudienceData)
+    // eslint-disable-next-line
+  }, [])
+
+  let texts: TargetAudienceProps = {
+    firstText: '',
+    secondText: '',
+    thirdText: '',
+  }
+
+  for (let i = 0; targetAudience.length >= i; i += 1) {
+    if (targetAudience[i] !== undefined && targetAudience[i].pathPage === router.route) {
+      texts = {
+        firstText: targetAudience[i].firstText,
+        secondText: targetAudience[i].secondText,
+        thirdText: targetAudience[i].thirdText,
+      }
+    }
+  }
 
   return (
     <Row justifyContent='center'>
@@ -45,10 +76,7 @@ const TargetAudienceBlock = () => {
                 id: 'landing_target_audience.first',
                 defaultMessage: '01',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience.just_starting_your_musical_journey',
-                defaultMessage: 'Только начинаете свой музыкальный путь',
-              })}
+              text={texts.firstText}
               positionHorizontal={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               positionVertical={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               zIndex={3}
@@ -58,10 +86,7 @@ const TargetAudienceBlock = () => {
                 id: 'landing_target_audience.second',
                 defaultMessage: '02',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience.do_you_feel_a_lack',
-                defaultMessage: 'Ощущаете непонимание музыкального времени',
-              })}
+              text={texts.secondText}
               positionHorizontal={{ _: 45, tablet: 100, laptop: 0, wide: 313 }}
               positionVertical={{ _: 100, tablet: 175, laptop: 309, wide: 196 }}
               zIndex={2}
@@ -71,10 +96,7 @@ const TargetAudienceBlock = () => {
                 id: 'landing_target_audience.third',
                 defaultMessage: '03',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience.are_you_experiencing_difficulties',
-                defaultMessage: 'Испытываете сложности при удержании темпа и снятии партий',
-              })}
+              text={texts.thirdText}
               positionHorizontal={{ _: 89, tablet: 225, laptop: 0, wide: 626 }}
               positionVertical={{ _: 200, tablet: 350, laptop: 618, wide: 400 }}
               zIndex={1}

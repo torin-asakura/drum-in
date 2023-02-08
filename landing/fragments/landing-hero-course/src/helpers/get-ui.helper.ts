@@ -11,6 +11,12 @@ const getUi = (idPage) => {
       gradientMobile: 'blueTurquoiseSmallImageGradient',
       components: 'TargetAudience',
     }
+  if (idPage === '/fifth-dimension')
+    return {
+      gradientDesktop: 'transparentGreenBlueImageGradient',
+      gradientMobile: 'greenBlueSmallImageGradient',
+      components: 'TargetAudience',
+    }
 
   return {
     gradientDesktop: 'transparentPurpleBlueImageGradient',

@@ -13,6 +13,12 @@ const coursePagesMock: CoursePages[] = [
     pathPage: '/feeling-of-time',
     tapePhrase: '#Уровень 1',
   },
+  {
+    titleBanner: 'Пятое измерение',
+    descBanner: 'Курс для любителей, которые хотят усовершенствовать своё мастерство',
+    pathPage: '/fifth-dimension',
+    tapePhrase: '#Уровень 2',
+  },
 ]
 
 export { coursePagesMock }

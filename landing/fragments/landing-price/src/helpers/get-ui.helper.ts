@@ -17,6 +17,15 @@ const getUi = (idPage) => {
       rectanglePositionX: 3.5,
       rectanglePositionY: 54,
     }
+  if (idPage === '/fifth-dimension')
+    return {
+      backgroundRectangle: 'transparentGreenGradient',
+      squareRotate: -20,
+      circleRotate: 20,
+      rectangleRotate: -20,
+      rectanglePositionX: 3.5,
+      rectanglePositionY: 54,
+    }
 
   return {
     backgroundRectangle: 'transparentPurpleGradient',
