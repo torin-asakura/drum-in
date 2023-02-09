@@ -47,21 +47,25 @@ const Specifications: FC<SpecificationsProps> = ({
           <FormattedMessage id='landing_price.months' defaultMessage='месяцев' />
         </Text>
       </Box>
-      <Layout flexBasis={[4, 6, 0]} />
-      <Box>
-        <Text
-          fontWeight='medium'
-          fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
-          lineHeight='primary'
-          color='text.blackAmber'
-        >
-          <FormattedMessage id='landing_price.dot' defaultMessage='•' />
-          <Space />
-          {firstLineCircle}
-          <Space />
-          {secondLineCircle}
-        </Text>
-      </Box>
+      {secondLineCircle ? (
+        <>
+          <Layout flexBasis={[4, 6, 0]} />
+          <Box>
+            <Text
+              fontWeight='medium'
+              fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
+              lineHeight='primary'
+              color='text.blackAmber'
+            >
+              <FormattedMessage id='landing_price.dot' defaultMessage='•' />
+              <Space />
+              {firstLineCircle}
+              <Space />
+              {secondLineCircle}
+            </Text>
+          </Box>
+        </>
+      ) : null}
     </Column>
   </Box>
 )

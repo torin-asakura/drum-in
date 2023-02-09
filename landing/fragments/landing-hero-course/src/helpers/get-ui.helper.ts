@@ -56,6 +56,12 @@ const getUi = (idPage) => {
       gradientMobile: 'purpleBlueSmallImageGradient',
       components: 'Advantages',
     }
+  if (idPage === '/polyrhythmic-keys')
+    return {
+      gradientDesktop: 'transparentPurpleBlueImageGradient',
+      gradientMobile: 'purpleBlueSmallImageGradient',
+      components: 'BannerWithoutTape',
+    }
 
   return {
     gradientDesktop: 'transparentPurpleBlueImageGradient',

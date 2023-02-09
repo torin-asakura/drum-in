@@ -75,6 +75,8 @@
   "landing_course_process.do_practical_tasks": "Выполняете практические задания, получаете обратную связь и закрепляете знания",
   "landing_price.tuition_fees": "стоимость обучения",
   "landing_price.arrange_an_installment_plan": "оформить рассрочку",
+  "landing_price.pay": "оплатить",
+  "landing_price.old_price": "*Старая цена",
   "landing_price.with_a_one_time_payment_of_the_course_you_save": "*при разовой оплате курса вы экономите",
   "landing_price.video_lessons": "видео-уроков",
   "landing_price.months": "месяцев",

@@ -24,6 +24,11 @@ const getBg = (idPage) => {
       gradientDesktop: 'purpleBlueSemicircleImage',
       gradientMobile: 'purpleBlueTwoSemicirclesSmallImage',
     }
+  if (idPage === '/polyrhythmic-keys')
+    return {
+      gradientDesktop: 'purpleBlueSemicircleImage',
+      gradientMobile: 'purpleBlueTwoSemicirclesSmallImage',
+    }
 
   return {
     gradientDesktop: 'purpleBlueSemicircleImage',

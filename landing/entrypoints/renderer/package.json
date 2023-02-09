@@ -26,6 +26,7 @@
     "@landing/fifth-dimension-page": "workspace:0.0.1",
     "@landing/index-page": "workspace:0.0.1",
     "@landing/opening-the-rhythm-page": "workspace:0.0.1",
+    "@landing/polyrhythmic-keys-page": "workspace:0.0.1",
     "@landing/seventh-heaven-page": "workspace:0.0.1",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.0",

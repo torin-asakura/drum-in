@@ -65,7 +65,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '1',
     textMonths: 'месяц',
     itemId: 'coursePolyrhythmicKeys',
-    path: '/',
+    path: '/polyrhythmic-keys',
   },
 ]
 
