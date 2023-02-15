@@ -2254,10 +2254,12 @@ __metadata:
   resolution: "@landing/program-horizontal-fragment@workspace:landing/fragments/landing-program-horizontal"
   dependencies:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@shared/data": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    next: 12.1.0
     react-intl: ^6.1.2
   peerDependencies:
     react: "*"
