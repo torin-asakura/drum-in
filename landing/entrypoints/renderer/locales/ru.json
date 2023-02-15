@@ -92,5 +92,7 @@
   "landing_target_audience.third": "03",
   "landing_target_audience.just_starting_your_musical_journey": "Только начинаете свой музыкальный путь",
   "landing_target_audience.do_you_feel_a_lack": "Ощущаете непонимание музыкального времени",
-  "landing_target_audience.are_you_experiencing_difficulties": "Испытываете сложности при удержании темпа и снятии партий"
+  "landing_target_audience.are_you_experiencing_difficulties": "Испытываете сложности при удержании темпа и снятии партий",
+  "landing_program_horizontal.dot": "•",
+  "landing_program_horizontal.bonus": "Бонус"
 }

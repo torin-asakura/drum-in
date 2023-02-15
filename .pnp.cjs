@@ -4884,11 +4884,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@landing/program-horizontal-fragment", "virtual:fc496da423d735f8f868d23fea354ff390ae28449506aa75558b055386e194a156198b2c1a4d0bc23455f308c776b402bb339b9780f5b1b4f017f08e01286060#workspace:landing/fragments/landing-program-horizontal"],\
             ["@forks/react-locomotive-scroll", "virtual:79879ef9ed6d2e97b7a632880a2efdc4e39de37134e54bc91fb2a317505eb8f08b5c05a800313b032562d34b7b58bb67fb09106550486d9640a09bf0a26623a5#workspace:forks/react-locomotive-scroll"],\
+            ["@shared/data", "virtual:b56af7a96996a8e85cd54913f72231271370fde037d2c540312672f2c56898a468fa813d062fdce56f938564f495a2436bc12bff6aed07ce99ae09c9df3fc2e4#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
             ["@ui/layout", "virtual:cd1aa87928fbed45c7ec9f7816cc98fc5542fd5460091d827f69b7f38a3dd6052b2918321870be96c99ec03842c554e4c89e53cd8340c57a91446b1592db04cd#workspace:ui/layout"],\
             ["@ui/text", "virtual:cd1aa87928fbed45c7ec9f7816cc98fc5542fd5460091d827f69b7f38a3dd6052b2918321870be96c99ec03842c554e4c89e53cd8340c57a91446b1592db04cd#workspace:ui/text"],\
+            ["next", "virtual:9a50276ac9a1e1f84b3ab5c168347bc35f226f834c8967b016e50d10088993d169ed58a0aa028d557d9799b469b7fbbe297ab1555b759aa1909917ee54beac62#npm:12.1.0"],\
             ["react", "npm:18.2.0"],\
             ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
           ],\
@@ -4905,11 +4907,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@landing/program-horizontal-fragment", "virtual:fc81a556a06ca018b2c1d7a000b0e86e0f23a2310e9db6fbb658ffae5bb35c888d14da3554e719580d8e54f05d34d619be7fd30434926fd7c4c9f4c21d4796f6#workspace:landing/fragments/landing-program-horizontal"],\
             ["@forks/react-locomotive-scroll", "virtual:a51bd08a95570c3aa7f351849cedb87e567e1c27472be26c1c0ca4a3294dc8151ad34a8b6e6e605608a0b08afdc63ba2b24919b560cbd31151181c3d9a34cd0d#workspace:forks/react-locomotive-scroll"],\
+            ["@shared/data", "virtual:b56af7a96996a8e85cd54913f72231271370fde037d2c540312672f2c56898a468fa813d062fdce56f938564f495a2436bc12bff6aed07ce99ae09c9df3fc2e4#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-intl", null],\
             ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
             ["@ui/layout", "virtual:cd1aa87928fbed45c7ec9f7816cc98fc5542fd5460091d827f69b7f38a3dd6052b2918321870be96c99ec03842c554e4c89e53cd8340c57a91446b1592db04cd#workspace:ui/layout"],\
             ["@ui/text", "virtual:cd1aa87928fbed45c7ec9f7816cc98fc5542fd5460091d827f69b7f38a3dd6052b2918321870be96c99ec03842c554e4c89e53cd8340c57a91446b1592db04cd#workspace:ui/text"],\
+            ["next", "virtual:c1693327d2a8b19a67b50eaddeeebc4535c2bc7c4f33817e8361670d1958d5a5278875b55565cea33edf25740dbe2dae3f8b4a6f8a296cba2421ce5bb1c12374#npm:12.1.0"],\
             ["react", null],\
             ["react-intl", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:5.24.3"]\
           ],\
@@ -4925,10 +4929,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@landing/program-horizontal-fragment", "workspace:landing/fragments/landing-program-horizontal"],\
             ["@forks/react-locomotive-scroll", "virtual:a51bd08a95570c3aa7f351849cedb87e567e1c27472be26c1c0ca4a3294dc8151ad34a8b6e6e605608a0b08afdc63ba2b24919b560cbd31151181c3d9a34cd0d#workspace:forks/react-locomotive-scroll"],\
+            ["@shared/data", "virtual:b56af7a96996a8e85cd54913f72231271370fde037d2c540312672f2c56898a468fa813d062fdce56f938564f495a2436bc12bff6aed07ce99ae09c9df3fc2e4#workspace:shared/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
             ["@ui/layout", "virtual:cd1aa87928fbed45c7ec9f7816cc98fc5542fd5460091d827f69b7f38a3dd6052b2918321870be96c99ec03842c554e4c89e53cd8340c57a91446b1592db04cd#workspace:ui/layout"],\
             ["@ui/text", "virtual:cd1aa87928fbed45c7ec9f7816cc98fc5542fd5460091d827f69b7f38a3dd6052b2918321870be96c99ec03842c554e4c89e53cd8340c57a91446b1592db04cd#workspace:ui/text"],\
+            ["next", "virtual:c1693327d2a8b19a67b50eaddeeebc4535c2bc7c4f33817e8361670d1958d5a5278875b55565cea33edf25740dbe2dae3f8b4a6f8a296cba2421ce5bb1c12374#npm:12.1.0"],\
             ["react-intl", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:5.24.3"]\
           ],\
           "linkType": "SOFT"\

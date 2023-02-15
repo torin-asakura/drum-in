@@ -67,7 +67,7 @@ export const OpeningTheRhythmPage = () => {
           <PriceBlock />
           <FaqBlock />
           <CtaBlock />
-          <FooterBlock />          
+          <FooterBlock />
         </main>
         <StartLearningBlock />
       </LocomotiveScrollProvider>
