@@ -11,7 +11,7 @@ import { SwiperSlide }      from '@ui/slider'
 import { Text }             from '@ui/text'
 
 const DesktopSlider = () => (
-  <Column>
+  <Column width='100%'>
     <Box display={['none', 'none', 'flex']}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Slider
