@@ -21,6 +21,8 @@ const backgrounds = {
   blueTurquoiseTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer-feeling-of-time-page.png")',
   verticalTransparentToBlackGradient:
     'linear-gradient(360deg, #0F0C0C 0%, rgba(15, 12, 12, 0) 100%)',
+  progressLineWithBlackBackground: 'url("/img/progress-horizontal-section.png")',
+  mobileProgressLineWithBlackBackground: 'url("/img/mobile-progress-section.png")',
 }
 
 export { backgrounds }
