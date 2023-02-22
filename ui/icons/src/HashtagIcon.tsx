@@ -1,0 +1,56 @@
+import { useTheme }  from '@emotion/react'
+
+/* eslint-disable */
+import React         from 'react'
+
+import { IconProps } from '../icons.interfaces'
+
+export const HashtagIcon = (props: IconProps) => {
+  const theme: any = useTheme()
+  return (
+    <svg
+      width='1em'
+      height='1em'
+      viewBox='0 0 40 40'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
+    >
+      <g clipPath='url(#clip0_2704_15615)'>
+        <path
+          d='M15.2525 1.19995C15.1344 4.72816 14.6544 8.2005 14.2168 11.7014C13.5302 17.1938 12.9904 22.7032 12.2963 28.1943C12.08 29.9059 11.7346 31.599 11.6202 33.3156C11.5234 34.7676 11.0303 36.1432 10.8506 37.5808'
+          stroke='#0F0C0C'
+          strokeWidth={4}
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        />
+        <path
+          d='M30.5781 2.49463C29.5436 9.68439 27.1822 16.5759 25.9172 23.706C25.2635 27.3906 24.2723 30.9262 24.2341 34.7037C24.226 35.5033 24.1046 36.2698 24.1046 37.063C24.1046 37.6778 23.8457 38.2569 23.8457 38.8755'
+          stroke='#0F0C0C'
+          strokeWidth={4}
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        />
+        <path
+          d='M2.2002 13.0871C6.79697 13.0871 11.4002 13.1604 15.9959 13.0583C18.571 13.0011 21.1641 12.834 23.7353 13.0727C25.9699 13.2802 28.1314 13.8652 30.3814 13.9646C32.8687 14.0745 35.3344 13.8639 37.8043 13.8639'
+          stroke='#0F0C0C'
+          strokeWidth={4}
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        />
+        <path
+          d='M2.45898 27.8948C8.03458 27.8948 13.5739 27.8776 19.1318 28.384C22.5813 28.6982 26.0047 28.655 29.4534 28.8083C30.991 28.8767 32.5008 29.0601 34.0495 29.0601'
+          stroke='#0F0C0C'
+          strokeWidth={4}
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        />
+      </g>
+      <defs>
+        <clipPath id='clip0_2704_15615'>
+          <rect width={40} height={40} fill='white' />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@landing/header-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@landing/navigation-fragment": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/link": "workspace:0.0.1",
+    "@ui/logo": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "framer-motion": "^7.6.2"
+  },
+  "devDependencies": {
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@types/react": "18.0.21",
+    "react-intl": "^6.1.2",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "react": "*",
+    "react-intl": "*"
+  }
+}

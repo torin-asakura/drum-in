@@ -1,0 +1,16 @@
+export const borders = {
+  boldTransparentWhite: '1px solid rgba(242, 242, 242, 0.15)',
+  normalTransparentWhite: '2px solid rgba(242, 242, 242, 0.5)',
+  veryBoldTransparentWhite: '4px solid rgba(242, 242, 242, 0.5)',
+  veryBoldTransparent: '4px solid transparent',
+  mediumTransparent: '2px solid transparent',
+  mediumBoldSmokyWhite: '2px solid rgba(242, 242, 242)',
+  veryBoldSmokyWhite: '4px solid rgba(242, 242, 242)',
+  normalBoldDark: '1px solid rgb(15, 12, 12)',
+  normalSmokyWhite: '1px solid rgb(242,242,242)',
+  normalPurple: '1px solid rgb(156, 101, 242)',
+  mediumBoldBlackAmber: '2px solid rgb(15,12,12)',
+  mediumBoldSmokyWhiteDashed: '2px dashed rgba(242, 242, 242, 0.5)',
+  veryBoldSmokyWhiteDashed: '3px dashed rgba(242, 242, 242, 0.5)',
+  semiBoldTransparent: '3px solid transparent',
+}

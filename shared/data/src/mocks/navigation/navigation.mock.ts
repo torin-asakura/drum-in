@@ -1,0 +1,66 @@
+import { Navigation } from './navigation.interface'
+
+const navigationMock: Navigation[] = [
+  {
+    title: 'Открытие ритма',
+    level: '',
+    quantityVideoLessons: '39',
+    circleFirstLine: '3',
+    circleSecondLine: 'уровня',
+    quantityMonths: '15',
+    textMonths: 'месяцев',
+    itemId: 'courseOpeningTheRhythm',
+  },
+  {
+    title: 'Ощущение времени',
+    level: 'ур. 1',
+    quantityVideoLessons: '13',
+    circleFirstLine: '20',
+    circleSecondLine: 'прямых эфиров',
+    quantityMonths: '5',
+    textMonths: 'месяцев',
+    itemId: 'courseSenseOfTime',
+  },
+  {
+    title: 'Пятое измерение',
+    level: 'ур. 2',
+    quantityVideoLessons: '13',
+    circleFirstLine: '20',
+    circleSecondLine: 'прямых эфиров',
+    quantityMonths: '5',
+    textMonths: 'месяцев',
+    itemId: 'courseFifthDimension',
+  },
+  {
+    title: 'Седьмое небо',
+    level: 'ур. 3',
+    quantityVideoLessons: '13',
+    circleFirstLine: '20',
+    circleSecondLine: 'прямых эфиров',
+    quantityMonths: '5',
+    textMonths: 'месяцев',
+    itemId: 'courseSeventhHeaven',
+  },
+  {
+    title: 'Коннакол',
+    level: '',
+    quantityVideoLessons: '6',
+    circleFirstLine: '',
+    circleSecondLine: 'бонус-модуль',
+    quantityMonths: '4',
+    textMonths: 'месяца',
+    itemId: 'courseConnacol',
+  },
+  {
+    title: 'Ключи полиритмии',
+    level: '',
+    quantityVideoLessons: '4',
+    circleFirstLine: '',
+    circleSecondLine: '',
+    quantityMonths: '1',
+    textMonths: 'месяц',
+    itemId: 'coursePolyrhythmicKeys',
+  },
+]
+
+export { navigationMock }

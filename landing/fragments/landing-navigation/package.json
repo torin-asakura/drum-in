@@ -1,0 +1,30 @@
+{
+  "name": "@landing/navigation-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@shared/data": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/drawer": "workspace:0.0.1",
+    "@ui/figures": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/link": "workspace:0.0.1",
+    "@ui/logo": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "framer-motion": "^7.6.2"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.21",
+    "react-intl": "^6.1.2",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-intl": "*"
+  }
+}

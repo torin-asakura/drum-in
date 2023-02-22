@@ -1,0 +1,21 @@
+{
+  "name": "@landing/tape-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.0",
+    "@types/react": "18.0.21",
+    "react-intl": "^6.1.2",
+    "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-intl": "*"
+  }
+}
