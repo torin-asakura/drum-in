@@ -27,6 +27,8 @@ const backgrounds = {
   greenBlueCirclesImage: 'url("/img/bg-middle-fifth-dimension-page.png")',
   greenBlueSemicircleImage: 'url("/img/bg-footer-fifth-dimension-page.png")',
   greenBlueTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer-fifth-dimension-page.png")',
+  progressLineWithBlackBackground: 'url("/img/progress-horizontal-section.png")',
+  mobileProgressLineWithBlackBackground: 'url("/img/mobile-progress-section.png")',
 }
 
 export { backgrounds }

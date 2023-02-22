@@ -7,7 +7,6 @@ import { useState }                          from 'react'
 import { CoursePrograms as CCoursePrograms } from '@shared/data'
 import { BullhornIcon }                      from '@ui/icons'
 import { LightningIcon }                     from '@ui/icons'
-import { ProgressIcon }                      from '@ui/icons'
 import { Box }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
 import { Layout }                            from '@ui/layout'
@@ -50,114 +49,85 @@ const ContentCourse = () => {
   }
 
   return (
-    <Box position='relative' flexShrink={0} height='100%' width={3630}>
-      <Layout flexBasis={695} flexShrink={0} />
-      <Column flexShrink={0} justifyContent='center' width='100%'>
-        <Row flexShrink={0} alignItems='end'>
-          <Box flexDirection='column' flexShrink={0}>
-            <Box>
-              <Box>
-                <BullhornIcon width={83} height={74} />
-              </Box>
-              <Layout flexBasis={27} flexShrink={0} />
-              <Column alignItems='end'>
-                <Box>
-                  <Text
-                    whiteSpace='nowrap'
-                    textTransform='uppercase'
-                    fontFamily='secondary'
-                    fontWeight='bold'
-                    fontSize='moderate'
-                    lineHeight='default'
-                    color='text.smokyWhite'
-                  >
-                    {texts.numberVideoTutorials}
-                  </Text>
-                </Box>
-                <Layout flexBasis={16} flexShrink={0} />
-                <Box>
-                  <Text
-                    fontWeight='medium'
-                    fontSize='large'
-                    lineHeight='primary'
-                    color='text.smokyWhite'
-                  >
-                    {texts.numberOfMonths}
-                  </Text>
-                </Box>
-              </Column>
+    <Column
+      flexShrink={0}
+      width={{ _: 0, tablet: 0, laptop: 2190, wide: 2430 }}
+      justifyContent='center'
+    >
+      <Row flexShrink={0} alignItems='end'>
+        <Box flexDirection='column' flexShrink={0}>
+          <Box>
+            <Box width={{ _: 0, tablet: 0, laptop: 73, wide: 83 }}>
+              <BullhornIcon width='100%' height='auto' />
             </Box>
-            <Layout flexBasis={93} flexShrink={0} />
-          </Box>
-          <Layout flexBasis={442} flexShrink={0} />
-          <Column width={262} flexShrink={0}>
-            {texts.secondListOfTopics.split(';').map((element) => (
+            <Layout flexBasis={{ _: 0, tablet: 0, laptop: 20, wide: 27 }} flexShrink={0} />
+            <Column alignItems='end'>
               <Box>
                 <Text
-                  fontWeight='medium'
-                  fontSize='large'
-                  lineHeight='primary'
-                  color='text.smokyWhite'
-                >
-                  <FormattedMessage id='landing_program_horizontal.dot' defaultMessage='•' />
-                  <Space />
-                  {element}
-                </Text>
-              </Box>
-            ))}
-          </Column>
-        </Row>
-        <Layout flexBasis={153} flexShrink={0} />
-        <Row flexShrink={0}>
-          <Layout flexBasis={545} flexShrink={0} />
-          <Box width={504} flexShrink={0} flexDirection='column'>
-            <Layout flexBasis={83} flexShrink={0} />
-            <Column>
-              {texts.firstListOfTopics.split(';').map((element) => (
-                <Box>
-                  <Text
-                    fontWeight='medium'
-                    fontSize='large'
-                    lineHeight='primary'
-                    color='text.smokyWhite'
-                  >
-                    <FormattedMessage id='landing_program_horizontal.dot' defaultMessage='•' />
-                    <Space />
-                    {element}
-                  </Text>
-                </Box>
-              ))}
-            </Column>
-          </Box>
-          <Layout flexBasis={375} flexShrink={0} />
-          <Box flexShrink={0} flexDirection='column'>
-            <Layout flexBasis={73} flexShrink={0} />
-            <Box alignItems='center'>
-              <Box>
-                <LightningIcon width={120} height={87} />
-              </Box>
-              <Layout flexBasis={16} flexShrink={0} />
-              <Box>
-                <Text
+                  whiteSpace='nowrap'
                   textTransform='uppercase'
                   fontFamily='secondary'
                   fontWeight='bold'
-                  fontSize='moderate'
+                  fontSize={{
+                    _: 'semiModerate',
+                    tablet: 'semiModerate',
+                    laptop: 'semiModerate',
+                    wide: 'moderate',
+                  }}
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  <FormattedMessage id='landing_program_horizontal.bonus' defaultMessage='Бонус' />
+                  {texts.numberVideoTutorials}
                 </Text>
               </Box>
-            </Box>
-          </Box>
-          <Layout flexBasis={420} flexShrink={0} />
-          <Column width={293} flexShrink={0}>
-            {texts.thirdListOfTopics.split(';').map((element) => (
+              <Layout flexBasis={{ _: 0, tablet: 0, laptop: 12, wide: 16 }} flexShrink={0} />
               <Box>
                 <Text
                   fontWeight='medium'
-                  fontSize='large'
+                  fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
+                  lineHeight='primary'
+                  color='text.smokyWhite'
+                >
+                  {texts.numberOfMonths}
+                </Text>
+              </Box>
+            </Column>
+          </Box>
+          <Layout flexBasis={93} flexShrink={0} />
+        </Box>
+        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
+        <Column width={{ _: 0, tablet: 0, laptop: 230, wide: 262 }} flexShrink={0}>
+          {texts.secondListOfTopics.split(';').map((element) => (
+            <Box>
+              <Text
+                fontWeight='medium'
+                fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
+                lineHeight='primary'
+                color='text.smokyWhite'
+              >
+                <FormattedMessage id='landing_program_horizontal.dot' defaultMessage='•' />
+                <Space />
+                {element}
+              </Text>
+            </Box>
+          ))}
+        </Column>
+      </Row>
+      <Layout flexBasis={{ _: 0, tablet: 0, laptop: 130, wide: 153 }} flexShrink={0} />
+      <Row flexShrink={0}>
+        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 425, wide: 545 }} flexShrink={0} />
+        <Box
+          width={{ _: 0, tablet: 0, laptop: 440, wide: 504 }}
+          flexShrink={0}
+          flexDirection='column'
+        >
+          <Layout flexBasis={83} flexShrink={0} />
+          <Column>
+            {texts.firstListOfTopics.split(';').map((element) => (
+              <Box>
+                <Text
+                  fontWeight='medium'
+                  fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
@@ -168,13 +138,48 @@ const ContentCourse = () => {
               </Box>
             ))}
           </Column>
-        </Row>
-      </Column>
-      <Layout flexBasis={490} flexShrink={0} />
-      <Box position='absolute' top='35%' left={0}>
-        <ProgressIcon width={3630} height='auto' />
-      </Box>
-    </Box>
+        </Box>
+        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 350, wide: 375 }} flexShrink={0} />
+        <Box flexShrink={0} flexDirection='column'>
+          <Layout flexBasis={73} flexShrink={0} />
+          <Box alignItems='center'>
+            <Box width={{ _: 0, tablet: 0, laptop: 110, wide: 120 }}>
+              <LightningIcon width='100%' height='auto' />
+            </Box>
+            <Layout flexBasis={16} flexShrink={0} />
+            <Box>
+              <Text
+                textTransform='uppercase'
+                fontFamily='secondary'
+                fontWeight='bold'
+                fontSize={{ _: 'small', tablet: 'small', laptop: 'small', wide: 'moderate' }}
+                lineHeight='default'
+                color='text.smokyWhite'
+              >
+                <FormattedMessage id='landing_program_horizontal.bonus' defaultMessage='Бонус' />
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
+        <Column width={{ _: 0, tablet: 0, laptop: 255, wide: 293 }} flexShrink={0}>
+          {texts.thirdListOfTopics.split(';').map((element) => (
+            <Box>
+              <Text
+                fontWeight='medium'
+                fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
+                lineHeight='primary'
+                color='text.smokyWhite'
+              >
+                <FormattedMessage id='landing_program_horizontal.dot' defaultMessage='•' />
+                <Space />
+                {element}
+              </Text>
+            </Box>
+          ))}
+        </Column>
+      </Row>
+    </Column>
   )
 }
 
