@@ -96,7 +96,7 @@ const ContentCourse = () => {
           <Layout flexBasis={93} flexShrink={0} />
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
-        <Column width={{ _: 0, tablet: 0, laptop: 230, wide: 262 }} flexShrink={0}>
+        <Column width={{ _: 0, tablet: 0, laptop: 270, wide: 300 }} flexShrink={0}>
           {texts.secondListOfTopics.split(';').map((element) => (
             <Box>
               <Text
@@ -162,7 +162,7 @@ const ContentCourse = () => {
           </Box>
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
-        <Column width={{ _: 0, tablet: 0, laptop: 255, wide: 293 }} flexShrink={0}>
+        <Column width={{ _: 0, tablet: 0, laptop: 255, wide: 305 }} flexShrink={0}>
           {texts.thirdListOfTopics.split(';').map((element) => (
             <Box>
               <Text

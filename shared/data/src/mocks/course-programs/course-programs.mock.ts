@@ -11,6 +11,14 @@ const courseProgramsMock: CoursePrograms[] = [
       'Двудольность;Конокол 2;Триоль-Нетриоль;Чтение восьмых триолей;Чтение 16х триолей',
     pathPage: '/feeling-of-time',
   },
+  {
+    numberVideoTutorials: '20 онлайн-занятий',
+    numberOfMonths: '5 месяцев',
+    firstListOfTopics: 'Счёт 12345 доли и акценты;Чтение 5/8;Ключ 3-4;Компинг на фортепиано',
+    secondListOfTopics: 'Конокол 3;Фразы;Ключ 2-3 на фортепиано;Конокол 4',
+    thirdListOfTopics: 'Свинг-соло;Чтение 12/8;Конокол 6;Пирамидка с квинтолями',
+    pathPage: '/fifth-dimension',
+  },
 ]
 
 export { courseProgramsMock }

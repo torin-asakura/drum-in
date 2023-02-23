@@ -18,7 +18,7 @@ const HeroCourse = () => {
         gradient={getUi(router.route).gradientDesktop}
         backgroundSize={getUi(router.route).backgroundSize}
         backgroundRepeat='no-repeat'
-        backgroundPosition={getUi(router.route).backgroundPosition}
+        backgroundPosition={getUi(router.route).backgroundPositionDesktop}
       >
         <Components id={getUi(router.route).components} />
       </Background>
@@ -29,7 +29,7 @@ const HeroCourse = () => {
         gradient={getUi(router.route).gradientMobile}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
-        backgroundPosition='right center'
+        backgroundPosition={getUi(router.route).backgroundPositionMobile}
       >
         <Components id={getUi(router.route).components} />
       </Background>
