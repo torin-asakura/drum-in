@@ -35,6 +35,7 @@ const Content: FC<ContentProps> = ({ id }) => {
       <>
         <BannerWithTagsBlock />
         <AdvantagesBlock />
+        <ProgramHorizontalBlock />
       </>
     )
 
