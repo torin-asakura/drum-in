@@ -11,7 +11,7 @@ import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
 import { useHover }           from '@ui/utils'
 
-import { FiguresDesktop }     from './figures-desktop'
+import { Figures }     from './figures'
 import { Specifications }     from './specifications'
 import { Title }              from './title'
 
@@ -146,7 +146,7 @@ const PriceBlock = () => {
               <Layout flexBasis={[23, 48, 74]} />
             </Column>
             <Layout flexBasis={24} flexShrink={0} />
-            <FiguresDesktop />
+            <Figures />
           </Box>
           <Layout flexBasis={[24, 32, 120]} />
         </Column>

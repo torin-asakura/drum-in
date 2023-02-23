@@ -6,7 +6,7 @@ import { Rectangle } from '@ui/figures'
 import { Square }    from '@ui/figures'
 import { Box }       from '@ui/layout'
 
-const FiguresDesktop = () => {
+const Figures = () => {
   const { formatMessage } = useIntl()
 
   return (
@@ -54,4 +54,4 @@ const FiguresDesktop = () => {
     </Box>
   )
 }
-export { FiguresDesktop }
+export { Figures }
