@@ -31,6 +31,9 @@ const getUi = (idPage) => {
       gradientDesktop: 'transparentPinkBlueImageGradient',
       gradientMobile: 'pinkBlueSmallImageGradient',
       components: 'TargetAudience',
+      backgroundSize: '100%',
+      backgroundPositionDesktop: 'center top',
+      backgroundPositionMobile: 'center top',
     }
 
   return {

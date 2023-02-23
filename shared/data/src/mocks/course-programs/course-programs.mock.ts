@@ -19,6 +19,15 @@ const courseProgramsMock: CoursePrograms[] = [
     thirdListOfTopics: 'Свинг-соло;Чтение 12/8;Конокол 6;Пирамидка с квинтолями',
     pathPage: '/fifth-dimension',
   },
+  {
+    numberVideoTutorials: '20 онлайн-занятий',
+    numberOfMonths: '5 месяцев',
+    firstListOfTopics: 'Счёт 1234567;Ключ 3-4 на фортепиано;Конокол 5;Трёхдольность',
+    secondListOfTopics: 'Чтение 7/8;Чтение 9/8;Пирамидка с квинтолями на фортепиано;Клаве',
+    thirdListOfTopics:
+      'Скет — 16-е триоли в свинге;Конокол Bonus;Пирамидка с септолями;Seven Beat Cycle',
+    pathPage: '/seventh-heaven',
+  },
 ]
 
 export { courseProgramsMock }
