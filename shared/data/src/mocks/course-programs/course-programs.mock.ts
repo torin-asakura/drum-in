@@ -36,6 +36,14 @@ const courseProgramsMock: CoursePrograms[] = [
     thirdListOfTopics: 'Конокол 5;Конокол 6',
     pathPage: '/connacol',
   },
+  {
+    numberVideoTutorials: '16 онлайн-занятий',
+    numberOfMonths: '4 месяца',
+    firstListOfTopics: 'Конокол 1;Конокол 2',
+    secondListOfTopics: 'Конокол 3;Конокол 4',
+    thirdListOfTopics: 'Конокол 5;Конокол 6',
+    pathPage: '/polyrhythmic-keys',
+  },
 ]
 
 export { courseProgramsMock }

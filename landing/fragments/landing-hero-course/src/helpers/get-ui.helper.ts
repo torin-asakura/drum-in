@@ -44,23 +44,14 @@ const getUi = (idPage) => {
       backgroundPositionDesktop: 'center top',
       backgroundPositionMobile: 'center top',
     }
-  if (idPage === '/seventh-heaven')
-    return {
-      gradientDesktop: 'transparentPinkBlueImageGradient',
-      gradientMobile: 'pinkBlueSmallImageGradient',
-      components: 'TargetAudience',
-    }
-  if (idPage === '/connacol')
-    return {
-      gradientDesktop: 'transparentPurpleBlueImageGradient',
-      gradientMobile: 'purpleBlueSmallImageGradient',
-      components: 'Advantages',
-    }
   if (idPage === '/polyrhythmic-keys')
     return {
       gradientDesktop: 'transparentPurpleBlueImageGradient',
       gradientMobile: 'purpleBlueSmallImageGradient',
       components: 'BannerWithoutTape',
+      backgroundSize: '100%',
+      backgroundPositionDesktop: 'center top',
+      backgroundPositionMobile: 'center -60%',
     }
 
   return {

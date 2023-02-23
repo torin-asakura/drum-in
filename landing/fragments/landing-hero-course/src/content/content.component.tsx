@@ -40,15 +40,14 @@ const Content: FC<ContentProps> = ({ id }) => {
       </>
     )
 
-  if (id === 'Advantages')
+  if (id === 'BannerWithoutTape')
     return (
       <>
-        <BannerWithTagsBlock />
-        <AdvantagesBlock />
+        <BannerWithoutTapeBlock />
+        <ProgramHorizontalBlock />
       </>
     )
 
-  if (id === 'BannerWithoutTape') return <BannerWithoutTapeBlock />
 
   return (
     <>
