@@ -1692,6 +1692,7 @@ __metadata:
     "@types/react": 18.0.21
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: ^6.1.2
     styled-system: ^5.1.5

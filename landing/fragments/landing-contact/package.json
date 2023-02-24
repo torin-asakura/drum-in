@@ -5,6 +5,7 @@
   "dependencies": {
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
+    "@ui/link": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
