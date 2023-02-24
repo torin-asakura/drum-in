@@ -9,7 +9,7 @@ import { Box }          from '@ui/layout'
 
 import { FiguresProps } from './figures.interfaces'
 
-const FiguresDesktop: FC<FiguresProps> = ({
+const Figures: FC<FiguresProps> = ({
   quantityVideoLessons,
   quantityMonths,
   firstLineCircle,
@@ -52,4 +52,4 @@ const FiguresDesktop: FC<FiguresProps> = ({
     </Box>
   )
 }
-export { FiguresDesktop }
+export { Figures }

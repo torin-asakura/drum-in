@@ -14,7 +14,7 @@ import { Space }                       from '@ui/text'
 import { Text }                        from '@ui/text'
 import { useMockedPriceCourse }        from '@shared/data'
 
-import { FiguresDesktop }              from './figures-desktop'
+import { Figures }                     from './figures'
 import { FullPrice }                   from './full-price'
 import { PriceProps }                  from './price.interfaces'
 import { Specifications }              from './specifications'
@@ -152,7 +152,7 @@ const PriceBlock = () => {
               <Layout flexBasis={[23, 48, 74]} />
             </Column>
             <Layout flexBasis={24} flexShrink={0} />
-            <FiguresDesktop
+            <Figures
               quantityMonths={texts.quantityMonths}
               quantityVideoLessons={texts.quantityVideoLessons}
               firstLineCircle={texts.firstLineCircle}

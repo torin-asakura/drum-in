@@ -100,5 +100,7 @@
   "landing_contact.nickname_telegram": "@marinaaa",
   "landing_contact.vk": "Вконтакте",
   "landing_contact.vk_com": "vk.com/",
-  "landing_contact.nickname_vk": "drumschool"
+  "landing_contact.nickname_vk": "drumschool",
+  "landing_program_horizontal.dot": "•",
+  "landing_program_horizontal.bonus": "Бонус"
 }

@@ -22,6 +22,8 @@ const backgrounds = {
   verticalTransparentToBlackGradient:
     'linear-gradient(360deg, #0F0C0C 0%, rgba(15, 12, 12, 0) 100%)',
   purpleBlueAngularGradient: 'url("/img/bg-contact-page.png")',
+  progressLineWithBlackBackground: 'url("/img/progress-horizontal-section.png")',
+  mobileProgressLineWithBlackBackground: 'url("/img/mobile-progress-section.png")',
 }
 
 export { backgrounds }
