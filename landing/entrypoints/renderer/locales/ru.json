@@ -93,6 +93,14 @@
   "landing_target_audience.just_starting_your_musical_journey": "Только начинаете свой музыкальный путь",
   "landing_target_audience.do_you_feel_a_lack": "Ощущаете непонимание музыкального времени",
   "landing_target_audience.are_you_experiencing_difficulties": "Испытываете сложности при удержании темпа и снятии партий",
+  "landing_contact.contact": "контакты",
+  "landing_contact.mail": "Почта",
+  "landing_contact.email_address": "marina@drum.ru",
+  "landing_contact.telegram": "Телеграм",
+  "landing_contact.nickname_telegram": "@marinaaa",
+  "landing_contact.vk": "Вконтакте",
+  "landing_contact.vk_com": "vk.com/",
+  "landing_contact.nickname_vk": "drumschool",
   "landing_program_horizontal.dot": "•",
   "landing_program_horizontal.bonus": "Бонус"
 }

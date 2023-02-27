@@ -1,19 +1,21 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { useIntl }            from 'react-intl'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Logo }             from '@ui/logo'
-import { Text }             from '@ui/text'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Logo }               from '@ui/logo'
+import { Text }               from '@ui/text'
 
-import { BottomRow }        from './bottom-row'
-import { ButtonUp }         from './button-up'
-import { LinkSocial }       from './link-social'
+import { BottomRow }          from './bottom-row'
+import { ButtonUp }           from './button-up'
+import { ContentFooterProps } from './content-footer.interfaces'
+import { LinkSocial }         from './link-social'
 
-const ContentFooter = () => {
+const ContentFooter: FC<ContentFooterProps> = ({ buttonUp }) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -136,7 +138,7 @@ const ContentFooter = () => {
               />
             </Column>
             <Layout flexGrow={[0, 0, 4]} />
-            <ButtonUp />
+            <ButtonUp buttonUp={buttonUp} />
           </Box>
           <Layout flexBasis={[83, 83, 77]} />
           <BottomRow />

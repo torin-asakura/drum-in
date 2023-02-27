@@ -6,6 +6,7 @@ import { Circle }       from '@ui/figures'
 import { Rectangle }    from '@ui/figures'
 import { Square }       from '@ui/figures'
 import { Box }          from '@ui/layout'
+
 import { FiguresProps } from './figures.interfaces'
 
 const Figures: FC<FiguresProps> = ({

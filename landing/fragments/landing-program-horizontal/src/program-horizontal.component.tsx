@@ -1,7 +1,7 @@
 import React                   from 'react'
 
 import { Background }          from '@ui/background'
-import { ArrowLeftBottomIcon } from '@ui/icons'
+import { ArrowTopDownIcon }    from '@ui/icons'
 import { ProgramIcon }         from '@ui/icons'
 import { Box }                 from '@ui/layout'
 import { Row }                 from '@ui/layout'
@@ -63,7 +63,7 @@ const ProgramHorizontalBlock = () => (
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 627 }} flexShrink={0} />
               <Column justifyContent='end'>
                 <Box width={{ _: 0, tablet: 0, laptop: 170, wide: 283 }}>
-                  <ArrowLeftBottomIcon width='100%' height='auto' />
+                  <ArrowTopDownIcon width='100%' height='auto' />
                 </Box>
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 160, wide: 230 }} flexShrink={0} />
               </Column>

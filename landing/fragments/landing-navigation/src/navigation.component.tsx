@@ -76,7 +76,7 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
               </Box>
               <Layout flexBasis={[0, 45, 70]} />
               <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
-                <NextLink path='/'>
+                <NextLink path='/contact'>
                   <Text
                     color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
                     style={{ transition: '0.3s' }}
