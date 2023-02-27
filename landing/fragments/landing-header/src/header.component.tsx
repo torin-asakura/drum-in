@@ -98,7 +98,6 @@ const HeaderBlock = () => {
                       fontWeight='semiBold'
                       fontSize='medium'
                       lineHeight='default'
-                      color='smokyWhite'
                     >
                       <FormattedMessage id='landing_header.courses' defaultMessage='Курсы' />
                     </Text>
@@ -108,7 +107,10 @@ const HeaderBlock = () => {
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
               <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
                 <NextLink path='/'>
-                  <Text color={hoverLink ? 'text.purple' : 'text.smokyWhite'} style={{ transition: '0.3s' }}>
+                  <Text
+                    color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
+                    style={{ transition: '0.3s' }}
+                  >
                     <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
                   </Text>
                 </NextLink>

@@ -16,7 +16,7 @@ import { contentStyles }    from './button.styles'
 import { fillStyles }       from './button.styles'
 import { appearanceStyles } from './styles'
 
-export const ButtonElement = styled('button')(
+export const ButtonElement = styled('button')<any>(
   baseStyles,
   contentStyles,
   shapeStyles,

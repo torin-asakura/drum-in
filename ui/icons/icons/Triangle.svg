@@ -1,0 +1,4 @@
+<svg viewBox="0 0 100 70" width="27" height="30">
+    <polygon points="0,45 60,45 30,0" fill='#0F0C0C' stroke="#0F0C0C" stroke-width="5" stroke-linejoin='round' />
+    <polygon points="4,48 56,48 30,6" fill='#F2F2F2' />
+</svg>

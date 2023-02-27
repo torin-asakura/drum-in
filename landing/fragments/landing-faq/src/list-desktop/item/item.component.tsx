@@ -12,11 +12,12 @@ import { useHover }                    from '@ui/utils'
 import { usePopover }                  from '@ui/utils'
 
 import { ItemProps }                   from './item.interfaces'
+import { MotionBox }                   from './styles'
 import { getColor }                    from '../../helpers'
 
-const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setActive }) => {
+const Item: FC<ItemProps> = ({ question, answer, active, setActive, positionVertical }) => {
   const [elemHover, elemHoverProps] = useHover()
-  const { isOpen } = usePopover('bottom-center', 0, 'hover')
+  const { triggerProps, layerProps, isOpen, render } = usePopover(positionVertical, 9, 'hover')
 
   return (
     <Box
@@ -37,7 +38,7 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
           {question}
         </Text>
       </Box>
-      <Box {...elemHoverProps} position='relative'>
+      <Box {...elemHoverProps} {...triggerProps}>
         <Box
           onMouseEnter={() => setActive(true)}
           onMouseLeave={() => setActive(false)}
@@ -48,7 +49,7 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
           justifyContent='center'
           borderRadius='semiMedium'
           backgroundColor={getColor(isOpen, active, elemHover).backgroundIcon}
-          style={{ transition: '0.2s',  cursor: 'pointer', }}
+          style={{ transition: '0.2s', cursor: 'pointer' }}
         >
           <InvertedExclamationMarkIcon
             color={getColor(isOpen, active, elemHover).icon}
@@ -56,40 +57,48 @@ const Item: FC<ItemProps> = ({ question, answer, positionVertical, active, setAc
             height={17}
           />
         </Box>
-        <Box
-          zIndex={elemHover ? 2 : -1}
-          opacity={elemHover ? 1 : 0}
-          position='absolute'
-          left={0}
-          top={positionVertical === 'bottom' ? 42 : 'auto'}
-          bottom={positionVertical === 'top' ? 42 : 'auto'}
-          width={750}
-          border='mediumBoldBlackAmber'
-          borderRadius='extra'
-          backgroundColor='background.smokyWhite'
-          style={{ transition: '0.3s' }}
-        >
-          <Layout flexBasis={32} flexShrink={0} />
-          <Column width='100%'>
-            <Layout flexBasis={32} />
-            <Box>
-              <HashtagIcon width={40} height={40} />
+        {render(
+          <MotionBox
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.1,
+            }}
+            zIndex={50}
+            {...layerProps}
+          >
+            <Box
+              onMouseEnter={() => setActive(true)}
+              onMouseLeave={() => setActive(false)}
+              width={750}
+              border='mediumBoldBlackAmber'
+              borderRadius='extra'
+              backgroundColor='background.smokyWhite'
+            >
+              <Layout flexBasis={32} flexShrink={0} />
+              <Column width='100%'>
+                <Layout flexBasis={32} />
+                <Box>
+                  <HashtagIcon width={40} height={40} />
+                </Box>
+                <Layout flexBasis={32} flexShrink={0} />
+                <Row>
+                  <Text
+                    fontWeight='medium'
+                    fontSize='large'
+                    lineHeight='primary'
+                    color='text.blackAmber'
+                  >
+                    {answer}
+                  </Text>
+                </Row>
+                <Layout flexBasis={32} />
+              </Column>
+              <Layout flexBasis={32} flexShrink={0} />
             </Box>
-            <Layout flexBasis={32} flexShrink={0} />
-            <Row>
-              <Text
-                fontWeight='medium'
-                fontSize='large'
-                lineHeight='primary'
-                color='text.blackAmber'
-              >
-                {answer}
-              </Text>
-            </Row>
-            <Layout flexBasis={32} />
-          </Column>
-          <Layout flexBasis={32} flexShrink={0} />
-        </Box>
+          </MotionBox>
+        )}
       </Box>
     </Box>
   )

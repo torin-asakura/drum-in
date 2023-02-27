@@ -7,4 +7,5 @@ export interface Navigation {
   quantityMonths: string
   textMonths: string
   itemId: string
+  path: string
 }

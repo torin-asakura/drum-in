@@ -1,7 +1,7 @@
 export interface ItemProps {
   question: string
   answer: string
-  positionVertical: 'top' | 'bottom'
+  positionVertical: 'top-start' | 'bottom-start'
   active: boolean
   setActive: (newState: boolean) => any
 }

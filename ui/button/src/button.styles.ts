@@ -1,4 +1,3 @@
-import { createBaseStyles }    from '@atls-ui-parts/button'
 import { createShapeStyles }   from '@atls-ui-parts/button'
 import { createContentStyles } from '@atls-ui-parts/button'
 
@@ -6,6 +5,8 @@ import { styleFn }             from 'styled-system'
 import { prop }                from 'styled-tools'
 import { switchProp }          from 'styled-tools'
 import { ifProp }              from 'styled-tools'
+
+import { getBaseStyles }       from './styles'
 
 export const fillStyles: styleFn = ifProp(prop('fill', false), { width: '100%' })
 
@@ -58,6 +59,13 @@ const massivePaddingGiantHeightStyles = createShapeStyles({
   paddingRight: 25.5,
 })
 
+const withoutPaddingSemiGiantHeightStyles = createShapeStyles({
+  size: 80,
+  rounding: prop('theme.radii.extra') as unknown as number,
+  paddingLeft: 0,
+  paddingRight: 0,
+})
+
 const semiMediumPaddingHugeHeightStyles = createShapeStyles({
   size: 71,
   rounding: prop('theme.radii.max') as unknown as number,
@@ -93,7 +101,14 @@ const littlePaddingSemiRegularHeightStyles = createShapeStyles({
   paddingRight: 8,
 })
 
-export const baseStyles = createBaseStyles()
+const withoutPaddingSemiRegularHeightStyles = createShapeStyles({
+  size: 48,
+  rounding: prop('theme.radii.medium') as unknown as number,
+  paddingLeft: 0,
+  paddingRight: 0,
+})
+
+export const baseStyles = getBaseStyles()
 export const contentStyles = createContentStyles()
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
@@ -109,4 +124,6 @@ export const shapeStyles = switchProp(prop('size', 'normal'), {
   massivePaddingGiantHeight: massivePaddingGiantHeightStyles,
   semiMediumPaddingHugeHeight: semiMediumPaddingHugeHeightStyles,
   littlePaddingSemiRegularHeight: littlePaddingSemiRegularHeightStyles,
+  withoutPaddingSemiGiantHeight: withoutPaddingSemiGiantHeightStyles,
+  withoutPaddingSemiRegularHeight: withoutPaddingSemiRegularHeightStyles,
 })

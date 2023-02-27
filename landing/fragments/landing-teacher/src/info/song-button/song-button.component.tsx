@@ -22,8 +22,6 @@ const SongButton: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
     <>
       <Box
         display={['none', 'none', 'flex']}
-        {...hoverIconProps}
-        border={hoverIcon ? 'mediumBoldSmokyWhite' : 'mediumTransparent'}
         alignSelf='end'
         borderRadius='larger'
         position='relative'
@@ -33,35 +31,38 @@ const SongButton: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
         <Box position='absolute' top={-100} right={-127} style={{ transform: 'rotate(-30deg)' }}>
           <TwistedArrowBottomIcon width={238} height={53} />
         </Box>
-        <Button
-          size='mediumPaddingBigHeight'
-          variant='whiteBackground'
-          fill
-          iconSvg={
-            playSong ? (
-              <PauseIcon width={36} height={36} color={hoverIcon ? 'rgb(242,242,242)' : ''} />
-            ) : (
-              <PlayIcon width={36} height={36} color={hoverIcon ? 'rgb(242,242,242)' : ''} />
-            )
-          }
-          horizontalLocation='right'
-          onClick={() => (playSong ? setPlaySong(false) : setPlaySong(true))}
-        >
-          <Row>
-            <Text
-              textTransform='uppercase'
-              fontWeight='semiBold'
-              fontSize='large'
-              lineHeight='default'
-            >
-              {playSong ? (
-                <FormattedMessage id='landing_teacher.stop' defaultMessage='Остановить' />
+        <Box {...hoverIconProps}>
+          <Button
+            size='mediumPaddingBigHeight'
+            variant='whiteBackground'
+            fill
+            iconSvg={
+              playSong ? (
+                <PauseIcon width={36} height={36} color={hoverIcon ? 'rgb(242,242,242)' : ''} />
               ) : (
-                <FormattedMessage id='landing_teacher.listening' defaultMessage='Прослушать' />
-              )}
-            </Text>
-          </Row>
-        </Button>
+                <PlayIcon width={36} height={36} color={hoverIcon ? 'rgb(242,242,242)' : ''} />
+              )
+            }
+            horizontalLocation='right'
+            onClick={() => (playSong ? setPlaySong(false) : setPlaySong(true))}
+            style={{ borderWidth: '3px' }}
+          >
+            <Row>
+              <Text
+                textTransform='uppercase'
+                fontWeight='semiBold'
+                fontSize='large'
+                lineHeight='default'
+              >
+                {playSong ? (
+                  <FormattedMessage id='landing_teacher.stop' defaultMessage='Остановить' />
+                ) : (
+                  <FormattedMessage id='landing_teacher.listening' defaultMessage='Прослушать' />
+                )}
+              </Text>
+            </Row>
+          </Button>
+        </Box>
       </Box>
       <Box
         {...hoverIconProps}

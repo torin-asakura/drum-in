@@ -17,4 +17,5 @@ export interface ElementProps {
   quantityMonths: string
   textMonths: string
   rectangleColor: string
+  path: string
 }

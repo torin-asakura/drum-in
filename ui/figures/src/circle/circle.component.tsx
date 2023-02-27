@@ -7,8 +7,12 @@ import { Text }        from '@ui/text'
 
 import { CircleProps } from './circle.interfaces'
 
-const Circle: FC<CircleProps> = ({ firstLine, secondLine }) => (
-  <Background gradient='blueWhiteGradient' borderRadius='max'>
+const Circle: FC<CircleProps> = ({ firstLine, secondLine, gradient, rotate = 0 }) => (
+  <Background
+    gradient={gradient || 'blueWhiteGradient'}
+    borderRadius='max'
+    style={{ transform: `rotate(${rotate}deg)` }}
+  >
     <Box
       display='flex'
       flexDirection='column'

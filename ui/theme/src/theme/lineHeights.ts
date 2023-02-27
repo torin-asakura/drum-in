@@ -1,4 +1,5 @@
 const lineHeights = {
+  semiSmall: 0.9,
   default: 1,
   small: 1.1,
   extra: 1.2,

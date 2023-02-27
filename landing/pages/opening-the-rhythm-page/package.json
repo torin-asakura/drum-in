@@ -1,0 +1,31 @@
+{
+  "name": "@landing/opening-the-rhythm-page",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@landing/course-process-fragment": "workspace:0.0.1",
+    "@landing/cta-fragment": "workspace:0.0.1",
+    "@landing/faq": "workspace:0.0.1",
+    "@landing/footer-fragment": "workspace:0.0.1",
+    "@landing/header-fragment": "workspace:0.0.1",
+    "@landing/hero-course-fragment": "workspace:0.0.1",
+    "@landing/price-fragment": "workspace:0.0.1",
+    "@landing/program-fragment": "workspace:0.0.1",
+    "@landing/start-learning-fragment": "workspace:0.0.1",
+    "@landing/teacher-fragment": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@types/react": "18.0.21"
+  },
+  "peerDependencies": {
+    "next": "^12.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intl": "*"
+  }
+}

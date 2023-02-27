@@ -11,6 +11,9 @@ const radii = {
   semiHuge: 32,
   huge: 40,
   semiGiant: 80,
+  giant: 100,
+  gigantic: 300,
+  biggest: 512,
   max: '100%',
 }
 

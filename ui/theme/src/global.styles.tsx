@@ -99,10 +99,6 @@ export const GlobalStyles = () => {
           }
         }
         
-        button, a {
-          transition: 0.2s;
-        }
-        
         .swiper-pagination {
         position: absolute;
         bottom: 0;
@@ -134,6 +130,9 @@ export const GlobalStyles = () => {
       .students-slider-desktop {
         overflow: visible !important;
       }
+      
+      .course-process-slider .swiper-slide,
+      .program-slider .swiper-slide,
       .choose-courses-slider .swiper-slide,
       .students-slider .swiper-slide,
       .students-slider-desktop .swiper-slide,

@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@landing/index-page": "workspace:0.0.1",
+    "@landing/opening-the-rhythm-page": "workspace:0.0.1",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.0",
     "@types/react": "18.0.21",

@@ -33,6 +33,7 @@ const Element: FC<ElementProps> = ({
   rectanglePositionY,
   quantityMonths,
   textMonths,
+  path,
   rectangleColor,
 }) => {
   const [elemHover, elemHoverProps] = useHover()
@@ -106,20 +107,19 @@ const Element: FC<ElementProps> = ({
             </Background>
             <Layout flexBasis={[8, 10, 12]} />
             <Box>
-              <NextLink path='/'>
+              <NextLink path={path}>
                 <Text
                   fontFamily='secondary'
                   fontWeight='bold'
                   fontSize={['medium', 'semiModerate', 'big']}
                 >
-                  {' '}
-                  {title}{' '}
+                  {title}
                 </Text>
               </NextLink>
             </Box>
           </>
         ) : (
-          <NextLink path='/'>
+          <NextLink path={path}>
             <Text
               fontFamily='secondary'
               fontWeight='bold'
