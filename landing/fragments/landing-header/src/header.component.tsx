@@ -3,6 +3,8 @@ import { FormattedMessage }    from 'react-intl'
 import { useState }            from 'react'
 import { useEffect }           from 'react'
 
+import { Consultation }        from '@landing/consultation'
+import { MobileConsultation }  from '@landing/consultation'
 import { NavigationBlock }     from '@landing/navigation-fragment'
 import { Button }              from '@ui/button'
 import { ArrowBottomIcon }     from '@ui/icons'
@@ -21,6 +23,8 @@ const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
   const [hoverArrow, hoverArrowProps] = useHover()
   const [hoverLink, hoverLinkProps] = useHover()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const { scroll } = useLocomotiveScroll()
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
@@ -115,11 +119,43 @@ const HeaderBlock = () => {
                   </Text>
                 </NextLink>
               </Box>
-              <Row justifyContent='end'>
-                <NextLink path='/'>
-                  <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
-                </NextLink>
+              <Row justifyContent='end' display={['none', 'flex', 'flex']}>
+                <Button
+                  size='withoutPaddingMicroHeight'
+                  variant='transparentBackground'
+                  onClick={() => setVisibleModal(true)}
+                >
+                  <Text
+                    textTransform='uppercase'
+                    fontWeight='semiBold'
+                    fontSize={['semiMedium', 'medium', 'medium']}
+                    lineHeight='default'
+                  >
+                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                  </Text>
+                </Button>
               </Row>
+              <Row justifyContent='end' display={['flex', 'none', 'none']}>
+                <Button
+                  size='withoutPaddingMicroHeight'
+                  variant='transparentBackground'
+                  onClick={() => setVisibleModalMobile(true)}
+                >
+                  <Text
+                    textTransform='uppercase'
+                    fontWeight='semiBold'
+                    fontSize={['semiMedium', 'medium', 'medium']}
+                    lineHeight='default'
+                  >
+                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                  </Text>
+                </Button>
+              </Row>
+              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+              <MobileConsultation
+                activeRender={visibleModalMobile}
+                onClose={() => setVisibleModalMobile(false)}
+              />
             </Row>
             <Layout flexBasis={[26, 33, 40]} />
           </Box>

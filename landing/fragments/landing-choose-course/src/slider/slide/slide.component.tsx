@@ -1,20 +1,23 @@
-import React          from 'react'
-import { FC }         from 'react'
-import { useIntl }    from 'react-intl'
+import React                from 'react'
+import { FC }               from 'react'
+import { useState }         from 'react'
+import { useIntl }          from 'react-intl'
 
-import { Button }     from '@ui/button'
-import { Circle }     from '@ui/figures'
-import { Rectangle }  from '@ui/figures'
-import { Square }     from '@ui/figures'
-import { Row }        from '@ui/layout'
-import { Box }        from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { useHover }   from '@ui/utils'
+import { ModalForms }       from '@landing/modal-forms'
+import { ModalMobileForms } from '@landing/modal-forms'
+import { Button }           from '@ui/button'
+import { Circle }           from '@ui/figures'
+import { Rectangle }        from '@ui/figures'
+import { Square }           from '@ui/figures'
+import { Row }              from '@ui/layout'
+import { Box }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Text }             from '@ui/text'
+import { useHover }         from '@ui/utils'
 
-import { SlideLevel } from './slide-with-level'
-import { SlideProps } from './slide.interfaces'
+import { SlideLevel }       from './slide-with-level'
+import { SlideProps }       from './slide.interfaces'
 
 const Slide: FC<SlideProps> = ({
   title,
@@ -35,9 +38,19 @@ const Slide: FC<SlideProps> = ({
   quantityVideoLessons,
   quantityMonths,
   textMonths,
+  display,
+  titleModal,
+  courseContent,
+  finalPriceForOneTimePayment,
+  monthlyPayment,
+  installmentDuration,
+  finalPriceForInstallment,
+  benefit,
 }) => {
   const { formatMessage } = useIntl()
   const [colorBorder, colorBorderProps] = useHover()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   if (level) {
     return (
@@ -54,8 +67,20 @@ const Slide: FC<SlideProps> = ({
         rectanglePositionX={rectanglePositionX}
         rectanglePositionY={rectanglePositionY}
         quantityMonths={quantityMonths}
+        circlePositionX={circlePositionX}
+        circlePositionY={circlePositionY}
+        circleFirstLine={circleFirstLine}
+        circleSecondLine={circleSecondLine}
         textMonths={textMonths}
         rectangleColor={rectangleColor}
+        display={display}
+        titleModal={titleModal}
+        courseContent={courseContent}
+        finalPriceForOneTimePayment={finalPriceForOneTimePayment}
+        finalPriceForInstallment={finalPriceForInstallment}
+        monthlyPayment={monthlyPayment}
+        installmentDuration={installmentDuration}
+        benefit={benefit}
       />
     )
   }
@@ -133,6 +158,7 @@ const Slide: FC<SlideProps> = ({
                 display={['none', 'none', 'flex']}
                 borderRadius='extra'
                 border={colorBorder ? 'normalSmokyWhite' : 'normalBoldDark'}
+                onClick={() => setVisibleModal(true)}
                 {...colorBorderProps}
               >
                 <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
@@ -141,13 +167,54 @@ const Slide: FC<SlideProps> = ({
                   </Text>
                 </Button>
               </Box>
-              <Row display={['flex', 'flex', 'none']}>
-                <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
+              <Row display={['none', 'flex', 'none']}>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModal(true)}
+                >
                   <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
                     {price}
                   </Text>
                 </Button>
               </Row>
+              <Row display={['flex', 'none', 'none']}>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModalMobile(true)}
+                >
+                  <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
+                    {price}
+                  </Text>
+                </Button>
+              </Row>
+              <ModalForms
+                activeRender={visibleModal}
+                onClose={() => setVisibleModal(false)}
+                display={display}
+                title={titleModal}
+                courseContent={courseContent}
+                finalPriceForOneTimePayment={finalPriceForOneTimePayment}
+                monthlyPayment={monthlyPayment}
+                installmentDuration={installmentDuration}
+                finalPriceForInstallment={finalPriceForInstallment}
+                benefit={benefit}
+              />
+              <ModalMobileForms
+                activeRender={visibleModalMobile}
+                onClose={() => setVisibleModalMobile(false)}
+                display={display}
+                title={titleModal}
+                courseContent={courseContent}
+                finalPriceForOneTimePayment={finalPriceForOneTimePayment}
+                monthlyPayment={monthlyPayment}
+                installmentDuration={installmentDuration}
+                finalPriceForInstallment={finalPriceForInstallment}
+                benefit={benefit}
+              />
               <Layout flexBasis={[20, 28, 36]} />
             </Column>
             <Layout flexBasis={[15, 26, 32]} flexShrink={0} />

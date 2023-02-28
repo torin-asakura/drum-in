@@ -27,26 +27,30 @@ const Figures: FC<FiguresProps> = ({
     <Box display={['none', 'none', 'flex']}>
       <Box position='absolute' left={20} bottom={20}>
         <Square
-          firstLine={quantityVideoLessons}
+          firstLine={quantityVideoLessons || ''}
           secondLine={formatMessage({
             id: 'landing_price.video_lessons',
             defaultMessage: 'видео-уроков',
           })}
-          rotate={squareRotate}
+          rotate={squareRotate || 0}
         />
       </Box>
       <Box position='absolute' left={205} bottom={1}>
-        <Circle firstLine={firstLineCircle} secondLine={secondLineCircle} rotate={circleRotate} />
+        <Circle
+          firstLine={firstLineCircle}
+          secondLine={secondLineCircle || ''}
+          rotate={circleRotate}
+        />
       </Box>
       <Box position='absolute' right={rectanglePositionX} bottom={rectanglePositionY}>
         <Rectangle
-          color={backgroundRectangle}
-          firstLine={quantityMonths}
+          color={backgroundRectangle || ''}
+          firstLine={quantityMonths || ''}
           secondLine={formatMessage({
             id: 'landing_price.months',
             defaultMessage: 'месяцев',
           })}
-          rotate={rectangleRotate}
+          rotate={rectangleRotate || 0}
         />
       </Box>
     </Box>

@@ -1,19 +1,22 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { forwardRef }       from 'react'
+import React                  from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { useState }           from 'react'
+import { forwardRef }         from 'react'
 
-import { Button }           from '@ui/button'
-import { PencilIcon }       from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
-import { useHover }         from '@ui/utils'
+import { Consultation }       from '@landing/consultation'
+import { MobileConsultation } from '@landing/consultation'
+import { Button }             from '@ui/button'
+import { PencilIcon }         from '@ui/icons'
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Space }              from '@ui/text'
+import { Text }               from '@ui/text'
 
 const CtaBlock = forwardRef(({ data }: any, ref: any) => {
-  const [hoverElem, hoverElemProps] = useHover()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   return (
     <Row justifyContent='center' ref={ref}>
@@ -79,14 +82,14 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                 </Text>
               </Box>
               <Layout flexBasis={[20, 26, 32]} />
-              <Box
-                display={['none', 'flex', 'flex']}
-                {...hoverElemProps}
-                border={hoverElem ? 'mediumBoldSmokyWhite' : 'mediumTransparent'}
-                borderRadius='larger'
-                width={311}
-              >
-                <Button size='mediumPaddingBigHeight' variant='whiteBackground' fill>
+              <Box display={['none', 'flex', 'flex']} width={318}>
+                <Button
+                  size='mediumPaddingBigHeight'
+                  variant='whiteBackground'
+                  style={{ borderWidth: '4px' }}
+                  fill
+                  onClick={() => setVisibleModal(true)}
+                >
                   <Text
                     textTransform='uppercase'
                     fontWeight='semiBold'
@@ -101,7 +104,12 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                 </Button>
               </Box>
               <Box display={['flex', 'none', 'none']} width='100%'>
-                <Button size='withoutPaddingMediumHeight' variant='whiteBackground' fill>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='whiteBackground'
+                  fill
+                  onClick={() => setVisibleModalMobile(true)}
+                >
                   <Text
                     textTransform='uppercase'
                     fontWeight='semiBold'
@@ -115,6 +123,11 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   </Text>
                 </Button>
               </Box>
+              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+              <MobileConsultation
+                activeRender={visibleModalMobile}
+                onClose={() => setVisibleModalMobile(false)}
+              />
             </Column>
           </Row>
           <Layout flexBasis={[32, 50, 70]} />

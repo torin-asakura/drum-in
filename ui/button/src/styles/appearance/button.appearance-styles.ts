@@ -266,6 +266,84 @@ const appearanceDarkToPurpleBackgroundWithWhiteBorderDisabledStyles = createAppe
   borderColor: prop('theme.colors.button.darkToPurpleBackgroundWithWhiteBorder.disabled.border'),
 })
 
+const appearanceSmokyWhiteBackgroundDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.smokyWhiteBackground.default.font'),
+  backgroundColor: prop('theme.colors.button.smokyWhiteBackground.default.background'),
+  borderColor: prop('theme.colors.button.smokyWhiteBackground.default.border'),
+})
+
+const appearanceSmokyWhiteBackgroundHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.smokyWhiteBackground.hover.font'),
+  backgroundColor: prop('theme.colors.button.smokyWhiteBackground.hover.background'),
+  borderColor: prop('theme.colors.button.smokyWhiteBackground.hover.border'),
+})
+
+const appearanceSmokyWhiteBackgroundPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.smokyWhiteBackground.pressed.font'),
+  backgroundColor: prop('theme.colors.button.smokyWhiteBackground.pressed.background'),
+  borderColor: prop('theme.colors.button.smokyWhiteBackground.pressed.border'),
+})
+
+const appearanceSmokyWhiteBackgroundDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.smokyWhiteBackground.disabled.font'),
+  backgroundColor: prop('theme.colors.button.smokyWhiteBackground.disabled.background'),
+  borderColor: prop('theme.colors.button.smokyWhiteBackground.disabled.border'),
+})
+
+const appearanceTransparentWhiteBackgroundDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackground.default.font'),
+  backgroundColor: prop('theme.colors.button.transparentWhiteBackground.default.background'),
+  borderColor: prop('theme.colors.button.transparentWhiteBackground.default.border'),
+})
+
+const appearanceTransparentWhiteBackgroundHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackground.hover.font'),
+  backgroundColor: prop('theme.colors.button.transparentWhiteBackground.hover.background'),
+  borderColor: prop('theme.colors.button.transparentWhiteBackground.hover.border'),
+})
+
+const appearanceTransparentWhiteBackgroundPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackground.pressed.font'),
+  backgroundColor: prop('theme.colors.button.transparentWhiteBackground.pressed.background'),
+  borderColor: prop('theme.colors.button.transparentWhiteBackground.pressed.border'),
+})
+
+const appearanceTransparentWhiteBackgroundDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentWhiteBackground.disabled.font'),
+  backgroundColor: prop('theme.colors.button.transparentWhiteBackground.disabled.background'),
+  borderColor: prop('theme.colors.button.transparentWhiteBackground.disabled.border'),
+})
+
+const appearanceVeryTransparentSmokyWhiteBackgroundDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.default.font'),
+  backgroundColor: prop(
+    'theme.colors.button.veryTransparentSmokyWhiteBackground.default.background'
+  ),
+  borderColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.default.border'),
+})
+
+const appearanceVeryTransparentSmokyWhiteBackgroundHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.hover.font'),
+  backgroundColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.hover.background'),
+  borderColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.hover.border'),
+})
+
+const appearanceVeryTransparentSmokyWhiteBackgroundPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.pressed.font'),
+  backgroundColor: prop(
+    'theme.colors.button.veryTransparentSmokyWhiteBackground.pressed.background'
+  ),
+  borderColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.pressed.border'),
+})
+
+const appearanceVeryTransparentSmokyWhiteBackgroundDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.disabled.font'),
+  backgroundColor: prop(
+    'theme.colors.button.veryTransparentSmokyWhiteBackground.disabled.background'
+  ),
+  borderColor: prop('theme.colors.button.veryTransparentSmokyWhiteBackground.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   transparentBackground: ifProp(
     prop('disabled', false),
@@ -394,6 +472,45 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearanceDarkToPurpleBackgroundWithWhiteBorderHoverStyles,
         appearanceDarkToPurpleBackgroundWithWhiteBorderDefaultStyles
+      )
+    )
+  ),
+  smokyWhiteBackground: ifProp(
+    prop('disabled', false),
+    appearanceSmokyWhiteBackgroundDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceSmokyWhiteBackgroundPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceSmokyWhiteBackgroundHoverStyles,
+        appearanceSmokyWhiteBackgroundDefaultStyles
+      )
+    )
+  ),
+  transparentWhiteBackground: ifProp(
+    prop('disabled', false),
+    appearanceTransparentWhiteBackgroundDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceTransparentWhiteBackgroundPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceTransparentWhiteBackgroundHoverStyles,
+        appearanceTransparentWhiteBackgroundDefaultStyles
+      )
+    )
+  ),
+  veryTransparentSmokyWhiteBackground: ifProp(
+    prop('disabled', false),
+    appearanceVeryTransparentSmokyWhiteBackgroundDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceVeryTransparentSmokyWhiteBackgroundPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceVeryTransparentSmokyWhiteBackgroundHoverStyles,
+        appearanceVeryTransparentSmokyWhiteBackgroundDefaultStyles
       )
     )
   ),

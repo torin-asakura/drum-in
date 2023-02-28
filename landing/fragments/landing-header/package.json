@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@landing/consultation": "workspace:0.0.1",
     "@landing/navigation-fragment": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
@@ -23,6 +24,7 @@
   "peerDependencies": {
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "react": "*",
+    "react-dom": "*",
     "react-intl": "*"
   }
 }

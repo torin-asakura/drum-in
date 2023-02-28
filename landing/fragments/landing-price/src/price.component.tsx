@@ -4,6 +4,8 @@ import { useRouter }                   from 'next/router'
 import { useEffect }                   from 'react'
 import { useState }                    from 'react'
 
+import { ModalForms }                  from '@landing/modal-forms'
+import { ModalMobileForms }            from '@landing/modal-forms'
 import { PriceCourse as PPriceCourse } from '@shared/data'
 import { Button }                      from '@ui/button'
 import { Box }                         from '@ui/layout'
@@ -23,6 +25,8 @@ import { getUi }                       from './helpers'
 
 const PriceBlock = () => {
   const router = useRouter()
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const { priceCourse: priceCourseData } = useMockedPriceCourse()
   const [priceCourse, setPriceCourse] = useState<PPriceCourse[]>([])
@@ -32,23 +36,7 @@ const PriceBlock = () => {
     // eslint-disable-next-line
   }, [])
 
-  let texts: PriceProps = {
-    costPerMonth: '',
-    currency: '',
-    fullCost: '',
-    economy: '',
-    quantityVideoLessons: '',
-    firstLineCircle: '',
-    secondLineCircle: '',
-    quantityMonths: '',
-    backgroundRectangle: '',
-    squareRotate: 0,
-    circleRotate: 0,
-    rectangleRotate: 0,
-    rectanglePositionX: 0,
-    rectanglePositionY: 0,
-  }
-
+  let texts: PriceProps = {}
   for (let i = 0; priceCourse.length >= i; i += 1) {
     if (priceCourse[i] !== undefined && priceCourse[i].pathPage === router.route) {
       texts = {
@@ -111,7 +99,12 @@ const PriceBlock = () => {
                 secondLineCircle={texts.secondLineCircle}
               />
               <Box display={['none', 'none', 'flex']} width={514}>
-                <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
+                <Button
+                  size='withoutPaddingBigHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModal(true)}
+                >
                   <Text fontWeight='semiBold' fontSize='large' textTransform='uppercase'>
                     <FormattedMessage
                       id='landing_price.arrange_an_installment_plan'
@@ -140,8 +133,13 @@ const PriceBlock = () => {
                 </Text>
               </Box>
               <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
-              <Box display={['flex', 'flex', 'none']} width='100%'>
-                <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
+              <Box display={['none', 'flex', 'none']} width='100%'>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModal(true)}
+                >
                   <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
                     {texts.costPerMonth}
                     <Space />
@@ -149,6 +147,25 @@ const PriceBlock = () => {
                   </Text>
                 </Button>
               </Box>
+              <Box display={['flex', 'none', 'none']} width='100%'>
+                <Button
+                  size='withoutPaddingMediumHeight'
+                  variant='purpleBackground'
+                  fill
+                  onClick={() => setVisibleModalMobile(true)}
+                >
+                  <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
+                    {texts.costPerMonth}
+                    <Space />
+                    {texts.currency}
+                  </Text>
+                </Button>
+              </Box>
+              <ModalForms activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+              <ModalMobileForms
+                activeRender={visibleModalMobile}
+                onClose={() => setVisibleModalMobile(false)}
+              />
               <Layout flexBasis={[23, 48, 74]} />
             </Column>
             <Layout flexBasis={24} flexShrink={0} />

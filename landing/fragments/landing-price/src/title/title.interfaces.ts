@@ -1,4 +1,4 @@
 export interface TitleProps {
-  costPerMonth: string
-  currency: string
+  costPerMonth?: string
+  currency?: string
 }

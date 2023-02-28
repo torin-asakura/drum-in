@@ -1,3 +1,3 @@
 export interface FullPriceProps {
-  fullCost: string
+  fullCost?: string
 }

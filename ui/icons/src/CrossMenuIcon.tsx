@@ -18,14 +18,14 @@ export const CrossMenuIcon = (props: IconProps) => {
     >
       <path
         d='M31.25 8.75L8.75 31.25'
-        stroke='#F2F2F2'
+        stroke={theme.colors[props.color || 0] || props.color || '#F2F2F2'}
         strokeWidth={2}
         strokeLinecap='round'
         strokeLinejoin='round'
       />
       <path
         d='M31.25 31.25L8.75 8.75'
-        stroke='#F2F2F2'
+        stroke={theme.colors[props.color || 0] || props.color || '#F2F2F2'}
         strokeWidth={2}
         strokeLinecap='round'
         strokeLinejoin='round'

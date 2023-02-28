@@ -4,7 +4,10 @@ import { FormattedMessage }          from 'react-intl'
 import { useEffect }                 from 'react'
 import { useState }                  from 'react'
 
+import { Consultation }              from '@landing/consultation'
+import { MobileConsultation }        from '@landing/consultation'
 import { Navigation as NNavigation } from '@shared/data'
+import { Button }                    from '@ui/button'
 import { Column }                    from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
@@ -20,6 +23,8 @@ import { getUi }                     from '../helpers'
 const Elements: FC<ElementsProps> = ({ stateHover }) => {
   const { navigation: navigationData } = useMockedNavigation()
   const [navigation, setNavigation] = useState<NNavigation[]>([])
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   useEffect(() => {
     setNavigation(navigationData)
@@ -79,7 +84,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
         ))}
         <Layout display={['flex', 'flex', 'none']} flexBasis={[60, 50, 0]} />
         <Box display={['flex', 'flex', 'none']}>
-          <NextLink path='/'>
+          <NextLink path='/contact'>
             <Text
               fontFamily='secondary'
               fontWeight='bold'
@@ -90,17 +95,45 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
           </NextLink>
         </Box>
         <Layout display={['flex', 'flex', 'none']} flexBasis={16} />
-        <Box display={['flex', 'flex', 'none']}>
-          <NextLink path='/'>
+        <Box display={['none', 'flex', 'none']}>
+          <Button
+            size='withoutPaddingMicroHeight'
+            variant='transparentBackground'
+            onClick={() => setVisibleModal(true)}
+          >
             <Text
+              textTransform='uppercase'
               fontFamily='secondary'
               fontWeight='bold'
               fontSize={['medium', 'semiModerate', 'big']}
+              lineHeight='default'
             >
               <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
             </Text>
-          </NextLink>
+          </Button>
         </Box>
+        <Box display={['flex', 'none', 'none']}>
+          <Button
+            size='withoutPaddingMicroHeight'
+            variant='transparentBackground'
+            onClick={() => setVisibleModalMobile(true)}
+          >
+            <Text
+              textTransform='uppercase'
+              fontFamily='secondary'
+              fontWeight='bold'
+              fontSize={['medium', 'semiModerate', 'big']}
+              lineHeight='default'
+            >
+              <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+            </Text>
+          </Button>
+        </Box>
+        <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+        <MobileConsultation
+          activeRender={visibleModalMobile}
+          onClose={() => setVisibleModalMobile(false)}
+        />
       </Column>
     </Row>
   )

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@landing/consultation": "workspace:0.0.1",
     "@shared/data": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
@@ -25,6 +26,7 @@
   },
   "peerDependencies": {
     "react": "*",
+    "react-dom": "*",
     "react-intl": "*"
   }
 }
