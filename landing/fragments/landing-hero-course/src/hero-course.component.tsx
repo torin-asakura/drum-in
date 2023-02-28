@@ -3,7 +3,7 @@ import { useRouter }  from 'next/router'
 
 import { Background } from '@ui/background'
 
-import { Components } from './components'
+import { Content }    from './content'
 import { getUi }      from './helpers'
 
 const HeroCourse = () => {
@@ -20,7 +20,7 @@ const HeroCourse = () => {
         backgroundRepeat='no-repeat'
         backgroundPosition={getUi(router.route).backgroundPositionDesktop}
       >
-        <Components id={getUi(router.route).components} />
+        <Content id={getUi(router.route).components} />
       </Background>
       <Background
         display={['flex', 'none', 'none']}
@@ -31,7 +31,7 @@ const HeroCourse = () => {
         backgroundRepeat='no-repeat'
         backgroundPosition={getUi(router.route).backgroundPositionMobile}
       >
-        <Components id={getUi(router.route).components} />
+        <Content id={getUi(router.route).components} />
       </Background>
     </>
   )
