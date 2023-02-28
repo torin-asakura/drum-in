@@ -124,5 +124,7 @@
   "landing_modal_forms.monthly_payment": "Ежемесячный платёж",
   "landing_modal_forms.installment_period": "Срок рассрочки",
   "landing_modal_forms.amount": "Сумма:",
-  "landing_modal_forms.total_amount": "Общая сумма"
+  "landing_modal_forms.total_amount": "Общая сумма",
+  "landing_program_horizontal.dot": "•",
+  "landing_program_horizontal.bonus": "Бонус"
 }

@@ -16,9 +16,9 @@ const HeroCourse = () => {
         flexDirection='column'
         width='100%'
         gradient={getUi(router.route).gradientDesktop}
-        backgroundSize='100% 100%'
+        backgroundSize={getUi(router.route).backgroundSize}
         backgroundRepeat='no-repeat'
-        backgroundPosition='center bottom'
+        backgroundPosition={getUi(router.route).backgroundPosition}
       >
         <Components id={getUi(router.route).components} />
       </Background>
