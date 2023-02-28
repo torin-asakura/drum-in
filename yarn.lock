@@ -1745,6 +1745,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/styled-system": ^5.1.12
     "@ui/button": "workspace:0.0.1"
+    "@ui/container": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2078,6 +2079,7 @@ __metadata:
     "@types/styled-system": ^5.1.12
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/container": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -3343,6 +3345,25 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/container@workspace:0.0.1, @ui/container@workspace:ui/container":
+  version: 0.0.0-use.local
+  resolution: "@ui/container@workspace:ui/container"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.9.3
+    framer-motion: 7.6.2
+    next: 12.1.0
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 

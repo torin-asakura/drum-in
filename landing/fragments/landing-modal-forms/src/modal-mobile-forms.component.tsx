@@ -8,11 +8,11 @@ import { useIntl }                                 from 'react-intl'
 
 import { ModalForm as MModalForm }                 from '@shared/data'
 import { Condition }                               from '@ui/condition'
+import { ContainerMobile }                         from '@ui/container'
 import { useMockedModalForm }                      from '@shared/data'
 
 import { Backdrop }                                from './backdrop'
 import { MobileBuyPackageContent }                 from './buy-package-content'
-import { ContainerMobile }                         from './container'
 import { MobileIndividualCourseContent }           from './individual-course-content/mobile-individual-course-content.component'
 import { MobileIndividualCourseWithChoiceContent } from './individual-course-with-choice-content'
 import { CurrentDataProps }                        from './modal-forms.interfaces'

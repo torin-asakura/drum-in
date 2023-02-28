@@ -2,6 +2,7 @@ import React                   from 'react'
 import { FC }                  from 'react'
 import { motion }              from 'framer-motion'
 
+import { Container }           from '@ui/container'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Box }                 from '@ui/layout'
@@ -9,7 +10,6 @@ import { Box }                 from '@ui/layout'
 import { Backdrop }            from './backdrop'
 import { ConsultationContent } from './consultation-content'
 import { ConsultationProps }   from './consultation.interfaces'
-import { Container }           from './container'
 import { Renderer }            from './renderer'
 
 const Consultation: FC<ConsultationProps> = ({ activeRender, onClose, scroll = true }) => (

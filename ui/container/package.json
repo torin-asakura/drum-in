@@ -1,0 +1,23 @@
+{
+  "name": "@ui/container",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "framer-motion": "7.6.2",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.9.3",
+    "next": "12.1.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
+  }
+}
