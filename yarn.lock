@@ -1743,17 +1743,15 @@ __metadata:
     "@emotion/styled": ^11.9.3
     "@types/react": 18.0.21
     "@types/react-dom": ^17
-    "@types/styled-system": ^5.1.12
     "@ui/button": "workspace:0.0.1"
-    "@ui/container": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     framer-motion: 7.6.2
     next: 12.1.0
     react-intl: ^6.1.2
-    styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
@@ -2078,20 +2076,18 @@ __metadata:
     "@shared/data": "workspace:0.0.1"
     "@types/react": 18.0.21
     "@types/react-dom": ^17
-    "@types/styled-system": ^5.1.12
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
-    "@ui/container": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: 7.6.2
     next: 12.1.0
     react-intl: ^6.1.2
-    styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
@@ -3369,25 +3365,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/container@workspace:0.0.1, @ui/container@workspace:ui/container":
-  version: 0.0.0-use.local
-  resolution: "@ui/container@workspace:ui/container"
-  dependencies:
-    "@emotion/react": ^11.10.4
-    "@emotion/styled": ^11.9.3
-    framer-motion: 7.6.2
-    next: 12.1.0
-    styled-system: ^5.1.5
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    next: "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
 "@ui/drawer@workspace:0.0.1, @ui/drawer@workspace:ui/drawer":
   version: 0.0.0-use.local
   resolution: "@ui/drawer@workspace:ui/drawer"
@@ -3582,6 +3559,29 @@ __metadata:
     next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/modal@workspace:0.0.1, @ui/modal@workspace:ui/modal":
+  version: 0.0.0-use.local
+  resolution: "@ui/modal@workspace:ui/modal"
+  dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.9.3
+    "@types/react": 18.0.21
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5.1.12
+    "@ui/layout": "workspace:0.0.1"
+    framer-motion: 7.6.2
+    next: 12.1.0
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/react": "*"

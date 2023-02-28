@@ -1,15 +1,19 @@
 {
-  "name": "@ui/container",
+  "name": "@ui/modal",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/layout": "workspace:0.0.1",
     "framer-motion": "7.6.2",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.9.3",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "^17",
+    "@types/styled-system": "^5.1.12",
     "next": "12.1.0"
   },
   "peerDependencies": {

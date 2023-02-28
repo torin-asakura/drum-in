@@ -8,19 +8,19 @@ import { useIntl }                           from 'react-intl'
 
 import { ModalForm as MModalForm }           from '@shared/data'
 import { Condition }                         from '@ui/condition'
-import { Container }                         from '@ui/container'
 import { Column }                            from '@ui/layout'
 import { Layout }                            from '@ui/layout'
 import { Box }                               from '@ui/layout'
+import { Container }                         from '@ui/modal'
+import { Renderer }                          from '@ui/modal'
+import { Backdrop }                          from '@ui/modal'
 import { useMockedModalForm }                from '@shared/data'
 
-import { Backdrop }                          from './backdrop'
 import { BuyPackageContent }                 from './buy-package-content'
 import { IndividualCourseContent }           from './individual-course-content'
 import { IndividualCourseWithChoiceContent } from './individual-course-with-choice-content'
 import { CurrentDataProps }                  from './modal-forms.interfaces'
 import { ModalFormsProps }                   from './modal-forms.interfaces'
-import { Renderer }                          from './renderer'
 import { getUi }                             from './helpers'
 
 const ModalForms: FC<ModalFormsProps> = ({
