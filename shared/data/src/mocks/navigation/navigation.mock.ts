@@ -21,7 +21,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '5',
     textMonths: 'месяцев',
     itemId: 'courseSenseOfTime',
-    path: '/',
+    path: '/feeling-of-time',
   },
   {
     title: 'Пятое измерение',

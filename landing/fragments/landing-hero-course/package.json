@@ -5,15 +5,19 @@
   "dependencies": {
     "@landing/after-the-course-fragment": "workspace:0.0.1",
     "@landing/banner-course-fragment": "workspace:0.0.1",
+    "@landing/program-horizontal-fragment": "workspace:0.0.1",
     "@landing/skills-fragment": "workspace:0.0.1",
+    "@landing/target-audience-fragment": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@types/react": "18.0.21"
+    "@types/react": "18.0.21",
+    "next": "12.1.0"
   },
   "peerDependencies": {
     "@emotion/react": "*",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "next": "*",
     "react": "*",
     "react-intl": "*"
   }

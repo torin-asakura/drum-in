@@ -1,39 +1,40 @@
-import React                   from 'react'
+import React          from 'react'
+import { useRouter }  from 'next/router'
 
-import { AfterTheCourseBlock } from '@landing/after-the-course-fragment'
-import { BannerCourseBlock }   from '@landing/banner-course-fragment'
-import { SkillsBlock }         from '@landing/skills-fragment'
-import { Background }          from '@ui/background'
+import { Background } from '@ui/background'
 
-const HeroCourse = () => (
-  <>
-    <Background
-      display={['none', 'flex', 'flex']}
-      flexDirection='column'
-      width='100%'
-      gradient='transparentPurpleBlueImageGradient'
-      backgroundSize='100% 100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='center bottom'
-    >
-      <BannerCourseBlock />
-      <AfterTheCourseBlock />
-      <SkillsBlock />
-    </Background>
-    <Background
-      display={['flex', 'none', 'none']}
-      flexDirection='column'
-      width='100%'
-      gradient='purpleBlueSmallImageGradient'
-      backgroundSize='100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='right center'
-    >
-      <BannerCourseBlock />
-      <AfterTheCourseBlock />
-      <SkillsBlock />
-    </Background>
-  </>
-)
+import { Content }    from './content'
+import { getUi }      from './helpers'
+
+const HeroCourse = () => {
+  const router = useRouter()
+
+  return (
+    <>
+      <Background
+        display={['none', 'flex', 'flex']}
+        flexDirection='column'
+        width='100%'
+        gradient={getUi(router.route).gradientDesktop}
+        backgroundSize={getUi(router.route).backgroundSize}
+        backgroundRepeat='no-repeat'
+        backgroundPosition={getUi(router.route).backgroundPosition}
+      >
+        <Content id={getUi(router.route).components} />
+      </Background>
+      <Background
+        display={['flex', 'none', 'none']}
+        flexDirection='column'
+        width='100%'
+        gradient={getUi(router.route).gradientMobile}
+        backgroundSize='100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='right center'
+      >
+        <Content id={getUi(router.route).components} />
+      </Background>
+    </>
+  )
+}
 
 export { HeroCourse }

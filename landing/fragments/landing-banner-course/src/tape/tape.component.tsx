@@ -34,6 +34,7 @@ const Tape: FC<TapeProps> = ({ level }) => {
               levelArray.map((currentValue) => (
                 <>
                   <Text
+                    textTransform='uppercase'
                     whiteSpace='nowrap'
                     fontWeight='medium'
                     fontSize={['micro', 'large', 'mild']}

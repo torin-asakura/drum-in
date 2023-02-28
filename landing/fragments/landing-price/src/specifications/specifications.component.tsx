@@ -1,12 +1,21 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { FormattedMessage }    from 'react-intl'
 
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Space }               from '@ui/text'
+import { Text }                from '@ui/text'
 
-const Specifications = () => (
+import { SpecificationsProps } from './specifications.interfaces'
+
+const Specifications: FC<SpecificationsProps> = ({
+  quantityMonths,
+  quantityVideoLessons,
+  firstLineCircle,
+  secondLineCircle,
+}) => (
   <Box display={['flex', 'flex', 'none']}>
     <Column>
       <Box>
@@ -16,10 +25,11 @@ const Specifications = () => (
           lineHeight='primary'
           color='text.blackAmber'
         >
-          <FormattedMessage
-            id='landing_price.thirty_nine_video_lessons'
-            defaultMessage='• 39 видео-уроков'
-          />
+          <FormattedMessage id='landing_price.dot' defaultMessage='•' />
+          <Space />
+          {quantityVideoLessons}
+          <Space />
+          <FormattedMessage id='landing_price.video_lessons' defaultMessage='видео-уроков' />
         </Text>
       </Box>
       <Layout flexBasis={[4, 6, 0]} />
@@ -30,7 +40,11 @@ const Specifications = () => (
           lineHeight='primary'
           color='text.blackAmber'
         >
-          <FormattedMessage id='landing_price.five_months' defaultMessage='• 5 месяцев' />
+          <FormattedMessage id='landing_price.dot' defaultMessage='•' />
+          <Space />
+          {quantityMonths}
+          <Space />
+          <FormattedMessage id='landing_price.months' defaultMessage='месяцев' />
         </Text>
       </Box>
       <Layout flexBasis={[4, 6, 0]} />
@@ -41,7 +55,11 @@ const Specifications = () => (
           lineHeight='primary'
           color='text.blackAmber'
         >
-          <FormattedMessage id='landing_price.three_level' defaultMessage='• 3 уровня' />
+          <FormattedMessage id='landing_price.dot' defaultMessage='•' />
+          <Space />
+          {firstLineCircle}
+          <Space />
+          {secondLineCircle}
         </Text>
       </Box>
     </Column>
