@@ -5,12 +5,12 @@ import { motion }              from 'framer-motion'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Box }                 from '@ui/layout'
+import { Container }           from '@ui/modal'
+import { Renderer }            from '@ui/modal'
+import { Backdrop }            from '@ui/modal'
 
-import { Backdrop }            from './backdrop'
 import { ConsultationContent } from './consultation-content'
 import { ConsultationProps }   from './consultation.interfaces'
-import { Container }           from './container'
-import { Renderer }            from './renderer'
 
 const Consultation: FC<ConsultationProps> = ({ activeRender, onClose, scroll = true }) => (
   <Renderer active={activeRender}>

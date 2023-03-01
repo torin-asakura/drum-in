@@ -2,11 +2,12 @@ import React                         from 'react'
 import { FC }                        from 'react'
 import { motion }                    from 'framer-motion'
 
-import { Backdrop }                  from './backdrop'
+import { ContainerMobile }           from '@ui/modal'
+import { Renderer }                  from '@ui/modal'
+import { Backdrop }                  from '@ui/modal'
+
 import { MobileConsultationContent } from './consultation-content'
 import { ConsultationProps }         from './consultation.interfaces'
-import { ContainerMobile }           from './container'
-import { Renderer }                  from './renderer'
 
 const MobileConsultation: FC<ConsultationProps> = ({ activeRender, onClose, scroll = true }) => (
   <Renderer active={activeRender}>

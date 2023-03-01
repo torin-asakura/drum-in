@@ -57,6 +57,7 @@ const ContactBlock = () => {
                 id: 'landing_contact.email_address',
                 defaultMessage: 'marina@drum.ru',
               })}
+              href='mailto:marina@drum.ru'
             />
             <Layout flexBasis={[12, 24, 118]} />
             <Card
@@ -68,6 +69,7 @@ const ContactBlock = () => {
                 id: 'landing_contact.nickname_telegram',
                 defaultMessage: '@marinaaa',
               })}
+              href='https://t.me/marinaaa'
             />
             <Layout flexBasis={[12, 24, 118]} />
             <Card
@@ -83,6 +85,7 @@ const ContactBlock = () => {
                 id: 'landing_contact.nickname_vk',
                 defaultMessage: 'drumschool',
               })}
+              href='https://vk.com/drumschool'
             />
             <Layout flexBasis={[12, 24, 118]} />
           </Box>
