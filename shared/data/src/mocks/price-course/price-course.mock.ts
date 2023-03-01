@@ -34,6 +34,17 @@ const priceCourseMock: PriceCourse[] = [
     quantityMonths: '4',
     pathPage: '/fifth-dimension',
   },
+  {
+    costPerMonth: '8 700',
+    currency: '₽/мес',
+    fullCost: 'весь курс за 40 000 ₽',
+    economy: '3 500 ₽',
+    quantityVideoLessons: '13',
+    firstLineCircle: '20',
+    secondLineCircle: 'прямых эфиров',
+    quantityMonths: '5',
+    pathPage: '/seventh-heaven',
+  },
 ]
 
 export { priceCourseMock }

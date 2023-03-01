@@ -26,6 +26,15 @@ const getUi = (idPage) => {
       backgroundPositionDesktop: 'center top',
       backgroundPositionMobile: 'center top',
     }
+  if (idPage === '/seventh-heaven')
+    return {
+      gradientDesktop: 'transparentPinkBlueImageGradient',
+      gradientMobile: 'pinkBlueSmallImageGradient',
+      components: 'TargetAudience',
+      backgroundSize: '100%',
+      backgroundPositionDesktop: 'center top',
+      backgroundPositionMobile: 'center top',
+    }
 
   return {
     gradientDesktop: 'transparentPurpleBlueImageGradient',

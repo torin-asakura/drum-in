@@ -29,6 +29,11 @@ const backgrounds = {
   greenBlueTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer-fifth-dimension-page.png")',
   progressLineWithBlackBackground: 'url("/img/progress-horizontal-section.png")',
   mobileProgressLineWithBlackBackground: 'url("/img/mobile-progress-section.png")',
+  transparentPinkBlueImageGradient: 'url("/img/bg-hero-seventh-heaven-page.png")',
+  pinkBlueSmallImageGradient: 'url("/img/mobile-bg-hero-seventh-heaven-page.png")',
+  pinkBlueCirclesImage: 'url("/img/bg-middle-seventh-heaven-page.png")',
+  pinkBlueSemicircleImage: 'url("/img/bg-footer-seventh-heaven-page.png")',
+  pinkBlueTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer-seventh-heaven-page.png")',
 }
 
 export { backgrounds }

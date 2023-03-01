@@ -19,6 +19,12 @@ const coursePagesMock: CoursePages[] = [
     pathPage: '/fifth-dimension',
     tapePhrase: '#Уровень 2',
   },
+  {
+    titleBanner: 'Седьмое небо',
+    descBanner: 'Курс для любителей, которые хотят усовершенствовать своё мастерство',
+    pathPage: '/seventh-heaven',
+    tapePhrase: '#Уровень 3',
+  },
 ]
 
 export { coursePagesMock }
