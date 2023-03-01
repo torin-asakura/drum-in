@@ -14,4 +14,5 @@ export const borders = {
   mediumBoldSmokyWhiteDashed: '2px dashed rgba(242, 242, 242, 0.5)',
   veryBoldSmokyWhiteDashed: '3px dashed rgba(242, 242, 242, 0.5)',
   semiBoldTransparent: '3px solid transparent',
+  semiBoldDark: '3px solid rgb(15, 12, 12)',
 }

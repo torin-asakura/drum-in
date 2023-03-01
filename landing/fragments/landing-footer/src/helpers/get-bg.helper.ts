@@ -19,6 +19,11 @@ const getBg = (idPage) => {
       gradientDesktop: 'pinkBlueSemicircleImage',
       gradientMobile: 'pinkBlueTwoSemicirclesSmallImage',
     }
+  if (idPage === '/connacol')
+    return {
+      gradientDesktop: 'purpleBlueSemicircleImage',
+      gradientMobile: 'purpleBlueTwoSemicirclesSmallImage',
+    }
 
   return {
     gradientDesktop: 'purpleBlueSemicircleImage',

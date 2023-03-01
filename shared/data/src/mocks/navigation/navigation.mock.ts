@@ -54,7 +54,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '4',
     textMonths: 'месяца',
     itemId: 'courseConnacol',
-    path: '/',
+    path: '/connacol',
   },
   {
     title: 'Ключи полиритмии',
