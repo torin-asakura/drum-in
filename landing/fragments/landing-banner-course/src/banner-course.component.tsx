@@ -57,7 +57,12 @@ const BannerCourseBlock = () => {
                     textTransform='uppercase'
                     fontFamily='secondary'
                     fontWeight='bold'
-                    fontSize={['moderate', 'huge', 'biggest']}
+                    fontSize={{
+                      _: 'moderate',
+                      tablet: 'semiHuge',
+                      laptop: 'gigantic',
+                      wide: 'biggest',
+                    }}
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >

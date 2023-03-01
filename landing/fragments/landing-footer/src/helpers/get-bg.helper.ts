@@ -9,6 +9,11 @@ const getBg = (idPage) => {
       gradientDesktop: 'blueTurquoiseSemicircleImage',
       gradientMobile: 'blueTurquoiseTwoSemicirclesSmallImage',
     }
+  if (idPage === '/fifth-dimension')
+    return {
+      gradientDesktop: 'greenBlueSemicircleImage',
+      gradientMobile: 'greenBlueTwoSemicirclesSmallImage',
+    }
 
   return {
     gradientDesktop: 'purpleBlueSemicircleImage',

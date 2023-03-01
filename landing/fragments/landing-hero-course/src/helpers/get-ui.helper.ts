@@ -5,7 +5,8 @@ const getUi = (idPage) => {
       gradientMobile: 'purpleBlueSmallImageGradient',
       components: 'AfterTheCourse',
       backgroundSize: '100% 100%',
-      backgroundPosition: 'center bottom',
+      backgroundPositionDesktop: 'center bottom',
+      backgroundPositionMobile: 'right center',
     }
   if (idPage === '/feeling-of-time')
     return {
@@ -13,7 +14,17 @@ const getUi = (idPage) => {
       gradientMobile: 'blueTurquoiseSmallImageGradient',
       components: 'TargetAudience',
       backgroundSize: '100%',
-      backgroundPosition: 'center top',
+      backgroundPositionDesktop: 'center top',
+      backgroundPositionMobile: 'center top',
+    }
+  if (idPage === '/fifth-dimension')
+    return {
+      gradientDesktop: 'transparentGreenBlueImageGradient',
+      gradientMobile: 'greenBlueSmallImageGradient',
+      components: 'TargetAudience',
+      backgroundSize: '100%',
+      backgroundPositionDesktop: 'center top',
+      backgroundPositionMobile: 'center top',
     }
 
   return {
@@ -21,7 +32,8 @@ const getUi = (idPage) => {
     gradientMobile: 'purpleBlueSmallImageGradient',
     components: 'AfterTheCourse',
     backgroundSize: '100% 100%',
-    backgroundPosition: 'center bottom',
+    backgroundPositionDesktop: 'center bottom',
+    backgroundPositionMobile: 'right center',
   }
 }
 

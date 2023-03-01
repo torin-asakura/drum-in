@@ -32,7 +32,7 @@ const navigationMock: Navigation[] = [
     quantityMonths: '5',
     textMonths: 'месяцев',
     itemId: 'courseFifthDimension',
-    path: '/',
+    path: '/fifth-dimension',
   },
   {
     title: 'Седьмое небо',

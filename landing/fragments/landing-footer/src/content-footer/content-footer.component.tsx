@@ -1,22 +1,33 @@
-import React                  from 'react'
-import { FC }                 from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useIntl }            from 'react-intl'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { FormattedMessage }          from 'react-intl'
+import { useEffect }                 from 'react'
+import { useState }                  from 'react'
+import { useIntl }                   from 'react-intl'
 
-import { Box }                from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Logo }               from '@ui/logo'
-import { Text }               from '@ui/text'
+import { Navigation as NNavigation } from '@shared/data'
+import { Box }                       from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Logo }                      from '@ui/logo'
+import { Text }                      from '@ui/text'
+import { useMockedNavigation }       from '@shared/data'
 
-import { BottomRow }          from './bottom-row'
-import { ButtonUp }           from './button-up'
-import { ContentFooterProps } from './content-footer.interfaces'
-import { LinkSocial }         from './link-social'
+import { BottomRow }                 from './bottom-row'
+import { ButtonUp }                  from './button-up'
+import { ContentFooterProps }        from './content-footer.interfaces'
+import { LinkSocial }                from './link-social'
 
 const ContentFooter: FC<ContentFooterProps> = ({ buttonUp }) => {
   const { formatMessage } = useIntl()
+  const { navigation: navigationData } = useMockedNavigation()
+  const [navigation, setNavigation] = useState<NNavigation[]>([])
+
+  useEffect(() => {
+    setNavigation(navigationData)
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <Row justifyContent='center'>
@@ -46,47 +57,22 @@ const ContentFooter: FC<ContentFooterProps> = ({ buttonUp }) => {
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.opening_the_rhythm',
-                  defaultMessage: 'Открытие ритма',
-                })}
-              />
-              <Layout flexBasis={16} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.sense_of_time',
-                  defaultMessage: 'Ощущение времени',
-                })}
-              />
-              <Layout flexBasis={16} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.fifth_dimension',
-                  defaultMessage: 'Пятое измрение',
-                })}
-              />
-              <Layout flexBasis={16} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.seventh_heaven',
-                  defaultMessage: 'Седьмое небо',
-                })}
-              />
-              <Layout flexBasis={[28, 30, 32]} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.connacol',
-                  defaultMessage: 'Коннакол',
-                })}
-              />
-              <Layout flexBasis={16} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.polyrhythmic_keys',
-                  defaultMessage: 'Ключи полиритмии',
-                })}
-              />
+              {navigation.map(({ title, path }, index) => {
+                if (index === 3) {
+                  return (
+                    <>
+                      <LinkSocial text={title} path={path} />
+                      <Layout flexBasis={[28, 30, 32]} />
+                    </>
+                  )
+                }
+                return (
+                  <>
+                    <LinkSocial text={title} path={path} />
+                    <Layout flexBasis={16} />
+                  </>
+                )
+              })}
             </Column>
             <Layout flexGrow={[0, 0, 1]} flexBasis={[52, 62, 0]} flexShrink={0} />
             <Column>
@@ -114,6 +100,7 @@ const ContentFooter: FC<ContentFooterProps> = ({ buttonUp }) => {
                   id: 'landing_footer.instagram',
                   defaultMessage: 'Instagram',
                 })}
+                path='/'
               />
               <Layout flexBasis={16} />
               <LinkSocial
@@ -121,6 +108,7 @@ const ContentFooter: FC<ContentFooterProps> = ({ buttonUp }) => {
                   id: 'landing_footer.facebook',
                   defaultMessage: 'Facebook',
                 })}
+                path='/'
               />
               <Layout flexBasis={16} />
               <LinkSocial
@@ -128,6 +116,7 @@ const ContentFooter: FC<ContentFooterProps> = ({ buttonUp }) => {
                   id: 'landing_footer.telegram',
                   defaultMessage: 'Telegram',
                 })}
+                path='/'
               />
               <Layout flexBasis={16} />
               <LinkSocial
@@ -135,6 +124,7 @@ const ContentFooter: FC<ContentFooterProps> = ({ buttonUp }) => {
                   id: 'landing_footer.vk',
                   defaultMessage: 'VK',
                 })}
+                path='/'
               />
             </Column>
             <Layout flexGrow={[0, 0, 4]} />

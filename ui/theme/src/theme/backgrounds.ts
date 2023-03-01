@@ -17,11 +17,16 @@ const backgrounds = {
   blueTurquoiseCirclesImage: 'url("/img/bg-middle-feeling-of-time-page.png")',
   purpleBlueSemicircleImage: 'url("/img/bg-desktop-footer.png")',
   purpleBlueTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer.png")',
-  blueTurquoiseSemicircleImage: 'url("/img/bg-footer-feeling-of-time-page.png.png")',
+  blueTurquoiseSemicircleImage: 'url("/img/bg-footer-feeling-of-time-page.png")',
   blueTurquoiseTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer-feeling-of-time-page.png")',
   verticalTransparentToBlackGradient:
     'linear-gradient(360deg, #0F0C0C 0%, rgba(15, 12, 12, 0) 100%)',
   purpleBlueAngularGradient: 'url("/img/bg-contact-page.png")',
+  transparentGreenBlueImageGradient: 'url("/img/bg-hero-fifth-dimension-page.png")',
+  greenBlueSmallImageGradient: 'url("/img/mobile-bg-hero-fifth-dimension-page.png")',
+  greenBlueCirclesImage: 'url("/img/bg-middle-fifth-dimension-page.png")',
+  greenBlueSemicircleImage: 'url("/img/bg-footer-fifth-dimension-page.png")',
+  greenBlueTwoSemicirclesSmallImage: 'url("/img/bg-mobile-footer-fifth-dimension-page.png")',
   progressLineWithBlackBackground: 'url("/img/progress-horizontal-section.png")',
   mobileProgressLineWithBlackBackground: 'url("/img/mobile-progress-section.png")',
 }
