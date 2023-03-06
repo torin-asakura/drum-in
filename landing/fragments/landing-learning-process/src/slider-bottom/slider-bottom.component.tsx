@@ -37,9 +37,9 @@ const SliderBottom = () => {
     <Row
       data-scroll
       data-scroll-direction='horizontal'
-      data-scroll-speed='9'
+      data-scroll-speed='-9'
       data-scroll-target='#learning-process'
-      data-scroll-position='left'
+      data-scroll-position='bottom'
     >
       <Repeater quantity={20}>
         {() =>
