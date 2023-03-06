@@ -8,8 +8,8 @@
   "dependencies": {
     "@atls-ui-generators/button": "0.0.10",
     "@atls-ui-parts/button": "^0.0.10",
-    "@atls-ui-parts/conditional-render": "0.0.1",
-    "@atls-ui-parts/styles": "^0.0.1",
+    "@atls-ui-parts/conditional-render": "0.0.4",
+    "@atls-ui-parts/styles": "^0.0.4",
     "@ui/condition": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/theme": "workspace:0.0.1",
