@@ -11,8 +11,10 @@
     "dev": "yarn next dev src"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.6.0",
+    "graphql": "^15.5.1",
     "locomotive-scroll": "^4.1.4",
     "next": "^12.1.0",
     "react": "^17.0.2",
@@ -20,6 +22,7 @@
     "react-intl": "^6.1.2"
   },
   "devDependencies": {
+    "@globals/data": "workspace:0.0.1",
     "@landing/connacol-page": "workspace:0.0.1",
     "@landing/contact-page": "workspace:0.0.1",
     "@landing/feeling-of-time-page": "workspace:0.0.1",

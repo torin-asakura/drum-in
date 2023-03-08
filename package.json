@@ -6,7 +6,8 @@
     "landing/**/*",
     "ui/**/*",
     "shared/**/*",
-    "forks/**/*"
+    "forks/**/*",
+    "globals/**/*"
   ],
   "resolutions": {
     "@types/node": "16",

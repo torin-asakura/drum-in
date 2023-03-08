@@ -1,27 +1,19 @@
 import React            from 'react'
-import { useEffect }    from 'react'
 import { useState }     from 'react'
 
-import { Faq as FFaq }  from '@shared/data'
 import { Accordeon }    from '@ui/accordeon'
 import { Column }       from '@ui/layout'
 import { Layout }       from '@ui/layout'
-import { useMockedFaq } from '@shared/data'
+import { useFaq } from "../data";
 
 const ListMobile = () => {
-  const { faq: faqData } = useMockedFaq()
-  const [faq, setFaq] = useState<FFaq[]>([])
-
-  useEffect(() => {
-    setFaq(faqData)
-    // eslint-disable-next-line
-  }, [])
+  const faq = useFaq()
 
   return (
     <Column display={['flex', 'flex', 'none']}>
-      {faq.map(({ question, answer }) => (
+      {faq.map(({ title, faq }) => (
         <>
-          <Accordeon title={question} content={answer} />
+          <Accordeon title={title} content={faq.answer} />
           <Layout flexBasis={[16, 21, 0]} />
         </>
       ))}
