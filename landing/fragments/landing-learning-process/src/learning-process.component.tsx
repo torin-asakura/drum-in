@@ -12,7 +12,14 @@ import { SliderBottom }     from './slider-bottom'
 import { SliderTop }        from './slider-top'
 
 const LearningProcessBlock = forwardRef(({ data }: any, ref: any) => (
-  <Column width='100%' ref={ref}>
+  <Box
+    width='100%'
+    ref={ref}
+    id='learning-process'
+    position='relative'
+    display='block'
+    data-scroll-position='bottom'
+  >
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -46,6 +53,6 @@ const LearningProcessBlock = forwardRef(({ data }: any, ref: any) => (
         <Layout flexBasis={[64, 77, 90]} />
       </Column>
     </Box>
-  </Column>
+  </Box>
 ))
 export { LearningProcessBlock }

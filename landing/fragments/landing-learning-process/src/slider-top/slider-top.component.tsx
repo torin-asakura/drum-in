@@ -1,12 +1,12 @@
 import React                                   from 'react'
-import { Children }                            from 'react'
 import { useMemo }                             from 'react'
 import { useEffect }                           from 'react'
 import { useState }                            from 'react'
 
 import { LearningProcess as LLearningProcess } from '@shared/data'
-import { Slider }                              from '@ui/slider'
-import { SwiperSlide }                         from '@ui/slider'
+import { Layout }                              from '@ui/layout'
+import { Row }                                 from '@ui/layout'
+import { Repeater }                            from '@ui/utils'
 import { useMockedLearningProcessTop }         from '@shared/data'
 
 import { SlideImage }                          from '../slide-image'
@@ -14,8 +14,7 @@ import { SlideText }                           from '../slide-text'
 
 const SliderTop = () => {
   const { learningProcessTop: learningProcessTopData } = useMockedLearningProcessTop()
-  const [learningProcessTop, setLearningProcessTop] =
-    useState<LLearningProcess[]>(learningProcessTopData)
+  const [learningProcessTop, setLearningProcessTop] = useState<LLearningProcess[]>([])
 
   useEffect(() => {
     setLearningProcessTop(learningProcessTopData)
@@ -35,20 +34,24 @@ const SliderTop = () => {
   }, [learningProcessTop])
 
   return (
-    <Slider
-      slidesPerView='auto'
-      clName='learning-process-slider'
-      spaceBetween={40}
-      loop
-      mousewheel
-      mousewheelInvert
-      speed={500}
-      allowTouchMove={false}
+    <Row
+      data-scroll
+      data-scroll-direction='horizontal'
+      data-scroll-speed='9'
+      data-scroll-target='#learning-process'
+      data-scroll-position='left'
     >
-      {Children.map(learningProcessTopChildren, (child) => (
-        <SwiperSlide>{child}</SwiperSlide>
-      ))}
-    </Slider>
+      <Repeater quantity={20}>
+        {() =>
+          learningProcessTopChildren.map((item) => (
+            <>
+              {item}
+              <Layout flexBasis={40} flexShrink={0} />
+            </>
+          ))
+        }
+      </Repeater>
+    </Row>
   )
 }
 export { SliderTop }
