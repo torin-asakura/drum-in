@@ -1,0 +1,20 @@
+{
+  "name": "@landing/hero-polyrhythmic-keys-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@landing/banner-polyrhythmic-keys-fragment": "workspace:0.0.1",
+    "@landing/program-polyrhythmic-keys-fragment": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.21"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "next": "*",
+    "react": "*",
+    "react-intl": "*"
+  }
+}

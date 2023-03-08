@@ -9,7 +9,7 @@ import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
-import { HeroCourse }               from '@landing/hero-course-fragment'
+import { HeroSeventhHeavenBlock }   from '@landing/hero-seventh-heaven-fragment'
 import { PriceBlock }               from '@landing/price-fragment'
 import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
@@ -51,7 +51,7 @@ export const SeventhHeavenPage = () => {
       >
         <HeaderBlock />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroCourse />
+          <HeroSeventhHeavenBlock />
           <CourseProcessBlock />
           <Background
             width='100%'

@@ -1,0 +1,21 @@
+{
+  "name": "@landing/hero-connacol-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@landing/advantages-fragment": "workspace:0.0.1",
+    "@landing/banner-with-tags-fragment": "workspace:0.0.1",
+    "@landing/program-connacol-fragment": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.21"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "next": "*",
+    "react": "*",
+    "react-intl": "*"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@landing/program-polyrhythmic-keys-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.21",
+    "next": "12.1.0",
+    "react-intl": "^6.1.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-intl": "*"
+  }
+}
