@@ -35,13 +35,11 @@ const Figures: FC<FiguresProps> = ({
           rotate={squareRotate || 0}
         />
       </Box>
-      <Box position='absolute' left={205} bottom={1}>
-        <Circle
-          firstLine={firstLineCircle}
-          secondLine={secondLineCircle || ''}
-          rotate={circleRotate}
-        />
-      </Box>
+      {secondLineCircle ? (
+        <Box position='absolute' left={205} bottom={1}>
+          <Circle firstLine={firstLineCircle} secondLine={secondLineCircle} rotate={circleRotate} />
+        </Box>
+      ) : null}
       <Box position='absolute' right={rectanglePositionX} bottom={rectanglePositionY}>
         <Rectangle
           color={backgroundRectangle || ''}

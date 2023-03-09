@@ -5,6 +5,7 @@ import { AdvantagesBlock }        from '@landing/advantages-fragment'
 import { AfterTheCourseBlock }    from '@landing/after-the-course-fragment'
 import { BannerCourseBlock }      from '@landing/banner-course-fragment'
 import { BannerWithTagsBlock }    from '@landing/banner-with-tags-fragment'
+import { BannerWithoutTapeBlock } from '@landing/banner-without-tape-fragment'
 import { ProgramHorizontalBlock } from '@landing/program-horizontal-fragment'
 import { SkillsBlock }            from '@landing/skills-fragment'
 import { TargetAudienceBlock }    from '@landing/target-audience-fragment'
@@ -35,6 +36,14 @@ const Content: FC<ContentProps> = ({ id }) => {
       <>
         <BannerWithTagsBlock />
         <AdvantagesBlock />
+        <ProgramHorizontalBlock />
+      </>
+    )
+
+  if (id === 'BannerWithoutTape')
+    return (
+      <>
+        <BannerWithoutTapeBlock />
         <ProgramHorizontalBlock />
       </>
     )

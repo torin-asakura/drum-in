@@ -1,5 +1,6 @@
 export * from './ArrowBottomIcon'
 export * from './ArrowBottomTailIcon'
+export * from './ArrowDownIcon'
 export * from './ArrowLeftBottomIcon'
 export * from './ArrowLeftDownIcon'
 export * from './ArrowLeftDownTailIcon'

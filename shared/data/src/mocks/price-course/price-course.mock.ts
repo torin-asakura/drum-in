@@ -55,6 +55,14 @@ const priceCourseMock: PriceCourse[] = [
     quantityMonths: '4',
     pathPage: '/connacol',
   },
+  {
+    costPerMonth: '8 700',
+    oldPrice: '10 000 ₽',
+    currency: '₽',
+    quantityVideoLessons: '6',
+    quantityMonths: '1',
+    pathPage: '/polyrhythmic-keys',
+  },
 ]
 
 export { priceCourseMock }

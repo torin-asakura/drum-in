@@ -1852,6 +1852,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/banner-without-tape-fragment@workspace:0.0.1, @landing/banner-without-tape-fragment@workspace:landing/fragments/landing-banner-without-tape":
+  version: 0.0.0-use.local
+  resolution: "@landing/banner-without-tape-fragment@workspace:landing/fragments/landing-banner-without-tape"
+  dependencies:
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-system: "npm:^5.1.5"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/choose-course-fragment@workspace:0.0.1, @landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course":
   version: 0.0.0-use.local
   resolution: "@landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course"
@@ -2146,6 +2165,7 @@ __metadata:
     "@landing/after-the-course-fragment": "workspace:0.0.1"
     "@landing/banner-course-fragment": "workspace:0.0.1"
     "@landing/banner-with-tags-fragment": "workspace:0.0.1"
+    "@landing/banner-without-tape-fragment": "workspace:0.0.1"
     "@landing/program-horizontal-fragment": "workspace:0.0.1"
     "@landing/skills-fragment": "workspace:0.0.1"
     "@landing/target-audience-fragment": "workspace:0.0.1"
@@ -2354,6 +2374,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/polyrhythmic-keys-page@workspace:0.0.1, @landing/polyrhythmic-keys-page@workspace:landing/pages/polyrhythmic-keys-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/polyrhythmic-keys-page@workspace:landing/pages/polyrhythmic-keys-page"
+  dependencies:
+    "@emotion/react": "npm:^11.9.3"
+    "@emotion/styled": "npm:^11.9.3"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@landing/course-process-fragment": "workspace:0.0.1"
+    "@landing/cta-fragment": "workspace:0.0.1"
+    "@landing/faq": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/header-fragment": "workspace:0.0.1"
+    "@landing/hero-course-fragment": "workspace:0.0.1"
+    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/start-learning-fragment": "workspace:0.0.1"
+    "@landing/teacher-fragment": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+  peerDependencies:
+    next: ^12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/price-fragment@workspace:0.0.1, @landing/price-fragment@workspace:landing/fragments/landing-price":
   version: 0.0.0-use.local
   resolution: "@landing/price-fragment@workspace:landing/fragments/landing-price"
@@ -2448,6 +2495,7 @@ __metadata:
     "@landing/fifth-dimension-page": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
     "@landing/opening-the-rhythm-page": "workspace:0.0.1"
+    "@landing/polyrhythmic-keys-page": "workspace:0.0.1"
     "@landing/seventh-heaven-page": "workspace:0.0.1"
     "@types/express": "npm:^4.17.13"
     "@types/node": "npm:^17.0.0"

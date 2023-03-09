@@ -1,4 +1,4 @@
-export interface PriceProps {
+export interface ContentWithInstallmentsProps {
   costPerMonth?: string
   currency?: string
   fullCost?: string
