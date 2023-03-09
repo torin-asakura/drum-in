@@ -48,7 +48,6 @@ const Content: FC<ContentProps> = ({ id }) => {
       </>
     )
 
-
   return (
     <>
       <BannerCourseBlock />

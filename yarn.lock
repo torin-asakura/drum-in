@@ -1856,14 +1856,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-without-tape-fragment@workspace:landing/fragments/landing-banner-without-tape"
   dependencies:
-    "@emotion/styled": ^11.9.3
-    "@types/react": 18.0.21
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    react-intl: ^6.1.2
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
+    react-intl: "npm:^6.1.2"
+    styled-system: "npm:^5.1.5"
+    styled-tools: "npm:^1.7.2"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -2378,8 +2378,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/polyrhythmic-keys-page@workspace:landing/pages/polyrhythmic-keys-page"
   dependencies:
-    "@emotion/react": ^11.9.3
-    "@emotion/styled": ^11.9.3
+    "@emotion/react": "npm:^11.9.3"
+    "@emotion/styled": "npm:^11.9.3"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@landing/course-process-fragment": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
@@ -2390,7 +2390,7 @@ __metadata:
     "@landing/price-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@types/react": 18.0.21
+    "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
