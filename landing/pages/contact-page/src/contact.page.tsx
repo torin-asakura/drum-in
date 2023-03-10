@@ -41,7 +41,7 @@ export const ContactPage = () => {
             backgroundPosition='center bottom'
           >
             <ContactBlock />
-            <FooterBlock background={false} buttonUp={false} />
+            <FooterBlock buttonUp={false} />
           </Background>
           <Background
             width='100%'
@@ -53,7 +53,7 @@ export const ContactPage = () => {
             backgroundPosition={['center top', 'center top', 'center']}
           >
             <ContactBlock />
-            <FooterBlock background={false} buttonUp={false} />
+            <FooterBlock buttonUp={false} />
           </Background>
         </main>
       </LocomotiveScrollProvider>

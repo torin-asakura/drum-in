@@ -1934,7 +1934,6 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@landing/modal-forms": "workspace:0.0.1"
     "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
@@ -1966,7 +1965,7 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-connacol-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/price-connacol-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2123,7 +2122,7 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-feeling-of-time-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/price-feeling-of-time-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2150,7 +2149,7 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-fifth-dimension-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/price-fifth-dimension-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2173,12 +2172,12 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
     "@emotion/react": "*"
@@ -2424,17 +2423,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/modal-forms@workspace:0.0.1, @landing/modal-forms@workspace:landing/fragments/landing-modal-forms":
+"@landing/modal-form-connacol@workspace:0.0.1, @landing/modal-form-connacol@workspace:landing/fragments/landing-modal-form-connacol":
   version: 0.0.0-use.local
-  resolution: "@landing/modal-forms@workspace:landing/fragments/landing-modal-forms"
+  resolution: "@landing/modal-form-connacol@workspace:landing/fragments/landing-modal-form-connacol"
   dependencies:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:^17"
     "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2443,7 +2440,155 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: "npm:7.6.2"
-    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-feeling-of-time@workspace:0.0.1, @landing/modal-form-feeling-of-time@workspace:landing/fragments/landing-modal-form-feeling-of-time":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-feeling-of-time@workspace:landing/fragments/landing-modal-form-feeling-of-time"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-fifth-dimension@workspace:0.0.1, @landing/modal-form-fifth-dimension@workspace:landing/fragments/landing-modal-form-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-fifth-dimension@workspace:landing/fragments/landing-modal-form-fifth-dimension"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-opening-the-rhythm@workspace:0.0.1, @landing/modal-form-opening-the-rhythm@workspace:landing/fragments/landing-modal-form-opening-the-rhythm":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-opening-the-rhythm@workspace:landing/fragments/landing-modal-form-opening-the-rhythm"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-polyrhythmic-keys@workspace:0.0.1, @landing/modal-form-polyrhythmic-keys@workspace:landing/fragments/landing-modal-form-polyrhythmic-keys":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-polyrhythmic-keys@workspace:landing/fragments/landing-modal-form-polyrhythmic-keys"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-seventh-heaven@workspace:0.0.1, @landing/modal-form-seventh-heaven@workspace:landing/fragments/landing-modal-form-seventh-heaven":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-seventh-heaven@workspace:landing/fragments/landing-modal-form-seventh-heaven"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2499,7 +2644,7 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-opening-the-rhythm-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/price-opening-the-rhythm-fragment": "workspace:0.0.1"
     "@landing/program-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
@@ -2527,7 +2672,7 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-polyrhythmic-keys-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/price-polyrhythmic-keys-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2541,14 +2686,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/price-fragment@workspace:0.0.1, @landing/price-fragment@workspace:landing/fragments/landing-price":
+"@landing/price-connacol-fragment@workspace:0.0.1, @landing/price-connacol-fragment@workspace:landing/fragments/landing-price-connacol":
   version: 0.0.0-use.local
-  resolution: "@landing/price-fragment@workspace:landing/fragments/landing-price"
+  resolution: "@landing/price-connacol-fragment@workspace:landing/fragments/landing-price-connacol"
   dependencies:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@landing/modal-forms": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
+    "@landing/modal-form-connacol": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
     "@ui/figures": "workspace:0.0.1"
@@ -2556,7 +2700,121 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-feeling-of-time-fragment@workspace:0.0.1, @landing/price-feeling-of-time-fragment@workspace:landing/fragments/landing-price-feeling-of-time":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-feeling-of-time-fragment@workspace:landing/fragments/landing-price-feeling-of-time"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-feeling-of-time": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-fifth-dimension-fragment@workspace:0.0.1, @landing/price-fifth-dimension-fragment@workspace:landing/fragments/landing-price-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-fifth-dimension-fragment@workspace:landing/fragments/landing-price-fifth-dimension"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-fifth-dimension": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-opening-the-rhythm-fragment@workspace:0.0.1, @landing/price-opening-the-rhythm-fragment@workspace:landing/fragments/landing-price-opening-the-rhythm":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-opening-the-rhythm-fragment@workspace:landing/fragments/landing-price-opening-the-rhythm"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-opening-the-rhythm": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-polyrhythmic-keys-fragment@workspace:0.0.1, @landing/price-polyrhythmic-keys-fragment@workspace:landing/fragments/landing-price-polyrhythmic-keys":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-polyrhythmic-keys-fragment@workspace:landing/fragments/landing-price-polyrhythmic-keys"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-polyrhythmic-keys": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-seventh-heaven-fragment@workspace:0.0.1, @landing/price-seventh-heaven-fragment@workspace:landing/fragments/landing-price-seventh-heaven":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-seventh-heaven-fragment@workspace:landing/fragments/landing-price-seventh-heaven"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-seventh-heaven": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2735,7 +2993,7 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/hero-seventh-heaven-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/price-seventh-heaven-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"

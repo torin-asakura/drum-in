@@ -6,6 +6,7 @@
     "@shared/data": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
@@ -15,7 +16,6 @@
   "devDependencies": {
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@types/react": "18.0.21",
-    "next": "12.1.0",
     "react-intl": "^6.1.2"
   },
   "peerDependencies": {

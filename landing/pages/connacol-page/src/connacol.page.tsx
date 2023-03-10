@@ -10,7 +10,7 @@ import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { HeroConnacolBlock }        from '@landing/hero-connacol-fragment'
-import { PriceBlock }               from '@landing/price-fragment'
+import { PriceConnacolBlock }       from '@landing/price-connacol-fragment'
 import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Background }               from '@ui/background'
@@ -62,10 +62,29 @@ export const ConnacolPage = () => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Background>
-          <PriceBlock />
+          <PriceConnacolBlock />
           <FaqBlock />
           <CtaBlock />
-          <FooterBlock />
+          <Background
+            display={['none', 'none', 'flex']}
+            width='100%'
+            gradient='purpleBlueSemicircleImage'
+            backgroundSize='80% 100%'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='left bottom'
+          >
+            <FooterBlock />
+          </Background>
+          <Background
+            display={['flex', 'flex', 'none']}
+            width='100%'
+            gradient='purpleBlueTwoSemicirclesSmallImage'
+            backgroundSize='100% 80%'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='center bottom'
+          >
+            <FooterBlock />
+          </Background>
         </main>
         <StartLearningBlock />
       </LocomotiveScrollProvider>

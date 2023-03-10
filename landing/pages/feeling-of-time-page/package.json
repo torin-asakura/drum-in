@@ -10,7 +10,7 @@
     "@landing/footer-fragment": "workspace:0.0.1",
     "@landing/header-fragment": "workspace:0.0.1",
     "@landing/hero-feeling-of-time-fragment": "workspace:0.0.1",
-    "@landing/price-fragment": "workspace:0.0.1",
+    "@landing/price-feeling-of-time-fragment": "workspace:0.0.1",
     "@landing/start-learning-fragment": "workspace:0.0.1",
     "@landing/teacher-fragment": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1",

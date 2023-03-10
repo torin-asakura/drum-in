@@ -1,8 +1,8 @@
-import React                    from 'react'
+import React                             from 'react'
 
-import { BannerPolyrhythmicKeysBlock }  from '@landing/banner-polyrhythmic-keys-fragment'
+import { BannerPolyrhythmicKeysBlock }   from '@landing/banner-polyrhythmic-keys-fragment'
 import { ProgramPolyrhythmicKeyslBlock } from '@landing/program-polyrhythmic-keys-fragment'
-import { Background }           from '@ui/background'
+import { Background }                    from '@ui/background'
 
 const HeroPolyrhythmicKeysBlock = () => (
   <>
