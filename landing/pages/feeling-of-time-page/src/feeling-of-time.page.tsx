@@ -9,8 +9,8 @@ import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
-import { HeroCourse }               from '@landing/hero-course-fragment'
-import { PriceBlock }               from '@landing/price-fragment'
+import { HeroFeelingOfTimeBlock }   from '@landing/hero-feeling-of-time-fragment'
+import { PriceFeelingOfTimeBlock }  from '@landing/price-feeling-of-time-fragment'
 import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Background }               from '@ui/background'
@@ -51,7 +51,7 @@ export const FeelingOfTimePage = () => {
       >
         <HeaderBlock />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroCourse />
+          <HeroFeelingOfTimeBlock />
           <CourseProcessBlock />
           <Background
             width='100%'
@@ -62,10 +62,29 @@ export const FeelingOfTimePage = () => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Background>
-          <PriceBlock />
+          <PriceFeelingOfTimeBlock />
           <FaqBlock />
           <CtaBlock />
-          <FooterBlock />
+          <Background
+            display={['none', 'none', 'flex']}
+            width='100%'
+            gradient='blueTurquoiseSemicircleImage'
+            backgroundSize='80% 100%'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='left bottom'
+          >
+            <FooterBlock />
+          </Background>
+          <Background
+            display={['flex', 'flex', 'none']}
+            width='100%'
+            gradient='blueTurquoiseTwoSemicirclesSmallImage'
+            backgroundSize='100% 80%'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='center bottom'
+          >
+            <FooterBlock />
+          </Background>
         </main>
         <StartLearningBlock />
       </LocomotiveScrollProvider>

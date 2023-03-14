@@ -1789,24 +1789,60 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/banner-course-fragment@workspace:0.0.1, @landing/banner-course-fragment@workspace:landing/fragments/landing-banner-course":
+"@landing/banner-connacol-fragment@workspace:0.0.1, @landing/banner-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-banner-connacol":
   version: 0.0.0-use.local
-  resolution: "@landing/banner-course-fragment@workspace:landing/fragments/landing-banner-course"
+  resolution: "@landing/banner-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-banner-connacol"
+  dependencies:
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-system: "npm:^5.1.5"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/banner-feeling-of-time-fragment@workspace:0.0.1, @landing/banner-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-banner-feeling-of-time":
+  version: 0.0.0-use.local
+  resolution: "@landing/banner-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-banner-feeling-of-time"
   dependencies:
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
     "@emotion/react": "*"
-    next: "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/banner-fifth-dimension-fragment@workspace:0.0.1, @landing/banner-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-banner-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/banner-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-banner-fifth-dimension"
+  dependencies:
+    "@emotion/react": "npm:*"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -1833,9 +1869,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/banner-with-tags-fragment@workspace:0.0.1, @landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags":
+"@landing/banner-opening-the-rhythm-fragment@workspace:0.0.1, @landing/banner-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm":
   version: 0.0.0-use.local
-  resolution: "@landing/banner-with-tags-fragment@workspace:landing/fragments/landing-banner-with-tags"
+  resolution: "@landing/banner-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"
+  dependencies:
+    "@emotion/react": "npm:*"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/banner-polyrhythmic-keys-fragment@workspace:0.0.1, @landing/banner-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-banner-polyrhythmic-keys":
+  version: 0.0.0-use.local
+  resolution: "@landing/banner-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-banner-polyrhythmic-keys"
   dependencies:
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1852,17 +1908,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/banner-without-tape-fragment@workspace:0.0.1, @landing/banner-without-tape-fragment@workspace:landing/fragments/landing-banner-without-tape":
+"@landing/banner-seventh-heaven-fragment@workspace:0.0.1, @landing/banner-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven":
   version: 0.0.0-use.local
-  resolution: "@landing/banner-without-tape-fragment@workspace:landing/fragments/landing-banner-without-tape"
+  resolution: "@landing/banner-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"
   dependencies:
+    "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
-    styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
     "@emotion/react": "*"
@@ -1877,7 +1934,6 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@landing/modal-forms": "workspace:0.0.1"
     "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
@@ -1908,8 +1964,8 @@ __metadata:
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@landing/hero-course-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/hero-connacol-fragment": "workspace:0.0.1"
+    "@landing/price-connacol-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2065,8 +2121,8 @@ __metadata:
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@landing/hero-course-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/hero-feeling-of-time-fragment": "workspace:0.0.1"
+    "@landing/price-feeling-of-time-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2092,8 +2148,8 @@ __metadata:
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@landing/hero-course-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/hero-fifth-dimension-fragment": "workspace:0.0.1"
+    "@landing/price-fifth-dimension-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2116,12 +2172,12 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
     "@emotion/react": "*"
@@ -2157,21 +2213,51 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/hero-course-fragment@workspace:0.0.1, @landing/hero-course-fragment@workspace:landing/fragments/landing-hero-course":
+"@landing/hero-connacol-fragment@workspace:0.0.1, @landing/hero-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-hero-connacol":
   version: 0.0.0-use.local
-  resolution: "@landing/hero-course-fragment@workspace:landing/fragments/landing-hero-course"
+  resolution: "@landing/hero-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-hero-connacol"
   dependencies:
     "@landing/advantages-fragment": "workspace:0.0.1"
-    "@landing/after-the-course-fragment": "workspace:0.0.1"
-    "@landing/banner-course-fragment": "workspace:0.0.1"
-    "@landing/banner-with-tags-fragment": "workspace:0.0.1"
-    "@landing/banner-without-tape-fragment": "workspace:0.0.1"
-    "@landing/program-horizontal-fragment": "workspace:0.0.1"
-    "@landing/skills-fragment": "workspace:0.0.1"
-    "@landing/target-audience-fragment": "workspace:0.0.1"
+    "@landing/banner-connacol-fragment": "workspace:0.0.1"
+    "@landing/program-connacol-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
-    next: "npm:12.1.0"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    next: "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/hero-feeling-of-time-fragment@workspace:0.0.1, @landing/hero-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-hero-feeling-of-time":
+  version: 0.0.0-use.local
+  resolution: "@landing/hero-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-hero-feeling-of-time"
+  dependencies:
+    "@landing/banner-feeling-of-time-fragment": "workspace:0.0.1"
+    "@landing/program-feeling-of-time-fragment": "workspace:0.0.1"
+    "@landing/target-audience-feeling-of-time-fragment": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    next: "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/hero-fifth-dimension-fragment@workspace:0.0.1, @landing/hero-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-hero-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/hero-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-hero-fifth-dimension"
+  dependencies:
+    "@landing/banner-fifth-dimension-fragment": "workspace:0.0.1"
+    "@landing/program-fifth-dimension-fragment": "workspace:0.0.1"
+    "@landing/target-audience-fifth-dimension-fragment": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
   peerDependencies:
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -2196,6 +2282,59 @@ __metadata:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     react: "*"
     react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/hero-opening-the-rhythm-fragment@workspace:0.0.1, @landing/hero-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-hero-opening-the-rhythm":
+  version: 0.0.0-use.local
+  resolution: "@landing/hero-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-hero-opening-the-rhythm"
+  dependencies:
+    "@landing/after-the-course-fragment": "workspace:0.0.1"
+    "@landing/banner-opening-the-rhythm-fragment": "workspace:0.0.1"
+    "@landing/skills-fragment": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    next: "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/hero-polyrhythmic-keys-fragment@workspace:0.0.1, @landing/hero-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-hero-polyrhythmic-keys":
+  version: 0.0.0-use.local
+  resolution: "@landing/hero-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-hero-polyrhythmic-keys"
+  dependencies:
+    "@landing/banner-polyrhythmic-keys-fragment": "workspace:0.0.1"
+    "@landing/program-polyrhythmic-keys-fragment": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    next: "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/hero-seventh-heaven-fragment@workspace:0.0.1, @landing/hero-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven":
+  version: 0.0.0-use.local
+  resolution: "@landing/hero-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven"
+  dependencies:
+    "@landing/banner-seventh-heaven-fragment": "workspace:0.0.1"
+    "@landing/program-seventh-heaven-fragment": "workspace:0.0.1"
+    "@landing/target-audience-seventh-heaven-fragment": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    next: "*"
+    react: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2284,17 +2423,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/modal-forms@workspace:0.0.1, @landing/modal-forms@workspace:landing/fragments/landing-modal-forms":
+"@landing/modal-form-connacol@workspace:0.0.1, @landing/modal-form-connacol@workspace:landing/pages/connacol-page/fragments/landing-modal-form-connacol":
   version: 0.0.0-use.local
-  resolution: "@landing/modal-forms@workspace:landing/fragments/landing-modal-forms"
+  resolution: "@landing/modal-form-connacol@workspace:landing/pages/connacol-page/fragments/landing-modal-form-connacol"
   dependencies:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:^17"
     "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2303,7 +2440,155 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: "npm:7.6.2"
-    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-feeling-of-time@workspace:0.0.1, @landing/modal-form-feeling-of-time@workspace:landing/pages/feeling-of-time-page/fragments/landing-modal-form-feeling-of-time":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-feeling-of-time@workspace:landing/pages/feeling-of-time-page/fragments/landing-modal-form-feeling-of-time"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-fifth-dimension@workspace:0.0.1, @landing/modal-form-fifth-dimension@workspace:landing/pages/fifth-dimension-page/fragments/landing-modal-form-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-fifth-dimension@workspace:landing/pages/fifth-dimension-page/fragments/landing-modal-form-fifth-dimension"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-opening-the-rhythm@workspace:0.0.1, @landing/modal-form-opening-the-rhythm@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-opening-the-rhythm@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-polyrhythmic-keys@workspace:0.0.1, @landing/modal-form-polyrhythmic-keys@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-modal-form-polyrhythmic-keys":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-polyrhythmic-keys@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-modal-form-polyrhythmic-keys"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/modal-form-seventh-heaven@workspace:0.0.1, @landing/modal-form-seventh-heaven@workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven":
+  version: 0.0.0-use.local
+  resolution: "@landing/modal-form-seventh-heaven@workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/modal": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:7.6.2"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2358,8 +2643,8 @@ __metadata:
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@landing/hero-course-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/hero-opening-the-rhythm-fragment": "workspace:0.0.1"
+    "@landing/price-opening-the-rhythm-fragment": "workspace:0.0.1"
     "@landing/program-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
@@ -2386,8 +2671,8 @@ __metadata:
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@landing/hero-course-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/hero-polyrhythmic-keys-fragment": "workspace:0.0.1"
+    "@landing/price-polyrhythmic-keys-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2401,14 +2686,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/price-fragment@workspace:0.0.1, @landing/price-fragment@workspace:landing/fragments/landing-price":
+"@landing/price-connacol-fragment@workspace:0.0.1, @landing/price-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-price-connacol":
   version: 0.0.0-use.local
-  resolution: "@landing/price-fragment@workspace:landing/fragments/landing-price"
+  resolution: "@landing/price-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-price-connacol"
   dependencies:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@landing/modal-forms": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
+    "@landing/modal-form-connacol": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
     "@ui/figures": "workspace:0.0.1"
@@ -2416,7 +2700,121 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-feeling-of-time-fragment@workspace:0.0.1, @landing/price-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-price-feeling-of-time":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-price-feeling-of-time"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-feeling-of-time": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-fifth-dimension-fragment@workspace:0.0.1, @landing/price-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-price-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-price-fifth-dimension"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-fifth-dimension": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-opening-the-rhythm-fragment@workspace:0.0.1, @landing/price-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-opening-the-rhythm": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-polyrhythmic-keys-fragment@workspace:0.0.1, @landing/price-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-polyrhythmic-keys": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/price-seventh-heaven-fragment@workspace:0.0.1, @landing/price-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven":
+  version: 0.0.0-use.local
+  resolution: "@landing/price-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven"
+  dependencies:
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@landing/modal-form-seventh-heaven": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/figures": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2444,6 +2842,60 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/program-connacol-fragment@workspace:0.0.1, @landing/program-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-program-connacol":
+  version: 0.0.0-use.local
+  resolution: "@landing/program-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-program-connacol"
+  dependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/program-feeling-of-time-fragment@workspace:0.0.1, @landing/program-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-program-feeling-of-time":
+  version: 0.0.0-use.local
+  resolution: "@landing/program-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-program-feeling-of-time"
+  dependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/program-fifth-dimension-fragment@workspace:0.0.1, @landing/program-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-program-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/program-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-program-fifth-dimension"
+  dependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/program-fragment@workspace:0.0.1, @landing/program-fragment@workspace:landing/fragments/landing-program":
   version: 0.0.0-use.local
   resolution: "@landing/program-fragment@workspace:landing/fragments/landing-program"
@@ -2464,12 +2916,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/program-horizontal-fragment@workspace:0.0.1, @landing/program-horizontal-fragment@workspace:landing/fragments/landing-program-horizontal":
+"@landing/program-polyrhythmic-keys-fragment@workspace:0.0.1, @landing/program-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-program-polyrhythmic-keys":
   version: 0.0.0-use.local
-  resolution: "@landing/program-horizontal-fragment@workspace:landing/fragments/landing-program-horizontal"
+  resolution: "@landing/program-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-program-polyrhythmic-keys"
   dependencies:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/background": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/program-seventh-heaven-fragment@workspace:0.0.1, @landing/program-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven":
+  version: 0.0.0-use.local
+  resolution: "@landing/program-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"
+  dependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -2523,8 +2992,8 @@ __metadata:
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@landing/hero-course-fragment": "workspace:0.0.1"
-    "@landing/price-fragment": "workspace:0.0.1"
+    "@landing/hero-seventh-heaven-fragment": "workspace:0.0.1"
+    "@landing/price-seventh-heaven-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
@@ -2591,15 +3060,43 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/target-audience-fragment@workspace:0.0.1, @landing/target-audience-fragment@workspace:landing/fragments/landing-target-audience":
+"@landing/target-audience-feeling-of-time-fragment@workspace:0.0.1, @landing/target-audience-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time":
   version: 0.0.0-use.local
-  resolution: "@landing/target-audience-fragment@workspace:landing/fragments/landing-target-audience"
+  resolution: "@landing/target-audience-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time"
   dependencies:
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    react-intl: "npm:^6.1.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/target-audience-fifth-dimension-fragment@workspace:0.0.1, @landing/target-audience-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension":
+  version: 0.0.0-use.local
+  resolution: "@landing/target-audience-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension"
+  dependencies:
+    "@types/react": "npm:18.0.21"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/target-audience-seventh-heaven-fragment@workspace:0.0.1, @landing/target-audience-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven":
+  version: 0.0.0-use.local
+  resolution: "@landing/target-audience-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"
+  dependencies:
+    "@types/react": "npm:18.0.21"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
     "@emotion/react": "*"

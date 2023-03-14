@@ -1,0 +1,26 @@
+{
+  "name": "@landing/price-polyrhythmic-keys-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@landing/modal-form-polyrhythmic-keys": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/figures": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.9.3",
+    "@types/react": "18.0.21",
+    "react-intl": "^6.1.2",
+    "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-intl": "*"
+  }
+}
