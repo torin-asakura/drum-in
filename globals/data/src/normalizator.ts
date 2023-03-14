@@ -15,8 +15,8 @@ const normalizeString = (string) =>
 const validateField = (field) =>
   typeof field === 'string'
     ? {
-      handle: (cb) => cb(true),
-    }
+        handle: (cb) => cb(true),
+      }
     : { handle: (cb) => cb(false) }
 
 const fragmentLevelReducer = (result, [key, value]) => ({

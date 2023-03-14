@@ -1,17 +1,17 @@
-import React            from 'react'
-import { useState }     from 'react'
+import React         from 'react'
 
-import { Accordeon }    from '@ui/accordeon'
-import { Column }       from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { useFaq } from "../data";
+import { Accordeon } from '@ui/accordeon'
+import { Column }    from '@ui/layout'
+import { Layout }    from '@ui/layout'
+
+import { useFaq }    from '../data'
 
 const ListMobile = () => {
-  const faq = useFaq()
+  const faqArray = useFaq()
 
   return (
     <Column display={['flex', 'flex', 'none']}>
-      {faq.map(({ title, faq }) => (
+      {faqArray.map(({ title, faq }) => (
         <>
           <Accordeon title={title} content={faq.answer} />
           <Layout flexBasis={[16, 21, 0]} />

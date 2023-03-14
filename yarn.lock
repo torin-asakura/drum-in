@@ -1831,6 +1831,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/after-the-course-fragment@workspace:landing/fragments/landing-after-the-course"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1841,6 +1842,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1931,6 +1933,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1941,6 +1944,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -2834,6 +2838,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-opening-the-rhythm": "workspace:0.0.1"
@@ -2847,6 +2852,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"

@@ -783,10 +783,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#npm:3.7.10", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-3b0930e65c/3/.yarn/berry/cache/@apollo-client-npm-3.7.10-f6fb7ce807-9.zip/node_modules/@apollo/client/",\
+      ["virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-5019855e0f/3/.yarn/berry/cache/@apollo-client-npm-3.7.10-f6fb7ce807-9.zip/node_modules/@apollo/client/",\
         "packageDependencies": [\
-          ["@apollo/client", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#npm:3.7.10"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@graphql-typed-document-node/core", "virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:3.1.2"],\
           ["@types/graphql", null],\
           ["@types/graphql-ws", null],\
@@ -3696,7 +3696,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@globals-data-virtual-cb181b1e57/1/globals/data/",\
         "packageDependencies": [\
           ["@globals/data", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#workspace:globals/data"],\
-          ["@apollo/client", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#npm:3.7.10"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["graphql", "npm:15.8.0"],\
@@ -4206,8 +4206,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-after-the-course-fragment-virtual-09e5d4513e/1/landing/fragments/landing-after-the-course/",\
         "packageDependencies": [\
           ["@landing/after-the-course-fragment", "virtual:6446844d1ba3447fc4735f6c4defc44e3e064382df26fa7c751471ca2da52816e6fee9d942d5be2c3b5f429bf66efb6a69bc8f179b8738f537e28a817d5b309a#workspace:landing/fragments/landing-after-the-course"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -4220,7 +4222,9 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -4233,8 +4237,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-after-the-course-fragment-virtual-6c94297772/1/landing/fragments/landing-after-the-course/",\
         "packageDependencies": [\
           ["@landing/after-the-course-fragment", "virtual:9929190e21f86e6f7696fd30da23aae4d4134df4d52208923b5adfadb6a48e798ccc2e51c85dca9179bb17040a73d518b9dfb1dd727d30230901960e6f957d70#workspace:landing/fragments/landing-after-the-course"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -4248,6 +4254,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -4259,8 +4266,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-after-the-course-fragment-virtual-e5138801b4/1/landing/fragments/landing-after-the-course/",\
         "packageDependencies": [\
           ["@landing/after-the-course-fragment", "virtual:a6b2a69bb6f3458a83408f8c88581d0f88440f3984003af2a12e28b209312a940b7e733f6e8df50cd2e9277f381669e252920ef61008a68d420ea9d2381c2192#workspace:landing/fragments/landing-after-the-course"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -4273,6 +4282,7 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -4284,6 +4294,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/fragments/landing-after-the-course/",\
         "packageDependencies": [\
           ["@landing/after-the-course-fragment", "workspace:landing/fragments/landing-after-the-course"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@types/react", "npm:17.0.47"],\
@@ -4694,8 +4705,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-banner-opening-the-rhythm-fragment-virtual-15861118c7/1/landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm/",\
         "packageDependencies": [\
           ["@landing/banner-opening-the-rhythm-fragment", "virtual:6446844d1ba3447fc4735f6c4defc44e3e064382df26fa7c751471ca2da52816e6fee9d942d5be2c3b5f429bf66efb6a69bc8f179b8738f537e28a817d5b309a#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -4708,7 +4721,9 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -4721,8 +4736,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-banner-opening-the-rhythm-fragment-virtual-b176786360/1/landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm/",\
         "packageDependencies": [\
           ["@landing/banner-opening-the-rhythm-fragment", "virtual:9929190e21f86e6f7696fd30da23aae4d4134df4d52208923b5adfadb6a48e798ccc2e51c85dca9179bb17040a73d518b9dfb1dd727d30230901960e6f957d70#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -4736,6 +4753,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -4747,8 +4765,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-banner-opening-the-rhythm-fragment-virtual-c2da00f980/1/landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm/",\
         "packageDependencies": [\
           ["@landing/banner-opening-the-rhythm-fragment", "virtual:a6b2a69bb6f3458a83408f8c88581d0f88440f3984003af2a12e28b209312a940b7e733f6e8df50cd2e9277f381669e252920ef61008a68d420ea9d2381c2192#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -4761,6 +4781,7 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -4772,6 +4793,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm/",\
         "packageDependencies": [\
           ["@landing/banner-opening-the-rhythm-fragment", "workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@types/react", "npm:17.0.47"],\
@@ -5673,7 +5695,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-faq-virtual-e5fc51d22e/1/landing/fragments/landing-faq/",\
         "packageDependencies": [\
           ["@landing/faq", "virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-faq"],\
-          ["@apollo/client", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#npm:3.7.10"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@globals/data", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#workspace:globals/data"],\
@@ -5785,7 +5807,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/fragments/landing-faq/",\
         "packageDependencies": [\
           ["@landing/faq", "workspace:landing/fragments/landing-faq"],\
-          ["@apollo/client", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#npm:3.7.10"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/styled", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#npm:11.10.5"],\
           ["@globals/data", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#workspace:globals/data"],\
           ["@types/react", "npm:17.0.47"],\
@@ -8148,9 +8170,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-price-opening-the-rhythm-fragment-virtual-0554c9eb5a/1/landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm/",\
         "packageDependencies": [\
           ["@landing/price-opening-the-rhythm-fragment", "virtual:92cf290c2a887bf023bcd0fbbcf4d32544ff663f44bf5ddb743538e3bcff0ef15408143b10e1138291a33cb3aac7fae086fb071a0dd0f8b8a7b60d0bb303a1b8#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@landing/modal-form-opening-the-rhythm", "virtual:0554c9eb5a2d0c0f7c6623c1b3893e1f321f1382c6fcbb3517111791fc91b8a1a95ffb3ef90d1c1c0fce2c444590c3080c4648bd3e68500fa96b949b27fb90e0#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.18"],\
           ["@types/react-intl", null],\
@@ -8166,6 +8190,8 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-dom",\
           "@types/react-intl",\
           "@types/react",\
@@ -8179,9 +8205,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-price-opening-the-rhythm-fragment-virtual-5464fb1069/1/landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm/",\
         "packageDependencies": [\
           ["@landing/price-opening-the-rhythm-fragment", "virtual:d96dadb19ace007edd1d11636331a7313b958e8fc135b84c839a2ee2d35bfc0bc13fa1119230e2c684d91a054751c89f29c113bf77f770c988079896bae7dd8a#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@landing/modal-form-opening-the-rhythm", "virtual:5464fb10690abf0714f94d80588b667e68d5764e1ec9c7e5b12e1cf9efd4b358f27cedfcd11ee125d4331ac0040ea63c0fdc8ed1558eeb31e615458e57d51eec#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", null],\
           ["@types/react-intl", null],\
@@ -8197,6 +8225,7 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/react-dom",\
           "@types/react-intl",\
           "@types/react",\
@@ -8209,6 +8238,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm/",\
         "packageDependencies": [\
           ["@landing/price-opening-the-rhythm-fragment", "workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@landing/modal-form-opening-the-rhythm", "virtual:5464fb10690abf0714f94d80588b667e68d5764e1ec9c7e5b12e1cf9efd4b358f27cedfcd11ee125d4331ac0040ea63c0fdc8ed1558eeb31e615458e57d51eec#workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm"],\

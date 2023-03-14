@@ -1,12 +1,13 @@
 import 'locomotive-scroll/dist/locomotive-scroll.css'
+
+import * as messages      from '../../locales/ru.json'
+
 import { ApolloProvider } from '@apollo/client'
 
-import * as messages     from '../../locales/ru.json'
+import React              from 'react'
+import { IntlProvider }   from 'react-intl'
 
-import React             from 'react'
-import { IntlProvider }  from 'react-intl'
-
-import { ThemeProvider } from '@ui/theme'
+import { ThemeProvider }  from '@ui/theme'
 import { getClient }      from '@globals/data'
 
 const App = ({ Component, pageProps, ...props }) => {

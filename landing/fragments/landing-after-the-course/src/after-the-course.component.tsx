@@ -1,6 +1,4 @@
 import React                      from 'react'
-import { FormattedMessage }       from 'react-intl'
-import { useIntl }                from 'react-intl'
 
 import { TwistedArrowBottomIcon } from '@ui/icons'
 import { Box }                    from '@ui/layout'
@@ -10,9 +8,10 @@ import { Row }                    from '@ui/layout'
 import { Text }                   from '@ui/text'
 
 import { Tape }                   from './tape'
+import { useAfterTheCourser }     from './data'
 
 const AfterTheCourseBlock = () => {
-  const { formatMessage } = useIntl()
+  const afterTheCourse = useAfterTheCourser()
 
   return (
     <Box width='100%' justifyContent='center' position='relative'>
@@ -30,10 +29,7 @@ const AfterTheCourseBlock = () => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                <FormattedMessage
-                  id='landing_after_the_course.after_the_course_you_will_be_able_to'
-                  defaultMessage='После курса вы сможете'
-                />
+                {afterTheCourse?.title}
               </Text>
             </Box>
             <Layout display={['none', 'none', 'flex']} flexBasis={36} flexShrink={0} />
@@ -46,20 +42,9 @@ const AfterTheCourseBlock = () => {
             </Box>
             <Box width={{ _: 0, tablet: 0, laptop: 740, wide: 940 }}>
               <Tape
-                firstLine={formatMessage({
-                  id: 'landing_after_the_course.make_rhythmically_interesting_arrangements',
-                  defaultMessage:
-                    '#Делать ритмически-интересные аранжировки;#Делать ритмически-интересные аранжировки',
-                })}
-                secondLine={formatMessage({
-                  id: 'landing_after_the_course.select_parties_and_control_the_pace',
-                  defaultMessage: '#Подбирать партии;#Контролировать темп',
-                })}
-                thirdLine={formatMessage({
-                  id: 'landing_after_the_course.feel_confident_when_playing_and_recording',
-                  defaultMessage:
-                    '#Уверенно чувствовать себя при игре и записи;#Уверенно чувствовать себя при игре и записи',
-                })}
+                firstLine={afterTheCourse?.afterTheCourse.fitstLineTape}
+                secondLine={afterTheCourse?.afterTheCourse.secondLineTape}
+                thirdLine={afterTheCourse?.afterTheCourse.thirdLineTape}
               />
             </Box>
           </Row>
