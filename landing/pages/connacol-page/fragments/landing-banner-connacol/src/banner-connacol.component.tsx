@@ -11,7 +11,7 @@ import { Text }                 from '@ui/text'
 
 import { TagBlock }             from './tag'
 
-const BannerWithTagsBlock = () => {
+const BannerСonnacolBlock = () => {
   const { formatMessage } = useIntl()
 
   return (
@@ -102,4 +102,4 @@ const BannerWithTagsBlock = () => {
     </Row>
   )
 }
-export { BannerWithTagsBlock }
+export { BannerСonnacolBlock }

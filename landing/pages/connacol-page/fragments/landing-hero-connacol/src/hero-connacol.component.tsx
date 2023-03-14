@@ -1,7 +1,7 @@
 import React                    from 'react'
 
 import { AdvantagesBlock }      from '@landing/advantages-fragment'
-import { BannerWithTagsBlock }  from '@landing/banner-with-tags-fragment'
+import { BannerСonnacolBlock }  from '@landing/banner-connacol-fragment'
 import { ProgramConnacolBlock } from '@landing/program-connacol-fragment'
 import { Background }           from '@ui/background'
 
@@ -16,7 +16,7 @@ const HeroConnacolBlock = () => (
       backgroundRepeat='no-repeat'
       backgroundPosition='center top'
     >
-      <BannerWithTagsBlock />
+      <BannerСonnacolBlock />
       <AdvantagesBlock />
       <ProgramConnacolBlock />
     </Background>
@@ -29,7 +29,7 @@ const HeroConnacolBlock = () => (
       backgroundRepeat='no-repeat'
       backgroundPosition='center top'
     >
-      <BannerWithTagsBlock />
+      <BannerСonnacolBlock />
       <AdvantagesBlock />
       <ProgramConnacolBlock />
     </Background>

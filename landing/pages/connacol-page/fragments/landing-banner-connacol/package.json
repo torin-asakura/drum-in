@@ -1,5 +1,5 @@
 {
-  "name": "@landing/banner-with-tags-fragment",
+  "name": "@landing/banner-connacol-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
