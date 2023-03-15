@@ -389,7 +389,7 @@ const RAW_RUNTIME_STATE =
     ["@landing/consultation", ["virtual:19629afbeedfd4c6611bfad31b070fa3bf434456bab5e5730a53d88b386ba581412455d6e1b562cff10e02533b32f37d7e03ace0e0863f5bbbd52747ae1693af#workspace:landing/fragments/landing-consultation", "virtual:60073921bf95816c90e8f2ee390e845bddda1d25add5595650edfb9a297faf41c3145d230d051615048e9006aedc33d362cd6a6975069427a1f2c0e2295d19dc#workspace:landing/fragments/landing-consultation", "virtual:775c14d8b51f1eec52b8a5482f7a0afb588de07f2ba66dd68453c46153f54e22fe97def6b287021507fd585383c7f8496965038beb798d665cb616dd24d72fc3#workspace:landing/fragments/landing-consultation", "virtual:9295994e19bfd15c8bbd56ce27c1a52d02455d7748cd3c066563a39e576c7c0b5b3ac66f610951cdbd871aba1ff8d08e7fc441f3cbc5a465d6e34614cd6ba7f5#workspace:landing/fragments/landing-consultation", "virtual:abee025a86778e60f1149224d1c5f1f53e13e3150627c79913fe0105ada076348d9f153c31dab2f19d3e170f803bd2274bce24f1e84c9078abe9b3f55211f190#workspace:landing/fragments/landing-consultation", "virtual:decdf81154eb3054619d24efdc40a9ba390812ec69192370e2d8fc17b96e0e801c5b4d4feac94aa8fb43a3645c8517c1322fefbc3b7dcf579f28e0da69a23c18#workspace:landing/fragments/landing-consultation", "workspace:landing/fragments/landing-consultation"]],\
     ["@landing/contact-fragment", ["virtual:8d3716ecbde179bf19b1ef7d898506a2375900f597b140d0422bde32ad3d40d343f695c23f47673bd2ba9f9e2ba7656dd6197fbfa37ae9d88a49054072946ea1#workspace:landing/fragments/landing-contact", "virtual:91492953461ab11076e366500b58aa3133cf1422541c2d7da2d72c6ed80abbbc0f109fe3049acbcf1977cf93ada413c4a35b5eb6441edb3bfdd5c708ba976b9c#workspace:landing/fragments/landing-contact", "workspace:landing/fragments/landing-contact"]],\
     ["@landing/contact-page", ["virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:landing/pages/contact-page", "workspace:landing/pages/contact-page"]],\
-    ["@landing/course-process-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-course-process", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-course-process", "workspace:landing/fragments/landing-course-process"]],\
+    ["@landing/course-process-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-course-process", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-course-process", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-course-process", "workspace:landing/fragments/landing-course-process"]],\
     ["@landing/cta-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-cta", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-cta", "workspace:landing/fragments/landing-cta"]],\
     ["@landing/faq", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-faq", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-faq", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-faq", "workspace:landing/fragments/landing-faq"]],\
     ["@landing/feeling-of-time-page", ["virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:landing/pages/feeling-of-time-page", "workspace:landing/pages/feeling-of-time-page"]],\
@@ -436,7 +436,7 @@ const RAW_RUNTIME_STATE =
     ["@landing/target-audience-feeling-of-time-fragment", ["virtual:37a5bf6cbf0b520122d5faae110f82445a9abde4cd3e3b3ea547773c537116bb45d1b5bf37f49e8f9b77020f0ed4b681e819f8b6b01985cc33b18c1660039826#workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time", "virtual:76b218518f217f1d6a560c8813cc3cb390c606102bfdc48b0d59ae789b8060dd89a24e1d830b23d52815a83570b632c5f6075a262e2fc38228df858eaf9b2df6#workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time", "virtual:ffb71955a7b99b258bd1074cb0d5a1b106bb6fd56773981c7a2dc792e77553f568937e322ffc2d862ee3265b7cbb8ad201069394aa6f5e9c00d925856db3a0c6#workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time", "workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time"]],\
     ["@landing/target-audience-fifth-dimension-fragment", ["virtual:54cca9cf4da58f079d10c71f6b64b281f5b4217d26df01500c7284c7a34d604abe48318c7feb90e990373868aebc87692d3cef599b41900109587e2d6b76ffc6#workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension", "virtual:6750215a632601b14a4800c68c111df7f06706bf2689ed42b778b4d6d865fba2861fd3121eac526330e8a76c12026bc8644ffde06bab7209ab43d2e4ab1f1845#workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension", "virtual:7e93c074b3d5309f58f0d8278dcbaa1e4142f1f2386f5e24a97e3304c876febd51ef584b1d30db991d235514ff570fce1fa4600da8cea57711165f22835daff3#workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension", "workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension"]],\
     ["@landing/target-audience-seventh-heaven-fragment", ["virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven", "virtual:6554f808bb9bcce9aef63a5311c5e81c22af9707c611ce2a29dbd777fe749a5b0300432983d54f0ad0648c03a0dbd98a7940da67a2010a5933338528a1c47dfc#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven", "workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"]],\
-    ["@landing/teacher-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-teacher", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher", "workspace:landing/fragments/landing-teacher"]],\
+    ["@landing/teacher-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-teacher", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-teacher", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher", "workspace:landing/fragments/landing-teacher"]],\
     ["@shared/data", ["virtual:54fa3fe04d040d7e53d9e57da974b69ff017adc440d07822dfcba4225c0040aa2a47f3b9456938c4eebdf3c45e22a2646c0b2a6b0c7e55b56b777cc1af888139#workspace:shared/data", "virtual:78dd9ba7faca250b136c0c5511f083fe149cb4db0ad5d85e90b8c4add9ec533ab7ddf0126fc1a5576814d235d1a4e1859e9f7f7676e26611d86f712761870327#workspace:shared/data", "workspace:shared/data"]],\
     ["@shared/utils", ["workspace:shared/utils"]],\
     ["@ui/accordeon", ["virtual:54bfe4e90070b7b75fa65a98d892595543701681cc9f36f4f578c4ecd7e11c95c0b99f804db46a22409cc1c1ff4b564becaac3462f1bf6ac3e55aa00e87e386a#workspace:ui/accordeon", "virtual:d7ee85f02df1b6eb62ac2fafd0349d6a0cbfedb55554f796289274ccb62f27a2b521e10fba08479037c0009423c4919c1f1c92c9f61ff799615598e6a489ffc8#workspace:ui/accordeon", "virtual:e5fc51d22e153eb4d4c580ffa1a10bf5090321f58d4f31ef6bb7ace4ea9027545b58e932002bb3698e775ba92e37302e5f86547a0e8d1e3c3c2c361d5b1f0703#workspace:ui/accordeon", "workspace:ui/accordeon"]],\
@@ -699,48 +699,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:59d428b3dde22e82ac4715579b3c9a1bb56cda2546983a2f0cdf3785b71cd4133fc7c8ceb857a7748059bb04b42397060d38b7cf4aeae8afc3e356ed8999131a#npm:3.7.10", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-f87d00fad2/3/.yarn/berry/cache/@apollo-client-npm-3.7.10-f6fb7ce807-9.zip/node_modules/@apollo/client/",\
-        "packageDependencies": [\
-          ["@apollo/client", "virtual:59d428b3dde22e82ac4715579b3c9a1bb56cda2546983a2f0cdf3785b71cd4133fc7c8ceb857a7748059bb04b42397060d38b7cf4aeae8afc3e356ed8999131a#npm:3.7.10"],\
-          ["@graphql-typed-document-node/core", "virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:3.1.2"],\
-          ["@types/graphql", null],\
-          ["@types/graphql-ws", null],\
-          ["@types/react", "npm:17.0.47"],\
-          ["@types/react-dom", null],\
-          ["@types/subscriptions-transport-ws", null],\
-          ["@wry/context", "npm:0.7.0"],\
-          ["@wry/equality", "npm:0.5.3"],\
-          ["@wry/trie", "npm:0.3.2"],\
-          ["graphql", null],\
-          ["graphql-tag", "virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:2.12.6"],\
-          ["graphql-ws", null],\
-          ["hoist-non-react-statics", "npm:3.3.2"],\
-          ["optimism", "npm:0.16.2"],\
-          ["prop-types", "npm:15.8.1"],\
-          ["react", "npm:18.2.0"],\
-          ["react-dom", null],\
-          ["response-iterator", "npm:0.2.6"],\
-          ["subscriptions-transport-ws", null],\
-          ["symbol-observable", "npm:4.0.0"],\
-          ["ts-invariant", "npm:0.10.3"],\
-          ["tslib", "npm:2.5.0"],\
-          ["zen-observable-ts", "npm:1.2.5"]\
-        ],\
-        "packagePeers": [\
-          "@types/graphql-ws",\
-          "@types/graphql",\
-          "@types/react-dom",\
-          "@types/react",\
-          "@types/subscriptions-transport-ws",\
-          "graphql-ws",\
-          "graphql",\
-          "react-dom",\
-          "react",\
-          "subscriptions-transport-ws"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10", {\
         "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-6bb2b9fa28/3/.yarn/berry/cache/@apollo-client-npm-3.7.10-f6fb7ce807-9.zip/node_modules/@apollo/client/",\
         "packageDependencies": [\
@@ -783,11 +741,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-5019855e0f/3/.yarn/berry/cache/@apollo-client-npm-3.7.10-f6fb7ce807-9.zip/node_modules/@apollo/client/",\
+      ["virtual:c4563a7bc476556bd4ddc5a75e71e308926ca690f895b16f2ad7bbc048549af5102fa2cfdbce450448392fd4f3140a6d61eddf3e37305724dea8878d365f2239#npm:3.7.10", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-f631f80e50/3/.yarn/berry/cache/@apollo-client-npm-3.7.10-f6fb7ce807-9.zip/node_modules/@apollo/client/",\
         "packageDependencies": [\
-          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
-          ["@graphql-typed-document-node/core", "virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:3.1.2"],\
+          ["@apollo/client", "virtual:c4563a7bc476556bd4ddc5a75e71e308926ca690f895b16f2ad7bbc048549af5102fa2cfdbce450448392fd4f3140a6d61eddf3e37305724dea8878d365f2239#npm:3.7.10"],\
+          ["@graphql-typed-document-node/core", "virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:3.1.2"],\
           ["@types/graphql", null],\
           ["@types/graphql-ws", null],\
           ["@types/react", "npm:17.0.47"],\
@@ -797,7 +755,49 @@ const RAW_RUNTIME_STATE =
           ["@wry/equality", "npm:0.5.3"],\
           ["@wry/trie", "npm:0.3.2"],\
           ["graphql", null],\
-          ["graphql-tag", "virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:2.12.6"],\
+          ["graphql-tag", "virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:2.12.6"],\
+          ["graphql-ws", null],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["optimism", "npm:0.16.2"],\
+          ["prop-types", "npm:15.8.1"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", null],\
+          ["response-iterator", "npm:0.2.6"],\
+          ["subscriptions-transport-ws", null],\
+          ["symbol-observable", "npm:4.0.0"],\
+          ["ts-invariant", "npm:0.10.3"],\
+          ["tslib", "npm:2.5.0"],\
+          ["zen-observable-ts", "npm:1.2.5"]\
+        ],\
+        "packagePeers": [\
+          "@types/graphql-ws",\
+          "@types/graphql",\
+          "@types/react-dom",\
+          "@types/react",\
+          "@types/subscriptions-transport-ws",\
+          "graphql-ws",\
+          "graphql",\
+          "react-dom",\
+          "react",\
+          "subscriptions-transport-ws"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-5019855e0f/3/.yarn/berry/cache/@apollo-client-npm-3.7.10-f6fb7ce807-9.zip/node_modules/@apollo/client/",\
+        "packageDependencies": [\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
+          ["@graphql-typed-document-node/core", "virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:3.1.2"],\
+          ["@types/graphql", null],\
+          ["@types/graphql-ws", null],\
+          ["@types/react", "npm:17.0.47"],\
+          ["@types/react-dom", null],\
+          ["@types/subscriptions-transport-ws", null],\
+          ["@wry/context", "npm:0.7.0"],\
+          ["@wry/equality", "npm:0.5.3"],\
+          ["@wry/trie", "npm:0.3.2"],\
+          ["graphql", null],\
+          ["graphql-tag", "virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:2.12.6"],\
           ["graphql-ws", null],\
           ["hoist-non-react-statics", "npm:3.3.2"],\
           ["optimism", "npm:0.16.2"],\
@@ -3660,7 +3660,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@globals-data-virtual-78a4ad1eae/1/globals/data/",\
         "packageDependencies": [\
           ["@globals/data", "virtual:59d428b3dde22e82ac4715579b3c9a1bb56cda2546983a2f0cdf3785b71cd4133fc7c8ceb857a7748059bb04b42397060d38b7cf4aeae8afc3e356ed8999131a#workspace:globals/data"],\
-          ["@apollo/client", "virtual:59d428b3dde22e82ac4715579b3c9a1bb56cda2546983a2f0cdf3785b71cd4133fc7c8ceb857a7748059bb04b42397060d38b7cf4aeae8afc3e356ed8999131a#npm:3.7.10"],\
+          ["@apollo/client", "virtual:c4563a7bc476556bd4ddc5a75e71e308926ca690f895b16f2ad7bbc048549af5102fa2cfdbce450448392fd4f3140a6d61eddf3e37305724dea8878d365f2239#npm:3.7.10"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["graphql", "npm:15.8.0"],\
@@ -3741,10 +3741,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:3.1.2", {\
-        "packageLocation": "./.yarn/__virtual__/@graphql-typed-document-node-core-virtual-1f7a793573/3/.yarn/berry/cache/@graphql-typed-document-node-core-npm-3.1.2-20941d8c94-9.zip/node_modules/@graphql-typed-document-node/core/",\
+      ["virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:3.1.2", {\
+        "packageLocation": "./.yarn/__virtual__/@graphql-typed-document-node-core-virtual-d1b86ac7b5/3/.yarn/berry/cache/@graphql-typed-document-node-core-npm-3.1.2-20941d8c94-9.zip/node_modules/@graphql-typed-document-node/core/",\
         "packageDependencies": [\
-          ["@graphql-typed-document-node/core", "virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:3.1.2"],\
+          ["@graphql-typed-document-node/core", "virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:3.1.2"],\
           ["@types/graphql", null],\
           ["graphql", null]\
         ],\
@@ -5552,8 +5552,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-course-process-fragment-virtual-a0b2882366/1/landing/fragments/landing-course-process/",\
         "packageDependencies": [\
           ["@landing/course-process-fragment", "virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-course-process"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/image", "workspace:ui/image"],\
@@ -5566,18 +5568,21 @@ const RAW_RUNTIME_STATE =
           ["swiper", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:8.4.5"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react"\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-course-process", {\
-        "packageLocation": "./.yarn/__virtual__/@landing-course-process-fragment-virtual-608471435e/1/landing/fragments/landing-course-process/",\
+      ["virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-course-process", {\
+        "packageLocation": "./.yarn/__virtual__/@landing-course-process-fragment-virtual-c4563a7bc4/1/landing/fragments/landing-course-process/",\
         "packageDependencies": [\
-          ["@landing/course-process-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-course-process"],\
+          ["@landing/course-process-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-course-process"],\
+          ["@apollo/client", "virtual:c4563a7bc476556bd4ddc5a75e71e308926ca690f895b16f2ad7bbc048549af5102fa2cfdbce450448392fd4f3140a6d61eddf3e37305724dea8878d365f2239#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/image", "workspace:ui/image"],\
@@ -5590,6 +5595,36 @@ const RAW_RUNTIME_STATE =
           ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:8.4.5"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
+          "@types/react-intl",\
+          "@types/react",\
+          "react-intl",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-course-process", {\
+        "packageLocation": "./.yarn/__virtual__/@landing-course-process-fragment-virtual-608471435e/1/landing/fragments/landing-course-process/",\
+        "packageDependencies": [\
+          ["@landing/course-process-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-course-process"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
+          ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
+          ["@types/react", "npm:17.0.47"],\
+          ["@types/react-intl", null],\
+          ["@ui/image", "workspace:ui/image"],\
+          ["@ui/layout", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#workspace:ui/layout"],\
+          ["@ui/slider", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#workspace:ui/slider"],\
+          ["@ui/text", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#workspace:ui/text"],\
+          ["react", "npm:18.2.0"],\
+          ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"],\
+          ["styled-tools", "npm:1.7.2"],\
+          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:8.4.5"]\
+        ],\
+        "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react-intl",\
@@ -5601,6 +5636,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/fragments/landing-course-process/",\
         "packageDependencies": [\
           ["@landing/course-process-fragment", "workspace:landing/fragments/landing-course-process"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@types/react", "npm:17.0.47"],\
@@ -5731,7 +5767,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-faq-virtual-59d428b3dd/1/landing/fragments/landing-faq/",\
         "packageDependencies": [\
           ["@landing/faq", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-faq"],\
-          ["@apollo/client", "virtual:59d428b3dde22e82ac4715579b3c9a1bb56cda2546983a2f0cdf3785b71cd4133fc7c8ceb857a7748059bb04b42397060d38b7cf4aeae8afc3e356ed8999131a#npm:3.7.10"],\
+          ["@apollo/client", "virtual:c4563a7bc476556bd4ddc5a75e71e308926ca690f895b16f2ad7bbc048549af5102fa2cfdbce450448392fd4f3140a6d61eddf3e37305724dea8878d365f2239#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@globals/data", "virtual:59d428b3dde22e82ac4715579b3c9a1bb56cda2546983a2f0cdf3785b71cd4133fc7c8ceb857a7748059bb04b42397060d38b7cf4aeae8afc3e356ed8999131a#workspace:globals/data"],\
@@ -7864,7 +7900,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
-          ["@landing/course-process-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-course-process"],\
+          ["@landing/course-process-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-course-process"],\
           ["@landing/cta-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-cta"],\
           ["@landing/faq", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-faq"],\
           ["@landing/footer-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-footer"],\
@@ -7872,7 +7908,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/hero-polyrhythmic-keys-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-hero-polyrhythmic-keys"],\
           ["@landing/price-polyrhythmic-keys-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"],\
           ["@landing/start-learning-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-start-learning"],\
-          ["@landing/teacher-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher"],\
+          ["@landing/teacher-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-teacher"],\
           ["@types/next", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.18"],\
@@ -8681,6 +8717,7 @@ const RAW_RUNTIME_STATE =
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
+          ["@ui/condition", "virtual:2b0b908a269663ef4f152532c859ff8b7c20b28207c340df8b4e5248664c5650b3e1fe6a0f86fb2ef25fc85380fcb80d95db644de8d482c5f287474cf92b2eb7#workspace:ui/condition"],\
           ["@ui/figures", "virtual:45b1d3243a0bec89e560cb00debcb245cc7e417fd66dfe83db42b5f4865afa08a4b7706aee288d451943503e08a00f7e6144cc826f316fe09bcad82a2749a0f5#workspace:ui/figures"],\
           ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
           ["@ui/layout", "virtual:77f14351bf5cef5518c38020e1496d251621d787850cfcf53d91d229f3c18ef5bf991f3d0af3e75da8abc16885e429796d2c2af2136309d3cd9e932d98330085#workspace:ui/layout"],\
@@ -8709,6 +8746,7 @@ const RAW_RUNTIME_STATE =
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
+          ["@ui/condition", "virtual:2b0b908a269663ef4f152532c859ff8b7c20b28207c340df8b4e5248664c5650b3e1fe6a0f86fb2ef25fc85380fcb80d95db644de8d482c5f287474cf92b2eb7#workspace:ui/condition"],\
           ["@ui/figures", "virtual:1217e36dbe135f24266938f335b90ba42afea1cdb47fcf8789c3adc757b9daae9447b042383db73ba3defdf1f2ca782c7976b9aa29e4adbf3c67c76bafe295f3#workspace:ui/figures"],\
           ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
           ["@ui/layout", "virtual:77f14351bf5cef5518c38020e1496d251621d787850cfcf53d91d229f3c18ef5bf991f3d0af3e75da8abc16885e429796d2c2af2136309d3cd9e932d98330085#workspace:ui/layout"],\
@@ -8733,6 +8771,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/program-fragment", "workspace:landing/fragments/landing-program"],\
           ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@types/react", "npm:17.0.47"],\
+          ["@ui/condition", "virtual:2b0b908a269663ef4f152532c859ff8b7c20b28207c340df8b4e5248664c5650b3e1fe6a0f86fb2ef25fc85380fcb80d95db644de8d482c5f287474cf92b2eb7#workspace:ui/condition"],\
           ["@ui/figures", "virtual:1217e36dbe135f24266938f335b90ba42afea1cdb47fcf8789c3adc757b9daae9447b042383db73ba3defdf1f2ca782c7976b9aa29e4adbf3c67c76bafe295f3#workspace:ui/figures"],\
           ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
           ["@ui/layout", "virtual:77f14351bf5cef5518c38020e1496d251621d787850cfcf53d91d229f3c18ef5bf991f3d0af3e75da8abc16885e429796d2c2af2136309d3cd9e932d98330085#workspace:ui/layout"],\
@@ -9434,12 +9473,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-teacher-fragment-virtual-dbe69f40ea/1/landing/fragments/landing-teacher/",\
         "packageDependencies": [\
           ["@landing/teacher-fragment", "virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-teacher"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
-          ["@shared/data", "virtual:78dd9ba7faca250b136c0c5511f083fe149cb4db0ad5d85e90b8c4add9ec533ab7ddf0126fc1a5576814d235d1a4e1859e9f7f7676e26611d86f712761870327#workspace:shared/data"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/button", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/button"],\
+          ["@ui/condition", "virtual:7510dd908fa48428be3d9b778a6217b6adbe71f4108a0049fa75b7d46acf77970787c6602597da605dbf0086d85e63d16487d44964d5eb0752aeef180a83277b#workspace:ui/condition"],\
           ["@ui/icons", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/icons"],\
           ["@ui/image", "workspace:ui/image"],\
           ["@ui/layout", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/layout"],\
@@ -9452,22 +9493,25 @@ const RAW_RUNTIME_STATE =
           ["swiper", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:8.4.5"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react"\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher", {\
-        "packageLocation": "./.yarn/__virtual__/@landing-teacher-fragment-virtual-136408a827/1/landing/fragments/landing-teacher/",\
+      ["virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-teacher", {\
+        "packageLocation": "./.yarn/__virtual__/@landing-teacher-fragment-virtual-65814999c1/1/landing/fragments/landing-teacher/",\
         "packageDependencies": [\
-          ["@landing/teacher-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher"],\
+          ["@landing/teacher-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/fragments/landing-teacher"],\
+          ["@apollo/client", "virtual:c4563a7bc476556bd4ddc5a75e71e308926ca690f895b16f2ad7bbc048549af5102fa2cfdbce450448392fd4f3140a6d61eddf3e37305724dea8878d365f2239#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
-          ["@shared/data", "virtual:78dd9ba7faca250b136c0c5511f083fe149cb4db0ad5d85e90b8c4add9ec533ab7ddf0126fc1a5576814d235d1a4e1859e9f7f7676e26611d86f712761870327#workspace:shared/data"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/button", "virtual:54bfe4e90070b7b75fa65a98d892595543701681cc9f36f4f578c4ecd7e11c95c0b99f804db46a22409cc1c1ff4b564becaac3462f1bf6ac3e55aa00e87e386a#workspace:ui/button"],\
+          ["@ui/condition", "virtual:22dea13128e9eb5de82744382d558a1e7691cfe67bbfe9276e43498ecb95b2d0addd4ca9c915c98734eaa7d53fb2f64dcff71f3b521fd1988226935f1983c6bc#workspace:ui/condition"],\
           ["@ui/icons", "virtual:f94c472fb007a215428a0e2fbbfd428807a32671d5fac85d0c0609cd138562c0e8ff3eb74809c9a533d6a10bac6971a1a9d4f35a83025cc168790753e7254d04#workspace:ui/icons"],\
           ["@ui/image", "workspace:ui/image"],\
           ["@ui/layout", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#workspace:ui/layout"],\
@@ -9480,6 +9524,40 @@ const RAW_RUNTIME_STATE =
           ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:8.4.5"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
+          "@types/react-intl",\
+          "@types/react",\
+          "react-intl",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher", {\
+        "packageLocation": "./.yarn/__virtual__/@landing-teacher-fragment-virtual-136408a827/1/landing/fragments/landing-teacher/",\
+        "packageDependencies": [\
+          ["@landing/teacher-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
+          ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
+          ["@types/react", "npm:17.0.47"],\
+          ["@types/react-intl", null],\
+          ["@ui/button", "virtual:54bfe4e90070b7b75fa65a98d892595543701681cc9f36f4f578c4ecd7e11c95c0b99f804db46a22409cc1c1ff4b564becaac3462f1bf6ac3e55aa00e87e386a#workspace:ui/button"],\
+          ["@ui/condition", "virtual:22dea13128e9eb5de82744382d558a1e7691cfe67bbfe9276e43498ecb95b2d0addd4ca9c915c98734eaa7d53fb2f64dcff71f3b521fd1988226935f1983c6bc#workspace:ui/condition"],\
+          ["@ui/icons", "virtual:f94c472fb007a215428a0e2fbbfd428807a32671d5fac85d0c0609cd138562c0e8ff3eb74809c9a533d6a10bac6971a1a9d4f35a83025cc168790753e7254d04#workspace:ui/icons"],\
+          ["@ui/image", "workspace:ui/image"],\
+          ["@ui/layout", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#workspace:ui/layout"],\
+          ["@ui/slider", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#workspace:ui/slider"],\
+          ["@ui/text", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#workspace:ui/text"],\
+          ["@ui/utils", "virtual:54bfe4e90070b7b75fa65a98d892595543701681cc9f36f4f578c4ecd7e11c95c0b99f804db46a22409cc1c1ff4b564becaac3462f1bf6ac3e55aa00e87e386a#workspace:ui/utils"],\
+          ["react", "npm:18.2.0"],\
+          ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"],\
+          ["styled-tools", "npm:1.7.2"],\
+          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:8.4.5"]\
+        ],\
+        "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react-intl",\
@@ -9491,11 +9569,12 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/fragments/landing-teacher/",\
         "packageDependencies": [\
           ["@landing/teacher-fragment", "workspace:landing/fragments/landing-teacher"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
-          ["@shared/data", "virtual:78dd9ba7faca250b136c0c5511f083fe149cb4db0ad5d85e90b8c4add9ec533ab7ddf0126fc1a5576814d235d1a4e1859e9f7f7676e26611d86f712761870327#workspace:shared/data"],\
           ["@types/react", "npm:17.0.47"],\
           ["@ui/button", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/button"],\
+          ["@ui/condition", "virtual:7510dd908fa48428be3d9b778a6217b6adbe71f4108a0049fa75b7d46acf77970787c6602597da605dbf0086d85e63d16487d44964d5eb0752aeef180a83277b#workspace:ui/condition"],\
           ["@ui/icons", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/icons"],\
           ["@ui/image", "workspace:ui/image"],\
           ["@ui/layout", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/layout"],\
@@ -18877,10 +18956,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:2.12.6", {\
-        "packageLocation": "./.yarn/__virtual__/graphql-tag-virtual-13d6ab645f/3/.yarn/berry/cache/graphql-tag-npm-2.12.6-99a5a7f6de-9.zip/node_modules/graphql-tag/",\
+      ["virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:2.12.6", {\
+        "packageLocation": "./.yarn/__virtual__/graphql-tag-virtual-66114534ae/3/.yarn/berry/cache/graphql-tag-npm-2.12.6-99a5a7f6de-9.zip/node_modules/graphql-tag/",\
         "packageDependencies": [\
-          ["graphql-tag", "virtual:f87d00fad2d6f16662b98ecd8839fc8b5d43984a0deb6e5b52e40eca1a0f4ed6334cfedbed1eadccffc8451a4e858d19bf7050851e579a3c53fdfdbfed2c2d2c#npm:2.12.6"],\
+          ["graphql-tag", "virtual:f631f80e509a2cfa92b16ee8264469a01f57ba9c7042516d7df0ca62575dbd05566e72b3f25d94a610148f6ffe7d7e99d01a18e5136cb7581da1947dc9a95f50#npm:2.12.6"],\
           ["@types/graphql", null],\
           ["graphql", null],\
           ["tslib", "npm:2.3.1"]\

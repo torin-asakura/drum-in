@@ -2,6 +2,7 @@ import React           from 'react'
 import { Children }    from 'react'
 import { useMemo }     from 'react'
 
+import { Condition }   from '@ui/condition'
 import { Box }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
 import { Slider }      from '@ui/slider'
@@ -55,18 +56,24 @@ const MobileList = () => {
   return (
     <Box display={['flex', 'flex', 'none']}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-      <Slider
-        clName='program-slider'
-        spaceBetween={16}
-        slidesPerView='auto'
-        progressbar
-        autoHeight
-        loop
+      <Condition
+        match={
+          programOpeningTheRhythmChildren !== [] && programOpeningTheRhythmChildren !== undefined
+        }
       >
-        {Children.map(programOpeningTheRhythmChildren, (child) => (
-          <SwiperSlide>{child}</SwiperSlide>
-        ))}
-      </Slider>
+        <Slider
+          clName='program-slider'
+          spaceBetween={16}
+          slidesPerView='auto'
+          progressbar
+          autoHeight
+          loop
+        >
+          {Children.map(programOpeningTheRhythmChildren, (child) => (
+            <SwiperSlide>{child}</SwiperSlide>
+          ))}
+        </Slider>
+      </Condition>
     </Box>
   )
 }
