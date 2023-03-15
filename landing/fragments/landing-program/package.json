@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@shared/data": "workspace:0.0.1",
     "@ui/figures": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
@@ -13,10 +12,12 @@
     "swiper": "^8.3.1"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "react": "*",
     "react-intl": "*"
   }

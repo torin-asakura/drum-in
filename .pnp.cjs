@@ -8677,7 +8677,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-program-fragment-virtual-b0e1f3d82c/1/landing/fragments/landing-program/",\
         "packageDependencies": [\
           ["@landing/program-fragment", "virtual:92cf290c2a887bf023bcd0fbbcf4d32544ff663f44bf5ddb743538e3bcff0ef15408143b10e1138291a33cb3aac7fae086fb071a0dd0f8b8a7b60d0bb303a1b8#workspace:landing/fragments/landing-program"],\
-          ["@shared/data", "virtual:78dd9ba7faca250b136c0c5511f083fe149cb4db0ad5d85e90b8c4add9ec533ab7ddf0126fc1a5576814d235d1a4e1859e9f7f7676e26611d86f712761870327#workspace:shared/data"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/figures", "virtual:45b1d3243a0bec89e560cb00debcb245cc7e417fd66dfe83db42b5f4865afa08a4b7706aee288d451943503e08a00f7e6144cc826f316fe09bcad82a2749a0f5#workspace:ui/figures"],\
@@ -8691,6 +8692,8 @@ const RAW_RUNTIME_STATE =
           ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:8.4.5"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react-intl",\
@@ -8702,7 +8705,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-program-fragment-virtual-31326992d3/1/landing/fragments/landing-program/",\
         "packageDependencies": [\
           ["@landing/program-fragment", "virtual:d96dadb19ace007edd1d11636331a7313b958e8fc135b84c839a2ee2d35bfc0bc13fa1119230e2c684d91a054751c89f29c113bf77f770c988079896bae7dd8a#workspace:landing/fragments/landing-program"],\
-          ["@shared/data", "virtual:78dd9ba7faca250b136c0c5511f083fe149cb4db0ad5d85e90b8c4add9ec533ab7ddf0126fc1a5576814d235d1a4e1859e9f7f7676e26611d86f712761870327#workspace:shared/data"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/figures", "virtual:1217e36dbe135f24266938f335b90ba42afea1cdb47fcf8789c3adc757b9daae9447b042383db73ba3defdf1f2ca782c7976b9aa29e4adbf3c67c76bafe295f3#workspace:ui/figures"],\
@@ -8716,6 +8720,7 @@ const RAW_RUNTIME_STATE =
           ["swiper", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:8.4.5"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react"\
@@ -8726,7 +8731,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/fragments/landing-program/",\
         "packageDependencies": [\
           ["@landing/program-fragment", "workspace:landing/fragments/landing-program"],\
-          ["@shared/data", "virtual:78dd9ba7faca250b136c0c5511f083fe149cb4db0ad5d85e90b8c4add9ec533ab7ddf0126fc1a5576814d235d1a4e1859e9f7f7676e26611d86f712761870327#workspace:shared/data"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@types/react", "npm:17.0.47"],\
           ["@ui/figures", "virtual:1217e36dbe135f24266938f335b90ba42afea1cdb47fcf8789c3adc757b9daae9447b042383db73ba3defdf1f2ca782c7976b9aa29e4adbf3c67c76bafe295f3#workspace:ui/figures"],\
           ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\

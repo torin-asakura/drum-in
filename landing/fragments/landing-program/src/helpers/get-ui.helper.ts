@@ -1,5 +1,5 @@
 const getUi = (itemId) => {
-  if (itemId === 'level-1')
+  if (itemId === 0)
     return {
       squareRotate: 10,
       squarePositionX: 10,
@@ -19,7 +19,7 @@ const getUi = (itemId) => {
       circlePositionXMobile: 120,
       circlePositionYMobile: 0,
     }
-  if (itemId === 'level-2')
+  if (itemId === 1)
     return {
       squareRotate: 0,
       squarePositionX: 4.5,
@@ -39,7 +39,7 @@ const getUi = (itemId) => {
       circlePositionXMobile: 195,
       circlePositionYMobile: 86,
     }
-  if (itemId === 'level-3')
+  if (itemId === 2)
     return {
       squareRotate: 0,
       squarePositionX: 212,

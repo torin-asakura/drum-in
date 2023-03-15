@@ -1,63 +1,55 @@
-import React                                                   from 'react'
-import { Children }                                            from 'react'
-import { useEffect }                                           from 'react'
-import { useState }                                            from 'react'
-import { useMemo }                                             from 'react'
+import React           from 'react'
+import { Children }    from 'react'
+import { useMemo }     from 'react'
 
-import { ProgramOpeningTheRhythm as PProgramOpeningTheRhythm } from '@shared/data'
-import { Box }                                                 from '@ui/layout'
-import { Layout }                                              from '@ui/layout'
-import { Slider }                                              from '@ui/slider'
-import { SwiperSlide }                                         from '@ui/slider'
-import { useMockedProgramOpeningTheRhythm }                    from '@shared/data'
+import { Box }         from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Slider }      from '@ui/slider'
+import { SwiperSlide } from '@ui/slider'
 
-import { Slide }                                               from './slide'
-import { getUi }                                               from '../helpers'
+import { Slide }       from './slide'
+import { useProgram }  from '../data'
+import { getUi }       from '../helpers'
 
 const MobileList = () => {
-  const { programOpeningTheRhythm: programOpeningTheRhythmData } =
-    useMockedProgramOpeningTheRhythm()
-  const [programOpeningTheRhythm, setProgramOpeningTheRhythm] = useState<
-    PProgramOpeningTheRhythm[]
-  >(programOpeningTheRhythmData)
-
-  useEffect(() => {
-    setProgramOpeningTheRhythm(programOpeningTheRhythmData)
-    // eslint-disable-next-line
-  }, [])
+  const program = useProgram()?.programOpeningTheRhythm?.levelItem
 
   const programOpeningTheRhythmChildren = useMemo(
     () =>
-      programOpeningTheRhythm.map(({
-        forWhom,
-        level,
-        desc,
-        quantityVideoLessons,
-        quantityLiveBroadcast,
-        quantityMonths,
-        textMonths,
-        itemId,
-      }) => (
+      program?.map((
+        {
+          descriptionLevel,
+          forWhoThisLevel,
+          listNecessaryKnowledge,
+          nameLevel,
+          quantityLiveBroadcast,
+          quantityMonths,
+          quantityVideoLessons,
+          titleHoverBlock,
+          textMonths,
+        },
+        index
+      ) => (
         <Slide
-          forWhom={forWhom}
-          level={level}
-          desc={desc}
-          squareRotate={getUi(itemId).squareRotateMobile}
-          squarePositionX={getUi(itemId).squarePositionXMobile}
-          squarePositionY={getUi(itemId).squarePositionYMobile}
+          forWhom={forWhoThisLevel}
+          level={nameLevel}
+          desc={descriptionLevel}
+          squareRotate={getUi(index).squareRotateMobile}
+          squarePositionX={getUi(index).squarePositionXMobile}
+          squarePositionY={getUi(index).squarePositionYMobile}
           quantityVideoLessons={quantityVideoLessons}
-          rectangleRotate={getUi(itemId).rectangleRotateMobile}
-          rectanglePositionX={getUi(itemId).rectanglePositionXMobile}
-          rectanglePositionY={getUi(itemId).rectanglePositionYMobile}
+          rectangleRotate={getUi(index).rectangleRotateMobile}
+          rectanglePositionX={getUi(index).rectanglePositionXMobile}
+          rectanglePositionY={getUi(index).rectanglePositionYMobile}
           quantityMonths={quantityMonths}
           textMonths={textMonths}
-          rectangleColor={getUi(itemId).rectangleColor}
-          circlePositionX={getUi(itemId).circlePositionXMobile}
-          circlePositionY={getUi(itemId).circlePositionYMobile}
+          rectangleColor={getUi(index).rectangleColor}
+          circlePositionX={getUi(index).circlePositionXMobile}
+          circlePositionY={getUi(index).circlePositionYMobile}
           quantityLiveBroadcast={quantityLiveBroadcast}
         />
       )),
-    [programOpeningTheRhythm]
+    [program]
   )
 
   return (

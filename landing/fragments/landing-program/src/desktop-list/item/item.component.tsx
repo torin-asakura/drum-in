@@ -31,7 +31,6 @@ const Item: FC<ItemProps> = ({
   quantityVideoLessons,
   quantityMonths,
   textMonths,
-  necessaryKnowledge,
   titleHoverBlock,
   listNecessaryKnowledge,
 }) => {
@@ -51,7 +50,6 @@ const Item: FC<ItemProps> = ({
           <Layout flexBasis={56} />
           <NecessaryKnowledgeBlock
             forWhom={forWhom}
-            necessaryKnowledge={necessaryKnowledge}
             titleHoverBlock={titleHoverBlock}
             listNecessaryKnowledge={listNecessaryKnowledge}
           />
@@ -98,7 +96,7 @@ const Item: FC<ItemProps> = ({
           <Square
             firstLine={quantityVideoLessons}
             secondLine={formatMessage({
-              id: 'landing_choose_course.video_lessons',
+              id: 'landing_program.video_lessons',
               defaultMessage: 'видео-уроков',
             })}
             rotate={squareRotate}

@@ -2,7 +2,6 @@ export interface ItemProps {
   forWhom: string
   level: string
   desc: string
-  necessaryKnowledge?: string
   titleHoverBlock?: string
   listNecessaryKnowledge?: string
   squareRotate: number

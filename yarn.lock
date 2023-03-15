@@ -2981,7 +2981,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-fragment@workspace:landing/fragments/landing-program"
   dependencies:
-    "@shared/data": "workspace:0.0.1"
+    "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
     "@ui/figures": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -2992,6 +2992,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
