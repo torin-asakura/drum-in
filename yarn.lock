@@ -1912,6 +1912,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-fragment@workspace:landing/fragments/landing-banner"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
@@ -1923,6 +1924,7 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -2281,7 +2283,9 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2353,6 +2357,7 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     react: "*"
@@ -2451,9 +2456,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/learning-process-fragment@workspace:landing/fragments/landing-learning-process"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
@@ -2463,6 +2468,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2472,9 +2478,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/learning-students@workspace:landing/fragments/landing-students"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:^17"
     "@types/styled-system": "npm:^5.1.12"
@@ -2482,6 +2488,7 @@ __metadata:
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/slider": "workspace:0.0.1"
     "@ui/tag": "workspace:0.0.1"
@@ -2493,6 +2500,7 @@ __metadata:
     styled-tools: "npm:^1.7.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
@@ -2685,8 +2693,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@globals/data": "workspace:0.0.1"
     "@landing/consultation": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
@@ -2704,6 +2713,8 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2911,6 +2922,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/private-lesson-fragment@workspace:landing/fragments/landing-private-lesson"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@landing/consultation": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
@@ -2919,6 +2931,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"

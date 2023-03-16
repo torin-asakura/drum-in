@@ -8,10 +8,10 @@ import { Row }                    from '@ui/layout'
 import { Text }                   from '@ui/text'
 
 import { Tape }                   from './tape'
-import { useAfterTheCourser }     from './data'
+import { useAfterTheCourse }      from './data'
 
 const AfterTheCourseBlock = () => {
-  const afterTheCourse = useAfterTheCourser()
+  const afterTheCourse = useAfterTheCourse()
 
   return (
     <Box width='100%' justifyContent='center' position='relative'>

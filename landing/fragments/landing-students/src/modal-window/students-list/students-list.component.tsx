@@ -1,30 +1,21 @@
-import React                               from 'react'
-import { useEffect }                       from 'react'
-import { useState }                        from 'react'
+import React           from 'react'
 
-import { StudentsModal as SStudentsModal } from '@shared/data'
-import { Column }                          from '@ui/layout'
-import { Row }                             from '@ui/layout'
-import { Layout }                          from '@ui/layout'
-import { useMockedStudentsModal }          from '@shared/data'
+import { Column }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Layout }      from '@ui/layout'
 
-import { OneStudent }                      from './one-student'
+import { OneStudent }  from './one-student'
+import { useStudents } from '../../data'
 
 const StudentsList = () => {
-  const { studentsModal: studentsModalData } = useMockedStudentsModal()
-  const [studentsModal, setStudentsModal] = useState<SStudentsModal[]>([])
-
-  useEffect(() => {
-    setStudentsModal(studentsModalData)
-    // eslint-disable-next-line
-  }, [])
+  const students = useStudents()?.students?.listStudents
 
   return (
     <Row>
       <Column width='100%'>
-        {studentsModal.map(({ fullName, age, profession }) => (
+        {students?.map(({ name, age, specialization }) => (
           <>
-            <OneStudent fullName={fullName} age={age} profession={profession} />
+            <OneStudent fullName={name} age={age} profession={specialization} />
             <Layout flexBasis={20} flexShrink={0} />
           </>
         ))}

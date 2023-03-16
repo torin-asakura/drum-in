@@ -7,68 +7,59 @@ import { Layout }           from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-const LeftColumn = () => (
-  <Column display={['none', 'none', 'flex']}>
-    <Box>
-      <Text
-        wordBreak='break-word'
-        textTransform='uppercase'
-        fontFamily='secondary'
-        fontWeight='bold'
-        fontSize='big'
-        lineHeight='default'
-        color='text.blackAmber'
-      >
-        <FormattedMessage id='landing_private_lesson.private' defaultMessage='Индивидуальное' />
-      </Text>
-    </Box>
-    <Box>
-      <Text
-        wordBreak='break-word'
-        textTransform='uppercase'
-        fontFamily='secondary'
-        fontWeight='bold'
-        fontSize='big'
-        lineHeight='default'
-        color='text.blackAmber'
-      >
-        <FormattedMessage id='landing_private_lesson.lesson' defaultMessage='Занятие' />
-      </Text>
-    </Box>
-    <Layout flexBasis={0} flexGrow={3} />
-    <Box>
+import { usePrivateLesson } from '../data'
+
+const LeftColumn = () => {
+  const privateLesson = usePrivateLesson()
+
+  return (
+    <Column display={['none', 'none', 'flex']}>
       <Box>
-        <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.purple'>
-          <FormattedMessage id='landing_private_lesson.duration' defaultMessage='Длительность' />
-          <Space />
+        <Text
+          wordBreak='break-word'
+          textTransform='uppercase'
+          fontFamily='secondary'
+          fontWeight='bold'
+          fontSize='big'
+          lineHeight='default'
+          color='text.blackAmber'
+        >
+          {privateLesson?.title}
         </Text>
       </Box>
+      <Layout flexBasis={0} flexGrow={3} />
       <Box>
-        <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.blackAmber'>
-          <FormattedMessage
-            id='landing_private_lesson.dash_ninety_minutes'
-            defaultMessage='— 90 минут'
-          />
-        </Text>
+        <Box>
+          <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.purple'>
+            <FormattedMessage id='landing_private_lesson.duration' defaultMessage='Длительность' />
+            <Space />
+          </Text>
+        </Box>
+        <Box>
+          <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.blackAmber'>
+            <FormattedMessage id='landing_private_lesson.dash' defaultMessage='—' />
+            <Space />
+            {privateLesson?.privateLesson?.durationLesson}
+          </Text>
+        </Box>
       </Box>
-    </Box>
-    <Layout flexBasis={6} />
-    <Box>
+      <Layout flexBasis={6} />
       <Box>
-        <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.purple'>
-          <FormattedMessage id='landing_private_lesson.format' defaultMessage='Формат' />
-          <Space />
-        </Text>
+        <Box>
+          <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.purple'>
+            <FormattedMessage id='landing_private_lesson.format' defaultMessage='Формат' />
+            <Space />
+          </Text>
+        </Box>
+        <Box>
+          <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.blackAmber'>
+            <FormattedMessage id='landing_private_lesson.dash' defaultMessage='—' />
+            <Space />
+            {privateLesson?.privateLesson?.formatLesson}
+          </Text>
+        </Box>
       </Box>
-      <Box>
-        <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.blackAmber'>
-          <FormattedMessage
-            id='landing_private_lesson.dash_online-lesson_in_zoom'
-            defaultMessage='— онлайн-занятие в Zoom'
-          />
-        </Text>
-      </Box>
-    </Box>
-  </Column>
-)
+    </Column>
+  )
+}
 export { LeftColumn }

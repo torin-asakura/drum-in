@@ -1,37 +1,28 @@
-import React                                   from 'react'
-import { useMemo }                             from 'react'
-import { useEffect }                           from 'react'
-import { useState }                            from 'react'
+import React                  from 'react'
+import { useMemo }            from 'react'
 
-import { LearningProcess as LLearningProcess } from '@shared/data'
-import { Layout }                              from '@ui/layout'
-import { Row }                                 from '@ui/layout'
-import { Repeater }                            from '@ui/utils'
-import { useMockedLearningProcessTop }         from '@shared/data'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Repeater }           from '@ui/utils'
 
-import { SlideImage }                          from '../slide-image'
-import { SlideText }                           from '../slide-text'
+import { SlideImage }         from '../slide-image'
+import { SlideText }          from '../slide-text'
+import { useLearningProcess } from '../data'
 
 const SliderTop = () => {
-  const { learningProcessTop: learningProcessTopData } = useMockedLearningProcessTop()
-  const [learningProcessTop, setLearningProcessTop] = useState<LLearningProcess[]>([])
-
-  useEffect(() => {
-    setLearningProcessTop(learningProcessTopData)
-    // eslint-disable-next-line
-  }, [])
+  const learningProcess = useLearningProcess()?.learningProcess?.firstLine
 
   const learningProcessTopChildren = useMemo(() => {
     let i = 0
-    return learningProcessTop.map(({ pathImage = '', text = '' }, index) => {
+    return learningProcess?.map(({ image, text = '' }, index) => {
       if (index % 2 === 0) {
         i += 1
         return <SlideText text={text} activeIcons={i % 2 === 0 ? 'target' : 'sheetMusic'} />
       }
 
-      return <SlideImage pathImage={pathImage} />
+      return <SlideImage pathImage={image?.sourceUrl} />
     })
-  }, [learningProcessTop])
+  }, [learningProcess])
 
   return (
     <Row
@@ -43,7 +34,7 @@ const SliderTop = () => {
     >
       <Repeater quantity={20}>
         {() =>
-          learningProcessTopChildren.map((item) => (
+          learningProcessTopChildren?.map((item) => (
             <>
               {item}
               <Layout flexBasis={40} flexShrink={0} />

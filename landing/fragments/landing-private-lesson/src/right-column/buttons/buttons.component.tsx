@@ -1,5 +1,4 @@
 import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
 import { useState }           from 'react'
 
 import { Consultation }       from '@landing/consultation'
@@ -9,9 +8,12 @@ import { Row }                from '@ui/layout'
 import { Box }                from '@ui/layout'
 import { Text }               from '@ui/text'
 
+import { usePrivateLesson }   from '../../data'
+
 const Buttons = () => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
+  const privateLesson = usePrivateLesson()?.privateLesson
 
   return (
     <>
@@ -22,8 +24,12 @@ const Buttons = () => {
           fill
           onClick={() => setVisibleModal(true)}
         >
-          <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
-            <FormattedMessage id='landing_private_lesson.sign_up' defaultMessage='Записаться' />
+          <Text
+            fontWeight='semiBold'
+            fontSize={['micro', 'semiRegular', 'large']}
+            textTransform='uppercase'
+          >
+            {privateLesson?.textButton}
           </Text>
         </Button>
       </Box>
@@ -34,8 +40,8 @@ const Buttons = () => {
           fill
           onClick={() => setVisibleModalMobile(true)}
         >
-          <Text fontWeight='semiBold' fontSize='micro'>
-            <FormattedMessage id='landing_private_lesson.sign_up' defaultMessage='Записаться' />
+          <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
+            {privateLesson?.textButton}
           </Text>
         </Button>
       </Row>

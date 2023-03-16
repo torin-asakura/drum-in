@@ -1,1 +1,1 @@
-export * from './useAfterTheCourser'
+export * from './useAfterTheCourse'
