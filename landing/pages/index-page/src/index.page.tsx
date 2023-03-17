@@ -92,7 +92,26 @@ export const HomePage = () => {
             <StudentsBlock {...getObserverOptions('students')} />
             <FaqBlock {...getObserverOptions('faq')} />
             <CtaBlock {...getObserverOptions('cta')} />
-            <FooterBlock {...getObserverOptions('footer')} />
+            <Background
+              display={['none', 'none', 'flex']}
+              width='100%'
+              gradient='purpleBlueSemicircleImage'
+              backgroundSize='80% 100%'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='left bottom'
+            >
+              <FooterBlock {...getObserverOptions('footer')} />
+            </Background>
+            <Background
+              display={['flex', 'flex', 'none']}
+              width='100%'
+              gradient='purpleBlueTwoSemicirclesSmallImage'
+              backgroundSize='100% 80%'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='center bottom'
+            >
+              <FooterBlock {...getObserverOptions('footer')} />
+            </Background>
           </main>
         </SpyScrollProvider>
       </LocomotiveScrollProvider>
