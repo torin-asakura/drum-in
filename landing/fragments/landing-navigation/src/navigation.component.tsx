@@ -20,11 +20,13 @@ import { useHover }           from '@ui/utils'
 
 import { Elements }           from './elements'
 import { NavigationProps }    from './navigation.interfaces'
+import { useNavigation }       from './data'
 
 const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
   const [hoverLink, hoverLinkProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
+  const navigation = useNavigation()?.fragmentNewItem?.header
 
   return (
     <Drawer active={visible} onClose={() => setVisible(false)}>
@@ -81,12 +83,12 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
               </Box>
               <Layout flexBasis={[0, 45, 70]} />
               <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
-                <NextLink path='/contact'>
+                <NextLink path={navigation?.urlLink}>
                   <Text
                     color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
                     style={{ transition: '0.3s' }}
                   >
-                    <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
+                    {navigation?.titleLink}
                   </Text>
                 </NextLink>
               </Box>
@@ -102,7 +104,7 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
                     fontSize={['semiMedium', 'medium', 'medium']}
                     lineHeight='default'
                   >
-                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                    {navigation?.nameButton}
                   </Text>
                 </Button>
               </Row>
@@ -118,7 +120,7 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
                     fontSize={['semiMedium', 'medium', 'medium']}
                     lineHeight='default'
                   >
-                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                    {navigation?.nameButton}
                   </Text>
                 </Button>
               </Row>

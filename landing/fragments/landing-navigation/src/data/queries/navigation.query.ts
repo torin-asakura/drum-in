@@ -17,6 +17,13 @@ const GET_NAVIGATION = gql`
         }
       }
     }
+    fragmentNewItem(id: "cG9zdDozMDk=") {
+      header {
+        nameButton
+        titleLink
+        urlLink
+      }
+    }
   }
 `
 

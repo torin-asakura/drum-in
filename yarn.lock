@@ -2244,8 +2244,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/footer-fragment@workspace:landing/fragments/landing-footer"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
@@ -2257,6 +2257,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -2267,6 +2268,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@landing/consultation": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
@@ -2694,7 +2696,6 @@ __metadata:
   resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@globals/data": "workspace:0.0.1"
     "@landing/consultation": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
@@ -2714,7 +2715,6 @@ __metadata:
     styled-tools: "npm:^1.7.2"
   peerDependencies:
     "@apollo/client": "*"
-    "@globals/data": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"

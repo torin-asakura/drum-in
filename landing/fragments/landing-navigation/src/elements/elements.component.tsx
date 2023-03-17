@@ -21,7 +21,7 @@ import { getUi }              from '../helpers'
 const Elements: FC<ElementsProps> = ({ stateHover }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const navigation = useNavigation()
+  const navigation = useNavigation()?.menuCourses?.nodes
 
   return (
     <Row>

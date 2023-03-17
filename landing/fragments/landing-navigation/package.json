@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",
-    "@globals/data": "workspace:0.0.1",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2",
     "styled-system": "^5.1.5",
@@ -27,7 +26,6 @@
   },
   "peerDependencies": {
     "@apollo/client": "*",
-    "@globals/data": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"
