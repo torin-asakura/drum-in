@@ -1,12 +1,12 @@
-import React                from 'react'
+import React         from 'react'
 
-import { Box }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Link }             from '@ui/link'
-import { Text }             from '@ui/text'
+import { Box }       from '@ui/layout'
+import { Layout }    from '@ui/layout'
+import { NextLink }  from '@ui/link'
+import { Link }      from '@ui/link'
+import { Text }      from '@ui/text'
 
-import { useFooter }         from '../data'
+import { useFooter } from '../data'
 
 const BottomRow = () => {
   const footer = useFooter()?.fragmentNewItem?.footer

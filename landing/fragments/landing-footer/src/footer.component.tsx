@@ -13,7 +13,7 @@ import { BottomRow }        from './bottom-row'
 import { ButtonUp }         from './button-up'
 import { FooterProps }      from './footer.interfaces'
 import { LinkSocial }       from './link-social'
-import { useFooter }         from './data'
+import { useFooter }        from './data'
 
 const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }, ref: any) => {
   const footer = useFooter()

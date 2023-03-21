@@ -20,7 +20,7 @@ import { useHover }           from '@ui/utils'
 
 import { Elements }           from './elements'
 import { NavigationProps }    from './navigation.interfaces'
-import { useNavigation }       from './data'
+import { useNavigation }      from './data'
 
 const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
   const [hoverLink, hoverLinkProps] = useHover()

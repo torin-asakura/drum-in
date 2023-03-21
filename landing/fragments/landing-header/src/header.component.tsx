@@ -19,7 +19,7 @@ import { Text }                from '@ui/text'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 import { useHover }            from '@ui/utils'
 
-import { useHeader }            from './data'
+import { useHeader }           from './data'
 
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)

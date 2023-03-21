@@ -2064,6 +2064,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2148,6 +2149,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-dom: "*"
@@ -2532,6 +2534,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2562,6 +2565,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2592,6 +2596,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2622,6 +2627,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2651,6 +2657,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2681,6 +2688,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -4287,6 +4295,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
     "@types/styled-system": "npm:^5"
@@ -4303,6 +4312,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"

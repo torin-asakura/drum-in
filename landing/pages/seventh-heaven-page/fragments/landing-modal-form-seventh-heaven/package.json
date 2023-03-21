@@ -22,6 +22,7 @@
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "next": "*",
