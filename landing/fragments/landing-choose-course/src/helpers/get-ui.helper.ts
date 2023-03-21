@@ -1,5 +1,5 @@
 const getUi = (itemId) => {
-  if (itemId === 'courseOpeningTheRhythm')
+  if (itemId === 'cG9zdDozNDU=')
     return {
       squareRotate: -4,
       squarePositionX: 2,
@@ -19,7 +19,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 43,
       rectangleColor: 'transparentPurpleGradient',
     }
-  if (itemId === 'courseSenseOfTime')
+  if (itemId === 'cG9zdDozNDY=')
     return {
       squareRotate: 10,
       squarePositionX: 389,
@@ -39,7 +39,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 104,
       rectangleColor: 'transparentBlueGradient',
     }
-  if (itemId === 'courseFifthDimension')
+  if (itemId === 'cG9zdDozNDc=')
     return {
       squareRotate: 0,
       squarePositionX: 400,
@@ -59,7 +59,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 40,
       rectangleColor: 'transparentGreenGradient',
     }
-  if (itemId === 'courseSeventhHeaven')
+  if (itemId === 'cG9zdDozNDg=')
     return {
       squareRotate: 0,
       squarePositionX: 184,
@@ -79,7 +79,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 44,
       rectangleColor: 'transparentPinkGradient',
     }
-  if (itemId === 'courseConnacol')
+  if (itemId === 'cG9zdDozNTA=')
     return {
       squareRotate: 15,
       squarePositionX: 385,
@@ -99,7 +99,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 102,
       rectangleColor: 'transparentPurpleGradient',
     }
-  if (itemId === 'coursePolyrhythmicKeys')
+  if (itemId === 'cG9zdDozNTE=')
     return {
       squareRotate: 0,
       squarePositionX: 27,
