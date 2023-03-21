@@ -2615,6 +2615,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-opening-the-rhythm@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
