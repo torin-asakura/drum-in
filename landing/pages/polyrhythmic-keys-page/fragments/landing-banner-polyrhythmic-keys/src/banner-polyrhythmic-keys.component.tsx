@@ -1,13 +1,13 @@
-import React                from 'react'
+import React             from 'react'
 
-import { ArrowDownIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { ArrowDownIcon } from '@ui/icons'
+import { Box }           from '@ui/layout'
+import { Column }        from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Row }           from '@ui/layout'
+import { Text }          from '@ui/text'
 
-import { useBanner }         from './data'
+import { useBanner }     from './data'
 
 const BannerPolyrhythmicKeysBlock = () => {
   const banner = useBanner()

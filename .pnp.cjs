@@ -5660,6 +5660,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-contact-fragment-virtual-f9ad6b45c3/1/landing/fragments/landing-contact/",\
         "packageDependencies": [\
           ["@landing/contact-fragment", "virtual:8d3716ecbde179bf19b1ef7d898506a2375900f597b140d0422bde32ad3d40d343f695c23f47673bd2ba9f9e2ba7656dd6197fbfa37ae9d88a49054072946ea1#workspace:landing/fragments/landing-contact"],\
+          ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.7.10"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
@@ -5671,6 +5673,7 @@ const RAW_RUNTIME_STATE =
           ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react"\
@@ -5681,6 +5684,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-contact-fragment-virtual-f5e9ceda40/1/landing/fragments/landing-contact/",\
         "packageDependencies": [\
           ["@landing/contact-fragment", "virtual:91492953461ab11076e366500b58aa3133cf1422541c2d7da2d72c6ed80abbbc0f109fe3049acbcf1977cf93ada413c4a35b5eb6441edb3bfdd5c708ba976b9c#workspace:landing/fragments/landing-contact"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
@@ -5692,6 +5697,8 @@ const RAW_RUNTIME_STATE =
           ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react-intl",\
@@ -5703,6 +5710,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/fragments/landing-contact/",\
         "packageDependencies": [\
           ["@landing/contact-fragment", "workspace:landing/fragments/landing-contact"],\
+          ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.7.10"],\
           ["@types/react", "npm:17.0.47"],\
           ["@ui/icons", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#workspace:ui/icons"],\
           ["@ui/layout", "virtual:77f14351bf5cef5518c38020e1496d251621d787850cfcf53d91d229f3c18ef5bf991f3d0af3e75da8abc16885e429796d2c2af2136309d3cd9e932d98330085#workspace:ui/layout"],\

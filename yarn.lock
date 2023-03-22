@@ -2095,6 +2095,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/contact-fragment@workspace:landing/fragments/landing-contact"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2103,6 +2104,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown

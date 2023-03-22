@@ -13,7 +13,7 @@ import { Text }             from '@ui/text'
 
 import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
-import { useModalForm }      from '../data'
+import { useModalForm }     from '../data'
 
 const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
   const modalForm = useModalForm()

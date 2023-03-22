@@ -9,11 +9,13 @@
     "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2",
     "styled-system": "^5.1.5"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "react": "*",
     "react-intl": "*"
   }

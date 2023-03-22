@@ -14,7 +14,7 @@ import { Text }                            from '@ui/text'
 import { Figures }                         from './figures'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
-import { usePrice }                         from '../data'
+import { usePrice }                        from '../data'
 
 const Content = () => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)

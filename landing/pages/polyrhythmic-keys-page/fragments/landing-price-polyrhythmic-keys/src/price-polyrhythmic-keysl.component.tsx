@@ -1,13 +1,13 @@
-import React                from 'react'
+import React        from 'react'
 
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }      from '@ui/layout'
+import { Column }   from '@ui/layout'
+import { Layout }   from '@ui/layout'
+import { Row }      from '@ui/layout'
+import { Text }     from '@ui/text'
 
-import { Content }          from './content'
-import { usePrice }          from './data'
+import { Content }  from './content'
+import { usePrice } from './data'
 
 const PricePolyrhythmicKeyslBlock = () => {
   const price = usePrice()
