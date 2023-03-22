@@ -1,24 +1,15 @@
-import React                         from 'react'
-import { useEffect }                 from 'react'
-import { useState }                  from 'react'
+import React            from 'react'
 
-import { Advantages as AAdvantages } from '@shared/data'
-import { Box }                       from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { useMockedAdvantages }       from '@shared/data'
+import { Box }          from '@ui/layout'
+import { Layout }       from '@ui/layout'
+import { Row }          from '@ui/layout'
 
-import { Card }                      from '../card'
-import { getUi }                     from '../helpers'
+import { Card }         from '../card'
+import { useAdvantages } from '../data'
+import { getUi }        from '../helpers'
 
 const DesktopCards = () => {
-  const { advantages: advantagesData } = useMockedAdvantages()
-  const [advantages, setAdvantages] = useState<AAdvantages[]>([])
-
-  useEffect(() => {
-    setAdvantages(advantagesData)
-    // eslint-disable-next-line
-  }, [])
+  const advantages = useAdvantages()?.advantagesCourse?.skills
 
   return (
     <Row
@@ -26,13 +17,13 @@ const DesktopCards = () => {
       justifyContent='space-between'
       flexWrap={{ _: 'nowrap', tablet: 'nowrap', laptop: 'wrap', wide: 'nowrap' }}
     >
-      {advantages.map(({ counter, text }) => (
+      {advantages?.map(({ counter, item }) => (
         <Box flexDirection='column' style={{ transform: `rotate(${getUi(counter).rotate}deg)` }}>
           <Layout
             flexBasis={getUi(counter).valueTopIndentation}
             display={['none', 'none', 'flex']}
           />
-          <Card counter={counter} text={text} />
+          <Card counter={counter} text={item} />
         </Box>
       ))}
     </Row>
