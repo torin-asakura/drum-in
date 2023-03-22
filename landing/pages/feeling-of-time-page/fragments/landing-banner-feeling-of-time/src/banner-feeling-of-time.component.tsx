@@ -1,6 +1,4 @@
 import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useIntl }            from 'react-intl'
 
 import { RightDownArrowIcon } from '@ui/icons'
 import { Box }                from '@ui/layout'
@@ -10,9 +8,10 @@ import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
 
 import { Tape }               from './tape'
+import { useBanner }          from './data'
 
 const BannerFeelingOfTimeBlock = () => {
-  const { formatMessage } = useIntl()
+  const banner = useBanner()
 
   return (
     <Box flexDirection='column' width='100%'>
@@ -38,10 +37,7 @@ const BannerFeelingOfTimeBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    <FormattedMessage
-                      id='landing_banner_feeling_of_time.feeling_of_time'
-                      defaultMessage='Ощущение времен'
-                    />
+                    {banner?.titleInHero}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -57,10 +53,7 @@ const BannerFeelingOfTimeBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      <FormattedMessage
-                        id='landing_banner_feeling_of_time.basic_course_that_will_give_you'
-                        defaultMessage='Базовый курс, который даст вам базу, необходимую любому музыканту'
-                      />
+                      {banner?.descriptionCourseInHero}
                     </Text>
                   </Box>
                 </Box>
@@ -83,12 +76,7 @@ const BannerFeelingOfTimeBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape
-        level={formatMessage({
-          id: 'landing_banner_feeling_of_time.first_level',
-          defaultMessage: '#Уровень 1',
-        })}
-      />
+      <Tape level={banner?.levelCourseInHero} />
     </Box>
   )
 }

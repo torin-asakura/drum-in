@@ -14,7 +14,7 @@ import { Text }                   from '@ui/text'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useModalForm }            from '../data'
+import { useModalForm }           from '../data'
 
 const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
   const modalForm = useModalForm()

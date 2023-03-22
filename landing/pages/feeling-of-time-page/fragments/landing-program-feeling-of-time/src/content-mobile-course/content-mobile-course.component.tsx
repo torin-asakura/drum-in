@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Background }       from '@ui/background'
 import { LightningIcon }    from '@ui/icons'
@@ -11,8 +10,10 @@ import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
+import { useProgram }       from '../data'
+
 const ContentMobileCourse = () => {
-  const { formatMessage } = useIntl()
+  const program = useProgram()
 
   return (
     <Box
@@ -47,10 +48,7 @@ const ContentMobileCourse = () => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                <FormattedMessage
-                  id='landing_program_feeling_of_time.twenty_online_lessons'
-                  defaultMessage='20 онлайн-занятий'
-                />
+                {program?.numberVideoTutorials}
               </Text>
             </Box>
             <Layout flexBasis={[8, 12, 12]} flexShrink={0} />
@@ -61,10 +59,7 @@ const ContentMobileCourse = () => {
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                <FormattedMessage
-                  id='landing_program_feeling_of_time.five_moths'
-                  defaultMessage='5 месяцев'
-                />
+                {program?.numberOfMonths}
               </Text>
             </Box>
           </Column>
@@ -73,51 +68,40 @@ const ContentMobileCourse = () => {
         <Row>
           <Layout flexBasis={[151, 181, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {formatMessage({
-              id: 'landing_program_feeling_of_time.polyrhythmy_key',
-              defaultMessage: 'Полиритмия Ключ 2-3;Чтение 3/8;Чтение 6/8;Конокол 1;Смещения 3,5,7',
-            })
-              .split(';')
-              .map((element) => (
-                <Box>
-                  <Text
-                    fontWeight='medium'
-                    fontSize={['micro', 'medium', 'medium']}
-                    lineHeight='primary'
-                    color='text.smokyWhite'
-                  >
-                    <FormattedMessage id='landing_program.dot' defaultMessage='•' />
-                    <Space />
-                    {element}
-                  </Text>
-                </Box>
-              ))}
+            {program?.secondListOfTopics?.split(';').map((element) => (
+              <Box>
+                <Text
+                  fontWeight='medium'
+                  fontSize={['micro', 'medium', 'medium']}
+                  lineHeight='primary'
+                  color='text.smokyWhite'
+                >
+                  <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                  <Space />
+                  {element}
+                </Text>
+              </Box>
+            ))}
           </Box>
         </Row>
         <Layout flexBasis={[93, 130, 0]} />
         <Row>
           <Layout flexBasis={[80, 110, 0]} />
           <Box flexDirection='column' height={[68, 100, 0]}>
-            {formatMessage({
-              id: 'landing_program_feeling_of_time.musical_notation_and_grouping',
-              defaultMessage:
-                'Нотная запись и группировка нот в четверти;Счёт 1234, счёт 123 — доли и акценты;Счёт 1234 и 123 на фортепиано;Чтение 16х',
-            })
-              .split(';')
-              .map((element) => (
-                <Box>
-                  <Text
-                    fontWeight='medium'
-                    fontSize={['micro', 'medium', 'medium']}
-                    lineHeight='primary'
-                    color='text.smokyWhite'
-                  >
-                    <FormattedMessage id='landing_program.dot' defaultMessage='•' />
-                    <Space />
-                    {element}
-                  </Text>
-                </Box>
-              ))}
+            {program?.firstListOfTopics?.split(';').map((element) => (
+              <Box>
+                <Text
+                  fontWeight='medium'
+                  fontSize={['micro', 'medium', 'medium']}
+                  lineHeight='primary'
+                  color='text.smokyWhite'
+                >
+                  <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                  <Space />
+                  {element}
+                </Text>
+              </Box>
+            ))}
           </Box>
         </Row>
         <Layout flexBasis={[125, 143, 0]} />
@@ -137,7 +121,7 @@ const ContentMobileCourse = () => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                <FormattedMessage id='landing_program.bonus' defaultMessage='Бонус' />
+                {program?.benefit}
               </Text>
             </Box>
           </Box>
@@ -146,26 +130,20 @@ const ContentMobileCourse = () => {
         <Row>
           <Layout flexBasis={[124, 154, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {formatMessage({
-              id: 'landing_program_feeling_of_time.bipartite',
-              defaultMessage:
-                'Двудольность;Конокол 2;Триоль-Нетриоль;Чтение восьмых триолей;Чтение 16х триолей',
-            })
-              .split(';')
-              .map((element) => (
-                <Box>
-                  <Text
-                    fontWeight='medium'
-                    fontSize={['micro', 'medium', 'medium']}
-                    lineHeight='primary'
-                    color='text.smokyWhite'
-                  >
-                    <FormattedMessage id='landing_program.dot' defaultMessage='•' />
-                    <Space />
-                    {element}
-                  </Text>
-                </Box>
-              ))}
+            {program?.thirdListOfTopics?.split(';').map((element) => (
+              <Box>
+                <Text
+                  fontWeight='medium'
+                  fontSize={['micro', 'medium', 'medium']}
+                  lineHeight='primary'
+                  color='text.smokyWhite'
+                >
+                  <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                  <Space />
+                  {element}
+                </Text>
+              </Box>
+            ))}
           </Box>
         </Row>
         <Layout flexBasis={[77, 107, 0]} />

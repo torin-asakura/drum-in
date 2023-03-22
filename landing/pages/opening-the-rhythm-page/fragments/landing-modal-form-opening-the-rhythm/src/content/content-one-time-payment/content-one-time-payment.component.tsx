@@ -7,7 +7,7 @@ import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 import { SelectedCourse }   from '../selected-course'
-import { useModalForm }      from '../../data'
+import { useModalForm }     from '../../data'
 
 const ContentOneTimePayment = () => {
   const modalForm = useModalForm()

@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -9,23 +8,16 @@ import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
 import { SelectedCourse }   from '../selected-course'
+import { useModalForm }     from '../../data'
 
 const ContentInstallmentPlan = () => {
-  const { formatMessage } = useIntl()
+  const modalForm = useModalForm()
 
   return (
     <>
-      <SelectedCourse
-        title={formatMessage({
-          id: 'landing_modal_form_feeling_of_time.feeling_of_time',
-          defaultMessage: '“Ощущение времени”',
-        })}
-        description={formatMessage({
-          id: 'landing_modal_form_feeling_of_time.course_for_experienced_musician',
-          defaultMessage:
-            'Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной',
-        })}
-      />
+      {modalForm?.courses?.map(({ name, description }) => (
+        <SelectedCourse title={name} description={description} />
+      ))}
       <Layout flexBasis={[24, 26, 28]} flexShrink={0} />
       <Row>
         <Column>
@@ -49,10 +41,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_form_feeling_of_time.eight_thousand_seven_hundred'
-                defaultMessage='8 700 ₽/мес'
-              />
+              {modalForm?.monthlyPayment}
             </Text>
           </Box>
         </Column>
@@ -78,10 +67,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_form_feeling_of_time.five_months'
-                defaultMessage='5 месяцев'
-              />
+              {modalForm?.installmentDuration}
             </Text>
           </Box>
         </Column>
@@ -107,10 +93,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_form_feeling_of_time.forty_three_thousand_five_hundred'
-                defaultMessage='43 500 ₽'
-              />
+              {modalForm?.finalPriceForInstallment}
             </Text>
           </Box>
         </Column>

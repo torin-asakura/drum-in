@@ -8,7 +8,7 @@ import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
 import { SelectedCourse }   from '../selected-course'
-import { useModalForm }      from '../../data'
+import { useModalForm }     from '../../data'
 
 const ContentInstallmentPlan = () => {
   const modalForm = useModalForm()
