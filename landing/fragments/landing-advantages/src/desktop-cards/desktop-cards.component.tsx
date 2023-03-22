@@ -1,12 +1,12 @@
-import React            from 'react'
+import React             from 'react'
 
-import { Box }          from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Row }          from '@ui/layout'
+import { Box }           from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Row }           from '@ui/layout'
 
-import { Card }         from '../card'
+import { Card }          from '../card'
 import { useAdvantages } from '../data'
-import { getUi }        from '../helpers'
+import { getUi }         from '../helpers'
 
 const DesktopCards = () => {
   const advantages = useAdvantages()?.advantagesCourse?.skills

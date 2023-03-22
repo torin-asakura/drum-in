@@ -1,15 +1,15 @@
-import React                from 'react'
+import React             from 'react'
 
-import { OpenOvalIcon }     from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { OpenOvalIcon }  from '@ui/icons'
+import { Box }           from '@ui/layout'
+import { Column }        from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Row }           from '@ui/layout'
+import { Text }          from '@ui/text'
 
-import { DesktopCards }     from './desktop-cards'
-import { MobileCards }      from './mobile-cards'
-import { useAdvantages }     from './data'
+import { DesktopCards }  from './desktop-cards'
+import { MobileCards }   from './mobile-cards'
+import { useAdvantages } from './data'
 
 const AdvantagesBlock = () => {
   const advantages = useAdvantages()

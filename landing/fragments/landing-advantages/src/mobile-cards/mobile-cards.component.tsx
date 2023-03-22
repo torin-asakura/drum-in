@@ -1,13 +1,13 @@
-import React            from 'react'
-import { Children }     from 'react'
-import { useMemo }      from 'react'
+import React             from 'react'
+import { Children }      from 'react'
+import { useMemo }       from 'react'
 
-import { Condition }    from '@ui/condition'
-import { Row }          from '@ui/layout'
-import { Slider }       from '@ui/slider'
-import { SwiperSlide }  from '@ui/slider'
+import { Condition }     from '@ui/condition'
+import { Row }           from '@ui/layout'
+import { Slider }        from '@ui/slider'
+import { SwiperSlide }   from '@ui/slider'
 
-import { Card }         from '../card'
+import { Card }          from '../card'
 import { useAdvantages } from '../data'
 
 const MobileCards = () => {

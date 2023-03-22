@@ -8,7 +8,7 @@ import { Row }                  from '@ui/layout'
 import { Text }                 from '@ui/text'
 
 import { TagBlock }             from './tag'
-import { useBanner }             from './data'
+import { useBanner }            from './data'
 
 const BannerСonnacolBlock = () => {
   const banner = useBanner()

@@ -1965,6 +1965,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-banner-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
@@ -1974,6 +1975,7 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -2416,6 +2418,7 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     next: "*"
@@ -2665,6 +2668,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-polyrhythmic-keys@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-modal-form-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2803,6 +2807,7 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2914,6 +2919,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-polyrhythmic-keys": "workspace:0.0.1"
@@ -2927,6 +2933,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -3064,6 +3071,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-program-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
@@ -3073,6 +3081,7 @@ __metadata:
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
