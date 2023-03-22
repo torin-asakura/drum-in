@@ -9,6 +9,7 @@ const GET_PRICE = gql`
         numberOfVideoLessons
         oldPrice
         price
+        secondLineRectangle
       }
     }
   }

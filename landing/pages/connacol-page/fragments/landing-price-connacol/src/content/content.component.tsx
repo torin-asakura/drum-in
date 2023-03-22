@@ -46,6 +46,7 @@ const Content = () => {
           quantityMonths={price?.numberOfMonths}
           quantityVideoLessons={price?.numberOfVideoLessons}
           secondLineCircle={price?.nameOfTheCharacteristicForCircle}
+          wordMonth={price?.secondLineRectangle}
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -126,6 +127,7 @@ const Content = () => {
           quantityMonths={price?.numberOfMonths}
           quantityVideoLessons={price?.numberOfVideoLessons}
           secondLineCircle={price?.nameOfTheCharacteristicForCircle}
+          secondLineRectangle={price?.secondLineRectangle}
           rectangleRotate={-20}
           circleRotate={20}
           squareRotate={-20}

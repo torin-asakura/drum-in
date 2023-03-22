@@ -49,6 +49,7 @@ const Content = () => {
         <Specifications
           quantityMonths={price?.numberOfMonths}
           quantityVideoLessons={price?.numberOfVideoLessons}
+          wordMonth={price?.secondLineRectangle}
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -99,6 +100,7 @@ const Content = () => {
         <Figures
           quantityMonths={price?.numberOfMonths}
           quantityVideoLessons={price?.numberOfVideoLessons}
+          secondLineRectangle={price?.secondLineRectangle}
           rectangleRotate={-10}
           squareRotate={-5}
           rectanglePositionX={8.5}

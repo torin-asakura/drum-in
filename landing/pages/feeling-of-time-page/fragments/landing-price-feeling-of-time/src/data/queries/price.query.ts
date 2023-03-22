@@ -12,6 +12,7 @@ const GET_PRICE = gql`
         priceInstallmentPlan
         savingsWithOneTimePayment
         titleForButton
+        secondLineRectangle
       }
     }
   }

@@ -15,6 +15,7 @@ const Specifications: FC<SpecificationsProps> = ({
   quantityVideoLessons,
   firstLineCircle,
   secondLineCircle,
+  wordMonth,
 }) => (
   <Box display={['flex', 'flex', 'none']}>
     <Column>
@@ -44,7 +45,7 @@ const Specifications: FC<SpecificationsProps> = ({
           <Space />
           {quantityMonths}
           <Space />
-          <FormattedMessage id='landing_price.months' defaultMessage='месяцев' />
+          {wordMonth}
         </Text>
       </Box>
       <Layout flexBasis={[4, 6, 0]} />
