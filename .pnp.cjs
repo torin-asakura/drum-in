@@ -5067,8 +5067,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-banner-seventh-heaven-fragment-virtual-968cc2adcf/1/landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/banner-seventh-heaven-fragment", "virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -5081,7 +5083,9 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -5093,8 +5097,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-banner-seventh-heaven-fragment-virtual-0871dc19b5/1/landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/banner-seventh-heaven-fragment", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -5107,7 +5113,9 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -5120,8 +5128,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-banner-seventh-heaven-fragment-virtual-cca0e1793b/1/landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/banner-seventh-heaven-fragment", "virtual:6554f808bb9bcce9aef63a5311c5e81c22af9707c611ce2a29dbd777fe749a5b0300432983d54f0ad0648c03a0dbd98a7940da67a2010a5933338528a1c47dfc#workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -5134,6 +5144,8 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -5145,6 +5157,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/banner-seventh-heaven-fragment", "workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@types/react", "npm:17.0.47"],\
@@ -7183,11 +7196,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-hero-seventh-heaven-fragment-virtual-1bcc83d2b7/1/landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/hero-seventh-heaven-fragment", "virtual:04f3e2fcda920ec1e04ddca0f3ed6e73afb38869e4ce41decb6fc86f303b5181b4cbc1c4062a50ea04faf99e08d5571333fcadd85efce5d25f7484220a54fc61#workspace:landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@forks/react-locomotive-scroll", "virtual:a51bd08a95570c3aa7f351849cedb87e567e1c27472be26c1c0ca4a3294dc8151ad34a8b6e6e605608a0b08afdc63ba2b24919b560cbd31151181c3d9a34cd0d#workspace:forks/react-locomotive-scroll"],\
           ["@landing/banner-seventh-heaven-fragment", "virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"],\
           ["@landing/program-seventh-heaven-fragment", "virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"],\
           ["@landing/target-audience-seventh-heaven-fragment", "virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/forks__react-locomotive-scroll", null],\
           ["@types/next", null],\
@@ -7201,6 +7216,7 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@emotion/react",\
           "@forks/react-locomotive-scroll",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/forks__react-locomotive-scroll",\
           "@types/next",\
@@ -7216,11 +7232,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-hero-seventh-heaven-fragment-virtual-63b5dcb970/1/landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/hero-seventh-heaven-fragment", "virtual:8fbfe4408741735cf8fc79ef960ea73b56e386fef3a9d858375d54a9ef48e0c9a11aed4c21caf2a8deb22cffe8de0083f5fc23975b1f23e4337717fae06a500e#workspace:landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
           ["@landing/banner-seventh-heaven-fragment", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"],\
           ["@landing/program-seventh-heaven-fragment", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"],\
           ["@landing/target-audience-seventh-heaven-fragment", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/forks__react-locomotive-scroll", null],\
           ["@types/next", null],\
@@ -7232,8 +7250,10 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
           "@forks/react-locomotive-scroll",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/forks__react-locomotive-scroll",\
           "@types/next",\
@@ -7249,6 +7269,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/hero-seventh-heaven-fragment", "workspace:landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@landing/banner-seventh-heaven-fragment", "virtual:6554f808bb9bcce9aef63a5311c5e81c22af9707c611ce2a29dbd777fe749a5b0300432983d54f0ad0648c03a0dbd98a7940da67a2010a5933338528a1c47dfc#workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"],\
           ["@landing/program-seventh-heaven-fragment", "virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"],\
           ["@landing/target-audience-seventh-heaven-fragment", "virtual:6554f808bb9bcce9aef63a5311c5e81c22af9707c611ce2a29dbd777fe749a5b0300432983d54f0ad0648c03a0dbd98a7940da67a2010a5933338528a1c47dfc#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"],\
@@ -8162,7 +8183,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-modal-form-seventh-heaven-virtual-39d87370e4/1/landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/modal-form-seventh-heaven", "virtual:65219ab01c2f8cdb6d3c2df17cf8f3760922fc314e29ae4041438d7ca130d77614aa23792e9a157d12d30188c24f04dcd95c652d4e115cabfdc617e2be7231cc#workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"],\
-          ["@apollo/client", null],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@types/apollo__client", null],\
@@ -8174,7 +8195,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-intl", null],\
           ["@types/styled-system", null],\
           ["@ui/button", "virtual:ad7282bde122526a6703780e1b89eed61301645ef403366b3a4d057dc9ae3238d5effd6f131ea552c9689c4496ad21f8eb8e4d47815c22490d87c0bb200e4bee#workspace:ui/button"],\
-          ["@ui/form", "virtual:ad7282bde122526a6703780e1b89eed61301645ef403366b3a4d057dc9ae3238d5effd6f131ea552c9689c4496ad21f8eb8e4d47815c22490d87c0bb200e4bee#workspace:ui/form"],\
+          ["@ui/form", "virtual:71932a0e691ab11be005223754fd8d6b97df0b47d6fc2b62a6bd7ccf52c8dd54303f45662ae2f9d06df1b1d1cb2d0134eb8cd3930b999d92c52f65cd88f9bc97#workspace:ui/form"],\
           ["@ui/icons", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/icons"],\
           ["@ui/layout", "virtual:ad7282bde122526a6703780e1b89eed61301645ef403366b3a4d057dc9ae3238d5effd6f131ea552c9689c4496ad21f8eb8e4d47815c22490d87c0bb200e4bee#workspace:ui/layout"],\
           ["@ui/modal", "virtual:4781173f4e371b9d1d2b931169707b93edd6f1db12ab7e27a8f23832fc9e7235a982fed9fe0c593dd6501f88318ad3ff5d1e0a8094b279fe68c4aa910bd14f73#workspace:ui/modal"],\
@@ -8212,7 +8233,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-modal-form-seventh-heaven-virtual-a8147d4e0c/1/landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/modal-form-seventh-heaven", "virtual:c4c1d69e539216d60a0e35b6973e08f11229631bbb774d303fa0bc47e7d93ba7bf74acfa60a581623042e4e25f2865dca36fa7db8aebfc49ea919b48929f3974#workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"],\
-          ["@apollo/client", null],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@types/apollo__client", null],\
@@ -8224,7 +8245,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-intl", null],\
           ["@types/styled-system", null],\
           ["@ui/button", "virtual:f94c472fb007a215428a0e2fbbfd428807a32671d5fac85d0c0609cd138562c0e8ff3eb74809c9a533d6a10bac6971a1a9d4f35a83025cc168790753e7254d04#workspace:ui/button"],\
-          ["@ui/form", "virtual:90cab99c23ad7b4b41852f657661d3ad6471bb6aedfab918755802a1f23c53ae48bfe801987625c514b574e7f1f8d440f30ce16a2a7882ad46aa3b7b3e07757e#workspace:ui/form"],\
+          ["@ui/form", "virtual:f94c472fb007a215428a0e2fbbfd428807a32671d5fac85d0c0609cd138562c0e8ff3eb74809c9a533d6a10bac6971a1a9d4f35a83025cc168790753e7254d04#workspace:ui/form"],\
           ["@ui/icons", "virtual:f94c472fb007a215428a0e2fbbfd428807a32671d5fac85d0c0609cd138562c0e8ff3eb74809c9a533d6a10bac6971a1a9d4f35a83025cc168790753e7254d04#workspace:ui/icons"],\
           ["@ui/layout", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:ui/layout"],\
           ["@ui/modal", "virtual:90cab99c23ad7b4b41852f657661d3ad6471bb6aedfab918755802a1f23c53ae48bfe801987625c514b574e7f1f8d440f30ce16a2a7882ad46aa3b7b3e07757e#workspace:ui/modal"],\
@@ -8263,12 +8284,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/modal-form-seventh-heaven", "workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"],\
+          ["@apollo/client", "virtual:5abc57b1a7774eceb34d30b70d36a362c9ced3e4966c23209778e10080c2b068ab5e285557f46481dbff5d29c5317df628dc6a9b756919753e8f4aa7bfcf219d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.18"],\
           ["@ui/button", "virtual:ad7282bde122526a6703780e1b89eed61301645ef403366b3a4d057dc9ae3238d5effd6f131ea552c9689c4496ad21f8eb8e4d47815c22490d87c0bb200e4bee#workspace:ui/button"],\
-          ["@ui/form", "virtual:ad7282bde122526a6703780e1b89eed61301645ef403366b3a4d057dc9ae3238d5effd6f131ea552c9689c4496ad21f8eb8e4d47815c22490d87c0bb200e4bee#workspace:ui/form"],\
+          ["@ui/form", "virtual:6ae090fcca47a722dd14d3e5804c8fd3ccc1dc977db79711f6e70c865f23a8b5d1d2bc72c960deeb13042c45782aa0de4ecae508bb91fac8a23e4921b59a34bb#workspace:ui/form"],\
           ["@ui/icons", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/icons"],\
           ["@ui/layout", "virtual:ad7282bde122526a6703780e1b89eed61301645ef403366b3a4d057dc9ae3238d5effd6f131ea552c9689c4496ad21f8eb8e4d47815c22490d87c0bb200e4bee#workspace:ui/layout"],\
           ["@ui/modal", "virtual:4781173f4e371b9d1d2b931169707b93edd6f1db12ab7e27a8f23832fc9e7235a982fed9fe0c593dd6501f88318ad3ff5d1e0a8094b279fe68c4aa910bd14f73#workspace:ui/modal"],\
@@ -9004,9 +9026,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-price-seventh-heaven-fragment-virtual-65219ab01c/1/landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/price-seventh-heaven-fragment", "virtual:04f3e2fcda920ec1e04ddca0f3ed6e73afb38869e4ce41decb6fc86f303b5181b4cbc1c4062a50ea04faf99e08d5571333fcadd85efce5d25f7484220a54fc61#workspace:landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@landing/modal-form-seventh-heaven", "virtual:65219ab01c2f8cdb6d3c2df17cf8f3760922fc314e29ae4041438d7ca130d77614aa23792e9a157d12d30188c24f04dcd95c652d4e115cabfdc617e2be7231cc#workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", null],\
           ["@types/react-intl", null],\
@@ -9022,6 +9046,7 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@types/apollo__client",\
           "@types/react-dom",\
           "@types/react-intl",\
           "@types/react",\
@@ -9034,9 +9059,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-price-seventh-heaven-fragment-virtual-c4c1d69e53/1/landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/price-seventh-heaven-fragment", "virtual:8fbfe4408741735cf8fc79ef960ea73b56e386fef3a9d858375d54a9ef48e0c9a11aed4c21caf2a8deb22cffe8de0083f5fc23975b1f23e4337717fae06a500e#workspace:landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@emotion/styled", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
           ["@landing/modal-form-seventh-heaven", "virtual:c4c1d69e539216d60a0e35b6973e08f11229631bbb774d303fa0bc47e7d93ba7bf74acfa60a581623042e4e25f2865dca36fa7db8aebfc49ea919b48929f3974#workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.18"],\
           ["@types/react-intl", null],\
@@ -9052,6 +9079,8 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-dom",\
           "@types/react-intl",\
           "@types/react",\
@@ -9065,6 +9094,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/price-seventh-heaven-fragment", "workspace:landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
           ["@landing/modal-form-seventh-heaven", "virtual:65219ab01c2f8cdb6d3c2df17cf8f3760922fc314e29ae4041438d7ca130d77614aa23792e9a157d12d30188c24f04dcd95c652d4e115cabfdc617e2be7231cc#workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"],\
@@ -9501,7 +9531,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-program-seventh-heaven-fragment-virtual-2c372e5140/1/landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/program-seventh-heaven-fragment", "virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@forks/react-locomotive-scroll", "virtual:a51bd08a95570c3aa7f351849cedb87e567e1c27472be26c1c0ca4a3294dc8151ad34a8b6e6e605608a0b08afdc63ba2b24919b560cbd31151181c3d9a34cd0d#workspace:forks/react-locomotive-scroll"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/background", "virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:ui/background"],\
@@ -9513,6 +9545,8 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:5.24.3"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react"\
@@ -9523,7 +9557,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-program-seventh-heaven-fragment-virtual-77363b68ec/1/landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/program-seventh-heaven-fragment", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
+          ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
           ["@ui/background", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/background"],\
@@ -9535,6 +9571,8 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
+          "@types/apollo__client",\
           "@types/react-intl",\
           "@types/react",\
           "react-intl",\
@@ -9546,6 +9584,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/program-seventh-heaven-fragment", "workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@forks/react-locomotive-scroll", "virtual:a51bd08a95570c3aa7f351849cedb87e567e1c27472be26c1c0ca4a3294dc8151ad34a8b6e6e605608a0b08afdc63ba2b24919b560cbd31151181c3d9a34cd0d#workspace:forks/react-locomotive-scroll"],\
           ["@types/react", "npm:17.0.47"],\
           ["@ui/background", "virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:ui/background"],\
@@ -10065,7 +10104,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-target-audience-seventh-heaven-fragment-virtual-3a07114435/1/landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/target-audience-seventh-heaven-fragment", "virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -10075,7 +10116,9 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:5.24.3"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -10087,7 +10130,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-target-audience-seventh-heaven-fragment-virtual-0c5d29c467/1/landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/target-audience-seventh-heaven-fragment", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
           ["@emotion/react", "virtual:2f001378b827d6f491994507b75b54abf6d74b1c0790956543c6297ebb920f8f43cb6329ae5a1c62dd0790bb4557dddd184ed897f0f2ed6e6f95d07ff85c44cc#npm:11.10.5"],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -10097,7 +10142,9 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -10110,7 +10157,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@landing-target-audience-seventh-heaven-fragment-virtual-73cbea74bd/1/landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/target-audience-seventh-heaven-fragment", "virtual:6554f808bb9bcce9aef63a5311c5e81c22af9707c611ce2a29dbd777fe749a5b0300432983d54f0ad0648c03a0dbd98a7940da67a2010a5933338528a1c47dfc#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@emotion/react", null],\
+          ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-intl", null],\
@@ -10120,7 +10169,9 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:5.24.3"]\
         ],\
         "packagePeers": [\
+          "@apollo/client",\
           "@emotion/react",\
+          "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/react-intl",\
           "@types/react",\
@@ -10132,6 +10183,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven/",\
         "packageDependencies": [\
           ["@landing/target-audience-seventh-heaven-fragment", "workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"],\
+          ["@apollo/client", "virtual:cdfb9fda11c5f1fc79a1997210d5e09111ff55b776681fa01408bd5830d6bcd9a380cf54bdb803be77c02b1f18c18d525892b037832d3046118346b5598e295d#npm:3.7.10"],\
           ["@types/react", "npm:17.0.47"],\
           ["@ui/layout", "virtual:77f14351bf5cef5518c38020e1496d251621d787850cfcf53d91d229f3c18ef5bf991f3d0af3e75da8abc16885e429796d2c2af2136309d3cd9e932d98330085#workspace:ui/layout"],\
           ["@ui/text", "virtual:77f14351bf5cef5518c38020e1496d251621d787850cfcf53d91d229f3c18ef5bf991f3d0af3e75da8abc16885e429796d2c2af2136309d3cd9e932d98330085#workspace:ui/text"],\
