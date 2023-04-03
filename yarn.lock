@@ -4366,6 +4366,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
+    react-google-recaptcha-v3: "npm:^1.10.1"
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
   peerDependencies:
@@ -9283,6 +9284,18 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
   checksum: 7c5b915fb793d63563cec1f721e059e6ff0e2855ac116ab5cb7450b6c59398f5e25f95c960ce5cb93504cc58ab724a75a78e99282354e702a0e667d0d787d028
+  languageName: node
+  linkType: hard
+
+"react-google-recaptcha-v3@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "react-google-recaptcha-v3@npm:1.10.1"
+  dependencies:
+    hoist-non-react-statics: "npm:^3.3.2"
+  peerDependencies:
+    react: ^16.3 || ^17.0 || ^18.0
+    react-dom: ^17.0 || ^18.0
+  checksum: 4151b2ead9dcc05d87b56b64b750731829191e9168877edc9fbafc86ca773603fd64b8c2cf8d7c5d0ed6712d151213f0a97bed28f02cdf56d677c7fcfb41f075
   languageName: node
   linkType: hard
 
