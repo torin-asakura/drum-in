@@ -3,8 +3,6 @@ import { FC }                      from 'react'
 import { GoogleReCaptcha }         from 'react-google-recaptcha-v3'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 import { useState }                from 'react'
-import { useCallback }             from 'react'
-import { useRef }                  from 'react'
 
 import { Button }                  from '@ui/button'
 import { Checkbox }                from '@ui/checkbox'
@@ -41,10 +39,9 @@ const Form: FC<FormProps> = ({
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
   const [privacyPolicy, setPrivacyPolicy] = useState<boolean>(false)
+  const [verify, setVerify] = useState(false)
   const [submitForm, data, error] = useActionHook()
   const forms = useData()
-
-  const recaptchaRef = useRef()
 
   const getError = (field: string) => {
     if (data && data.errors) {
@@ -83,19 +80,28 @@ const Form: FC<FormProps> = ({
     }
   }
 
-  const executeCaptcha = useCallback(
-    (event) => {
-      event.preventDefault()
-      // @ts-ignore
-      recaptchaRef?.current?.execute()
-    },
-    [recaptchaRef]
-  )
+  const onVerify = () => {
+    setVerify(true)
+  }
 
-  const [token, setToken] = useState()
-  const onVerify = useCallback((a) => {
-    setToken(a)
-  })
+  const sendForm = () => {
+    if (verify && privacyPolicy) {
+      submitForm({
+        variables: {
+          name,
+          phone,
+          telegram,
+        },
+      }).then(({ data: res }) => {
+        setVerify(false)
+        setName('')
+        setPhone('')
+        setTelegram('')
+        setPrivacyPolicy(false)
+        handleSubmit(res.submitForm)
+      })
+    }
+  }
 
   return (
     <GoogleReCaptchaProvider
@@ -103,10 +109,7 @@ const Form: FC<FormProps> = ({
       language='ru'
       container={{
         element: 'containerCaptcha',
-        parameters: {
-          badge: 'inline',
-          theme: 'dark',
-        },
+        parameters: {},
       }}
     >
       <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
@@ -175,15 +178,12 @@ const Form: FC<FormProps> = ({
           <Layout flexBasis={40} flexShrink={0} />
           <Layout flexGrow={3} />
         </Condition>
-        <Box id='containerCaptcha'>
-          <GoogleReCaptcha onVerify={onVerify} />
-        </Box>
         <Box display={['none', 'flex', 'flex']}>
           <Button
             size='withoutPaddingSemiBigHeight'
             variant='purpleBackground'
             fill
-            // onClick={executeCaptcha}
+            onClick={sendForm}
           >
             <Text fontWeight='semiBold' fontSize='medium' textTransform='uppercase'>
               <Condition match={form === 'consultation'}>{messages.send}</Condition>
@@ -196,7 +196,7 @@ const Form: FC<FormProps> = ({
             size='withoutPaddingSemiRegularHeight'
             variant='purpleBackground'
             fill
-            // onClick={executeCaptcha}
+            onClick={sendForm}
           >
             <Text fontWeight='semiBold' fontSize='semiMedium' textTransform='uppercase'>
               <Condition match={form === 'consultation'}>{messages.send}</Condition>
@@ -235,6 +235,9 @@ const Form: FC<FormProps> = ({
             </Condition>
           </CheckboxMobile>
         </Row>
+        <Layout flexBasis={[18, 40, 40]} flexShrink={0} />
+        <Row id='containerCaptcha' />
+        <GoogleReCaptcha onVerify={onVerify} />
         <Layout flexBasis={[24, 62, 62]} flexShrink={0} />
       </Box>
     </GoogleReCaptchaProvider>
