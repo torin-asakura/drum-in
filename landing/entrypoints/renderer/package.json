@@ -2,13 +2,11 @@
   "name": "@landing/renderer-entrypoint",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
-  "files": [
-    "dist/",
-    "next.config.js"
-  ],
   "scripts": {
-    "build": "yarn next build src --no-lint",
-    "dev": "yarn next dev src"
+    "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
+    "dev": "yarn next dev src",
+    "prepack": "run build",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
