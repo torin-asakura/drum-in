@@ -3,8 +3,8 @@ module.exports = {
     externalDir: true,
     swcFileReading: false,
     workerThreads: true,
-    esmExternals: 'loose',
     outputStandalone: true,
+    esmExternals: 'loose',
   },
   typescript: {
     ignoreBuildErrors: true,
