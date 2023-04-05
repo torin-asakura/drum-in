@@ -6,16 +6,16 @@ const GET_COURSE_PROCESS = gql`
       title
       courseProcess {
         descriptionForRectangle
-        titleFirstSquere
-        imageForFirstSquere {
+        titleFirstSquare
+        imageForFirstSquare {
           sourceUrl
         }
         titleRectangle
         imageForRectangle {
           sourceUrl
         }
-        titleSecondSquere
-        imageForSecondSquere {
+        titleSecondSquare
+        imageForSecondSquare {
           sourceUrl
         }
       }

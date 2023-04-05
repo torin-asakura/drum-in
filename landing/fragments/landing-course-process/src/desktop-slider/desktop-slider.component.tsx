@@ -41,12 +41,12 @@ const DesktopSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.smokyWhite'
                   >
-                    {courseProcess?.titleFirstSquere}
+                    {courseProcess?.titleFirstSquare}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={300} height={161}>
-                  <ImageBlock src={courseProcess?.imageForFirstSquere.sourceUrl} />
+                  <ImageBlock src={courseProcess?.imageForFirstSquare.sourceUrl} />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
@@ -71,12 +71,12 @@ const DesktopSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.blackAmber'
                   >
-                    {courseProcess?.titleSecondSquere}
+                    {courseProcess?.titleSecondSquare}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={240} height={189}>
-                  <ImageBlock src={courseProcess?.imageForSecondSquere.sourceUrl} />
+                  <ImageBlock src={courseProcess?.imageForSecondSquare.sourceUrl} />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>

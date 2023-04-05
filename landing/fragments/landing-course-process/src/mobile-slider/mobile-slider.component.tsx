@@ -40,12 +40,12 @@ const MobileSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.smokyWhite'
                   >
-                    {courseProcess?.titleFirstSquere}
+                    {courseProcess?.titleFirstSquare}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={[200, 220, 0]} height={[107, 120, 0]}>
-                  <ImageBlock src={courseProcess?.imageForFirstSquere.sourceUrl} />
+                  <ImageBlock src={courseProcess?.imageForFirstSquare.sourceUrl} />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
@@ -70,12 +70,12 @@ const MobileSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.blackAmber'
                   >
-                    {courseProcess?.titleSecondSquere}
+                    {courseProcess?.titleSecondSquare}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={[178, 198, 0]} height={[140, 155, 0]}>
-                  <ImageBlock src={courseProcess?.imageForSecondSquere.sourceUrl} />
+                  <ImageBlock src={courseProcess?.imageForSecondSquare.sourceUrl} />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
