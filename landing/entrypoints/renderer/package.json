@@ -2,6 +2,7 @@
   "name": "@landing/renderer-entrypoint",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
+  "main": "src/index.ts",
   "scripts": {
     "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
     "dev": "yarn next dev src",
