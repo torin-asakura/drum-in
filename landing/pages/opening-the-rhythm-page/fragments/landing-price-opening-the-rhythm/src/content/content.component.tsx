@@ -16,11 +16,13 @@ import { Figures }                         from './figures'
 import { FullPrice }                       from './full-price'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
+import { usePrice }                        from '../data'
 
 const Content = () => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
+  const price = usePrice()?.tuitionFees
 
   return (
     <Box
@@ -33,10 +35,7 @@ const Content = () => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={formatMessage({
-            id: 'landing_price_opening_the_rhythm.eight_thousand_seven_hundred',
-            defaultMessage: '8 700',
-          })}
+          currency={price?.priceInstallmentPlan}
           costPerMonth={formatMessage({
             id: 'landing_price_opening_the_rhythm.rubles_per_month',
             defaultMessage: '₽/мес',
@@ -44,22 +43,11 @@ const Content = () => {
         />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
-          quantityMonths={formatMessage({
-            id: 'landing_price_opening_the_rhythm.fifteen',
-            defaultMessage: '15',
-          })}
-          quantityVideoLessons={formatMessage({
-            id: 'landing_price_opening_the_rhythm.thirty_nine',
-            defaultMessage: '39',
-          })}
-          firstLineCircle={formatMessage({
-            id: 'landing_price_opening_the_rhythm.three',
-            defaultMessage: '3',
-          })}
-          secondLineCircle={formatMessage({
-            id: 'landing_price_opening_the_rhythm.levels',
-            defaultMessage: 'уровня',
-          })}
+          quantityMonths={price?.numberOfMonths}
+          quantityVideoLessons={price?.numberOfVideoLessons}
+          firstLineCircle={price?.numberForTheCircle}
+          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
+          wordMonth={price?.secondLineRectangle}
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -77,12 +65,7 @@ const Content = () => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice
-          fullCost={formatMessage({
-            id: 'landing_price_opening_the_rhythm.entire_course_for',
-            defaultMessage: 'весь курс за  117 400 ₽',
-          })}
-        />
+        <FullPrice fullCost={price?.titleForButton} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -97,12 +80,7 @@ const Content = () => {
               defaultMessage='*при разовой оплате курса вы экономите'
             />
             <Space />
-            <Text color='text.green'>
-              <FormattedMessage
-                id='landing_price_opening_the_rhythm.thirteen_thousand_one_hundred'
-                defaultMessage='13 100 ₽'
-              />
-            </Text>
+            <Text color='text.green'>{price?.savingsWithOneTimePayment}</Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -114,10 +92,7 @@ const Content = () => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              <FormattedMessage
-                id='landing_price_opening_the_rhythm.eight_thousand_seven_hundred'
-                defaultMessage='8 700'
-              />
+              {price?.priceInstallmentPlan}
               <Space />
               <FormattedMessage
                 id='landing_price_opening_the_rhythm.rubles_per_month'
@@ -134,10 +109,7 @@ const Content = () => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              <FormattedMessage
-                id='landing_price_opening_the_rhythm.eight_thousand_seven_hundred'
-                defaultMessage='8 700'
-              />
+              {price?.priceInstallmentPlan}
               <Space />
               <FormattedMessage
                 id='landing_price_opening_the_rhythm.rubles_per_month'
@@ -156,22 +128,11 @@ const Content = () => {
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={formatMessage({
-            id: 'landing_price_opening_the_rhythm.fifteen',
-            defaultMessage: '15',
-          })}
-          quantityVideoLessons={formatMessage({
-            id: 'landing_price_opening_the_rhythm.thirty_nine',
-            defaultMessage: '39',
-          })}
-          firstLineCircle={formatMessage({
-            id: 'landing_price_opening_the_rhythm.three',
-            defaultMessage: '3',
-          })}
-          secondLineCircle={formatMessage({
-            id: 'landing_price_opening_the_rhythm.levels',
-            defaultMessage: 'уровня',
-          })}
+          quantityMonths={price?.numberOfMonths}
+          quantityVideoLessons={price?.numberOfVideoLessons}
+          firstLineCircle={price?.numberForTheCircle}
+          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
+          secondLineRectangle={price?.secondLineRectangle}
           rectangleRotate={-30}
           circleRotate={-20}
           squareRotate={20}

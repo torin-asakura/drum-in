@@ -8,103 +8,100 @@ import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 import { Buttons }          from './buttons'
+import { usePrivateLesson } from '../data'
 
-const RightColumn = () => (
-  <Column width={['100%', '100%', 598]}>
-    <Box display={['none', 'none', 'flex']}>
-      <Text fontWeight='medium' fontSize='mild' lineHeight='medium' color='text.purple'>
-        <FormattedMessage
-          id='landing_private_lesson.study_at_any_convenient_time'
-          defaultMessage='Обучайтесь в любое удобное время'
-        />
-      </Text>
-    </Box>
-    <Layout order={[2, 2, 0]} flexBasis={[20, 30, 12]} flexShrink={0} />
-    <Box order={[3, 3, 0]} width={['100%', 525, 'auto']}>
-      <Text
-        fontWeight='medium'
-        fontSize={['semiMedium', 'semiRegular', 'regular']}
-        lineHeight={['primary', 'primary', 'medium']}
-        color='text.gray'
-      >
-        <FormattedMessage
-          id='landing_private_lesson.you_will_get_a_system_of_exercises_and_theoretical_knowledge'
-          defaultMessage='Вы получите систему упражнений и теоретических знаний, необходимых для развития ритмического слуха, контроля темпа, ощущения времени.'
-        />
-      </Text>
-    </Box>
-    <Layout order={[4, 4, 0]} flexShrink={0} flexBasis={[12, 18, 28]} />
-    <Column order={[5, 5, 0]} display={['flex', 'flex', 'none']}>
-      <Box>
-        <Box>
-          <Text
-            fontWeight='medium'
-            fontSize={['semiMedium', 'semiRegular', 'large']}
-            lineHeight='primary'
-            color='text.purple'
-          >
-            <FormattedMessage id='landing_private_lesson.duration' defaultMessage='Длительность' />
-            <Space />
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            fontWeight='medium'
-            fontSize={['semiMedium', 'semiRegular', 'large']}
-            lineHeight='primary'
-            color='text.blackAmber'
-          >
-            <FormattedMessage
-              id='landing_private_lesson.dash_ninety_minutes'
-              defaultMessage='— 90 минут'
-            />
-          </Text>
-        </Box>
+const RightColumn = () => {
+  const privateLesson = usePrivateLesson()?.privateLesson
+
+  return (
+    <Column width={['100%', '100%', 598]}>
+      <Box display={['none', 'none', 'flex']}>
+        <Text fontWeight='medium' fontSize='mild' lineHeight='medium' color='text.purple'>
+          {privateLesson?.subtitle}
+        </Text>
       </Box>
-      <Layout flexBasis={[4, 5, 6]} />
-      <Box>
-        <Box>
-          <Text
-            fontWeight='medium'
-            fontSize={['semiMedium', 'semiRegular', 'large']}
-            lineHeight='primary'
-            color='text.purple'
-          >
-            <FormattedMessage id='landing_private_lesson.format' defaultMessage='Формат' />
-            <Space />
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            fontWeight='medium'
-            fontSize={['semiMedium', 'semiRegular', 'large']}
-            lineHeight='primary'
-            color='text.blackAmber'
-          >
-            <FormattedMessage
-              id='landing_private_lesson.dash_online-lesson_in_zoom'
-              defaultMessage='— онлайн-занятие в Zoom'
-            />
-          </Text>
-        </Box>
+      <Layout order={[2, 2, 0]} flexBasis={[20, 30, 12]} flexShrink={0} />
+      <Box order={[3, 3, 0]} width={['100%', 525, 'auto']}>
+        <Text
+          fontWeight='medium'
+          fontSize={['semiMedium', 'semiRegular', 'regular']}
+          lineHeight={['primary', 'primary', 'medium']}
+          color='text.gray'
+        >
+          {privateLesson?.description}
+        </Text>
       </Box>
+      <Layout order={[4, 4, 0]} flexShrink={0} flexBasis={[12, 18, 28]} />
+      <Column order={[5, 5, 0]} display={['flex', 'flex', 'none']}>
+        <Box>
+          <Box>
+            <Text
+              fontWeight='medium'
+              fontSize={['semiMedium', 'semiRegular', 'large']}
+              lineHeight='primary'
+              color='text.purple'
+            >
+              <FormattedMessage
+                id='landing_private_lesson.duration'
+                defaultMessage='Длительность'
+              />
+              <Space />
+            </Text>
+          </Box>
+          <Box>
+            <Text
+              fontWeight='medium'
+              fontSize={['semiMedium', 'semiRegular', 'large']}
+              lineHeight='primary'
+              color='text.blackAmber'
+            >
+              <FormattedMessage id='landing_private_lesson.dash' defaultMessage='—' />
+              <Space />
+              {privateLesson?.durationLesson}
+            </Text>
+          </Box>
+        </Box>
+        <Layout flexBasis={[4, 5, 6]} />
+        <Box>
+          <Box>
+            <Text
+              fontWeight='medium'
+              fontSize={['semiMedium', 'semiRegular', 'large']}
+              lineHeight='primary'
+              color='text.purple'
+            >
+              <FormattedMessage id='landing_private_lesson.format' defaultMessage='Формат' />
+              <Space />
+            </Text>
+          </Box>
+          <Box>
+            <Text
+              fontWeight='medium'
+              fontSize={['semiMedium', 'semiRegular', 'large']}
+              lineHeight='primary'
+              color='text.blackAmber'
+            >
+              <FormattedMessage id='landing_private_lesson.dash' defaultMessage='—' />
+              <Space />
+              {privateLesson?.formatLesson}
+            </Text>
+          </Box>
+        </Box>
+      </Column>
+      <Box order={[1, 1, 0]}>
+        <Text
+          fontFamily='secondary'
+          fontWeight='bold'
+          fontSize={['semiBig', 'semiExtra', 'moderate']}
+          lineHeight='default'
+          color='text.blackAmber'
+        >
+          {privateLesson?.price}
+        </Text>
+      </Box>
+      <Layout order={[6, 6, 0]} flexShrink={0} flexBasis={65} />
+      <Buttons />
     </Column>
-    <Box order={[1, 1, 0]}>
-      <Text
-        fontFamily='secondary'
-        fontWeight='bold'
-        fontSize={['semiBig', 'semiExtra', 'moderate']}
-        lineHeight='default'
-        color='text.blackAmber'
-      >
-        <FormattedMessage
-          id='landing_private_lesson.two_thousand_five_hundred'
-          defaultMessage='2 500 ₽'
-        />
-      </Text>
-    </Box>
-    <Layout order={[6, 6, 0]} flexShrink={0} flexBasis={65} />
-    <Buttons />
-  </Column>
-)
+  )
+}
 export { RightColumn }

@@ -8,8 +8,11 @@ import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Text }                        from '@ui/text'
 
+import { useTeacher }                  from '../data'
+
 const EducationMobile = () => {
   const [visibleEducation, setVisibleEducation] = useState<boolean>(false)
+  const education = useTeacher()?.teacher.education
 
   return (
     <Box
@@ -53,62 +56,22 @@ const EducationMobile = () => {
         <Layout flexBasis={[12, 20, 0]} flexShrink={0} />
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
-          <Box>
-            <Text
-              fontWeight='medium'
-              fontSize={['micro', 'medium', 'medium']}
-              lineHeight='primary'
-              color='text.blackAmber'
-            >
-              <FormattedMessage
-                id='landing_teacher.gka_name_maimonides'
-                defaultMessage='ГКА им. Маймонида'
-              />
-            </Text>
-          </Box>
+          {education?.map(({ item }) => (
+            <>
+              <Box>
+                <Text
+                  fontWeight='medium'
+                  fontSize={['micro', 'medium', 'medium']}
+                  lineHeight='primary'
+                  color='text.blackAmber'
+                >
+                  {item}
+                </Text>
+              </Box>
+              <Layout flexBasis={[6, 10, 0]} />
+            </>
+          ))}
           <Layout flexBasis={[6, 10, 0]} />
-          <Box>
-            <Text
-              fontWeight='medium'
-              fontSize={['micro', 'medium', 'medium']}
-              lineHeight='primary'
-              color='text.blackAmber'
-            >
-              <FormattedMessage
-                id='landing_teacher.mkim_by_percussion_class'
-                defaultMessage='МКИМ по классу Ударные'
-              />
-            </Text>
-          </Box>
-          <Layout flexBasis={[6, 10, 0]} />
-          <Box>
-            <Text
-              fontWeight='medium'
-              fontSize={['micro', 'medium', 'medium']}
-              lineHeight='primary'
-              color='text.blackAmber'
-            >
-              <FormattedMessage
-                id='landing_teacher.drumworkshop_saulcrasti'
-                defaultMessage='Drumworkshop Saulcrasti Jazz by Donald Edwards'
-              />
-            </Text>
-          </Box>
-          <Layout flexBasis={[6, 10, 0]} />
-          <Box>
-            <Text
-              fontWeight='medium'
-              fontSize={['micro', 'medium', 'medium']}
-              lineHeight='primary'
-              color='text.blackAmber'
-            >
-              <FormattedMessage
-                id='landing_teacher.begues_jazz_camp'
-                defaultMessage='Begues Jazz Camp'
-              />
-            </Text>
-          </Box>
-          <Layout flexBasis={[12, 20, 0]} />
         </Column>
         <Layout flexBasis={[12, 20, 0]} flexShrink={0} />
       </Box>

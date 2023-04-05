@@ -9,6 +9,7 @@
     "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@emotion/react": "*",
     "@emotion/styled": "^11.9.3",
     "@types/react": "18.0.21",
@@ -16,6 +17,7 @@
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
     "react": "*",
     "react-intl": "*"

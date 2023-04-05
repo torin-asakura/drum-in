@@ -1,63 +1,51 @@
-import React                                                   from 'react'
-import { useEffect }                                           from 'react'
-import { useState }                                            from 'react'
+import React          from 'react'
 
-import { ProgramOpeningTheRhythm as PProgramOpeningTheRhythm } from '@shared/data'
-import { Column }                                              from '@ui/layout'
-import { Layout }                                              from '@ui/layout'
-import { useMockedProgramOpeningTheRhythm }                    from '@shared/data'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
 
-import { Item }                                                from './item'
-import { getUi }                                               from '../helpers'
+import { Item }       from './item'
+import { useProgram } from '../data'
+import { getUi }      from '../helpers'
 
 const DesktopList = () => {
-  const { programOpeningTheRhythm: programOpeningTheRhythmData } =
-    useMockedProgramOpeningTheRhythm()
-  const [programOpeningTheRhythm, setProgramOpeningTheRhythm] = useState<
-    PProgramOpeningTheRhythm[]
-  >([])
-
-  useEffect(() => {
-    setProgramOpeningTheRhythm(programOpeningTheRhythmData)
-    // eslint-disable-next-line
-  }, [])
+  const program = useProgram()?.programOpeningTheRhythm?.levelItem
 
   return (
     <Column display={['none', 'none', 'flex']} width='100%'>
-      {programOpeningTheRhythm.map(({
-        forWhom,
-        level,
-        desc,
-        necessaryKnowledge,
-        quantityVideoLessons,
-        quantityLiveBroadcast,
-        quantityMonths,
-        textMonths,
-        titleHoverBlock,
-        listNecessaryKnowledge,
-        itemId,
-      }) => (
+      {program?.map((
+        {
+          descriptionLevel,
+          forWhoThisLevel,
+          listNecessaryKnowledge,
+          nameLevel,
+          quantityLiveBroadcast,
+          quantityMonths,
+          quantityVideoLessons,
+          titleHoverBlock,
+          textMonths,
+        },
+        index
+      ) => (
         <>
           <Item
-            forWhom={forWhom}
-            level={level}
-            desc={desc}
+            forWhom={forWhoThisLevel}
+            level={nameLevel}
+            desc={descriptionLevel}
             titleHoverBlock={titleHoverBlock}
             listNecessaryKnowledge={listNecessaryKnowledge}
-            necessaryKnowledge={necessaryKnowledge}
-            squareRotate={getUi(itemId).squareRotate}
-            squarePositionX={getUi(itemId).squarePositionX}
-            squarePositionY={getUi(itemId).squarePositionY}
+            squareRotate={getUi(index).squareRotate}
+            squarePositionX={getUi(index).squarePositionX}
+            squarePositionY={getUi(index).squarePositionY}
             quantityVideoLessons={quantityVideoLessons}
-            circlePositionX={getUi(itemId).circlePositionX}
-            circlePositionY={getUi(itemId).circlePositionY}
+            circlePositionX={getUi(index).circlePositionX}
+            circlePositionY={getUi(index).circlePositionY}
             quantityLiveBroadcast={quantityLiveBroadcast}
-            rectangleRotate={getUi(itemId).rectangleRotate}
-            rectanglePositionX={getUi(itemId).rectanglePositionX}
-            rectanglePositionY={getUi(itemId).rectanglePositionY}
+            rectangleRotate={getUi(index).rectangleRotate}
+            rectanglePositionX={getUi(index).rectanglePositionX}
+            rectanglePositionY={getUi(index).rectanglePositionY}
             quantityMonths={quantityMonths}
             textMonths={textMonths}
-            rectangleColor={getUi(itemId).rectangleColor}
+            rectangleColor={getUi(index).rectangleColor}
           />
           <Layout flexBasis={40} />
         </>

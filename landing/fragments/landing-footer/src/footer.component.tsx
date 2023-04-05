@@ -1,33 +1,22 @@
-import React                         from 'react'
-import { FormattedMessage }          from 'react-intl'
-import { forwardRef }                from 'react'
-import { useEffect }                 from 'react'
-import { useState }                  from 'react'
-import { useIntl }                   from 'react-intl'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { forwardRef }       from 'react'
 
-import { Navigation as NNavigation } from '@shared/data'
-import { Box }                       from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Logo }                      from '@ui/logo'
-import { Text }                      from '@ui/text'
-import { useMockedNavigation }       from '@shared/data'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Logo }             from '@ui/logo'
+import { Text }             from '@ui/text'
 
-import { BottomRow }                 from './bottom-row'
-import { ButtonUp }                  from './button-up'
-import { FooterProps }               from './footer.interfaces'
-import { LinkSocial }                from './link-social'
+import { BottomRow }        from './bottom-row'
+import { ButtonUp }         from './button-up'
+import { FooterProps }      from './footer.interfaces'
+import { LinkSocial }       from './link-social'
+import { useFooter }        from './data'
 
 const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }, ref: any) => {
-  const { formatMessage } = useIntl()
-  const { navigation: navigationData } = useMockedNavigation()
-  const [navigation, setNavigation] = useState<NNavigation[]>([])
-
-  useEffect(() => {
-    setNavigation(navigationData)
-    // eslint-disable-next-line
-  }, [])
+  const footer = useFooter()
 
   return (
     <Row justifyContent='center' ref={ref}>
@@ -57,18 +46,18 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              {navigation.map(({ title, path }, index) => {
+              {footer?.menuCourses?.nodes?.map(({ title, menuCourse }, index) => {
                 if (index === 3) {
                   return (
                     <>
-                      <LinkSocial text={title} path={path} />
+                      <LinkSocial text={title} path={menuCourse.link} />
                       <Layout flexBasis={[28, 30, 32]} />
                     </>
                   )
                 }
                 return (
                   <>
-                    <LinkSocial text={title} path={path} />
+                    <LinkSocial text={title} path={menuCourse.link} />
                     <Layout flexBasis={16} />
                   </>
                 )
@@ -95,37 +84,12 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.instagram',
-                  defaultMessage: 'Instagram',
-                })}
-                path='/'
-              />
-              <Layout flexBasis={16} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.facebook',
-                  defaultMessage: 'Facebook',
-                })}
-                path='/'
-              />
-              <Layout flexBasis={16} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.telegram',
-                  defaultMessage: 'Telegram',
-                })}
-                path='/'
-              />
-              <Layout flexBasis={16} />
-              <LinkSocial
-                text={formatMessage({
-                  id: 'landing_footer.vk',
-                  defaultMessage: 'VK',
-                })}
-                path='/'
-              />
+              {footer?.fragmentNewItem?.footer?.networksList?.map(({ name, link }) => (
+                <>
+                  <LinkSocial text={name} path={link} />
+                  <Layout flexBasis={16} />
+                </>
+              ))}
             </Column>
             <Layout flexGrow={[0, 0, 4]} />
             <ButtonUp buttonUp={buttonUp} />

@@ -4,7 +4,6 @@
   "main": "src/index.ts",
   "dependencies": {
     "@landing/consultation": "workspace:0.0.1",
-    "@shared/data": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
@@ -19,12 +18,14 @@
     "framer-motion": "^7.6.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"

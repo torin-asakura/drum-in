@@ -1,6 +1,4 @@
 import React                    from 'react'
-import { FormattedMessage }     from 'react-intl'
-import { useIntl }              from 'react-intl'
 
 import { ArrowRightBottomIcon } from '@ui/icons'
 import { Box }                  from '@ui/layout'
@@ -10,9 +8,10 @@ import { Row }                  from '@ui/layout'
 import { Text }                 from '@ui/text'
 
 import { TagBlock }             from './tag'
+import { useBanner }            from './data'
 
 const BannerСonnacolBlock = () => {
-  const { formatMessage } = useIntl()
+  const banner = useBanner()
 
   return (
     <Row justifyContent='center'>
@@ -45,34 +44,17 @@ const BannerСonnacolBlock = () => {
                   lineHeight={['default', 'default', 'semiSmall']}
                   color='text.smokyWhite'
                 >
-                  <FormattedMessage
-                    id='landing_banner_with_tags.connacol'
-                    defaultMessage='Коннакол'
-                  />
+                  {banner?.title}
                 </Text>
               </Box>
               <Layout order={[2, 2, 0]} flexBasis={[16, 24, 32]} flexShrink={0} />
               <Box order={[5, 5, 0]} flexDirection={['column', 'column', 'row']}>
-                <TagBlock
-                  text={formatMessage({
-                    id: 'landing_banner_with_tags.develops_tempo_control',
-                    defaultMessage: 'Развивает контроль темпа',
-                  })}
-                />
-                <Layout flexBasis={16} flexShrink={0} />
-                <TagBlock
-                  text={formatMessage({
-                    id: 'landing_banner_with_tags.forms_a_sense_of_the_boundaries_of_the_beat',
-                    defaultMessage: 'формирует ощущение границ такта',
-                  })}
-                />
-                <Layout flexBasis={16} flexShrink={0} />
-                <TagBlock
-                  text={formatMessage({
-                    id: 'landing_banner_with_tags.forms_the_breath',
-                    defaultMessage: 'формирует дыхание',
-                  })}
-                />
+                {banner?.tags?.map(({ text }) => (
+                  <>
+                    <TagBlock text={text} />
+                    <Layout flexBasis={16} flexShrink={0} />
+                  </>
+                ))}
               </Box>
               <Layout order={[4, 4, 0]} flexBasis={[36, 44, 32]} flexShrink={0} />
               <Box order={[3, 3, 0]} width={[285, 450, 620]}>
@@ -87,10 +69,7 @@ const BannerСonnacolBlock = () => {
                     'text.smokyWhite',
                   ]}
                 >
-                  <FormattedMessage
-                    id='landing_banner_with_tags.konokol_is_one_of_the_most_convenient'
-                    defaultMessage='Конокол является одной из самых удобных и простых форм для совершенствования чувства ритма'
-                  />
+                  {banner?.description}
                 </Text>
               </Box>
             </Column>

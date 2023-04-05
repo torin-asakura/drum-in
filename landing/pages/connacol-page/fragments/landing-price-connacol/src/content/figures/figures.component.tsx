@@ -19,6 +19,7 @@ const Figures: FC<FiguresProps> = ({
   rectangleRotate,
   rectanglePositionY,
   rectanglePositionX,
+  secondLineRectangle,
 }) => {
   const { formatMessage } = useIntl()
 
@@ -41,10 +42,7 @@ const Figures: FC<FiguresProps> = ({
         <Rectangle
           color={backgroundRectangle}
           firstLine={quantityMonths}
-          secondLine={formatMessage({
-            id: 'landing_price.months',
-            defaultMessage: 'месяцев',
-          })}
+          secondLine={secondLineRectangle}
           rotate={rectangleRotate}
         />
       </Box>

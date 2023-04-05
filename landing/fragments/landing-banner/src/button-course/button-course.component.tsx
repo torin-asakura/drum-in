@@ -1,7 +1,6 @@
 import styled                from '@emotion/styled'
 
 import React                 from 'react'
-import { FormattedMessage }  from 'react-intl'
 
 import { Button }            from '@ui/button'
 import { ComputerMouseIcon } from '@ui/icons'
@@ -10,8 +9,11 @@ import { Row }               from '@ui/layout'
 import { Text }              from '@ui/text'
 import { useHover }          from '@ui/utils'
 
+import { useBanner }         from '../data'
+
 const ButtonCourse = () => {
   const [hoverIcon, hoverIconProps] = useHover()
+  const banner = useBanner()
 
   const FirstIcon = styled(Box)({
     animationName: hoverIcon ? 'firstAnimationMouse' : 'firstRevertAnimationMouse',
@@ -50,7 +52,7 @@ const ButtonCourse = () => {
             fontSize='regular'
             lineHeight='primary'
           >
-            <FormattedMessage id='landing_banner.choose_a_course' defaultMessage='Выбрать курс' />
+            {banner?.titleButton}
           </Text>
         </Row>
         <Box

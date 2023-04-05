@@ -1,48 +1,42 @@
-import React                                 from 'react'
-import { Children }                          from 'react'
-import { useMemo }                           from 'react'
-import { useEffect }                         from 'react'
-import { useState }                          from 'react'
+import React           from 'react'
+import { Children }    from 'react'
+import { useMemo }     from 'react'
 
-import { StudentsSlider as SStudentsSlider } from '@shared/data'
-import { Box }                               from '@ui/layout'
-import { Slider }                            from '@ui/slider'
-import { SwiperSlide }                       from '@ui/slider'
-import { useMockedStudentsSlider }           from '@shared/data'
+import { Condition }   from '@ui/condition'
+import { Box }         from '@ui/layout'
+import { Slider }      from '@ui/slider'
+import { SwiperSlide } from '@ui/slider'
 
-import { Item }                              from '../item'
+import { Item }        from '../item'
+import { useStudents } from '../../data'
 
 const CardsSwiper = () => {
-  const { studentsSlider: studentsSliderData } = useMockedStudentsSlider()
-  const [studentsSlider, setStudentsSlider] = useState<SStudentsSlider[]>(studentsSliderData)
-
-  useEffect(() => {
-    setStudentsSlider(studentsSliderData)
-    // eslint-disable-next-line
-  }, [])
+  const students = useStudents()?.students?.cardsStudents
 
   const studentsSliderChildren = useMemo(
     () =>
-      studentsSlider.map(({ fullName, age, profession, description }) => (
-        <Item fullName={fullName} age={age} profession={profession} description={description} />
+      students?.map(({ name, age, specialization, description }) => (
+        <Item fullName={name} age={age} profession={specialization} description={description} />
       )),
-    [studentsSlider]
+    [students]
   )
 
   return (
     <Box display={['flex', 'flex', 'none']}>
-      <Slider
-        clName='students-slider'
-        spaceBetween={16}
-        slidesOffsetAfter={50}
-        slidesPerView='auto'
-        progressbar
-        autoHeight
-      >
-        {Children.map(studentsSliderChildren, (child) => (
-          <SwiperSlide>{child}</SwiperSlide>
-        ))}
-      </Slider>
+      <Condition match={studentsSliderChildren !== [] && studentsSliderChildren !== undefined}>
+        <Slider
+          clName='students-slider'
+          spaceBetween={16}
+          slidesOffsetAfter={50}
+          slidesPerView='auto'
+          progressbar
+          autoHeight
+        >
+          {Children.map(studentsSliderChildren, (child) => (
+            <SwiperSlide>{child}</SwiperSlide>
+          ))}
+        </Slider>
+      </Condition>
     </Box>
   )
 }

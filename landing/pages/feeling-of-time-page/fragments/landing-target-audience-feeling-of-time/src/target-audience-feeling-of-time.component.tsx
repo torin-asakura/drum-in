@@ -1,17 +1,18 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                 from 'react'
+import { useIntl }           from 'react-intl'
 
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Text }              from '@ui/text'
 
-import { ItemCard }         from './item'
+import { ItemCard }          from './item'
+import { useTargetAudience } from './data'
 
 const TargetAudienceFeelingOfTimeBlock = () => {
   const { formatMessage } = useIntl()
+  const targetAudience = useTargetAudience()
 
   return (
     <Row justifyContent='center'>
@@ -28,10 +29,7 @@ const TargetAudienceFeelingOfTimeBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_target_audience.this_course_is_for_you_if_you'
-                defaultMessage='Этот курс для вас, если вы'
-              />
+              {targetAudience?.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
@@ -45,10 +43,7 @@ const TargetAudienceFeelingOfTimeBlock = () => {
                 id: 'landing_target_audience.first',
                 defaultMessage: '01',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience_feeling_of_time.just_starting_your_musical_journey',
-                defaultMessage: 'Только начинаете свой музыкальный путь',
-              })}
+              text={targetAudience?.targetAudience?.firstCharacteristic}
               positionHorizontal={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               positionVertical={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               zIndex={3}
@@ -58,10 +53,7 @@ const TargetAudienceFeelingOfTimeBlock = () => {
                 id: 'landing_target_audience.second',
                 defaultMessage: '02',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience_feeling_of_time.do_you_feel_a_lack_of_understanding',
-                defaultMessage: 'Ощущаете непонимание музыкального времени',
-              })}
+              text={targetAudience?.targetAudience?.secondCharacteristic}
               positionHorizontal={{ _: 45, tablet: 100, laptop: 0, wide: 313 }}
               positionVertical={{ _: 100, tablet: 175, laptop: 309, wide: 196 }}
               zIndex={2}
@@ -71,10 +63,7 @@ const TargetAudienceFeelingOfTimeBlock = () => {
                 id: 'landing_target_audience.third',
                 defaultMessage: '03',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience_feeling_of_time.are_you_experiencing_difficulties',
-                defaultMessage: 'Испытываете сложности при удержании темпа и снятии партий',
-              })}
+              text={targetAudience?.targetAudience?.thirdCharacteristic}
               positionHorizontal={{ _: 89, tablet: 225, laptop: 0, wide: 626 }}
               positionVertical={{ _: 200, tablet: 350, laptop: 618, wide: 400 }}
               zIndex={1}

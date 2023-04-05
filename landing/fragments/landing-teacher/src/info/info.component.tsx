@@ -1,6 +1,5 @@
 import React                 from 'react'
 import { FC }                from 'react'
-import { useIntl }           from 'react-intl'
 
 import { ExperianceIcon }    from '@ui/icons'
 import { Box }               from '@ui/layout'
@@ -11,9 +10,11 @@ import { PlaySongProps }     from '../play-song.interfaces'
 import { EducationList }     from './education-list'
 import { OneCharacteristic } from './one-characteristic'
 import { SongButton }        from './song-button'
+import { useTeacher }        from '../data'
+import { getIndent }         from '../helpers'
 
 const Info: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
-  const { formatMessage } = useIntl()
+  const teacher = useTeacher()?.teacher
 
   return (
     <Box width={['100%', '100%', 1920]}>
@@ -34,61 +35,13 @@ const Info: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
               <ExperianceIcon width={160} height={160} />
             </Box>
             <Column>
-              <OneCharacteristic
-                indentLeft={68}
-                numeric={formatMessage({
-                  id: 'landing_teacher.sixteen',
-                  defaultMessage: '16',
-                })}
-                title={formatMessage({
-                  id: 'landing_teacher.years_of_performances',
-                  defaultMessage: 'лет выступлений',
-                })}
-              />
-              <OneCharacteristic
-                indentLeft={106}
-                numeric={formatMessage({
-                  id: 'landing_teacher.twelve',
-                  defaultMessage: '12',
-                })}
-                title={formatMessage({
-                  id: 'landing_teacher.years_of_teaching',
-                  defaultMessage: 'лет преподавания',
-                })}
-              />
-              <OneCharacteristic
-                indentLeft={0}
-                numeric={formatMessage({
-                  id: 'landing_teacher.twenty_four',
-                  defaultMessage: '24',
-                })}
-                title={formatMessage({
-                  id: 'landing_teacher.festival',
-                  defaultMessage: 'фестиваля',
-                })}
-              />
-              <OneCharacteristic
-                indentLeft={68}
-                numeric={formatMessage({
-                  id: 'landing_teacher.four',
-                  defaultMessage: '4',
-                })}
-                title={formatMessage({
-                  id: 'landing_teacher.album',
-                  defaultMessage: 'альбома',
-                })}
-              />
-              <OneCharacteristic
-                indentLeft={160}
-                numeric={formatMessage({
-                  id: 'landing_teacher.four_hundred_and_sixty_eight',
-                  defaultMessage: '468',
-                })}
-                title={formatMessage({
-                  id: 'landing_teacher.students',
-                  defaultMessage: 'учеников',
-                })}
-              />
+              {teacher?.experience?.map(({ number, characteristic }, index) => (
+                <OneCharacteristic
+                  indentLeft={getIndent(index)}
+                  numeric={number}
+                  title={characteristic}
+                />
+              ))}
             </Column>
           </Box>
           <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={1} />

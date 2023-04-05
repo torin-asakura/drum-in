@@ -19,12 +19,15 @@ import { Text }                from '@ui/text'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 import { useHover }            from '@ui/utils'
 
+import { useHeader }           from './data'
+
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
   const [hoverArrow, hoverArrowProps] = useHover()
   const [hoverLink, hoverLinkProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
+  const header = useHeader()
 
   const { scroll } = useLocomotiveScroll()
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
@@ -110,12 +113,12 @@ const HeaderBlock = () => {
               </Box>
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
               <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
-                <NextLink path='/contact'>
+                <NextLink path={header?.urlLink}>
                   <Text
                     color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
                     style={{ transition: '0.3s' }}
                   >
-                    <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
+                    {header?.titleLink}
                   </Text>
                 </NextLink>
               </Box>
@@ -131,7 +134,7 @@ const HeaderBlock = () => {
                     fontSize={['semiMedium', 'medium', 'medium']}
                     lineHeight='default'
                   >
-                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                    {header?.nameButton}
                   </Text>
                 </Button>
               </Row>
@@ -147,7 +150,7 @@ const HeaderBlock = () => {
                     fontSize={['semiMedium', 'medium', 'medium']}
                     lineHeight='default'
                   >
-                    <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+                    {header?.nameButton}
                   </Text>
                 </Button>
               </Row>

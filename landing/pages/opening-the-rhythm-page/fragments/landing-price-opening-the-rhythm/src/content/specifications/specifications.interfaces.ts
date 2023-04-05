@@ -3,4 +3,5 @@ export interface SpecificationsProps {
   firstLineCircle: string
   secondLineCircle: string
   quantityMonths: string
+  wordMonth: string
 }

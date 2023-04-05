@@ -12,14 +12,13 @@ import { useHover }                    from '@ui/utils'
 import { NecessaryKnowledgeProps }     from './necessary-knowledge.interfaces'
 
 const NecessaryKnowledgeBlock: FC<NecessaryKnowledgeProps> = ({
-  necessaryKnowledge,
   forWhom,
   listNecessaryKnowledge,
   titleHoverBlock,
 }) => {
   const [hoverElem, colorHoverElem] = useHover()
 
-  if (necessaryKnowledge && listNecessaryKnowledge) {
+  if (listNecessaryKnowledge) {
     return (
       <Box alignItems='center'>
         <Box>

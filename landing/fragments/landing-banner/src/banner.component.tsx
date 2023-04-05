@@ -1,6 +1,5 @@
 import React                    from 'react'
 import { FormattedMessage }     from 'react-intl'
-import { useIntl }              from 'react-intl'
 
 import { RhythmSchoolIcon }     from '@ui/icons'
 import { MarinaChuprikovaIcon } from '@ui/icons'
@@ -12,9 +11,10 @@ import { Text }                 from '@ui/text'
 
 import { ButtonCourse }         from './button-course'
 import { TagBlock }             from './tag'
+import { useBanner }            from './data'
 
 const BannerBlock = () => {
-  const { formatMessage } = useIntl()
+  const banner = useBanner()
 
   return (
     <Row justifyContent='center'>
@@ -57,29 +57,12 @@ const BannerBlock = () => {
           </Box>
           <Layout order={[4, 4, -1]} flexBasis={[16, 24, 60]} />
           <Box width='100%' flexDirection={['column', 'column', 'row']} order={[7, 7, -1]}>
-            <TagBlock
-              width={[242, 289, 354]}
-              text={formatMessage({
-                id: 'landing_banner.learn_to_control_the_pace',
-                defaultMessage: 'Научитесь контролировать темп',
-              })}
-            />
-            <Layout flexBasis={16} />
-            <TagBlock
-              width={[266, 317, 386]}
-              text={formatMessage({
-                id: 'landing_banner.start_picking_up_tunes_by_ear',
-                defaultMessage: 'Начнёте подбирать мелодии на слух',
-              })}
-            />
-            <Layout flexBasis={16} />
-            <TagBlock
-              width={[258, 305, 373]}
-              text={formatMessage({
-                id: 'landing_banner.improve_your_professionalism',
-                defaultMessage: 'Повысите свой профессионализм',
-              })}
-            />
+            {banner?.tagsList?.map(({ text }) => (
+              <>
+                <TagBlock text={text} />
+                <Layout flexBasis={16} />
+              </>
+            ))}
           </Box>
           <Layout order={[6, 6, -1]} flexBasis={[48, 60, 320]} />
           <Row justifyContent='space-between' order={[5, 5, -1]}>
@@ -94,10 +77,7 @@ const BannerBlock = () => {
                   'text.smokyWhite',
                 ]}
               >
-                <FormattedMessage
-                  id='landing_banner.we_are_a_modern_online_rhythm_school'
-                  defaultMessage='Мы — современная онлайн-школа ритма. Уже 16 лет мы обучаем наших студентов.'
-                />
+                {banner?.description}
               </Text>
             </Box>
             <ButtonCourse />

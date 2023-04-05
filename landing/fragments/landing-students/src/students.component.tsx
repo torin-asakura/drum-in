@@ -13,9 +13,11 @@ import { Text }             from '@ui/text'
 
 import { CardsStudent }     from './cards-student'
 import { ModalWindow }      from './modal-window'
+import { useStudents }      from './data'
 
 const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const students = useStudents()
 
   return (
     <>
@@ -41,7 +43,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  <FormattedMessage id='landing_students.students' defaultMessage='Ученики' />
+                  {students?.title}
                 </Text>
               </Box>
               <Layout display={['flex', 'flex', 'none']} flexBasis={[8, 12, 0]} />
@@ -53,10 +55,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
                     lineHeight={['primary', 'primary', 'medium']}
                     color='text.transparentSmokyWhite'
                   >
-                    <FormattedMessage
-                      id='landing_students.more_than_five_hundred_students'
-                      defaultMessage='Обучение в нашей школе прошли уже более 500 учеников разного возраста, уровня и специальности.'
-                    />
+                    {students?.students?.description}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 20, 24]} />

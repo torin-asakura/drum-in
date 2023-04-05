@@ -147,6 +147,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@apollo/client@npm:^3.6.9":
+  version: 3.7.10
+  resolution: "@apollo/client@npm:3.7.10"
+  dependencies:
+    "@graphql-typed-document-node/core": "npm:^3.1.1"
+    "@wry/context": "npm:^0.7.0"
+    "@wry/equality": "npm:^0.5.0"
+    "@wry/trie": "npm:^0.3.0"
+    graphql-tag: "npm:^2.12.6"
+    hoist-non-react-statics: "npm:^3.3.2"
+    optimism: "npm:^0.16.1"
+    prop-types: "npm:^15.7.2"
+    response-iterator: "npm:^0.2.6"
+    symbol-observable: "npm:^4.0.0"
+    ts-invariant: "npm:^0.10.3"
+    tslib: "npm:^2.3.0"
+    zen-observable-ts: "npm:^1.2.5"
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+    graphql-ws: ^5.5.5
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    subscriptions-transport-ws: ^0.9.0 || ^0.11.0
+  peerDependenciesMeta:
+    graphql-ws:
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+    subscriptions-transport-ws:
+      optional: true
+  checksum: ca8c9eeda792c24af5ce3269cec209ba3d1a2b28ec377265bd67539fc4db03743a8fba219b3d60012640073ecb9873ea9147c81c8527dc5473f5919098e1393c
+  languageName: node
+  linkType: hard
+
 "@arcanis/slice-ansi@npm:^1.1.1":
   version: 1.1.1
   resolution: "@arcanis/slice-ansi@npm:1.1.1"
@@ -1425,6 +1461,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
+  version: 0.0.0-use.local
+  resolution: "@globals/data@workspace:globals/data"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    graphql: "npm:^15.5.1"
+    react: "npm:^17.0.2"
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@graphql-typed-document-node/core@npm:^3.1.1":
+  version: 3.1.2
+  resolution: "@graphql-typed-document-node/core@npm:3.1.2"
+  peerDependencies:
+    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: cdec5084cf44520f7c26bd74a0c16d921f2aeb5d2ae6de99176cf7f293d9337ff81b324776729bb47134c10403191caf4f66661b5020788a927b6826662e76c5
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.9.2":
   version: 0.9.5
   resolution: "@humanwhocodes/config-array@npm:0.9.5"
@@ -1750,10 +1808,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/advantages-fragment@workspace:landing/fragments/landing-advantages"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/slider": "workspace:0.0.1"
@@ -1763,6 +1822,7 @@ __metadata:
     styled-tools: "npm:^1.7.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -1773,6 +1833,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/after-the-course-fragment@workspace:landing/fragments/landing-after-the-course"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1783,6 +1844,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1793,6 +1855,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-banner-connacol"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
@@ -1802,6 +1865,7 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1812,6 +1876,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-banner-feeling-of-time"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1822,6 +1887,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1832,6 +1898,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-banner-fifth-dimension"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1842,6 +1909,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1852,6 +1920,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-fragment@workspace:landing/fragments/landing-banner"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
@@ -1863,6 +1932,7 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1873,6 +1943,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1883,6 +1954,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1893,6 +1965,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-banner-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
@@ -1902,6 +1975,7 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1912,6 +1986,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -1922,6 +1997,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -1932,11 +2008,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/figures": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/slider": "workspace:0.0.1"
@@ -1946,6 +2024,8 @@ __metadata:
     styled-tools: "npm:^1.7.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -1972,6 +2052,8 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1998,6 +2080,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2012,6 +2095,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/contact-fragment@workspace:landing/fragments/landing-contact"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2020,6 +2104,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2039,6 +2124,8 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2050,6 +2137,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/course-process-fragment@workspace:landing/fragments/landing-course-process"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2061,6 +2149,7 @@ __metadata:
     styled-tools: "npm:^1.7.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2078,6 +2167,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-dom: "*"
@@ -2089,8 +2179,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/faq@workspace:landing/fragments/landing-faq"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/accordeon": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
@@ -2103,7 +2194,9 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
+    "@globals/data": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2129,6 +2222,8 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2156,6 +2251,8 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2167,8 +2264,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/footer-fragment@workspace:landing/fragments/landing-footer"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
@@ -2180,6 +2277,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -2190,6 +2288,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@landing/consultation": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
@@ -2206,7 +2305,9 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2223,6 +2324,7 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     next: "*"
@@ -2241,6 +2343,7 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     next: "*"
@@ -2259,6 +2362,7 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     next: "*"
@@ -2278,6 +2382,7 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     react: "*"
@@ -2296,8 +2401,10 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "*"
     next: "*"
     react: "*"
     react-intl: "*"
@@ -2313,6 +2420,7 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     next: "*"
@@ -2325,12 +2433,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@landing/banner-seventh-heaven-fragment": "workspace:0.0.1"
     "@landing/program-seventh-heaven-fragment": "workspace:0.0.1"
     "@landing/target-audience-seventh-heaven-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     next: "*"
@@ -2361,6 +2471,8 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/spy-scroll": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2372,9 +2484,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/learning-process-fragment@workspace:landing/fragments/landing-learning-process"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
@@ -2384,6 +2496,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2393,9 +2506,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/learning-students@workspace:landing/fragments/landing-students"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:^17"
     "@types/styled-system": "npm:^5.1.12"
@@ -2403,6 +2516,7 @@ __metadata:
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/slider": "workspace:0.0.1"
     "@ui/tag": "workspace:0.0.1"
@@ -2414,6 +2528,7 @@ __metadata:
     styled-tools: "npm:^1.7.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
@@ -2427,6 +2542,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-connacol@workspace:landing/pages/connacol-page/fragments/landing-modal-form-connacol"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2443,6 +2559,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2457,6 +2574,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-feeling-of-time@workspace:landing/pages/feeling-of-time-page/fragments/landing-modal-form-feeling-of-time"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2473,6 +2591,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2487,6 +2606,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-fifth-dimension@workspace:landing/pages/fifth-dimension-page/fragments/landing-modal-form-fifth-dimension"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2503,6 +2623,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2517,6 +2638,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-opening-the-rhythm@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2533,6 +2655,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2547,6 +2670,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-polyrhythmic-keys@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-modal-form-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2562,6 +2686,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2576,6 +2701,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-seventh-heaven@workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
@@ -2592,6 +2718,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2606,8 +2733,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@landing/consultation": "workspace:0.0.1"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
@@ -2625,6 +2752,7 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2652,6 +2780,8 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2679,6 +2809,7 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2690,6 +2821,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-price-connacol"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-connacol": "workspace:0.0.1"
@@ -2703,6 +2835,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2713,6 +2846,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-price-feeling-of-time"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-feeling-of-time": "workspace:0.0.1"
@@ -2726,6 +2860,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2736,6 +2871,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-price-fifth-dimension"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-fifth-dimension": "workspace:0.0.1"
@@ -2749,6 +2885,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2759,6 +2896,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-opening-the-rhythm": "workspace:0.0.1"
@@ -2772,6 +2910,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2782,6 +2921,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-polyrhythmic-keys": "workspace:0.0.1"
@@ -2795,6 +2935,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2805,6 +2946,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@landing/modal-form-seventh-heaven": "workspace:0.0.1"
@@ -2818,6 +2960,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2828,6 +2971,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/private-lesson-fragment@workspace:landing/fragments/landing-private-lesson"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@landing/consultation": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
@@ -2836,6 +2980,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2846,6 +2991,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-program-connacol"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
@@ -2855,6 +3001,7 @@ __metadata:
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2864,6 +3011,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-program-feeling-of-time"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
@@ -2873,6 +3021,7 @@ __metadata:
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2882,6 +3031,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-program-fifth-dimension"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
@@ -2891,6 +3041,7 @@ __metadata:
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2900,8 +3051,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-fragment@workspace:landing/fragments/landing-program"
   dependencies:
-    "@shared/data": "workspace:0.0.1"
+    "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/figures": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2911,6 +3063,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2920,6 +3073,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-program-polyrhythmic-keys"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
@@ -2929,6 +3083,7 @@ __metadata:
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2938,6 +3093,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/background": "workspace:0.0.1"
@@ -2947,6 +3103,7 @@ __metadata:
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -2956,8 +3113,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.6.0"
+    "@globals/data": "workspace:0.0.1"
     "@landing/connacol-page": "workspace:0.0.1"
     "@landing/contact-page": "workspace:0.0.1"
     "@landing/feeling-of-time-page": "workspace:0.0.1"
@@ -2971,6 +3130,7 @@ __metadata:
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:^17.0.11"
     "@ui/theme": "workspace:0.0.1"
+    graphql: "npm:^15.5.1"
     locomotive-scroll: "npm:^4.1.4"
     next: "npm:^12.1.0"
     react: "npm:^17.0.2"
@@ -3000,6 +3160,8 @@ __metadata:
     "@ui/background": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3064,11 +3226,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/target-audience-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -3079,11 +3243,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/target-audience-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -3094,11 +3260,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/target-audience-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
@@ -3109,11 +3277,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/teacher-fragment@workspace:landing/fragments/landing-teacher"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
-    "@shared/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
     "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -3124,6 +3293,7 @@ __metadata:
     styled-tools: "npm:^1.7.2"
     swiper: "npm:^8.3.1"
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -4182,6 +4352,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
+    "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
     "@types/styled-system": "npm:^5"
@@ -4195,9 +4366,11 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
+    react-google-recaptcha-v3: "npm:^1.10.1"
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
@@ -4651,6 +4824,33 @@ __metadata:
     "@webassemblyjs/ast": "npm:1.11.1"
     "@xtuc/long": "npm:4.2.2"
   checksum: c662c7f2d482ecf5c6c96addf40c8c691fd6d207a01ba4a0465429699d848c5efd34915f65cc37d2d86d63962ae2ca2e35c44d4adbb67f8cf8f80952f94e6fbe
+  languageName: node
+  linkType: hard
+
+"@wry/context@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@wry/context@npm:0.7.0"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  checksum: 215c9d0822a7ea74c08d27955a2dd6098f368835a920d88e993c21d0938a4ccea52205fcc793c8fd2f0eee90a48cb9e40a7dea85ff72efa071f47e0f05ab406a
+  languageName: node
+  linkType: hard
+
+"@wry/equality@npm:^0.5.0":
+  version: 0.5.3
+  resolution: "@wry/equality@npm:0.5.3"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  checksum: 56cb5583a6ac20a227b06f614925e4a9ada4cba22432f07eb2dfd845646b73b499c123e160bf867e596d3c64e4bb83bb1b87ff5b977083bfd6fa50e507e46cb2
+  languageName: node
+  linkType: hard
+
+"@wry/trie@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "@wry/trie@npm:0.3.2"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  checksum: d43c68a64e9c2094675cf0bd9b4ba282603a56960fdc0a852d03b735b32e0e94bd337fa3cc8e61df6537be32cf8a802d616d6771903db0970c7c251f32126aea
   languageName: node
   linkType: hard
 
@@ -7112,6 +7312,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql-tag@npm:^2.12.6":
+  version: 2.12.6
+  resolution: "graphql-tag@npm:2.12.6"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  peerDependencies:
+    graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: 35c9fbdc43bb9eddfa4223c19ce9a34370ee89c77e00e1b797d864e5eebac2551a52c42850d68a3be5fe7540d99cfa009e1f43cb79d2170f96bcce8eb7fc86cf
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^15.5.1":
+  version: 15.8.0
+  resolution: "graphql@npm:15.8.0"
+  checksum: e09073b981965b99d22717ed219c55086375075db0870a5a934e1d777d645a155f10141dfe1d0d9713b35765790fb257d6d198d75a53e02ba0126f16befc899c
+  languageName: node
+  linkType: hard
+
 "has-flag@npm:^3.0.0":
   version: 3.0.0
   resolution: "has-flag@npm:3.0.0"
@@ -8220,7 +8438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -8704,6 +8922,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"optimism@npm:^0.16.1":
+  version: 0.16.2
+  resolution: "optimism@npm:0.16.2"
+  dependencies:
+    "@wry/context": "npm:^0.7.0"
+    "@wry/trie": "npm:^0.3.0"
+  checksum: 01219825b28a65ad84a7a7abd4d23e92a6cfb9be614b1ba13d245bd7a1c28d01083b59cc034bc5e554d4dc8e4849dd89be3a89ecdc133e38926e45cf967d744a
+  languageName: node
+  linkType: hard
+
 "optionator@npm:^0.9.1":
   version: 0.9.1
   resolution: "optionator@npm:0.9.1"
@@ -8959,6 +9187,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.7.2":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: "npm:^1.4.0"
+    object-assign: "npm:^4.1.1"
+    react-is: "npm:^16.13.1"
+  checksum: 196295f119e0f38ec64b43c1121a7e3bdbfcf66b86a01d50df22a247eb22b644033097b53a3b0961ce64d540c7a2c505c844ff245cb548b4f6eda59bbac6fbf0
+  languageName: node
+  linkType: hard
+
 "protocol-buffers-schema@npm:^3.6.0":
   version: 3.6.0
   resolution: "protocol-buffers-schema@npm:3.6.0"
@@ -9048,6 +9287,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-google-recaptcha-v3@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "react-google-recaptcha-v3@npm:1.10.1"
+  dependencies:
+    hoist-non-react-statics: "npm:^3.3.2"
+  peerDependencies:
+    react: ^16.3 || ^17.0 || ^18.0
+    react-dom: ^17.0 || ^18.0
+  checksum: 4151b2ead9dcc05d87b56b64b750731829191e9168877edc9fbafc86ca773603fd64b8c2cf8d7c5d0ed6712d151213f0a97bed28f02cdf56d677c7fcfb41f075
+  languageName: node
+  linkType: hard
+
 "react-intl@npm:5.24.3":
   version: 5.24.3
   resolution: "react-intl@npm:5.24.3"
@@ -9072,7 +9323,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.7.0":
+"react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 0c9adc5d984db733fb1dd298f3e94cdec66bc328d27fb11df65971d2cc9a299008bc64baab8fe8e79943df85b445a1008b2cc9e270825d0fd056e5a0d2df8de6
@@ -9230,6 +9481,13 @@ __metadata:
     is-core-module: "npm:^2.2.0"
     path-parse: "npm:^1.0.6"
   checksum: 976d9e2ccefbecc754be43a1d1a6a5e689339ac8fb5c0b2ad0bcf7b78d7ec3da938645efb9d9986c66e760306394ea1a3cdae84aa5d7078714f88a020a5190f2
+  languageName: node
+  linkType: hard
+
+"response-iterator@npm:^0.2.6":
+  version: 0.2.6
+  resolution: "response-iterator@npm:0.2.6"
+  checksum: 4eda14b5b4a9b52ece22a128fe24cc4fa21a070baa016eb3ef6e0136334b6be2c97e8b9a4d206b296da90b2cd77c27a422ac44d58a69158645027773593fe4f8
   languageName: node
   linkType: hard
 
@@ -9802,6 +10060,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"symbol-observable@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "symbol-observable@npm:4.0.0"
+  checksum: ca21ea188b8a454d2bd570b7704bac4b113cfcabd5999adf874d1076cf805bd6f98915f5389a0fa32e2f9173617a1c62f310a0def00f406bcf0737ad952e529a
+  languageName: node
+  linkType: hard
+
 "tapable@npm:^2.1.1, tapable@npm:^2.2.0":
   version: 2.2.1
   resolution: "tapable@npm:2.2.1"
@@ -9975,6 +10240,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-invariant@npm:^0.10.3":
+  version: 0.10.3
+  resolution: "ts-invariant@npm:0.10.3"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: cb1991baa5a01b4f7cdb717edf677fb1cf8a414dcae14304aa82698b40e6f64753fd347a1690a5e88cfa0d6bcc3c045ddea58f9d0ecc6a9572498256d9395ddc
+  languageName: node
+  linkType: hard
+
 "ts-jest@npm:^28.0.4":
   version: 28.0.8
   resolution: "ts-jest@npm:28.0.8"
@@ -10037,17 +10311,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.3.0, tslib@npm:^2.4.0":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: 5a6ee935f56cd653af29de928483acbab7323f964b053e98b6b318abc69431fb0e4f660c4f4a396e2e93852510bef25eeb9f1d951d060b2d7bcc313811e5da6f
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^2.3.1":
   version: 2.4.1
   resolution: "tslib@npm:2.4.1"
   checksum: a739a21e3ff059e62c7c3c0845333fbc9c081bcc91e015f2d246a31eeaf1fb0e29b10c0913c7d22f692b3203bb469fd60ca5288aa4f27d351a969df2d0714899
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.4.0":
-  version: 2.5.0
-  resolution: "tslib@npm:2.5.0"
-  checksum: 5a6ee935f56cd653af29de928483acbab7323f964b053e98b6b318abc69431fb0e4f660c4f4a396e2e93852510bef25eeb9f1d951d060b2d7bcc313811e5da6f
   languageName: node
   linkType: hard
 
@@ -10432,5 +10706,21 @@ __metadata:
   dependencies:
     "@types/yoga-layout": "npm:1.9.2"
   checksum: 12d24d35f8f6db885b0e10132df54c57001972c67cf923784801c7da145025bea07334b7cf1988e0560c3596dfd2d7ce908fb967463ce1a2792fa840187042ef
+  languageName: node
+  linkType: hard
+
+"zen-observable-ts@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "zen-observable-ts@npm:1.2.5"
+  dependencies:
+    zen-observable: "npm:0.8.15"
+  checksum: 1086ac8f3a91eee4437f99e79b61f7f8c2b6040471d9a4356ee4e3b6e5b2627c4ab59a2ae7962f2f3c48d6816f2458f77d7e778d91a4a2e80102e36a0242643f
+  languageName: node
+  linkType: hard
+
+"zen-observable@npm:0.8.15":
+  version: 0.8.15
+  resolution: "zen-observable@npm:0.8.15"
+  checksum: 82d09c1bb61fdaef03edb3b96f2af90ec9ddcdb35616df249f9d7aaef3aa4e061c7ab8733678b184639a914d47ba6f77741072c1d1ebea93dcd299d85fcf969d
   languageName: node
   linkType: hard

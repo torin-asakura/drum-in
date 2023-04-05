@@ -1,6 +1,4 @@
 import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useIntl }            from 'react-intl'
 
 import { RightDownArrowIcon } from '@ui/icons'
 import { Box }                from '@ui/layout'
@@ -10,9 +8,10 @@ import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
 
 import { Tape }               from './tape'
+import { useBanner }          from './data'
 
 const BannerOpeningTheRhythmBlock = () => {
-  const { formatMessage } = useIntl()
+  const banner = useBanner()
 
   return (
     <Box flexDirection='column' width='100%'>
@@ -38,10 +37,7 @@ const BannerOpeningTheRhythmBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    <FormattedMessage
-                      id='landing_banner_opening_the_rhythm.opening_the_rhythm'
-                      defaultMessage='Открытие ритма'
-                    />
+                    {banner?.titleInHero}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -57,10 +53,7 @@ const BannerOpeningTheRhythmBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      <FormattedMessage
-                        id='landing_banner_opening_the_rhythm.course_that_will_help_you'
-                        defaultMessage='Курс, который поможет понимать, исполнять и писать музыку'
-                      />
+                      {banner?.descriptionCourseInHero}
                     </Text>
                   </Box>
                 </Box>
@@ -83,12 +76,7 @@ const BannerOpeningTheRhythmBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape
-        level={formatMessage({
-          id: 'landing_banner_opening_the_rhythm.main_course',
-          defaultMessage: '#ОСНОВНОЙ КУРС',
-        })}
-      />
+      <Tape level={banner?.levelCourseInHero} />
     </Box>
   )
 }

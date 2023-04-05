@@ -1,7 +1,6 @@
 import React                               from 'react'
 import { FormattedMessage }                from 'react-intl'
 import { useState }                        from 'react'
-import { useIntl }                         from 'react-intl'
 
 import { ModalFormPolyrhythmicKeys }       from '@landing/modal-form-polyrhythmic-keys'
 import { ModalMobileFormPolyrhythmicKeys } from '@landing/modal-form-polyrhythmic-keys'
@@ -15,11 +14,12 @@ import { Text }                            from '@ui/text'
 import { Figures }                         from './figures'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
+import { usePrice }                        from '../data'
 
 const Content = () => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const { formatMessage } = useIntl()
+  const price = usePrice()?.tuitionFeesWithoutInstallment
 
   return (
     <Box
@@ -40,29 +40,16 @@ const Content = () => {
           >
             <FormattedMessage id='landing_price.old_price' defaultMessage='*Старая цена' />
             <Space />
-            <FormattedMessage
-              id='landing_price_polyrhythmic_keys.ten_thousand'
-              defaultMessage='10 000 ₽'
-            />
+            {price?.oldPrice}
           </Text>
         </Box>
         <Layout flexBasis={[18, 24, 32]} />
-        <Title
-          price={formatMessage({
-            id: 'landing_price_polyrhythmic_keys.eight_thousand_seven_hundred',
-            defaultMessage: '8 700 ₽',
-          })}
-        />
+        <Title price={price?.price} />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
-          quantityMonths={formatMessage({
-            id: 'landing_price_polyrhythmic_keys.one',
-            defaultMessage: '1',
-          })}
-          quantityVideoLessons={formatMessage({
-            id: 'landing_price_polyrhythmic_keys.six',
-            defaultMessage: '6',
-          })}
+          quantityMonths={price?.numberOfMonths}
+          quantityVideoLessons={price?.numberOfVideoLessons}
+          wordMonth={price?.secondLineRectangle}
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -111,14 +98,9 @@ const Content = () => {
         />
         <Layout flexBasis={[23, 30, 155]} />
         <Figures
-          quantityMonths={formatMessage({
-            id: 'landing_price_polyrhythmic_keys.one',
-            defaultMessage: '1',
-          })}
-          quantityVideoLessons={formatMessage({
-            id: 'landing_price_polyrhythmic_keys.six',
-            defaultMessage: '6',
-          })}
+          quantityMonths={price?.numberOfMonths}
+          quantityVideoLessons={price?.numberOfVideoLessons}
+          secondLineRectangle={price?.secondLineRectangle}
           rectangleRotate={-10}
           squareRotate={-5}
           rectanglePositionX={8.5}

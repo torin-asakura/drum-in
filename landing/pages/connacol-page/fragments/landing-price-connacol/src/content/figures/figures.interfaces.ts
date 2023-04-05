@@ -3,6 +3,7 @@ export interface FiguresProps {
   secondLineCircle: string
   quantityMonths: string
   backgroundRectangle: string
+  secondLineRectangle: string
   squareRotate: number
   circleRotate: number
   rectangleRotate: number

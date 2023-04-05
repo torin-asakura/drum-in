@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -8,23 +7,16 @@ import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 import { SelectedCourse }   from '../selected-course'
+import { useModalForm }     from '../../data'
 
 const ContentOneTimePayment = () => {
-  const { formatMessage } = useIntl()
+  const modalForm = useModalForm()
 
   return (
     <>
-      <SelectedCourse
-        title={formatMessage({
-          id: 'landing_modal_form_feeling_of_time.feeling_of_time',
-          defaultMessage: '“Ощущение времени”',
-        })}
-        description={formatMessage({
-          id: 'landing_modal_form_feeling_of_time.course_for_experienced_musician',
-          defaultMessage:
-            'Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной',
-        })}
-      />
+      {modalForm?.courses?.map(({ name, description }) => (
+        <SelectedCourse title={name} description={description} />
+      ))}
       <Layout flexBasis={[8, 16, 24]} flexShrink={0} />
       <Row justifyContent='end'>
         <Text
@@ -35,10 +27,7 @@ const ContentOneTimePayment = () => {
         >
           <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
           <Space />
-          <FormattedMessage
-            id='landing_modal_form_feeling_of_time.forty_thousand'
-            defaultMessage='40 000 ₽'
-          />
+          {modalForm?.finalPriceForOneTimePayment}
         </Text>
       </Row>
       <Layout flexBasis={[35, 30, 40]} flexShrink={0} flexGrow={3} />

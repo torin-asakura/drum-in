@@ -1,34 +1,25 @@
-import React            from 'react'
-import { useEffect }    from 'react'
-import { useState }     from 'react'
+import React        from 'react'
+import { useState } from 'react'
 
-import { Faq as FFaq }  from '@shared/data'
-import { Box }          from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { useMockedFaq } from '@shared/data'
+import { Box }      from '@ui/layout'
+import { Layout }   from '@ui/layout'
 
-import { Item }         from './item'
+import { Item }     from './item'
+import { useFaq }   from '../data'
 
 const ListDesktop = () => {
   const [active, setActive] = useState<boolean>(false)
-
-  const { faq: faqData } = useMockedFaq()
-  const [faq, setFaq] = useState<FFaq[]>([])
-
-  useEffect(() => {
-    setFaq(faqData)
-    // eslint-disable-next-line
-  }, [])
+  const faqArray = useFaq()
 
   return (
     <Box flexWrap='wrap' display={['none', 'none', 'flex']}>
-      {faq.map(({ question, answer, positionVertical }, index) => (
+      {faqArray.map(({ title, faq }, index) => (
         <>
           <Box flexDirection='column'>
             <Item
-              question={question}
-              answer={answer}
-              positionVertical={positionVertical}
+              question={title}
+              answer={faq.answerForFaq}
+              positionVertical={faq.positionForFaq ? 'top-start' : 'bottom-start'}
               active={active}
               setActive={setActive}
             />

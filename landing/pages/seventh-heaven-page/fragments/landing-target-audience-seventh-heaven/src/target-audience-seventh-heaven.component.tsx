@@ -1,17 +1,18 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                 from 'react'
+import { useIntl }           from 'react-intl'
 
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Text }              from '@ui/text'
 
-import { ItemCard }         from './item'
+import { ItemCard }          from './item'
+import { useTargetAudience } from './data'
 
 const TargetAudienceSeventhHeavenBlock = () => {
   const { formatMessage } = useIntl()
+  const targetAudience = useTargetAudience()
 
   return (
     <Row justifyContent='center'>
@@ -28,10 +29,7 @@ const TargetAudienceSeventhHeavenBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_target_audience.this_course_is_for_you_if_you'
-                defaultMessage='Этот курс для вас, если вы'
-              />
+              {targetAudience?.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
@@ -45,10 +43,7 @@ const TargetAudienceSeventhHeavenBlock = () => {
                 id: 'landing_target_audience.first',
                 defaultMessage: '01',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience_seventh_heaven.already_managed_to_pass',
-                defaultMessage: 'Уже успели пройти предыдущие два уровня',
-              })}
+              text={targetAudience?.targetAudience?.firstCharacteristic}
               positionHorizontal={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               positionVertical={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               zIndex={3}
@@ -58,10 +53,7 @@ const TargetAudienceSeventhHeavenBlock = () => {
                 id: 'landing_target_audience.second',
                 defaultMessage: '02',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience_seventh_heaven.do_you_want_to_master_the_rhythm',
-                defaultMessage: 'Хотите владеть ритмом на профессиональном уровне',
-              })}
+              text={targetAudience?.targetAudience?.secondCharacteristic}
               positionHorizontal={{ _: 45, tablet: 100, laptop: 0, wide: 313 }}
               positionVertical={{ _: 100, tablet: 175, laptop: 309, wide: 196 }}
               zIndex={2}
@@ -71,10 +63,7 @@ const TargetAudienceSeventhHeavenBlock = () => {
                 id: 'landing_target_audience.third',
                 defaultMessage: '03',
               })}
-              text={formatMessage({
-                id: 'landing_target_audience_seventh_heaven.do_you_want_to_learn_new',
-                defaultMessage: 'Хотите узнать новые ритмические паттерны',
-              })}
+              text={targetAudience?.targetAudience?.thirdCharacteristic}
               positionHorizontal={{ _: 89, tablet: 225, laptop: 0, wide: 626 }}
               positionVertical={{ _: 200, tablet: 350, laptop: 618, wide: 400 }}
               zIndex={1}

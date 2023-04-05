@@ -1,59 +1,54 @@
-import React                                 from 'react'
-import { Children }                          from 'react'
-import { useMemo }                           from 'react'
-import { useEffect }                         from 'react'
-import { useState }                          from 'react'
+import React               from 'react'
+import { Children }        from 'react'
+import { useMemo }         from 'react'
 
-import { StudentsSlider as SStudentsSlider } from '@shared/data'
-import { Column }                            from '@ui/layout'
-import { Layout }                            from '@ui/layout'
-import { Row }                               from '@ui/layout'
-import { Slider }                            from '@ui/slider'
-import { SwiperSlide }                       from '@ui/slider'
-import { useMockedStudentsSlider }           from '@shared/data'
+import { Condition }       from '@ui/condition'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Slider }          from '@ui/slider'
+import { SwiperSlide }     from '@ui/slider'
 
-import { BackgroundBlock }                   from './background'
-import { CardsSwiper }                       from './cards-swiper'
-import { Item }                              from './item'
-import { getUi }                             from '../helpers'
+import { BackgroundBlock } from './background'
+import { CardsSwiper }     from './cards-swiper'
+import { Item }            from './item'
+import { useStudents }     from '../data'
+import { getUi }           from '../helpers'
 
 const CardsStudent = () => {
-  const { studentsSlider: studentsSliderData } = useMockedStudentsSlider()
-  const [studentsSlider, setStudentsSlider] = useState<SStudentsSlider[]>(studentsSliderData)
-
-  useEffect(() => {
-    setStudentsSlider(studentsSliderData)
-    // eslint-disable-next-line
-  }, [])
+  const students = useStudents()?.students?.cardsStudents
 
   const studentsSliderChildren = useMemo(
     () =>
-      studentsSlider.map(({ fullName, age, profession, description, itemId }) => (
+      students?.map(({ name, age, specialization, firstIcon, secondIcon, description }, index) => (
         <Item
-          fullName={fullName}
+          fullName={name}
           age={age}
-          profession={profession}
+          profession={specialization}
           description={description}
-          itemId={itemId}
-          verticalPositionFirstIcon={getUi(itemId).verticalPositionFirstIcon}
-          horizontalPositionFirstIcon={getUi(itemId).horizontalPositionFirstIcon}
-          verticalPositionSecondIcon={getUi(itemId).verticalPositionSecondIcon}
-          horizontalPositionSecondIcon={getUi(itemId).horizontalPositionSecondIcon}
-          rotateCard={getUi(itemId).rotateCard}
+          urlFirstIcon={firstIcon.sourceUrl}
+          urlSecondIcon={secondIcon.sourceUrl}
+          verticalPositionFirstIcon={getUi(index).verticalPositionFirstIcon}
+          horizontalPositionFirstIcon={getUi(index).horizontalPositionFirstIcon}
+          verticalPositionSecondIcon={getUi(index).verticalPositionSecondIcon}
+          horizontalPositionSecondIcon={getUi(index).horizontalPositionSecondIcon}
+          rotateCard={getUi(index).rotateCard}
         />
       )),
-    [studentsSlider]
+    [students]
   )
 
   return (
     <>
       <Column display={['none', 'none', 'flex']}>
         <Row>
-          <Slider clName='students-slider-desktop' spaceBetween={40} slidesPerView='auto'>
-            {Children.map(studentsSliderChildren, (child) => (
-              <SwiperSlide>{child}</SwiperSlide>
-            ))}
-          </Slider>
+          <Condition match={studentsSliderChildren !== [] && studentsSliderChildren !== undefined}>
+            <Slider clName='students-slider-desktop' spaceBetween={40} slidesPerView='auto'>
+              {Children.map(studentsSliderChildren, (child) => (
+                <SwiperSlide>{child}</SwiperSlide>
+              ))}
+            </Slider>
+          </Condition>
         </Row>
         <Layout flexBasis={[64, 70, 42]} />
         <BackgroundBlock />

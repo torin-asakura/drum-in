@@ -10,7 +10,11 @@ import { Text }                from '@ui/text'
 
 import { SpecificationsProps } from './specifications.interfaces'
 
-const Specifications: FC<SpecificationsProps> = ({ quantityMonths, quantityVideoLessons }) => (
+const Specifications: FC<SpecificationsProps> = ({
+  quantityMonths,
+  quantityVideoLessons,
+  wordMonth,
+}) => (
   <Box display={['flex', 'flex', 'none']}>
     <Column>
       <Box>
@@ -39,7 +43,7 @@ const Specifications: FC<SpecificationsProps> = ({ quantityMonths, quantityVideo
           <Space />
           {quantityMonths}
           <Space />
-          <FormattedMessage id='landing_price.months' defaultMessage='месяцев' />
+          {wordMonth}
         </Text>
       </Box>
     </Column>

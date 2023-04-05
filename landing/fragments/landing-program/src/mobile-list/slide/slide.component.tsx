@@ -52,7 +52,7 @@ const Slide: FC<SlideProps> = ({
               <Square
                 firstLine={quantityVideoLessons}
                 secondLine={formatMessage({
-                  id: 'landing_choose_course.video_lessons',
+                  id: 'landing_program.video_lessons',
                   defaultMessage: 'видео-уроков',
                 })}
                 rotate={squareRotate}

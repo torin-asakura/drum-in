@@ -1,35 +1,27 @@
-import React                         from 'react'
-import { FC }                        from 'react'
-import { FormattedMessage }          from 'react-intl'
-import { useEffect }                 from 'react'
-import { useState }                  from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { useState }           from 'react'
 
-import { Consultation }              from '@landing/consultation'
-import { MobileConsultation }        from '@landing/consultation'
-import { Navigation as NNavigation } from '@shared/data'
-import { Button }                    from '@ui/button'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { Box }                       from '@ui/layout'
-import { NextLink }                  from '@ui/link'
-import { Text }                      from '@ui/text'
-import { useMockedNavigation }       from '@shared/data'
+import { Consultation }       from '@landing/consultation'
+import { MobileConsultation } from '@landing/consultation'
+import { Button }             from '@ui/button'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Box }                from '@ui/layout'
+import { NextLink }           from '@ui/link'
+import { Text }               from '@ui/text'
 
-import { Element }                   from './element'
-import { ElementsProps }             from './elements.interfaces'
-import { getUi }                     from '../helpers'
+import { Element }            from './element'
+import { ElementsProps }      from './elements.interfaces'
+import { useNavigation }      from '../data'
+import { getUi }              from '../helpers'
 
 const Elements: FC<ElementsProps> = ({ stateHover }) => {
-  const { navigation: navigationData } = useMockedNavigation()
-  const [navigation, setNavigation] = useState<NNavigation[]>([])
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-
-  useEffect(() => {
-    setNavigation(navigationData)
-    // eslint-disable-next-line
-  }, [])
+  const navigation = useNavigation()?.menuCourses?.nodes
 
   return (
     <Row>
@@ -46,38 +38,28 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
           </Text>
         </Box>
         <Layout display={['flex', 'flex', 'none']} flexBasis={[20, 24, 0]} />
-        {navigation.map(({
-          title,
-          level,
-          quantityVideoLessons,
-          circleFirstLine,
-          circleSecondLine,
-          quantityMonths,
-          path,
-          textMonths,
-          itemId,
-        }) => (
+        {navigation?.map(({ title, id, menuCourse }) => (
           <>
             <Element
               stateHover={stateHover}
               title={title}
-              level={level}
-              levelBackground={getUi(itemId).levelBackground}
-              squareRotate={getUi(itemId).squareRotate}
-              squarePositionX={getUi(itemId).squarePositionX}
-              squarePositionY={getUi(itemId).squarePositionY}
-              quantityVideoLessons={quantityVideoLessons}
-              rectangleRotate={getUi(itemId).rectangleRotate}
-              rectanglePositionX={getUi(itemId).rectanglePositionX}
-              rectanglePositionY={getUi(itemId).rectanglePositionY}
-              quantityMonths={quantityMonths}
-              textMonths={textMonths}
-              rectangleColor={getUi(itemId).rectangleColor}
-              circlePositionX={getUi(itemId).circlePositionX}
-              circlePositionY={getUi(itemId).circlePositionY}
-              circleFirstLine={circleFirstLine}
-              circleSecondLine={circleSecondLine}
-              path={path}
+              level={menuCourse.level}
+              levelBackground={getUi(id).levelBackground}
+              squareRotate={getUi(id).squareRotate}
+              squarePositionX={getUi(id).squarePositionX}
+              squarePositionY={getUi(id).squarePositionY}
+              quantityVideoLessons={menuCourse.quantityVideoLessons}
+              rectangleRotate={getUi(id).rectangleRotate}
+              rectanglePositionX={getUi(id).rectanglePositionX}
+              rectanglePositionY={getUi(id).rectanglePositionY}
+              quantityMonths={menuCourse.quantityMonths}
+              textMonths={menuCourse.textMonths}
+              rectangleColor={getUi(id).rectangleColor}
+              circlePositionX={getUi(id).circlePositionX}
+              circlePositionY={getUi(id).circlePositionY}
+              circleFirstLine={menuCourse.circleFirstLine}
+              circleSecondLine={menuCourse.circleSecondLine}
+              path={menuCourse.link}
             />
             <Layout flexBasis={16} />
           </>

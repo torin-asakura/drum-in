@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -9,24 +8,16 @@ import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
 import { SelectedCourse }   from '../selected-course'
+import { useModalForm }     from '../../data'
 
 const ContentInstallmentPlan = () => {
-  const { formatMessage } = useIntl()
-  const titlesArray = formatMessage({
-    id: 'landing_modal_form_opening_the_rhythm.feeling_of_time',
-    defaultMessage: '“Ощущение времени”;“Пятое измерение”;“Седьмое небо”',
-  }).split(';')
-  const descriptionsArray = formatMessage({
-    id: 'landing_modal_form_opening_the_rhythm.course_for_experienced_musicians',
-    defaultMessage:
-      'Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной;Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной;Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной',
-  }).split(';')
+  const modalForm = useModalForm()
 
   return (
     <>
-      {titlesArray.map((currentValue, index) => (
+      {modalForm?.courses?.map(({ description, name }) => (
         <>
-          <SelectedCourse title={currentValue} description={descriptionsArray[index]} />
+          <SelectedCourse title={name} description={description} />
           <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
         </>
       ))}
@@ -53,10 +44,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_form_opening_the_rhythm.eight_thousand_seven_hundred'
-                defaultMessage='8 700 ₽/мес.'
-              />
+              {modalForm?.monthlyPayment}
             </Text>
           </Box>
         </Column>
@@ -81,10 +69,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_form_opening_the_rhythm.fifteen_months'
-                defaultMessage='15 месяцев'
-              />
+              {modalForm?.installmentDuration}
             </Text>
           </Box>
         </Column>
@@ -109,10 +94,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_form_opening_the_rhythm.one_hundred_seventeen_thousand'
-                defaultMessage='117 400 ₽'
-              />
+              {modalForm?.finalPriceForInstallment}
             </Text>
           </Box>
         </Column>

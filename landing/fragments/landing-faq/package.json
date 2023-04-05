@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@shared/data": "workspace:0.0.1",
     "@ui/accordeon": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
@@ -13,14 +12,18 @@
     "framer-motion": "^7.6.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@emotion/styled": "^11.9.3",
+    "@globals/data": "workspace:0.0.1",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
+    "@globals/data": "*",
     "react": "*",
     "react-intl": "*"
   }

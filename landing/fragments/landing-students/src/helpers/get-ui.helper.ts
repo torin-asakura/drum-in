@@ -1,5 +1,5 @@
-const getUi = (itemId) => {
-  if (itemId === 'saxophonist')
+const getUi = (index) => {
+  if (index === 0)
     return {
       verticalPositionFirstIcon: -70,
       horizontalPositionFirstIcon: 40,
@@ -7,7 +7,7 @@ const getUi = (itemId) => {
       horizontalPositionSecondIcon: 220,
       rotateCard: -4,
     }
-  if (itemId === 'drummer')
+  if (index === 1)
     return {
       verticalPositionFirstIcon: -70,
       horizontalPositionFirstIcon: 40,
@@ -15,7 +15,7 @@ const getUi = (itemId) => {
       horizontalPositionSecondIcon: 220,
       rotateCard: -4,
     }
-  if (itemId === 'violinist')
+  if (index === 2)
     return {
       verticalPositionFirstIcon: -90,
       horizontalPositionFirstIcon: 60,
@@ -23,7 +23,7 @@ const getUi = (itemId) => {
       horizontalPositionSecondIcon: 265,
       rotateCard: 4,
     }
-  if (itemId === 'vocalist')
+  if (index === 3)
     return {
       verticalPositionFirstIcon: -85,
       horizontalPositionFirstIcon: 80,

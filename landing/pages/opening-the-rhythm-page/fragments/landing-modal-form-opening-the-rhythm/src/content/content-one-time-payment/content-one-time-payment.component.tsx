@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -8,32 +7,16 @@ import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 import { SelectedCourse }   from '../selected-course'
+import { useModalForm }     from '../../data'
 
 const ContentOneTimePayment = () => {
-  const { formatMessage } = useIntl()
-  const titlesArray = formatMessage({
-    id: 'landing_modal_form_opening_the_rhythm.feeling_of_time',
-    defaultMessage: '“Ощущение времени”;“Пятое измерение”;“Седьмое небо”',
-  }).split(';')
-  const descriptionsArray = formatMessage({
-    id: 'landing_modal_form_opening_the_rhythm.course_for_experienced_musicians',
-    defaultMessage:
-      'Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной;Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной;Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной',
-  }).split(';')
-  const pricesArray = formatMessage({
-    id: 'landing_modal_form_opening_the_rhythm.fourty_thousand',
-    defaultMessage: '40 000 ₽;40 000 ₽;40 000 ₽',
-  }).split(';')
+  const modalForm = useModalForm()
 
   return (
     <>
-      {titlesArray.map((currentValue, index) => (
+      {modalForm?.courses?.map(({ description, name, price }) => (
         <>
-          <SelectedCourse
-            title={currentValue}
-            description={descriptionsArray[index]}
-            price={pricesArray[index]}
-          />
+          <SelectedCourse title={name} description={description} price={price} />
           <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
         </>
       ))}
@@ -47,10 +30,7 @@ const ContentOneTimePayment = () => {
         >
           <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
           <Space />
-          <FormattedMessage
-            id='landing_modal_form_opening_the_rhythm.eighty_thousand'
-            defaultMessage='80 000 ₽'
-          />
+          {modalForm?.finalPriceForOneTimePayment}
         </Text>
       </Row>
       <Layout flexBasis={[32, 50, 67]} flexShrink={0} />

@@ -32,7 +32,7 @@ const Container = styled.div(({ type }: any) => ({
 }))
 
 export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
-  { size, value, type, disabled, error = false, onChange, onChangeNative, placeholder, ...props },
+  { size, value, type, disabled, errorText = '', onChange, onChangeNative, placeholder, ...props },
   ref
 ) => {
   const changeValue = useChangeValue(disabled, onChange, onChangeNative)
@@ -57,7 +57,12 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
       }}
       {...hoverProps}
     >
-      <InputElement {...props} size={size} error={error} rounding={focus || hover ? 20 : 12}>
+      <InputElement
+        {...props}
+        size={size}
+        error={errorText !== ''}
+        rounding={focus || hover ? 20 : 12}
+      >
         <RawInput
           ref={ref}
           type={type}

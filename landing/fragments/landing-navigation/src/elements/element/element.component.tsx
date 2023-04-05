@@ -101,8 +101,7 @@ const Element: FC<ElementProps> = ({
                 fontSize='micro'
                 color='text.smokyWhite'
               >
-                {' '}
-                {level}{' '}
+                {level}
               </Text>
             </Background>
             <Layout flexBasis={[8, 10, 12]} />

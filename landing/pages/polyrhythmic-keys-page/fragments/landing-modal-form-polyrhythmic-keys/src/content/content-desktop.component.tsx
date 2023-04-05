@@ -1,7 +1,6 @@
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
 import { Form }             from '@ui/form'
@@ -14,9 +13,10 @@ import { Text }             from '@ui/text'
 
 import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
+import { useModalForm }     from '../data'
 
 const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
-  const { formatMessage } = useIntl()
+  const modalForm = useModalForm()
 
   return (
     <>
@@ -34,10 +34,7 @@ const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
             lineHeight='default'
             color='text.smokyWhite'
           >
-            <FormattedMessage
-              id='landing_modal_form_polyrhythmic_keys.buy_a_course'
-              defaultMessage='Купить курс “Ключи полиритмии”'
-            />
+            {modalForm?.title}
           </Text>
         </Box>
         <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
@@ -51,17 +48,9 @@ const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
         </Box>
       </Box>
       <Layout flexBasis={31} flexShrink={0} />
-      <SelectedCourse
-        title={formatMessage({
-          id: 'landing_modal_form_polyrhythmic_keys.polyrhythmic_keys',
-          defaultMessage: '“Ключи полиритмии”',
-        })}
-        description={formatMessage({
-          id: 'landing_modal_form_polyrhythmic_keys.course_for_experienced_musician',
-          defaultMessage:
-            'Курс для опытных музыкантов, которые хотят сделать свою музыку более интересной',
-        })}
-      />
+      {modalForm?.courses?.map(({ name, description }) => (
+        <SelectedCourse title={name} description={description} />
+      ))}
       <Layout flexBasis={24} flexShrink={0} />
       <Row justifyContent='end'>
         <Text
@@ -72,10 +61,7 @@ const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
         >
           <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
           <Space />
-          <FormattedMessage
-            id='landing_modal_form_polyrhythmic_keys.eight_thousand_seven_hundred'
-            defaultMessage='8 700 ₽'
-          />
+          {modalForm?.finalPriceForOneTimePayment}
         </Text>
       </Row>
       <Layout flexBasis={50} flexShrink={0} flexGrow={2} />

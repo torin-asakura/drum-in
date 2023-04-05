@@ -42,7 +42,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
           <AnimationBox alignItems='center'>
             <Repeater quantity={50}>
               {() =>
-                firstLine.split(';').map((currentValue) => (
+                firstLine?.split(';').map((currentValue) => (
                   <>
                     <Box>
                       <Text
@@ -67,7 +67,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
           <AnimationBox alignItems='center'>
             <Repeater quantity={50}>
               {() =>
-                secondLine.split(';').map((currentValue) => (
+                secondLine?.split(';').map((currentValue) => (
                   <>
                     <Box>
                       <Text
@@ -92,7 +92,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
           <AnimationBox alignItems='center'>
             <Repeater quantity={50}>
               {() =>
-                thirdLine.split(';').map((currentValue) => (
+                thirdLine?.split(';').map((currentValue) => (
                   <>
                     <Box>
                       <Text
