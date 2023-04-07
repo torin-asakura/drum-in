@@ -1,6 +1,6 @@
 import React         from 'react'
 
-import { Accordeon } from '@ui/accordeon'
+import { Accordion } from '@ui/accordion'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 
@@ -13,7 +13,7 @@ const ListMobile = () => {
     <Column display={['flex', 'flex', 'none']}>
       {faqArray.map(({ title, faq }) => (
         <>
-          <Accordeon title={title} content={faq.answer} />
+          <Accordion title={title} content={faq.answerForFaq} />
           <Layout flexBasis={[16, 21, 0]} />
         </>
       ))}

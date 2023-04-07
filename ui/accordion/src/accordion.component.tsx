@@ -12,11 +12,11 @@ import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
 
-import { AccordeonProps }   from './accordeon.interface'
+import { AccordionProps }   from './accordion.interface'
 import { ContentContainer } from './content-container'
 import { TriggerContainer } from './trigger-container'
 
-const Accordeon: FC<AccordeonProps> = ({ title, content }) => {
+const Accordion: FC<AccordionProps> = ({ title, content }) => {
   const [active, setActive] = useState<boolean>(false)
   const [visible, setVisible] = useState<boolean>(false)
   const controls = useAnimation()
@@ -84,4 +84,4 @@ const Accordeon: FC<AccordeonProps> = ({ title, content }) => {
   )
 }
 
-export { Accordeon }
+export { Accordion }

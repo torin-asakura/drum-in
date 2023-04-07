@@ -1,5 +1,5 @@
 {
-  "name": "@ui/accordeon",
+  "name": "@ui/accordion",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {

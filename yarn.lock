@@ -2183,7 +2183,7 @@ __metadata:
     "@emotion/styled": "npm:^11.9.3"
     "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
-    "@ui/accordeon": "workspace:0.0.1"
+    "@ui/accordion": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -4191,9 +4191,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/accordeon@workspace:0.0.1, @ui/accordeon@workspace:ui/accordeon":
+"@ui/accordion@workspace:0.0.1, @ui/accordion@workspace:ui/accordion":
   version: 0.0.0-use.local
-  resolution: "@ui/accordeon@workspace:ui/accordeon"
+  resolution: "@ui/accordion@workspace:ui/accordion"
   dependencies:
     "@emotion/css": "npm:^11.9.0"
     "@emotion/react": "npm:^11.9.3"
