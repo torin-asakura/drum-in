@@ -2,7 +2,7 @@ import React                       from 'react'
 import { FC }                      from 'react'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
-import { FormContent }              from './form-content'
+import { FormContent }             from './form-content'
 import { FormProps }               from './form.interfaces'
 
 const doNothing = () => {
@@ -17,9 +17,9 @@ const Form: FC<FormProps> = ({
   onSuccess = doNothing,
   onFailure = doNothing,
 }) => (
-    <GoogleReCaptchaProvider reCaptchaKey={sitekey}>
-      <FormContent arrow={arrow} form={form} onSuccess={onSuccess} onFailure={onFailure} />
-    </GoogleReCaptchaProvider>
-  )
+  <GoogleReCaptchaProvider reCaptchaKey={sitekey}>
+    <FormContent arrow={arrow} form={form} onSuccess={onSuccess} onFailure={onFailure} />
+  </GoogleReCaptchaProvider>
+)
 
 export { Form }

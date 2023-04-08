@@ -3,37 +3,43 @@ import React                           from 'react'
 import { AfterTheCourseBlock }         from '@landing/after-the-course-fragment'
 import { BannerOpeningTheRhythmBlock } from '@landing/banner-opening-the-rhythm-fragment'
 import { SkillsBlock }                 from '@landing/skills-fragment'
-import { Background }                  from '@ui/background'
+import { Box }                         from '@ui/layout'
 
-const HeroOpeningTheRhythmBlock = () => (
-  <>
-    <Background
-      display={['none', 'flex', 'flex']}
-      flexDirection='column'
-      width='100%'
-      gradient='transparentPurpleBlueImageGradient'
-      backgroundSize='100% 100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='center bottom'
-    >
-      <BannerOpeningTheRhythmBlock />
-      <AfterTheCourseBlock />
-      <SkillsBlock />
-    </Background>
-    <Background
-      display={['flex', 'none', 'none']}
-      flexDirection='column'
-      width='100%'
-      gradient='purpleBlueSmallImageGradient'
-      backgroundSize='100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='right center'
-    >
-      <BannerOpeningTheRhythmBlock />
-      <AfterTheCourseBlock />
-      <SkillsBlock />
-    </Background>
-  </>
-)
+import { useHero }                     from './data'
+
+const HeroOpeningTheRhythmBlock = () => {
+  const hero = useHero()
+
+  return (
+    <>
+      <Box
+        display={['none', 'flex', 'flex']}
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundSize='100% 100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='center bottom'
+      >
+        <BannerOpeningTheRhythmBlock />
+        <AfterTheCourseBlock />
+        <SkillsBlock />
+      </Box>
+      <Box
+        display={['flex', 'none', 'none']}
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundSize='100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='right center'
+      >
+        <BannerOpeningTheRhythmBlock />
+        <AfterTheCourseBlock />
+        <SkillsBlock />
+      </Box>
+    </>
+  )
+}
 
 export { HeroOpeningTheRhythmBlock }

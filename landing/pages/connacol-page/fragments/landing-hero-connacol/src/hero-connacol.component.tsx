@@ -3,37 +3,43 @@ import React                    from 'react'
 import { AdvantagesBlock }      from '@landing/advantages-fragment'
 import { BannerСonnacolBlock }  from '@landing/banner-connacol-fragment'
 import { ProgramConnacolBlock } from '@landing/program-connacol-fragment'
-import { Background }           from '@ui/background'
+import { Box }                  from '@ui/layout'
 
-const HeroConnacolBlock = () => (
-  <>
-    <Background
-      display={['none', 'flex', 'flex']}
-      flexDirection='column'
-      width='100%'
-      gradient='transparentPurpleBlueImageGradient'
-      backgroundSize='100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
-    >
-      <BannerСonnacolBlock />
-      <AdvantagesBlock />
-      <ProgramConnacolBlock />
-    </Background>
-    <Background
-      display={['flex', 'none', 'none']}
-      flexDirection='column'
-      width='100%'
-      gradient='purpleBlueSmallImageGradient'
-      backgroundSize='100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
-    >
-      <BannerСonnacolBlock />
-      <AdvantagesBlock />
-      <ProgramConnacolBlock />
-    </Background>
-  </>
-)
+import { useHero }              from './data'
+
+const HeroConnacolBlock = () => {
+  const hero = useHero()
+
+  return (
+    <>
+      <Box
+        display={['none', 'flex', 'flex']}
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundSize='100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='center top'
+      >
+        <BannerСonnacolBlock />
+        <AdvantagesBlock />
+        <ProgramConnacolBlock />
+      </Box>
+      <Box
+        display={['flex', 'none', 'none']}
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundSize='100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='center top'
+      >
+        <BannerСonnacolBlock />
+        <AdvantagesBlock />
+        <ProgramConnacolBlock />
+      </Box>
+    </>
+  )
+}
 
 export { HeroConnacolBlock }

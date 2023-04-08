@@ -13,14 +13,17 @@ import { LearningProcessBlock }     from '@landing/learning-process-fragment'
 import { StudentsBlock }            from '@landing/learning-students'
 import { PrivateLessonBlock }       from '@landing/private-lesson-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
-import { Background }               from '@ui/background'
 import { Box }                      from '@ui/layout'
 import { SpyScroll }                from '@ui/spy-scroll'
 import { SpyScrollProvider }        from '@ui/spy-scroll'
 import { useIntersectionObserver }  from '@ui/intersection-observer'
 import { useSpyScroll }             from '@ui/spy-scroll'
 
+import { useBackgrounds }           from './data'
+import { useSong }                  from './data'
+
 export const HomePage = () => {
+  const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -39,15 +42,27 @@ export const HomePage = () => {
   })
 
   const [playSong, setPlaySong] = useState<boolean>(false)
+  const urlSongData = useSong()?.songUrl?.mediaItemUrl
+  const songElement = useRef<HTMLAudioElement | undefined>()
 
-  const songElement = useRef<HTMLAudioElement | undefined>(
-    typeof Audio !== 'undefined' ? new Audio('/music/song-1.mp3') : undefined
-  )
+  useEffect(() => {
+    if (typeof window !== 'undefined' && urlSongData !== undefined) {
+      songElement.current = new Audio(urlSongData)
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        songElement.current?.pause()
+        songElement.current = undefined
+      }
+    }
+  }, [urlSongData])
+
   useEffect(() => {
     if (playSong) {
-      songElement.current?.play()
+      songElement?.current?.play()
     } else {
-      songElement.current?.pause()
+      songElement?.current?.pause()
     }
   }, [playSong])
 
@@ -74,9 +89,10 @@ export const HomePage = () => {
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero {...getObserverOptions('hero')} />
-            <Background
+            <Box
               width='100%'
-              gradient='purpleBlueCirclesImage'
+              flexWrap='wrap'
+              backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
               backgroundSize={['200%', '100% auto', '1800px']}
               backgroundRepeat='no-repeat'
               backgroundPosition={['center top', 'center center', 'center 75%']}
@@ -88,30 +104,30 @@ export const HomePage = () => {
               />
               <PrivateLessonBlock {...getObserverOptions('private-lesson')} />
               <LearningProcessBlock {...getObserverOptions('learning-process')} />
-            </Background>
+            </Box>
             <StudentsBlock {...getObserverOptions('students')} />
             <FaqBlock {...getObserverOptions('faq')} />
             <CtaBlock {...getObserverOptions('cta')} />
-            <Background
+            <Box
               display={['none', 'none', 'flex']}
               width='100%'
-              gradient='purpleBlueSemicircleImage'
+              backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
               backgroundSize='80% 100%'
               backgroundRepeat='no-repeat'
               backgroundPosition='left bottom'
             >
               <FooterBlock {...getObserverOptions('footer')} />
-            </Background>
-            <Background
+            </Box>
+            <Box
               display={['flex', 'flex', 'none']}
               width='100%'
-              gradient='purpleBlueTwoSemicirclesSmallImage'
+              backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
               backgroundSize='100% 80%'
               backgroundRepeat='no-repeat'
               backgroundPosition='center bottom'
             >
               <FooterBlock {...getObserverOptions('footer')} />
-            </Background>
+            </Box>
           </main>
         </SpyScrollProvider>
       </LocomotiveScrollProvider>

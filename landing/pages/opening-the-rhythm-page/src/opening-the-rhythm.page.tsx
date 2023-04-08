@@ -14,21 +14,37 @@ import { PriceOpeningTheRhythmBlock } from '@landing/price-opening-the-rhythm-fr
 import { ProgramBlock }               from '@landing/program-fragment'
 import { StartLearningBlock }         from '@landing/start-learning-fragment'
 import { TeacherBlock }               from '@landing/teacher-fragment'
-import { Background }                 from '@ui/background'
 import { Box }                        from '@ui/layout'
 
-export const OpeningTheRhythmPage = () => {
-  const containerRef = useRef(null)
-  const [playSong, setPlaySong] = useState<boolean>(false)
+import { useBackgrounds }             from './data'
+import { useSong }                    from './data'
 
-  const songElement = useRef<HTMLAudioElement | undefined>(
-    typeof Audio !== 'undefined' ? new Audio('/music/song-1.mp3') : undefined
-  )
+export const OpeningTheRhythmPage = () => {
+  const backgrounds = useBackgrounds()
+  const containerRef = useRef(null)
+
+  const [playSong, setPlaySong] = useState<boolean>(false)
+  const urlSongData = useSong()?.songUrl?.mediaItemUrl
+  const songElement = useRef<HTMLAudioElement | undefined>()
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && urlSongData !== undefined) {
+      songElement.current = new Audio(urlSongData)
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        songElement.current?.pause()
+        songElement.current = undefined
+      }
+    }
+  }, [urlSongData])
+
   useEffect(() => {
     if (playSong) {
-      songElement.current?.play()
+      songElement?.current?.play()
     } else {
-      songElement.current?.pause()
+      songElement?.current?.pause()
     }
   }, [playSong])
 
@@ -55,38 +71,38 @@ export const OpeningTheRhythmPage = () => {
           <HeroOpeningTheRhythmBlock />
           <ProgramBlock />
           <CourseProcessBlock />
-          <Background
+          <Box
             width='100%'
-            gradient='purpleBlueCirclesImage'
+            backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
-          </Background>
+          </Box>
           <PriceOpeningTheRhythmBlock />
           <FaqBlock />
           <CtaBlock />
-          <Background
+          <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            gradient='purpleBlueSemicircleImage'
+            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
             <FooterBlock />
-          </Background>
-          <Background
+          </Box>
+          <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            gradient='purpleBlueTwoSemicirclesSmallImage'
+            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
             <FooterBlock />
-          </Background>
+          </Box>
         </main>
         <StartLearningBlock />
       </LocomotiveScrollProvider>

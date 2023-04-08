@@ -10,6 +10,12 @@ const GET_PROGRAM = gql`
         numberVideoTutorials
         secondListOfTopics
         thirdListOfTopics
+        background {
+          sourceUrl
+        }
+        backgroundMobile {
+          sourceUrl
+        }
       }
     }
   }

@@ -15,20 +15,8 @@ export const GlobalStyles = () => {
       styles={css`
         @import url('http://db.onlinewebfonts.com/c/54e947fcd1a1db8af459016676e593e8?family=Druk+Wide+Cy+TT+Bold');
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-        @font-face {
-          font-family: 'SF Pro Display';
-          src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
-              url('/fonts/sf-pro-display-500.ttf') format('truetype');
-          font-weight: 500;
-          font-style: normal;
-        }
-        @font-face {  
-          font-family: 'SF Pro Display';
-          src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
-              url('/fonts/sf-pro-display-600.ttf') format('truetype');
-          font-weight: 600;
-          font-style: normal;
-        }
+        @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
 
       html,
       body,

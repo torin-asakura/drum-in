@@ -6,9 +6,10 @@
     "@landing/banner-feeling-of-time-fragment": "workspace:0.0.1",
     "@landing/program-feeling-of-time-fragment": "workspace:0.0.1",
     "@landing/target-audience-feeling-of-time-fragment": "workspace:0.0.1",
-    "@ui/background": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@types/react": "18.0.21"
   },
   "peerDependencies": {
