@@ -3,37 +3,43 @@ import React                                from 'react'
 import { BannerSeventhHeavenBlock }         from '@landing/banner-seventh-heaven-fragment'
 import { ProgramSeventhHeavenBlock }        from '@landing/program-seventh-heaven-fragment'
 import { TargetAudienceSeventhHeavenBlock } from '@landing/target-audience-seventh-heaven-fragment'
-import { Background }                       from '@ui/background'
+import { Box }                              from '@ui/layout'
 
-const HeroSeventhHeavenBlock = () => (
-  <>
-    <Background
-      display={['none', 'flex', 'flex']}
-      flexDirection='column'
-      width='100%'
-      gradient='transparentPinkBlueImageGradient'
-      backgroundSize='100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
-    >
-      <BannerSeventhHeavenBlock />
-      <TargetAudienceSeventhHeavenBlock />
-      <ProgramSeventhHeavenBlock />
-    </Background>
-    <Background
-      display={['flex', 'none', 'none']}
-      flexDirection='column'
-      width='100%'
-      gradient='pinkBlueSmallImageGradient'
-      backgroundSize='100%'
-      backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
-    >
-      <BannerSeventhHeavenBlock />
-      <TargetAudienceSeventhHeavenBlock />
-      <ProgramSeventhHeavenBlock />
-    </Background>
-  </>
-)
+import { useHero }                          from './data'
+
+const HeroSeventhHeavenBlock = () => {
+  const hero = useHero()
+
+  return (
+    <>
+      <Box
+        display={['none', 'flex', 'flex']}
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundSize='100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='center top'
+      >
+        <BannerSeventhHeavenBlock />
+        <TargetAudienceSeventhHeavenBlock />
+        <ProgramSeventhHeavenBlock />
+      </Box>
+      <Box
+        display={['flex', 'none', 'none']}
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundSize='100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='center top'
+      >
+        <BannerSeventhHeavenBlock />
+        <TargetAudienceSeventhHeavenBlock />
+        <ProgramSeventhHeavenBlock />
+      </Box>
+    </>
+  )
+}
 
 export { HeroSeventhHeavenBlock }

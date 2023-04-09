@@ -5,11 +5,13 @@ import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { ContactBlock }             from '@landing/contact-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
-import { Background }               from '@ui/background'
 import { Box }                      from '@ui/layout'
+
+import { useBackground }            from './data'
 
 export const ContactPage = () => {
   const containerRef = useRef(null)
+  const background = useBackground()
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
@@ -31,30 +33,30 @@ export const ContactPage = () => {
       >
         <HeaderBlock />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <Background
+          <Box
             width='100%'
             display={['none', 'none', 'flex']}
             flexWrap='wrap'
-            gradient='purpleBlueAngularGradient'
+            backgroundImage={`url(${background?.backgroundForHero?.sourceUrl})`}
             backgroundSize='100% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
             <ContactBlock />
             <FooterBlock buttonUp={false} />
-          </Background>
-          <Background
+          </Box>
+          <Box
             width='100%'
             display={['flex', 'flex', 'none']}
             flexWrap='wrap'
-            gradient='purpleBlueSmallImageGradient'
+            backgroundImage={`url(${background?.backgroundMobileForHero?.sourceUrl})`}
             backgroundSize={['100%', '100%', '0']}
             backgroundRepeat='no-repeat'
             backgroundPosition={['center top', 'center top', 'center']}
           >
             <ContactBlock />
             <FooterBlock buttonUp={false} />
-          </Background>
+          </Box>
         </main>
       </LocomotiveScrollProvider>
     </Box>

@@ -1,7 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { Background }       from '@ui/background'
 import { LightningIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -24,13 +23,13 @@ const ContentMobileCourse = () => {
       width={[335, 446, 0]}
       height={[1005, 1298, 0]}
     >
-      <Background
+      <Box
         display='flex'
         position='relative'
         backgroundPosition='left top'
         backgroundSize='100% 100%'
         backgroundRepeat='repeat-y'
-        gradient='mobileProgressLineWithBlackBackground'
+        backgroundImage={`url(${program?.backgroundMobile?.sourceUrl})`}
         flexDirection='column'
         zIndex={4}
       >
@@ -147,7 +146,7 @@ const ContentMobileCourse = () => {
           </Box>
         </Row>
         <Layout flexBasis={[77, 107, 0]} />
-      </Background>
+      </Box>
       <Box
         data-scroll
         data-scroll-sticky
