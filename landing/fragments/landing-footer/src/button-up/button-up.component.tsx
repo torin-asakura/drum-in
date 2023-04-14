@@ -17,13 +17,9 @@ const ButtonUp: FC<FooterProps> = ({ buttonUp = true }) => {
   return (
     <>
       <Condition match={buttonUp}>
-        <Box position='relative' display={['none', 'none', 'flex']}>
-          <Box>
-            <Button
-              size='massivePaddingGiantHeight'
-              variant='borderWhiteToWhiteBackground'
-              onClick={() => scroll.scrollTo('top')}
-            >
+        <Box position='relative' display={['none', 'none', 'flex']} alignItems='top'>
+          <Box onClick={() => scroll.scrollTo('top')}>
+            <Button size='massivePaddingGiantHeight' variant='borderWhiteToWhiteBackground'>
               <Text
                 textTransform='uppercase'
                 fontWeight='semiBold'
@@ -40,12 +36,8 @@ const ButtonUp: FC<FooterProps> = ({ buttonUp = true }) => {
         </Box>
       </Condition>
       <Box position='relative' alignSelf='end' display={['flex', 'flex', 'none']}>
-        <Box>
-          <Button
-            size='semiMediumPaddingHugeHeight'
-            variant='whiteBackground'
-            onClick={() => scroll.scrollTo('top')}
-          >
+        <Box onClick={() => scroll.scrollTo('top')}>
+          <Button size='semiMediumPaddingHugeHeight' variant='whiteBackground'>
             <Text
               textTransform='uppercase'
               fontWeight='semiBold'
