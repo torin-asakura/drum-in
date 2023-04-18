@@ -6,6 +6,7 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
 
@@ -50,14 +51,30 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 if (index === 3) {
                   return (
                     <>
-                      <LinkSocial text={title} path={menuCourse.link} />
+                      <NextLink path={menuCourse.link} target='_blank'>
+                        <Text
+                          fontFamily='secondary'
+                          fontWeight='bold'
+                          fontSize={['medium', 'regular', 'regular']}
+                        >
+                          {title}
+                        </Text>
+                      </NextLink>
                       <Layout flexBasis={[28, 30, 32]} />
                     </>
                   )
                 }
                 return (
                   <>
-                    <LinkSocial text={title} path={menuCourse.link} />
+                    <NextLink path={menuCourse.link} target='_blank'>
+                      <Text
+                        fontFamily='secondary'
+                        fontWeight='bold'
+                        fontSize={['medium', 'regular', 'regular']}
+                      >
+                        {title}
+                      </Text>
+                    </NextLink>
                     <Layout flexBasis={16} />
                   </>
                 )
