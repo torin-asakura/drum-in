@@ -1,7 +1,6 @@
 import { ApolloClient }  from '@apollo/client'
 import { InMemoryCache } from '@apollo/client'
 import { gql }           from '@apollo/client'
-import { withGtag }      from '@atls/next-document-with-gtag'
 import { withHelmet }    from '@atls/next-document-with-helmet'
 
 import Document          from 'next/document'
@@ -52,10 +51,6 @@ const withIcons = () => (TargetComponent) =>
     }
   }
 
-const withProviders = compose(
-  withIcons(),
-  withHelmet(),
-  withGtag(process.env.GA_TRACKING_ID || 'GTM-TPXQGZP')
-)
+const withProviders = compose(withIcons(), withHelmet())
 
 export default withProviders(Document)

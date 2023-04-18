@@ -2004,32 +2004,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@atls/next-document-with-gtag", [\
-      ["npm:0.0.4", {\
-        "packageLocation": "../../.yarn/berry/cache/@atls-next-document-with-gtag-npm-0.0.4-603d93f571-9.zip/node_modules/@atls/next-document-with-gtag/",\
-        "packageDependencies": [\
-          ["@atls/next-document-with-gtag", "npm:0.0.4"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:0.0.4", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-next-document-with-gtag-virtual-a77c6770eb/3/.yarn/berry/cache/@atls-next-document-with-gtag-npm-0.0.4-603d93f571-9.zip/node_modules/@atls/next-document-with-gtag/",\
-        "packageDependencies": [\
-          ["@atls/next-document-with-gtag", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:0.0.4"],\
-          ["@types/next", null],\
-          ["@types/react", "npm:17.0.47"],\
-          ["next", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:12.1.0"],\
-          ["react", "npm:18.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/next",\
-          "@types/react",\
-          "next",\
-          "react"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@atls/next-document-with-helmet", [\
       ["npm:0.2.67", {\
         "packageLocation": "../../.yarn/berry/cache/@atls-next-document-with-helmet-npm-0.2.67-d2afd422bc-9.zip/node_modules/@atls/next-document-with-helmet/",\
@@ -9529,7 +9503,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@landing/renderer-entrypoint", "workspace:landing/entrypoints/renderer"],\
           ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.10"],\
-          ["@atls/next-document-with-gtag", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:0.0.4"],\
           ["@atls/next-document-with-helmet", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:0.2.67"],\
           ["@emotion/react", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:11.10.5"],\
           ["@emotion/styled", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:11.10.5"],\

@@ -433,16 +433,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-document-with-gtag@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@atls/next-document-with-gtag@npm:0.0.4"
-  peerDependencies:
-    next: "*"
-    react: ^16.12.0
-  checksum: b1e54d14421a361b21f4759bbd3f202d3c0ed1d765ca3bd0a21cab02e248491fcfea5239a8bd3e31a5028d790d835c6ba0de959361c64b591c0254ab4b46880c
-  languageName: node
-  linkType: hard
-
 "@atls/next-document-with-helmet@npm:^0.2.64":
   version: 0.2.67
   resolution: "@atls/next-document-with-helmet@npm:0.2.67"
@@ -3176,7 +3166,6 @@ __metadata:
   resolution: "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@atls/next-document-with-gtag": "npm:^0.0.4"
     "@atls/next-document-with-helmet": "npm:^0.2.64"
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.6.0"
