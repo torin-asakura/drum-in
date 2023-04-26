@@ -35,6 +35,7 @@ const DesktopSliderBlock = () => {
           circlePositionY={getUi(id).circlePositionY}
           circleFirstLine={choseCourse.circleFirstLine}
           circleSecondLine={choseCourse.circleSecondLine}
+          link={choseCourse.link}
         />
       )),
     [choseCourseData]

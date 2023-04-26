@@ -17,4 +17,5 @@ export interface SlideProps {
   quantityMonths: string
   textMonths: string
   rectangleColor: string
+  link: string
 }
