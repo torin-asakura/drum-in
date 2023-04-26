@@ -15,6 +15,7 @@ const GET_CHOSE_COURSE = gql`
           quantityMonths
           quantityVideoLessons
           textMonths
+          link
         }
       }
     }

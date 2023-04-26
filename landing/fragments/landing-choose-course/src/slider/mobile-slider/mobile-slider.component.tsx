@@ -35,6 +35,7 @@ const MobileSliderBlock = () => {
           circlePositionY={getUi(id).circlePositionYMobile}
           circleFirstLine={choseCourse.circleFirstLine}
           circleSecondLine={choseCourse.circleSecondLine}
+          link={choseCourse.link}
         />
       )),
     [choseCourseData]

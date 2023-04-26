@@ -17,4 +17,5 @@ export interface SlideLevelProps {
   quantityMonths: string
   textMonths: string
   rectangleColor: string
+  link: string
 }

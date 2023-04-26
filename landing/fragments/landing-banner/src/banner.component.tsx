@@ -17,7 +17,7 @@ const BannerBlock = () => {
   const banner = useBanner()
 
   return (
-    <Row justifyContent='center'>
+    <Row justifyContent='center' height={['100%', '100%', '100vh']}>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} />
         <Column width='100%'>
@@ -64,7 +64,7 @@ const BannerBlock = () => {
               </>
             ))}
           </Box>
-          <Layout order={[6, 6, -1]} flexBasis={[48, 60, 320]} />
+          <Layout order={[6, 6, -1]} flexBasis={[48, 60, 320]} flexGrow={[0, 0, 1]} />
           <Row justifyContent='space-between' order={[5, 5, -1]}>
             <Box width={[271, 450, 720]}>
               <Text

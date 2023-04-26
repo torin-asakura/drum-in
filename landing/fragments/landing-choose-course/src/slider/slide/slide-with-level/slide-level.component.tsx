@@ -10,6 +10,7 @@ import { Row }             from '@ui/layout'
 import { Box }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Column }          from '@ui/layout'
+import { NextLink }        from '@ui/link'
 import { Text }            from '@ui/text'
 import { useHover }        from '@ui/utils'
 
@@ -34,6 +35,7 @@ const SlideLevel: FC<SlideLevelProps> = ({
   quantityVideoLessons,
   quantityMonths,
   textMonths,
+  link,
 }) => {
   const { formatMessage } = useIntl()
   const [colorBorder, colorBorderProps] = useHover()
@@ -126,25 +128,31 @@ const SlideLevel: FC<SlideLevelProps> = ({
                 border={colorBorder ? 'normalSmokyWhite' : 'normalBoldDark'}
                 {...colorBorderProps}
               >
-                <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
-                  <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
-                    {price}
-                  </Text>
-                </Button>
+                <NextLink path={link} width='100%'>
+                  <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
+                    <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
+                      {price}
+                    </Text>
+                  </Button>
+                </NextLink>
               </Box>
               <Row display={['none', 'flex', 'none']}>
-                <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
-                  <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
-                    {price}
-                  </Text>
-                </Button>
+                <NextLink path={link} width='100%'>
+                  <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
+                    <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
+                      {price}
+                    </Text>
+                  </Button>
+                </NextLink>
               </Row>
               <Row display={['flex', 'none', 'none']}>
-                <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
-                  <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
-                    {price}
-                  </Text>
-                </Button>
+                <NextLink path={link} width='100%'>
+                  <Button size='withoutPaddingMediumHeight' variant='purpleBackground' fill>
+                    <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>
+                      {price}
+                    </Text>
+                  </Button>
+                </NextLink>
               </Row>
               <Layout flexBasis={[20, 28, 36]} />
             </Column>
