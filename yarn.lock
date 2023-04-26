@@ -3024,6 +3024,51 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/privacy-policy-fragment@workspace:0.0.1, @landing/privacy-policy-fragment@workspace:landing/fragments/landing-privacy-policy":
+  version: 0.0.0-use.local
+  resolution: "@landing/privacy-policy-fragment@workspace:landing/fragments/landing-privacy-policy"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@emotion/react": "npm:^11.10.4"
+    "@emotion/styled": "npm:^11.9.3"
+    "@types/react": "npm:18.0.21"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: "npm:^6.1.2"
+    styled-system: "npm:^5.1.5"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/privacy-policy-page@workspace:0.0.1, @landing/privacy-policy-page@workspace:landing/pages/privacy-policy-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/privacy-policy-page@workspace:landing/pages/privacy-policy-page"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@emotion/react": "npm:^11.9.3"
+    "@emotion/styled": "npm:^11.9.3"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/header-fragment": "workspace:0.0.1"
+    "@landing/privacy-policy-fragment": "workspace:0.0.1"
+    "@types/react": "npm:18.0.21"
+    "@ui/layout": "workspace:0.0.1"
+    locomotive-scroll: "npm:^4.1.4"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@globals/data": "*"
+    next: ^12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/private-lesson-fragment@workspace:0.0.1, @landing/private-lesson-fragment@workspace:landing/fragments/landing-private-lesson":
   version: 0.0.0-use.local
   resolution: "@landing/private-lesson-fragment@workspace:landing/fragments/landing-private-lesson"
@@ -3177,6 +3222,7 @@ __metadata:
     "@landing/index-page": "workspace:0.0.1"
     "@landing/opening-the-rhythm-page": "workspace:0.0.1"
     "@landing/polyrhythmic-keys-page": "workspace:0.0.1"
+    "@landing/privacy-policy-page": "workspace:0.0.1"
     "@landing/seventh-heaven-page": "workspace:0.0.1"
     "@types/express": "npm:^4.17.13"
     "@types/node": "npm:^17.0.0"
