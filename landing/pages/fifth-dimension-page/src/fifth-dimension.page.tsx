@@ -1,26 +1,30 @@
-import React                        from 'react'
-import { useRef }                   from 'react'
-import { useEffect }                from 'react'
-import { useState }                 from 'react'
+import React                             from 'react'
+import { useRef }                        from 'react'
+import { useEffect }                     from 'react'
+import { useState }                      from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { CourseProcessBlock }       from '@landing/course-process-fragment'
-import { CtaBlock }                 from '@landing/cta-fragment'
-import { FaqBlock }                 from '@landing/faq'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { HeroFifthDimensionBlock }  from '@landing/hero-fifth-dimension-fragment'
-import { PriceFifthDimensionBlock } from '@landing/price-fifth-dimension-fragment'
-import { StartLearningBlock }       from '@landing/start-learning-fragment'
-import { TeacherBlock }             from '@landing/teacher-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider }      from '@forks/react-locomotive-scroll'
+import { CourseProcessBlock }            from '@landing/course-process-fragment'
+import { CtaBlock }                      from '@landing/cta-fragment'
+import { FaqBlock }                      from '@landing/faq'
+import { FooterBlock }                   from '@landing/footer-fragment'
+import { HeaderBlock }                   from '@landing/header-fragment'
+import { HeroFifthDimensionBlock }       from '@landing/hero-fifth-dimension-fragment'
+import { ModalFormFifthDimension }       from '@landing/modal-form-fifth-dimension'
+import { ModalMobileFormFifthDimension } from '@landing/modal-form-fifth-dimension'
+import { PriceFifthDimensionBlock }      from '@landing/price-fifth-dimension-fragment'
+import { StartLearningBlock }            from '@landing/start-learning-fragment'
+import { TeacherBlock }                  from '@landing/teacher-fragment'
+import { Box }                           from '@ui/layout'
 
-import { useBackgrounds }           from './data'
-import { useSong }                  from './data'
+import { useBackgrounds }                from './data'
+import { useSong }                       from './data'
 
 export const FifthDimensionPage = () => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const [playSong, setPlaySong] = useState<boolean>(false)
   const urlSongData = useSong()?.songUrl?.mediaItemUrl
@@ -102,7 +106,18 @@ export const FifthDimensionPage = () => {
             <FooterBlock />
           </Box>
         </main>
-        <StartLearningBlock />
+        <StartLearningBlock
+          onClick={() => setVisibleModal(true)}
+          onClickMobile={() => setVisibleModalMobile(true)}
+        />
+        <ModalFormFifthDimension
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+        />
+        <ModalMobileFormFifthDimension
+          activeRender={visibleModalMobile}
+          onClose={() => setVisibleModalMobile(false)}
+        />
       </LocomotiveScrollProvider>
     </Box>
   )

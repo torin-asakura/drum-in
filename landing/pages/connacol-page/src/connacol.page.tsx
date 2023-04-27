@@ -10,6 +10,8 @@ import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { HeroConnacolBlock }        from '@landing/hero-connacol-fragment'
+import { ModalFormConnacol }        from '@landing/modal-form-connacol'
+import { ModalMobileFormConnacol }  from '@landing/modal-form-connacol'
 import { PriceConnacolBlock }       from '@landing/price-connacol-fragment'
 import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
@@ -21,6 +23,8 @@ import { useSong }                  from './data'
 export const ConnacolPage = () => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const [playSong, setPlaySong] = useState<boolean>(false)
   const urlSongData = useSong()?.songUrl?.mediaItemUrl
@@ -102,7 +106,15 @@ export const ConnacolPage = () => {
             <FooterBlock />
           </Box>
         </main>
-        <StartLearningBlock />
+        <StartLearningBlock
+          onClick={() => setVisibleModal(true)}
+          onClickMobile={() => setVisibleModalMobile(true)}
+        />
+        <ModalFormConnacol activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+        <ModalMobileFormConnacol
+          activeRender={visibleModalMobile}
+          onClose={() => setVisibleModalMobile(false)}
+        />
       </LocomotiveScrollProvider>
     </Box>
   )

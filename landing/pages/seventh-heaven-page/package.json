@@ -10,6 +10,7 @@
     "@landing/footer-fragment": "workspace:0.0.1",
     "@landing/header-fragment": "workspace:0.0.1",
     "@landing/hero-seventh-heaven-fragment": "workspace:0.0.1",
+    "@landing/modal-form-seventh-heaven": "workspace:0.0.1",
     "@landing/price-seventh-heaven-fragment": "workspace:0.0.1",
     "@landing/start-learning-fragment": "workspace:0.0.1",
     "@landing/teacher-fragment": "workspace:0.0.1",
