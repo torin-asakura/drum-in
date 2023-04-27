@@ -1,27 +1,31 @@
-import React                          from 'react'
-import { useRef }                     from 'react'
-import { useEffect }                  from 'react'
-import { useState }                   from 'react'
+import React                               from 'react'
+import { useRef }                          from 'react'
+import { useEffect }                       from 'react'
+import { useState }                        from 'react'
 
-import { LocomotiveScrollProvider }   from '@forks/react-locomotive-scroll'
-import { CourseProcessBlock }         from '@landing/course-process-fragment'
-import { CtaBlock }                   from '@landing/cta-fragment'
-import { FaqBlock }                   from '@landing/faq'
-import { FooterBlock }                from '@landing/footer-fragment'
-import { HeaderBlock }                from '@landing/header-fragment'
-import { HeroOpeningTheRhythmBlock }  from '@landing/hero-opening-the-rhythm-fragment'
-import { PriceOpeningTheRhythmBlock } from '@landing/price-opening-the-rhythm-fragment'
-import { ProgramBlock }               from '@landing/program-fragment'
-import { StartLearningBlock }         from '@landing/start-learning-fragment'
-import { TeacherBlock }               from '@landing/teacher-fragment'
-import { Box }                        from '@ui/layout'
+import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
+import { CourseProcessBlock }              from '@landing/course-process-fragment'
+import { CtaBlock }                        from '@landing/cta-fragment'
+import { FaqBlock }                        from '@landing/faq'
+import { FooterBlock }                     from '@landing/footer-fragment'
+import { HeaderBlock }                     from '@landing/header-fragment'
+import { HeroOpeningTheRhythmBlock }       from '@landing/hero-opening-the-rhythm-fragment'
+import { ModalFormOpeningTheRhythm }       from '@landing/modal-form-opening-the-rhythm'
+import { ModalMobileFormOpeningTheRhythm } from '@landing/modal-form-opening-the-rhythm'
+import { PriceOpeningTheRhythmBlock }      from '@landing/price-opening-the-rhythm-fragment'
+import { ProgramBlock }                    from '@landing/program-fragment'
+import { StartLearningBlock }              from '@landing/start-learning-fragment'
+import { TeacherBlock }                    from '@landing/teacher-fragment'
+import { Box }                             from '@ui/layout'
 
-import { useBackgrounds }             from './data'
-import { useSong }                    from './data'
+import { useBackgrounds }                  from './data'
+import { useSong }                         from './data'
 
 export const OpeningTheRhythmPage = () => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const [playSong, setPlaySong] = useState<boolean>(false)
   const urlSongData = useSong()?.songUrl?.mediaItemUrl
@@ -104,7 +108,18 @@ export const OpeningTheRhythmPage = () => {
             <FooterBlock />
           </Box>
         </main>
-        <StartLearningBlock />
+        <StartLearningBlock
+          onClick={() => setVisibleModal(true)}
+          onClickMobile={() => setVisibleModalMobile(true)}
+        />
+        <ModalFormOpeningTheRhythm
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+        />
+        <ModalMobileFormOpeningTheRhythm
+          activeRender={visibleModalMobile}
+          onClose={() => setVisibleModalMobile(false)}
+        />
       </LocomotiveScrollProvider>
     </Box>
   )

@@ -43,7 +43,7 @@ const DesktopSliderBlock = () => {
 
   return (
     <Condition match={choseCourseData !== [] && choseCourseData !== undefined}>
-      <Slider clName='choose-courses-slider' spaceBetween={40} slidesPerView='auto'>
+      <Slider clName='choose-courses-slider' spaceBetween={40} slidesPerView='auto' mousewheel mousewheelInvert={false}>
         {Children.map(coursesChildren, (child) => (
           <SwiperSlide>{child}</SwiperSlide>
         ))}
