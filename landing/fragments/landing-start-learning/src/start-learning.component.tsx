@@ -1,13 +1,16 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                  from 'react'
+import { FC }          from 'react'
+import { FormattedMessage }   from 'react-intl'
 
-import { Button }           from '@ui/button'
-import { Box }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Button }             from '@ui/button'
+import { Box }                from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Text }               from '@ui/text'
 
-const StartLearningBlock = () => (
+import { StartLearningProps } from './start-learning.interfaces'
+
+const StartLearningBlock: FC<StartLearningProps> = ({ onClick, onClickMobile }) => (
   <Box
     zIndex={10}
     position='fixed'
@@ -22,6 +25,7 @@ const StartLearningBlock = () => (
         <Button
           size='withoutPaddingSemiGiantHeight'
           variant='darkToPurpleBackgroundWithWhiteBorder'
+          onClick={onClick}
           fill
         >
           <Text
@@ -37,10 +41,31 @@ const StartLearningBlock = () => (
           </Text>
         </Button>
       </Row>
-      <Row display={['flex', 'flex', 'none']}>
+      <Row display={['none', 'flex', 'none']}>
         <Button
           size='withoutPaddingSemiRegularHeight'
           variant='darkToPurpleBackgroundWithWhiteBorder'
+          onClick={onClick}
+          fill
+        >
+          <Text
+            textTransform='uppercase'
+            fontWeight='semiBold'
+            fontSize='semiMedium'
+            lineHeight='default'
+          >
+            <FormattedMessage
+              id='landing_start_learning.start_learning'
+              defaultMessage='начать обучение'
+            />
+          </Text>
+        </Button>
+      </Row>
+      <Row display={['flex', 'none', 'none']}>
+        <Button
+          size='withoutPaddingSemiRegularHeight'
+          variant='darkToPurpleBackgroundWithWhiteBorder'
+          onClick={onClickMobile}
           fill
         >
           <Text
