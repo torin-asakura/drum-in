@@ -47,8 +47,7 @@ const DesktopSliderBlock = () => {
         clName='choose-courses-slider'
         spaceBetween={40}
         slidesPerView='auto'
-        mousewheel
-        mousewheelInvert={false}
+        slidesOffsetAfter={40}
       >
         {Children.map(coursesChildren, (child) => (
           <SwiperSlide>{child}</SwiperSlide>
