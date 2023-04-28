@@ -10,7 +10,7 @@ import { Text }             from '@ui/text'
 import { SliderBlock }      from './slider'
 
 const ChooseCourseBlock = () => (
-  <Row justifyContent='center'>
+  <Row justifyContent='center' id='choose-course'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>

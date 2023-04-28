@@ -12,6 +12,7 @@
   "devDependencies": {
     "@apollo/client": "^3.6.9",
     "@emotion/styled": "^11.9.3",
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2",
     "styled-system": "^5.1.5",
