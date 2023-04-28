@@ -194,7 +194,7 @@ const FormContent: FC<FormContentProps> = ({
           <Condition match={form === 'payment'}>
             {messages.accept}
             <Space />
-            <NextLink path='/'>
+            <NextLink path='/contract-offer'>
               <Text textTransform='lowercase'>{messages.offerAgreement}</Text>
             </NextLink>
             <Space />
@@ -208,7 +208,7 @@ const FormContent: FC<FormContentProps> = ({
           <Condition match={form === 'payment'}>
             {messages.accept}
             <Space />
-            <NextLink path='/'>
+            <NextLink path='/contract-offer'>
               <Text textTransform='lowercase' fontSize='semiMicro'>
                 {messages.offerAgreement}
               </Text>

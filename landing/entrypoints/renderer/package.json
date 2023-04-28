@@ -27,6 +27,7 @@
     "@globals/data": "workspace:0.0.1",
     "@landing/connacol-page": "workspace:0.0.1",
     "@landing/contact-page": "workspace:0.0.1",
+    "@landing/contract-offer-page": "workspace:0.0.1",
     "@landing/feeling-of-time-page": "workspace:0.0.1",
     "@landing/fifth-dimension-page": "workspace:0.0.1",
     "@landing/index-page": "workspace:0.0.1",

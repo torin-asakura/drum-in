@@ -1,18 +1,15 @@
 {
-  "name": "@landing/banner-fragment",
+  "name": "@landing/contract-offer-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/button": "workspace:0.0.1",
-    "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",
+    "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.9.3",
-    "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@types/react": "18.0.21",
     "react-intl": "^6.1.2",
     "styled-system": "^5.1.5",
@@ -20,8 +17,8 @@
   },
   "peerDependencies": {
     "@apollo/client": "*",
-    "@emotion/react": "*",
     "react": "*",
+    "react-dom": "*",
     "react-intl": "*"
   }
 }
