@@ -4740,6 +4740,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     events: "npm:^3.3.0"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
