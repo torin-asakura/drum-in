@@ -81,7 +81,7 @@ const Element: FC<ElementProps> = ({
           />
         </Box>
       </Condition>
-      <Box opacity={[1, 1, elemHover ? 1 : 0.3]}>
+      <Box opacity={[1, 1, elemHover || window.location.pathname === path ? 1 : 0.3]}>
         {level ? (
           <>
             <Background
