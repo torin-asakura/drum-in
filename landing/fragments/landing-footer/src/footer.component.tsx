@@ -65,7 +65,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                   )
                 }
                 return (
-                  <React.Fragment key={`1${index}`}>
+                  <React.Fragment key={title.substring(0, 3)}>
                     <NextLink path={menuCourse.link} target='_blank'>
                       <Text
                         fontFamily='secondary'
