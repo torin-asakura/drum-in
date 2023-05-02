@@ -47,10 +47,10 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              {footer?.menuCourses?.nodes?.map(({ title, menuCourse }, index) => {
+              {footer?.menuCourses?.nodes?.map(({ title, menuCourse }, index: number) => {
                 if (index === 3) {
                   return (
-                    <React.Fragment key={`1${index}`}>
+                    <React.Fragment key={title.substring(0, 3)}>
                       <NextLink path={menuCourse.link} target='_blank'>
                         <Text
                           fontFamily='secondary'
@@ -101,8 +101,8 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              {footer?.fragmentNewItem?.footer?.networksList?.map(({ name, link }, index) => (
-                <React.Fragment key={`1${index}`}>
+              {footer?.fragmentNewItem?.footer?.networksList?.map(({ name, link }) => (
+                <React.Fragment key={name.substring(0, 3)}>
                   <LinkSocial text={name} path={link} />
                   <Layout flexBasis={16} />
                 </React.Fragment>

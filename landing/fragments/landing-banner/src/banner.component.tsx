@@ -57,8 +57,8 @@ const BannerBlock = () => {
           </Box>
           <Layout order={[4, 4, -1]} flexBasis={[16, 24, 60]} />
           <Box width='100%' flexDirection={['column', 'column', 'row']} order={[7, 7, -1]}>
-            {banner?.tagsList?.map(({ text }, index) => (
-              <React.Fragment key={`1${index}`}>
+            {banner?.tagsList?.map(({ text }) => (
+              <React.Fragment key={text.substring(0, 3)}>
                 <TagBlock text={text} />
                 <Layout flexBasis={16} />
               </React.Fragment>
