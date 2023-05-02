@@ -31,8 +31,8 @@ const EducationList = () => {
           </Box>
         </Box>
         <Layout flexBasis={20} />
-        {education?.map(({ item }, index: number) => (
-          <React.Fragment key={index}>
+        {education?.map(({ item }, index) => (
+          <React.Fragment key={`1${index}`}>
             <Box>
               <Text
                 fontWeight='medium'
