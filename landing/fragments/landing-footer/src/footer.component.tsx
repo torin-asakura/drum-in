@@ -50,7 +50,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
               {footer?.menuCourses?.nodes?.map(({ title, menuCourse }, index) => {
                 if (index === 3) {
                   return (
-                    <>
+                    <React.Fragment key={index}>
                       <NextLink path={menuCourse.link} target='_blank'>
                         <Text
                           fontFamily='secondary'
@@ -61,11 +61,11 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                         </Text>
                       </NextLink>
                       <Layout flexBasis={[28, 30, 32]} />
-                    </>
+                    </React.Fragment>
                   )
                 }
                 return (
-                  <>
+                  <React.Fragment key={index}>
                     <NextLink path={menuCourse.link} target='_blank'>
                       <Text
                         fontFamily='secondary'
@@ -76,7 +76,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                       </Text>
                     </NextLink>
                     <Layout flexBasis={16} />
-                  </>
+                  </React.Fragment>
                 )
               })}
             </Column>
@@ -101,11 +101,11 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              {footer?.fragmentNewItem?.footer?.networksList?.map(({ name, link }) => (
-                <>
+              {footer?.fragmentNewItem?.footer?.networksList?.map(({ name, link }, index: number) => (
+                <React.Fragment key={index}>
                   <LinkSocial text={name} path={link} />
                   <Layout flexBasis={16} />
-                </>
+                </React.Fragment>
               ))}
             </Column>
             <Layout flexGrow={[0, 0, 4]} />

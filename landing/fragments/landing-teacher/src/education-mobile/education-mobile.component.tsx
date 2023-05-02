@@ -56,8 +56,8 @@ const EducationMobile = () => {
         <Layout flexBasis={[12, 20, 0]} flexShrink={0} />
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
-          {education?.map(({ item }) => (
-            <>
+          {education?.map(({ item }, index: number) => (
+            <React.Fragment key={index}>
               <Box>
                 <Text
                   fontWeight='medium'
@@ -69,7 +69,7 @@ const EducationMobile = () => {
                 </Text>
               </Box>
               <Layout flexBasis={[6, 10, 0]} />
-            </>
+            </React.Fragment>
           ))}
           <Layout flexBasis={[6, 10, 0]} />
         </Column>

@@ -40,6 +40,7 @@ const Info: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
                   indentLeft={getIndent(index)}
                   numeric={number}
                   title={characteristic}
+                  key={index}
                 />
               ))}
             </Column>

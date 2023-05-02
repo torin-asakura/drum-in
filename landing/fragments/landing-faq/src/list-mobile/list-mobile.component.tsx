@@ -11,11 +11,11 @@ const ListMobile = () => {
 
   return (
     <Column display={['flex', 'flex', 'none']}>
-      {faqArray.map(({ title, faq }) => (
-        <>
+      {faqArray.map(({ title, faq }, index: number) => (
+        <React.Fragment key={index}>
           <Accordion title={title} content={faq.answerForFaq} />
           <Layout flexBasis={[16, 21, 0]} />
-        </>
+        </React.Fragment>
       ))}
     </Column>
   )

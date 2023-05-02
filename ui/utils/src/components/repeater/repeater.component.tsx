@@ -10,9 +10,19 @@ const Repeater: FC<RepeaterProps> = ({ quantity, items, children }) => {
 
   return (
     <>
-      <Condition match={quantity === undefined}>{items?.map(children)}</Condition>
+      <Condition match={quantity === undefined}>
+        {
+          items?.map((children, index) => (
+            <React.Fragment key={index}>{children}</React.Fragment>
+          ))
+        }
+      </Condition>
       <Condition match={quantity !== undefined}>
-        {[...new Array(quantity)]?.map(children)}
+        {
+          [...new Array(quantity)]?.map((children, index) => (
+            <React.Fragment key={index}>{children}</React.Fragment>
+          ))
+        }
       </Condition>
     </>
   )

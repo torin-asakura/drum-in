@@ -13,8 +13,8 @@ const ListDesktop = () => {
 
   return (
     <Box flexWrap='wrap' display={['none', 'none', 'flex']}>
-      {faqArray.map(({ title, faq }, index) => (
-        <>
+      {faqArray.map(({ title, faq }, index: number) => (
+        <React.Fragment key={index}>
           <Box flexDirection='column'>
             <Item
               question={title}
@@ -27,7 +27,7 @@ const ListDesktop = () => {
           </Box>
           <Layout flexBasis={28} flexShrink={0} />
           {index % 2 !== 0 ? <Layout flexBasis='100%' /> : null}
-        </>
+        </React.Fragment>
       ))}
     </Box>
   )
