@@ -13,10 +13,14 @@ export const GlobalStyles = () => {
   return (
     <Global
       styles={css`
-        @import url('http://db.onlinewebfonts.com/c/54e947fcd1a1db8af459016676e593e8?family=Druk+Wide+Cy+TT+Bold');
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
         @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
+      @font-face {
+        font-family: 'Druk Wide Cy TT Bold';
+        src: url('/fonts/DrukWideCyTTBold.woff') format('woff');
+        font-style: normal;
+      }
 
       html,
       body,
