@@ -184,8 +184,8 @@ const colors = {
       },
       hover: {
         background: 'rgba(242, 242, 242, 0.15)',
-        font: 'rgb(242, 242, 242)',
-        border: 'rgb(242, 242, 242)',
+        font: 'rgba(156, 101, 242, 1)',
+        border: 'rgba(156, 101, 242, 1)',
       },
       pressed: {
         background: 'rgba(242, 242, 242, 0.15)',

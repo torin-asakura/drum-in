@@ -12,7 +12,6 @@ import { Layout }          from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { NextLink }        from '@ui/link'
 import { Text }            from '@ui/text'
-import { useHover }        from '@ui/utils'
 
 import { SlideLevelProps } from './slide-level.interfaces'
 
@@ -38,7 +37,6 @@ const SlideLevel: FC<SlideLevelProps> = ({
   link,
 }) => {
   const { formatMessage } = useIntl()
-  const [colorBorder, colorBorderProps] = useHover()
 
   return (
     <Column>
@@ -121,13 +119,7 @@ const SlideLevel: FC<SlideLevelProps> = ({
                 </Text>
               </Box>
               <Layout flexBasis={[21, 26, 30]} />
-              <Box
-                width='100%'
-                display={['none', 'none', 'flex']}
-                borderRadius='extra'
-                border={colorBorder ? 'normalSmokyWhite' : 'normalBoldDark'}
-                {...colorBorderProps}
-              >
+              <Box width='100%' display={['none', 'none', 'flex']}>
                 <NextLink path={link} width='100%'>
                   <Button size='withoutPaddingBigHeight' variant='purpleBackground' fill>
                     <Text fontWeight='semiBold' fontSize={['micro', 'semiRegular', 'large']}>

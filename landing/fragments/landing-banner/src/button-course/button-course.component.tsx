@@ -1,20 +1,19 @@
-import styled                from '@emotion/styled'
+import styled                  from '@emotion/styled'
 
-import React                 from 'react'
+import React                   from 'react'
 
-import { Button }            from '@ui/button'
-import { ComputerMouseIcon } from '@ui/icons'
-import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Text }              from '@ui/text'
-import { useHover }          from '@ui/utils'
+import { Button }              from '@ui/button'
+import { ComputerMouseIcon }   from '@ui/icons'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Text }                from '@ui/text'
+import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
+import { useHover }            from '@ui/utils'
 
-import { useBanner }         from '../data'
-import { useLocomotiveScroll }  from '@forks/react-locomotive-scroll'
-
+import { useBanner }           from '../data'
 
 const ButtonCourse = () => {
-  const { scroll } = useLocomotiveScroll();
+  const { scroll } = useLocomotiveScroll()
   const [hoverIcon, hoverIconProps] = useHover()
   const banner = useBanner()
 
@@ -46,7 +45,7 @@ const ButtonCourse = () => {
       height={56}
       borderRadius='big'
       border={hoverIcon ? 'veryBoldTransparentWhite' : 'veryBoldTransparent'}
-      onClick={() => scroll.scrollTo('#choose-course', { offset: -70})}
+      onClick={() => scroll.scrollTo('#choose-course', { offset: -70 })}
     >
       <Button size='mediumPaddingNormalHeight' variant='darkToPurpleBackground' fill>
         <Row>

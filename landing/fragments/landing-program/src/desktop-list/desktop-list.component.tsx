@@ -26,7 +26,7 @@ const DesktopList = () => {
         },
         index
       ) => (
-        <>
+        <React.Fragment key={descriptionLevel.substring(0, 3)}>
           <Item
             forWhom={forWhoThisLevel}
             level={nameLevel}
@@ -48,7 +48,7 @@ const DesktopList = () => {
             rectangleColor={getUi(index).rectangleColor}
           />
           <Layout flexBasis={40} />
-        </>
+        </React.Fragment>
       ))}
     </Column>
   )

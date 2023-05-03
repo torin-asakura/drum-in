@@ -57,7 +57,7 @@ const EducationMobile = () => {
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
           {education?.map(({ item }) => (
-            <>
+            <React.Fragment key={item.substring(0, 3)}>
               <Box>
                 <Text
                   fontWeight='medium'
@@ -69,7 +69,7 @@ const EducationMobile = () => {
                 </Text>
               </Box>
               <Layout flexBasis={[6, 10, 0]} />
-            </>
+            </React.Fragment>
           ))}
           <Layout flexBasis={[6, 10, 0]} />
         </Column>

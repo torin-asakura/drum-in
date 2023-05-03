@@ -10,9 +10,11 @@ const Repeater: FC<RepeaterProps> = ({ quantity, items, children }) => {
 
   return (
     <>
-      <Condition match={quantity === undefined}>{items?.map(children)}</Condition>
+      <Condition match={quantity === undefined}>
+        { items?.map(children) }
+      </Condition>
       <Condition match={quantity !== undefined}>
-        {[...new Array(quantity)]?.map(children)}
+        { [...new Array(quantity)]?.map(children) }
       </Condition>
     </>
   )

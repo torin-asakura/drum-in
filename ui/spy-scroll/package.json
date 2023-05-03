@@ -9,6 +9,7 @@
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
     "events": "^3.3.0",
     "styled-tools": "^1.7.2"
   },

@@ -1,5 +1,5 @@
 import React                  from 'react'
-import { FC }          from 'react'
+import { FC }                 from 'react'
 import { FormattedMessage }   from 'react-intl'
 
 import { Button }             from '@ui/button'
