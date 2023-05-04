@@ -39,7 +39,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
         </Box>
         <Layout display={['flex', 'flex', 'none']} flexBasis={[20, 24, 0]} />
         {navigation?.map(({ title, id, menuCourse }) => (
-          <>
+          <React.Fragment key={id}>
             <Element
               stateHover={stateHover}
               title={title}
@@ -62,7 +62,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
               path={menuCourse.link}
             />
             <Layout flexBasis={16} />
-          </>
+          </React.Fragment>
         ))}
         <Layout display={['flex', 'flex', 'none']} flexBasis={[60, 50, 0]} />
         <Box display={['flex', 'flex', 'none']}>
