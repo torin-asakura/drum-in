@@ -1,4 +1,5 @@
 import React                from 'react'
+import uniqid               from 'uniqid'
 import { FormattedMessage } from 'react-intl'
 import { forwardRef }       from 'react'
 
@@ -50,7 +51,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
               {footer?.menuCourses?.nodes?.map(({ title, menuCourse }, index: number) => {
                 if (index === 3) {
                   return (
-                    <React.Fragment key={title.substring(0, 3)}>
+                    <React.Fragment key={uniqid()}>
                       <NextLink path={menuCourse.link} target='_blank'>
                         <Text
                           fontFamily='secondary'
@@ -65,7 +66,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                   )
                 }
                 return (
-                  <React.Fragment key={title.substring(0, 3)}>
+                  <React.Fragment key={uniqid()}>
                     <NextLink path={menuCourse.link} target='_blank'>
                       <Text
                         fontFamily='secondary'
@@ -102,7 +103,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
               {footer?.fragmentNewItem?.footer?.networksList?.map(({ name, link }) => (
-                <React.Fragment key={name.substring(0, 3)}>
+                <React.Fragment key={uniqid()}>
                   <LinkSocial text={name} path={link} />
                   <Layout flexBasis={16} />
                 </React.Fragment>

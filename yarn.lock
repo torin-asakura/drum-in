@@ -1873,6 +1873,7 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
     swiper: "npm:^8.3.1"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -1889,12 +1890,14 @@ __metadata:
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -1916,6 +1919,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -1938,6 +1942,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -1954,12 +1959,14 @@ __metadata:
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2000,12 +2007,14 @@ __metadata:
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2043,12 +2052,14 @@ __metadata:
     "@emotion/react": "npm:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2158,6 +2169,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -2201,6 +2213,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -2378,6 +2391,7 @@ __metadata:
     "@ui/logo": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2595,6 +2609,7 @@ __metadata:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2602,6 +2617,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -3089,6 +3105,7 @@ __metadata:
     react-intl: "npm:^6.1.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -3148,11 +3165,13 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -3167,11 +3186,13 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -3191,6 +3212,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -3204,6 +3226,7 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:^3.6.9"
     "@types/react": "npm:18.0.21"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/condition": "workspace:0.0.1"
     "@ui/figures": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -3213,6 +3236,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.1.2"
     swiper: "npm:^8.3.1"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -3232,6 +3256,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -3251,6 +3276,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.0"
     react-intl: "npm:^6.1.2"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -4333,6 +4359,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uniqid@npm:^5.3.2":
+  version: 5.3.2
+  resolution: "@types/uniqid@npm:5.3.2"
+  checksum: accb89e9b94bfe68fd5bcc4a37c262b4fbc0f817ed03601e227ffb3c2a5dc18541f6c819049765f55c1bc33bd120d6d5b95c49c66292cb26b82b6d637f8de1f7
+  languageName: node
+  linkType: hard
+
 "@types/yargs-parser@npm:*":
   version: 20.2.1
   resolution: "@types/yargs-parser@npm:20.2.1"
@@ -4832,10 +4865,12 @@ __metadata:
   resolution: "@ui/utils@workspace:ui/utils"
   dependencies:
     "@types/react-dom": "npm:^17"
+    "@types/uniqid": "npm:^5.3.2"
     "@ui/condition": "workspace:0.0.1"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
     react-laag: "npm:^2.0.3"
+    uniqid: "npm:^5.4.0"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -6600,9 +6635,11 @@ __metadata:
     "@types/node": "npm:^18.7.14"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:^17.0.9"
+    "@types/uniqid": "npm:^5.3.2"
     eslint: "npm:8.18.0"
     husky: "npm:^8.0.1"
     typescript: "npm:^4.8.4"
+    uniqid: "npm:^5.4.0"
   languageName: unknown
   linkType: soft
 
@@ -10730,6 +10767,13 @@ __metadata:
   version: 0.7.35
   resolution: "ua-parser-js@npm:0.7.35"
   checksum: 4a6b39b47a8d0515994e0c7ec3f66c53952a26b1fb324fd38309fc4397c67443af1575d8d270d4b193a827af9b3128ee38a32d55e8a7cd0c761bc2c6549a25e1
+  languageName: node
+  linkType: hard
+
+"uniqid@npm:^5.4.0":
+  version: 5.4.0
+  resolution: "uniqid@npm:5.4.0"
+  checksum: d2bb6655417616d2f99fadf50aa7aee592c41b4b9bf08c3715a37d8afee5a51c0e7dc297d4aa7251e23d9fb010016a70f506c2ecaba5391b393faba4513eff70
   languageName: node
   linkType: hard
 

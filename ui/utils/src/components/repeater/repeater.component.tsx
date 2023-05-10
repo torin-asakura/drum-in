@@ -1,4 +1,5 @@
 import React             from 'react'
+import uniqid            from 'uniqid'
 import { FC }            from 'react'
 
 import { Condition }     from '@ui/condition'
@@ -10,9 +11,15 @@ const Repeater: FC<RepeaterProps> = ({ quantity, items, children }) => {
 
   return (
     <>
-      <Condition match={quantity === undefined}>{items?.map(children)}</Condition>
+      <Condition match={quantity === undefined}>
+        {items?.map(() => (
+          <React.Fragment key={uniqid()}>{children()}</React.Fragment>
+        ))}
+      </Condition>
       <Condition match={quantity !== undefined}>
-        {[...new Array(quantity)]?.map(children)}
+        {[...new Array(quantity)]?.map(() => (
+          <React.Fragment key={uniqid()}>{children()}</React.Fragment>
+        ))}
       </Condition>
     </>
   )

@@ -1,4 +1,5 @@
 import React                from 'react'
+import uniqid               from 'uniqid'
 
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -32,7 +33,7 @@ const PrivacyPolicyBlock = () => {
           <Layout flexBasis={[20, 30, 50]} flexShrink={0} />
           <Column>
             {privacyPolicy?.privacyPolicy?.text?.split('<br />\r').map((item) => (
-              <>
+              <React.Fragment key={uniqid()}>
                 <Row>
                   <Text
                     fontWeight='medium'
@@ -44,7 +45,7 @@ const PrivacyPolicyBlock = () => {
                   </Text>
                 </Row>
                 <Layout flexBasis={[7, 10, 15]} flexShrink={0} />
-              </>
+              </React.Fragment>
             ))}
           </Column>
           <Layout flexBasis={[32, 40, 150]} flexShrink={0} />

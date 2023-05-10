@@ -1,4 +1,5 @@
 import React                from 'react'
+import uniqid               from 'uniqid'
 import { FormattedMessage } from 'react-intl'
 
 import { LightningIcon }    from '@ui/icons'
@@ -68,7 +69,7 @@ const ContentMobileCourse = () => {
           <Layout flexBasis={[151, 181, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
             {program?.secondListOfTopics?.split(';').map((element) => (
-              <Box>
+              <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
                   fontSize={['micro', 'medium', 'medium']}
@@ -88,7 +89,7 @@ const ContentMobileCourse = () => {
           <Layout flexBasis={[80, 110, 0]} />
           <Box flexDirection='column' height={[68, 100, 0]}>
             {program?.firstListOfTopics?.split(';').map((element) => (
-              <Box>
+              <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
                   fontSize={['micro', 'medium', 'medium']}
@@ -130,7 +131,7 @@ const ContentMobileCourse = () => {
           <Layout flexBasis={[124, 154, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
             {program?.thirdListOfTopics?.split(';').map((element) => (
-              <Box>
+              <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
                   fontSize={['micro', 'medium', 'medium']}

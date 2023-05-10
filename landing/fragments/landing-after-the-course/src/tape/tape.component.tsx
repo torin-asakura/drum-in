@@ -2,6 +2,7 @@ import styled        from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 
 import React         from 'react'
+import uniqid        from 'uniqid'
 import { FC }        from 'react'
 import { useMemo }   from 'react'
 
@@ -43,7 +44,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
             <Repeater quantity={50}>
               {() =>
                 firstLine?.split(';').map((currentValue) => (
-                  <>
+                  <React.Fragment key={uniqid()}>
                     <Box>
                       <Text
                         whiteSpace='nowrap'
@@ -56,7 +57,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
                       </Text>
                     </Box>
                     <Box flexShrink={0} width={[12, 26, 40]} />
-                  </>
+                  </React.Fragment>
                 ))
               }
             </Repeater>
@@ -68,7 +69,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
             <Repeater quantity={50}>
               {() =>
                 secondLine?.split(';').map((currentValue) => (
-                  <>
+                  <React.Fragment key={uniqid()}>
                     <Box>
                       <Text
                         whiteSpace='nowrap'
@@ -81,7 +82,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
                       </Text>
                     </Box>
                     <Box flexShrink={0} width={[12, 26, 40]} />
-                  </>
+                  </React.Fragment>
                 ))
               }
             </Repeater>
@@ -93,7 +94,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
             <Repeater quantity={50}>
               {() =>
                 thirdLine?.split(';').map((currentValue) => (
-                  <>
+                  <React.Fragment key={uniqid()}>
                     <Box>
                       <Text
                         whiteSpace='nowrap'
@@ -106,7 +107,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
                       </Text>
                     </Box>
                     <Box flexShrink={0} width={[12, 26, 40]} />
-                  </>
+                  </React.Fragment>
                 ))
               }
             </Repeater>

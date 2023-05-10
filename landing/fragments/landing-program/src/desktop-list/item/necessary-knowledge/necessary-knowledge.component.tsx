@@ -1,4 +1,5 @@
 import React                           from 'react'
+import uniqid                          from 'uniqid'
 import { FC }                          from 'react'
 
 import { InvertedExclamationMarkIcon } from '@ui/icons'
@@ -77,7 +78,7 @@ const NecessaryKnowledgeBlock: FC<NecessaryKnowledgeProps> = ({
               </Box>
               <Layout flexBasis={24} flexShrink={0} />
               {listNecessaryKnowledge.split(';').map((currentValue) => (
-                <>
+                <React.Fragment key={uniqid()}>
                   <Box>
                     <Text
                       textTransform='uppercase'
@@ -90,7 +91,7 @@ const NecessaryKnowledgeBlock: FC<NecessaryKnowledgeProps> = ({
                     </Text>
                   </Box>
                   <Layout flexBasis={16} flexShrink={0} />
-                </>
+                </React.Fragment>
               ))}
               <Layout flexBasis={8} flexShrink={0} />
             </Column>
