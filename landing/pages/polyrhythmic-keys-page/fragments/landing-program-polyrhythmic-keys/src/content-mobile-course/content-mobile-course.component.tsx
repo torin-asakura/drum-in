@@ -157,12 +157,6 @@ const ContentMobileCourse = () => {
         left={0}
         zIndex={1}
       >
-        <Box
-          height={[200, 300, 0]}
-          width='100%'
-          flexShrink={0}
-          backgroundColor='background.smokyWhite'
-        />
       </Box>
     </Box>
   )
