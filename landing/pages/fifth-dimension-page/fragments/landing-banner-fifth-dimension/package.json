@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",
-    "@emotion/react": "*",
-    "@emotion/styled": "^11.9.3",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@types/react": "18.2.6",
     "@types/uniqid": "^5.3.2",
     "react-intl": "^6.1.2",

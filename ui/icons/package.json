@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "@atls-ui-generators/icons": "^0.0.2",
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@types/glob": "^8.1.0",
     "glob": "^8.0.3",
     "glob-promise": "3.4.0",
