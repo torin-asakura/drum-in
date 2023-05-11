@@ -3662,8 +3662,8 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:17.0.47"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["react", null],\
-          ["use-debounce", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.0.1"],\
-          ["use-resize-observer", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.1.0"]\
+          ["use-debounce", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.0.4"],\
+          ["use-resize-observer", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.1.0"]\
         ],\
         "packagePeers": [\
           "@types/locomotive-scroll",\
@@ -3680,8 +3680,8 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:17.0.47"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["react", "npm:18.2.0"],\
-          ["use-debounce", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:6.0.1"],\
-          ["use-resize-observer", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:6.1.0"]\
+          ["use-debounce", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:9.0.4"],\
+          ["use-resize-observer", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:9.1.0"]\
         ],\
         "packagePeers": [\
           "@types/locomotive-scroll",\
@@ -3696,8 +3696,8 @@ const RAW_RUNTIME_STATE =
           ["@forks/react-locomotive-scroll", "workspace:forks/react-locomotive-scroll"],\
           ["@types/react", "npm:17.0.47"],\
           ["locomotive-scroll", "npm:4.1.4"],\
-          ["use-debounce", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.0.1"],\
-          ["use-resize-observer", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.1.0"]\
+          ["use-debounce", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.0.4"],\
+          ["use-resize-observer", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.1.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -4280,6 +4280,15 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/trace-mapping", "npm:0.3.17"],\
           ["@jridgewell/resolve-uri", "npm:3.1.0"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@juggle/resize-observer", [\
+      ["npm:3.4.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@juggle-resize-observer-npm-3.4.0-659544c6b5-9.zip/node_modules/@juggle/resize-observer/",\
+        "packageDependencies": [\
+          ["@juggle/resize-observer", "npm:3.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -23522,15 +23531,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["resize-observer-polyfill", [\
-      ["npm:1.5.1", {\
-        "packageLocation": "../../../../.yarn/berry/cache/resize-observer-polyfill-npm-1.5.1-603120e8a0-9.zip/node_modules/resize-observer-polyfill/",\
-        "packageDependencies": [\
-          ["resize-observer-polyfill", "npm:1.5.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["resolve", [\
       ["patch:resolve@npm%3A1.20.0#optional!builtin<compat/resolve>::version=1.20.0&hash=c3c19d", {\
         "packageLocation": "../../../../.yarn/berry/cache/resolve-patch-63f1eb0464-9.zip/node_modules/resolve/",\
@@ -24855,17 +24855,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["use-debounce", [\
-      ["npm:6.0.1", {\
-        "packageLocation": "../../../../.yarn/berry/cache/use-debounce-npm-6.0.1-6203424700-9.zip/node_modules/use-debounce/",\
+      ["npm:9.0.4", {\
+        "packageLocation": "../../../../.yarn/berry/cache/use-debounce-npm-9.0.4-b60c0014f6-9.zip/node_modules/use-debounce/",\
         "packageDependencies": [\
-          ["use-debounce", "npm:6.0.1"]\
+          ["use-debounce", "npm:9.0.4"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:6.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/use-debounce-virtual-cbb4e543cb/5/.yarn/berry/cache/use-debounce-npm-6.0.1-6203424700-9.zip/node_modules/use-debounce/",\
+      ["virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:9.0.4", {\
+        "packageLocation": "./.yarn/__virtual__/use-debounce-virtual-2ec57adfd1/5/.yarn/berry/cache/use-debounce-npm-9.0.4-b60c0014f6-9.zip/node_modules/use-debounce/",\
         "packageDependencies": [\
-          ["use-debounce", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:6.0.1"],\
+          ["use-debounce", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:9.0.4"],\
           ["@types/react", "npm:17.0.47"],\
           ["react", "npm:18.2.0"]\
         ],\
@@ -24875,10 +24875,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/use-debounce-virtual-71f13d11f1/5/.yarn/berry/cache/use-debounce-npm-6.0.1-6203424700-9.zip/node_modules/use-debounce/",\
+      ["virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.0.4", {\
+        "packageLocation": "./.yarn/__virtual__/use-debounce-virtual-32b9216124/5/.yarn/berry/cache/use-debounce-npm-9.0.4-b60c0014f6-9.zip/node_modules/use-debounce/",\
         "packageDependencies": [\
-          ["use-debounce", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.0.1"],\
+          ["use-debounce", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.0.4"],\
           ["@types/react", "npm:17.0.47"],\
           ["react", null]\
         ],\
@@ -24890,22 +24890,22 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["use-resize-observer", [\
-      ["npm:6.1.0", {\
-        "packageLocation": "../../../../.yarn/berry/cache/use-resize-observer-npm-6.1.0-5ee3475eb2-9.zip/node_modules/use-resize-observer/",\
+      ["npm:9.1.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/use-resize-observer-npm-9.1.0-ee1d268d88-9.zip/node_modules/use-resize-observer/",\
         "packageDependencies": [\
-          ["use-resize-observer", "npm:6.1.0"]\
+          ["use-resize-observer", "npm:9.1.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:6.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/use-resize-observer-virtual-f5f054ee37/5/.yarn/berry/cache/use-resize-observer-npm-6.1.0-5ee3475eb2-9.zip/node_modules/use-resize-observer/",\
+      ["virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:9.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/use-resize-observer-virtual-691764331f/5/.yarn/berry/cache/use-resize-observer-npm-9.1.0-ee1d268d88-9.zip/node_modules/use-resize-observer/",\
         "packageDependencies": [\
-          ["use-resize-observer", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:6.1.0"],\
+          ["use-resize-observer", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:9.1.0"],\
+          ["@juggle/resize-observer", "npm:3.4.0"],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", null],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", null],\
-          ["resize-observer-polyfill", "npm:1.5.1"]\
+          ["react-dom", null]\
         ],\
         "packagePeers": [\
           "@types/react-dom",\
@@ -24915,15 +24915,15 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/use-resize-observer-virtual-c567c092a7/5/.yarn/berry/cache/use-resize-observer-npm-6.1.0-5ee3475eb2-9.zip/node_modules/use-resize-observer/",\
+      ["virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/use-resize-observer-virtual-00e5f1b06d/5/.yarn/berry/cache/use-resize-observer-npm-9.1.0-ee1d268d88-9.zip/node_modules/use-resize-observer/",\
         "packageDependencies": [\
-          ["use-resize-observer", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:6.1.0"],\
+          ["use-resize-observer", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.1.0"],\
+          ["@juggle/resize-observer", "npm:3.4.0"],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", null],\
           ["react", null],\
-          ["react-dom", null],\
-          ["resize-observer-polyfill", "npm:1.5.1"]\
+          ["react-dom", null]\
         ],\
         "packagePeers": [\
           "@types/react-dom",\

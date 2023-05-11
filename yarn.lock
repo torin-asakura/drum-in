@@ -1407,8 +1407,8 @@ __metadata:
   dependencies:
     "@types/react": "npm:17.0.1"
     locomotive-scroll: "npm:^4.1.4"
-    use-debounce: "npm:6.0.1"
-    use-resize-observer: "npm:6.1.0"
+    use-debounce: "npm:9.0.4"
+    use-resize-observer: "npm:9.1.0"
   peerDependencies:
     locomotive-scroll: ^4.1.4
     react: ^18.0.2
@@ -1853,6 +1853,13 @@ __metadata:
     "@jridgewell/resolve-uri": "npm:3.1.0"
     "@jridgewell/sourcemap-codec": "npm:1.4.14"
   checksum: 388a2f604c1159dd29fdf3077c2a21fd2d322145f24cade868c0a7c55cfc993f3af82dd2e979438d9f06148c38af780abc7c0aa2eddbb34fab41698bb86d82e1
+  languageName: node
+  linkType: hard
+
+"@juggle/resize-observer@npm:^3.3.1":
+  version: 3.4.0
+  resolution: "@juggle/resize-observer@npm:3.4.0"
+  checksum: 5786abce4141d541f563d32a0c04dd0fb62f1f9f31620c0e92809418e73eb56610f7e10ddddf08ed2f09aad032c1eeac8c991eb708e042224002cc658716e67b
   languageName: node
   linkType: hard
 
@@ -9742,13 +9749,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resize-observer-polyfill@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "resize-observer-polyfill@npm:1.5.1"
-  checksum: 2efc7ab589522f31328c02329b18e959e7876b829f0ea15bd7df1fd03479f0f363e4d63680aa0a8d9be09e3e93082d8638730021059eed8f8fe264abb5620799
-  languageName: node
-  linkType: hard
-
 "resolve-alpn@npm:^1.0.0":
   version: 1.2.1
   resolution: "resolve-alpn@npm:1.2.1"
@@ -10818,24 +10818,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-debounce@npm:6.0.1":
-  version: 6.0.1
-  resolution: "use-debounce@npm:6.0.1"
+"use-debounce@npm:9.0.4":
+  version: 9.0.4
+  resolution: "use-debounce@npm:9.0.4"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 2b0e5b58041023e995edd904e748597d93ba9bc10391fa1397a3dfb5fc330668e515c5b238efb0f973bf3713f418f765e67e47c944529d96ead2799e5c55adb3
+  checksum: 5855d748e4f5606ae8e0367a8dad1b5f2fc0a0e6a6ec8e828534323f67438493698501fa583f839561b7760343afd3b654e53f68f2fc74d6a112dea4351b50b0
   languageName: node
   linkType: hard
 
-"use-resize-observer@npm:6.1.0":
-  version: 6.1.0
-  resolution: "use-resize-observer@npm:6.1.0"
+"use-resize-observer@npm:9.1.0":
+  version: 9.1.0
+  resolution: "use-resize-observer@npm:9.1.0"
   dependencies:
-    resize-observer-polyfill: "npm:^1.5.1"
+    "@juggle/resize-observer": "npm:^3.3.1"
   peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-  checksum: 95079c753210cada253dbd51e3872b7dfaaeb9e30b32dc9976d5fbd9ec1496d9c9fb7d7f8b9b01a66bdb32969b57c822ae4cea7a070b28f6d2d35a9e1c6a8b2b
+    react: 16.8.0 - 18
+    react-dom: 16.8.0 - 18
+  checksum: b3e8b5689340762ca28fb848b228150fd7bd9e2ff99367413f9209dfa63c814272700803d60ed3dd91c5b2c771d8f80d21fe18a0b60905f687cc806120569c1c
   languageName: node
   linkType: hard
 

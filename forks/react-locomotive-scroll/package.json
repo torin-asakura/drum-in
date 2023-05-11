@@ -4,8 +4,8 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "use-debounce": "6.0.1",
-    "use-resize-observer": "6.1.0"
+    "use-debounce": "9.0.4",
+    "use-resize-observer": "9.1.0"
   },
   "devDependencies": {
     "@types/react": "17.0.1",
