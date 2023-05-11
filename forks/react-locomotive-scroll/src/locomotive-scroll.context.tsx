@@ -46,7 +46,7 @@ export const LocomotiveScrollProvider = ({
   const [height] = useDebounce(containerHeight, 100)
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       try {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
 
