@@ -13,7 +13,7 @@
     "@apollo/client": "^3.6.9",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.9.3",
-    "@types/react": "18.0.21",
+    "@types/react": "18.2.6",
     "react-intl": "^6.1.2",
     "styled-tools": "^1.7.2"
   },

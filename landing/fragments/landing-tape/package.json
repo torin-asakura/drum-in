@@ -10,7 +10,7 @@
   "devDependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.0",
-    "@types/react": "18.0.21",
+    "@types/react": "18.2.6",
     "react-intl": "^6.1.2",
     "styled-tools": "^1.7.2"
   },

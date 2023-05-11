@@ -16,7 +16,7 @@
   "devDependencies": {
     "@apollo/client": "^3.6.9",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
-    "@types/react": "18.0.21",
+    "@types/react": "18.2.6",
     "react-intl": "^6.1.2"
   },
   "peerDependencies": {
