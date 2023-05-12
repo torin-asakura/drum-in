@@ -2258,7 +2258,7 @@ __metadata:
     "@ui/modal": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     framer-motion: "npm:10.12.10"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -3285,7 +3285,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react-intl: "npm:^6.4.2"
     uniqid: "npm:^5.4.0"
   peerDependencies:
@@ -3306,7 +3306,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react-intl: "npm:^6.4.2"
     uniqid: "npm:^5.4.0"
   peerDependencies:
@@ -3326,7 +3326,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react-intl: "npm:^6.4.2"
     uniqid: "npm:^5.4.0"
   peerDependencies:
@@ -3370,7 +3370,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react-intl: "npm:^6.4.2"
     uniqid: "npm:^5.4.0"
   peerDependencies:
@@ -3390,7 +3390,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react-intl: "npm:^6.4.2"
     uniqid: "npm:^5.4.0"
   peerDependencies:
@@ -3427,7 +3427,7 @@ __metadata:
     "@ui/theme": "workspace:0.0.1"
     graphql: "npm:^16.6.0"
     locomotive-scroll: "npm:^4.1.4"
-    next: "npm:^12.1.0"
+    next: "npm:^12.3.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-helmet: "npm:^6.1.0"
@@ -4506,7 +4506,7 @@ __metadata:
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/styled-system": "npm:^5.1.16"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
@@ -4762,7 +4762,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@types/styled-system": "npm:^5.1.16"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:^12.2.0"
+    next: "npm:^12.3.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
@@ -4784,7 +4784,7 @@ __metadata:
     "@emotion/styled": "npm:^11.11.0"
     "@types/styled-system": "npm:^5.1.16"
     "@ui/link": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
@@ -4809,7 +4809,7 @@ __metadata:
     "@types/styled-system": "npm:^5.1.16"
     "@ui/layout": "workspace:0.0.1"
     framer-motion: "npm:10.12.10"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     styled-system: "npm:^5.1.5"
   peerDependencies:
     "@emotion/react": "*"
@@ -4833,7 +4833,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
-    swiper: "npm:^9.3.1"
+    swiper: "npm:8.3.1"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -4896,7 +4896,7 @@ __metadata:
     "@emotion/react": "npm:^11.11.0"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-intl: "npm:^6.4.2"
@@ -6715,6 +6715,15 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 6b38a63fa66847d80e130bb85c83c173b1050037fffac3d5f740c8c691243d5b6fadc5ec502ae8297c474680d879eb24ad8ec7f901673704fe40c8dedc1bee62
+  languageName: node
+  linkType: hard
+
+"dom7@npm:^4.0.4":
+  version: 4.0.6
+  resolution: "dom7@npm:4.0.6"
+  dependencies:
+    ssr-window: "npm:^4.0.0"
+  checksum: a4d15eb6597a6f5a8d6d7307bd0c30aed7f6b975b7c44e8f65d4fea309af92ebba488540ba82889f80851f1bdc58ecc6026c9ee0321696731bea7708c64d13dd
   languageName: node
   linkType: hard
 
@@ -10252,7 +10261,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ssr-window@npm:^4.0.2":
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
   version: 4.0.2
   resolution: "ssr-window@npm:4.0.2"
   checksum: 8235ddf1dc542231f534660eaf76a4d605a8c66ee247806e0965099625784b2b781aacbead7e2d1068b9cb5972aa7fc9f53e4396c0ddac0482d101713d4ac0fa
@@ -10481,6 +10490,16 @@ __metadata:
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4"
   checksum: b970f4533a6ce64d3498f1a2c87d0cfd6d681e18fa58af7a9b061119dbb968e289a650e2c2094f08e28e83b9727a857545e7e15f6b27b2426f3c32cfa7f1a941
+  languageName: node
+  linkType: hard
+
+"swiper@npm:8.3.1":
+  version: 8.3.1
+  resolution: "swiper@npm:8.3.1"
+  dependencies:
+    dom7: "npm:^4.0.4"
+    ssr-window: "npm:^4.0.2"
+  checksum: c67cbaa94869834112e33942821a1cd4f90e18afb60212d8834baa2950e5149577b18faf5cde499d32477b872cbdc565f80e9e9673f0a4c8c6aaad90bdf796fb
   languageName: node
   linkType: hard
 

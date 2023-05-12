@@ -1838,7 +1838,7 @@ const RAW_RUNTIME_STATE =
           ["@types/swiper", null],\
           ["nanoid", "npm:4.0.0"],\
           ["react", "npm:18.2.0"],\
-          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:9.3.1"]\
+          ["swiper", "virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1"]\
         ],\
         "packagePeers": [\
           "@emotion/css",\
@@ -1860,7 +1860,7 @@ const RAW_RUNTIME_STATE =
           ["@types/swiper", null],\
           ["nanoid", "npm:4.0.0"],\
           ["react", "npm:18.2.0"],\
-          ["swiper", "virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:9.3.1"]\
+          ["swiper", "virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:8.3.1"]\
         ],\
         "packagePeers": [\
           "@emotion/css",\
@@ -15725,7 +15725,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
-          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:9.3.1"]\
+          ["swiper", "virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1"]\
         ],\
         "packagePeers": [\
           "@emotion/react",\
@@ -15753,7 +15753,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
-          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:9.3.1"]\
+          ["swiper", "virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1"]\
         ],\
         "packagePeers": [\
           "@emotion/react",\
@@ -15782,7 +15782,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
-          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:9.3.1"]\
+          ["swiper", "virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1"]\
         ],\
         "packagePeers": [\
           "@emotion/react",\
@@ -15812,7 +15812,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
-          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:9.3.1"]\
+          ["swiper", "virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1"]\
         ],\
         "packagePeers": [\
           "@emotion/react",\
@@ -15840,7 +15840,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
-          ["swiper", "virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:9.3.1"]\
+          ["swiper", "virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1"]\
         ],\
         "packagePeers": [\
           "@types/emotion__react",\
@@ -15863,7 +15863,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:61cf820853ba6cea0139411f61989d03055403ea0ca7b766dfbcdf36f7fe972e6a2ee63ff4e8de5d1737b2e24152b17a8cdb463feace4be99512e43f81b6ad7d#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
-          ["swiper", "virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:9.3.1"]\
+          ["swiper", "virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:8.3.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -19367,6 +19367,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["doctrine", "npm:3.0.0"],\
           ["esutils", "npm:2.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["dom7", [\
+      ["npm:4.0.6", {\
+        "packageLocation": "../../../../.yarn/berry/cache/dom7-npm-4.0.6-3656a6d3f2-9.zip/node_modules/dom7/",\
+        "packageDependencies": [\
+          ["dom7", "npm:4.0.6"],\
+          ["ssr-window", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -24279,12 +24289,34 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["swiper", [\
+      ["npm:8.3.1", {\
+        "packageLocation": "./.yarn/unplugged/swiper-virtual-4f79634a4d/node_modules/swiper/",\
+        "packageDependencies": [\
+          ["swiper", "npm:8.3.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["npm:9.3.1", {\
         "packageLocation": "../../../../.yarn/berry/cache/swiper-npm-9.3.1-0288793143-9.zip/node_modules/swiper/",\
         "packageDependencies": [\
           ["swiper", "npm:9.3.1"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1", {\
+        "packageLocation": "./.yarn/unplugged/swiper-virtual-fdbed35c49/node_modules/swiper/",\
+        "packageDependencies": [\
+          ["swiper", "virtual:2af0f029f4b1396ade2c68aa2343eb3adba07826284e1b128fa7a418ead063ea60a62ccababd293c70574c61b19043722f1111cf229d2727711d057a69eded1e#npm:8.3.1"],\
+          ["@types/react", "npm:17.0.47"],\
+          ["dom7", "npm:4.0.6"],\
+          ["react", "npm:18.2.0"],\
+          ["ssr-window", "npm:4.0.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:608471435eac63a118ce64d82adf32e38f6596093dc45de78152bfbc0eadf847f35a8828a1df201c6ea071504c5674e8ae0f38c1963da17ce301b0add97d1c55#npm:9.3.1", {\
         "packageLocation": "./.yarn/__virtual__/swiper-virtual-970874f3ff/5/.yarn/berry/cache/swiper-npm-9.3.1-0288793143-9.zip/node_modules/swiper/",\
@@ -24314,11 +24346,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:9.3.1", {\
-        "packageLocation": "./.yarn/__virtual__/swiper-virtual-e34dd50ab2/5/.yarn/berry/cache/swiper-npm-9.3.1-0288793143-9.zip/node_modules/swiper/",\
+      ["virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:8.3.1", {\
+        "packageLocation": "./.yarn/unplugged/swiper-virtual-4f79634a4d/node_modules/swiper/",\
         "packageDependencies": [\
-          ["swiper", "virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:9.3.1"],\
+          ["swiper", "virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#npm:8.3.1"],\
           ["@types/react", null],\
+          ["dom7", "npm:4.0.6"],\
           ["react", "npm:18.2.0"],\
           ["ssr-window", "npm:4.0.2"]\
         ],\
