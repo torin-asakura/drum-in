@@ -147,9 +147,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:^3.6.9":
-  version: 3.7.10
-  resolution: "@apollo/client@npm:3.7.10"
+"@apollo/client@npm:^3.7.14":
+  version: 3.7.14
+  resolution: "@apollo/client@npm:3.7.14"
   dependencies:
     "@graphql-typed-document-node/core": "npm:^3.1.1"
     "@wry/context": "npm:^0.7.0"
@@ -157,7 +157,7 @@ __metadata:
     "@wry/trie": "npm:^0.3.0"
     graphql-tag: "npm:^2.12.6"
     hoist-non-react-statics: "npm:^3.3.2"
-    optimism: "npm:^0.16.1"
+    optimism: "npm:^0.16.2"
     prop-types: "npm:^15.7.2"
     response-iterator: "npm:^0.2.6"
     symbol-observable: "npm:^4.0.0"
@@ -179,7 +179,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: ca8c9eeda792c24af5ce3269cec209ba3d1a2b28ec377265bd67539fc4db03743a8fba219b3d60012640073ecb9873ea9147c81c8527dc5473f5919098e1393c
+  checksum: 74dd23473f69d31e4ec4a9b9fb3c1a07e40213097feddc40e3e3b123ae995ecd0c702d98bc5ac3f4dbf7d71e20d380b3273b5d51db0ffc197928e55af5028831
   languageName: node
   linkType: hard
 
@@ -433,7 +433,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-document-with-helmet@npm:^0.2.64":
+"@atls/next-document-with-helmet@npm:^0.2.67":
   version: 0.2.67
   resolution: "@atls/next-document-with-helmet@npm:0.2.67"
   peerDependencies:
@@ -1580,7 +1580,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     graphql: "npm:^15.5.1"
     react: "npm:^17.0.2"
   peerDependencies:
@@ -1962,7 +1962,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/advantages-fragment@workspace:landing/fragments/landing-advantages"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -1988,7 +1988,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/after-the-course-fragment@workspace:landing/fragments/landing-after-the-course"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2012,7 +2012,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-banner-connacol"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
@@ -2034,7 +2034,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-banner-feeling-of-time"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2057,7 +2057,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-banner-fifth-dimension"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2081,7 +2081,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-fragment@workspace:landing/fragments/landing-banner"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
@@ -2105,7 +2105,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-banner-opening-the-rhythm"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2129,7 +2129,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-banner-polyrhythmic-keys"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
@@ -2150,7 +2150,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/banner-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-banner-seventh-heaven"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2174,7 +2174,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/choose-course-fragment@workspace:landing/fragments/landing-choose-course"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@globals/data": "workspace:0.0.1"
@@ -2203,7 +2203,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/connacol-page@workspace:landing/pages/connacol-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -2243,7 +2243,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/modal": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     next: "npm:12.1.0"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
@@ -2263,7 +2263,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/contact-fragment@workspace:landing/fragments/landing-contact"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -2283,7 +2283,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/contact-page@workspace:landing/pages/contact-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -2306,7 +2306,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/contract-offer-fragment@workspace:landing/fragments/landing-contract-offer"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2328,7 +2328,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/contract-offer-page@workspace:landing/pages/contract-offer-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -2352,7 +2352,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/course-process-fragment@workspace:landing/fragments/landing-course-process"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2394,7 +2394,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/faq@workspace:landing/fragments/landing-faq"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/styled": "npm:^11.11.0"
     "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
@@ -2404,7 +2404,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:^7.6.2"
+    framer-motion: "npm:^7.10.3"
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -2421,7 +2421,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/feeling-of-time-page@workspace:landing/pages/feeling-of-time-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -2451,7 +2451,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fifth-dimension-page@workspace:landing/pages/fifth-dimension-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -2481,7 +2481,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/footer-fragment@workspace:landing/fragments/landing-footer"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/background": "workspace:0.0.1"
@@ -2506,7 +2506,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@landing/consultation": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
@@ -2518,7 +2518,7 @@ __metadata:
     "@ui/logo": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:^7.6.2"
+    framer-motion: "npm:^7.10.3"
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -2536,7 +2536,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-hero-connacol"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/advantages-fragment": "workspace:0.0.1"
     "@landing/banner-connacol-fragment": "workspace:0.0.1"
     "@landing/program-connacol-fragment": "workspace:0.0.1"
@@ -2556,7 +2556,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-hero-feeling-of-time"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/banner-feeling-of-time-fragment": "workspace:0.0.1"
     "@landing/program-feeling-of-time-fragment": "workspace:0.0.1"
     "@landing/target-audience-feeling-of-time-fragment": "workspace:0.0.1"
@@ -2576,7 +2576,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-hero-fifth-dimension"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/banner-fifth-dimension-fragment": "workspace:0.0.1"
     "@landing/program-fifth-dimension-fragment": "workspace:0.0.1"
     "@landing/target-audience-fifth-dimension-fragment": "workspace:0.0.1"
@@ -2596,7 +2596,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-fragment@workspace:landing/fragments/landing-hero"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/banner-fragment": "workspace:0.0.1"
     "@landing/choose-course-fragment": "workspace:0.0.1"
     "@landing/tape-fragment": "workspace:0.0.1"
@@ -2616,7 +2616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-hero-opening-the-rhythm"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/after-the-course-fragment": "workspace:0.0.1"
     "@landing/banner-opening-the-rhythm-fragment": "workspace:0.0.1"
     "@landing/skills-fragment": "workspace:0.0.1"
@@ -2637,7 +2637,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-hero-polyrhythmic-keys"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/banner-polyrhythmic-keys-fragment": "workspace:0.0.1"
     "@landing/program-polyrhythmic-keys-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
@@ -2656,7 +2656,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/hero-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-hero-seventh-heaven"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/banner-seventh-heaven-fragment": "workspace:0.0.1"
     "@landing/program-seventh-heaven-fragment": "workspace:0.0.1"
     "@landing/target-audience-seventh-heaven-fragment": "workspace:0.0.1"
@@ -2676,7 +2676,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/index-page@workspace:landing/pages/index-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -2707,7 +2707,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/learning-process-fragment@workspace:landing/fragments/landing-learning-process"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2731,7 +2731,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/learning-students@workspace:landing/fragments/landing-students"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2747,7 +2747,7 @@ __metadata:
     "@ui/tag": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -2767,7 +2767,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-connacol@workspace:landing/pages/connacol-page/fragments/landing-modal-form-connacol"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2780,7 +2780,7 @@ __metadata:
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2799,7 +2799,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-feeling-of-time@workspace:landing/pages/feeling-of-time-page/fragments/landing-modal-form-feeling-of-time"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2812,7 +2812,7 @@ __metadata:
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2831,7 +2831,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-fifth-dimension@workspace:landing/pages/fifth-dimension-page/fragments/landing-modal-form-fifth-dimension"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2844,7 +2844,7 @@ __metadata:
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2863,7 +2863,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-opening-the-rhythm@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-modal-form-opening-the-rhythm"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2876,7 +2876,7 @@ __metadata:
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2895,7 +2895,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-polyrhythmic-keys@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-modal-form-polyrhythmic-keys"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2907,7 +2907,7 @@ __metadata:
     "@ui/modal": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2926,7 +2926,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/modal-form-seventh-heaven@workspace:landing/pages/seventh-heaven-page/fragments/landing-modal-form-seventh-heaven"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -2939,7 +2939,7 @@ __metadata:
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
@@ -2958,7 +2958,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/consultation": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/background": "workspace:0.0.1"
@@ -2972,7 +2972,7 @@ __metadata:
     "@ui/logo": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:^7.6.2"
+    framer-motion: "npm:^7.10.3"
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -2988,7 +2988,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/opening-the-rhythm-page@workspace:landing/pages/opening-the-rhythm-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -3019,7 +3019,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/polyrhythmic-keys-page@workspace:landing/pages/polyrhythmic-keys-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -3048,7 +3048,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-price-connacol"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@landing/modal-form-connacol": "workspace:0.0.1"
@@ -3073,7 +3073,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-price-feeling-of-time"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@landing/modal-form-feeling-of-time": "workspace:0.0.1"
@@ -3098,7 +3098,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-price-fifth-dimension"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@landing/modal-form-fifth-dimension": "workspace:0.0.1"
@@ -3123,7 +3123,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-opening-the-rhythm-fragment@workspace:landing/pages/opening-the-rhythm-page/fragments/landing-price-opening-the-rhythm"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@landing/modal-form-opening-the-rhythm": "workspace:0.0.1"
@@ -3148,7 +3148,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@landing/modal-form-polyrhythmic-keys": "workspace:0.0.1"
@@ -3173,7 +3173,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/price-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-price-seventh-heaven"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@landing/modal-form-seventh-heaven": "workspace:0.0.1"
@@ -3198,7 +3198,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/privacy-policy-fragment@workspace:landing/fragments/landing-privacy-policy"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -3220,7 +3220,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/privacy-policy-page@workspace:landing/pages/privacy-policy-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -3244,7 +3244,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/private-lesson-fragment@workspace:landing/fragments/landing-private-lesson"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@landing/consultation": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/button": "workspace:0.0.1"
@@ -3264,7 +3264,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-program-connacol"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@types/uniqid": "npm:^5.3.2"
@@ -3285,7 +3285,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-program-feeling-of-time"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@types/uniqid": "npm:^5.3.2"
@@ -3306,7 +3306,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-program-fifth-dimension"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
@@ -3326,7 +3326,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-fragment@workspace:landing/fragments/landing-program"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@types/react": "npm:18.2.6"
     "@types/uniqid": "npm:^5.3.2"
     "@ui/condition": "workspace:0.0.1"
@@ -3350,7 +3350,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-polyrhythmic-keys-fragment@workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-program-polyrhythmic-keys"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
@@ -3370,7 +3370,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/program-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-program-seventh-heaven"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
@@ -3390,8 +3390,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@atls/next-document-with-helmet": "npm:^0.2.64"
+    "@apollo/client": "npm:^3.7.14"
+    "@atls/next-document-with-helmet": "npm:^0.2.67"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@globals/data": "workspace:0.0.1"
@@ -3427,7 +3427,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/seventh-heaven-page@workspace:landing/pages/seventh-heaven-page"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
@@ -3510,7 +3510,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/target-audience-feeling-of-time-fragment@workspace:landing/pages/feeling-of-time-page/fragments/landing-target-audience-feeling-of-time"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@types/react": "npm:18.2.6"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -3527,7 +3527,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/target-audience-fifth-dimension-fragment@workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@types/react": "npm:18.2.6"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -3544,7 +3544,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/target-audience-seventh-heaven-fragment@workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@types/react": "npm:18.2.6"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -3561,7 +3561,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/teacher-fragment@workspace:landing/fragments/landing-teacher"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/react": "npm:18.2.6"
@@ -3590,68 +3590,68 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@motionone/animation@npm:^10.13.1":
-  version: 10.14.0
-  resolution: "@motionone/animation@npm:10.14.0"
+"@motionone/animation@npm:^10.15.1":
+  version: 10.15.1
+  resolution: "@motionone/animation@npm:10.15.1"
   dependencies:
-    "@motionone/easing": "npm:^10.14.0"
-    "@motionone/types": "npm:^10.14.0"
-    "@motionone/utils": "npm:^10.14.0"
+    "@motionone/easing": "npm:^10.15.1"
+    "@motionone/types": "npm:^10.15.1"
+    "@motionone/utils": "npm:^10.15.1"
     tslib: "npm:^2.3.1"
-  checksum: 8fa21a1a0176007dee937981cb1a360cca4ffaea2c1c660f83cb020fe075f0695f3ef16c560d5c91c5e9e77503a90ff3b56db795d196cde543d80f7dd46f5822
+  checksum: 841c34406cf7cdea41856c87ec5a39228c390b71b3a88e6cb5628f3ddf234aa6b3822abaf96ef8da5d9e3f95f8924ca1cde9764db1d9decd99071ff8104c0b29
   languageName: node
   linkType: hard
 
-"@motionone/dom@npm:10.13.1":
-  version: 10.13.1
-  resolution: "@motionone/dom@npm:10.13.1"
+"@motionone/dom@npm:^10.15.3":
+  version: 10.15.5
+  resolution: "@motionone/dom@npm:10.15.5"
   dependencies:
-    "@motionone/animation": "npm:^10.13.1"
-    "@motionone/generators": "npm:^10.13.1"
-    "@motionone/types": "npm:^10.13.0"
-    "@motionone/utils": "npm:^10.13.1"
+    "@motionone/animation": "npm:^10.15.1"
+    "@motionone/generators": "npm:^10.15.1"
+    "@motionone/types": "npm:^10.15.1"
+    "@motionone/utils": "npm:^10.15.1"
     hey-listen: "npm:^1.0.8"
     tslib: "npm:^2.3.1"
-  checksum: 422f9a18074cee4e18f9e6091beb50bfdc2f559af7be026bbced266259cc25f1301be7725f13b857aba0ad98dc67f44b63784fc8113b6c695b089180cd09afe1
+  checksum: e10451e8a9c68b466e64bbafdb349793fe78a5a40994a0505e9a80890958632fff8685d6e72a031af4413c70894787d98feca90893a58298983e13dc89f7e517
   languageName: node
   linkType: hard
 
-"@motionone/easing@npm:^10.14.0":
-  version: 10.14.0
-  resolution: "@motionone/easing@npm:10.14.0"
+"@motionone/easing@npm:^10.15.1":
+  version: 10.15.1
+  resolution: "@motionone/easing@npm:10.15.1"
   dependencies:
-    "@motionone/utils": "npm:^10.14.0"
+    "@motionone/utils": "npm:^10.15.1"
     tslib: "npm:^2.3.1"
-  checksum: ad96d02d96551fe1142be1cea510db1612394823c08d9f0f7070c9957f5692ff0ad91067564807ae91b09171365be4a4fe8881acf74eac238ab1efd7efe8c98c
+  checksum: 684442a06fba7115afe43ab4774d4645549a4473ac4deab780fd3ecfb25eee7ee4ff181bf56cc30102c6eb79cab5e5e831d40bb2b75d5cbdc1566f1ee255db2e
   languageName: node
   linkType: hard
 
-"@motionone/generators@npm:^10.13.1":
-  version: 10.14.0
-  resolution: "@motionone/generators@npm:10.14.0"
+"@motionone/generators@npm:^10.15.1":
+  version: 10.15.1
+  resolution: "@motionone/generators@npm:10.15.1"
   dependencies:
-    "@motionone/types": "npm:^10.14.0"
-    "@motionone/utils": "npm:^10.14.0"
+    "@motionone/types": "npm:^10.15.1"
+    "@motionone/utils": "npm:^10.15.1"
     tslib: "npm:^2.3.1"
-  checksum: 194319e28eb80ddcba3b3b1d415e04430582a587379dbfa1b576ecbbb1219dcc54495b5b23775f47aa647dbb2a6e607430d3ec4862e1dec061a04c397077d723
+  checksum: 27fd15b733497e3e2f4436869171159820ac10bf18f8ecfe4f8f95ffd0a38964536c0cb21569b0aa807ade9bdcef45af1523aa6e1ca05c407da655541dd2eb8f
   languageName: node
   linkType: hard
 
-"@motionone/types@npm:^10.13.0, @motionone/types@npm:^10.14.0":
-  version: 10.14.0
-  resolution: "@motionone/types@npm:10.14.0"
-  checksum: 2d7f02490d55a1d9394891d684af2ed8bef3aa5f26d41a8c9f3bd3d02a40a8c8d1db2ad01eade3b346d50965ff24788c888c604a371e8454e08dc26cc68c7e8c
+"@motionone/types@npm:^10.15.1":
+  version: 10.15.1
+  resolution: "@motionone/types@npm:10.15.1"
+  checksum: 5d0b511d22dbede545624486c2803ddc25391ccfd892cb20365ad77f0d4bceb3cd03a2d6c2e94c51693892aac98955771b8c856526e59245e20d00184719c4cc
   languageName: node
   linkType: hard
 
-"@motionone/utils@npm:^10.13.1, @motionone/utils@npm:^10.14.0":
-  version: 10.14.0
-  resolution: "@motionone/utils@npm:10.14.0"
+"@motionone/utils@npm:^10.15.1":
+  version: 10.15.1
+  resolution: "@motionone/utils@npm:10.15.1"
   dependencies:
-    "@motionone/types": "npm:^10.14.0"
+    "@motionone/types": "npm:^10.15.1"
     hey-listen: "npm:^1.0.8"
     tslib: "npm:^2.3.1"
-  checksum: 9981b108e4a42d3b98b1c49543c7f669eb9ee941036b94611f6e9b23aab9b0a8c3d32cf2504d32f8f732edae9e470cd2ef2682445b5c3d47a7b7fce94574e430
+  checksum: b34187e1ef4b91614cfd9ff3ae388088911c4186a5330f29878547751b5c8b7039e2addd8e69bfcf41581ea14c36d3d65d1bd49683a76e15c76767041d9c1c96
   languageName: node
   linkType: hard
 
@@ -4540,7 +4540,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    framer-motion: "npm:^4.1.7"
+    framer-motion: "npm:^4.1.17"
     react: "npm:^17.0.2"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
@@ -4635,7 +4635,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react: "npm:^17.0.2"
   peerDependencies:
     "@emotion/react": "*"
@@ -4653,7 +4653,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@types/styled-system": "npm:^5.1.16"
     "@ui/layout": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     react: "npm:^17.0.2"
     react-dom: "npm:18.2.0"
     react-intl: "npm:^6.4.2"
@@ -4687,7 +4687,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
-    "@apollo/client": "npm:^3.6.9"
+    "@apollo/client": "npm:^3.7.14"
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/styled-system": "npm:^5.1.16"
@@ -4862,7 +4862,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@types/styled-system": "npm:^5.1.16"
     "@ui/layout": "workspace:0.0.1"
-    framer-motion: "npm:7.6.2"
+    framer-motion: "npm:7.10.3"
     next: "npm:12.1.0"
     styled-system: "npm:^5.1.5"
   peerDependencies:
@@ -7282,16 +7282,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.6.2":
-  version: 7.6.2
-  resolution: "framer-motion@npm:7.6.2"
+"framer-motion@npm:7.10.3, framer-motion@npm:^7.10.3":
+  version: 7.10.3
+  resolution: "framer-motion@npm:7.10.3"
   dependencies:
     "@emotion/is-prop-valid": "npm:^0.8.2"
-    "@motionone/dom": "npm:10.13.1"
-    framesync: "npm:6.1.2"
+    "@motionone/dom": "npm:^10.15.3"
     hey-listen: "npm:^1.0.8"
-    popmotion: "npm:11.0.5"
-    style-value-types: "npm:5.1.2"
     tslib: "npm:2.4.0"
   peerDependencies:
     react: ^18.0.0
@@ -7299,11 +7296,11 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 0f25904bfe14cf11bb3e839c819b4b0f3545d56ef25b99819ed6f67f1cb623a3ccb5299e9f87f95b08455e23f58ca3e3cf7be53b080e786751e4aaf7ee30b3f0
+  checksum: c149a36dd740aa591f042676c53b9a97b0ce904e55cee499235b0dd3acaf9a20b0a80c9570f71b3619c65d498aec3bf01408fef49cb45ce85e6f0c78ecf7c755
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^4.1.7":
+"framer-motion@npm:^4.1.17":
   version: 4.1.17
   resolution: "framer-motion@npm:4.1.17"
   dependencies:
@@ -7323,42 +7320,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^7.6.2":
-  version: 7.6.9
-  resolution: "framer-motion@npm:7.6.9"
-  dependencies:
-    "@emotion/is-prop-valid": "npm:^0.8.2"
-    "@motionone/dom": "npm:10.13.1"
-    framesync: "npm:6.1.2"
-    hey-listen: "npm:^1.0.8"
-    popmotion: "npm:11.0.5"
-    style-value-types: "npm:5.1.2"
-    tslib: "npm:2.4.0"
-  peerDependencies:
-    react: ^18.0.0
-    react-dom: ^18.0.0
-  dependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
-  checksum: 8b34bf6267f402f61cc554841d071eba9ce43976120ae36460a520705f68542dcd29e3dabad2b1a4db4c2863dfb4b53b5ff2c944df8533698feed59fe5dea164
-  languageName: node
-  linkType: hard
-
 "framesync@npm:5.3.0":
   version: 5.3.0
   resolution: "framesync@npm:5.3.0"
   dependencies:
     tslib: "npm:^2.1.0"
   checksum: d8cbdad630139de391b64b3dea77a184ada1db52579a8ee39ed0cc91afe964663a8a85493019e8c1d6177cb5d1a5ea375cf32a944702c1ae57d7ecf4fcc6dfd6
-  languageName: node
-  linkType: hard
-
-"framesync@npm:6.1.2":
-  version: 6.1.2
-  resolution: "framesync@npm:6.1.2"
-  dependencies:
-    tslib: "npm:2.4.0"
-  checksum: 9c1ca27d12c64c4031cf7fce61d12090e044eaf36f9554594c2c79fd7fdc7490ec42fee082ca75deb483383ef94e5518b87a4311ea95ab7ecc21b8472546fe17
   languageName: node
   linkType: hard
 
@@ -9360,7 +9327,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"optimism@npm:^0.16.1":
+"optimism@npm:^0.16.2":
   version: 0.16.2
   resolution: "optimism@npm:0.16.2"
   dependencies:
@@ -9542,18 +9509,6 @@ __metadata:
   version: 4.0.5
   resolution: "pirates@npm:4.0.5"
   checksum: 1ade661dec736ffce6976c3430d37412bb75d7ba7caeb36ce3142de9b8bea4f756f0b317a2a24a28dd9e84adbf7a7819bfdca719126ccc44bf27b62d4a880eda
-  languageName: node
-  linkType: hard
-
-"popmotion@npm:11.0.5":
-  version: 11.0.5
-  resolution: "popmotion@npm:11.0.5"
-  dependencies:
-    framesync: "npm:6.1.2"
-    hey-listen: "npm:^1.0.8"
-    style-value-types: "npm:5.1.2"
-    tslib: "npm:2.4.0"
-  checksum: b68e204972f79d49e47e10220e89466bbcd57ce93b3f2a34eb50283dcb16bc8b0f10333277a8912ffc1e8ace4e31a22c77cd18a5b91b856bf3c6f7d82f5b767d
   languageName: node
   linkType: hard
 
@@ -10443,16 +10398,6 @@ __metadata:
     hey-listen: "npm:^1.0.8"
     tslib: "npm:^2.1.0"
   checksum: 51856043199451028354f2eafd4cd69adb13c79329f6c4450bfcfc32340535a7da0c4d2fccaa0ea7f3eea23f7542a331a3fa736d23215b7b2d9c29aea9bc0cac
-  languageName: node
-  linkType: hard
-
-"style-value-types@npm:5.1.2":
-  version: 5.1.2
-  resolution: "style-value-types@npm:5.1.2"
-  dependencies:
-    hey-listen: "npm:^1.0.8"
-    tslib: "npm:2.4.0"
-  checksum: b97e2226987cc8df51c933b7c1724e2d67c3c9d6747993d31a6fcab75a5230412d30cd3eb0d231e270c609f8ef2bde7fcbdff206ba4a5d58afd4472689e76b58
   languageName: node
   linkType: hard
 

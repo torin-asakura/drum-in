@@ -10,8 +10,8 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "@apollo/client": "^3.6.9",
-    "@atls/next-document-with-helmet": "^0.2.64",
+    "@apollo/client": "^3.7.14",
+    "@atls/next-document-with-helmet": "^0.2.67",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "graphql": "^15.5.1",
