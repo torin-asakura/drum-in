@@ -58,14 +58,14 @@ const ProgramFeelingOfTimeBlock = () => {
               >
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 2700, wide: 2000 }} flexShrink={0} />
                 <Box width={{ _: 0, tablet: 0, laptop: 2000, wide: 2612 }}>
-                  <ProgramIcon width='100%' height='auto' />
+                  <ProgramIcon width='100%' height='100%' />
                 </Box>
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 720, wide: 970 }} flexShrink={0} />
                 <ContentCourse />
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 627 }} flexShrink={0} />
                 <Column justifyContent='end'>
                   <Box width={{ _: 0, tablet: 0, laptop: 170, wide: 283 }}>
-                    <ArrowTopDownIcon width='100%' height='auto' />
+                    <ArrowTopDownIcon width='100%' height='100%' />
                   </Box>
                   <Layout flexBasis={{ _: 0, tablet: 0, laptop: 160, wide: 230 }} flexShrink={0} />
                 </Column>
@@ -96,7 +96,7 @@ const ProgramFeelingOfTimeBlock = () => {
         <Column width='100%'>
           <Layout flexBasis={[32, 44, 0]} />
           <Box width={[335, 480, 0]}>
-            <ProgramIcon width='100%' height='auto' />
+            <ProgramIcon width='100%' height='100%' />
           </Box>
           <Layout flexBasis={[81, 110, 0]} />
           <ContentMobileCourse />
