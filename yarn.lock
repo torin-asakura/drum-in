@@ -3433,7 +3433,7 @@ __metadata:
     react-helmet: "npm:^6.1.0"
     react-intl: "npm:^6.4.2"
     recompose: "npm:^0.30.0"
-    typescript: "npm:^4.8.4"
+    typescript: "npm:^4.9.5"
   languageName: unknown
   linkType: soft
 
@@ -6742,7 +6742,7 @@ __metadata:
     "@types/uniqid": "npm:^5.3.2"
     eslint: "npm:8.18.0"
     husky: "npm:^8.0.3"
-    typescript: "npm:^4.8.4"
+    typescript: "npm:^4.9.5"
     uniqid: "npm:^5.4.0"
   languageName: unknown
   linkType: soft
