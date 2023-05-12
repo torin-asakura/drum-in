@@ -15,7 +15,7 @@
     "@ui/utils": "workspace:0.0.1",
     "framer-motion": "10.12.10",
     "styled-system": "^5.1.5",
-    "swiper": "^8.4.7"
+    "swiper": "^9.3.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.7.14",

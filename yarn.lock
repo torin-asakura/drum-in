@@ -1974,7 +1974,7 @@ __metadata:
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.4.7"
+    swiper: "npm:^9.3.1"
     uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -2189,7 +2189,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.4.7"
+    swiper: "npm:^9.3.1"
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
@@ -2362,7 +2362,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.4.7"
+    swiper: "npm:^9.3.1"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -2751,7 +2751,7 @@ __metadata:
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.4.7"
+    swiper: "npm:^9.3.1"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -3337,7 +3337,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
-    swiper: "npm:^8.4.7"
+    swiper: "npm:^9.3.1"
     uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -3575,7 +3575,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.4.7"
+    swiper: "npm:^9.3.1"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -4822,7 +4822,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
-    swiper: "npm:^8.4.7"
+    swiper: "npm:^9.3.1"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -6690,15 +6690,6 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 6b38a63fa66847d80e130bb85c83c173b1050037fffac3d5f740c8c691243d5b6fadc5ec502ae8297c474680d879eb24ad8ec7f901673704fe40c8dedc1bee62
-  languageName: node
-  linkType: hard
-
-"dom7@npm:^4.0.4":
-  version: 4.0.4
-  resolution: "dom7@npm:4.0.4"
-  dependencies:
-    ssr-window: "npm:^4.0.0"
-  checksum: 37e3867d6e79fef81e3dc58ab8031c7e5bb655de54f5fc6957582f92f61b8932471f9c1bfe0c0a8d9f100c28f4cf1028002856fc6db5123bc86d6accb5f24bac
   languageName: node
   linkType: hard
 
@@ -10166,7 +10157,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+"ssr-window@npm:^4.0.2":
   version: 4.0.2
   resolution: "ssr-window@npm:4.0.2"
   checksum: 8235ddf1dc542231f534660eaf76a4d605a8c66ee247806e0965099625784b2b781aacbead7e2d1068b9cb5972aa7fc9f53e4396c0ddac0482d101713d4ac0fa
@@ -10378,13 +10369,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:^8.4.7":
-  version: 8.4.7
-  resolution: "swiper@npm:8.4.7"
+"swiper@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "swiper@npm:9.3.1"
   dependencies:
-    dom7: "npm:^4.0.4"
     ssr-window: "npm:^4.0.2"
-  checksum: 900c18cada7722170a8c57405faf99476503f8dafcd836773d1dcff1a2bf6be97e6b8ede36dafbc83e5dcffb4839a4a7a723c42373d2bf9107ce01f9911e124d
+  checksum: db1d31b750a94c1fdf61406ecef175eb3aa0cc1839a22ea5b3c6fb813135990d7b6e7433f765b6db2ee1873e936e91e9f053c0183d669098bf3bbd5bbfb1f2bc
   languageName: node
   linkType: hard
 

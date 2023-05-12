@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react'
+import React                from 'react'
 import { FC }               from 'react'
 import { useAnimation }     from 'framer-motion'
+import { useEffect }        from 'react'
 import { useState }         from 'react'
 
 import { Condition }        from '@ui/condition'
@@ -22,8 +23,8 @@ const Accordion: FC<AccordionProps> = ({ title, content }) => {
   const controls = useAnimation()
 
   useEffect(() => {
-    controls.start(active ? { height: 'min-content' } : { height: 0, overflow: 'hidden'})
-  }, [active])
+    controls.start(active ? { height: 'min-content' } : { height: 0, overflow: 'hidden' })
+  }, [active, controls])
 
   return (
     <>

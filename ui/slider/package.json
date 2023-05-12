@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/swiper": "^0.0.3",
-    "swiper": "^8.4.7"
+    "swiper": "^9.3.1"
   },
   "devDependencies": {
     "@emotion/css": "^11.11.0",
