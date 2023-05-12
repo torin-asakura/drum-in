@@ -1581,7 +1581,7 @@ __metadata:
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
     "@apollo/client": "npm:^3.7.14"
-    graphql: "npm:^15.8.0"
+    graphql: "npm:^16.6.0"
     react: "npm:^18.2.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -3425,7 +3425,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@types/react-helmet": "npm:^6.1.6"
     "@ui/theme": "workspace:0.0.1"
-    graphql: "npm:^15.8.0"
+    graphql: "npm:^16.6.0"
     locomotive-scroll: "npm:^4.1.4"
     next: "npm:^12.1.0"
     react: "npm:^18.2.0"
@@ -7628,10 +7628,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^15.8.0":
-  version: 15.8.0
-  resolution: "graphql@npm:15.8.0"
-  checksum: e09073b981965b99d22717ed219c55086375075db0870a5a934e1d777d645a155f10141dfe1d0d9713b35765790fb257d6d198d75a53e02ba0126f16befc899c
+"graphql@npm:^16.6.0":
+  version: 16.6.0
+  resolution: "graphql@npm:16.6.0"
+  checksum: 686582916b9ca247f3562f086c34a6363155475da909e1f891f9a76a3b5273ed6c7034cd5a82e768670ac5a74d539a6f1be282253a92b49be3a489fc82e83a5b
   languageName: node
   linkType: hard
 

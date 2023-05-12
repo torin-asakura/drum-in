@@ -689,7 +689,7 @@ const RAW_RUNTIME_STATE =
           ["@wry/context", "npm:0.7.0"],\
           ["@wry/equality", "npm:0.5.3"],\
           ["@wry/trie", "npm:0.3.2"],\
-          ["graphql", "npm:15.8.0"],\
+          ["graphql", "npm:16.6.0"],\
           ["graphql-tag", "virtual:0fe2b5469ff81a447f9e22475364dd32eefddf45aa9d1101e541a9f9d57a6bcaacb0471e050af54349c23c886ecbd009e6a2e98c4195b93ca1d4b90e2b32915b#npm:2.12.6"],\
           ["graphql-ws", null],\
           ["hoist-non-react-statics", "npm:3.3.2"],\
@@ -815,7 +815,7 @@ const RAW_RUNTIME_STATE =
           ["@wry/context", "npm:0.7.0"],\
           ["@wry/equality", "npm:0.5.3"],\
           ["@wry/trie", "npm:0.3.2"],\
-          ["graphql", "npm:15.8.0"],\
+          ["graphql", "npm:16.6.0"],\
           ["graphql-tag", "virtual:0fe2b5469ff81a447f9e22475364dd32eefddf45aa9d1101e541a9f9d57a6bcaacb0471e050af54349c23c886ecbd009e6a2e98c4195b93ca1d4b90e2b32915b#npm:2.12.6"],\
           ["graphql-ws", null],\
           ["hoist-non-react-statics", "npm:3.3.2"],\
@@ -3861,7 +3861,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.7.14"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
-          ["graphql", "npm:15.8.0"],\
+          ["graphql", "npm:16.6.0"],\
           ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
@@ -3878,7 +3878,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.7.14"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
-          ["graphql", "npm:15.8.0"],\
+          ["graphql", "npm:16.6.0"],\
           ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
@@ -3894,7 +3894,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@globals/data", "workspace:globals/data"],\
           ["@apollo/client", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#npm:3.7.14"],\
-          ["graphql", "npm:15.8.0"],\
+          ["graphql", "npm:16.6.0"],\
           ["react", "npm:18.2.0"]\
         ],\
         "linkType": "SOFT"\
@@ -3913,7 +3913,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@graphql-typed-document-node/core", "virtual:0fe2b5469ff81a447f9e22475364dd32eefddf45aa9d1101e541a9f9d57a6bcaacb0471e050af54349c23c886ecbd009e6a2e98c4195b93ca1d4b90e2b32915b#npm:3.1.2"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:15.8.0"]\
+          ["graphql", "npm:16.6.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -10603,7 +10603,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:17.0.18"],\
           ["@types/react-helmet", "npm:6.1.6"],\
           ["@ui/theme", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:ui/theme"],\
-          ["graphql", "npm:15.8.0"],\
+          ["graphql", "npm:16.6.0"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["next", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:12.1.0"],\
           ["react", "npm:18.2.0"],\
@@ -20534,10 +20534,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["graphql", [\
-      ["npm:15.8.0", {\
-        "packageLocation": "../../../../.yarn/berry/cache/graphql-npm-15.8.0-0156c66b65-9.zip/node_modules/graphql/",\
+      ["npm:16.6.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/graphql-npm-16.6.0-301c470966-9.zip/node_modules/graphql/",\
         "packageDependencies": [\
-          ["graphql", "npm:15.8.0"]\
+          ["graphql", "npm:16.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20555,7 +20555,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["graphql-tag", "virtual:0fe2b5469ff81a447f9e22475364dd32eefddf45aa9d1101e541a9f9d57a6bcaacb0471e050af54349c23c886ecbd009e6a2e98c4195b93ca1d4b90e2b32915b#npm:2.12.6"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:15.8.0"],\
+          ["graphql", "npm:16.6.0"],\
           ["tslib", "npm:2.3.1"]\
         ],\
         "packagePeers": [\
