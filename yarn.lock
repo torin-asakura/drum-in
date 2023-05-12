@@ -1582,7 +1582,7 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:^3.7.14"
     graphql: "npm:^15.8.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -1974,7 +1974,7 @@ __metadata:
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.3.1"
+    swiper: "npm:^8.4.7"
     uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -2189,7 +2189,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.3.1"
+    swiper: "npm:^8.4.7"
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
@@ -2362,7 +2362,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.3.1"
+    swiper: "npm:^8.4.7"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -2751,7 +2751,7 @@ __metadata:
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.3.1"
+    swiper: "npm:^8.4.7"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -3337,7 +3337,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
-    swiper: "npm:^8.3.1"
+    swiper: "npm:^8.4.7"
     uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -3414,7 +3414,7 @@ __metadata:
     graphql: "npm:^15.8.0"
     locomotive-scroll: "npm:^4.1.4"
     next: "npm:^12.1.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-helmet: "npm:^6.1.0"
     react-intl: "npm:^6.4.2"
@@ -3575,7 +3575,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:^6.4.2"
     styled-tools: "npm:^1.7.2"
-    swiper: "npm:^8.3.1"
+    swiper: "npm:^8.4.7"
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -4541,7 +4541,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: "npm:^4.1.17"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
   peerDependencies:
@@ -4561,7 +4561,7 @@ __metadata:
     "@emotion/styled": "npm:^11.11.0"
     "@types/styled-system": "npm:^5.1.16"
     next: "npm:12.1.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
   peerDependencies:
@@ -4589,7 +4589,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -4616,7 +4616,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/theme": "workspace:^"
     "@ui/utils": "workspace:0.0.1"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -4636,7 +4636,7 @@ __metadata:
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     framer-motion: "npm:7.10.3"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -4654,7 +4654,7 @@ __metadata:
     "@types/styled-system": "npm:^5.1.16"
     "@ui/layout": "workspace:0.0.1"
     framer-motion: "npm:7.10.3"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:18.2.0"
     react-intl: "npm:^6.4.2"
     styled-system: "npm:^5.1.5"
@@ -4699,7 +4699,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-google-recaptcha-v3: "npm:^1.10.1"
     react-intl: "npm:^6.4.2"
@@ -4725,7 +4725,7 @@ __metadata:
     "@types/glob": "npm:^8.1.0"
     glob: "npm:^8.1.0"
     glob-promise: "npm:3.4.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -4743,7 +4743,7 @@ __metadata:
     "@types/react": "npm:18.2.6"
     "@types/react-dom": "npm:^18.2.4"
     "@types/styled-system": "npm:^5.1.16"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
   languageName: unknown
@@ -4759,7 +4759,7 @@ __metadata:
     "@types/styled-system": "npm:^5.1.16"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -4778,7 +4778,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -4794,7 +4794,7 @@ __metadata:
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/styled-system": "npm:^5.1.16"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
   peerDependencies:
@@ -4817,7 +4817,7 @@ __metadata:
     "@types/styled-system": "npm:^5.1.16"
     "@ui/text": "workspace:0.0.1"
     next: "npm:^12.2.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
   peerDependencies:
@@ -4839,7 +4839,7 @@ __metadata:
     "@types/styled-system": "npm:^5.1.16"
     "@ui/link": "workspace:0.0.1"
     next: "npm:12.1.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
   peerDependencies:
@@ -4884,10 +4884,10 @@ __metadata:
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/styled-system": "npm:^5.1.16"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
-    swiper: "npm:^8.4.3"
+    swiper: "npm:^8.4.7"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -4912,7 +4912,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     events: "npm:^3.3.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -4933,7 +4933,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
   peerDependencies:
     "@emotion/react": "*"
@@ -4951,7 +4951,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-intl: "npm:^6.4.2"
   peerDependencies:
@@ -4969,7 +4969,7 @@ __metadata:
     "@emotion/react": "npm:^11.11.0"
     "@emotion/styled": "npm:^11.11.0"
     "@types/styled-system": "npm:^5.1.16"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
@@ -4987,7 +4987,7 @@ __metadata:
   resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
     "@emotion/react": "npm:^11.11.0"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     seamless-scroll-polyfill: "npm:^2.3.4"
   peerDependencies:
@@ -5004,7 +5004,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@types/uniqid": "npm:^5.3.2"
     "@ui/condition": "workspace:0.0.1"
-    react: "npm:^17.0.2"
+    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-laag: "npm:^2.0.5"
     uniqid: "npm:^5.4.0"
@@ -10498,13 +10498,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:^8.3.1, swiper@npm:^8.4.3":
-  version: 8.4.5
-  resolution: "swiper@npm:8.4.5"
+"swiper@npm:^8.4.7":
+  version: 8.4.7
+  resolution: "swiper@npm:8.4.7"
   dependencies:
     dom7: "npm:^4.0.4"
     ssr-window: "npm:^4.0.2"
-  checksum: 3fb561013977dc62cad66f7b068aa271212707c92bfd8e8e8074a0d9dbf81ab1d9ddaeccae9d2dcadb277aa20ef4a1763fdc0eed3be2862a4b2dfb40d88feaed
+  checksum: 900c18cada7722170a8c57405faf99476503f8dafcd836773d1dcff1a2bf6be97e6b8ede36dafbc83e5dcffb4839a4a7a723c42373d2bf9107ce01f9911e124d
   languageName: node
   linkType: hard
 

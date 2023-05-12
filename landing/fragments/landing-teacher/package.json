@@ -11,7 +11,7 @@
     "@ui/slider": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1",
-    "swiper": "^8.3.1"
+    "swiper": "^8.4.7"
   },
   "devDependencies": {
     "@apollo/client": "^3.7.14",
