@@ -3673,7 +3673,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@forks-react-locomotive-scroll-virtual-e78b67761d/1/forks/react-locomotive-scroll/",\
         "packageDependencies": [\
           ["@forks/react-locomotive-scroll", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll"],\
-          ["@types/locomotive-scroll", null],\
+          ["@types/locomotive-scroll", "npm:4.1.0"],\
           ["@types/react", "npm:17.0.47"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["react", null],\
@@ -3681,7 +3681,6 @@ const RAW_RUNTIME_STATE =
           ["use-resize-observer", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.1.0"]\
         ],\
         "packagePeers": [\
-          "@types/locomotive-scroll",\
           "@types/react",\
           "react"\
         ],\
@@ -3691,7 +3690,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@forks-react-locomotive-scroll-virtual-238acfd2a1/1/forks/react-locomotive-scroll/",\
         "packageDependencies": [\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
-          ["@types/locomotive-scroll", null],\
+          ["@types/locomotive-scroll", "npm:4.1.0"],\
           ["@types/react", "npm:17.0.47"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["react", "npm:18.2.0"],\
@@ -3699,7 +3698,6 @@ const RAW_RUNTIME_STATE =
           ["use-resize-observer", "virtual:238acfd2a1652d2c804032848bab5015aff2d5ec4c8906bd6cb44f131da2ba2d9088b97968a775c620daf7dde66ebf1edb1d14d736536bfd218702941cd5d845#npm:9.1.0"]\
         ],\
         "packagePeers": [\
-          "@types/locomotive-scroll",\
           "@types/react",\
           "react"\
         ],\
@@ -3709,6 +3707,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./forks/react-locomotive-scroll/",\
         "packageDependencies": [\
           ["@forks/react-locomotive-scroll", "workspace:forks/react-locomotive-scroll"],\
+          ["@types/locomotive-scroll", "npm:4.1.0"],\
           ["@types/react", "npm:17.0.47"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["use-debounce", "virtual:9c4f1e0859cc9b2c9a9dfa2cd3d7552d442f4d122696559e0a7d5a40d79bae5eff609d3a7aa1a341d96549f702fee471ce762e9241f2024d0c4fb39d2f4bd454#npm:9.0.4"],\
@@ -12089,6 +12088,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/keyv", "npm:3.1.3"],\
           ["@types/node", "npm:16.18.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/locomotive-scroll", [\
+      ["npm:4.1.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-locomotive-scroll-npm-4.1.0-0bd236e3a8-9.zip/node_modules/@types/locomotive-scroll/",\
+        "packageDependencies": [\
+          ["@types/locomotive-scroll", "npm:4.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
