@@ -1,4 +1,4 @@
-import React                from 'react'
+import React, {useEffect} from 'react'
 import { FC }               from 'react'
 import { useAnimation }     from 'framer-motion'
 import { useState }         from 'react'
@@ -21,13 +21,9 @@ const Accordion: FC<AccordionProps> = ({ title, content }) => {
   const [visible, setVisible] = useState<boolean>(false)
   const controls = useAnimation()
 
-  if (active) {
-    controls.start({ height: 'min-content' })
-  }
-
-  if (!active) {
-    controls.start({ height: 0, overflow: 'hidden' })
-  }
+  useEffect(() => {
+    controls.start(active ? { height: 'min-content' } : { height: 0, overflow: 'hidden'})
+  }, [active])
 
   return (
     <>

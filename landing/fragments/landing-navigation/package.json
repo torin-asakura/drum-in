@@ -15,7 +15,7 @@
     "@ui/logo": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1",
-    "framer-motion": "^7.10.3"
+    "framer-motion": "^10.12.10"
   },
   "devDependencies": {
     "@apollo/client": "^3.7.14",
