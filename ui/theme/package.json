@@ -4,7 +4,7 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "seamless-scroll-polyfill": "^2.2.0"
+    "seamless-scroll-polyfill": "^2.3.4"
   },
   "devDependencies": {
     "@emotion/react": "^11.11.0",

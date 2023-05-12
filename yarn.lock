@@ -4972,7 +4972,7 @@ __metadata:
     react: "npm:^17.0.2"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.1"
+    styled-tools: "npm:^1.7.2"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -4989,7 +4989,7 @@ __metadata:
     "@emotion/react": "npm:^11.11.0"
     react: "npm:^17.0.2"
     react-dom: "npm:^18.2.0"
-    seamless-scroll-polyfill: "npm:^2.2.0"
+    seamless-scroll-polyfill: "npm:^2.3.4"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -10049,10 +10049,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"seamless-scroll-polyfill@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "seamless-scroll-polyfill@npm:2.2.0"
-  checksum: 936f8e6058325be514ea5f05e8435f0ecd584fd1749459b7c57ed1ec68849d8447ff30a1e78c39331a669ac0b3fde57f2b51956f1d2c12e51a8322b1114eb8b9
+"seamless-scroll-polyfill@npm:^2.3.4":
+  version: 2.3.4
+  resolution: "seamless-scroll-polyfill@npm:2.3.4"
+  checksum: a9acae2f54be588759b370349d5c406de7b48bd8d316643eeddea25ad878813254b30ea057a148d9c5e034ecd1e3b4c59ad199832119f37250d3c8cbfb248da4
   languageName: node
   linkType: hard
 
@@ -10436,7 +10436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-tools@npm:^1.7.1, styled-tools@npm:^1.7.2":
+"styled-tools@npm:^1.7.2":
   version: 1.7.2
   resolution: "styled-tools@npm:1.7.2"
   checksum: 726ba9b48df8bab6c091dc1508c9913e0b793a63a65099bfc28b1b807577fa5914644ba9f07ff49c8b1479d8b857a8877cb942ef5a2033385a87756fd3b3d596

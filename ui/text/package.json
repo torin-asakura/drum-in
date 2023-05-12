@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/text": "^0.0.10",
-    "styled-tools": "^1.7.1"
+    "styled-tools": "^1.7.2"
   },
   "devDependencies": {
     "@emotion/react": "^11.11.0",
