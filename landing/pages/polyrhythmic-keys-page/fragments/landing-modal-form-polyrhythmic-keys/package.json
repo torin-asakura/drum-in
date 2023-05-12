@@ -18,7 +18,7 @@
     "@emotion/styled": "^11.11.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "^18.2.4",
-    "react-intl": "^6.1.2",
+    "react-intl": "^6.4.2",
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {

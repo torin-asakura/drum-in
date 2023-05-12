@@ -19,7 +19,7 @@
     "@emotion/styled": "^11.11.0",
     "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.6",
-    "react-intl": "^6.1.2",
+    "react-intl": "^6.4.2",
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {
