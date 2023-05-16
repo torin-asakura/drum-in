@@ -1468,7 +1468,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@forks/react-locomotive-scroll@workspace:forks/react-locomotive-scroll"
   dependencies:
-    "@types/locomotive-scroll": "npm:^4.1.0"
     "@types/react": "npm:18.2.6"
     locomotive-scroll: "npm:^4.1.4"
     use-debounce: "npm:9.0.4"
@@ -4282,13 +4281,6 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: a21e3e820d62969051fbd679a45bd347ff2e35f74d46a3b6910f8dc5239d3786a6d81bb2a142a4c0a0d2612fee4a15f4eb60eee8a8330e475807e4f4e3f18526
-  languageName: node
-  linkType: hard
-
-"@types/locomotive-scroll@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "@types/locomotive-scroll@npm:4.1.0"
-  checksum: 804cf95db347c3ca7fe007fab3595865f3618405aa187794d725d122a1457581cc860673a5045ff9785f64e099794034c4e3c3f63bbdae2cd0b1b5ba8e0456b4
   languageName: node
   linkType: hard
 
