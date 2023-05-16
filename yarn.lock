@@ -436,7 +436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-document-with-helmet@npm:^0.2.67":
+"@atls/next-document-with-helmet@npm:0.2.67":
   version: 0.2.67
   resolution: "@atls/next-document-with-helmet@npm:0.2.67"
   peerDependencies:
@@ -2252,10 +2252,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/consultation@workspace:landing/fragments/landing-consultation"
   dependencies:
-    "@emotion/react": "npm:^11.11.0"
-    "@emotion/styled": "npm:^11.11.0"
+    "@emotion/react": "npm:11.11.0"
+    "@emotion/styled": "npm:11.11.0"
     "@types/react": "npm:18.2.6"
-    "@types/react-dom": "npm:^18.2.4"
+    "@types/react-dom": "npm:18.2.4"
     "@ui/button": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -2264,8 +2264,8 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     framer-motion: "npm:10.12.10"
     next: "npm:12.1.1"
-    react-intl: "npm:^6.4.2"
-    styled-tools: "npm:^1.7.2"
+    react-intl: "npm:6.4.2"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2314,7 +2314,7 @@ __metadata:
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -2356,13 +2356,13 @@ __metadata:
     "@landing/header-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/layout": "workspace:0.0.1"
-    locomotive-scroll: "npm:^4.1.4"
+    locomotive-scroll: "npm:4.1.4"
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    next: "*"
+    react: "*"
+    react-dom: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2459,7 +2459,7 @@ __metadata:
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -2489,7 +2489,7 @@ __metadata:
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -2715,7 +2715,7 @@ __metadata:
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -3027,7 +3027,7 @@ __metadata:
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -3056,7 +3056,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
   peerDependencies:
     "@apollo/client": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -3252,7 +3252,7 @@ __metadata:
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -3286,15 +3286,15 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
-    "@types/uniqid": "npm:^5.3.2"
+    "@types/uniqid": "npm:5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
-    next: "npm:12.1.1"
-    react-intl: "npm:^6.4.2"
-    uniqid: "npm:^5.4.0"
+    react-intl: "npm:6.4.2"
+    uniqid: "npm:5.4.0"
   peerDependencies:
     "@apollo/client": "*"
+    next: "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -3410,9 +3410,9 @@ __metadata:
   resolution: "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer"
   dependencies:
     "@apollo/client": "npm:3.6.9"
-    "@atls/next-document-with-helmet": "npm:^0.2.67"
-    "@emotion/react": "npm:^11.11.0"
-    "@emotion/styled": "npm:^11.11.0"
+    "@atls/next-document-with-helmet": "npm:0.2.67"
+    "@emotion/react": "npm:11.11.0"
+    "@emotion/styled": "npm:11.11.0"
     "@globals/data": "workspace:0.0.1"
     "@landing/connacol-page": "workspace:0.0.1"
     "@landing/contact-page": "workspace:0.0.1"
@@ -3424,23 +3424,23 @@ __metadata:
     "@landing/polyrhythmic-keys-page": "workspace:0.0.1"
     "@landing/privacy-policy-page": "workspace:0.0.1"
     "@landing/seventh-heaven-page": "workspace:0.0.1"
-    "@types/express": "npm:^4.17.17"
-    "@types/node": "npm:^20.1.3"
+    "@types/express": "npm:4.17.17"
+    "@types/node": "npm:20.1.3"
     "@types/react": "npm:18.2.6"
-    "@types/react-dom": "npm:^18.2.4"
-    "@types/react-helmet": "npm:^6.1.6"
-    "@types/uniqid": "npm:^5.3.2"
+    "@types/react-dom": "npm:18.2.4"
+    "@types/react-helmet": "npm:6.1.6"
+    "@types/uniqid": "npm:5.3.2"
     "@ui/theme": "workspace:0.0.1"
     graphql: "npm:15.5.1"
-    locomotive-scroll: "npm:^4.1.4"
+    locomotive-scroll: "npm:4.1.4"
     next: "npm:12.1.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    react-helmet: "npm:^6.1.0"
-    react-intl: "npm:^6.4.2"
-    recompose: "npm:^0.30.0"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-helmet: "npm:6.1.0"
+    react-intl: "npm:6.4.2"
+    recompose: "npm:0.30.0"
     typescript: "npm:4.6.2"
-    uniqid: "npm:^5.4.0"
+    uniqid: "npm:5.4.0"
   peerDependencies:
     typescript: "*"
   languageName: unknown
@@ -3469,7 +3469,7 @@ __metadata:
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
-    next: ^12.1.0
+    next: 12.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-intl: "*"
@@ -4181,7 +4181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:^4.17.17":
+"@types/express@npm:4.17.17":
   version: 4.17.17
   resolution: "@types/express@npm:4.17.17"
   dependencies:
@@ -4362,7 +4362,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:^6.1.6":
+"@types/react-helmet@npm:6.1.6":
   version: 6.1.6
   resolution: "@types/react-helmet@npm:6.1.6"
   dependencies:
@@ -9709,7 +9709,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet@npm:^6.1.0":
+"react-helmet@npm:6.1.0":
   version: 6.1.0
   resolution: "react-helmet@npm:6.1.0"
   dependencies:
@@ -9829,7 +9829,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"recompose@npm:^0.30.0":
+"recompose@npm:0.30.0":
   version: 0.30.0
   resolution: "recompose@npm:0.30.0"
   dependencies:
@@ -10862,7 +10862,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uniqid@npm:^5.4.0":
+"uniqid@npm:5.4.0, uniqid@npm:^5.4.0":
   version: 5.4.0
   resolution: "uniqid@npm:5.4.0"
   checksum: d2bb6655417616d2f99fadf50aa7aee592c41b4b9bf08c3715a37d8afee5a51c0e7dc297d4aa7251e23d9fb010016a70f506c2ecaba5391b393faba4513eff70
