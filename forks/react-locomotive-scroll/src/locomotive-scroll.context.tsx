@@ -57,6 +57,8 @@ export const LocomotiveScrollProvider = ({
           ...options,
         })
 
+        new ResizeObserver(() => LocomotiveScrollRef.current.update()).observe(dataScrollContainer)
+
         setIsReady(true) // Re-render the context
       } catch (error) {
         throw Error(`react-locomotive-scroll: ${error}`)
