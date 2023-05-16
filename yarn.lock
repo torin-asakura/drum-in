@@ -3434,7 +3434,7 @@ __metadata:
     "@ui/theme": "workspace:0.0.1"
     graphql: "npm:^16.6.0"
     locomotive-scroll: "npm:^4.1.4"
-    next: "npm:^12.3.4"
+    next: "npm:12.1.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-helmet: "npm:^6.1.0"
