@@ -10,6 +10,7 @@
     "globals/**/*"
   ],
   "resolutions": {
+    "@apollo/client": "3.6.9",
     "@types/node": "16",
     "@types/react": "17.0.47",
     "@types/react-dom": "17",
