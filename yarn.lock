@@ -3428,7 +3428,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@types/react-helmet": "npm:^6.1.6"
     "@ui/theme": "workspace:0.0.1"
-    graphql: "npm:^16.6.0"
+    graphql: "npm:15.5.1"
     locomotive-scroll: "npm:^4.1.4"
     next: "npm:12.1.0"
     react: "npm:^18.2.0"
@@ -7639,6 +7639,13 @@ __metadata:
   peerDependencies:
     graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
   checksum: 35c9fbdc43bb9eddfa4223c19ce9a34370ee89c77e00e1b797d864e5eebac2551a52c42850d68a3be5fe7540d99cfa009e1f43cb79d2170f96bcce8eb7fc86cf
+  languageName: node
+  linkType: hard
+
+"graphql@npm:15.5.1":
+  version: 15.5.1
+  resolution: "graphql@npm:15.5.1"
+  checksum: 95c4c2d4c698c8aa05d4f09a650bce190506e7e2e5365c29e8cfbe5d9b4fd4da07b8acf21517034e413819c29824d4fdbe5abe47db52a845ccac94458d80675f
   languageName: node
   linkType: hard
 
