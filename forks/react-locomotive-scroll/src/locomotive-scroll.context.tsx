@@ -57,7 +57,7 @@ export const LocomotiveScrollProvider = ({
           ...options,
         })
 
-        new ResizeObserver(() => LocomotiveScrollRef.current.update()).observe(dataScrollContainer)
+        new ResizeObserver(() => LocomotiveScrollRef.current?.update()).observe(dataScrollContainer)
 
         setIsReady(true) // Re-render the context
       } catch (error) {
@@ -78,7 +78,7 @@ export const LocomotiveScrollProvider = ({
         return
       }
 
-      LocomotiveScrollRef.current.update()
+      LocomotiveScrollRef.current?.update()
 
       if (onUpdate) {
         onUpdate(LocomotiveScrollRef.current)
@@ -93,7 +93,7 @@ export const LocomotiveScrollProvider = ({
       return
     }
 
-    LocomotiveScrollRef.current.update()
+    LocomotiveScrollRef.current?.update()
 
     if (onLocationChange) {
       onLocationChange(LocomotiveScrollRef.current)
