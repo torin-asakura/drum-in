@@ -2263,7 +2263,6 @@ __metadata:
     "@ui/modal": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     framer-motion: "npm:10.12.10"
-    next: "npm:12.1.1"
     react-intl: "npm:6.4.2"
     styled-tools: "npm:1.7.2"
   peerDependencies:
