@@ -3440,7 +3440,9 @@ __metadata:
     react-helmet: "npm:^6.1.0"
     react-intl: "npm:^6.4.2"
     recompose: "npm:^0.30.0"
-    typescript: "npm:^5.0.4"
+    typescript: "npm:4.6.2"
+  peerDependencies:
+    typescript: "*"
   languageName: unknown
   linkType: soft
 
@@ -10833,23 +10835,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.4.4":
-  version: 4.4.4
-  resolution: "typescript@npm:4.4.4"
+"typescript@npm:4.6.2":
+  version: 4.6.2
+  resolution: "typescript@npm:4.6.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: d57f80c448b588b17845b186767ec128c8d4a441bd74103eb441258f424d9017a5e9dd1c14d3635d7591a20865472eb33fb20764b03bafe8f9c52318b40c9cec
+  checksum: 61b86ce7f0ed351db6c24092c9fe2b6c330edba8871f1a6ac88cdf08c5df237e1e79d8d6dd118ba0903d90426662b2ab623074a1ee1563de50a49114329a3c2c
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>":
-  version: 4.4.4
-  resolution: "typescript@patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"
+"typescript@patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>":
+  version: 4.6.2
+  resolution: "typescript@patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=5d3a66"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: aad326b217b0dc534a0f6c401096586831e96811c91400bcfce2d33cc0744493ab0b919586518dd6df9a1dc1d36829b5612f1022fe616e7882e434db23bd29fa
+  checksum: 55110ab105f77165c592d337eeaaddc1f18387e7624d218421b3121073daacbfca50c313c12b16c3b1341c47b1194fde78c7f4ebce929dcdf43d270ef9a13619
   languageName: node
   linkType: hard
 
