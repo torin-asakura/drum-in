@@ -1,7 +1,7 @@
 import React                    from 'react'
 
 import { AdvantagesBlock }      from '@landing/advantages-fragment'
-import { BannerConnacolBlock }   from '@landing/banner-connacol-fragment'
+import { BannerConnacolBlock }  from '@landing/banner-connacol-fragment'
 import { ProgramConnacolBlock } from '@landing/program-connacol-fragment'
 import { Box }                  from '@ui/layout'
 

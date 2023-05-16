@@ -1476,8 +1476,9 @@ __metadata:
     use-debounce: "npm:9.0.4"
     use-resize-observer: "npm:9.1.0"
   peerDependencies:
+    "@types/react": "*"
     locomotive-scroll: ^4.1.4
-    react: ^18.0.2
+    react: "*"
   languageName: unknown
   linkType: soft
 
