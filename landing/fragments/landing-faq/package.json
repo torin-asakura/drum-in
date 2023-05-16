@@ -12,7 +12,7 @@
     "framer-motion": "^10.12.10"
   },
   "devDependencies": {
-    "@apollo/client": "^3.7.14",
+    "@apollo/client": "3.6.9",
     "@emotion/styled": "^11.11.0",
     "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.6",

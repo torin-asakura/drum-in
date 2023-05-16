@@ -14,7 +14,7 @@
     "swiper": "^9.3.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.7.14",
+    "@apollo/client": "3.6.9",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@globals/data": "workspace:0.0.1",

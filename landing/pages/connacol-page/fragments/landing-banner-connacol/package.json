@@ -9,7 +9,7 @@
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
-    "@apollo/client": "^3.7.14",
+    "@apollo/client": "3.6.9",
     "@emotion/styled": "^11.11.0",
     "@types/react": "18.2.6",
     "react-intl": "^6.4.2",
