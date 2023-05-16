@@ -1,4 +1,4 @@
-import React                       from 'react'
+import * as React                       from 'react'
 import useResizeObserver           from 'use-resize-observer'
 import { LocomotiveScrollOptions } from 'locomotive-scroll'
 import { Scroll }                  from 'locomotive-scroll'

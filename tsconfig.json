@@ -1,6 +1,3 @@
 {
   "extends": "@atls/config-typescript/dist/index",
-  "compilerOptions": {
-    "jsx": "react"
-  }
 }
