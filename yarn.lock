@@ -6750,7 +6750,7 @@ __metadata:
     "@types/uniqid": "npm:^5.3.2"
     eslint: "npm:8.18.0"
     husky: "npm:^8.0.3"
-    typescript: "npm:^5.0.4"
+    typescript: "npm:4.6.2"
     uniqid: "npm:^5.4.0"
   languageName: unknown
   linkType: soft
