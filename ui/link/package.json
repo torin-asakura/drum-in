@@ -3,22 +3,21 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/link": "^0.0.10",
+    "@atls-ui-parts/link": "0.0.10",
     "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@types/react-dom": "^17.0.9",
-    "@types/styled-system": "^5",
-    "next": "^12.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-system": "^5.1.5"
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@types/react": "18.2.6",
+    "@types/styled-system": "5.1.16",
+    "next": "12.1.1",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "@types/react": "*",
     "next": "*",
     "react": "*",
     "react-dom": "*",

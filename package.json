@@ -10,27 +10,32 @@
     "globals/**/*"
   ],
   "resolutions": {
+    "@apollo/client": "3.6.9",
+    "@types/eslint": "8",
     "@types/node": "16",
     "@types/react": "17.0.47",
     "@types/react-dom": "17",
-    "next": "12.1.0",
+    "csstype": "3.0.2",
+    "eslint": "8.18.0",
+    "next": "12.1.1",
     "react": "18",
     "react-dom": "18",
     "react-intl": "5.24.3",
-    "typescript": "4.4.4"
+    "typescript": "4.6.2"
   },
   "devDependencies": {
-    "@atls/code-service": "^0.0.18",
-    "@atls/config-jest": "^0.0.5",
-    "@jest/core": "^28.1.2",
-    "@types/eslint": "^8",
-    "@types/jest": "^28.1.3",
-    "@types/node": "^18.7.14",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "^17.0.9",
-    "eslint": "8.18.0",
-    "husky": "^8.0.1",
-    "typescript": "^4.8.4"
+    "@atls/code-service": "0.0.18",
+    "@atls/config-jest": "0.0.5",
+    "@atls/config-typescript": "0.0.2",
+    "@jest/core": "29.5.0",
+    "@types/eslint": "=8",
+    "@types/jest": "29.5.1",
+    "@types/node": "20.1.3",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "eslint": "=8.18.0",
+    "husky": "8.0.3",
+    "typescript": "=4.6.2"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.5.1"
 }

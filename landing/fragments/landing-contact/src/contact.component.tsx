@@ -1,4 +1,5 @@
 import React                   from 'react'
+import uniqid                  from 'uniqid'
 
 import { ArrowLeftBottomIcon } from '@ui/icons'
 import { ArrowTopRightIcon }   from '@ui/icons'
@@ -48,10 +49,10 @@ const ContactBlock = () => {
             </Box>
             <Layout display={['flex', 'flex', 'none']} flexBasis={[25, 40, 0]} />
             {contact?.contacts?.contacts?.map(({ title, link, href, domainName }) => (
-              <>
+              <React.Fragment key={uniqid()}>
                 <Card title={title} link={link} href={href} domainName={domainName} />
                 <Layout flexBasis={[12, 24, 118]} />
-              </>
+              </React.Fragment>
             ))}
           </Box>
           <Layout flexBasis={[24, 56, 89]} />

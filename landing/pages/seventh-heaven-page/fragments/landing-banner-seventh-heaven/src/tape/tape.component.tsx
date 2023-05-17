@@ -2,6 +2,7 @@ import styled        from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 
 import React         from 'react'
+import uniqid        from 'uniqid'
 import { FC }        from 'react'
 import { useMemo }   from 'react'
 
@@ -32,7 +33,7 @@ const Tape: FC<TapeProps> = ({ level }) => {
           <Repeater quantity={50}>
             {() =>
               levelArray.map((currentValue) => (
-                <>
+                <React.Fragment key={uniqid()}>
                   <Text
                     textTransform='uppercase'
                     whiteSpace='nowrap'
@@ -44,7 +45,7 @@ const Tape: FC<TapeProps> = ({ level }) => {
                     {currentValue}
                   </Text>
                   <Box flexShrink={0} width={[24, 78, 140]} />
-                </>
+                </React.Fragment>
               ))
             }
           </Repeater>

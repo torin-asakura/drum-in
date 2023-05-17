@@ -1,10 +1,6 @@
 import { FORM }        from './constants'
 import { useFormData } from './queries'
 
-const useData = () => {
-  const form = useFormData(FORM)
-
-  return form
-}
+const useData = () => useFormData(FORM)
 
 export { useData }

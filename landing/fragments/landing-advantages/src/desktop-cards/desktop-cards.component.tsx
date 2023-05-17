@@ -1,4 +1,5 @@
 import React             from 'react'
+import uniqid            from 'uniqid'
 
 import { Box }           from '@ui/layout'
 import { Layout }        from '@ui/layout'
@@ -18,7 +19,11 @@ const DesktopCards = () => {
       flexWrap={{ _: 'nowrap', tablet: 'nowrap', laptop: 'wrap', wide: 'nowrap' }}
     >
       {advantages?.map(({ counter, item }) => (
-        <Box flexDirection='column' style={{ transform: `rotate(${getUi(counter).rotate}deg)` }}>
+        <Box
+          key={uniqid()}
+          flexDirection='column'
+          style={{ transform: `rotate(${getUi(counter).rotate}deg)` }}
+        >
           <Layout
             flexBasis={getUi(counter).valueTopIndentation}
             display={['none', 'none', 'flex']}

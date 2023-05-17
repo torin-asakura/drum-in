@@ -41,23 +41,23 @@ const TapeBlock = () => {
               <>
                 <Indent />
                 <Box width={[171, 264, 358]}>
-                  <MusiciansIcon width='100%' height='auto' />
+                  <MusiciansIcon width='100%' height='100%' />
                 </Box>
                 <Indent />
                 <Box width={[165, 255, 346]}>
-                  <VocalistsIcon width='100%' height='auto' />
+                  <VocalistsIcon width='100%' height='100%' />
                 </Box>
                 <Indent />
                 <Box width={[201, 310, 419]}>
-                  <ComposerIcon width='100%' height='auto' />
+                  <ComposerIcon width='100%' height='100%' />
                 </Box>
                 <Indent />
                 <Box width={[143, 218, 298]}>
-                  <TeachersIcon width='100%' height='auto' />
+                  <TeachersIcon width='100%' height='100%' />
                 </Box>
                 <Indent />
                 <Box width={[133, 197, 273]}>
-                  <DjsIcon width='100%' height='auto' />
+                  <DjsIcon width='100%' height='100%' />
                 </Box>
               </>
             )}

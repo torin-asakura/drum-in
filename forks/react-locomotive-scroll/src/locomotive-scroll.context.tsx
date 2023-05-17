@@ -50,12 +50,14 @@ export const LocomotiveScrollProvider = ({
       try {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
 
-        const dataScrollContainer = document.querySelector('[data-scroll-container]')
+        const dataScrollContainer = document.querySelector('[data-scroll-container]') as HTMLElement
 
         LocomotiveScrollRef.current = new LocomotiveScroll({
           el: dataScrollContainer ?? undefined,
           ...options,
         })
+
+        new ResizeObserver(() => LocomotiveScrollRef.current?.update()).observe(dataScrollContainer)
 
         setIsReady(true) // Re-render the context
       } catch (error) {
@@ -76,7 +78,7 @@ export const LocomotiveScrollProvider = ({
         return
       }
 
-      LocomotiveScrollRef.current.update()
+      LocomotiveScrollRef.current?.update()
 
       if (onUpdate) {
         onUpdate(LocomotiveScrollRef.current)
@@ -91,7 +93,7 @@ export const LocomotiveScrollProvider = ({
       return
     }
 
-    LocomotiveScrollRef.current.update()
+    LocomotiveScrollRef.current?.update()
 
     if (onLocationChange) {
       onLocationChange(LocomotiveScrollRef.current)

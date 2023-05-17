@@ -8,8 +8,8 @@
     "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@types/react": "18.0.21",
-    "react-intl": "^6.1.2"
+    "@types/react": "18.2.6",
+    "react-intl": "^6.4.2"
   },
   "peerDependencies": {
     "@emotion/react": "*",

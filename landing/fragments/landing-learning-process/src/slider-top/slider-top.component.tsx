@@ -1,4 +1,5 @@
 import React                  from 'react'
+import uniqid                 from 'uniqid'
 import { useMemo }            from 'react'
 
 import { Layout }             from '@ui/layout'
@@ -35,10 +36,10 @@ const SliderTop = () => {
       <Repeater quantity={20}>
         {() =>
           learningProcessTopChildren?.map((item) => (
-            <>
+            <React.Fragment key={uniqid()}>
               {item}
               <Layout flexBasis={40} flexShrink={0} />
-            </>
+            </React.Fragment>
           ))
         }
       </Repeater>

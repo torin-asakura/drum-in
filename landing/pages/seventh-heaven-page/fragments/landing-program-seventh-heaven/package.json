@@ -6,13 +6,14 @@
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "@types/react": "18.0.21",
-    "next": "12.1.0",
-    "react-intl": "^6.1.2"
+    "@apollo/client": "3.6.9",
+    "@types/react": "18.2.6",
+    "next": "12.1.1",
+    "react-intl": "^6.4.2"
   },
   "peerDependencies": {
     "@apollo/client": "*",

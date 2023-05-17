@@ -7,9 +7,9 @@
     "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "@types/react": "18.0.21",
-    "react-intl": "^6.1.2"
+    "@apollo/client": "3.6.9",
+    "@types/react": "18.2.6",
+    "react-intl": "^6.4.2"
   },
   "peerDependencies": {
     "@apollo/client": "*",

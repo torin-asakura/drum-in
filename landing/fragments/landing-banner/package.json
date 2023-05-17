@@ -10,11 +10,11 @@
     "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "@emotion/styled": "^11.9.3",
+    "@apollo/client": "3.6.9",
+    "@emotion/styled": "^11.11.0",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
-    "@types/react": "18.0.21",
-    "react-intl": "^6.1.2",
+    "@types/react": "18.2.6",
+    "react-intl": "^6.4.2",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

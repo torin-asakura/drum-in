@@ -1,4 +1,5 @@
 import React          from 'react'
+import uniqid         from 'uniqid'
 
 import { Column }     from '@ui/layout'
 import { Layout }     from '@ui/layout'
@@ -26,7 +27,7 @@ const DesktopList = () => {
         },
         index
       ) => (
-        <React.Fragment key={descriptionLevel.substring(0, 3)}>
+        <React.Fragment key={uniqid()}>
           <Item
             forWhom={forWhoThisLevel}
             level={nameLevel}

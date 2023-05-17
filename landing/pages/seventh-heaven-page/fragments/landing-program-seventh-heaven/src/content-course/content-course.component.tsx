@@ -1,4 +1,5 @@
 import React                from 'react'
+import uniqid               from 'uniqid'
 import { FormattedMessage } from 'react-intl'
 
 import { BullhornIcon }     from '@ui/icons'
@@ -65,7 +66,7 @@ const ContentCourse = () => {
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 395, wide: 470 }} flexShrink={0}>
           {program?.secondListOfTopics?.split(';')?.map((element) => (
-            <Box>
+            <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
                 fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
@@ -91,7 +92,7 @@ const ContentCourse = () => {
           <Layout flexBasis={83} flexShrink={0} />
           <Column>
             {program?.firstListOfTopics?.split(';').map((element) => (
-              <Box>
+              <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
                   fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
@@ -131,7 +132,7 @@ const ContentCourse = () => {
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 280, wide: 340 }} flexShrink={0}>
           {program?.thirdListOfTopics?.split(';').map((element) => (
-            <Box>
+            <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
                 fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}

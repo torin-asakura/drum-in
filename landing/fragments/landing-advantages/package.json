@@ -8,14 +8,15 @@
     "@ui/layout": "workspace:0.0.1",
     "@ui/slider": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
-    "swiper": "^8.3.1"
+    "swiper": "^9.3.1",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "18.0.21",
-    "react-intl": "^6.1.2",
+    "@apollo/client": "3.6.9",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@types/react": "18.2.6",
+    "react-intl": "^6.4.2",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

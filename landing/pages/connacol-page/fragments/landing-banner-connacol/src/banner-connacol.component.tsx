@@ -1,4 +1,5 @@
 import React                    from 'react'
+import uniqid                   from 'uniqid'
 
 import { ArrowRightBottomIcon } from '@ui/icons'
 import { Box }                  from '@ui/layout'
@@ -10,7 +11,7 @@ import { Text }                 from '@ui/text'
 import { TagBlock }             from './tag'
 import { useBanner }            from './data'
 
-const BannerСonnacolBlock = () => {
+const BannerConnacolBlock = () => {
   const banner = useBanner()
 
   return (
@@ -50,10 +51,10 @@ const BannerСonnacolBlock = () => {
               <Layout order={[2, 2, 0]} flexBasis={[16, 24, 32]} flexShrink={0} />
               <Box order={[5, 5, 0]} flexDirection={['column', 'column', 'row']}>
                 {banner?.tags?.map(({ text }) => (
-                  <>
+                  <React.Fragment key={uniqid()}>
                     <TagBlock text={text} />
                     <Layout flexBasis={16} flexShrink={0} />
-                  </>
+                  </React.Fragment>
                 ))}
               </Box>
               <Layout order={[4, 4, 0]} flexBasis={[36, 44, 32]} flexShrink={0} />
@@ -81,4 +82,4 @@ const BannerСonnacolBlock = () => {
     </Row>
   )
 }
-export { BannerСonnacolBlock }
+export { BannerConnacolBlock }

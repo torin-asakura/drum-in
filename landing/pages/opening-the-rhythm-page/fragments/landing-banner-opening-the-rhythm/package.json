@@ -6,14 +6,16 @@
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "@emotion/react": "*",
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "18.0.21",
-    "react-intl": "^6.1.2",
+    "@apollo/client": "3.6.9",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@types/react": "18.2.6",
+    "@types/uniqid": "^5.3.2",
+    "react-intl": "^6.4.2",
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {
