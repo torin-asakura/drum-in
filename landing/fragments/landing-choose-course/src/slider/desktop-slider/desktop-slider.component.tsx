@@ -50,6 +50,7 @@ const DesktopSliderBlock = () => {
         slidesOffsetAfter={40}
         mousewheel={true}
         grabCursor={true}
+        forceToAxis={true}
       >
         {Children.map(coursesChildren, (child) => (
           <SwiperSlide>{child}</SwiperSlide>
