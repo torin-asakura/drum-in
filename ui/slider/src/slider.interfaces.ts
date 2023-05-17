@@ -12,4 +12,5 @@ export interface SliderProps {
   mousewheel?: boolean
   mousewheelInvert?: boolean
   slidesOffsetAfter?: number
+  forceToAxis?: boolean
 }
