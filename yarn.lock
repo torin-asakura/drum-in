@@ -1672,7 +1672,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:6.4.2"
     styled-tools: "npm:1.7.2"
-    uniqid: "npm:^5.4.0"
+    uniqid: "npm:5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
