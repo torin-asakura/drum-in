@@ -50,7 +50,7 @@ export const LocomotiveScrollProvider = ({
       try {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
 
-        const dataScrollContainer = document.querySelector('[data-scroll-container]')
+        const dataScrollContainer = document.querySelector('[data-scroll-container]') as HTMLElement
 
         LocomotiveScrollRef.current = new LocomotiveScroll({
           el: dataScrollContainer ?? undefined,

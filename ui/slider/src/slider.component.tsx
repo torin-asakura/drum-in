@@ -36,7 +36,9 @@ const Slider: FC<SliderProps> = ({
         autoHeight={!!autoHeight}
         centeredSlides={!!centeredSlides}
         pagination={progressbar ? { type: 'progressbar' } : false}
-        mousewheel={mousewheel ? { eventsTarget: 'container', invert: mousewheelInvert, forceToAxis } : false}
+        mousewheel={
+          mousewheel ? { eventsTarget: 'container', invert: mousewheelInvert, forceToAxis } : false
+        }
         modules={progressbar ? [Pagination, Mousewheel] : [Mousewheel]}
         speed={speed}
         allowTouchMove={allowTouchMove}
