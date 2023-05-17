@@ -22,7 +22,12 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
-export const HomePage = () => {
+interface Props {
+  ogCover: string
+  SEO: any
+}
+
+export const HomePage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
@@ -73,12 +78,9 @@ export const HomePage = () => {
           smooth: true,
           smartphone: {
             smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
+          },
+          tablet: {
+            smooth: true,
           },
         }}
         containerRef={containerRef}
