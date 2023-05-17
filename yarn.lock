@@ -1233,6 +1233,7 @@ __metadata:
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
     "@apollo/client": "npm:3.6.9"
+    "@globals/data": "workspace:0.0.1"
     graphql: "npm:15.5.1"
     react: "npm:^18.2.0"
   peerDependencies:
@@ -2350,9 +2351,10 @@ __metadata:
   resolution: "@landing/index-page@workspace:landing/pages/index-page"
   dependencies:
     "@apollo/client": "npm:3.6.9"
-    "@emotion/react": "npm:^11.11.0"
-    "@emotion/styled": "npm:^11.11.0"
+    "@emotion/react": "npm:11.11.0"
+    "@emotion/styled": "npm:11.11.0"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
