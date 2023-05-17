@@ -390,7 +390,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@forks/react-locomotive-scroll", ["virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll", "workspace:forks/react-locomotive-scroll"]],\
-    ["@globals/data", ["virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#workspace:globals/data", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:globals/data", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:globals/data", "workspace:globals/data"]],\
+    ["@globals/data", ["virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:globals/data", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:globals/data", "workspace:globals/data"]],\
     ["@landing/advantages-fragment", ["virtual:604537ea43b6a571b9201096eea4f510b68d69469bb00e1ed3542f931704a5c1f0d3f579ab2ab4d2674482b62b62c9b8d52639484a866fcabd4f07fe6178c61e#workspace:landing/fragments/landing-advantages", "virtual:7f7b9e541f30f4159a99028a918c09908bf1f3148bf46e757855ed77888ebb21cfdf7c0fe326b0738017291a9b304e600e786b0855cf489738c44c9c6df86a60#workspace:landing/fragments/landing-advantages", "workspace:landing/fragments/landing-advantages"]],\
     ["@landing/after-the-course-fragment", ["virtual:6446844d1ba3447fc4735f6c4defc44e3e064382df26fa7c751471ca2da52816e6fee9d942d5be2c3b5f429bf66efb6a69bc8f179b8738f537e28a817d5b309a#workspace:landing/fragments/landing-after-the-course", "virtual:9929190e21f86e6f7696fd30da23aae4d4134df4d52208923b5adfadb6a48e798ccc2e51c85dca9179bb17040a73d518b9dfb1dd727d30230901960e6f957d70#workspace:landing/fragments/landing-after-the-course", "virtual:a6b2a69bb6f3458a83408f8c88581d0f88440f3984003af2a12e28b209312a940b7e733f6e8df50cd2e9277f381669e252920ef61008a68d420ea9d2381c2192#workspace:landing/fragments/landing-after-the-course", "workspace:landing/fragments/landing-after-the-course"]],\
     ["@landing/banner-connacol-fragment", ["virtual:3ceb7f03d6750733013786f89044f4b24ea1bd06f270ece9dd5463d8264cbc11fc01cfc08bbab4f3efd512a6a37100a23b0d979d4329d390d8d2eb18ad562509#workspace:landing/pages/connacol-page/fragments/landing-banner-connacol", "virtual:604537ea43b6a571b9201096eea4f510b68d69469bb00e1ed3542f931704a5c1f0d3f579ab2ab4d2674482b62b62c9b8d52639484a866fcabd4f07fe6178c61e#workspace:landing/pages/connacol-page/fragments/landing-banner-connacol", "virtual:7f7b9e541f30f4159a99028a918c09908bf1f3148bf46e757855ed77888ebb21cfdf7c0fe326b0738017291a9b304e600e786b0855cf489738c44c9c6df86a60#workspace:landing/pages/connacol-page/fragments/landing-banner-connacol", "workspace:landing/pages/connacol-page/fragments/landing-banner-connacol"]],\
@@ -2042,7 +2042,7 @@ const RAW_RUNTIME_STATE =
           ["@atls/next-document-with-helmet", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:0.2.67"],\
           ["@types/next", null],\
           ["@types/react", "npm:17.0.47"],\
-          ["@types/react-helmet", "npm:6.0.0"],\
+          ["@types/react-helmet", "npm:6.1.6"],\
           ["next", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:12.1.1"],\
           ["react", "npm:18.2.0"],\
           ["react-helmet", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:6.1.0"]\
@@ -3515,29 +3515,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@globals/data", [\
-      ["virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#workspace:globals/data", {\
-        "packageLocation": "./.yarn/__virtual__/@globals-data-virtual-f7acb9d8e5/1/globals/data/",\
-        "packageDependencies": [\
-          ["@apollo/client", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#npm:3.6.9"],\
-          ["@globals/data", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#workspace:globals/data"],\
-          ["@types/apollo__client", null],\
-          ["@types/react", null],\
-          ["graphql", "npm:15.5.1"],\
-          ["react", "npm:18.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@apollo/client",\
-          "@types/apollo__client",\
-          "@types/react",\
-          "react"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:globals/data", {\
         "packageLocation": "./.yarn/__virtual__/@globals-data-virtual-68746162b5/1/globals/data/",\
         "packageDependencies": [\
-          ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.6.9"],\
           ["@globals/data", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:globals/data"],\
+          ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.6.9"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["graphql", "npm:15.5.1"],\
@@ -3553,8 +3535,8 @@ const RAW_RUNTIME_STATE =
       ["virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:globals/data", {\
         "packageLocation": "./.yarn/__virtual__/@globals-data-virtual-6bbd60c7af/1/globals/data/",\
         "packageDependencies": [\
-          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.6.9"],\
           ["@globals/data", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:globals/data"],\
+          ["@apollo/client", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:3.6.9"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:17.0.47"],\
           ["graphql", "npm:15.5.1"],\
@@ -3571,8 +3553,8 @@ const RAW_RUNTIME_STATE =
       ["workspace:globals/data", {\
         "packageLocation": "./globals/data/",\
         "packageDependencies": [\
+          ["@globals/data", "workspace:globals/data"],\
           ["@apollo/client", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#npm:3.6.9"],\
-          ["@globals/data", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#workspace:globals/data"],\
           ["graphql", "npm:15.5.1"],\
           ["react", "npm:18.2.0"]\
         ],\
@@ -7292,7 +7274,7 @@ const RAW_RUNTIME_STATE =
           ["@types/next", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.20"],\
-          ["@types/react-helmet", "npm:6.0.0"],\
+          ["@types/react-helmet", "npm:6.1.6"],\
           ["@types/react-intl", null],\
           ["@ui/intersection-observer", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:ui/intersection-observer"],\
           ["@ui/layout", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:ui/layout"],\
@@ -7300,6 +7282,7 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:12.1.1"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
+          ["react-helmet", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:6.1.0"],\
           ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
         ],\
         "packagePeers": [\
@@ -7314,6 +7297,7 @@ const RAW_RUNTIME_STATE =
           "@types/react",\
           "next",\
           "react-dom",\
+          "react-helmet",\
           "react-intl",\
           "react"\
         ],\
@@ -7338,7 +7322,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/private-lesson-fragment", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-private-lesson"],\
           ["@landing/teacher-fragment", "virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-teacher"],\
           ["@types/react", "npm:17.0.47"],\
-          ["@types/react-helmet", "npm:6.1.0"],\
+          ["@types/react-helmet", "npm:6.1.6"],\
           ["@ui/intersection-observer", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:ui/intersection-observer"],\
           ["@ui/layout", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/layout"],\
           ["@ui/spy-scroll", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:ui/spy-scroll"]\
@@ -10390,7 +10374,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:16.18.30"],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.20"],\
-          ["@types/react-helmet", "npm:6.0.0"],\
+          ["@types/react-helmet", "npm:6.1.6"],\
           ["@types/uniqid", "npm:5.3.2"],\
           ["@ui/theme", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:ui/theme"],\
           ["graphql", "npm:15.5.1"],\
@@ -11979,18 +11963,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/react-helmet", [\
-      ["npm:6.0.0", {\
-        "packageLocation": "../../../../.yarn/berry/cache/@types-react-helmet-npm-6.0.0-4117250c21-9.zip/node_modules/@types/react-helmet/",\
+      ["npm:6.1.6", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-react-helmet-npm-6.1.6-5b3822b661-9.zip/node_modules/@types/react-helmet/",\
         "packageDependencies": [\
-          ["@types/react-helmet", "npm:6.0.0"],\
-          ["@types/react", "npm:17.0.47"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:6.1.0", {\
-        "packageLocation": "../../../../.yarn/berry/cache/@types-react-helmet-npm-6.1.0-2b66a9e4e0-9.zip/node_modules/@types/react-helmet/",\
-        "packageDependencies": [\
-          ["@types/react-helmet", "npm:6.1.0"],\
+          ["@types/react-helmet", "npm:6.1.6"],\
           ["@types/react", "npm:17.0.47"]\
         ],\
         "linkType": "HARD"\

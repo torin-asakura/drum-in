@@ -1233,7 +1233,6 @@ __metadata:
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
     "@apollo/client": "npm:3.6.9"
-    "@globals/data": "workspace:0.0.1"
     graphql: "npm:15.5.1"
     react: "npm:^18.2.0"
   peerDependencies:
@@ -2365,7 +2364,7 @@ __metadata:
     "@landing/private-lesson-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
-    "@types/react-helmet": "npm:6.1.0"
+    "@types/react-helmet": "npm:6.1.6"
     "@ui/intersection-observer": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/spy-scroll": "workspace:0.0.1"
@@ -2376,6 +2375,7 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
+    react-helmet: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -3086,7 +3086,7 @@ __metadata:
     "@types/node": "npm:20.1.3"
     "@types/react": "npm:18.2.6"
     "@types/react-dom": "npm:18.2.4"
-    "@types/react-helmet": "npm:6.0.0"
+    "@types/react-helmet": "npm:6.1.6"
     "@types/uniqid": "npm:5.3.2"
     "@ui/theme": "workspace:0.0.1"
     graphql: "npm:15.5.1"
@@ -4013,21 +4013,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@types/react-helmet@npm:6.0.0"
+"@types/react-helmet@npm:6.1.6":
+  version: 6.1.6
+  resolution: "@types/react-helmet@npm:6.1.6"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 03d55d54f912a257a6e5f4110df9909c56d3358acbc5b8bf794547e8cd6abc5a96bb77804c5d2dc16927343718847d21ee6ab06689c2bae90c5491a2d91f9ad9
-  languageName: node
-  linkType: hard
-
-"@types/react-helmet@npm:6.1.0":
-  version: 6.1.0
-  resolution: "@types/react-helmet@npm:6.1.0"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 6cd256165575e16bc67d868098ff03e82e4ad084c00ba486e6d072efd89f8d21ee0356d96cfacd3389625a98ef30e28c519be394808403b2d6703366124f3c64
+  checksum: cc2d444a0c50ca83a62785ec5aa36ddb31ebd88c0f07d414c8390e7e5f1af27fdbc31e245b28b9c8f7ab4cdc2d20c313d1acef45e4525bf9c2323c2bd2df35ab
   languageName: node
   linkType: hard
 
