@@ -1,3 +1,4 @@
 export * from './context'
 export * from './helpers'
 export * from './normalizator'
+export * from './queries'
