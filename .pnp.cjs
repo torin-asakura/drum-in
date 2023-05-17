@@ -7192,6 +7192,7 @@ const RAW_RUNTIME_STATE =
           ["@types/next", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.20"],\
+          ["@types/react-helmet", "npm:6.0.0"],\
           ["@types/react-intl", null],\
           ["@ui/intersection-observer", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:ui/intersection-observer"],\
           ["@ui/layout", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:ui/layout"],\
@@ -7208,6 +7209,7 @@ const RAW_RUNTIME_STATE =
           "@types/globals__data",\
           "@types/next",\
           "@types/react-dom",\
+          "@types/react-helmet",\
           "@types/react-intl",\
           "@types/react",\
           "next",\
@@ -7235,6 +7237,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/private-lesson-fragment", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-private-lesson"],\
           ["@landing/teacher-fragment", "virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-teacher"],\
           ["@types/react", "npm:17.0.47"],\
+          ["@types/react-helmet", "npm:6.1.0"],\
           ["@ui/intersection-observer", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:ui/intersection-observer"],\
           ["@ui/layout", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/layout"],\
           ["@ui/spy-scroll", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:ui/spy-scroll"]\
@@ -11879,6 +11882,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../.yarn/berry/cache/@types-react-helmet-npm-6.0.0-4117250c21-9.zip/node_modules/@types/react-helmet/",\
         "packageDependencies": [\
           ["@types/react-helmet", "npm:6.0.0"],\
+          ["@types/react", "npm:17.0.47"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.1.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-react-helmet-npm-6.1.0-2b66a9e4e0-9.zip/node_modules/@types/react-helmet/",\
+        "packageDependencies": [\
+          ["@types/react-helmet", "npm:6.1.0"],\
           ["@types/react", "npm:17.0.47"]\
         ],\
         "linkType": "HARD"\
