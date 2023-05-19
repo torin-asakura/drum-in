@@ -6,7 +6,4 @@ module.exports = {
     outputStandalone: true,
     esmExternals: 'loose',
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 }
