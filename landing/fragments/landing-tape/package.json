@@ -8,14 +8,19 @@
     "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
     "@types/react": "18.2.6",
-    "react-intl": "^6.4.2",
-    "styled-tools": "^1.7.2"
+    "react": "18.2.0",
+    "react-intl": "6.4.2",
+    "styled-tools": "1.7.2"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@types/react": "*",
     "react": "*",
-    "react-intl": "*"
+    "react-intl": "*",
+    "styled-tools": "*"
   }
 }
