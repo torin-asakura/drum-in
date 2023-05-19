@@ -1,11 +1,16 @@
-import { Global }    from '@emotion/react'
-import { css }       from '@emotion/react'
+import { Global }         from '@emotion/react'
+import { css }            from '@emotion/react'
 
-import React         from 'react'
-import { useEffect } from 'react'
-import { polyfill }  from 'seamless-scroll-polyfill'
+import React              from 'react'
+import { useEffect }      from 'react'
+import { polyfill }       from 'seamless-scroll-polyfill'
+
+import { injectFontFaces } from './inject-fonts'
 
 export const GlobalStyles = () => {
+  // TODO: check webpack loader
+  // injectFontFaces([{ family: 'DrukTextWideCyTT', type: 'Regular', weight: 400 }])
+
   useEffect(() => {
     polyfill()
   }, [])
@@ -15,13 +20,7 @@ export const GlobalStyles = () => {
       styles={css`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
         @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
-
-      @font-face {
-        font-family: 'Druk Wide Cy TT Bold';
-        src: url('/fonts/DrukWideCyTTBold.woff') format('woff');
-        font-style: normal;
-      }
-
+        
       html,
       body,
       #__next {
