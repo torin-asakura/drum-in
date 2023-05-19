@@ -1,6 +1,7 @@
 import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 import * as messages      from '../../locales/ru.json'
+import '../public/fonts/fonts.css'
 
 import { ApolloProvider } from '@apollo/client'
 
