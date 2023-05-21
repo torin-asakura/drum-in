@@ -429,13 +429,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/config-typescript@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@atls/config-typescript@npm:0.0.2"
-  checksum: f02ccc8b023ff754423e8b22695295c4b516a30af07d8d39498f03fb99c22f9b32039f6c8b8e6bc7113e618df892879f75b538ddeebd02db101b6db49d4806dc
-  languageName: node
-  linkType: hard
-
 "@atls/next-document-with-helmet@npm:0.2.67":
   version: 0.2.67
   resolution: "@atls/next-document-with-helmet@npm:0.2.67"
@@ -6991,7 +6984,6 @@ __metadata:
   dependencies:
     "@atls/code-service": "npm:0.0.18"
     "@atls/config-jest": "npm:0.0.5"
-    "@atls/config-typescript": "npm:0.0.2"
     "@jest/core": "npm:29.5.0"
     "@types/eslint": "npm:=8"
     "@types/jest": "npm:29.5.1"
@@ -7000,7 +6992,7 @@ __metadata:
     "@types/react-dom": "npm:18.2.4"
     eslint: "npm:=8.18.0"
     husky: "npm:8.0.3"
-    typescript: "npm:=4.6.2"
+    typescript: "npm:4.6.2"
   languageName: unknown
   linkType: soft
 
