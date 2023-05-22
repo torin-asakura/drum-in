@@ -11,7 +11,7 @@
   ],
   "resolutions": {
     "@apollo/client": "3.6.9",
-    "@emotion/react": "11.11.0",
+    "@emotion/react": "11.9.3",
     "@types/eslint": "8",
     "@types/node": "16",
     "@types/react": "17.0.47",

@@ -6,8 +6,8 @@
     "@ui/link": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@emotion/react": "11.11.0",
-    "@emotion/styled": "11.11.0",
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
     "@types/styled-system": "5.1.16",
     "next": "12.1.1",
     "react": "18.2.0",
