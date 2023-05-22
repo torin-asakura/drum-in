@@ -19,6 +19,24 @@ services:
     ports:
       - '3000:3000'
 
-volumes:
-  wordpress:
-  db:
+  landing-build:
+    image: node:18.13
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @landing/renderer-entrypoint build
+    environment:
+      - WP_ENDPOINT=https://wp.drumin.pro/graphql
+    ports:
+      - '3000:3000'
+
+  landing-start:
+    image: node:18.13
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @landing/renderer-entrypoint start
+    environment:
+      - WP_ENDPOINT=https://wp.drumin.pro/graphql
+    ports:
+      - '3000:3000'

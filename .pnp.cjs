@@ -493,7 +493,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls/code-service", "npm:0.0.18"],\
           ["@atls/config-jest", "npm:0.0.5"],\
-          ["@atls/config-typescript", "npm:0.0.2"],\
           ["@jest/core", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#npm:29.5.0"],\
           ["@types/eslint", "npm:8.37.0"],\
           ["@types/jest", "npm:29.5.1"],\
@@ -2017,13 +2016,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@atls-config-typescript-npm-0.0.1-fae47b2e6f-4bba557b48.zip/node_modules/@atls/config-typescript/",\
         "packageDependencies": [\
           ["@atls/config-typescript", "npm:0.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:0.0.2", {\
-        "packageLocation": "./.yarn/cache/@atls-config-typescript-npm-0.0.2-3a1dc691c2-f02ccc8b02.zip/node_modules/@atls/config-typescript/",\
-        "packageDependencies": [\
-          ["@atls/config-typescript", "npm:0.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19895,7 +19887,6 @@ const RAW_RUNTIME_STATE =
           ["drum-in", "workspace:."],\
           ["@atls/code-service", "npm:0.0.18"],\
           ["@atls/config-jest", "npm:0.0.5"],\
-          ["@atls/config-typescript", "npm:0.0.2"],\
           ["@jest/core", "virtual:1aafcfdc371d6560a1bfbbb43f2e3290369963b8c4736301b99a7e61b0fdbc946015177f459524a4568af4fb5d9d920be36bb04f4da098e24c4c98bb427fbc41#npm:29.5.0"],\
           ["@types/eslint", "npm:8.37.0"],\
           ["@types/jest", "npm:29.5.1"],\
