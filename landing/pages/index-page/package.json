@@ -23,11 +23,19 @@
     "@emotion/styled": "11.11.0",
     "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.6",
-    "@types/react-helmet": "6.1.6"
+    "@types/react-dom": "18.2.4",
+    "@types/react-helmet": "6.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-helmet": "6.1.0",
+    "react-intl": "6.4.2"
   },
   "peerDependencies": {
     "@apollo/client": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
     "@globals/data": "*",
+    "@types/react": "*",
     "@types/react-helmet": "*",
     "next": "*",
     "react": "*",

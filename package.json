@@ -10,8 +10,8 @@
     "globals/**/*"
   ],
   "resolutions": {
-    "@emotion/react": "11.11.0",
     "@apollo/client": "3.6.9",
+    "@emotion/react": "11.11.0",
     "@types/eslint": "8",
     "@types/node": "16",
     "@types/react": "17.0.47",

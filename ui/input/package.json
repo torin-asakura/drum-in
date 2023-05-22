@@ -3,18 +3,18 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/input": "^0.0.13",
+    "@atls-ui-parts/input": "0.0.13",
     "@ui/text": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1",
-    "styled-tools": "^1.7.2"
+    "styled-tools": "1.7.2"
   },
   "devDependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@types/styled-system": "^5.1.16",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-system": "^5.1.5"
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@types/styled-system": "5.1.16",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
     "@emotion/react": "*",
