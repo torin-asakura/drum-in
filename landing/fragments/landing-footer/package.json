@@ -11,17 +11,21 @@
     "@ui/link": "workspace:0.0.1",
     "@ui/logo": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
-    "uniqid": "^5.4.0"
+    "uniqid": "5.4.0"
   },
   "devDependencies": {
     "@apollo/client": "3.6.9",
+    "@emotion/react": "11.11.0",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@types/react": "18.2.6",
-    "react-intl": "^6.4.2"
+    "react": "18.2.0",
+    "react-intl": "6.4.2"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
+    "@forks/react-locomotive-scroll": "*",
+    "@types/react": "*",
     "react": "*",
     "react-intl": "*"
   }

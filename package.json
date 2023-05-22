@@ -10,8 +10,8 @@
     "globals/**/*"
   ],
   "resolutions": {
-    "@emotion/react": "11.11.0",
     "@apollo/client": "3.6.9",
+    "@emotion/react": "11.11.0",
     "@types/eslint": "8",
     "@types/node": "16",
     "@types/react": "17.0.47",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@atls/code-service": "0.0.18",
     "@atls/config-jest": "0.0.5",
+    "@atls/config-typescript": "^0.0.2",
     "@jest/core": "29.5.0",
     "@types/eslint": "=8",
     "@types/jest": "29.5.1",

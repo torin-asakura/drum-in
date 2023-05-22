@@ -6,20 +6,23 @@
   "dependencies": {
     "@ui/layout": "workspace:0.0.1",
     "framer-motion": "10.12.10",
-    "styled-system": "^5.1.5"
+    "styled-system": "5.1.5"
   },
   "devDependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@types/react-dom": "^18.2.4",
-    "@types/styled-system": "^5.1.16",
-    "react": "^18.2.0",
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@types/react-dom": "18.2.4",
+    "@types/styled-system": "5.1.16",
+    "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intl": "^6.4.2"
+    "react-intl": "6.4.2"
   },
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/styled-system": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*",

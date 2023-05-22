@@ -7,22 +7,22 @@
   },
   "dependencies": {
     "@atls-ui-generators/button": "0.0.10",
-    "@atls-ui-parts/button": "^0.0.10",
+    "@atls-ui-parts/button": "0.0.10",
     "@atls-ui-parts/conditional-render": "0.0.4",
-    "@atls-ui-parts/styles": "^0.0.4",
+    "@atls-ui-parts/styles": "0.0.4",
     "@ui/condition": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/theme": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1",
-    "styled-tools": "^1.7.2"
+    "styled-tools": "1.7.2"
   },
   "devDependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@types/styled-system": "^5.1.16",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-system": "^5.1.5"
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@types/styled-system": "5.1.16",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
     "@emotion/react": "*",
