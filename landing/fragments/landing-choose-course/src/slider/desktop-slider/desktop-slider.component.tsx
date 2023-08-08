@@ -47,7 +47,7 @@ const DesktopSliderBlock = () => {
         clName='choose-courses-slider'
         spaceBetween={40}
         slidesPerView='auto'
-        slidesOffsetAfter={40}
+        slidesOffsetAfter={80}
         mousewheel
         grabCursor
         forceToAxis
