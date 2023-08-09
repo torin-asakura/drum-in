@@ -12,10 +12,10 @@ import { SliderBlock }      from './slider'
 const ChooseCourseBlock = () => (
   <Row justifyContent='center' id='choose-course'>
     <Box width={['100%', '100%', 1920]}>
-      <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={60} />
-        <Box width={[270, 500, 630]}>
+        <Box width={[290, 530, 670]}>
+          <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
           <Text
             textTransform='uppercase'
             fontFamily='secondary'
