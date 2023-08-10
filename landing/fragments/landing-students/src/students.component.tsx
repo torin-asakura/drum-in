@@ -24,7 +24,6 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
       <ModalWindow active={visibleModal} onClose={() => setVisibleModal(false)} />
       <Row justifyContent='center' ref={ref}>
         <Box width={['100%', '100%', 1920]}>
-          <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[32, 77, 120]} />
             <Box
@@ -35,6 +34,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
               flexDirection={['column', 'column', 'row']}
             >
               <Box>
+                <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
                 <Text
                   textTransform='uppercase'
                   fontFamily='secondary'
@@ -49,6 +49,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
               <Layout display={['flex', 'flex', 'none']} flexBasis={[8, 12, 0]} />
               <Column width={[335, 420, 440]}>
                 <Box>
+                  <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
                   <Text
                     fontWeight='medium'
                     fontSize={['semiMedium', 'medium', 'regular']}
@@ -60,6 +61,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
                 </Box>
                 <Layout flexBasis={[16, 20, 24]} />
                 <Box display={['none', 'none', 'flex']}>
+                  <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
                   <Button
                     size='middlingPaddingMediumHeight'
                     variant='transparentWhiteToPurpleBackground'
@@ -76,6 +78,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
                   </Button>
                 </Box>
                 <Box display={['flex', 'flex', 'none']}>
+                  <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
                   <Button
                     size='littlePaddingSemiMediumHeight'
                     variant='transparentWhiteToPurpleBackground'
