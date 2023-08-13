@@ -32,6 +32,8 @@ const SliderBlock = () => {
             clName='teacher-slider'
             centeredSlides
             spaceBetween={197}
+            mousewheel
+            forceToAxis
             loop
             grabCursor
           >

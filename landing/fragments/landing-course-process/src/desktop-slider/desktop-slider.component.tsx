@@ -17,12 +17,15 @@ const DesktopSlider = () => {
   return (
     <Column width='100%'>
       <Box display={['none', 'none', 'flex']}>
-        <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Slider
           clName='course-process-slider'
           spaceBetween={40}
           slidesPerView='auto'
           slidesOffsetAfter={40}
+          slidesOffsetBefore={40}
+          mousewheel
+          grabCursor
+          forceToAxis
         >
           <SwiperSlide>
             <Box

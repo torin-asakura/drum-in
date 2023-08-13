@@ -20,6 +20,7 @@ const Slider: FC<SliderProps> = ({
   allowTouchMove = true,
   mousewheel,
   slidesOffsetAfter = 0,
+  slidesOffsetBefore = 0,
   mousewheelInvert,
   forceToAxis = false,
   children,
@@ -43,6 +44,7 @@ const Slider: FC<SliderProps> = ({
         speed={speed}
         allowTouchMove={allowTouchMove}
         slidesOffsetAfter={slidesOffsetAfter}
+        slidesOffsetBefore={slidesOffsetBefore}
       >
         {children}
       </Swiper>
@@ -64,6 +66,7 @@ const Slider: FC<SliderProps> = ({
       speed={speed}
       allowTouchMove={allowTouchMove}
       slidesOffsetAfter={slidesOffsetAfter}
+      slidesOffsetBefore={slidesOffsetBefore}
     >
       {children}
     </Swiper>
