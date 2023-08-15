@@ -11,7 +11,7 @@ import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 import { useProgram }          from './data'
 
-const ProgramPolyrhythmicKeyslBlock = ({scrollId}) => {
+const ProgramPolyrhythmicKeyslBlock = ({ scrollId }) => {
   const program = useProgram()
 
   return (

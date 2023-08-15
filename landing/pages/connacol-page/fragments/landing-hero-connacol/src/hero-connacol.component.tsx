@@ -23,7 +23,7 @@ const HeroConnacolBlock = () => {
       >
         <BannerConnacolBlock />
         <AdvantagesBlock />
-        <ProgramConnacolBlock />
+        <ProgramConnacolBlock scrollId='desktop-scroll' />
       </Box>
       <Box
         display={['flex', 'none', 'none']}
@@ -36,7 +36,7 @@ const HeroConnacolBlock = () => {
       >
         <BannerConnacolBlock />
         <AdvantagesBlock />
-        <ProgramConnacolBlock />
+        <ProgramConnacolBlock scrollId='mobile-scroll' />
       </Box>
     </>
   )

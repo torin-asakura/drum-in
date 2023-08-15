@@ -11,7 +11,7 @@ import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 import { useProgram }          from './data'
 
-const ProgramSeventhHeavenBlock = () => {
+const ProgramSeventhHeavenBlock = ({ scrollId }) => {
   const program = useProgram()
 
   return (
@@ -100,7 +100,7 @@ const ProgramSeventhHeavenBlock = () => {
             <ProgramIcon width='100%' height='auto' />
           </Box>
           <Layout flexBasis={[81, 110, 0]} />
-          <ContentMobileCourse />
+          <ContentMobileCourse scrollId={scrollId} />
           <Layout flexBasis={[32, 44, 0]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

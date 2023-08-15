@@ -23,7 +23,7 @@ const HeroFeelingOfTimeBlock = () => {
       >
         <BannerFeelingOfTimeBlock />
         <TargetAudienceFeelingOfTimeBlock />
-        <ProgramFeelingOfTimeBlock />
+        <ProgramFeelingOfTimeBlock scrollId='desktop-scroll' />
       </Box>
       <Box
         display={['flex', 'none', 'none']}
@@ -36,7 +36,7 @@ const HeroFeelingOfTimeBlock = () => {
       >
         <BannerFeelingOfTimeBlock />
         <TargetAudienceFeelingOfTimeBlock />
-        <ProgramFeelingOfTimeBlock />
+        <ProgramFeelingOfTimeBlock scrollId='mobile-scroll' />
       </Box>
     </>
   )

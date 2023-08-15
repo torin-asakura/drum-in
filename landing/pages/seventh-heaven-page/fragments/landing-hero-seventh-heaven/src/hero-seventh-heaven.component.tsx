@@ -23,7 +23,7 @@ const HeroSeventhHeavenBlock = () => {
       >
         <BannerSeventhHeavenBlock />
         <TargetAudienceSeventhHeavenBlock />
-        <ProgramSeventhHeavenBlock />
+        <ProgramSeventhHeavenBlock scrollId='desktop-scroll' />
       </Box>
       <Box
         display={['flex', 'none', 'none']}
@@ -36,7 +36,7 @@ const HeroSeventhHeavenBlock = () => {
       >
         <BannerSeventhHeavenBlock />
         <TargetAudienceSeventhHeavenBlock />
-        <ProgramSeventhHeavenBlock />
+        <ProgramSeventhHeavenBlock scrollId='mobile-scroll' />
       </Box>
     </>
   )
