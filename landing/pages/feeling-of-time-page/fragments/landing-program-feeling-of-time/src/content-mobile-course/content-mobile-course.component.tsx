@@ -20,6 +20,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
       display='block'
       position='relative'
       id={scrollId}
+      borderTop='1px solid black'
       data-scroll-position='bottom'
       width={[335, 446, 0]}
       height={[1005, 1298, 0]}
@@ -153,7 +154,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         data-scroll-target={`#${scrollId}`}
         width='100%'
         position='absolute'
-        top={0}
+        top='1px'
         left={0}
         zIndex={1}
       >
