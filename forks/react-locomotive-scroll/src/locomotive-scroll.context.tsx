@@ -57,7 +57,16 @@ export const LocomotiveScrollProvider = ({
           ...options,
         })
 
-        new ResizeObserver(() => LocomotiveScrollRef.current?.update()).observe(dataScrollContainer)
+        const resizeObserver = new ResizeObserver(() => {
+          if (dataScrollContainer.isConnected) {
+            // check if an element exists on the page
+            LocomotiveScrollRef.current?.update()
+          }
+        })
+
+        if (resizeObserver) {
+          resizeObserver.observe(dataScrollContainer)
+        }
 
         setIsReady(true) // Re-render the context
       } catch (error) {
