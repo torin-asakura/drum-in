@@ -46,6 +46,8 @@ export const LocomotiveScrollProvider = ({
   const [height] = useDebounce(containerHeight, 100)
 
   useEffect(() => {
+    let resizeObserver: ResizeObserver | null = null
+
     ;(async () => {
       try {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
@@ -57,12 +59,7 @@ export const LocomotiveScrollProvider = ({
           ...options,
         })
 
-        const resizeObserver = new ResizeObserver(() => {
-          if (dataScrollContainer.isConnected) {
-            // check if an element exists on the page
-            LocomotiveScrollRef.current?.update()
-          }
-        })
+        resizeObserver = new ResizeObserver(() => LocomotiveScrollRef.current?.update())
 
         if (resizeObserver) {
           resizeObserver.observe(dataScrollContainer)
@@ -75,6 +72,7 @@ export const LocomotiveScrollProvider = ({
     })()
 
     return () => {
+      resizeObserver?.disconnect()
       LocomotiveScrollRef.current?.destroy()
       setIsReady(false)
     }
