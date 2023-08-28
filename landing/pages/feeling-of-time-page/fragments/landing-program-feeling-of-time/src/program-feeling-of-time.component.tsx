@@ -11,7 +11,7 @@ import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 import { useProgram }          from './data'
 
-const ProgramFeelingOfTimeBlock = () => {
+const ProgramFeelingOfTimeBlock = ({ scrollId }) => {
   const program = useProgram()
 
   return (
@@ -99,7 +99,7 @@ const ProgramFeelingOfTimeBlock = () => {
             <ProgramIcon width='100%' height='100%' />
           </Box>
           <Layout flexBasis={[81, 110, 0]} />
-          <ContentMobileCourse />
+          <ContentMobileCourse scrollId={scrollId} />
           <Layout flexBasis={[32, 44, 0]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

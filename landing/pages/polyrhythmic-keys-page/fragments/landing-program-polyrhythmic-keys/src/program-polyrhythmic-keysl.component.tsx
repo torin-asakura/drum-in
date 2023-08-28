@@ -11,7 +11,7 @@ import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 import { useProgram }          from './data'
 
-const ProgramPolyrhythmicKeyslBlock = () => {
+const ProgramPolyrhythmicKeyslBlock = ({ scrollId }) => {
   const program = useProgram()
 
   return (
@@ -40,7 +40,7 @@ const ProgramPolyrhythmicKeyslBlock = () => {
               data-scroll-position='left'
               data-scroll-offset='50%'
               height='100vh'
-              width={{ _: 0, tablet: 0, laptop: 8090, wide: 10122 }}
+              width={{ _: 0, tablet: 0, laptop: 6800, wide: 10122 }}
               flexShrink={0}
             >
               <Box
@@ -56,11 +56,11 @@ const ProgramPolyrhythmicKeyslBlock = () => {
                 backgroundSize='100%'
                 backgroundImage={`url(${program?.background?.sourceUrl})`}
               >
-                <Layout flexBasis={{ _: 0, tablet: 0, laptop: 2700, wide: 2000 }} flexShrink={0} />
+                <Layout flexBasis={{ _: 0, tablet: 0, laptop: 1600, wide: 2000 }} flexShrink={0} />
                 <Box width={{ _: 0, tablet: 0, laptop: 2000, wide: 2612 }}>
                   <ProgramIcon width='100%' height='auto' />
                 </Box>
-                <Layout flexBasis={{ _: 0, tablet: 0, laptop: 720, wide: 970 }} flexShrink={0} />
+                <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 970 }} flexShrink={0} />
                 <ContentCourse />
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 627 }} flexShrink={0} />
                 <Column justifyContent='end'>
@@ -99,7 +99,7 @@ const ProgramPolyrhythmicKeyslBlock = () => {
             <ProgramIcon width='100%' height='auto' />
           </Box>
           <Layout flexBasis={[81, 110, 0]} />
-          <ContentMobileCourse />
+          <ContentMobileCourse scrollId={scrollId} />
           <Layout flexBasis={[32, 44, 0]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

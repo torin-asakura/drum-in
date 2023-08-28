@@ -12,14 +12,15 @@ import { Text }             from '@ui/text'
 
 import { useProgram }       from '../data'
 
-const ContentMobileCourse = () => {
+const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
   const program = useProgram()
 
   return (
     <Box
       display='block'
       position='relative'
-      id='scroll-mobile'
+      id={scrollId}
+      borderTop='1px solid black'
       data-scroll-position='bottom'
       width={[335, 446, 0]}
       height={[1005, 1298, 0]}
@@ -150,10 +151,10 @@ const ContentMobileCourse = () => {
       <Box
         data-scroll
         data-scroll-sticky
-        data-scroll-target='#scroll-mobile'
+        data-scroll-target={`#${scrollId}`}
         width='100%'
         position='absolute'
-        top={0}
+        top='1px'
         left={0}
         zIndex={1}
       >
