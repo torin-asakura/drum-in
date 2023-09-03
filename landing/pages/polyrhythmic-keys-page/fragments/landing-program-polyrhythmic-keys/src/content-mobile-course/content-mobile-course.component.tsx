@@ -17,20 +17,20 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
 
   return (
     <Box
+      overflow='hidden'
       display='block'
       position='relative'
       id={scrollId}
-      borderTop='1px solid black'
       data-scroll-position='bottom'
       width={[335, 446, 0]}
-      height={[1005, 1298, 0]}
+      height={[1008, 1298, 0]}
     >
       <Box
         position='relative'
         backgroundPosition='left top'
-        backgroundSize='100% 100%'
-        backgroundRepeat='repeat-y'
-        backgroundImage={`url(${program?.backgroundMobile?.sourceUrl})`}
+        backgroundSize='25% 100%'
+        backgroundRepeat='no-repeat'
+        backgroundImage={`url(${program?.backgroundMobile2?.sourceUrl})`}
         flexDirection='column'
         zIndex={4}
       >
@@ -156,15 +156,29 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         position='absolute'
         top='1px'
         left={0}
-        zIndex={1}
+        zIndex={2}
       >
         <Box
-          height={[200, 300, 0]}
-          width='100%'
+          height={[725, 0, 0]}
+          top='285px'
+          width='30%'
+          position='absolute'
           flexShrink={0}
-          backgroundColor='background.smokyWhite'
+          backgroundColor='background.blackAmber'
+          zIndex={2}
         />
       </Box>
+      <Box
+        boxSizing='content-box'
+        height='100%'
+        width='335px'
+        position='absolute'
+        top={0}
+        backgroundSize='25% 100%'
+        backgroundRepeat='no-repeat'
+        backgroundImage={`url(${program?.backgroundMobile?.sourceUrl})`}
+        zIndex={1}
+      />
     </Box>
   )
 }
