@@ -17,6 +17,7 @@
     "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@globals/data": "workspace:0.0.1",
     "@apollo/client": "3.6.9",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
@@ -28,6 +29,7 @@
     "react-helmet": "6.1.0"
   },
   "peerDependencies": {
+    "@globals/data": "*",
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
