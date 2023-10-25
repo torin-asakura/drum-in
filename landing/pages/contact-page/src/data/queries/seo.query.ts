@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 export const GET_CONTACTS_SEO = gql`
   query GetIndexSeo {
@@ -15,4 +15,4 @@ export const GET_CONTACTS_SEO = gql`
       }
     }
   }
-`;
+`

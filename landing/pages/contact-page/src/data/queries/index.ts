@@ -1,2 +1,2 @@
-export * from "./useBackground";
-export * from "./seo.query";
+export * from './useBackground'
+export * from './seo.query'

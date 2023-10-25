@@ -1,35 +1,35 @@
-import { GET_PREVIEW } from "@globals/data";
-import { getClient } from "@globals/data";
-import { setCacheHeader } from "@globals/data";
+import { GET_PREVIEW }    from '@globals/data'
+import { getClient }      from '@globals/data'
+import { setCacheHeader } from '@globals/data'
 
-import { GET_INDEX_SEO } from "./data";
+import { GET_INDEX_SEO }  from './data'
 
 export const getServerSideProps = async ({ res }) => {
-  const client = getClient();
+  const client = getClient()
 
-  let SEO;
+  let SEO
 
-  setCacheHeader(res, 3600, 300);
+  setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
     query: GET_INDEX_SEO,
-  });
+  })
 
   const { data: previewData } = await client.query({
     query: GET_PREVIEW,
     variables: {
-      uri: "/home-preview/",
+      uri: '/home-preview/',
     },
-  });
+  })
 
   if (seoData) {
     SEO = {
       RU: seoData.pageBy.seo,
       EN: seoData.pageBy.translation.seo,
-    };
-  } else SEO = { RU: {}, EN: {} };
+    }
+  } else SEO = { RU: {}, EN: {} }
 
-  const ogCover = previewData?.mediaItemBy.sourceUrl;
+  const ogCover = previewData?.mediaItemBy.sourceUrl
 
-  return { props: { SEO, ogCover } };
-};
+  return { props: { SEO, ogCover } }
+}

@@ -1,1 +1,1 @@
-export { default } from "@landing/index-page";
+export { default } from '@landing/index-page'

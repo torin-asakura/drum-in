@@ -17,16 +17,16 @@
     "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@globals/data": "workspace:0.0.1",
     "@apollo/client": "3.6.9",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
+    "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intl": "6.4.2",
-    "react-helmet": "6.1.0"
+    "react-helmet": "6.1.0",
+    "react-intl": "6.4.2"
   },
   "peerDependencies": {
     "@apollo/client": "*",
@@ -38,7 +38,7 @@
     "next": "*",
     "react": "*",
     "react-dom": "*",
-    "react-intl": "*",
-    "react-helmet": "*"
+    "react-helmet": "*",
+    "react-intl": "*"
   }
 }
