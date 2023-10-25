@@ -1,1 +1,1 @@
-export { default } from '@landing/feeling-of-time-page'
+export { default, getServerSideProps } from "@landing/feeling-of-time-page";
