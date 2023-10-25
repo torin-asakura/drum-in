@@ -20,7 +20,14 @@ import { Box }                      from '@ui/layout'
 import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
-export const ConnacolPage = () => {
+import { Seo }                      from './seo.component'
+
+interface Props {
+  ogCover: string
+  SEO: any
+}
+
+export const ConnacolPage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -70,6 +77,7 @@ export const ConnacolPage = () => {
         watch={[]}
       >
         <HeaderBlock />
+        <Seo language="RU" ogCover={ogCover} SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroConnacolBlock />
           <CourseProcessBlock />
