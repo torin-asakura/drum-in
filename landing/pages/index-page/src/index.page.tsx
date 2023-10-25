@@ -22,6 +22,8 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
+import { Seo }                      from './seo.component'
+
 interface Props {
   ogCover: string
   SEO: any
@@ -89,6 +91,7 @@ export const HomePage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
         <SpyScrollProvider>
           <HeaderBlock />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
+          <Seo language="RU" ogCover={ogCover} SEO={SEO} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero {...getObserverOptions('hero')} />
             <Box

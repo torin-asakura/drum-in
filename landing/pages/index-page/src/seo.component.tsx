@@ -1,7 +1,7 @@
 import React      from 'react'
 import { Helmet } from 'react-helmet'
 
-const Seo = ({ language, ogCover, SEO, children }) => {
+const Seo = ({ language, ogCover, SEO }) => {
   const { title } = SEO[language] || { title: 'Drum instructor' }
 
   return (
