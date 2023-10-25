@@ -25,7 +25,8 @@
     "@types/react-dom": "18.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intl": "6.4.2"
+    "react-intl": "6.4.2",
+    "react-helmet": "6.1.0"
   },
   "peerDependencies": {
     "@apollo/client": "*",
@@ -36,6 +37,7 @@
     "next": "*",
     "react": "*",
     "react-dom": "*",
-    "react-intl": "*"
+    "react-intl": "*",
+    "react-helmet": "*"
   }
 }

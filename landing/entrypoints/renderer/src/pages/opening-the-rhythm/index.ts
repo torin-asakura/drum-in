@@ -1,1 +1,1 @@
-export { default } from '@landing/opening-the-rhythm-page'
+export { default, getServerSideProps } from "@landing/opening-the-rhythm-page";
