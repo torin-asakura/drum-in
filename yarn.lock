@@ -1938,6 +1938,7 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@landing/course-process-fragment": "workspace:0.0.1"
     "@landing/cta-fragment": "workspace:0.0.1"
     "@landing/faq": "workspace:0.0.1"
@@ -1949,13 +1950,18 @@ __metadata:
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
+    "@types/react-helmet": "npm:6.1.6"
     "@ui/layout": "workspace:0.0.1"
+    react-helmet: "npm:6.1.0"
   peerDependencies:
     "@apollo/client": "*"
     "@globals/data": "*"
+    "@types/react": "*"
+    "@types/react-helmet": "*"
     next: "*"
     react: "*"
     react-dom: "*"
+    react-helmet: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft

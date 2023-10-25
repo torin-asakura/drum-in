@@ -1,8 +1,8 @@
-import { GET_PREVIEW }         from '@globals/data'
-import { getClient }           from '@globals/data'
-import { setCacheHeader }      from '@globals/data'
+import { GET_PREVIEW }      from '@globals/data'
+import { getClient }        from '@globals/data'
+import { setCacheHeader }   from '@globals/data'
 
-import { GET_KONNAKOL_SEO }    from './data'
+import { GET_KONNAKOL_SEO } from './data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
