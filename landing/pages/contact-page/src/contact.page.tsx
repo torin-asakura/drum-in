@@ -1,31 +1,21 @@
-import React                        from 'react'
-import { useRef }                   from 'react'
+import React from "react";
+import { useRef } from "react";
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { ContactBlock }             from '@landing/contact-fragment'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider } from "@forks/react-locomotive-scroll";
+import { ContactBlock } from "@landing/contact-fragment";
+import { FooterBlock } from "@landing/footer-fragment";
+import { HeaderBlock } from "@landing/header-fragment";
+import { Box } from "@ui/layout";
 
-import { Seo }                      from './seo.component'
-import { useBackground }            from './data'
+import { Seo } from "./seo.component";
+import { useBackground } from "./data";
 
-type SEOKey = 'RU' | 'EN'
-interface SEOInfo {
-  title: string
-  metaDesc: string
-}
-interface Props {
-  ogCover: string
-  SEO: Record<SEOKey, SEOInfo | {}>
-}
-
-export const ContactPage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
-  const containerRef = useRef(null)
-  const background = useBackground()
+export const ContactPage = ({ SEO }) => {
+  const containerRef = useRef(null);
+  const background = useBackground();
 
   return (
-    <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
+    <Box backgroundColor="background.blackAmber" flexWrap="wrap">
       <LocomotiveScrollProvider
         options={{
           smooth: true,
@@ -43,28 +33,32 @@ export const ContactPage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo language='RU' ogCover={ogCover} SEO={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <Seo SEO={SEO} />
+        <main
+          style={{ width: "100%", height: "100%" }}
+          data-scroll-container
+          ref={containerRef}
+        >
           <Box
-            width='100%'
-            display={['none', 'none', 'flex']}
-            flexWrap='wrap'
+            width="100%"
+            display={["none", "none", "flex"]}
+            flexWrap="wrap"
             backgroundImage={`url(${background?.backgroundForHero?.sourceUrl})`}
-            backgroundSize='100% 100%'
-            backgroundRepeat='no-repeat'
-            backgroundPosition='center bottom'
+            backgroundSize="100% 100%"
+            backgroundRepeat="no-repeat"
+            backgroundPosition="center bottom"
           >
             <ContactBlock />
             <FooterBlock buttonUp={false} />
           </Box>
           <Box
-            width='100%'
-            display={['flex', 'flex', 'none']}
-            flexWrap='wrap'
+            width="100%"
+            display={["flex", "flex", "none"]}
+            flexWrap="wrap"
             backgroundImage={`url(${background?.backgroundMobileForHero?.sourceUrl})`}
-            backgroundSize={['100%', '100%', '0']}
-            backgroundRepeat='no-repeat'
-            backgroundPosition={['center top', 'center top', 'center']}
+            backgroundSize={["100%", "100%", "0"]}
+            backgroundRepeat="no-repeat"
+            backgroundPosition={["center top", "center top", "center"]}
           >
             <ContactBlock />
             <FooterBlock buttonUp={false} />
@@ -72,7 +66,7 @@ export const ContactPage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
         </main>
       </LocomotiveScrollProvider>
     </Box>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

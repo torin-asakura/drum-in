@@ -1,65 +1,48 @@
-import React      from 'react'
-import { Helmet } from 'react-helmet'
+import React from "react";
+import { Helmet } from "react-helmet";
 
-const Seo = ({ language, ogCover, SEO }) => {
-  const { title } = SEO[language] || { title: 'Drum instructor' }
+const Seo = ({ SEO }) => (
+  <Helmet
+    title={SEO.title}
+    meta={[
+      {
+        name: "description",
+        content: SEO.metaDesc,
+      },
+      {
+        property: "og:locale",
+        content: "ru_RU",
+      },
+      {
+        property: "og:type",
+        content: SEO.opengraphType,
+      },
+      {
+        property: "og:title",
+        content: SEO.opengraphTitle,
+      },
+      {
+        property: "og:description",
+        content: SEO.opengraphDescription,
+      },
+      {
+        property: "og:url",
+        content: SEO.opengraphUrl,
+      },
+      {
+        property: "og:site_name",
+        content: SEO.opengraphSiteName,
+      },
+      {
+        property: "article:modified_time",
+        content: SEO.opengraphModifiedTime,
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    ]}
+  />
+);
 
-  return (
-    <Helmet
-      title={title}
-      meta={[
-        {
-          name: 'description',
-          lang: 'ru',
-          content: SEO.RU.metaDesc,
-        },
-        {
-          name: 'description',
-          lang: 'en',
-          content: SEO.EN.metaDesc,
-        },
-        {
-          property: 'og:title',
-          content: title,
-        },
-        {
-          property: 'og:description',
-          lang: 'ru',
-          content: SEO.RU.metaDesc,
-        },
-        {
-          property: 'og:description',
-          lang: 'en',
-          content: SEO.EN.metaDesc,
-        },
-        {
-          property: 'og:image',
-          content: ogCover,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
-          name: 'twitter:description',
-          lang: 'ru',
-          content: SEO.RU.metaDesc,
-        },
-        {
-          name: 'twitter:description',
-          lang: 'en',
-          content: SEO.EN.metaDesc,
-        },
-      ]}
-    />
-  )
-}
-export { Seo }
+export { Seo };

@@ -1,18 +1,31 @@
-import { gql } from '@apollo/client'
+import { gql } from "@apollo/client";
 
 export const GET_CONTACTS_SEO = gql`
   query GetIndexSeo {
-    pageBy(uri: "/contacts") {
+    pageContentBy(uri: "/contacts") {
       seo {
-        title
+        canonical
+        cornerstone
+        focuskw
+        fullHead
         metaDesc
-      }
-      translation(language: EN) {
-        seo {
-          title
-          metaDesc
-        }
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        readingTime
+        title
+        twitterDescription
+        twitterTitle
       }
     }
   }
-`
+`;
