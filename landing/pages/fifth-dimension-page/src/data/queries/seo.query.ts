@@ -2,16 +2,29 @@ import { gql } from '@apollo/client'
 
 export const GET_FIFTH_DIMENSION_SEO = gql`
   query GetIndexSeo {
-    pageBy(uri: "/fifth-dimension") {
+    pageContentBy(uri: "/fifth-dimension") {
       seo {
-        title
+        canonical
+        cornerstone
+        focuskw
+        fullHead
         metaDesc
-      }
-      translation(language: EN) {
-        seo {
-          title
-          metaDesc
-        }
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        readingTime
+        title
+        twitterDescription
+        twitterTitle
       }
     }
   }
