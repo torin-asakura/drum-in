@@ -22,17 +22,7 @@ import { Seo }                             from './seo.component'
 import { useBackgrounds }                  from './data'
 import { useSong }                         from './data'
 
-type SEOKey = 'RU' | 'EN'
-interface SEOInfo {
-  title: string
-  metaDesc: string
-}
-interface Props {
-  ogCover: string
-  SEO: Record<SEOKey, SEOInfo | {}>
-}
-
-export const OpeningTheRhythmPage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
+export const OpeningTheRhythmPage = ({ SEO }) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -82,7 +72,7 @@ export const OpeningTheRhythmPage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Prop
         watch={[]}
       >
         <HeaderBlock />
-        <Seo language='RU' ogCover={ogCover} SEO={SEO} />
+        <Seo SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock />
           <ProgramBlock />
