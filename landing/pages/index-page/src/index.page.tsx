@@ -23,17 +23,7 @@ import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
-type SEOKey = 'RU' | 'EN'
-interface SEOInfo {
-  title: string
-  metaDesc: string
-}
-interface Props {
-  ogCover: string
-  SEO: Record<SEOKey, SEOInfo | {}>
-}
-
-export const HomePage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
+export const HomePage = ({ SEO }) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
@@ -95,7 +85,7 @@ export const HomePage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
         <SpyScrollProvider>
           <HeaderBlock />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
-          <Seo language='RU' ogCover={ogCover} SEO={SEO} />
+          <Seo SEO={SEO} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero {...getObserverOptions('hero')} />
             <Box

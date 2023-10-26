@@ -2,16 +2,29 @@ import { gql } from '@apollo/client'
 
 export const GET_INDEX_SEO = gql`
   query GetIndexSeo {
-    pageBy(uri: "/home") {
+    pageContentBy(uri: "/home") {
       seo {
-        title
+        canonical
+        cornerstone
+        focuskw
+        fullHead
         metaDesc
-      }
-      translation(language: EN) {
-        seo {
-          title
-          metaDesc
-        }
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        readingTime
+        title
+        twitterDescription
+        twitterTitle
       }
     }
   }
