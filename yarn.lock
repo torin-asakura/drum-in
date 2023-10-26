@@ -2074,12 +2074,14 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@landing/contract-offer-fragment": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@ui/layout": "workspace:0.0.1"
     locomotive-scroll: "npm:4.1.4"
+    react-helmet: "npm:6.1.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2088,6 +2090,7 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
+    react-helmet: 6.1.0
     react-intl: "*"
   languageName: unknown
   linkType: soft

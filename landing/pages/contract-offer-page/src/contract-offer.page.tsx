@@ -7,9 +7,10 @@ import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { Box }                      from '@ui/layout'
 
+import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 
-export const ContractOfferPage = () => {
+export const ContractOfferPage = ({ SEO }) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
 
@@ -32,6 +33,7 @@ export const ContractOfferPage = () => {
         watch={[]}
       >
         <HeaderBlock />
+        <Seo SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <ContractOfferBlock />
           <Box
