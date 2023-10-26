@@ -10323,12 +10323,14 @@ const RAW_RUNTIME_STATE =
           ["@types/next", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.20"],\
+          ["@types/react-helmet", "npm:6.1.6"],\
           ["@types/react-intl", null],\
           ["@ui/layout", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:ui/layout"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["next", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:12.1.1"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
+          ["react-helmet", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:6.1.0"],\
           ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
         ],\
         "packagePeers": [\
@@ -10342,10 +10344,12 @@ const RAW_RUNTIME_STATE =
           "@types/globals__data",\
           "@types/next",\
           "@types/react-dom",\
+          "@types/react-helmet",\
           "@types/react-intl",\
           "@types/react",\
           "next",\
           "react-dom",\
+          "react-helmet",\
           "react-intl",\
           "react"\
         ],\
@@ -10365,7 +10369,8 @@ const RAW_RUNTIME_STATE =
           ["@landing/privacy-policy-fragment", "virtual:2912690820a2b782602d209f801fe42efd33385f9f52f6eee7dbba99f423b57f4fc0f6e7a38305db887fcaa25011ef8112254636a9b492387ddd0e8794242aa4#workspace:landing/fragments/landing-privacy-policy"],\
           ["@types/react", "npm:17.0.47"],\
           ["@ui/layout", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:ui/layout"],\
-          ["locomotive-scroll", "npm:4.1.4"]\
+          ["locomotive-scroll", "npm:4.1.4"],\
+          ["react-helmet", "virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#npm:6.1.0"]\
         ],\
         "linkType": "SOFT"\
       }]\

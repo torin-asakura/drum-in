@@ -3121,6 +3121,7 @@ __metadata:
     "@types/react": "npm:18.2.6"
     "@ui/layout": "workspace:0.0.1"
     locomotive-scroll: "npm:4.1.4"
+    react-helmet: "npm:6.1.0"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -3130,6 +3131,7 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
+    react-helmet: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
