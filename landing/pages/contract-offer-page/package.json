@@ -26,7 +26,7 @@
     "next": "*",
     "react": "*",
     "react-dom": "*",
-    "react-helmet": "6.1.0",
+    "react-helmet": "*",
     "react-intl": "*"
   }
 }

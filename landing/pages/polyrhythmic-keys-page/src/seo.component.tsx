@@ -1,17 +1,17 @@
 import React      from 'react'
 import { Helmet } from 'react-helmet'
 
-const Seo = ({ SEO }) => (
+const Seo = ({ SEO, ogCover }) => (
   <Helmet
     title={SEO.title}
     meta={[
       {
-        name: 'keywords',
-        content: SEO.focuskw,
-      },
-      {
         name: 'description',
         content: SEO.metaDesc,
+      },
+      {
+        name: 'keywords',
+        content: SEO.focuskw,
       },
       {
         property: 'og:locale',
@@ -38,12 +38,36 @@ const Seo = ({ SEO }) => (
         content: SEO.opengraphSiteName,
       },
       {
+        property: 'og:image',
+        content: ogCover,
+      },
+      {
+        property: 'og:image:width',
+        content: '1024',
+      },
+      {
+        property: 'og:image:height',
+        content: '621',
+      },
+      {
         property: 'article:modified_time',
         content: SEO.opengraphModifiedTime,
       },
       {
         name: 'twitter:card',
         content: 'summary_large_image',
+      },
+      {
+        name: 'twitter:title',
+        content: SEO.twitterTitle,
+      },
+      {
+        name: 'twitter:description',
+        content: SEO.twitterDescription,
+      },
+      {
+        name: 'twitter:image',
+        content: ogCover,
       },
     ]}
   />

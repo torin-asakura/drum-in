@@ -15,9 +15,10 @@ interface SEOProp {
 }
 interface Props {
   SEO: SEOProp
+  ogCover: string
 }
 
-export const OpeningTheRhythmPage = ({ SEO }: Props) => {
+export const OpeningTheRhythmPage = ({ SEO, ogCover }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
 
@@ -40,7 +41,7 @@ export const OpeningTheRhythmPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo SEO={SEO} ogCover={ogCover} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <PrivacyPolicyBlock />
           <Box

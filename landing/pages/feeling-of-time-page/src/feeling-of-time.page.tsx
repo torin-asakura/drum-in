@@ -26,9 +26,10 @@ interface SEOProp {
 }
 interface Props {
   SEO: SEOProp
+  ogCover: string
 }
 
-export const FeelingOfTimePage = ({ SEO }: Props) => {
+export const FeelingOfTimePage = ({ SEO, ogCover }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -78,7 +79,7 @@ export const FeelingOfTimePage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo SEO={SEO} ogCover={ogCover} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFeelingOfTimeBlock />
           <CourseProcessBlock />

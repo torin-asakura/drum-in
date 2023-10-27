@@ -26,9 +26,10 @@ interface SEOProp {
 }
 interface Props {
   SEO: SEOProp
+  ogCover: string
 }
 
-export const FifthDimensionPage = ({ SEO }: Props) => {
+export const FifthDimensionPage = ({ SEO, ogCover }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -78,7 +79,7 @@ export const FifthDimensionPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo SEO={SEO} ogCover={ogCover} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFifthDimensionBlock />
           <CourseProcessBlock />
