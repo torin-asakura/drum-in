@@ -10,7 +10,14 @@ import { Box }                      from '@ui/layout'
 import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 
-export const ContractOfferPage = ({ SEO }) => {
+interface SEOProp {
+  [key: string]: string
+}
+interface Props {
+  SEO: SEOProp
+}
+
+export const ContractOfferPage = ({ SEO }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
 

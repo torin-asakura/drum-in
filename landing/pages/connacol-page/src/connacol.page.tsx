@@ -21,7 +21,14 @@ import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
-export const ConnacolPage = ({ SEO }) => {
+interface SEOProp {
+  [key: string]: string
+}
+interface Props {
+  SEO: SEOProp
+}
+
+export const ConnacolPage = ({ SEO }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
