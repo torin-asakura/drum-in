@@ -28,9 +28,10 @@ interface SEOProp {
 }
 interface Props {
   SEO: SEOProp
+  ogCover: string
 }
 
-export const HomePage = ({ SEO }: Props) => {
+export const HomePage = ({ SEO, ogCover }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
@@ -92,7 +93,7 @@ export const HomePage = ({ SEO }: Props) => {
         <SpyScrollProvider>
           <HeaderBlock />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
-          <Seo SEO={SEO} />
+          <Seo SEO={SEO} ogCover={ogCover} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero {...getObserverOptions('hero')} />
             <Box

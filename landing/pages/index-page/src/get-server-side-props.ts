@@ -1,3 +1,4 @@
+import { GET_PREVIEW }    from '@globals/data'
 import { getClient }      from '@globals/data'
 import { setCacheHeader } from '@globals/data'
 
@@ -8,11 +9,20 @@ export const getServerSideProps = async ({ res }) => {
 
   setCacheHeader(res, 3600, 300)
 
+  const { data: previewData } = await client.query({
+    query: GET_PREVIEW,
+    variables: {
+      uri: '/main-cover/',
+    },
+  })
+
+  const ogCover = previewData?.mediaItemBy.sourceUrl
+
   const { data: seoData } = await client.query({
     query: GET_INDEX_SEO,
   })
 
   const SEO = seoData?.pageContentBy.seo
 
-  return { props: { SEO } }
+  return { props: { SEO, ogCover } }
 }
