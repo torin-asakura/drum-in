@@ -6,6 +6,10 @@ const Seo = ({ SEO }) => (
     title={SEO.title}
     meta={[
       {
+        name: 'keywords',
+        content: SEO.focuskw,
+      },
+      {
         name: 'description',
         content: SEO.metaDesc,
       },
