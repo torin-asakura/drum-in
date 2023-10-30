@@ -1,7 +1,7 @@
 import React      from 'react'
 import { Helmet } from 'react-helmet'
 
-const Seo = ({ SEO, ogCover }) => (
+const Seo = ({ SEO }) => (
   <Helmet
     title={SEO.title}
     meta={[
@@ -15,7 +15,7 @@ const Seo = ({ SEO, ogCover }) => (
       },
       {
         property: 'og:locale',
-        content: 'ru_RU',
+        content: SEO.ogLocale,
       },
       {
         property: 'og:type',
@@ -39,15 +39,15 @@ const Seo = ({ SEO, ogCover }) => (
       },
       {
         property: 'og:image',
-        content: ogCover,
+        content: SEO.ogCover,
       },
       {
         property: 'og:image:width',
-        content: '1024',
+        content: SEO.ogImageWidth,
       },
       {
         property: 'og:image:height',
-        content: '621',
+        content: SEO.ogImageHeight,
       },
       {
         property: 'article:modified_time',
@@ -55,7 +55,7 @@ const Seo = ({ SEO, ogCover }) => (
       },
       {
         name: 'twitter:card',
-        content: 'summary_large_image',
+        content: SEO.twitterCard,
       },
       {
         name: 'twitter:title',
@@ -67,7 +67,7 @@ const Seo = ({ SEO, ogCover }) => (
       },
       {
         name: 'twitter:image',
-        content: ogCover,
+        content: SEO.ogCover,
       },
     ]}
   />

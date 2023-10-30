@@ -15,10 +15,9 @@ interface SEOProp {
 }
 interface Props {
   SEO: SEOProp
-  ogCover: string
 }
 
-export const ContactPage = ({ SEO, ogCover }: Props) => {
+export const ContactPage = ({ SEO }: Props) => {
   const containerRef = useRef(null)
   const background = useBackground()
 
@@ -41,7 +40,7 @@ export const ContactPage = ({ SEO, ogCover }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} ogCover={ogCover} />
+        <Seo SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Box
             width='100%'

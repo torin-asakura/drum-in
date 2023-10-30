@@ -22,7 +22,14 @@ export const getServerSideProps = async ({ res }) => {
     query: GET_CONTACTS_SEO,
   })
 
-  const SEO = seoData?.pageContentBy.seo
+  const SEO = {
+    ...seoData?.pageContentBy.seo,
+    ogCover,
+    ogLocale: 'ru_RU',
+    ogImageWidth: '1024',
+    ogImageHeight: '621',
+    twitterCard: 'summary_large_image',
+  }
 
-  return { props: { SEO, ogCover } }
+  return { props: { SEO } }
 }

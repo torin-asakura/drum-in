@@ -27,10 +27,9 @@ interface SEOProp {
 }
 interface Props {
   SEO: SEOProp
-  ogCover: string
 }
 
-export const OpeningTheRhythmPage = ({ SEO, ogCover }: Props) => {
+export const OpeningTheRhythmPage = ({ SEO }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -80,7 +79,7 @@ export const OpeningTheRhythmPage = ({ SEO, ogCover }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} ogCover={ogCover} />
+        <Seo SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock />
           <ProgramBlock />
