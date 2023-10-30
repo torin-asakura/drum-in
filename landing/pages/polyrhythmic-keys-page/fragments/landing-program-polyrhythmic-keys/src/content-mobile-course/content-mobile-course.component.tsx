@@ -10,6 +10,7 @@ import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
+import ProgressBar          from './progress-bar.component'
 import { useProgram }       from '../data'
 
 const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
@@ -23,20 +24,19 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
       id={scrollId}
       data-scroll-position='bottom'
       width={[335, 446, 0]}
-      height={[1008, 1298, 0]}
+      height={[1008, 1008, 0]}
     >
       <Box
         position='relative'
         backgroundPosition='left top'
         backgroundSize='25% 100%'
         backgroundRepeat='no-repeat'
-        backgroundImage={`url(${program?.backgroundMobile2?.sourceUrl})`}
         flexDirection='column'
         zIndex={4}
       >
-        <Layout flexBasis={[160, 200, 0]} />
+        <Layout flexBasis={[165, 162, 0]} />
         <Row>
-          <Layout flexBasis={[90, 120, 0]} />
+          <Layout flexBasis={[55, 70, 0]} />
           <Column alignItems='end'>
             <Box>
               <Text
@@ -64,10 +64,10 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             </Box>
           </Column>
         </Row>
-        <Layout flexBasis={[96, 130, 0]} />
+        <Layout flexBasis={[107, 90, 0]} />
         <Row>
-          <Layout flexBasis={[151, 181, 0]} />
-          <Box flexDirection='column' height={[85, 110, 0]}>
+          <Layout flexBasis={[85, 125, 0]} />
+          <Box flexDirection='column' height={[30, 50, 0]}>
             {program?.secondListOfTopics?.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
@@ -84,10 +84,10 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             ))}
           </Box>
         </Row>
-        <Layout flexBasis={[93, 130, 0]} />
+        <Layout flexBasis={[145, 126, 0]} />
         <Row>
-          <Layout flexBasis={[80, 110, 0]} />
-          <Box flexDirection='column' height={[68, 100, 0]}>
+          <Layout flexBasis={[60, 70, 0]} />
+          <Box flexDirection='column' height={[30, 50, 0]}>
             {program?.firstListOfTopics?.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
@@ -104,9 +104,9 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             ))}
           </Box>
         </Row>
-        <Layout flexBasis={[125, 143, 0]} />
+        <Layout flexBasis={[150, 130, 0]} />
         <Row>
-          <Layout flexBasis={[146, 176, 0]} />
+          <Layout flexBasis={[90, 130, 0]} />
           <Box alignItems='center'>
             <Box width={[70, 85, 0]}>
               <LightningIcon width='100%' height='auto' />
@@ -126,9 +126,9 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             </Box>
           </Box>
         </Row>
-        <Layout flexBasis={[140, 170, 0]} />
+        <Layout flexBasis={[150, 144, 0]} />
         <Row>
-          <Layout flexBasis={[124, 154, 0]} />
+          <Layout flexBasis={[60, 100, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
             {program?.thirdListOfTopics?.split(';').map((element) => (
               <Box key={uniqid()}>
@@ -148,37 +148,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         </Row>
         <Layout flexBasis={[77, 107, 0]} />
       </Box>
-      <Box
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target={`#${scrollId}`}
-        width='100%'
-        position='absolute'
-        top='1px'
-        left={0}
-        zIndex={2}
-      >
-        <Box
-          height={[725, 0, 0]}
-          top='285px'
-          width='30%'
-          position='absolute'
-          flexShrink={0}
-          backgroundColor='background.blackAmber'
-          zIndex={2}
-        />
-      </Box>
-      <Box
-        boxSizing='content-box'
-        height='100%'
-        width='335px'
-        position='absolute'
-        top={0}
-        backgroundSize='25% 100%'
-        backgroundRepeat='no-repeat'
-        backgroundImage={`url(${program?.backgroundMobile?.sourceUrl})`}
-        zIndex={1}
-      />
+      <ProgressBar />
     </Box>
   )
 }

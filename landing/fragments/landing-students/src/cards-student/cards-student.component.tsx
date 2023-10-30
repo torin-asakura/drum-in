@@ -44,14 +44,14 @@ const CardsStudent = () => {
         <Row>
           <Condition match={studentsSliderChildren !== [] && studentsSliderChildren !== undefined}>
             <Slider
-                clName='students-slider-desktop'
-                spaceBetween={40}
-                slidesPerView='auto'
-                slidesOffsetAfter={40}
-                slidesOffsetBefore={40}
-                mousewheel
-                grabCursor
-                forceToAxis
+              clName='students-slider-desktop'
+              spaceBetween={40}
+              slidesPerView='auto'
+              slidesOffsetAfter={40}
+              slidesOffsetBefore={40}
+              mousewheel
+              grabCursor
+              forceToAxis
             >
               {Children.map(studentsSliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>

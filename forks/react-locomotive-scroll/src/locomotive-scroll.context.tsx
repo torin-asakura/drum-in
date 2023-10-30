@@ -40,7 +40,9 @@ export const LocomotiveScrollProvider = ({
   location,
   onLocationChange,
 }: PropsWithChildren<LocomotiveScrollProviderProps>) => {
-  const { height: containerHeight } = useResizeObserver<HTMLDivElement>({ ref: containerRef })
+  const { height: containerHeight } = useResizeObserver<HTMLDivElement>({
+    ref: containerRef,
+  })
   const [isReady, setIsReady] = useState(false)
   const LocomotiveScrollRef = useRef<Scroll | null>(null)
   const [height] = useDebounce(containerHeight, 100)
