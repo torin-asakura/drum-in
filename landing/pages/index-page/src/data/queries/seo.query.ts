@@ -25,6 +25,40 @@ export const GET_INDEX_SEO = gql`
         title
         twitterDescription
         twitterTitle
+        opengraphImage {
+          sizes
+          caption
+          description
+          isPreview
+          link
+          title
+          altText
+          desiredSlug
+          mediaDetails {
+            file
+            height
+            sizes {
+              file
+              fileSize
+              mimeType
+              height
+              name
+              sourceUrl
+              width
+            }
+            width
+          }
+          srcSet
+          sourceUrl
+          slug
+        }
+        twitterImage {
+          link
+          altText
+          caption
+          description
+          title
+        }
       }
     }
   }

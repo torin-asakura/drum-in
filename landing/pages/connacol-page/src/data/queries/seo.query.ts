@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
 export const GET_KONNAKOL_SEO = gql`
-  query GetIndexSeo {
+  query GetKonnakolSeo {
     pageContentBy(uri: "/konnakol") {
       seo {
         canonical
@@ -25,6 +25,40 @@ export const GET_KONNAKOL_SEO = gql`
         title
         twitterDescription
         twitterTitle
+        opengraphImage {
+          sizes
+          caption
+          description
+          isPreview
+          link
+          title
+          altText
+          desiredSlug
+          mediaDetails {
+            file
+            height
+            sizes {
+              file
+              fileSize
+              mimeType
+              height
+              name
+              sourceUrl
+              width
+            }
+            width
+          }
+          srcSet
+          sourceUrl
+          slug
+        }
+        twitterImage {
+          link
+          altText
+          caption
+          description
+          title
+        }
       }
     }
   }

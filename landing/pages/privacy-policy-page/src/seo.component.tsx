@@ -38,36 +38,8 @@ const Seo = ({ SEO }) => (
         content: SEO.opengraphSiteName,
       },
       {
-        property: 'og:image',
-        content: SEO.ogCover,
-      },
-      {
-        property: 'og:image:width',
-        content: SEO.ogImageWidth,
-      },
-      {
-        property: 'og:image:height',
-        content: SEO.ogImageHeight,
-      },
-      {
         property: 'article:modified_time',
         content: SEO.opengraphModifiedTime,
-      },
-      {
-        name: 'twitter:card',
-        content: SEO.twitterCard,
-      },
-      {
-        name: 'twitter:title',
-        content: SEO.twitterTitle,
-      },
-      {
-        name: 'twitter:description',
-        content: SEO.twitterDescription,
-      },
-      {
-        name: 'twitter:image',
-        content: SEO.ogCover,
       },
     ]}
   />

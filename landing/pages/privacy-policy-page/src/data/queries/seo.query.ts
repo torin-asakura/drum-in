@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
 export const GET_PRIVACY_POLICY_SEO = gql`
-  query GetIndexSeo {
+  query GetPrivacyPolicySeo {
     pageContentBy(uri: "/privacy-policy") {
       seo {
         canonical

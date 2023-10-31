@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
 export const GET_POLYRHYTMIC_KEY_SEO = gql`
-  query GetIndexSeo {
+  query GetPolyrhytmicKeySeo {
     pageContentBy(uri: "/polyrhythmic-keys") {
       seo {
         canonical
@@ -25,6 +25,40 @@ export const GET_POLYRHYTMIC_KEY_SEO = gql`
         title
         twitterDescription
         twitterTitle
+        opengraphImage {
+          sizes
+          caption
+          description
+          isPreview
+          link
+          title
+          altText
+          desiredSlug
+          mediaDetails {
+            file
+            height
+            sizes {
+              file
+              fileSize
+              mimeType
+              height
+              name
+              sourceUrl
+              width
+            }
+            width
+          }
+          srcSet
+          sourceUrl
+          slug
+        }
+        twitterImage {
+          link
+          altText
+          caption
+          description
+          title
+        }
       }
     }
   }
