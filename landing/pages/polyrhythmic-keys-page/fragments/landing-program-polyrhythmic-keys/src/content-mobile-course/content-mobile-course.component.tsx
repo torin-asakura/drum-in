@@ -148,7 +148,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         </Row>
         <Layout flexBasis={[77, 107, 0]} />
       </Box>
-      <ProgressBar />
+      <ProgressBar scrollId={scrollId} />
     </Box>
   )
 }
