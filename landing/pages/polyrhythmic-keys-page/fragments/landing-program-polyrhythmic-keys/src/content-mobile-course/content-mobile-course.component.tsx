@@ -26,14 +26,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
       width={[335, 446, 0]}
       height={[1008, 1008, 0]}
     >
-      <Box
-        position='relative'
-        backgroundPosition='left top'
-        backgroundSize='25% 100%'
-        backgroundRepeat='no-repeat'
-        flexDirection='column'
-        zIndex={4}
-      >
+      <Box position='relative' flexDirection='column' zIndex={4}>
         <Layout flexBasis={[165, 162, 0]} />
         <Row>
           <Layout flexBasis={[55, 70, 0]} />
