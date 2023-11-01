@@ -3138,6 +3138,7 @@ __metadata:
     "@types/uniqid": "npm:5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react-intl: "npm:6.4.2"
     uniqid: "npm:5.4.0"
@@ -3159,6 +3160,7 @@ __metadata:
     "@types/uniqid": "npm:^5.3.2"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.1"
     react-intl: "npm:^6.4.2"
@@ -3179,6 +3181,7 @@ __metadata:
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.1"
     react-intl: "npm:^6.4.2"
@@ -3223,6 +3226,7 @@ __metadata:
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.1"
     react-intl: "npm:^6.4.2"
@@ -3243,6 +3247,7 @@ __metadata:
     "@types/react": "npm:18.2.6"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:12.1.1"
     react-intl: "npm:6.4.2"
@@ -4697,6 +4702,19 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/progress-bar@workspace:0.0.1, @ui/progress-bar@workspace:ui/progress-bar":
+  version: 0.0.0-use.local
+  resolution: "@ui/progress-bar@workspace:ui/progress-bar"
+  dependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
+    react: "npm:18.2.0"
+  peerDependencies:
+    "@ui/theme": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 

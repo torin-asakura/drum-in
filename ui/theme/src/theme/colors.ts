@@ -339,6 +339,10 @@ const colors = {
       border: 'rgb(242, 242, 242)',
     },
   },
+  progressBar: {
+    default: 'rgb(128,127,127)',
+    progress: 'rgb(242,242,242)',
+  },
 }
 
 export { colors }

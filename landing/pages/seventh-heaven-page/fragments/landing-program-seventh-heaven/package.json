@@ -6,6 +6,7 @@
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
+    "@ui/progress-bar": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "uniqid": "5.4.0"
   },

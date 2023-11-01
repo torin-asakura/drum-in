@@ -7,10 +7,10 @@ import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
+import { ProgressBar }      from '@ui/progress-bar'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-import ProgressBar          from './progress-bar.component'
 import { useProgram }       from '../data'
 
 const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
@@ -141,7 +141,9 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         </Row>
         <Layout flexBasis={[77, 107, 0]} />
       </Box>
-      <ProgressBar scrollId={scrollId} />
+      <Box position='absolute' top={0}>
+        <ProgressBar scrollId={scrollId} />
+      </Box>
     </Box>
   )
 }

@@ -46,7 +46,6 @@ export const LocomotiveScrollProvider = ({
   const [isReady, setIsReady] = useState(false)
   const LocomotiveScrollRef = useRef<Scroll | null>(null)
   const [height] = useDebounce(containerHeight, 100)
-  const scrollEvent = new Event('scroll')
 
   useEffect(() => {
     let resizeObserver: ResizeObserver | null = null
@@ -59,11 +58,6 @@ export const LocomotiveScrollProvider = ({
         LocomotiveScrollRef.current = new LocomotiveScroll({
           el: dataScrollContainer ?? undefined,
           ...options,
-        })
-
-        LocomotiveScrollRef.current.on('scroll', (obj) => {
-          if (obj.currentElements['desktop-scroll'] || obj.currentElements['mobile-scroll'])
-            document.dispatchEvent(scrollEvent)
         })
 
         resizeObserver = new ResizeObserver(() => LocomotiveScrollRef.current?.update())
