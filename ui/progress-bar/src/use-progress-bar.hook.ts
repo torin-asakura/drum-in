@@ -3,7 +3,7 @@ import { useEffect }                       from 'react'
 import { useLocomotiveScroll }             from '@forks/react-locomotive-scroll'
 import { theme }                           from '@ui/theme'
 
-import { HEIGHT_PATH_OF_PROGRESS_BAR_SVG } from './progress-bar.consts'
+import { HEIGHT_PATH_OF_PROGRESS_BAR_SVG } from './progress-bar.constants'
 
 export const useProgressBar = (scrollId, progressRef) => {
   const { scroll } = useLocomotiveScroll()
