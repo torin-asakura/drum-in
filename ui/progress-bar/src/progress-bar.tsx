@@ -1,15 +1,11 @@
-import React          from 'react'
-import { forwardRef } from 'react'
+import React                from 'react'
+import { forwardRef }       from 'react'
 
-import { theme }      from '@ui/theme'
+import { theme }            from '@ui/theme'
 
-interface Props {
-  scrollId: string
-}
+import { ProgressBarProps } from './progress-bar.interface'
 
-type Ref = SVGPathElement
-
-const ProgressBarSVG = forwardRef<Ref, Props>(({ scrollId }, progressRef) => {
+const ProgressBarSVG = forwardRef<SVGPathElement, ProgressBarProps>(({ scrollId }, progressRef) => {
   const { colors } = theme
   return (
     <svg

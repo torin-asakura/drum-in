@@ -1,10 +1,12 @@
-import React              from 'react'
-import { useRef }         from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { useRef }           from 'react'
 
-import ProgressBarSVG     from './progress-bar'
-import { useProgressBar } from './useProgressBar'
+import ProgressBarSVG       from './progress-bar'
+import { ProgressBarProps } from './progress-bar.interface'
+import { useProgressBar }   from './use-progress-bar.hook'
 
-const ProgressBar = ({ scrollId }) => {
+const ProgressBar: FC<ProgressBarProps> = ({ scrollId }) => {
   const progressRef = useRef(null)
   useProgressBar(scrollId, progressRef)
   return <ProgressBarSVG scrollId={scrollId} ref={progressRef} />
