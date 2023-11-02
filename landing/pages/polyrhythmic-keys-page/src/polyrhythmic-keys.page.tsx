@@ -17,10 +17,18 @@ import { StartLearningBlock }              from '@landing/start-learning-fragmen
 import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Box }                             from '@ui/layout'
 
+import { Seo }                             from './seo.component'
 import { useBackgrounds }                  from './data'
 import { useSong }                         from './data'
 
-export const PolyrhythmicKeysPage = () => {
+interface SEOProp {
+  [key: string]: string
+}
+interface Props {
+  SEO: SEOProp
+}
+
+export const PolyrhythmicKeysPage = ({ SEO }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -70,6 +78,7 @@ export const PolyrhythmicKeysPage = () => {
         watch={[]}
       >
         <HeaderBlock />
+        <Seo SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroPolyrhythmicKeysBlock />
           <CourseProcessBlock />

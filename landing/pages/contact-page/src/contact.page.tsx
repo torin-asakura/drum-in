@@ -7,9 +7,17 @@ import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { Box }                      from '@ui/layout'
 
+import { Seo }                      from './seo.component'
 import { useBackground }            from './data'
 
-export const ContactPage = () => {
+interface SEOProp {
+  [key: string]: string
+}
+interface Props {
+  SEO: SEOProp
+}
+
+export const ContactPage = ({ SEO }: Props) => {
   const containerRef = useRef(null)
   const background = useBackground()
 
@@ -32,6 +40,7 @@ export const ContactPage = () => {
         watch={[]}
       >
         <HeaderBlock />
+        <Seo SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Box
             width='100%'

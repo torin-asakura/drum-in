@@ -17,10 +17,18 @@ import { StartLearningBlock }            from '@landing/start-learning-fragment'
 import { TeacherBlock }                  from '@landing/teacher-fragment'
 import { Box }                           from '@ui/layout'
 
+import { Seo }                           from './seo.component'
 import { useBackgrounds }                from './data'
 import { useSong }                       from './data'
 
-export const FifthDimensionPage = () => {
+interface SEOProp {
+  [key: string]: string
+}
+interface Props {
+  SEO: SEOProp
+}
+
+export const FifthDimensionPage = ({ SEO }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -70,6 +78,7 @@ export const FifthDimensionPage = () => {
         watch={[]}
       >
         <HeaderBlock />
+        <Seo SEO={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFifthDimensionBlock />
           <CourseProcessBlock />

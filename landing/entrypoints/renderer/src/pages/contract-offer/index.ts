@@ -1,1 +1,1 @@
-export { default } from '@landing/contract-offer-page'
+export { default, getServerSideProps } from '@landing/contract-offer-page'

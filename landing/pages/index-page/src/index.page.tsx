@@ -19,15 +19,18 @@ import { SpyScrollProvider }        from '@ui/spy-scroll'
 import { useIntersectionObserver }  from '@ui/intersection-observer'
 import { useSpyScroll }             from '@ui/spy-scroll'
 
+import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
+interface SEOProp {
+  [key: string]: string
+}
 interface Props {
-  ogCover: string
-  SEO: any
+  SEO: SEOProp
 }
 
-export const HomePage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
+export const HomePage = ({ SEO }: Props) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
@@ -89,6 +92,7 @@ export const HomePage = ({ ogCover, SEO = { RU: {}, EN: {} } }: Props) => {
         <SpyScrollProvider>
           <HeaderBlock />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
+          <Seo SEO={SEO} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero {...getObserverOptions('hero')} />
             <Box

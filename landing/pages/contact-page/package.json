@@ -13,7 +13,9 @@
     "@apollo/client": "3.6.9",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
-    "@types/react": "18.2.6"
+    "@globals/data": "workspace:0.0.1",
+    "@types/react": "18.2.6",
+    "react-helmet": "6.1.0"
   },
   "peerDependencies": {
     "@apollo/client": "*",
@@ -21,6 +23,7 @@
     "next": "*",
     "react": "*",
     "react-dom": "*",
+    "react-helmet": "*",
     "react-intl": "*"
   }
 }
