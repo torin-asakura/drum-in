@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
     "@ui/theme": "workspace:0.0.1",
     "react": "18.2.0"
   },

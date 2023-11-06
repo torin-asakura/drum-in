@@ -4710,6 +4710,7 @@ __metadata:
   resolution: "@ui/progress-bar@workspace:ui/progress-bar"
   dependencies:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     react: "npm:18.2.0"
   peerDependencies:
