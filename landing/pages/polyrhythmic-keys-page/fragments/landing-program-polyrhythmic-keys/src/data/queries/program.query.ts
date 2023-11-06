@@ -16,6 +16,9 @@ const GET_PROGRAM = gql`
         backgroundMobile {
           sourceUrl
         }
+        backgroundMobile2 {
+          sourceUrl
+        }
       }
     }
   }

@@ -7,6 +7,7 @@ import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
+import { ProgressBar }      from '@ui/progress-bar'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
@@ -17,26 +18,18 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
 
   return (
     <Box
+      overflow='hidden'
       display='block'
       position='relative'
       id={scrollId}
-      borderTop='1px solid black'
       data-scroll-position='bottom'
       width={[335, 446, 0]}
-      height={[1005, 1298, 0]}
+      height={[1008, 1008, 0]}
     >
-      <Box
-        position='relative'
-        backgroundPosition='left top'
-        backgroundSize='100% 100%'
-        backgroundRepeat='repeat-y'
-        backgroundImage={`url(${program?.backgroundMobile?.sourceUrl})`}
-        flexDirection='column'
-        zIndex={4}
-      >
-        <Layout flexBasis={[160, 200, 0]} />
+      <Box position='relative' flexDirection='column' zIndex={4}>
+        <Layout flexBasis={[165, 162, 0]} />
         <Row>
-          <Layout flexBasis={[90, 120, 0]} />
+          <Layout flexBasis={[55, 70, 0]} />
           <Column alignItems='end'>
             <Box>
               <Text
@@ -64,10 +57,10 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             </Box>
           </Column>
         </Row>
-        <Layout flexBasis={[96, 130, 0]} />
+        <Layout flexBasis={[107, 90, 0]} />
         <Row>
-          <Layout flexBasis={[151, 181, 0]} />
-          <Box flexDirection='column' height={[85, 110, 0]}>
+          <Layout flexBasis={[85, 125, 0]} />
+          <Box flexDirection='column' height={[30, 50, 0]}>
             {program?.secondListOfTopics?.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
@@ -84,10 +77,10 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             ))}
           </Box>
         </Row>
-        <Layout flexBasis={[93, 130, 0]} />
+        <Layout flexBasis={[145, 126, 0]} />
         <Row>
-          <Layout flexBasis={[80, 110, 0]} />
-          <Box flexDirection='column' height={[68, 100, 0]}>
+          <Layout flexBasis={[60, 70, 0]} />
+          <Box flexDirection='column' height={[30, 50, 0]}>
             {program?.firstListOfTopics?.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
@@ -104,9 +97,9 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             ))}
           </Box>
         </Row>
-        <Layout flexBasis={[125, 143, 0]} />
+        <Layout flexBasis={[150, 130, 0]} />
         <Row>
-          <Layout flexBasis={[146, 176, 0]} />
+          <Layout flexBasis={[90, 130, 0]} />
           <Box alignItems='center'>
             <Box width={[70, 85, 0]}>
               <LightningIcon width='100%' height='auto' />
@@ -126,9 +119,9 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
             </Box>
           </Box>
         </Row>
-        <Layout flexBasis={[140, 170, 0]} />
+        <Layout flexBasis={[150, 144, 0]} />
         <Row>
-          <Layout flexBasis={[124, 154, 0]} />
+          <Layout flexBasis={[60, 100, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
             {program?.thirdListOfTopics?.split(';').map((element) => (
               <Box key={uniqid()}>
@@ -148,22 +141,8 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         </Row>
         <Layout flexBasis={[77, 107, 0]} />
       </Box>
-      <Box
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target={`#${scrollId}`}
-        width='100%'
-        position='absolute'
-        top='1px'
-        left={0}
-        zIndex={1}
-      >
-        <Box
-          height={[200, 300, 0]}
-          width='100%'
-          flexShrink={0}
-          backgroundColor='background.smokyWhite'
-        />
+      <Box position='absolute' top={0}>
+        <ProgressBar scrollId={scrollId} />
       </Box>
     </Box>
   )

@@ -1,0 +1,1 @@
+export const HEIGHT_PATH_OF_PROGRESS_BAR_SVG = 945

@@ -49,7 +49,6 @@ export const LocomotiveScrollProvider = ({
 
   useEffect(() => {
     let resizeObserver: ResizeObserver | null = null
-
     ;(async () => {
       try {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
