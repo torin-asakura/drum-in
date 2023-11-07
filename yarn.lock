@@ -4745,6 +4745,7 @@ __metadata:
     "@ui/theme": "workspace:0.0.1"
     react: "npm:18.2.0"
   peerDependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@ui/theme": "*"
     react: "*"
   languageName: unknown
