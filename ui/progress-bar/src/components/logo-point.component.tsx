@@ -1,8 +1,10 @@
-import React        from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { usePoint } from './use-point.hook'
+import { ProgressBarComponentProps } from '../progress-bar.interface'
+import { usePoint }                  from './use-point.hook'
 
-const LogoPoint = ({ id }) => {
+const LogoPoint: FC<ProgressBarComponentProps> = ({ id }) => {
   const { fill } = usePoint(id)
   return (
     <svg width='35' height='35' viewBox='0 0 35 35' xmlns='http://www.w3.org/2000/svg' id={id}>
@@ -14,4 +16,4 @@ const LogoPoint = ({ id }) => {
   )
 }
 
-export default LogoPoint
+export { LogoPoint }

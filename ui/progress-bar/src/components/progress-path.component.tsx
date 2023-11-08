@@ -1,8 +1,10 @@
-import React               from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { useProgressPath } from './use-progress-path.hook'
+import { ProgressBarComponentProps } from '../progress-bar.interface'
+import { useProgressPath }           from './use-progress-path.hook'
 
-const ProgressPath = ({ id }) => {
+const ProgressPath: FC<ProgressBarComponentProps> = ({ id }) => {
   useProgressPath(id)
 
   return (
@@ -25,4 +27,4 @@ const ProgressPath = ({ id }) => {
   )
 }
 
-export default ProgressPath
+export { ProgressPath }

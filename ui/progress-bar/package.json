@@ -3,19 +3,17 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "@ui/theme": "workspace:0.0.1",
     "react": "18.2.0"
   },
   "devDependencies": {
+    "@emotion/react": "11.9.3",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
-    "@ui/theme": "workspace:0.0.1",
     "react": "18.2.0"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
-    "@ui/theme": "*",
     "react": "*"
   }
 }

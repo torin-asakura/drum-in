@@ -1,9 +1,10 @@
+import { useTheme }  from '@emotion/react'
+
 import { useEffect } from 'react'
 import { useState }  from 'react'
 
-import { theme }     from '@ui/theme'
-
-export const usePoint = (id) => {
+export const usePoint = (id: string) => {
+  const theme: any = useTheme()
   const [fill, setFill] = useState(theme.colors.progressBar.default)
   useEffect(() => {
     const halfHeightWindow = window.innerHeight / 2
@@ -16,7 +17,7 @@ export const usePoint = (id) => {
         }
       },
       {
-        rootMargin: '0% 0% -50% 0%',
+        rootMargin: theme.margins.rootMargin,
         threshold: [0, 0.5],
       }
     )
@@ -25,6 +26,6 @@ export const usePoint = (id) => {
       pointObserver.observe(point)
     }
     return () => pointObserver.disconnect()
-  }, [id])
+  }, [id, theme])
   return { fill }
 }
