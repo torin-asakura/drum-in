@@ -1,3 +1,5 @@
+import { Widget }                 from '@atls/react-payment-widget'
+
 import React                      from 'react'
 import { FC }                     from 'react'
 import { useState }               from 'react'
@@ -96,6 +98,7 @@ const FormContent: FC<FormContentProps> = ({
 
   return (
     <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
+      <Widget amount={5000} settings={{ storeId: 'id' }} />
       <Box display={['none', 'flex', 'flex']}>
         <Input
           value={name}
