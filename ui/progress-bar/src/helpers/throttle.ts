@@ -1,12 +1,14 @@
-export const throttle = (func: Function, ms: number) => {
+import { VoidFunction } from '../progress-bar.interface'
+
+export const throttle = (func: VoidFunction, ms: number): VoidFunction => {
   let locked = false
-  // eslint-disable-next-line
-  return function (...args) {
+  return (...args: any[]): void => {
     if (locked) return
     locked = true
-    setTimeout(() => {
-      func.apply(this, args)
+    const timeoutId = setTimeout(() => {
+      func(args)
       locked = false
+      clearTimeout(timeoutId)
     }, ms)
   }
 }
