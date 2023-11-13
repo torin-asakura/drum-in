@@ -1,9 +1,16 @@
-import React from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-const Point = () => (
-  <svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    <circle fill='#807f7f' cx='8.5' cy='8' r='8' />
-  </svg>
-)
+import { ProgressBarComponentProps } from '../progress-bar.interface'
+import { usePoint }                  from './use-point.hook'
 
-export default Point
+const Point: FC<ProgressBarComponentProps> = ({ id }) => {
+  const { fill } = usePoint(id)
+  return (
+    <svg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' id={id}>
+      <circle fill={fill} cx='8.5' cy='8' r='8' />
+    </svg>
+  )
+}
+
+export { Point }

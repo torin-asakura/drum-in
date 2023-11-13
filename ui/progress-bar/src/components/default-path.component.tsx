@@ -1,6 +1,7 @@
-import React from 'react'
+import React  from 'react'
+import { FC } from 'react'
 
-const DefaultPath = () => (
+const DefaultPath: FC = () => (
   <svg
     width='130'
     height='1010'

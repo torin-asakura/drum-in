@@ -2,6 +2,8 @@ export interface ProgressBarProps {
   scrollId: string
 }
 
-type PositionKey = 'x' | 'y'
+export interface ProgressBarComponentProps {
+  id: string
+}
 
-export type Position = Record<PositionKey, number>
+export type VoidFunction = (...args: any[]) => void
