@@ -1,5 +1,3 @@
-import 'locomotive-scroll/dist/locomotive-scroll.css'
-
 import * as messages      from '../../locales/ru.json'
 
 import { ApolloProvider } from '@apollo/client'

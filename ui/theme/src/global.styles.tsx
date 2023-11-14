@@ -1,10 +1,11 @@
 import { Global } from '@emotion/react'
 import { css }    from '@emotion/react'
 
-import React            from 'react'
-import { useEffect }    from 'react'
-import { polyfill }     from 'seamless-scroll-polyfill'
-import { DrukTextWide } from './fonts'
+import React                      from 'react'
+import { useEffect }              from 'react'
+import { polyfill }               from 'seamless-scroll-polyfill'
+import { DrukTextWide }           from './fonts'
+import { locomotiveScrollStyles } from './locomotive-scroll'
 
 export const GlobalStyles = () => {
   useEffect(() => {
@@ -137,6 +138,8 @@ export const GlobalStyles = () => {
         .teacher-slider .swiper-slide {
           width: auto !important;
         }
+        
+        ${locomotiveScrollStyles}
       `}
     />
   )
