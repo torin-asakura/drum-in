@@ -5,6 +5,7 @@ const GET_MODAL_FORM = gql`
     coursePolyrhythmicKeysItem(id: "cG9zdDo0MTA=") {
       modalForm {
         finalPriceForOneTimePayment
+        finalPriceForOneTimePaymentNumber
         title
         courses {
           description

@@ -1,5 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { FormattedNumber }  from 'react-intl'
 
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -44,7 +45,16 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {modalForm?.monthlyPayment}
+              <FormattedNumber
+                value={modalForm?.monthlyPaymentNumber || 0}
+                style='currency' // eslint-disable-line
+                currency='RUB'
+                maximumFractionDigits={0}
+              />
+              <FormattedMessage
+                id='landing_price_opening_the_rhythm.per_month'
+                defaultMessage='/мес.'
+              />
             </Text>
           </Box>
         </Column>
@@ -94,7 +104,12 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {modalForm?.finalPriceForInstallment}
+              <FormattedNumber
+                value={modalForm?.finalPriceForInstallmentNumber || 0}
+                style='currency' // eslint-disable-line
+                currency='RUB'
+                maximumFractionDigits={0}
+              />
             </Text>
           </Box>
         </Column>

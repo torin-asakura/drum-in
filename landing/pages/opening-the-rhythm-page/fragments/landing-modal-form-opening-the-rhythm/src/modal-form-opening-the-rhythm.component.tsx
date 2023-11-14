@@ -41,7 +41,14 @@ const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
   return (
     <Renderer active={activeRender}>
       <motion.div
-        style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 900 }}
+        style={{
+          position: 'fixed',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 900,
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -50,7 +57,13 @@ const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
         <Backdrop onClick={onClose} />
       </motion.div>
       <motion.div
-        style={{ position: 'fixed', right: '-100%', top: 0, height: '100%', zIndex: 950 }}
+        style={{
+          position: 'fixed',
+          right: '-100%',
+          top: 0,
+          height: '100%',
+          zIndex: 950,
+        }}
         animate={{ right: 0 }}
         exit={{ right: '-100%' }}
         transition={{ duration: 0.5 }}

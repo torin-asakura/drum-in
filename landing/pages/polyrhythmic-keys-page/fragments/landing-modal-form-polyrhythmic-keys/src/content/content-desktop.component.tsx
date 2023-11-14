@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import { FormattedNumber }  from 'react-intl'
 
 import { Button }           from '@ui/button'
 import { Form }             from '@ui/form'
@@ -61,7 +62,12 @@ const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
         >
           <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
           <Space />
-          {modalForm?.finalPriceForOneTimePayment}
+          <FormattedNumber
+            value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+            style='currency' // eslint-disable-line
+            currency='RUB'
+            maximumFractionDigits={0}
+          />
         </Text>
       </Row>
       <Layout flexBasis={50} flexShrink={0} flexGrow={2} />

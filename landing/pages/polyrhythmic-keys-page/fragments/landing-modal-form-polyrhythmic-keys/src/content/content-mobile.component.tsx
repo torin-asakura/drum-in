@@ -1,5 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { FormattedNumber }  from 'react-intl'
 
 import { Form }             from '@ui/form'
 import { RoundedLineIcon }  from '@ui/icons'
@@ -50,7 +51,12 @@ const ContentMobile = () => {
           >
             <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
             <Space />
-            {modalForm?.finalPriceForOneTimePayment}
+            <FormattedNumber
+              value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+              style='currency' // eslint-disable-line
+              currency='RUB'
+              maximumFractionDigits={0}
+            />
           </Text>
         </Row>
         <Layout flexBasis={50} flexShrink={0} />
