@@ -15,7 +15,7 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@globals/data": "workspace:0.0.1",
-    "@types/react": "18.2.6",
+    "@types/react": "17.0.47",
     "react-helmet": "6.1.0"
   },
   "peerDependencies": {
@@ -23,7 +23,6 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "@globals/data": "*",
-    "@types/react": "*",
     "next": "*",
     "react": "*",
     "react-dom": "*",
