@@ -11,8 +11,8 @@
   "devDependencies": {
     "@apollo/client": "3.6.9",
     "@emotion/styled": "^11.11.0",
-    "@types/react": "18.2.6",
-    "react-intl": "^6.4.2",
+    "@types/react": "17.0.47",
+    "react-intl": "5.24.3",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

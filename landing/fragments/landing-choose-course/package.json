@@ -18,8 +18,8 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@globals/data": "workspace:0.0.1",
-    "@types/react": "18.2.6",
-    "react-intl": "6.4.2",
+    "@types/react": "17.0.47",
+    "react-intl": "5.24.3",
     "styled-tools": "1.7.2"
   },
   "peerDependencies": {
@@ -27,7 +27,6 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "@globals/data": "*",
-    "@types/react": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"

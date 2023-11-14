@@ -11,15 +11,14 @@
     "@apollo/client": "3.6.9",
     "@emotion/react": "11.9.3",
     "@forks/react-locomotive-scroll": "workspace:^",
-    "@types/react": "18.2.6",
+    "@types/react": "17.0.47",
     "react": "18.2.0",
-    "react-intl": "6.4.2"
+    "react-intl": "5.24.3"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@forks/react-locomotive-scroll": "workspace:*",
-    "@types/react": "*",
     "next": "*",
     "react": "*",
     "react-intl": "*"
