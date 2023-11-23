@@ -251,6 +251,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/button@npm:0.0.12":
+  version: 0.0.12
+  resolution: "@atls-ui-parts/button@npm:0.0.12"
+  dependencies:
+    "@atls-ui-parts/styles": "npm:0.0.4"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: 14f88ffbad7aa379a732343ac4d23862219f1cbed383e598a9469dd298e32f432eb87857eb6461dd64477c26c374e202f9aefc134fe87437b2ac053f9595e330
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/checkbox@npm:0.0.6":
   version: 0.0.6
   resolution: "@atls-ui-parts/checkbox@npm:0.0.6"
@@ -262,6 +276,19 @@ __metadata:
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   checksum: fae71f5e563d7d3c2c396b8a03cc8765c5bda9d193b5c71a46a9d4fecebd8cdc54f20d5085c8ec648ea6b2efea0cb47ca168fc5e613201233275f6b875153b7f
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/condition@npm:0.0.4":
+  version: 0.0.4
+  resolution: "@atls-ui-parts/condition@npm:0.0.4"
+  dependencies:
+    framer-motion: "npm:10.12.16"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+  checksum: 6d1a23d9da407d3b99e55120a91f224192cb7424c7a3cda180b43558bab68e6b23d4d6304108e9216260b93151f09af4fdfd24994ecc8c32f4cc34753cf57bdb
   languageName: node
   linkType: hard
 
@@ -380,6 +407,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/text@npm:0.0.11":
+  version: 0.0.11
+  resolution: "@atls-ui-parts/text@npm:0.0.11"
+  dependencies:
+    styled-system: "npm:^5.1.5"
+  peerDependencies:
+    "@emotion/styled": ^11.9.3
+    react: ^18.2.0
+  checksum: 5ff00c3edaa36dc58964739533764aabe439f65bc8c05935a7ffc31f725fe2a70dd42c0737739c721a297fef6947759643e406faaa150d1e666bed7a6e46f6f3
+  languageName: node
+  linkType: hard
+
 "@atls/code-service@npm:0.0.18":
   version: 0.0.18
   resolution: "@atls/code-service@npm:0.0.18"
@@ -459,6 +498,27 @@ __metadata:
     prettier: "npm:^2.6.2"
     sort-package-json: "npm:^1.57.0"
   checksum: 2b22c138fd3eabf6b183deffd71f69841ed9ab6f24d130108bfcb619f54d5b1427e9fb03003b35942f1c66581d1166e5b1cd89221afe6173be7f91cc414095c6
+  languageName: node
+  linkType: hard
+
+"@atls/react-payment-widget@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@atls/react-payment-widget@npm:0.0.1"
+  dependencies:
+    "@atls-ui-parts/button": "npm:0.0.12"
+    "@atls-ui-parts/condition": "npm:0.0.4"
+    "@atls-ui-parts/hidden-input": "npm:0.0.6"
+    "@atls-ui-parts/input": "npm:0.0.13"
+    "@atls-ui-parts/layout": "npm:0.0.7"
+    "@atls-ui-parts/text": "npm:0.0.11"
+    react-intl: "npm:6.4.4"
+    react-laag: "npm:2.0.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+  checksum: a181eebec60a9ab1fe049fd2b1f7df75b96eecec45f7a9561026df6a33289856c1e72aa58243abe8d3db6defa83f7d42c6da093cffaea810ff2d246309073c36
   languageName: node
   linkType: hard
 
@@ -4494,8 +4554,10 @@ __metadata:
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
     "@apollo/client": "npm:3.6.9"
+    "@atls/react-payment-widget": "npm:0.0.1"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.20"
     "@types/styled-system": "npm:5.1.16"
     "@ui/button": "workspace:0.0.1"
     "@ui/checkbox": "workspace:0.0.1"
@@ -7969,6 +8031,27 @@ __metadata:
     react-dom:
       optional: true
   checksum: 069242dc3033c9aa4809b272d3ad425b47588beba71ed13148064e66340db158df47ac18e021fb2ff61272507cd3e9cb2b95ffe79135b59b2b7073b6801d06fa
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:10.12.16":
+  version: 10.12.16
+  resolution: "framer-motion@npm:10.12.16"
+  dependencies:
+    "@emotion/is-prop-valid": "npm:^0.8.2"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 938b0267a1be021ab6fa5d4727f66d87f99d3fe1d8d23ee9d782101aad8c939e6c9cb83c9a937b8ad4a5d796ad32341aaf55ce9285aac3f4a54afe6a52f853a9
   languageName: node
   linkType: hard
 

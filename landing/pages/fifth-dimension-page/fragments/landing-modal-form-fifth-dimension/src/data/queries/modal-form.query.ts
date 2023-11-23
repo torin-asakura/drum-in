@@ -6,9 +6,12 @@ const GET_MODAL_FORM = gql`
       modalForm {
         benefit
         finalPriceForInstallment
+        finalPriceForInstallmentNumber
         finalPriceForOneTimePayment
+        finalPriceForOneTimePaymentNumber
         installmentDuration
         monthlyPayment
+        monthlyPaymentNumber
         title
         courses {
           description

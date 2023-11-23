@@ -57,9 +57,9 @@
   "landing_modal_forms.amount": "Сумма:",
   "landing_modal_forms.total_amount": "Общая сумма",
   "landing_program.dot": "•",
-  "landing_price_opening_the_rhythm.rubles_per_month": "₽/мес",
-  "landing_price_feeling_of_time.rubles_per_month": "₽/мес",
-  "landing_price_fifth_dimension.rubles_per_month": "₽/мес",
-  "landing_price_seventh_heaven.rubles_per_month": "₽/мес",
-  "landing_price_connacol.rubles_per_month": "₽/мес"
+  "landing_price_opening_the_rhythm.per_month": "/мес.",
+  "landing_price_feeling_of_time.per_month": "/мес.",
+  "landing_price_fifth_dimension.per_month": "/мес.",
+  "landing_price_seventh_heaven.per_month": "/мес.",
+  "landing_price_connacol.per_month": "/мес."
 }

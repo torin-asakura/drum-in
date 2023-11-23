@@ -1,5 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { FormattedNumber }  from 'react-intl'
 
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -30,7 +31,12 @@ const ContentOneTimePayment = () => {
         >
           <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
           <Space />
-          {modalForm?.finalPriceForOneTimePayment}
+          <FormattedNumber
+            value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+            style='currency' // eslint-disable-line
+            currency='RUB'
+            maximumFractionDigits={0}
+          />
         </Text>
       </Row>
       <Layout flexBasis={[32, 50, 67]} flexShrink={0} />
