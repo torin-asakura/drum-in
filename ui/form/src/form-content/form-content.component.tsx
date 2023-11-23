@@ -1,4 +1,5 @@
-import { AdditionalFieldsType }   from '@atls/react-payment-widget'
+import { ButtonWrapper }          from '@atls/react-payment-widget'
+import { InputWrapper }           from '@atls/react-payment-widget'
 import { Widget }                 from '@atls/react-payment-widget'
 
 import React                      from 'react'
@@ -34,6 +35,7 @@ const FormContent: FC<FormContentProps> = ({
   const [telegram, setTelegram] = useState<string>('')
   const [privacyPolicy, setPrivacyPolicy] = useState<boolean>(false)
   const [submitForm, data, error] = useActionHook()
+
   const forms = useData()
   const { executeRecaptcha } = useGoogleReCaptcha()
 
@@ -98,18 +100,139 @@ const FormContent: FC<FormContentProps> = ({
   return (
     <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
       <Condition match={form === 'payment'}>
-        <Widget
-          amount={5000}
-          settings={{ storeId: 'id' }}
-          additionalFields={[
-            {
-              name: AdditionalFieldsType.Email,
-              placeholder: 'Электронная почта',
-              required: false,
-              type: 'email',
-            },
-          ]}
-        />
+        <Box display={['none', 'flex', 'flex']} flexDirection='column'>
+          <Widget amount={5000} settings={{ storeId: 'id' }}>
+            <InputWrapper name='phone'>
+              {(value, onChange, onBlur, errorText) => (
+                <Box flexDirection='column'>
+                  <Input
+                    name='name'
+                    value={value}
+                    onChangeNative={onChange}
+                    onBlur={onBlur}
+                    errorText={errorText}
+                    placeholder={getFieldDataByLanguage(forms, 'name')}
+                  />
+                  <Layout flexBasis={28} flexShrink={0} />
+                </Box>
+              )}
+            </InputWrapper>
+            <InputWrapper name='email'>
+              {(value, onChange, onBlur, errorText) => (
+                <Box flexDirection='column'>
+                  <Input
+                    name='email'
+                    value={value}
+                    onChangeNative={onChange}
+                    onBlur={onBlur}
+                    errorText={errorText}
+                    placeholder={getFieldDataByLanguage(forms, 'email')}
+                  />
+                  <Layout flexBasis={28} flexShrink={0} />
+                </Box>
+              )}
+            </InputWrapper>
+            <InputWrapper name='email'>
+              {(value, onChange, onBlur, errorText) => (
+                <Box flexDirection='column'>
+                  <Input
+                    name='phone'
+                    value={value}
+                    onChangeNative={onChange}
+                    onBlur={onBlur}
+                    errorText={errorText}
+                    placeholder={getFieldDataByLanguage(forms, 'phone')}
+                  />
+                  <Layout flexBasis={28} flexShrink={0} />
+                </Box>
+              )}
+            </InputWrapper>
+            <ButtonWrapper>
+              {() => (
+                <Box display={['none', 'flex', 'flex']}>
+                  <Button
+                    type='submit'
+                    size='withoutPaddingSemiBigHeight'
+                    variant='purpleBackground'
+                    fill
+                  >
+                    <Text fontWeight='semiBold' fontSize='medium' textTransform='uppercase'>
+                      {messages.pay}
+                    </Text>
+                  </Button>
+                </Box>
+              )}
+            </ButtonWrapper>
+          </Widget>
+        </Box>
+        <Box display={['none', 'flex', 'flex']} flexDirection='column'>
+          <Widget amount={5000} settings={{ storeId: 'id' }}>
+            <InputWrapper name='phone'>
+              {(value, onChange, onBlur, errorText) => (
+                <Box flexDirection='column'>
+                  <Input
+                    name='name'
+                    value={value}
+                    onChangeNative={onChange}
+                    onBlur={onBlur}
+                    errorText={errorText}
+                    placeholder={getFieldDataByLanguage(forms, 'name')}
+                    size='small'
+                  />
+                  <Layout flexBasis={28} flexShrink={0} />
+                </Box>
+              )}
+            </InputWrapper>
+            <InputWrapper name='email'>
+              {(value, onChange, onBlur, errorText) => (
+                <Box flexDirection='column'>
+                  <Input
+                    name='email'
+                    value={value}
+                    onChangeNative={onChange}
+                    onBlur={onBlur}
+                    errorText={errorText}
+                    placeholder={getFieldDataByLanguage(forms, 'email')}
+                    size='small'
+                  />
+                  <Layout flexBasis={28} flexShrink={0} />
+                </Box>
+              )}
+            </InputWrapper>
+            <InputWrapper name='email'>
+              {(value, onChange, onBlur, errorText) => (
+                <Box flexDirection='column'>
+                  <Input
+                    name='phone'
+                    value={value}
+                    onChangeNative={onChange}
+                    onBlur={onBlur}
+                    errorText={errorText}
+                    placeholder={getFieldDataByLanguage(forms, 'phone')}
+                    size='small'
+                  />
+                  <Layout flexBasis={28} flexShrink={0} />
+                </Box>
+              )}
+            </InputWrapper>
+            <ButtonWrapper>
+              {() => (
+                <Box display={['none', 'flex', 'flex']}>
+                  <Button
+                    type='submit'
+                    size='withoutPaddingSemiRegularHeight'
+                    variant='purpleBackground'
+                    fill
+                  >
+                    <Text fontWeight='semiBold' fontSize='semiMedium' textTransform='uppercase'>
+                      {messages.pay}
+                    </Text>
+                  </Button>
+                </Box>
+              )}
+            </ButtonWrapper>
+          </Widget>
+        </Box>
       </Condition>
 
       <Condition match={form === 'consultation'}>

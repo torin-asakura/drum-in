@@ -382,16 +382,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/swiper@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@atls-ui-parts/swiper@npm:0.0.3"
+"@atls-ui-parts/swiper@npm:0.0.5":
+  version: 0.0.5
+  resolution: "@atls-ui-parts/swiper@npm:0.0.5"
   dependencies:
-    nanoid: "npm:^4.0.0"
+    nanoid: "npm:4.0.2"
   peerDependencies:
-    "@emotion/css": "*"
-    react: ^17.0.1
-    swiper: ^8.3.1
-  checksum: 6b4309d067dfbf1a88830865a6d9d61b0cc9a1073c67cc6f2241b4acac8a2660ea602d6e36231ba6f5228fae1eff479b0cf7bca1d24aaeb0a11be58d650ed0c4
+    "@emotion/css": 11.9.0
+    react: 18.2.0
+    swiper: 9.4.1
+  checksum: d2dab06e84cc6ba7c0171aff943ee22c2519d3ca5f8178659582b72e8ee34cda11f6921c7556da52f7a4f44cfbd3c12d93f8dffed75df1071d7c10e7dbe0e830
   languageName: node
   linkType: hard
 
@@ -1728,7 +1728,7 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
-    "@types/react": "npm:17.0.47"
+    "@types/react": "npm:18"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -4261,12 +4261,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.20":
-  version: 17.0.20
-  resolution: "@types/react-dom@npm:17.0.20"
+"@types/react-dom@npm:18":
+  version: 18.2.17
+  resolution: "@types/react-dom@npm:18.2.17"
   dependencies:
-    "@types/react": "npm:^17"
-  checksum: b2779fdc28c6767ffceccfe6692c1d8eb2df14f1410e85444b3bdb8618d0791f50f992621f6ee13072b2e4870d326432821630ae3862ca640b8bd4cf04e06a8c
+    "@types/react": "npm:*"
+  checksum: 56aed49b9d35005ee7b1a0d78f151d170c67d5795bcba6e6b50cb7734e551768b236e83a5d600bc657cccd1bce3a3e6a82e7c8f810b407d72ac8b549d63360e8
   languageName: node
   linkType: hard
 
@@ -4279,14 +4279,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.47":
-  version: 17.0.47
-  resolution: "@types/react@npm:17.0.47"
+"@types/react@npm:18":
+  version: 18.2.38
+  resolution: "@types/react@npm:18.2.38"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 9f9b6b73890e83407686d10a28251cf23d71a4c6ba21295e9701194ed58c94895dc2eac19303b419a294c4c4aff0d7d4e5eb458270ee0fa90dbb0b5a37ec3b88
+  checksum: b540e0ded7fbf129c0fd980e19f25199a1586c0eb2469a6376cacf85c510fcf7ea0d368bfbc7f0afc3bd03553a3969f2cd6dff67dd20e46396371709c68dfb33
   languageName: node
   linkType: hard
 
@@ -4760,7 +4760,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
-    "@atls-ui-parts/swiper": "npm:0.0.3"
+    "@atls-ui-parts/swiper": "npm:0.0.5"
     "@emotion/css": "npm:11.11.0"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
@@ -7272,8 +7272,8 @@ __metadata:
     "@types/eslint": "npm:=8"
     "@types/jest": "npm:29.5.1"
     "@types/node": "npm:16.18.30"
-    "@types/react": "npm:17.0.47"
-    "@types/react-dom": "npm:17.0.20"
+    "@types/react": "npm:18"
+    "@types/react-dom": "npm:18"
     eslint: "npm:=8.18.0"
     husky: "npm:8.0.3"
     typescript: "npm:4.6.2"
@@ -10972,21 +10972,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:4.0.2":
+  version: 4.0.2
+  resolution: "nanoid@npm:4.0.2"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 0e28bade6b10396bc0936980c7569e9710341b3dd8775bcd0645b7d23f59ff64e59c4413f48836bc336711ef1cc4f61f6453946a3bf69c4c235fab9d221f9216
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.1.30":
   version: 3.3.6
   resolution: "nanoid@npm:3.3.6"
   bin:
     nanoid: bin/nanoid.cjs
   checksum: c6f3fad3b9132b17f72f9ca018ff12caf5a9fd474d08881156deffe7c77cc76220e49610232e570e2a33e3aa941214c08634762390a87b1fb9816d6108aa9e64
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^4.0.0":
-  version: 4.0.2
-  resolution: "nanoid@npm:4.0.2"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 0e28bade6b10396bc0936980c7569e9710341b3dd8775bcd0645b7d23f59ff64e59c4413f48836bc336711ef1cc4f61f6453946a3bf69c4c235fab9d221f9216
   languageName: node
   linkType: hard
 

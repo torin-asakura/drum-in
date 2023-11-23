@@ -1,3 +1,5 @@
+import React from 'react'
+
 export interface SliderProps {
   clName: string
   spaceBetween: number
@@ -14,4 +16,5 @@ export interface SliderProps {
   slidesOffsetAfter?: number
   slidesOffsetBefore?: number
   forceToAxis?: boolean
+  children: React.ReactNode
 }
