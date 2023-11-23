@@ -2,11 +2,6 @@
   "name": "@ui/form",
   "version": "0.0.1",
   "main": "src/index.ts",
-  "resolutions": {
-    "@atls/react-payment-widget/@types/react": "18.2.20",
-    "@atls/react-payment-widget/react": "18.2.0",
-    "@atls/react-payment-widget/react-dom": "18.2.0"
-  },
   "dependencies": {
     "@atls/react-payment-widget": "0.0.1",
     "@ui/button": "workspace:0.0.1",
