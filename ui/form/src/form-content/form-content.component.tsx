@@ -16,7 +16,9 @@ import { Input }                  from '@ui/input'
 import { Box }                    from '@ui/layout'
 import { Row }                    from '@ui/layout'
 import { Layout }                 from '@ui/layout'
+import { NextLink }               from '@ui/link'
 import { Text }                   from '@ui/text'
+import { Space }                  from '@ui/text'
 
 import { FormContentProps }       from './form-content.interfaces'
 import { useActionHook }          from '../data'
@@ -101,7 +103,7 @@ const FormContent: FC<FormContentProps> = ({
     <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
       <Condition match={form === 'payment'}>
         <Box display={['none', 'flex', 'flex']} flexDirection='column'>
-          <Widget amount={5000} settings={{ storeId: 'id' }}>
+          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={privacyPolicy}>
             <InputWrapper name='name'>
               {(props) => (
                 <Box flexDirection='column'>
@@ -127,10 +129,10 @@ const FormContent: FC<FormContentProps> = ({
               )}
             </InputWrapper>
             <ButtonWrapper>
-              {() => (
+              {(props) => (
                 <Box display={['none', 'flex', 'flex']}>
                   <Button
-                    type='submit'
+                    {...props}
                     size='withoutPaddingSemiBigHeight'
                     variant='purpleBackground'
                     fill
@@ -143,9 +145,21 @@ const FormContent: FC<FormContentProps> = ({
               )}
             </ButtonWrapper>
           </Widget>
+          <Layout flexBasis={20} flexShrink={0} />
+          <Row>
+            <Checkbox checked={privacyPolicy} onCheck={setPrivacyPolicy}>
+              {messages.accept}
+              <Space />
+              <NextLink path='/contract-offer'>
+                <Text textTransform='lowercase'>{messages.offerAgreement}</Text>
+              </NextLink>
+              <Space />
+              {messages.giveConsent}
+            </Checkbox>
+          </Row>
         </Box>
-        <Box display={['none', 'flex', 'flex']} flexDirection='column'>
-          <Widget amount={5000} settings={{ storeId: 'id' }}>
+        <Box display={['flex', 'none', 'none']} flexDirection='column'>
+          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={privacyPolicy}>
             <InputWrapper name='phone'>
               {(props) => (
                 <Box flexDirection='column'>
@@ -183,10 +197,10 @@ const FormContent: FC<FormContentProps> = ({
               )}
             </InputWrapper>
             <ButtonWrapper>
-              {() => (
+              {(props) => (
                 <Box display={['none', 'flex', 'flex']}>
                   <Button
-                    type='submit'
+                    {...props}
                     size='withoutPaddingSemiRegularHeight'
                     variant='purpleBackground'
                     fill
@@ -199,6 +213,20 @@ const FormContent: FC<FormContentProps> = ({
               )}
             </ButtonWrapper>
           </Widget>
+          <Layout flexBasis={16} flexShrink={0} />
+          <Row>
+            <CheckboxMobile checked={privacyPolicy} onCheck={setPrivacyPolicy}>
+              {messages.accept}
+              <Space />
+              <NextLink path='/contract-offer'>
+                <Text textTransform='lowercase' fontSize='semiMicro'>
+                  {messages.offerAgreement}
+                </Text>
+              </NextLink>
+              <Space />
+              {messages.giveConsent}
+            </CheckboxMobile>
+          </Row>
         </Box>
       </Condition>
 

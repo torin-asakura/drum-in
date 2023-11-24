@@ -1737,7 +1737,7 @@ __metadata:
     react-intl: "npm:5.24.3"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
-    swiper: "npm:9.3.1"
+    swiper: "npm:11.0.5"
     uniqid: "npm:5.4.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -4768,7 +4768,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
-    swiper: "npm:8.3.1"
+    swiper: "npm:9.3.1"
   peerDependencies:
     "@emotion/css": "*"
     "@emotion/react": "*"
@@ -7233,15 +7233,6 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 6b38a63fa66847d80e130bb85c83c173b1050037fffac3d5f740c8c691243d5b6fadc5ec502ae8297c474680d879eb24ad8ec7f901673704fe40c8dedc1bee62
-  languageName: node
-  linkType: hard
-
-"dom7@npm:^4.0.4":
-  version: 4.0.6
-  resolution: "dom7@npm:4.0.6"
-  dependencies:
-    ssr-window: "npm:^4.0.0"
-  checksum: a4d15eb6597a6f5a8d6d7307bd0c30aed7f6b975b7c44e8f65d4fea309af92ebba488540ba82889f80851f1bdc58ecc6026c9ee0321696731bea7708c64d13dd
   languageName: node
   linkType: hard
 
@@ -13184,7 +13175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+"ssr-window@npm:^4.0.2":
   version: 4.0.2
   resolution: "ssr-window@npm:4.0.2"
   checksum: 8235ddf1dc542231f534660eaf76a4d605a8c66ee247806e0965099625784b2b781aacbead7e2d1068b9cb5972aa7fc9f53e4396c0ddac0482d101713d4ac0fa
@@ -13570,13 +13561,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:8.3.1":
-  version: 8.3.1
-  resolution: "swiper@npm:8.3.1"
-  dependencies:
-    dom7: "npm:^4.0.4"
-    ssr-window: "npm:^4.0.2"
-  checksum: c67cbaa94869834112e33942821a1cd4f90e18afb60212d8834baa2950e5149577b18faf5cde499d32477b872cbdc565f80e9e9673f0a4c8c6aaad90bdf796fb
+"swiper@npm:11.0.5":
+  version: 11.0.5
+  resolution: "swiper@npm:11.0.5"
+  checksum: 3d36fcd8c7cb9535ce7d1f4841a9e30df22484e2eef5e49f3bebd7517982519ace4a13626dfda30a1f38210600d12ba45cd1de98b0266edf97a6174cd114a15a
   languageName: node
   linkType: hard
 
