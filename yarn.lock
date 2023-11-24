@@ -389,16 +389,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/swiper@npm:0.0.5":
-  version: 0.0.5
-  resolution: "@atls-ui-parts/swiper@npm:0.0.5"
+"@atls-ui-parts/swiper@npm:0.0.3":
+  version: 0.0.3
+  resolution: "@atls-ui-parts/swiper@npm:0.0.3"
   dependencies:
-    nanoid: "npm:4.0.2"
+    nanoid: "npm:^4.0.0"
   peerDependencies:
-    "@emotion/css": 11.9.0
-    react: 18.2.0
-    swiper: 9.4.1
-  checksum: d2dab06e84cc6ba7c0171aff943ee22c2519d3ca5f8178659582b72e8ee34cda11f6921c7556da52f7a4f44cfbd3c12d93f8dffed75df1071d7c10e7dbe0e830
+    "@emotion/css": "*"
+    react: ^17.0.1
+    swiper: ^8.3.1
+  checksum: 6b4309d067dfbf1a88830865a6d9d61b0cc9a1073c67cc6f2241b4acac8a2660ea602d6e36231ba6f5228fae1eff479b0cf7bca1d24aaeb0a11be58d650ed0c4
   languageName: node
   linkType: hard
 
@@ -1772,7 +1772,7 @@ __metadata:
     react-intl: "npm:5.24.3"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
-    swiper: "npm:11.0.5"
+    swiper: "npm:9.3.1"
     uniqid: "npm:5.4.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -3284,7 +3284,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-intl: "npm:5.24.3"
-    swiper: "npm:^9.3.1"
+    swiper: "npm:9.3.1"
     uniqid: "npm:^5.4.0"
   peerDependencies:
     "@apollo/client": "*"
@@ -4835,7 +4835,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
-    "@atls-ui-parts/swiper": "npm:0.0.5"
+    "@atls-ui-parts/swiper": "npm:0.0.3"
     "@emotion/css": "npm:11.11.0"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
@@ -4843,7 +4843,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
-    swiper: "npm:9.3.1"
+    swiper: "npm:8.3.1"
   peerDependencies:
     "@emotion/css": "*"
     "@emotion/react": "*"
@@ -7347,6 +7347,15 @@ __metadata:
   version: 0.5.16
   resolution: "dom-accessibility-api@npm:0.5.16"
   checksum: 48a01996440bf12ebc2f0bfd280289cfc653dd3a52bfa122674878f1bffc404f038e8d32ec52e02a784b5ea962395c6412245e4d4191cc4125c4a775621885dd
+  languageName: node
+  linkType: hard
+
+"dom7@npm:^4.0.4":
+  version: 4.0.6
+  resolution: "dom7@npm:4.0.6"
+  dependencies:
+    ssr-window: "npm:^4.0.0"
+  checksum: a4d15eb6597a6f5a8d6d7307bd0c30aed7f6b975b7c44e8f65d4fea309af92ebba488540ba82889f80851f1bdc58ecc6026c9ee0321696731bea7708c64d13dd
   languageName: node
   linkType: hard
 
@@ -11152,21 +11161,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:4.0.2":
-  version: 4.0.2
-  resolution: "nanoid@npm:4.0.2"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 0e28bade6b10396bc0936980c7569e9710341b3dd8775bcd0645b7d23f59ff64e59c4413f48836bc336711ef1cc4f61f6453946a3bf69c4c235fab9d221f9216
-  languageName: node
-  linkType: hard
-
 "nanoid@npm:^3.1.30":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:
     nanoid: bin/nanoid.cjs
   checksum: a8844cf563f0e91174e12b960d602847c5557bd44e880fec501f747e2ab2da1653a9b6acb514aa524c942fe3a19b18f47f3acf58a3ee6fd22fd17e47608da3aa
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^4.0.0":
+  version: 4.0.2
+  resolution: "nanoid@npm:4.0.2"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 0e28bade6b10396bc0936980c7569e9710341b3dd8775bcd0645b7d23f59ff64e59c4413f48836bc336711ef1cc4f61f6453946a3bf69c4c235fab9d221f9216
   languageName: node
   linkType: hard
 
@@ -13417,7 +13426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ssr-window@npm:^4.0.2":
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
   version: 4.0.2
   resolution: "ssr-window@npm:4.0.2"
   checksum: 8235ddf1dc542231f534660eaf76a4d605a8c66ee247806e0965099625784b2b781aacbead7e2d1068b9cb5972aa7fc9f53e4396c0ddac0482d101713d4ac0fa
@@ -13819,10 +13828,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:11.0.5":
-  version: 11.0.5
-  resolution: "swiper@npm:11.0.5"
-  checksum: 3d36fcd8c7cb9535ce7d1f4841a9e30df22484e2eef5e49f3bebd7517982519ace4a13626dfda30a1f38210600d12ba45cd1de98b0266edf97a6174cd114a15a
+"swiper@npm:8.3.1":
+  version: 8.3.1
+  resolution: "swiper@npm:8.3.1"
+  dependencies:
+    dom7: "npm:^4.0.4"
+    ssr-window: "npm:^4.0.2"
+  checksum: c67cbaa94869834112e33942821a1cd4f90e18afb60212d8834baa2950e5149577b18faf5cde499d32477b872cbdc565f80e9e9673f0a4c8c6aaad90bdf796fb
   languageName: node
   linkType: hard
 
@@ -13832,15 +13844,6 @@ __metadata:
   dependencies:
     ssr-window: "npm:^4.0.2"
   checksum: db1d31b750a94c1fdf61406ecef175eb3aa0cc1839a22ea5b3c6fb813135990d7b6e7433f765b6db2ee1873e936e91e9f053c0183d669098bf3bbd5bbfb1f2bc
-  languageName: node
-  linkType: hard
-
-"swiper@npm:^9.3.1":
-  version: 9.4.1
-  resolution: "swiper@npm:9.4.1"
-  dependencies:
-    ssr-window: "npm:^4.0.2"
-  checksum: 0321c2e9bd9b6a25459a7added31a5d305137686e72a77afd60859fae75af17c093caae50ef5b0e3ac4d94db44afe44ac56ae8d4495d1703ed21573c448a1430
   languageName: node
   linkType: hard
 
