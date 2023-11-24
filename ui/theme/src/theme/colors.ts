@@ -83,9 +83,9 @@ const colors = {
         border: 'rgb(242,242,242)',
       },
       disabled: {
-        background: 'rgba(15, 12, 12, 0.12)',
-        font: 'rgba(15, 12, 12, 0.12)',
-        border: 'rgba(15, 12, 12, 0.12)',
+        background: 'rgb(156, 101, 242)',
+        font: 'rgb(242,242,242)',
+        border: 'rgb(15, 12, 12)',
       },
     },
     whiteBackground: {

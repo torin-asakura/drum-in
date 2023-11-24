@@ -1,12 +1,11 @@
-import { ButtonWrapper }          from '@atls/react-payment-widget'
-import { InputWrapper }           from '@atls/react-payment-widget'
-import { Widget }                 from '@atls/react-payment-widget'
-
 import React                      from 'react'
 import { FC }                     from 'react'
 import { useState }               from 'react'
 import { useGoogleReCaptcha }     from 'react-google-recaptcha-v3'
 
+import { ButtonWrapper }          from '@forks/react-payment-widget'
+import { InputWrapper }           from '@forks/react-payment-widget'
+import { Widget }                 from '@forks/react-payment-widget'
 import { Button }                 from '@ui/button'
 import { Checkbox }               from '@ui/checkbox'
 import { CheckboxMobile }         from '@ui/checkbox'
@@ -24,6 +23,7 @@ import { FormContentProps }       from './form-content.interfaces'
 import { useActionHook }          from '../data'
 import { useData }                from '../data'
 import { messages }               from '../messages'
+import { fieldToLabelMap }        from '../utils'
 import { getFieldDataByLanguage } from '../utils'
 
 const FormContent: FC<FormContentProps> = ({
@@ -39,6 +39,7 @@ const FormContent: FC<FormContentProps> = ({
   const [submitForm, data, error] = useActionHook()
 
   const forms = useData()
+
   const { executeRecaptcha } = useGoogleReCaptcha()
 
   const getError = (field: string) => {
@@ -115,7 +116,7 @@ const FormContent: FC<FormContentProps> = ({
             <InputWrapper name='email'>
               {(props) => (
                 <Box flexDirection='column'>
-                  <Input {...props} placeholder={getFieldDataByLanguage(forms, 'email')} />
+                  <Input {...props} placeholder={fieldToLabelMap.email} />
                   <Layout flexBasis={28} flexShrink={0} />
                 </Box>
               )}
@@ -130,7 +131,7 @@ const FormContent: FC<FormContentProps> = ({
             </InputWrapper>
             <ButtonWrapper>
               {(props) => (
-                <Box display={['none', 'flex', 'flex']}>
+                <Box>
                   <Button
                     {...props}
                     size='withoutPaddingSemiBigHeight'
@@ -168,19 +169,15 @@ const FormContent: FC<FormContentProps> = ({
                     placeholder={getFieldDataByLanguage(forms, 'name')}
                     size='small'
                   />
-                  <Layout flexBasis={28} flexShrink={0} />
+                  <Layout flexBasis={16} flexShrink={0} />
                 </Box>
               )}
             </InputWrapper>
             <InputWrapper name='email'>
               {(props) => (
                 <Box flexDirection='column'>
-                  <Input
-                    {...props}
-                    placeholder={getFieldDataByLanguage(forms, 'email')}
-                    size='small'
-                  />
-                  <Layout flexBasis={28} flexShrink={0} />
+                  <Input {...props} placeholder={fieldToLabelMap.email} size='small' />
+                  <Layout flexBasis={16} flexShrink={0} />
                 </Box>
               )}
             </InputWrapper>
@@ -192,13 +189,13 @@ const FormContent: FC<FormContentProps> = ({
                     placeholder={getFieldDataByLanguage(forms, 'phone')}
                     size='small'
                   />
-                  <Layout flexBasis={28} flexShrink={0} />
+                  <Layout flexBasis={16} flexShrink={0} />
                 </Box>
               )}
             </InputWrapper>
             <ButtonWrapper>
               {(props) => (
-                <Box display={['none', 'flex', 'flex']}>
+                <Box>
                   <Button
                     {...props}
                     size='withoutPaddingSemiRegularHeight'

@@ -40,7 +40,7 @@
     "@landing/seventh-heaven-page": "workspace:0.0.1",
     "@types/express": "4.17.17",
     "@types/node": "16.18.30",
-    "@types/react": "17.0.47",
+    "@types/react": "18.2.0",
     "@types/react-dom": "17.0.20",
     "@types/react-helmet": "6.1.6",
     "@ui/theme": "workspace:0.0.1",
