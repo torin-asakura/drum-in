@@ -103,7 +103,7 @@ const FormContent: FC<FormContentProps> = ({
     <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
       <Condition match={form === 'payment'}>
         <Box display={['none', 'flex', 'flex']} flexDirection='column'>
-          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={privacyPolicy}>
+          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={!privacyPolicy}>
             <InputWrapper name='name'>
               {(props) => (
                 <Box flexDirection='column'>
@@ -159,7 +159,7 @@ const FormContent: FC<FormContentProps> = ({
           </Row>
         </Box>
         <Box display={['flex', 'none', 'none']} flexDirection='column'>
-          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={privacyPolicy}>
+          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={!privacyPolicy}>
             <InputWrapper name='phone'>
               {(props) => (
                 <Box flexDirection='column'>
