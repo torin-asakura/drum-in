@@ -2,6 +2,7 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { FormattedNumber }  from 'react-intl'
 
+import { Condition }        from '@ui/condition'
 import { Form }             from '@ui/form'
 import { RoundedLineIcon }  from '@ui/icons'
 import { Column }           from '@ui/layout'
@@ -60,7 +61,9 @@ const ContentMobile = () => {
           </Text>
         </Row>
         <Layout flexBasis={50} flexShrink={0} />
-        <Form form='payment' />
+        <Condition match={!!modalForm?.finalPriceForOneTimePaymentNumber}>
+          <Form amount={modalForm.finalPriceForOneTimePaymentNumber} form='payment' />
+        </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Row>

@@ -1,6 +1,10 @@
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
+import { useIntl }                from 'react-intl'
 
+import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
 import { RoundedLineIcon }        from '@ui/icons'
 import { Column }                 from '@ui/layout'
@@ -18,6 +22,27 @@ import { useModalForm }           from '../data'
 
 const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
   const modalForm = useModalForm()
+  const { formatMessage } = useIntl()
+  const initialAmount =
+    roleVar[0] ===
+    formatMessage({
+      id: 'landing_modal_forms.one_time_payment',
+      defaultMessage: 'Разовый платёж',
+    })
+      ? modalForm?.finalPriceForOneTimePaymentNumber
+      : modalForm?.monthlyPaymentNumber
+  const [amount, setAmount] = useState<number | undefined>(initialAmount)
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    roleVar[0] ===
+    formatMessage({
+      id: 'landing_modal_forms.one_time_payment',
+      defaultMessage: 'Разовый платёж',
+    })
+      ? setAmount(modalForm?.finalPriceForOneTimePaymentNumber)
+      : setAmount(modalForm?.monthlyPaymentNumber)
+  }, [roleVar, formatMessage, modalForm])
 
   return (
     <Row height={540}>
@@ -72,7 +97,9 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
           <ContentInstallmentPlan />
         ) : null}
         {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
-        <Form form='payment' />
+        <Condition match={!!amount}>
+          <Form amount={amount} form='payment' key={amount} />
+        </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Row>

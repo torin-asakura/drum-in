@@ -1,23 +1,30 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { FormattedMessage }           from 'react-intl'
+import { FormattedNumber }            from 'react-intl'
 
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Layout }                     from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Space }                      from '@ui/text'
+import { Text }                       from '@ui/text'
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse }             from '../selected-course'
+import { ContentOneTimePaymentProps } from './content-one-time-payment.interfaces'
+import { useModalForm }               from '../../data'
 
-const ContentOneTimePayment = () => {
+const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({ amount, recalculate }) => {
   const modalForm = useModalForm()
 
   return (
     <>
       {modalForm?.courses?.map(({ description, name, price }) => (
         <>
-          <SelectedCourse title={name} description={description} price={price} />
+          <SelectedCourse
+            title={name}
+            description={description}
+            price={price}
+            recalculate={recalculate}
+          />
           <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
         </>
       ))}
@@ -32,7 +39,7 @@ const ContentOneTimePayment = () => {
           <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
           <Space />
           <FormattedNumber
-            value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+            value={amount}
             style='currency' // eslint-disable-line
             currency='RUB'
             maximumFractionDigits={0}

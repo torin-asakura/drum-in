@@ -5,6 +5,7 @@ import { useGoogleReCaptcha }     from 'react-google-recaptcha-v3'
 
 import { ButtonWrapper }          from '@forks/react-payment-widget'
 import { InputWrapper }           from '@forks/react-payment-widget'
+import { AdditionalFieldsType }   from '@forks/react-payment-widget'
 import { Widget }                 from '@forks/react-payment-widget'
 import { Button }                 from '@ui/button'
 import { Checkbox }               from '@ui/checkbox'
@@ -27,6 +28,7 @@ import { fieldToLabelMap }        from '../utils'
 import { getFieldDataByLanguage } from '../utils'
 
 const FormContent: FC<FormContentProps> = ({
+  amount,
   arrow = false,
   form = 'consultation',
   onSuccess,
@@ -104,8 +106,12 @@ const FormContent: FC<FormContentProps> = ({
     <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
       <Condition match={form === 'payment'}>
         <Box display={['none', 'flex', 'flex']} flexDirection='column'>
-          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={!privacyPolicy}>
-            <InputWrapper name='name'>
+          <Widget
+            amount={amount}
+            settings={{ storeId: '1698844342541DEMO' }}
+            disabled={!privacyPolicy}
+          >
+            <InputWrapper name={AdditionalFieldsType.Name}>
               {(props) => (
                 <Box flexDirection='column'>
                   <Input {...props} placeholder={getFieldDataByLanguage(forms, 'name')} />
@@ -113,7 +119,7 @@ const FormContent: FC<FormContentProps> = ({
                 </Box>
               )}
             </InputWrapper>
-            <InputWrapper name='email'>
+            <InputWrapper name={AdditionalFieldsType.Email}>
               {(props) => (
                 <Box flexDirection='column'>
                   <Input {...props} placeholder={fieldToLabelMap.email} />
@@ -121,7 +127,7 @@ const FormContent: FC<FormContentProps> = ({
                 </Box>
               )}
             </InputWrapper>
-            <InputWrapper name='phone'>
+            <InputWrapper name={AdditionalFieldsType.Phone}>
               {(props) => (
                 <Box flexDirection='column'>
                   <Input {...props} placeholder={getFieldDataByLanguage(forms, 'phone')} />
@@ -160,8 +166,12 @@ const FormContent: FC<FormContentProps> = ({
           </Row>
         </Box>
         <Box display={['flex', 'none', 'none']} flexDirection='column'>
-          <Widget amount={5000} settings={{ storeId: 'id' }} disabled={!privacyPolicy}>
-            <InputWrapper name='phone'>
+          <Widget
+            amount={amount}
+            settings={{ storeId: '1698844342541DEMO' }}
+            disabled={!privacyPolicy}
+          >
+            <InputWrapper name={AdditionalFieldsType.Name}>
               {(props) => (
                 <Box flexDirection='column'>
                   <Input
@@ -173,7 +183,7 @@ const FormContent: FC<FormContentProps> = ({
                 </Box>
               )}
             </InputWrapper>
-            <InputWrapper name='email'>
+            <InputWrapper name={AdditionalFieldsType.Email}>
               {(props) => (
                 <Box flexDirection='column'>
                   <Input {...props} placeholder={fieldToLabelMap.email} size='small' />
@@ -181,7 +191,7 @@ const FormContent: FC<FormContentProps> = ({
                 </Box>
               )}
             </InputWrapper>
-            <InputWrapper name='email'>
+            <InputWrapper name={AdditionalFieldsType.Phone}>
               {(props) => (
                 <Box flexDirection='column'>
                   <Input

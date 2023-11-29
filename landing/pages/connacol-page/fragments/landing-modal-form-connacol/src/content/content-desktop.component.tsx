@@ -1,7 +1,11 @@
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
+import { useIntl }                from 'react-intl'
 
 import { Button }                 from '@ui/button'
+import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
 import { CrossMenuIcon }          from '@ui/icons'
 import { ArrowLeftTailIcon }      from '@ui/icons'
@@ -20,6 +24,27 @@ import { useModalForm }           from '../data'
 
 const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
   const modalForm = useModalForm()
+  const { formatMessage } = useIntl()
+  const initialAmount =
+    roleVar[0] ===
+    formatMessage({
+      id: 'landing_modal_forms.one_time_payment',
+      defaultMessage: 'Разовый платёж',
+    })
+      ? modalForm?.finalPriceForOneTimePaymentNumber
+      : modalForm?.monthlyPaymentNumber
+  const [amount, setAmount] = useState<number | undefined>(initialAmount)
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    roleVar[0] ===
+    formatMessage({
+      id: 'landing_modal_forms.one_time_payment',
+      defaultMessage: 'Разовый платёж',
+    })
+      ? setAmount(modalForm?.finalPriceForOneTimePaymentNumber)
+      : setAmount(modalForm?.monthlyPaymentNumber)
+  }, [roleVar, formatMessage, modalForm])
 
   return (
     <>
@@ -95,7 +120,9 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
         <ContentInstallmentPlan />
       ) : null}
       {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
-      <Form form='payment' />
+      <Condition match={!!amount}>
+        <Form amount={amount} form='payment' key={amount} />
+      </Condition>
     </>
   )
 }

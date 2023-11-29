@@ -1,7 +1,12 @@
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useCallback }            from 'react'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
+import { useIntl }                from 'react-intl'
 
 import { Button }                 from '@ui/button'
+import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
 import { CrossMenuIcon }          from '@ui/icons'
 import { ArrowLeftTailIcon }      from '@ui/icons'
@@ -20,6 +25,24 @@ import { useModalForm }           from '../data'
 
 const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
   const modalForm = useModalForm()
+
+  const { formatMessage } = useIntl()
+  const [amount, setAmount] = useState<number>(0)
+
+  const recalculateAmount = useCallback(
+    (price: number, operation: boolean) => {
+      setAmount((prevSatae) => (operation ? prevSatae + price : prevSatae - price))
+    },
+    [setAmount]
+  )
+
+  useEffect(() => {
+    if (modalForm?.courses) {
+      roleVar.includes(options[1].value) // eslint-disable-line
+        ? setAmount(modalForm.courses.reduce((acc, course) => acc + course.price, 0))
+        : setAmount(modalForm.monthlyPaymentNumber)
+    }
+  }, [roleVar, formatMessage, modalForm, options])
 
   return (
     <>
@@ -91,11 +114,15 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
         </Box>
       </Row>
       <Layout flexBasis={28} flexShrink={0} />
-      {roleVar.includes(options[0].value) || roleVar.length === 0 ? (
+      <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
         <ContentInstallmentPlan />
-      ) : null}
-      {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
-      <Form form='payment' />
+      </Condition>
+      <Condition match={roleVar.includes(options[1].value)}>
+        <ContentOneTimePayment amount={amount} recalculate={recalculateAmount} />
+      </Condition>
+      <Condition match={!!amount}>
+        <Form amount={amount} form='payment' key={amount} />
+      </Condition>
     </>
   )
 }

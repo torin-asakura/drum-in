@@ -1,4 +1,5 @@
 export interface FormContentProps {
+  amount?: number
   arrow: boolean
   form: 'consultation' | 'payment'
   onSuccess: (...args) => any
