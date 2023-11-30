@@ -1,12 +1,13 @@
+import { ButtonWrapper }          from '@atls/tinkoff-payment-widget'
+import { InputWrapper }           from '@atls/tinkoff-payment-widget'
+import { AdditionalFieldsType }   from '@atls/tinkoff-payment-widget'
+import { Widget }                 from '@atls/tinkoff-payment-widget'
+
 import React                      from 'react'
 import { FC }                     from 'react'
 import { useState }               from 'react'
 import { useGoogleReCaptcha }     from 'react-google-recaptcha-v3'
 
-import { ButtonWrapper }          from '@forks/react-payment-widget'
-import { InputWrapper }           from '@forks/react-payment-widget'
-import { AdditionalFieldsType }   from '@forks/react-payment-widget'
-import { Widget }                 from '@forks/react-payment-widget'
 import { Button }                 from '@ui/button'
 import { Checkbox }               from '@ui/checkbox'
 import { CheckboxMobile }         from '@ui/checkbox'
