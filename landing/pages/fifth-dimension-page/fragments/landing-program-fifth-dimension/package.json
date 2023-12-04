@@ -8,11 +8,11 @@
     "@ui/layout": "workspace:0.0.1",
     "@ui/progress-bar": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
-    "uniqid": "^5.4.0"
+    "uniqid": "5.4.0"
   },
   "devDependencies": {
     "@apollo/client": "3.6.9",
-    "@types/react": "17.0.47",
+    "@types/react": "18.2.20",
     "next": "12.1.1",
     "react-intl": "5.24.3"
   },
