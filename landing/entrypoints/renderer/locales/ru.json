@@ -40,6 +40,7 @@
   "landing_modal_forms.submit_your_application": "оставить заявку",
   "landing_modal_forms.give_my_consent_to_the_processing": "Даю согласие на обработку моих персональных данных",
   "landing_modal_forms.enter_a_name": "Введите имя",
+  "landing_modal_forms.enter_a_email": "Введите почту",
   "landing_modal_forms.plus_seven": "+7",
   "landing_modal_forms.we_will_contact_you_as_soon_as_possible": "Мы свяжемся с вами в ближайшее время.",
   "landing_modal_forms.nickname_telegram": "@telegram",
@@ -57,9 +58,5 @@
   "landing_modal_forms.amount": "Сумма:",
   "landing_modal_forms.total_amount": "Общая сумма",
   "landing_program.dot": "•",
-  "landing_price_opening_the_rhythm.per_month": "/мес.",
-  "landing_price_feeling_of_time.per_month": "/мес.",
-  "landing_price_fifth_dimension.per_month": "/мес.",
-  "landing_price_seventh_heaven.per_month": "/мес.",
-  "landing_price_connacol.per_month": "/мес."
+  "landing_modal_forms.per_month": "/мес."
 }

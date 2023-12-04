@@ -2,7 +2,6 @@ import React                              from 'react'
 import { FC }                             from 'react'
 import { motion }                         from 'framer-motion'
 import { useState }                       from 'react'
-import { useIntl }                        from 'react-intl'
 
 import { Column }                         from '@ui/layout'
 import { Layout }                         from '@ui/layout'
@@ -12,6 +11,7 @@ import { Renderer }                       from '@ui/modal'
 import { Backdrop }                       from '@ui/modal'
 
 import { ContentDesktop }                 from './content'
+import { RoleModalForm }                  from './modal-form-opening-the-rhythm.enum'
 import { ModalFormOpeningTheRhythmProps } from './modal-form-opening-the-rhythm.interfaces'
 
 const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
@@ -19,21 +19,14 @@ const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>(['Рассрочка'])
-  const { formatMessage } = useIntl()
+  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
   const options = [
     {
-      value: formatMessage({
-        id: 'landing_modal_forms.installment_plan',
-        defaultMessage: 'Рассрочка',
-      }),
+      value: RoleModalForm.InstallmentPlan,
       mutuallyExclusive: true,
     },
     {
-      value: formatMessage({
-        id: 'landing_modal_forms.one_time_payment',
-        defaultMessage: 'Разовый платёж',
-      }),
+      value: RoleModalForm.OneTimePayment,
       mutuallyExclusive: true,
     },
   ]

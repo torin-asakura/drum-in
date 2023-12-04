@@ -1,18 +1,18 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
+import React from "react";
+import { FormattedMessage } from "react-intl";
+import { FormattedNumber } from "react-intl";
 
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Column } from "@ui/layout";
+import { Layout } from "@ui/layout";
+import { Box } from "@ui/layout";
+import { Row } from "@ui/layout";
+import { Text } from "@ui/text";
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse } from "../selected-course";
+import { useModalForm } from "../../data";
 
 const ContentInstallmentPlan = () => {
-  const modalForm = useModalForm()
+  const modalForm = useModalForm();
 
   return (
     <>
@@ -24,33 +24,33 @@ const ContentInstallmentPlan = () => {
         <Column>
           <Box>
             <Text
-              fontWeight='medium'
-              fontSize='micro'
-              lineHeight='medium'
-              color='text.transparentSmokyWhite'
+              fontWeight="medium"
+              fontSize="micro"
+              lineHeight="medium"
+              color="text.transparentSmokyWhite"
             >
               <FormattedMessage
-                id='landing_modal_forms.monthly_payment'
-                defaultMessage='Ежемесячный платёж'
+                id="landing_modal_forms.monthly_payment"
+                defaultMessage="Ежемесячный платёж"
               />
             </Text>
           </Box>
           <Box>
             <Text
-              fontWeight='medium'
-              fontSize={['medium', 'semiRegular', 'regular']}
-              lineHeight='medium'
-              color='text.smokyWhite'
+              fontWeight="medium"
+              fontSize={["medium", "semiRegular", "regular"]}
+              lineHeight="medium"
+              color="text.smokyWhite"
             >
               <FormattedNumber
                 value={modalForm?.monthlyPaymentNumber || 0}
-                style='currency' // eslint-disable-line
-                currency='RUB'
+                style="currency" // eslint-disable-line
+                currency="RUB"
                 maximumFractionDigits={0}
               />
               <FormattedMessage
-                id='landing_price_fifth_dimension.per_month'
-                defaultMessage='/мес.'
+                id="landing_modal_forms.per_month"
+                defaultMessage="/мес."
               />
             </Text>
           </Box>
@@ -59,23 +59,23 @@ const ContentInstallmentPlan = () => {
         <Column>
           <Box>
             <Text
-              fontWeight='medium'
-              fontSize='micro'
-              lineHeight='medium'
-              color='text.transparentSmokyWhite'
+              fontWeight="medium"
+              fontSize="micro"
+              lineHeight="medium"
+              color="text.transparentSmokyWhite"
             >
               <FormattedMessage
-                id='landing_modal_forms.installment_period'
-                defaultMessage='Срок рассрочки'
+                id="landing_modal_forms.installment_period"
+                defaultMessage="Срок рассрочки"
               />
             </Text>
           </Box>
           <Box>
             <Text
-              fontWeight='medium'
-              fontSize={['medium', 'semiRegular', 'regular']}
-              lineHeight='medium'
-              color='text.smokyWhite'
+              fontWeight="medium"
+              fontSize={["medium", "semiRegular", "regular"]}
+              lineHeight="medium"
+              color="text.smokyWhite"
             >
               {modalForm?.installmentDuration}
             </Text>
@@ -85,28 +85,28 @@ const ContentInstallmentPlan = () => {
         <Column>
           <Box>
             <Text
-              fontWeight='medium'
-              fontSize='micro'
-              lineHeight='medium'
-              color='text.transparentSmokyWhite'
+              fontWeight="medium"
+              fontSize="micro"
+              lineHeight="medium"
+              color="text.transparentSmokyWhite"
             >
               <FormattedMessage
-                id='landing_modal_forms.total_amount'
-                defaultMessage='Общая сумма'
+                id="landing_modal_forms.total_amount"
+                defaultMessage="Общая сумма"
               />
             </Text>
           </Box>
           <Box>
             <Text
-              fontWeight='medium'
-              fontSize={['medium', 'semiRegular', 'regular']}
-              lineHeight='medium'
-              color='text.smokyWhite'
+              fontWeight="medium"
+              fontSize={["medium", "semiRegular", "regular"]}
+              lineHeight="medium"
+              color="text.smokyWhite"
             >
               <FormattedNumber
                 value={modalForm?.finalPriceForInstallmentNumber || 0}
-                style='currency' // eslint-disable-line
-                currency='RUB'
+                style="currency" // eslint-disable-line
+                currency="RUB"
                 maximumFractionDigits={0}
               />
             </Text>
@@ -115,7 +115,7 @@ const ContentInstallmentPlan = () => {
       </Row>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} flexGrow={3} />
     </>
-  )
-}
+  );
+};
 
-export { ContentInstallmentPlan }
+export { ContentInstallmentPlan };

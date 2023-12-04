@@ -2,7 +2,6 @@ import React                      from 'react'
 import { FC }                     from 'react'
 import { useEffect }              from 'react'
 import { useState }               from 'react'
-import { useIntl }                from 'react-intl'
 
 import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
@@ -15,6 +14,7 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 
+import { RoleModalForm }          from '../modal-form-fifth-dimension.enum'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
@@ -22,27 +22,14 @@ import { useModalForm }           from '../data'
 
 const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
   const modalForm = useModalForm()
-  const { formatMessage } = useIntl()
-  const initialAmount =
-    roleVar[0] ===
-    formatMessage({
-      id: 'landing_modal_forms.one_time_payment',
-      defaultMessage: 'Разовый платёж',
-    })
-      ? modalForm?.finalPriceForOneTimePaymentNumber
-      : modalForm?.monthlyPaymentNumber
-  const [amount, setAmount] = useState<number | undefined>(initialAmount)
+  const [amount, setAmount] = useState<number>(0)
 
   useEffect(() => {
     // eslint-disable-next-line
-    roleVar[0] ===
-    formatMessage({
-      id: 'landing_modal_forms.one_time_payment',
-      defaultMessage: 'Разовый платёж',
-    })
+    roleVar[0] === RoleModalForm.OneTimePayment
       ? setAmount(modalForm?.finalPriceForOneTimePaymentNumber)
       : setAmount(modalForm?.monthlyPaymentNumber)
-  }, [roleVar, formatMessage, modalForm])
+  }, [roleVar, modalForm])
 
   return (
     <Row height={540}>

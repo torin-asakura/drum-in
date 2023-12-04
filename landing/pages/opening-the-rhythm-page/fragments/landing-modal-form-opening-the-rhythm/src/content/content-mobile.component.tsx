@@ -3,7 +3,6 @@ import { FC }                     from 'react'
 import { useCallback }            from 'react'
 import { useEffect }              from 'react'
 import { useState }               from 'react'
-import { useIntl }                from 'react-intl'
 
 import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
@@ -16,6 +15,7 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 
+import { RoleModalForm }          from '../modal-form-opening-the-rhythm.enum'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
@@ -23,7 +23,6 @@ import { useModalForm }           from '../data'
 
 const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
   const modalForm = useModalForm()
-  const { formatMessage } = useIntl()
   const [amount, setAmount] = useState<number>(0)
 
   const recalculateAmount = useCallback(
@@ -35,11 +34,11 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
 
   useEffect(() => {
     if (modalForm?.courses) {
-      roleVar.includes(options[1].value) // eslint-disable-line
+      roleVar[0] === RoleModalForm.OneTimePayment // eslint-disable-line
         ? setAmount(modalForm.courses.reduce((acc, course) => acc + course.price, 0))
         : setAmount(modalForm.monthlyPaymentNumber)
     }
-  }, [roleVar, formatMessage, modalForm, options])
+  }, [roleVar, modalForm])
 
   return (
     <Row height={540}>
