@@ -1,4 +1,4 @@
 export enum RoleModalForm {
-  OneTimePayment = 'Разовый платёж',
-  InstallmentPlan = 'Рассрочка',
+  OneTimePayment = 'one_time_payment',
+  InstallmentPlan = 'installment_plan',
 }

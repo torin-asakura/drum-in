@@ -70,11 +70,12 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
             <Layout flexBasis={5} flexShrink={0} />
             <Row justifyContent='space-between'>
               <Switch active={roleVar}>
-                {options.map(({ value, mutuallyExclusive }) => (
+                {options.map(({ value, label, mutuallyExclusive }) => (
                   <>
                     <Option
                       mutuallyExclusive={mutuallyExclusive}
                       value={value}
+                      label={label}
                       onSelect={setRole}
                     />
                     <Layout flexBasis={8} />

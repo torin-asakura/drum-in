@@ -2,6 +2,7 @@ import React                           from 'react'
 import { FC }                          from 'react'
 import { motion }                      from 'framer-motion'
 import { useState }                    from 'react'
+import { useIntl }                     from 'react-intl'
 
 import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
@@ -20,13 +21,22 @@ const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
   scroll = true,
 }) => {
   const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
+  const { formatMessage } = useIntl()
   const options = [
     {
       value: RoleModalForm.InstallmentPlan,
+      label: formatMessage({
+        id: 'landing_modal_forms.installment_plan',
+        defaultMessage: 'Рассрочка',
+      }),
       mutuallyExclusive: true,
     },
     {
       value: RoleModalForm.OneTimePayment,
+      label: formatMessage({
+        id: 'landing_modal_forms.one_time_payment',
+        defaultMessage: 'Разовый платёж',
+      }),
       mutuallyExclusive: true,
     },
   ]

@@ -2,6 +2,7 @@ import React                      from 'react'
 import { FC }                     from 'react'
 import { motion }                 from 'framer-motion'
 import { useState }               from 'react'
+import { useIntl }                from 'react-intl'
 
 import { ContainerMobile }        from '@ui/modal'
 import { Renderer }               from '@ui/modal'
@@ -16,14 +17,23 @@ const ModalMobileFormConnacol: FC<ModalFormConnacolProps> = ({
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>(['Рассрочка'])
+  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
+  const { formatMessage } = useIntl()
   const options = [
     {
       value: RoleModalForm.InstallmentPlan,
+      label: formatMessage({
+        id: 'landing_modal_forms.installment_plan',
+        defaultMessage: 'Рассрочка',
+      }),
       mutuallyExclusive: true,
     },
     {
       value: RoleModalForm.OneTimePayment,
+      label: formatMessage({
+        id: 'landing_modal_forms.one_time_payment',
+        defaultMessage: 'Разовый платёж',
+      }),
       mutuallyExclusive: true,
     },
   ]

@@ -10,7 +10,7 @@ import { capitalize }  from '@ui/utils'
 import { OptionProps } from './option.interface'
 import { useActive }   from '../context'
 
-const Option: FC<OptionProps> = ({ onSelect, value, mutuallyExclusive }) => {
+const Option: FC<OptionProps> = ({ onSelect, value, label, mutuallyExclusive }) => {
   const active = useActive()
   const includes = active.includes(value)
 
@@ -40,7 +40,7 @@ const Option: FC<OptionProps> = ({ onSelect, value, mutuallyExclusive }) => {
           active={includes}
         >
           <Text fontWeight='medium' fontSize='medium' lineHeight='medium' whiteSpace='nowrap'>
-            {capitalize(value)}
+            {capitalize(label || value)}
           </Text>
         </Button>
       </Box>
