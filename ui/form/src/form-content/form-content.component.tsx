@@ -1,13 +1,7 @@
-import { ButtonWrapper }          from '@atls/tinkoff-payment-widget'
-import { InputWrapper }           from '@atls/tinkoff-payment-widget'
-import { AdditionalFieldsType }   from '@atls/tinkoff-payment-widget'
-import { Widget }                 from '@atls/tinkoff-payment-widget'
-
 import React                      from 'react'
 import { FC }                     from 'react'
 import { useState }               from 'react'
 import { useGoogleReCaptcha }     from 'react-google-recaptcha-v3'
-import { useIntl }                from 'react-intl'
 
 import { Button }                 from '@ui/button'
 import { Checkbox }               from '@ui/checkbox'
@@ -23,13 +17,15 @@ import { Text }                   from '@ui/text'
 import { Space }                  from '@ui/text'
 
 import { FormContentProps }       from './form-content.interfaces'
+import { Terminal }               from './terminal'
+import { TerminalScreen }         from './terminal'
 import { useActionHook }          from '../data'
 import { useData }                from '../data'
 import { messages }               from '../messages'
 import { getFieldDataByLanguage } from '../utils'
 
 const FormContent: FC<FormContentProps> = ({
-  amount,
+  amount = 0,
   arrow = false,
   form = 'consultation',
   onSuccess,
@@ -40,11 +36,6 @@ const FormContent: FC<FormContentProps> = ({
   const [telegram, setTelegram] = useState<string>('')
   const [privacyPolicy, setPrivacyPolicy] = useState<boolean>(false)
   const [submitForm, data, error] = useActionHook()
-  const { formatMessage } = useIntl()
-  const storeId =
-    process.env.NODE_ENV === 'development'
-      ? (process.env.REACT_APP_TERMINAL_STORE_ID_DEMO as string)
-      : (process.env.REACT_APP_TERMINAL_STORE_ID as string)
 
   const forms = useData()
 
@@ -112,54 +103,7 @@ const FormContent: FC<FormContentProps> = ({
     <Box flexDirection='column' height={arrow ? '100%' : 'auto'}>
       <Condition match={form === 'payment'}>
         <Box display={['none', 'flex', 'flex']} flexDirection='column'>
-          <Widget amount={amount} settings={{ storeId }} disabled={!privacyPolicy}>
-            <InputWrapper name={AdditionalFieldsType.Name}>
-              {(props) => (
-                <Box flexDirection='column'>
-                  <Input {...props} placeholder={getFieldDataByLanguage(forms, 'name')} />
-                  <Layout flexBasis={28} flexShrink={0} />
-                </Box>
-              )}
-            </InputWrapper>
-            <InputWrapper name={AdditionalFieldsType.Email}>
-              {(props) => (
-                <Box flexDirection='column'>
-                  <Input
-                    {...props}
-                    placeholder={formatMessage({
-                      id: 'landing_modal_forms.enter_a_email',
-                      defaultMessage: 'Введите почту',
-                    })}
-                  />
-                  <Layout flexBasis={28} flexShrink={0} />
-                </Box>
-              )}
-            </InputWrapper>
-            <InputWrapper name={AdditionalFieldsType.Phone}>
-              {(props) => (
-                <Box flexDirection='column'>
-                  <Input {...props} placeholder={getFieldDataByLanguage(forms, 'phone')} />
-                  <Layout flexBasis={28} flexShrink={0} />
-                </Box>
-              )}
-            </InputWrapper>
-            <ButtonWrapper>
-              {(props) => (
-                <Box>
-                  <Button
-                    {...props}
-                    size='withoutPaddingSemiBigHeight'
-                    variant='purpleBackground'
-                    fill
-                  >
-                    <Text fontWeight='semiBold' fontSize='medium' textTransform='uppercase'>
-                      {messages.pay}
-                    </Text>
-                  </Button>
-                </Box>
-              )}
-            </ButtonWrapper>
-          </Widget>
+          <Terminal amount={amount} disabled={!privacyPolicy} screen={TerminalScreen.Desktop} />
           <Layout flexBasis={20} flexShrink={0} />
           <Row>
             <Checkbox checked={privacyPolicy} onCheck={setPrivacyPolicy}>
@@ -174,63 +118,7 @@ const FormContent: FC<FormContentProps> = ({
           </Row>
         </Box>
         <Box display={['flex', 'none', 'none']} flexDirection='column'>
-          <Widget amount={amount} settings={{ storeId }} disabled={!privacyPolicy}>
-            <InputWrapper name={AdditionalFieldsType.Name}>
-              {(props) => (
-                <Box flexDirection='column'>
-                  <Input
-                    {...props}
-                    placeholder={getFieldDataByLanguage(forms, 'name')}
-                    size='small'
-                  />
-                  <Layout flexBasis={16} flexShrink={0} />
-                </Box>
-              )}
-            </InputWrapper>
-            <InputWrapper name={AdditionalFieldsType.Email}>
-              {(props) => (
-                <Box flexDirection='column'>
-                  <Input
-                    {...props}
-                    placeholder={formatMessage({
-                      id: 'landing_modal_forms.enter_a_email',
-                      defaultMessage: 'Введите почту',
-                    })}
-                    size='small'
-                  />
-                  <Layout flexBasis={16} flexShrink={0} />
-                </Box>
-              )}
-            </InputWrapper>
-            <InputWrapper name={AdditionalFieldsType.Phone}>
-              {(props) => (
-                <Box flexDirection='column'>
-                  <Input
-                    {...props}
-                    placeholder={getFieldDataByLanguage(forms, 'phone')}
-                    size='small'
-                  />
-                  <Layout flexBasis={16} flexShrink={0} />
-                </Box>
-              )}
-            </InputWrapper>
-            <ButtonWrapper>
-              {(props) => (
-                <Box>
-                  <Button
-                    {...props}
-                    size='withoutPaddingSemiRegularHeight'
-                    variant='purpleBackground'
-                    fill
-                  >
-                    <Text fontWeight='semiBold' fontSize='semiMedium' textTransform='uppercase'>
-                      {messages.pay}
-                    </Text>
-                  </Button>
-                </Box>
-              )}
-            </ButtonWrapper>
-          </Widget>
+          <Terminal amount={amount} disabled={!privacyPolicy} screen={TerminalScreen.Mobile} />
           <Layout flexBasis={16} flexShrink={0} />
           <Row>
             <CheckboxMobile checked={privacyPolicy} onCheck={setPrivacyPolicy}>
