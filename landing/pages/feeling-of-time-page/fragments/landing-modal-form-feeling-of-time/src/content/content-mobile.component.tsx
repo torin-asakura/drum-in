@@ -1,7 +1,5 @@
 import React                      from 'react'
 import { FC }                     from 'react'
-import { useEffect }              from 'react'
-import { useState }               from 'react'
 
 import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
@@ -14,22 +12,15 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 
-import { RoleModalForm }          from '../modal-form-feeling-of-time.enum'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 import { useModalForm }           from '../data'
+import { useContent }             from './content.hook'
 
 const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
   const modalForm = useModalForm()
-  const [amount, setAmount] = useState<number>(0)
-
-  useEffect(() => {
-    // eslint-disable-next-line
-    roleVar[0] === RoleModalForm.OneTimePayment
-      ? setAmount(modalForm?.finalPriceForOneTimePaymentNumber)
-      : setAmount(modalForm?.monthlyPaymentNumber)
-  }, [roleVar, modalForm])
+  const { amount } = useContent(roleVar[0], modalForm)
 
   return (
     <Row height={540}>

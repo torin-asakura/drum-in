@@ -8,3 +8,26 @@ export interface ContentProps {
   }>
   setRole: (value: Array<string>) => any
 }
+
+export interface Content {
+  amount: number
+}
+
+interface Course {
+  description: string
+  name: string
+  price: number
+}
+
+export interface ModalForm {
+  benefit: string
+  finalPriceForInstallment: string
+  finalPriceForInstallmentNumber: number
+  finalPriceForOneTimePayment: string
+  finalPriceForOneTimePaymentNumber: number
+  installmentDuration: string
+  monthlyPayment: string
+  monthlyPaymentNumber: number
+  title: string
+  courses: Course[]
+}

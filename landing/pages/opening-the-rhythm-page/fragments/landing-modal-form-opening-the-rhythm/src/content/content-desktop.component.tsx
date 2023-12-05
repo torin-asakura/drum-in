@@ -1,8 +1,5 @@
 import React                      from 'react'
 import { FC }                     from 'react'
-import { useCallback }            from 'react'
-import { useEffect }              from 'react'
-import { useState }               from 'react'
 
 import { Button }                 from '@ui/button'
 import { Condition }              from '@ui/condition'
@@ -17,30 +14,15 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 
-import { RoleModalForm }          from '../modal-form-opening-the-rhythm.enum'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 import { useModalForm }           from '../data'
+import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
   const modalForm = useModalForm()
-  const [amount, setAmount] = useState<number>(0)
-
-  const recalculateAmount = useCallback(
-    (price: number, operation: boolean) => {
-      setAmount((prevSatae) => (operation ? prevSatae + price : prevSatae - price))
-    },
-    [setAmount]
-  )
-
-  useEffect(() => {
-    if (modalForm?.courses) {
-      roleVar[0] === RoleModalForm.OneTimePayment // eslint-disable-line
-        ? setAmount(modalForm.courses.reduce((acc, course) => acc + course.price, 0))
-        : setAmount(modalForm.monthlyPaymentNumber)
-    }
-  }, [roleVar, modalForm])
+  const { amount, recalculateAmount } = useContent(roleVar[0], modalForm)
 
   return (
     <>
