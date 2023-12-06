@@ -38,7 +38,7 @@ const Terminal: FC<TerminalProps> = ({ amount, disabled, screen }) => {
     fontSize: screen === TerminalScreen.Desktop ? 'medium' : 'semiMedium',
     textTransform: 'uppercase',
   }
-  const storeId = process.env.NEXT_PUBLIC_TERMINAL_ID as string
+  const storeId = process.env.NEXT_PUBLIC_TINKOFF_TERMINAL_ID as string
 
   return (
     <Widget amount={amount} settings={{ storeId }} disabled={disabled}>

@@ -95,10 +95,12 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
         </Box>
       </Row>
       <Layout flexBasis={28} flexShrink={0} />
-      {roleVar.includes(options[0].value) || roleVar.length === 0 ? (
+      <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
         <ContentInstallmentPlan />
-      ) : null}
-      {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
+      </Condition>
+      <Condition match={roleVar.includes(options[1].value)}>
+        <ContentOneTimePayment />
+      </Condition>
       <Condition match={!!amount}>
         <Form amount={amount} form='payment' key={amount} />
       </Condition>

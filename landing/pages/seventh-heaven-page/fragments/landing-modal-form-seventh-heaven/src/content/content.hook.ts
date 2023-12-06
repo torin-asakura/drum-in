@@ -1,11 +1,10 @@
-import { useCallback }        from 'react'
-import { useEffect }          from 'react'
-import { useState }           from 'react'
+import { useCallback }   from 'react'
+import { useEffect }     from 'react'
+import { useState }      from 'react'
 
-import { RoleModalForm }      from '../modal-form-seventh-heaven.enum'
-import { Content }            from './content.interfaces'
-
-import { ModalForm } from './content.interfaces'
+import { RoleModalForm } from '../modal-form-seventh-heaven.enum'
+import { Content }       from './content.interfaces'
+import { ModalForm }     from './content.interfaces'
 
 export const useContent = (roleVar: string, modalForm: ModalForm): Content => {
   const getAmount = useCallback((): number => {
