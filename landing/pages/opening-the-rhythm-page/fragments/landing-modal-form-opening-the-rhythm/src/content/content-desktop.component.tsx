@@ -1,52 +1,57 @@
-import React                      from 'react'
-import { FC }                     from 'react'
+import React from "react";
+import { FC } from "react";
 
-import { Button }                 from '@ui/button'
-import { Condition }              from '@ui/condition'
-import { Form }                   from '@ui/form'
-import { CrossMenuIcon }          from '@ui/icons'
-import { ArrowLeftTailIcon }      from '@ui/icons'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Box }                    from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { Switch }                 from '@ui/switch'
-import { Option }                 from '@ui/switch'
-import { Text }                   from '@ui/text'
+import { Button } from "@ui/button";
+import { Condition } from "@ui/condition";
+import { Form } from "@ui/form";
+import { CrossMenuIcon } from "@ui/icons";
+import { ArrowLeftTailIcon } from "@ui/icons";
+import { Column } from "@ui/layout";
+import { Layout } from "@ui/layout";
+import { Box } from "@ui/layout";
+import { Row } from "@ui/layout";
+import { Switch } from "@ui/switch";
+import { Option } from "@ui/switch";
+import { Text } from "@ui/text";
 
-import { ContentInstallmentPlan } from './content-installment-plan'
-import { ContentOneTimePayment }  from './content-one-time-payment'
-import { ContentProps }           from './content.interfaces'
-import { useModalForm }           from '../data'
-import { useContent }             from './content.hook'
+import { ContentInstallmentPlan } from "./content-installment-plan";
+import { ContentOneTimePayment } from "./content-one-time-payment";
+import { ContentProps } from "./content.interfaces";
+import { useModalForm } from "../data";
+import { useContent } from "./content.hook";
 
-const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
-  const modalForm = useModalForm()
-  const { amount, recalculateAmount } = useContent(roleVar[0], modalForm)
+const ContentDesktop: FC<ContentProps> = ({
+  onClose,
+  roleVar,
+  options,
+  setRole,
+}) => {
+  const modalForm = useModalForm();
+  const { amount, recalculateAmount } = useContent(roleVar[0], modalForm);
 
   return (
     <>
       <Box
-        width='100%'
-        flexDirection={['column', 'row', 'row']}
-        justifyContent={['start', 'space-between', 'space-between']}
-        alignItems='start'
+        width="100%"
+        flexDirection={["column", "row", "row"]}
+        justifyContent={["start", "space-between", "space-between"]}
+        alignItems="start"
       >
-        <Box width={['100%', 450, 450]}>
+        <Box width={["100%", 450, 450]}>
           <Text
-            display='inline'
-            fontWeight='medium'
-            fontSize={['large', 'moderate', 'semiIncreased']}
-            lineHeight='default'
-            color='text.smokyWhite'
+            display="inline"
+            fontWeight="medium"
+            fontSize={["large", "moderate", "semiIncreased"]}
+            lineHeight="default"
+            color="text.smokyWhite"
           >
             {modalForm?.title}
           </Text>
         </Box>
-        <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
+        <Box width={["100%", "auto", "auto"]} justifyContent="end">
           <Button
-            size='littlePaddingMediumHeight'
-            variant='transparentWhiteToGrayBackground'
+            size="littlePaddingMediumHeight"
+            variant="transparentWhiteToGrayBackground"
             onClick={onClose}
           >
             <CrossMenuIcon width={24} height={24} />
@@ -54,12 +59,16 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
         </Box>
       </Box>
       <Layout flexBasis={21} flexShrink={0} />
-      <Row alignItems='end'>
-        <Box backgroundColor='background.transparentWhite' borderRadius='bigger' width={263}>
+      <Row alignItems="end">
+        <Box
+          backgroundColor="background.transparentWhite"
+          borderRadius="bigger"
+          width={263}
+        >
           <Layout flexBasis={5} flexShrink={0} />
-          <Column width='100%'>
+          <Column width="100%">
             <Layout flexBasis={5} flexShrink={0} />
-            <Row justifyContent='space-between'>
+            <Row justifyContent="space-between">
               <Switch active={roleVar}>
                 {options.map(({ value, label, mutuallyExclusive }) => (
                   <>
@@ -83,29 +92,39 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
           <ArrowLeftTailIcon width={85} height={25} />
         </Box>
         <Box
-          alignSelf='start'
-          padding='4px 8px'
-          borderRadius='micro'
-          backgroundColor='background.green'
-          style={{ transform: 'rotate(15deg)' }}
+          alignSelf="start"
+          padding="4px 8px"
+          borderRadius="micro"
+          backgroundColor="background.green"
+          style={{ transform: "rotate(15deg)" }}
         >
-          <Text fontWeight='medium' fontSize='medium' lineHeight='medium' color='text.smokyWhite'>
+          <Text
+            fontWeight="medium"
+            fontSize="medium"
+            lineHeight="medium"
+            color="text.smokyWhite"
+          >
             {modalForm?.benefit}
           </Text>
         </Box>
       </Row>
       <Layout flexBasis={28} flexShrink={0} />
-      <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
+      <Condition
+        match={roleVar.includes(options[0].value) || roleVar.length === 0}
+      >
         <ContentInstallmentPlan />
       </Condition>
       <Condition match={roleVar.includes(options[1].value)}>
-        <ContentOneTimePayment amount={amount} recalculate={recalculateAmount} />
+        <ContentOneTimePayment
+          amount={amount}
+          recalculate={recalculateAmount}
+        />
       </Condition>
       <Condition match={!!amount}>
-        <Form amount={amount} form='payment' key={amount} />
+        <Form amount={amount} form="payment" key={amount} />
       </Condition>
     </>
-  )
-}
+  );
+};
 
-export { ContentDesktop }
+export { ContentDesktop };
