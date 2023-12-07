@@ -37,7 +37,7 @@ const BannerBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              <FormattedMessage id='landing_banner.rhythm_school' defaultMessage='Школа ритма' />
+              <FormattedMessage id='landing_banner.rhythm_school' />
             </Text>
           </Box>
           <Box order={3} display={['flex', 'flex', 'none']}>
@@ -49,10 +49,7 @@ const BannerBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_banner.marina_chuprikova'
-                defaultMessage='Марины Чуприковой'
-              />
+              <FormattedMessage id='landing_banner.marina_chuprikova' />
             </Text>
           </Box>
           <Layout order={[4, 4, -1]} flexBasis={[16, 24, 60]} />

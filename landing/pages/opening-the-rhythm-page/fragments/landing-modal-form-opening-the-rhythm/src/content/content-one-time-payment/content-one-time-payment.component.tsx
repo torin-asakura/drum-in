@@ -36,7 +36,7 @@ const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({ amount, recalcu
           lineHeight='medium'
           color='text.smokyWhite'
         >
-          <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
+          <FormattedMessage id='landing_modal_forms.amount' />
           <Space />
           <FormattedNumber
             value={amount}

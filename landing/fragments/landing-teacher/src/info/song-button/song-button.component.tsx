@@ -55,9 +55,9 @@ const SongButton: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
                 lineHeight='default'
               >
                 {playSong ? (
-                  <FormattedMessage id='landing_teacher.stop' defaultMessage='Остановить' />
+                  <FormattedMessage id='landing_teacher.stop' />
                 ) : (
-                  <FormattedMessage id='landing_teacher.listening' defaultMessage='Прослушать' />
+                  <FormattedMessage id='landing_teacher.listening' />
                 )}
               </Text>
             </Row>

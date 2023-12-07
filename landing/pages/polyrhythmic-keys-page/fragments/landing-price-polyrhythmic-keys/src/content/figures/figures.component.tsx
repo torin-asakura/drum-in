@@ -27,7 +27,6 @@ const Figures: FC<FiguresProps> = ({
           firstLine={quantityVideoLessons}
           secondLine={formatMessage({
             id: 'landing_price.video_lessons',
-            defaultMessage: 'видео-уроков',
           })}
           rotate={squareRotate || 0}
         />

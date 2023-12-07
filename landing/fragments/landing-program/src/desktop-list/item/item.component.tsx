@@ -97,7 +97,6 @@ const Item: FC<ItemProps> = ({
             firstLine={quantityVideoLessons}
             secondLine={formatMessage({
               id: 'landing_program.video_lessons',
-              defaultMessage: 'видео-уроков',
             })}
             rotate={squareRotate}
           />
@@ -108,7 +107,6 @@ const Item: FC<ItemProps> = ({
             firstLine={quantityLiveBroadcast}
             secondLine={formatMessage({
               id: 'landing_program.live-broadcast',
-              defaultMessage: 'прямых эфиров',
             })}
           />
         </Box>

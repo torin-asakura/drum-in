@@ -26,7 +26,7 @@ const EducationList = () => {
           <Layout flexBasis={8} flexShrink={0} />
           <Box>
             <Text fontWeight='medium' fontSize='mild' lineHeight='medium' color='text.smokyWhite'>
-              <FormattedMessage id='landing_teacher.education' defaultMessage='Образование' />
+              <FormattedMessage id='landing_teacher.education' />
             </Text>
           </Box>
         </Box>

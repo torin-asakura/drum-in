@@ -23,7 +23,7 @@ const EducationMobile = () => {
     >
       <Box>
         <Text fontWeight='medium' fontSize='large' lineHeight='small' color='text.smokyWhite'>
-          <FormattedMessage id='landing_teacher.education' defaultMessage='Образование' />
+          <FormattedMessage id='landing_teacher.education' />
         </Text>
       </Box>
       <Layout flexBasis={12} flexShrink={0} />

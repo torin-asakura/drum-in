@@ -26,11 +26,11 @@ const Specifications: FC<SpecificationsProps> = ({
           lineHeight='primary'
           color='text.blackAmber'
         >
-          <FormattedMessage id='landing_price.dot' defaultMessage='•' />
+          <FormattedMessage id='landing_price.dot' />
           <Space />
           {quantityVideoLessons}
           <Space />
-          <FormattedMessage id='landing_price.video_lessons' defaultMessage='видео-уроков' />
+          <FormattedMessage id='landing_price.video_lessons' />
         </Text>
       </Box>
       <Layout flexBasis={[4, 6, 0]} />
@@ -41,7 +41,7 @@ const Specifications: FC<SpecificationsProps> = ({
           lineHeight='primary'
           color='text.blackAmber'
         >
-          <FormattedMessage id='landing_price.dot' defaultMessage='•' />
+          <FormattedMessage id='landing_price.dot' />
           <Space />
           {quantityMonths}
           <Space />
@@ -56,7 +56,7 @@ const Specifications: FC<SpecificationsProps> = ({
           lineHeight='primary'
           color='text.blackAmber'
         >
-          <FormattedMessage id='landing_price.dot' defaultMessage='•' />
+          <FormattedMessage id='landing_price.dot' />
           <Space />
           {firstLineCircle}
           <Space />

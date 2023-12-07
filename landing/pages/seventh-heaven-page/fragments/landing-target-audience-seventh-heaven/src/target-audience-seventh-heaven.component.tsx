@@ -41,7 +41,6 @@ const TargetAudienceSeventhHeavenBlock = () => {
             <ItemCard
               number={formatMessage({
                 id: 'landing_target_audience.first',
-                defaultMessage: '01',
               })}
               text={targetAudience?.targetAudience?.firstCharacteristic}
               positionHorizontal={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
@@ -51,7 +50,6 @@ const TargetAudienceSeventhHeavenBlock = () => {
             <ItemCard
               number={formatMessage({
                 id: 'landing_target_audience.second',
-                defaultMessage: '02',
               })}
               text={targetAudience?.targetAudience?.secondCharacteristic}
               positionHorizontal={{ _: 45, tablet: 100, laptop: 0, wide: 313 }}
@@ -61,7 +59,6 @@ const TargetAudienceSeventhHeavenBlock = () => {
             <ItemCard
               number={formatMessage({
                 id: 'landing_target_audience.third',
-                defaultMessage: '03',
               })}
               text={targetAudience?.targetAudience?.thirdCharacteristic}
               positionHorizontal={{ _: 89, tablet: 225, laptop: 0, wide: 626 }}

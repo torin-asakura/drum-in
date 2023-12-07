@@ -24,7 +24,6 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
       value: RoleModalForm.InstallmentPlan,
       label: formatMessage({
         id: 'landing_modal_forms.installment_plan',
-        defaultMessage: 'Рассрочка',
       }),
       mutuallyExclusive: true,
     },
@@ -32,7 +31,6 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
       value: RoleModalForm.OneTimePayment,
       label: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
-        defaultMessage: 'Разовый платёж',
       }),
       mutuallyExclusive: true,
     },

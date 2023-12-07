@@ -37,8 +37,7 @@ const Content = () => {
         <Title
           currency={price?.priceInstallmentPlan}
           costPerMonth={formatMessage({
-            id: 'landing_price_connacol.rubles_per_month',
-            defaultMessage: '₽/мес',
+            id: 'landing_price.rubles_per_month',
           })}
         />
         <Layout flexBasis={[40, 50, 32]} />
@@ -56,10 +55,7 @@ const Content = () => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='large' textTransform='uppercase'>
-              <FormattedMessage
-                id='landing_price.arrange_an_installment_plan'
-                defaultMessage='оформить рассрочку'
-              />
+              <FormattedMessage id='landing_price.arrange_an_installment_plan' />
             </Text>
           </Button>
         </Box>
@@ -74,10 +70,7 @@ const Content = () => {
             lineHeight={['primary', 'primary', 'medium']}
             color='text.gray'
           >
-            <FormattedMessage
-              id='landing_price.with_a_one_time_payment_of_the_course_you_save'
-              defaultMessage='*при разовой оплате курса вы экономите'
-            />
+            <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
             <Text color='text.green'>{price?.savingsWithOneTimePayment}</Text>
           </Text>
@@ -93,10 +86,7 @@ const Content = () => {
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
               {price?.priceInstallmentPlan}
               <Space />
-              <FormattedMessage
-                id='landing_price_connacol.rubles_per_month'
-                defaultMessage='₽/мес'
-              />
+              <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
           </Button>
         </Box>
@@ -110,10 +100,7 @@ const Content = () => {
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
               {price?.priceInstallmentPlan}
               <Space />
-              <FormattedMessage
-                id='landing_price_connacol.rubles_per_month'
-                defaultMessage='₽/мес'
-              />
+              <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
           </Button>
         </Box>

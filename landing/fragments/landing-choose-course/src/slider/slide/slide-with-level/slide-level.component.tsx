@@ -53,7 +53,6 @@ const SlideLevel: FC<SlideLevelProps> = ({
                 firstLine={quantityVideoLessons}
                 secondLine={formatMessage({
                   id: 'landing_choose_course.video_lessons',
-                  defaultMessage: 'видео-уроков',
                 })}
                 rotate={squareRotate}
               />

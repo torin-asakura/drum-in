@@ -33,10 +33,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              <FormattedMessage
-                id='landing_banner.any_other_questions'
-                defaultMessage='остались вопросы?'
-              />
+              <FormattedMessage id='landing_banner.any_other_questions' />
             </Text>
           </Box>
           <Layout flexBasis={[8, 40, 86]} />
@@ -53,10 +50,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   lineHeight={['primary', 'medium', 'medium']}
                   color='text.gray'
                 >
-                  <FormattedMessage
-                    id='landing_cta.fill_out_the_form_and_get'
-                    defaultMessage='Заполните форму и получите'
-                  />
+                  <FormattedMessage id='landing_cta.fill_out_the_form_and_get' />
                   <Space />
                   <Text
                     fontWeight='medium'
@@ -64,7 +58,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                     lineHeight={['primary', 'medium', 'medium']}
                     color='text.smokyWhite'
                   >
-                    <FormattedMessage id='landing_cta.free' defaultMessage='бесплатную' />
+                    <FormattedMessage id='landing_cta.free' />
                   </Text>
                 </Text>
               </Box>
@@ -75,10 +69,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   lineHeight={['primary', 'medium', 'medium']}
                   color='text.gray'
                 >
-                  <FormattedMessage
-                    id='landing_cta.advice_from_a_teacher'
-                    defaultMessage='консультацию от преподавателя'
-                  />
+                  <FormattedMessage id='landing_cta.advice_from_a_teacher' />
                 </Text>
               </Box>
               <Layout flexBasis={[20, 26, 32]} />
@@ -96,10 +87,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                     fontSize='large'
                     lineHeight='default'
                   >
-                    <FormattedMessage
-                      id='landing_cta.fill_out_the_form'
-                      defaultMessage='заполнить форму'
-                    />
+                    <FormattedMessage id='landing_cta.fill_out_the_form' />
                   </Text>
                 </Button>
               </Box>
@@ -116,10 +104,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                     fontSize='semiMedium'
                     lineHeight='default'
                   >
-                    <FormattedMessage
-                      id='landing_cta.fill_out_the_form'
-                      defaultMessage='заполнить форму'
-                    />
+                    <FormattedMessage id='landing_cta.fill_out_the_form' />
                   </Text>
                 </Button>
               </Box>

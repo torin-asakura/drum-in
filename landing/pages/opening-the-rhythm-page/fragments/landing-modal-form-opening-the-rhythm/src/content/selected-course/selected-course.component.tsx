@@ -46,10 +46,7 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price, re
                 lineHeight={['primary', 'medium', 'medium']}
                 color='text.gray'
               >
-                <FormattedMessage
-                  id='landing_modal_forms.you_deleted'
-                  defaultMessage='Вы удалили'
-                />
+                <FormattedMessage id='landing_modal_forms.you_deleted' />
                 <Space />
                 {title}
               </Text>
@@ -63,7 +60,7 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price, re
                     lineHeight={['primary', 'medium', 'medium']}
                     color='text.smokyWhite'
                   >
-                    <FormattedMessage id='landing_modal_forms.course' defaultMessage='Курс' />
+                    <FormattedMessage id='landing_modal_forms.course' />
                     <Space />
                     {title}
                   </Text>

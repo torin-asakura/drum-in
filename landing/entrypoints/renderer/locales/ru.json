@@ -1,8 +1,12 @@
 {
   "landing_header.courses": "Курсы",
+  "landing_header.connect": "Связаться",
+  "landing_header.contacts": "Контакты",
+  "landing_banner.any_other_questions": "остались вопросы?",
   "landing_banner.rhythm_school": "Школа ритма",
   "landing_banner.marina_chuprikova": "Марины Чуприковой",
   "landing_choose_course.choose_your_course": "Выберете свой курс",
+  "landing_choose_course.video_lessons": "видео-уроков",
   "landing_teacher.listening": "Прослушать",
   "landing_teacher.education": "Образование",
   "landing_teacher.stop": "Остановить",
@@ -23,6 +27,7 @@
   "landing_skills.rhythms_of_different_musical_styles": "Ритмы разных музыкальных стилей и разных стран мира",
   "landing_program.live-broadcast": "прямых эфиров",
   "landing_program.video_lessons": "видео-уроков",
+  "landing_program.dot": "•",
   "landing_price.tuition_fees": "стоимость обучения",
   "landing_price.arrange_an_installment_plan": "оформить рассрочку",
   "landing_price.pay": "оплатить",
@@ -31,6 +36,7 @@
   "landing_price.video_lessons": "видео-уроков",
   "landing_price.months": "месяцев",
   "landing_price.dot": "•",
+  "landing_price.rubles_per_month": "₽/мес",
   "landing_start_learning.start_learning": "начать обучение",
   "landing_target_audience.first": "01",
   "landing_target_audience.second": "02",
@@ -57,6 +63,5 @@
   "landing_modal_forms.installment_period": "Срок рассрочки",
   "landing_modal_forms.amount": "Сумма:",
   "landing_modal_forms.total_amount": "Общая сумма",
-  "landing_program.dot": "•",
   "landing_modal_forms.per_month": "/мес."
 }

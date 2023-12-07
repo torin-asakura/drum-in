@@ -26,7 +26,7 @@ const ButtonUp: FC<FooterProps> = ({ buttonUp = true }) => {
                 fontSize='regular'
                 lineHeight='default'
               >
-                <FormattedMessage id='landing_footer.up' defaultMessage='вверх' />
+                <FormattedMessage id='landing_footer.up' />
               </Text>
             </Button>
           </Box>
@@ -44,7 +44,7 @@ const ButtonUp: FC<FooterProps> = ({ buttonUp = true }) => {
               fontSize='semiMedium'
               lineHeight='default'
             >
-              <FormattedMessage id='landing_footer.up' defaultMessage='вверх' />
+              <FormattedMessage id='landing_footer.up' />
             </Text>
           </Button>
         </Box>

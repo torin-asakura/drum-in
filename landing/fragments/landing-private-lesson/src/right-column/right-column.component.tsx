@@ -41,10 +41,7 @@ const RightColumn = () => {
               lineHeight='primary'
               color='text.purple'
             >
-              <FormattedMessage
-                id='landing_private_lesson.duration'
-                defaultMessage='Длительность'
-              />
+              <FormattedMessage id='landing_private_lesson.duration' />
               <Space />
             </Text>
           </Box>
@@ -55,7 +52,7 @@ const RightColumn = () => {
               lineHeight='primary'
               color='text.blackAmber'
             >
-              <FormattedMessage id='landing_private_lesson.dash' defaultMessage='—' />
+              <FormattedMessage id='landing_private_lesson.dash' />
               <Space />
               {privateLesson?.durationLesson}
             </Text>
@@ -70,7 +67,7 @@ const RightColumn = () => {
               lineHeight='primary'
               color='text.purple'
             >
-              <FormattedMessage id='landing_private_lesson.format' defaultMessage='Формат' />
+              <FormattedMessage id='landing_private_lesson.format' />
               <Space />
             </Text>
           </Box>
@@ -81,7 +78,7 @@ const RightColumn = () => {
               lineHeight='primary'
               color='text.blackAmber'
             >
-              <FormattedMessage id='landing_private_lesson.dash' defaultMessage='—' />
+              <FormattedMessage id='landing_private_lesson.dash' />
               <Space />
               {privateLesson?.formatLesson}
             </Text>

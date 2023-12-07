@@ -32,10 +32,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_forms.monthly_payment'
-                defaultMessage='Ежемесячный платёж'
-              />
+              <FormattedMessage id='landing_modal_forms.monthly_payment' />
             </Text>
           </Box>
           <Box>
@@ -51,7 +48,7 @@ const ContentInstallmentPlan = () => {
                 currency='RUB'
                 maximumFractionDigits={0}
               />
-              <FormattedMessage id='landing_modal_forms.per_month' defaultMessage='/мес.' />
+              <FormattedMessage id='landing_modal_forms.per_month' />
             </Text>
           </Box>
         </Column>
@@ -63,10 +60,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_forms.installment_period'
-                defaultMessage='Срок рассрочки'
-              />
+              <FormattedMessage id='landing_modal_forms.installment_period' />
             </Text>
           </Box>
           <Box>
@@ -88,10 +82,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_forms.total_amount'
-                defaultMessage='Общая сумма'
-              />
+              <FormattedMessage id='landing_modal_forms.total_amount' />
             </Text>
           </Box>
           <Box>

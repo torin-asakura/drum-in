@@ -49,7 +49,6 @@ const Terminal: FC<TerminalProps> = ({ amount, disabled, screen }) => {
               {...props}
               placeholder={formatMessage({
                 id: 'landing_modal_forms.enter_a_name',
-                defaultMessage: 'Введите имя',
               })}
               {...inputProps}
             />
@@ -64,7 +63,6 @@ const Terminal: FC<TerminalProps> = ({ amount, disabled, screen }) => {
               {...props}
               placeholder={formatMessage({
                 id: 'landing_modal_forms.enter_a_email',
-                defaultMessage: 'Введите почту',
               })}
               {...inputProps}
             />
@@ -79,7 +77,6 @@ const Terminal: FC<TerminalProps> = ({ amount, disabled, screen }) => {
               {...props}
               placeholder={formatMessage({
                 id: 'landing_modal_forms.seven',
-                defaultMessage: '7',
               })}
               {...inputProps}
             />
@@ -94,7 +91,6 @@ const Terminal: FC<TerminalProps> = ({ amount, disabled, screen }) => {
               <Text {...textProps}>
                 {formatMessage({
                   id: 'landing_modal_forms.pay',
-                  defaultMessage: 'оплатить',
                 })}
               </Text>
             </Button>

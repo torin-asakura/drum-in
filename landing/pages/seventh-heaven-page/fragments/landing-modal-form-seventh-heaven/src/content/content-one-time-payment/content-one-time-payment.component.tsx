@@ -26,7 +26,7 @@ const ContentOneTimePayment = () => {
           lineHeight='medium'
           color='text.smokyWhite'
         >
-          <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
+          <FormattedMessage id='landing_modal_forms.amount' />
           <Space />
           <FormattedNumber
             value={modalForm?.finalPriceForOneTimePaymentNumber || 0}

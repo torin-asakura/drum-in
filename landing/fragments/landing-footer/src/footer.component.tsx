@@ -44,7 +44,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                     'text.smokyWhite',
                   ]}
                 >
-                  <FormattedMessage id='landing_footer.courses' defaultMessage='Курсы' />
+                  <FormattedMessage id='landing_footer.courses' />
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
@@ -95,10 +95,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                     'text.smokyWhite',
                   ]}
                 >
-                  <FormattedMessage
-                    id='landing_footer.social_networks'
-                    defaultMessage='Соц. сети'
-                  />
+                  <FormattedMessage id='landing_footer.social_networks' />
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />

@@ -106,7 +106,7 @@ const HeaderBlock = () => {
                       fontSize='medium'
                       lineHeight='default'
                     >
-                      <FormattedMessage id='landing_header.courses' defaultMessage='Курсы' />
+                      <FormattedMessage id='landing_header.courses' />
                     </Text>
                   </Row>
                 </Button>

@@ -27,10 +27,7 @@ const FaqBlock = forwardRef(({ data }: any, ref: any) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            <FormattedMessage
-              id='landing_faq.questions_and_answers'
-              defaultMessage='Вопросы и ответы'
-            />
+            <FormattedMessage id='landing_faq.questions_and_answers' />
           </Text>
           <Box display={['none', 'none', 'flex']} position='absolute' right={-52} top={-39}>
             <OpenOvalIcon width={390} height={111} />
