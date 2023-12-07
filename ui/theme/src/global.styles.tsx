@@ -1,9 +1,10 @@
-import { Global } from '@emotion/react'
-import { css }    from '@emotion/react'
+import { Global }                 from '@emotion/react'
+import { css }                    from '@emotion/react'
 
 import React                      from 'react'
 import { useEffect }              from 'react'
 import { polyfill }               from 'seamless-scroll-polyfill'
+
 import { DrukTextWide }           from './fonts'
 import { locomotiveScrollStyles } from './locomotive-scroll'
 

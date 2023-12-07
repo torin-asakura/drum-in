@@ -28,7 +28,7 @@ const IconAttachment: FC<IconAttachmentProps> = ({
         height={valueHeight || 'auto'}
         backgroundColor={valueBackground || 'transparent'}
       >
-        {iconSvg}
+        {iconSvg as React.ReactNode}
       </Box>
     </Attachment>
   ) : null

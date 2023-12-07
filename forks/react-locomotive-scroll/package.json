@@ -8,7 +8,7 @@
     "use-resize-observer": "9.1.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.47",
+    "@types/react": "18.2.20",
     "locomotive-scroll": "4.1.4"
   },
   "peerDependencies": {

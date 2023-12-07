@@ -28,10 +28,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            <FormattedMessage
-              id='landing_modal_forms.free_consultation_from_a_teacher'
-              defaultMessage='Бесплатная консультация от преподавателя'
-            />
+            <FormattedMessage id='landing_modal_forms.free_consultation_from_a_teacher' />
           </Text>
         </Box>
         <Layout flexBasis={[6, 9, 12]} flexShrink={0} />
@@ -42,10 +39,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => (
             lineHeight='medium'
             color='text.transparentSmokyWhite'
           >
-            <FormattedMessage
-              id='landing_modal_forms.fill_out_the_form_and_we_will_contact_you'
-              defaultMessage='Заполните форму и мы свяжемся с вами в ближайшее время'
-            />
+            <FormattedMessage id='landing_modal_forms.fill_out_the_form_and_we_will_contact_you' />
           </Text>
         </Box>
       </Column>

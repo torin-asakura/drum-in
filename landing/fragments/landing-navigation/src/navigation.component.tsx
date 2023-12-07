@@ -73,10 +73,7 @@ const NavigationBlock: FC<NavigationProps> = ({ visible, setVisible }) => {
                       lineHeight='default'
                       color='smokyWhite'
                     >
-                      <FormattedMessage
-                        id='landing_section_courses.courses'
-                        defaultMessage='Курсы'
-                      />
+                      <FormattedMessage id='landing_header.courses' />
                     </Text>
                   </Row>
                 </Button>

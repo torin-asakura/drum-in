@@ -2,6 +2,7 @@ import React                      from 'react'
 import { FC }                     from 'react'
 
 import { Button }                 from '@ui/button'
+import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
 import { CrossMenuIcon }          from '@ui/icons'
 import { ArrowLeftTailIcon }      from '@ui/icons'
@@ -17,9 +18,11 @@ import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 import { useModalForm }           from '../data'
+import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
   const modalForm = useModalForm()
+  const { amount, recalculateAmount } = useContent(roleVar[0], modalForm)
 
   return (
     <>
@@ -58,11 +61,12 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
             <Layout flexBasis={5} flexShrink={0} />
             <Row justifyContent='space-between'>
               <Switch active={roleVar}>
-                {options.map(({ value, mutuallyExclusive }) => (
+                {options.map(({ value, label, mutuallyExclusive }) => (
                   <>
                     <Option
                       mutuallyExclusive={mutuallyExclusive}
                       value={value}
+                      label={label}
                       onSelect={setRole}
                     />
                     <Layout flexBasis={8} />
@@ -91,11 +95,15 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
         </Box>
       </Row>
       <Layout flexBasis={28} flexShrink={0} />
-      {roleVar.includes(options[0].value) || roleVar.length === 0 ? (
+      <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
         <ContentInstallmentPlan />
-      ) : null}
-      {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
-      <Form form='payment' />
+      </Condition>
+      <Condition match={roleVar.includes(options[1].value)}>
+        <ContentOneTimePayment amount={amount} recalculate={recalculateAmount} />
+      </Condition>
+      <Condition match={!!amount}>
+        <Form amount={amount} form='payment' key={amount} />
+      </Condition>
     </>
   )
 }

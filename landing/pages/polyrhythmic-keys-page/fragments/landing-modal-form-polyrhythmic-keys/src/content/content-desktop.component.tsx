@@ -1,8 +1,10 @@
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import { FormattedNumber }  from 'react-intl'
 
 import { Button }           from '@ui/button'
+import { Condition }        from '@ui/condition'
 import { Form }             from '@ui/form'
 import { CrossMenuIcon }    from '@ui/icons'
 import { Layout }           from '@ui/layout'
@@ -59,13 +61,20 @@ const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
           lineHeight='medium'
           color='text.smokyWhite'
         >
-          <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
+          <FormattedMessage id='landing_modal_forms.amount' />
           <Space />
-          {modalForm?.finalPriceForOneTimePayment}
+          <FormattedNumber
+            value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+            style='currency' // eslint-disable-line
+            currency='RUB'
+            maximumFractionDigits={0}
+          />
         </Text>
       </Row>
       <Layout flexBasis={50} flexShrink={0} flexGrow={2} />
-      <Form form='payment' />
+      <Condition match={!!modalForm?.finalPriceForOneTimePaymentNumber}>
+        <Form amount={modalForm.finalPriceForOneTimePaymentNumber} form='payment' />
+      </Condition>
     </>
   )
 }

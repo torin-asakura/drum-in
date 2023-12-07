@@ -12,13 +12,20 @@ const doNothing = () => {
 const sitekey = '6LeivSwlAAAAAL1abQj0DBd-w7zVtCHFHGge_Z7S'
 
 const Form: FC<FormProps> = ({
+  amount,
   arrow = false,
   form = 'consultation',
   onSuccess = doNothing,
   onFailure = doNothing,
 }) => (
   <GoogleReCaptchaProvider reCaptchaKey={sitekey}>
-    <FormContent arrow={arrow} form={form} onSuccess={onSuccess} onFailure={onFailure} />
+    <FormContent
+      amount={amount}
+      arrow={arrow}
+      form={form}
+      onSuccess={onSuccess}
+      onFailure={onFailure}
+    />
   </GoogleReCaptchaProvider>
 )
 

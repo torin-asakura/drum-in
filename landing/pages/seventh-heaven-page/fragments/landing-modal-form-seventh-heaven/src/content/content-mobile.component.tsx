@@ -1,6 +1,7 @@
 import React                      from 'react'
 import { FC }                     from 'react'
 
+import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
 import { RoundedLineIcon }        from '@ui/icons'
 import { Column }                 from '@ui/layout'
@@ -15,9 +16,11 @@ import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 import { useModalForm }           from '../data'
+import { useContent }             from './content.hook'
 
 const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
   const modalForm = useModalForm()
+  const { amount } = useContent(roleVar[0], modalForm)
 
   return (
     <Row height={540}>
@@ -39,11 +42,12 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
             <Layout flexBasis={4} flexShrink={0} />
             <Row justifyContent='space-between'>
               <Switch active={roleVar}>
-                {options.map(({ value, mutuallyExclusive }) => (
+                {options.map(({ value, label, mutuallyExclusive }) => (
                   <>
                     <Option
                       mutuallyExclusive={mutuallyExclusive}
                       value={value}
+                      label={label}
                       onSelect={setRole}
                     />
                     <Layout flexBasis={8} />
@@ -68,11 +72,15 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
           </Text>
         </Box>
         <Layout flexBasis={16} flexShrink={0} />
-        {roleVar.includes(options[0].value) || roleVar.length === 0 ? (
+        <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
           <ContentInstallmentPlan />
-        ) : null}
-        {roleVar.includes(options[1].value) ? <ContentOneTimePayment /> : null}
-        <Form form='payment' />
+        </Condition>
+        <Condition match={roleVar.includes(options[1].value)}>
+          <ContentOneTimePayment />
+        </Condition>
+        <Condition match={!!amount}>
+          <Form amount={amount} form='payment' key={amount} />
+        </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Row>

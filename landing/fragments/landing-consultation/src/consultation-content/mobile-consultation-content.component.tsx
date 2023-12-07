@@ -20,10 +20,7 @@ const MobileConsultationContent = () => (
       <Layout flexBasis={32} flexShrink={0} />
       <Box width={300}>
         <Text fontWeight='medium' fontSize='large' lineHeight='default' color='text.smokyWhite'>
-          <FormattedMessage
-            id='landing_modal_forms.free_consultation_from_a_teacher'
-            defaultMessage='Бесплатная консультация от преподавателя'
-          />
+          <FormattedMessage id='landing_modal_forms.free_consultation_from_a_teacher' />
         </Text>
       </Box>
       <Layout flexBasis={12} flexShrink={0} />
@@ -34,10 +31,7 @@ const MobileConsultationContent = () => (
           lineHeight='medium'
           color='text.transparentSmokyWhite'
         >
-          <FormattedMessage
-            id='landing_modal_forms.we_will_contact_you_as_soon_as_possible'
-            defaultMessage='Мы свяжемся с вами в ближайшее время.'
-          />
+          <FormattedMessage id='landing_modal_forms.we_will_contact_you_as_soon_as_possible' />
         </Text>
       </Box>
       <Layout flexBasis={32} flexShrink={0} />

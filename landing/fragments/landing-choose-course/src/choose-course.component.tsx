@@ -24,10 +24,7 @@ const ChooseCourseBlock = () => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            <FormattedMessage
-              id='landing_choose_course.choose_your_course'
-              defaultMessage='Выберете свой курс'
-            />
+            <FormattedMessage id='landing_choose_course.choose_your_course' />
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />

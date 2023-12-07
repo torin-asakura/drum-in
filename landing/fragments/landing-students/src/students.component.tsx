@@ -70,10 +70,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
                     onClick={() => setVisibleModal(true)}
                   >
                     <Text textTransform='uppercase' fontWeight='semiBold' fontSize='medium'>
-                      <FormattedMessage
-                        id='landing_students.watch_more'
-                        defaultMessage='Смотреть еще'
-                      />
+                      <FormattedMessage id='landing_students.watch_more' />
                     </Text>
                   </Button>
                 </Box>
@@ -87,10 +84,7 @@ const StudentsBlock = forwardRef(({ data }: any, ref: any) => {
                     onClick={() => setVisibleModal(true)}
                   >
                     <Text textTransform='uppercase' fontWeight='semiBold' fontSize='micro'>
-                      <FormattedMessage
-                        id='landing_students.watch_more'
-                        defaultMessage='Смотреть еще'
-                      />
+                      <FormattedMessage id='landing_students.watch_more' />
                     </Text>
                   </Button>
                 </Box>

@@ -1,22 +1,30 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { FormattedMessage }           from 'react-intl'
+import { FormattedNumber }            from 'react-intl'
 
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Layout }                     from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Space }                      from '@ui/text'
+import { Text }                       from '@ui/text'
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse }             from '../selected-course'
+import { ContentOneTimePaymentProps } from './content-one-time-payment.interfaces'
+import { useModalForm }               from '../../data'
 
-const ContentOneTimePayment = () => {
+const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({ amount, recalculate }) => {
   const modalForm = useModalForm()
 
   return (
     <>
       {modalForm?.courses?.map(({ description, name, price }) => (
         <>
-          <SelectedCourse title={name} description={description} price={price} />
+          <SelectedCourse
+            title={name}
+            description={description}
+            price={price}
+            recalculate={recalculate}
+          />
           <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
         </>
       ))}
@@ -28,9 +36,14 @@ const ContentOneTimePayment = () => {
           lineHeight='medium'
           color='text.smokyWhite'
         >
-          <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
+          <FormattedMessage id='landing_modal_forms.amount' />
           <Space />
-          {modalForm?.finalPriceForOneTimePayment}
+          <FormattedNumber
+            value={amount}
+            style='currency' // eslint-disable-line
+            currency='RUB'
+            maximumFractionDigits={0}
+          />
         </Text>
       </Row>
       <Layout flexBasis={[32, 50, 67]} flexShrink={0} />

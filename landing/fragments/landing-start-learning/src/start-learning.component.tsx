@@ -34,10 +34,7 @@ const StartLearningBlock: FC<StartLearningProps> = ({ onClick, onClickMobile }) 
             fontSize='large'
             lineHeight='default'
           >
-            <FormattedMessage
-              id='landing_start_learning.start_learning'
-              defaultMessage='начать обучение'
-            />
+            <FormattedMessage id='landing_start_learning.start_learning' />
           </Text>
         </Button>
       </Row>
@@ -54,10 +51,7 @@ const StartLearningBlock: FC<StartLearningProps> = ({ onClick, onClickMobile }) 
             fontSize='semiMedium'
             lineHeight='default'
           >
-            <FormattedMessage
-              id='landing_start_learning.start_learning'
-              defaultMessage='начать обучение'
-            />
+            <FormattedMessage id='landing_start_learning.start_learning' />
           </Text>
         </Button>
       </Row>
@@ -74,10 +68,7 @@ const StartLearningBlock: FC<StartLearningProps> = ({ onClick, onClickMobile }) 
             fontSize='semiMedium'
             lineHeight='default'
           >
-            <FormattedMessage
-              id='landing_start_learning.start_learning'
-              defaultMessage='начать обучение'
-            />
+            <FormattedMessage id='landing_start_learning.start_learning' />
           </Text>
         </Button>
       </Row>

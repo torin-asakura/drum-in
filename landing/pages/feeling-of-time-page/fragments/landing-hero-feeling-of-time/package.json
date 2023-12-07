@@ -12,7 +12,7 @@
     "@apollo/client": "3.6.9",
     "@emotion/react": "11.9.3",
     "@forks/react-locomotive-scroll": "workspace:*",
-    "@types/react": "17.0.47",
+    "@types/react": "18.2.20",
     "react": "18.2.0",
     "react-intl": "5.24.3"
   },

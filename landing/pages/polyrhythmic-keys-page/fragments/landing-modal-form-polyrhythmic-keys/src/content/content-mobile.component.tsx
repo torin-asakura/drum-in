@@ -1,6 +1,8 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { FormattedNumber }  from 'react-intl'
 
+import { Condition }        from '@ui/condition'
 import { Form }             from '@ui/form'
 import { RoundedLineIcon }  from '@ui/icons'
 import { Column }           from '@ui/layout'
@@ -48,13 +50,20 @@ const ContentMobile = () => {
             lineHeight='medium'
             color='text.smokyWhite'
           >
-            <FormattedMessage id='landing_modal_forms.amount' defaultMessage='Сумма:' />
+            <FormattedMessage id='landing_modal_forms.amount' />
             <Space />
-            {modalForm?.finalPriceForOneTimePayment}
+            <FormattedNumber
+              value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+              style='currency' // eslint-disable-line
+              currency='RUB'
+              maximumFractionDigits={0}
+            />
           </Text>
         </Row>
         <Layout flexBasis={50} flexShrink={0} />
-        <Form form='payment' />
+        <Condition match={!!modalForm?.finalPriceForOneTimePaymentNumber}>
+          <Form amount={modalForm.finalPriceForOneTimePaymentNumber} form='payment' />
+        </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Row>

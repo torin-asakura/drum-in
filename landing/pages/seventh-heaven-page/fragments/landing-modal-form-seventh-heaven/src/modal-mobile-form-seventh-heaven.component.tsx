@@ -9,6 +9,7 @@ import { Renderer }                    from '@ui/modal'
 import { Backdrop }                    from '@ui/modal'
 
 import { ContentMobile }               from './content'
+import { RoleModalForm }               from './modal-form-seventh-heaven.enum'
 import { ModalFormSeventhHeavenProps } from './modal-form-seventh-heaven.interfaces'
 
 const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
@@ -16,20 +17,20 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>(['Рассрочка'])
+  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
   const { formatMessage } = useIntl()
   const options = [
     {
-      value: formatMessage({
+      value: RoleModalForm.InstallmentPlan,
+      label: formatMessage({
         id: 'landing_modal_forms.installment_plan',
-        defaultMessage: 'Рассрочка',
       }),
       mutuallyExclusive: true,
     },
     {
-      value: formatMessage({
+      value: RoleModalForm.OneTimePayment,
+      label: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
-        defaultMessage: 'Разовый платёж',
       }),
       mutuallyExclusive: true,
     },
@@ -38,7 +39,14 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
   return (
     <Renderer active={activeRender}>
       <motion.div
-        style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 900 }}
+        style={{
+          position: 'fixed',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 900,
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -47,7 +55,13 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
         <Backdrop onClick={onClose} />
       </motion.div>
       <motion.div
-        style={{ position: 'fixed', bottom: '-100%', left: 0, width: '100%', zIndex: 950 }}
+        style={{
+          position: 'fixed',
+          bottom: '-100%',
+          left: 0,
+          width: '100%',
+          zIndex: 950,
+        }}
         animate={{ bottom: 0 }}
         exit={{ bottom: '-100%' }}
         transition={{ duration: 0.5 }}

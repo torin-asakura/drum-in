@@ -24,10 +24,7 @@ const SkillsBlock = () => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            <FormattedMessage
-              id='landing_skills.during_the_course_you_will_master'
-              defaultMessage='На курсе вы освоите'
-            />
+            <FormattedMessage id='landing_skills.during_the_course_you_will_master' />
           </Text>
         </Box>
         <Layout flexBasis={[8, 12, 0]} display={['flex', 'flex', 'none']} />
@@ -38,10 +35,7 @@ const SkillsBlock = () => (
             lineHeight='primary'
             color='text.transparentSmokyWhite'
           >
-            <FormattedMessage
-              id='landing_skills.rhythms_of_different_musical_styles'
-              defaultMessage='Ритмы разных музыкальных стилей и разных стран мира'
-            />
+            <FormattedMessage id='landing_skills.rhythms_of_different_musical_styles' />
           </Text>
         </Box>
         <Layout flexBasis={[16, 22, 0]} display={['flex', 'flex', 'none']} />
@@ -65,10 +59,7 @@ const SkillsBlock = () => (
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                <FormattedMessage
-                  id='landing_skills.during_the_course_you_will_master'
-                  defaultMessage='На курсе вы освоите'
-                />
+                <FormattedMessage id='landing_skills.during_the_course_you_will_master' />
               </Text>
             </Row>
             <Layout flexBasis={24} display={['none', 'none', 'flex']} />
@@ -80,10 +71,7 @@ const SkillsBlock = () => (
                 lineHeight='primary'
                 color='text.gray'
               >
-                <FormattedMessage
-                  id='landing_skills.rhythms_of_different_musical_styles'
-                  defaultMessage='Ритмы разных музыкальных стилей и разных стран мира'
-                />
+                <FormattedMessage id='landing_skills.rhythms_of_different_musical_styles' />
               </Text>
             </Box>
             <SkillsList />

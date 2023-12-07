@@ -34,7 +34,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
             lineHeight='default'
             color='gray'
           >
-            <FormattedMessage id='landing_header.courses' defaultMessage='Курсы' />
+            <FormattedMessage id='landing_header.courses' />
           </Text>
         </Box>
         <Layout display={['flex', 'flex', 'none']} flexBasis={[20, 24, 0]} />
@@ -72,7 +72,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
               fontWeight='bold'
               fontSize={['medium', 'semiModerate', 'big']}
             >
-              <FormattedMessage id='landing_header.contacts' defaultMessage='Контакты' />
+              <FormattedMessage id='landing_header.contacts' />
             </Text>
           </NextLink>
         </Box>
@@ -90,7 +90,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
               fontSize={['medium', 'semiModerate', 'big']}
               lineHeight='default'
             >
-              <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+              <FormattedMessage id='landing_header.connect' />
             </Text>
           </Button>
         </Box>
@@ -107,7 +107,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
               fontSize={['medium', 'semiModerate', 'big']}
               lineHeight='default'
             >
-              <FormattedMessage id='landing_header.connect' defaultMessage='Связаться' />
+              <FormattedMessage id='landing_header.connect' />
             </Text>
           </Button>
         </Box>

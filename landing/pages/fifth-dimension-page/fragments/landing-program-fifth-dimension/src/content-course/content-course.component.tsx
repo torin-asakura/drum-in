@@ -52,7 +52,12 @@ const ContentCourse = () => {
               <Box>
                 <Text
                   fontWeight='medium'
-                  fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
+                  fontSize={{
+                    _: 'regular',
+                    tablet: 'regular',
+                    laptop: 'regular',
+                    wide: 'large',
+                  }}
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
@@ -69,11 +74,16 @@ const ContentCourse = () => {
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
-                fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
+                fontSize={{
+                  _: 'regular',
+                  tablet: 'regular',
+                  laptop: 'regular',
+                  wide: 'large',
+                }}
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                <FormattedMessage id='landing_program.dot' />
                 <Space />
                 {element}
               </Text>
@@ -95,11 +105,16 @@ const ContentCourse = () => {
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
-                  fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
+                  fontSize={{
+                    _: 'regular',
+                    tablet: 'regular',
+                    laptop: 'regular',
+                    wide: 'large',
+                  }}
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                  <FormattedMessage id='landing_program.dot' />
                   <Space />
                   {element}
                 </Text>
@@ -120,7 +135,12 @@ const ContentCourse = () => {
                 textTransform='uppercase'
                 fontFamily='secondary'
                 fontWeight='bold'
-                fontSize={{ _: 'small', tablet: 'small', laptop: 'small', wide: 'moderate' }}
+                fontSize={{
+                  _: 'small',
+                  tablet: 'small',
+                  laptop: 'small',
+                  wide: 'moderate',
+                }}
                 lineHeight='default'
                 color='text.smokyWhite'
               >
@@ -135,11 +155,16 @@ const ContentCourse = () => {
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
-                fontSize={{ _: 'regular', tablet: 'regular', laptop: 'regular', wide: 'large' }}
+                fontSize={{
+                  _: 'regular',
+                  tablet: 'regular',
+                  laptop: 'regular',
+                  wide: 'large',
+                }}
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                <FormattedMessage id='landing_program.dot' />
                 <Space />
                 {element}
               </Text>

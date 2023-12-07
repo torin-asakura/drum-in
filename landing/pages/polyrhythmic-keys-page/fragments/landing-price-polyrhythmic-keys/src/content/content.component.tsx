@@ -38,7 +38,7 @@ const Content = () => {
             lineHeight='medium'
             color='text.gray'
           >
-            <FormattedMessage id='landing_price.old_price' defaultMessage='*Старая цена' />
+            <FormattedMessage id='landing_price.old_price' />
             <Space />
             {price?.oldPrice}
           </Text>
@@ -59,7 +59,7 @@ const Content = () => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='large' textTransform='uppercase'>
-              <FormattedMessage id='landing_price.pay' defaultMessage='оплатить' />
+              <FormattedMessage id='landing_price.pay' />
             </Text>
           </Button>
         </Box>
@@ -72,7 +72,7 @@ const Content = () => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              <FormattedMessage id='landing_price.pay' defaultMessage='оплатить' />
+              <FormattedMessage id='landing_price.pay' />
             </Text>
           </Button>
         </Box>
@@ -84,7 +84,7 @@ const Content = () => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              <FormattedMessage id='landing_price.pay' defaultMessage='оплатить' />
+              <FormattedMessage id='landing_price.pay' />
             </Text>
           </Button>
         </Box>

@@ -1,9 +1,11 @@
 import React                   from 'react'
 import { FC }                  from 'react'
 import { FormattedMessage }    from 'react-intl'
+import { FormattedNumber }     from 'react-intl'
 import { useState }            from 'react'
 
 import { Button }              from '@ui/button'
+import { Condition }           from '@ui/condition'
 import { CrossMenuIcon }       from '@ui/icons'
 import { ReturnIcon }          from '@ui/icons'
 import { Column }              from '@ui/layout'
@@ -16,8 +18,13 @@ import { Text }                from '@ui/text'
 import { Info }                from './info'
 import { SelectedCourseProps } from './selected-course.interfaces'
 
-const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price }) => {
+const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price, recalculate }) => {
   const [remove, setRemove] = useState<boolean>(false)
+  const handlerToggleRemove = () => {
+    remove ? setRemove(false) : setRemove(true) // eslint-disable-line
+    if (typeof price !== 'undefined' && typeof recalculate === 'function')
+      recalculate(price, remove)
+  }
 
   return (
     <Row>
@@ -32,21 +39,19 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price }) 
         <Column width='100%'>
           <Layout flexBasis={[12, 16, 16]} flexShrink={0} />
           <Row alignItems='center'>
-            {remove ? (
+            <Condition match={remove}>
               <Text
                 fontWeight='medium'
                 fontSize={['micro', 'medium', 'medium']}
                 lineHeight={['primary', 'medium', 'medium']}
                 color='text.gray'
               >
-                <FormattedMessage
-                  id='landing_modal_forms.you_deleted'
-                  defaultMessage='Вы удалили'
-                />
+                <FormattedMessage id='landing_modal_forms.you_deleted' />
                 <Space />
                 {title}
               </Text>
-            ) : (
+            </Condition>
+            <Condition match={!remove}>
               <>
                 <Box width={[155, 230, 230]}>
                   <Text
@@ -55,7 +60,7 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price }) 
                     lineHeight={['primary', 'medium', 'medium']}
                     color='text.smokyWhite'
                   >
-                    <FormattedMessage id='landing_modal_forms.course' defaultMessage='Курс' />
+                    <FormattedMessage id='landing_modal_forms.course' />
                     <Space />
                     {title}
                   </Text>
@@ -63,7 +68,7 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price }) 
                 <Layout flexBasis={[8, 16, 20]} flexShrink={0} />
                 <Info description={description} />
                 <Layout flexGrow={3} />
-                {price ? (
+                <Condition match={!!price}>
                   <Box>
                     <Text
                       fontWeight='medium'
@@ -71,12 +76,17 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price }) 
                       lineHeight={['primary', 'primary', 'medium']}
                       color='text.smokyWhite'
                     >
-                      {price}
+                      <FormattedNumber
+                        value={price || 0}
+                        style='currency' // eslint-disable-line
+                        currency='RUB'
+                        maximumFractionDigits={0}
+                      />
                     </Text>
                   </Box>
-                ) : null}
+                </Condition>
               </>
-            )}
+            </Condition>
           </Row>
           <Layout flexBasis={[12, 12, 16]} flexShrink={0} />
         </Column>
@@ -87,26 +97,28 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price }) 
         <Button
           size='middlingPaddingSemiBigHeight'
           variant={remove ? 'veryTransparentSmokyWhiteBackground' : 'transparentWhiteBackground'}
-          onClick={() => (remove ? setRemove(false) : setRemove(true))}
+          onClick={handlerToggleRemove}
         >
-          {remove ? (
+          <Condition match={remove}>
             <ReturnIcon width={20} height={20} />
-          ) : (
+          </Condition>
+          <Condition match={!remove}>
             <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
-          )}
+          </Condition>
         </Button>
       </Box>
       <Box display={['flex', 'flex', 'none']}>
         <Button
           size='semiLittlePaddingSemiMediumHeight'
           variant={remove ? 'veryTransparentSmokyWhiteBackground' : 'transparentWhiteBackground'}
-          onClick={() => (remove ? setRemove(false) : setRemove(true))}
+          onClick={handlerToggleRemove}
         >
-          {remove ? (
+          <Condition match={remove}>
             <ReturnIcon width={20} height={20} />
-          ) : (
+          </Condition>
+          <Condition match={!remove}>
             <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
-          )}
+          </Condition>
         </Button>
       </Box>
     </Row>

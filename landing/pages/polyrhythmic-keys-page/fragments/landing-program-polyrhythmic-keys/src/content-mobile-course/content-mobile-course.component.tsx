@@ -69,7 +69,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                  <FormattedMessage id='landing_program.dot' />
                   <Space />
                   {element}
                 </Text>
@@ -89,7 +89,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                  <FormattedMessage id='landing_program.dot' />
                   <Space />
                   {element}
                 </Text>
@@ -131,7 +131,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  <FormattedMessage id='landing_program.dot' defaultMessage='•' />
+                  <FormattedMessage id='landing_program.dot' />
                   <Space />
                   {element}
                 </Text>

@@ -53,7 +53,6 @@ const Slide: FC<SlideProps> = ({
                 firstLine={quantityVideoLessons}
                 secondLine={formatMessage({
                   id: 'landing_program.video_lessons',
-                  defaultMessage: 'видео-уроков',
                 })}
                 rotate={squareRotate}
               />
@@ -63,7 +62,6 @@ const Slide: FC<SlideProps> = ({
                 firstLine={quantityLiveBroadcast}
                 secondLine={formatMessage({
                   id: 'landing_program.live-broadcast',
-                  defaultMessage: 'прямых эфиров',
                 })}
               />
             </Box>

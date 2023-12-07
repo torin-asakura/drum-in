@@ -1,5 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { FormattedNumber }  from 'react-intl'
 
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -28,10 +29,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_forms.monthly_payment'
-                defaultMessage='Ежемесячный платёж'
-              />
+              <FormattedMessage id='landing_modal_forms.monthly_payment' />
             </Text>
           </Box>
           <Box>
@@ -41,7 +39,13 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {modalForm?.monthlyPayment}
+              <FormattedNumber
+                value={modalForm?.monthlyPaymentNumber || 0}
+                style='currency' // eslint-disable-line
+                currency='RUB'
+                maximumFractionDigits={0}
+              />
+              <FormattedMessage id='landing_modal_forms.per_month' />
             </Text>
           </Box>
         </Column>
@@ -54,10 +58,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_forms.installment_period'
-                defaultMessage='Срок рассрочки'
-              />
+              <FormattedMessage id='landing_modal_forms.installment_period' />
             </Text>
           </Box>
           <Box>
@@ -80,10 +81,7 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
-              <FormattedMessage
-                id='landing_modal_forms.total_amount'
-                defaultMessage='Общая сумма'
-              />
+              <FormattedMessage id='landing_modal_forms.total_amount' />
             </Text>
           </Box>
           <Box>
@@ -93,7 +91,12 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {modalForm?.finalPriceForInstallment}
+              <FormattedNumber
+                value={modalForm?.finalPriceForInstallmentNumber || 0}
+                style='currency' // eslint-disable-line
+                currency='RUB'
+                maximumFractionDigits={0}
+              />
             </Text>
           </Box>
         </Column>
