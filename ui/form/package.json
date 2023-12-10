@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls/tinkoff-payment-widget": "0.0.2",
+    "@atls/tinkoff-payment-widget": "0.0.3",
     "@ui/button": "workspace:0.0.1",
     "@ui/checkbox": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
