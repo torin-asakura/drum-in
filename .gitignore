@@ -56,9 +56,6 @@ dist
 .next/
 frontend/ui/icons/src
 
-# env vars
-.env
-
 # Google Cloud Credentials
 credentials.json
 
