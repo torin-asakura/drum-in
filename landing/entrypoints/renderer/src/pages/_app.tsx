@@ -1,4 +1,5 @@
-import * as messages      from '../../locales/ru.json'
+import { useApollo }        from '@globals/data'
+import * as messages        from '../../locales/ru.json'
 
 import { ApolloProvider } from '@apollo/client'
 
@@ -6,10 +7,9 @@ import React              from 'react'
 import { IntlProvider }   from 'react-intl'
 
 import { ThemeProvider }  from '@ui/theme'
-import { getClient }      from '@globals/data'
 
 const App = ({ Component, pageProps, ...props }) => {
-  const client = getClient()
+  const client = useApollo(pageProps)
 
   return (
     <ApolloProvider client={client}>

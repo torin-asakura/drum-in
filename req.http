@@ -1,0 +1,26 @@
+### Request to get GraphQL Schema
+GET https://wp.drumin.pro/graphql
+
+### Simple Query over HTTP
+GRAPHQL https://wp.drumin.pro/graphql
+
+query IntrospectionQuery {
+  __schema {
+    types {
+      name
+      fields {
+        name
+      }
+    }
+  }
+}
+
+### Simple Query over HTTP
+GRAPHQL https://wp.drumin.pro/graphql
+
+query new {
+  course (id: "cG9zdDoyMjgx") {
+      id
+      title
+  }
+}
