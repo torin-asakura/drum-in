@@ -301,6 +301,30 @@ interface DatabaseIdentifier {
   databaseId: Int!
 }
 
+"Interface representing fields of the ACF &quot;DetailsAdditionalQuestionsCta&quot; Field Group"
+interface DetailsAdditionalQuestionsCta_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestionsCta&quot; Field Group"
+  afterBoldText: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestionsCta&quot; Field Group"
+  beforeBoldText: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestionsCta&quot; Field Group"
+  boldText: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+}
+
+"Interface representing fields of the ACF &quot;DetailsAdditionalQuestions&quot; Field Group"
+interface DetailsAdditionalQuestions_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestions&quot; Field Group"
+  button: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestions&quot; Field Group"
+  cta: DetailsAdditionalQuestionsCta
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestions&quot; Field Group"
+  title: String
+}
+
 "Interface representing fields of the ACF &quot;DetailsContentLevelsTooltip&quot; Field Group"
 interface DetailsContentLevelsTooltip_Fields {
   "The name of the field group"
@@ -339,6 +363,16 @@ interface DetailsContent_Fields {
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsContent&quot; Field Group"
   levels: [DetailsContentLevels]
+}
+
+"Interface representing fields of the ACF &quot;DetailsFaq&quot; Field Group"
+interface DetailsFaq_Fields {
+  "Field of the &quot;textarea&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
+  answer: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
+  question: String
 }
 
 "Interface representing fields of the ACF &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
@@ -443,17 +477,11 @@ interface DetailsSummary_Fields {
 "Interface representing fields of the ACF &quot;Details&quot; Field Group"
 interface Details_Fields {
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  content: DetailsContent
+  additionalQuestions: DetailsAdditionalQuestions
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
+  faq: [DetailsFaq]
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  hero: DetailsHero
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  paymentForm: DetailsPaymentForm
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  price: DetailsPrice
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  summary: DetailsSummary
 }
 
 "Relational context between connected nodes"
@@ -540,38 +568,6 @@ interface EnqueuedStylesheetConnectionEdge {
 
 "Page Info on the connected EnqueuedStylesheetConnectionEdge"
 interface EnqueuedStylesheetConnectionPageInfo {
-  "When paginating forwards, the cursor to continue."
-  endCursor: String
-  "When paginating forwards, are there more items?"
-  hasNextPage: Boolean!
-  "When paginating backwards, are there more items?"
-  hasPreviousPage: Boolean!
-  "Raw schema for page"
-  seo: SEOPostTypePageInfo
-  "When paginating backwards, the cursor to continue."
-  startCursor: String
-}
-
-"Connection to faq Nodes"
-interface FaqConnection {
-  "A list of edges (relational context) between RootQuery and connected faq Nodes"
-  edges: [FaqConnectionEdge!]!
-  "A list of connected faq Nodes"
-  nodes: [Faq!]!
-  "Information about pagination in a connection."
-  pageInfo: FaqConnectionPageInfo!
-}
-
-"Edge between a Node and a connected faq"
-interface FaqConnectionEdge {
-  "Opaque reference to the nodes position in the connection. Value can be used with pagination args."
-  cursor: String
-  "The connected faq Node"
-  node: Faq!
-}
-
-"Page Info on the connected FaqConnectionEdge"
-interface FaqConnectionPageInfo {
   "When paginating forwards, the cursor to continue."
   endCursor: String
   "When paginating forwards, are there more items?"
@@ -1494,7 +1490,7 @@ interface WithAcfDetails {
 }
 
 "Deprecated in favor of MenuItemLinkeable Interface"
-union MenuItemObjectUnion = Category | Course | Faq | GeneralFragment | IndividualCourse | Page | Post | Tag
+union MenuItemObjectUnion = Category | Course | GeneralFragment | IndividualCourse | Page | Post | Tag
 
 "Connection between the DetailsPaymentFormCourses type and the ContentNode type"
 type AcfContentNodeConnection implements Connection & ContentNodeConnection {
@@ -2368,14 +2364,6 @@ type CreateCoursePayload {
   course: Course
 }
 
-"The payload for the createFaq mutation."
-type CreateFaqPayload {
-  "If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions."
-  clientMutationId: String
-  "The Post object mutation type."
-  faq: Faq
-}
-
 "The payload for the createGeneralFragment mutation."
 type CreateGeneralFragmentPayload {
   "If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions."
@@ -2476,16 +2464,6 @@ type DeleteCoursePayload {
   deletedId: ID
 }
 
-"The payload for the deleteFaq mutation."
-type DeleteFaqPayload {
-  "If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions."
-  clientMutationId: String
-  "The ID of the deleted object"
-  deletedId: ID
-  "The object before it was deleted"
-  faq: Faq
-}
-
 "The payload for the deleteGeneralFragment mutation."
 type DeleteGeneralFragmentPayload {
   "If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions."
@@ -2569,17 +2547,35 @@ type DeleteUserPayload {
 "The &quot;Details&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type Details implements AcfFieldGroup & AcfFieldGroupFields & Details_Fields {
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  content: DetailsContent
+  additionalQuestions: DetailsAdditionalQuestions
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
+  faq: [DetailsFaq]
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  hero: DetailsHero
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  paymentForm: DetailsPaymentForm
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  price: DetailsPrice
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Details&quot; Field Group"
-  summary: DetailsSummary
+}
+
+"The &quot;DetailsAdditionalQuestions&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type DetailsAdditionalQuestions implements AcfFieldGroup & AcfFieldGroupFields & DetailsAdditionalQuestions_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestions&quot; Field Group"
+  button: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestions&quot; Field Group"
+  cta: DetailsAdditionalQuestionsCta
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestions&quot; Field Group"
+  title: String
+}
+
+"The &quot;DetailsAdditionalQuestionsCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type DetailsAdditionalQuestionsCta implements AcfFieldGroup & AcfFieldGroupFields & DetailsAdditionalQuestionsCta_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestionsCta&quot; Field Group"
+  afterBoldText: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestionsCta&quot; Field Group"
+  beforeBoldText: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsAdditionalQuestionsCta&quot; Field Group"
+  boldText: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
 }
 
 "The &quot;DetailsContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
@@ -2620,6 +2616,16 @@ type DetailsContentLevelsTooltip implements AcfFieldGroup & AcfFieldGroupFields 
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevelsTooltip&quot; Field Group"
   title: String
+}
+
+"The &quot;DetailsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type DetailsFaq implements AcfFieldGroup & AcfFieldGroupFields & DetailsFaq_Fields {
+  "Field of the &quot;textarea&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
+  answer: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
+  question: String
 }
 
 "The &quot;DetailsHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
@@ -2793,112 +2799,8 @@ type EnqueuedStylesheet implements EnqueuedAsset & Node {
   version: String
 }
 
-"The faq type"
-type Faq implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable {
-  "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
-  "Connection between the ContentNode type and the ContentType type"
-  contentType: ContentNodeToContentTypeConnectionEdge
-  "The name of the Content Type the node belongs to"
-  contentTypeName: String!
-  "The unique identifier stored in the database"
-  databaseId: Int!
-  "Post publishing date."
-  date: String
-  "The publishing date set in GMT."
-  dateGmt: String
-  "The desired slug of the post"
-  desiredSlug: String
-  "If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds"
-  editingLockedBy: ContentNodeToEditLockConnectionEdge
-  "The RSS enclosure for the object"
-  enclosure: String
-  "Connection between the ContentNode type and the EnqueuedScript type"
-  enqueuedScripts(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): ContentNodeToEnqueuedScriptConnection
-  "Connection between the ContentNode type and the EnqueuedStylesheet type"
-  enqueuedStylesheets(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): ContentNodeToEnqueuedStylesheetConnection
-  "The id field matches the WP_Post-&gt;ID field."
-  faqId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
-  "Connection between the NodeWithFeaturedImage type and the MediaItem type"
-  featuredImage: NodeWithFeaturedImageToMediaItemConnectionEdge
-  "The database identifier for the featured image node assigned to the content node"
-  featuredImageDatabaseId: Int
-  "Globally unique ID of the featured image assigned to the node"
-  featuredImageId: ID
-  "The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table."
-  guid: String
-  "The globally unique identifier of the faq object."
-  id: ID!
-  "Whether the node is a Content Node"
-  isContentNode: Boolean!
-  "Whether the object is a node in the preview state"
-  isPreview: Boolean
-  "Whether the object is restricted from the current viewer"
-  isRestricted: Boolean
-  "Whether the node is a Term"
-  isTermNode: Boolean!
-  "The user that most recently edited the node"
-  lastEditedBy: ContentNodeToEditLastConnectionEdge
-  "The permalink of the post"
-  link: String
-  "The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time."
-  modified: String
-  "The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT."
-  modifiedGmt: String
-  "Connection between the Faq type and the faq type"
-  preview: FaqToPreviewConnectionEdge
-  "The database id of the preview node"
-  previewRevisionDatabaseId: Int
-  "Whether the object is a node in the preview state"
-  previewRevisionId: ID
-  "The Yoast SEO data of the ContentNode"
-  seo: PostTypeSEO
-  "The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table."
-  slug: String
-  "The current status of the object"
-  status: String
-  "The template assigned to the node"
-  template: ContentTemplate
-  "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
-  "The unique resource identifier path"
-  uri: String
-}
-
-"Connection between the Faq type and the faq type"
-type FaqToPreviewConnectionEdge implements Edge & FaqConnectionEdge & OneToOneConnection {
-  "Opaque reference to the nodes position in the connection. Value can be used with pagination args."
-  cursor: String
-  "The node of the connection, without the edges"
-  node: Faq!
-}
-
 "The generalFragment type"
-type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable {
+type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfDetails {
   "The content of the post."
   content(
     "Format of the field output"
@@ -2916,6 +2818,8 @@ type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinka
   dateGmt: String
   "The desired slug of the post"
   desiredSlug: String
+  "Fields of the Details ACF Field Group"
+  details: Details
   "If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds"
   editingLockedBy: ContentNodeToEditLockConnectionEdge
   "The RSS enclosure for the object"
@@ -4640,11 +4544,6 @@ type RootMutation {
     "Input for the createCourse mutation"
     input: CreateCourseInput!
   ): CreateCoursePayload
-  "The createFaq mutation"
-  createFaq(
-    "Input for the createFaq mutation"
-    input: CreateFaqInput!
-  ): CreateFaqPayload
   "The createGeneralFragment mutation"
   createGeneralFragment(
     "Input for the createGeneralFragment mutation"
@@ -4700,11 +4599,6 @@ type RootMutation {
     "Input for the deleteCourse mutation"
     input: DeleteCourseInput!
   ): DeleteCoursePayload
-  "The deleteFaq mutation"
-  deleteFaq(
-    "Input for the deleteFaq mutation"
-    input: DeleteFaqInput!
-  ): DeleteFaqPayload
   "The deleteGeneralFragment mutation"
   deleteGeneralFragment(
     "Input for the deleteGeneralFragment mutation"
@@ -4785,11 +4679,6 @@ type RootMutation {
     "Input for the updateCourse mutation"
     input: UpdateCourseInput!
   ): UpdateCoursePayload
-  "The updateFaq mutation"
-  updateFaq(
-    "Input for the updateFaq mutation"
-    input: UpdateFaqInput!
-  ): UpdateFaqPayload
   "The updateGeneralFragment mutation"
   updateGeneralFragment(
     "Input for the updateGeneralFragment mutation"
@@ -4956,39 +4845,6 @@ type RootQuery {
   ): RootQueryToCourseConnection
   "Fields of the &#039;DiscussionSettings&#039; settings group"
   discussionSettings: DiscussionSettings
-  "An object of the faq Type. "
-  faq(
-    "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
-    "The globally unique identifier of the object."
-    id: ID!,
-    "Type of unique identifier to fetch by. Default is Global ID"
-    idType: FaqIdType
-  ): Faq
-  "A faq object"
-  faqBy(
-    "Get the faq by its database ID"
-    faqId: Int,
-    "Get the faq object by its global ID"
-    id: ID,
-    "Get the faq by its slug (only available for non-hierarchical types)"
-    slug: String,
-    "Get the faq by its uri"
-    uri: String
-  ): Faq @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
-  "Connection between the RootQuery type and the faq type"
-  faqs(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
-    "Arguments for filtering the connection"
-    where: RootQueryToFaqConnectionWhereArgs
-  ): RootQueryToFaqConnection
   "An object of the generalFragment Type. "
   generalFragment(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
@@ -5623,38 +5479,6 @@ type RootQueryToEnqueuedStylesheetConnectionPageInfo implements EnqueuedStyleshe
   startCursor: String
 }
 
-"Connection between the RootQuery type and the faq type"
-type RootQueryToFaqConnection implements Connection & FaqConnection {
-  "Edges for the RootQueryToFaqConnection connection"
-  edges: [RootQueryToFaqConnectionEdge!]!
-  "The nodes of the connection, without the edges"
-  nodes: [Faq!]!
-  "Information about pagination in a connection."
-  pageInfo: RootQueryToFaqConnectionPageInfo!
-}
-
-"An edge in a connection"
-type RootQueryToFaqConnectionEdge implements Edge & FaqConnectionEdge {
-  "A cursor for use in pagination"
-  cursor: String
-  "The item at the end of the edge"
-  node: Faq!
-}
-
-"Page Info on the &quot;RootQueryToFaqConnection&quot;"
-type RootQueryToFaqConnectionPageInfo implements FaqConnectionPageInfo & PageInfo & WPPageInfo {
-  "When paginating forwards, the cursor to continue."
-  endCursor: String
-  "When paginating forwards, are there more items?"
-  hasNextPage: Boolean!
-  "When paginating backwards, are there more items?"
-  hasPreviousPage: Boolean!
-  "Raw schema for page"
-  seo: SEOPostTypePageInfo
-  "When paginating backwards, the cursor to continue."
-  startCursor: String
-}
-
 "Connection between the RootQuery type and the generalFragment type"
 type RootQueryToGeneralFragmentConnection implements Connection & GeneralFragmentConnection {
   "Edges for the RootQueryToGeneralFragmentConnection connection"
@@ -6219,7 +6043,6 @@ type SEOContentTypeArchive {
 "The Yoast SEO search appearance content types"
 type SEOContentTypes {
   course: SEOContentType
-  faq: SEOContentType
   generalFragment: SEOContentType
   individualCourse: SEOContentType
   mediaItem: SEOContentType
@@ -6902,14 +6725,6 @@ type UpdateCoursePayload {
   course: Course
 }
 
-"The payload for the updateFaq mutation."
-type UpdateFaqPayload {
-  "If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions."
-  clientMutationId: String
-  "The Post object mutation type."
-  faq: Faq
-}
-
 "The payload for the updateGeneralFragment mutation."
 type UpdateGeneralFragmentPayload {
   "If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions."
@@ -7528,8 +7343,6 @@ enum ContentTypeEnum {
   "The Type of Content object"
   COURSE
   "The Type of Content object"
-  FAQ
-  "The Type of Content object"
   GENERAL_FRAGMENT
   "The Type of Content object"
   INDIVIDUAL_COURSE
@@ -7571,18 +7384,6 @@ enum CourseIdType {
   DATABASE_ID
   "Identify a resource by the (hashed) Global ID."
   ID
-  "Identify a resource by the URI."
-  URI
-}
-
-"The Type of Identifier used to fetch a single resource. Default is ID."
-enum FaqIdType {
-  "Identify a resource by the Database ID."
-  DATABASE_ID
-  "Identify a resource by the (hashed) Global ID."
-  ID
-  "Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier."
-  SLUG
   "Identify a resource by the URI."
   URI
 }
@@ -8531,26 +8332,6 @@ input CreateCourseInput {
   title: String
 }
 
-"Input for the createFaq mutation."
-input CreateFaqInput {
-  "This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions."
-  clientMutationId: String
-  "The content of the object"
-  content: String
-  "The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, \"2017\" as the input will use current date with timestamp 20:17 "
-  date: String
-  "A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types."
-  menuOrder: Int
-  "The password used to protect the content of the object"
-  password: String
-  "The slug of the object"
-  slug: String
-  "The status of the object"
-  status: PostStatusEnum
-  "The title of the object"
-  title: String
-}
-
 "Input for the createGeneralFragment mutation."
 input CreateGeneralFragmentInput {
   "This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions."
@@ -8822,18 +8603,6 @@ input DeleteCourseInput {
   "Whether the object should be force deleted instead of being moved to the trash"
   forceDelete: Boolean
   "The ID of the course to delete"
-  id: ID!
-  "Override the edit lock when another user is editing the post"
-  ignoreEditLock: Boolean
-}
-
-"Input for the deleteFaq mutation."
-input DeleteFaqInput {
-  "This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions."
-  clientMutationId: String
-  "Whether the object should be force deleted instead of being moved to the trash"
-  forceDelete: Boolean
-  "The ID of the faq to delete"
   id: ID!
   "Override the edit lock when another user is editing the post"
   ignoreEditLock: Boolean
@@ -9929,44 +9698,6 @@ input RootQueryToCourseConnectionWhereArgs {
   title: String
 }
 
-"Arguments for filtering the RootQueryToFaqConnection connection"
-input RootQueryToFaqConnectionWhereArgs {
-  "Filter the connection based on dates"
-  dateQuery: DateQueryInput
-  "True for objects with passwords; False for objects without passwords; null for all objects with or without passwords"
-  hasPassword: Boolean
-  "Specific database ID of the object"
-  id: Int
-  "Array of IDs for the objects to retrieve"
-  in: [ID]
-  "Get objects with a specific mimeType property"
-  mimeType: MimeTypeEnum
-  "Slug / post_name of the object"
-  name: String
-  "Specify objects to retrieve. Use slugs"
-  nameIn: [String]
-  "Specify IDs NOT to retrieve. If this is used in the same query as \"in\", it will be ignored"
-  notIn: [ID]
-  "What parameter to use to order the objects by."
-  orderby: [PostObjectsConnectionOrderbyInput]
-  "Use ID to return only children. Use 0 to return only top-level items"
-  parent: ID
-  "Specify objects whose parent is in an array"
-  parentIn: [ID]
-  "Specify posts whose parent is not in an array"
-  parentNotIn: [ID]
-  "Show posts with a specific password."
-  password: String
-  "Show Posts based on a keyword search"
-  search: String
-  "Retrieve posts where post status is in an array."
-  stati: [PostStatusEnum]
-  "Show posts with a specific status."
-  status: PostStatusEnum
-  "Title of the object"
-  title: String
-}
-
 "Arguments for filtering the RootQueryToGeneralFragmentConnection connection"
 input RootQueryToGeneralFragmentConnectionWhereArgs {
   "Filter the connection based on dates"
@@ -10623,30 +10354,6 @@ input UpdateCourseInput {
   menuOrder: Int
   "The ID of the parent object"
   parentId: ID
-  "The password used to protect the content of the object"
-  password: String
-  "The slug of the object"
-  slug: String
-  "The status of the object"
-  status: PostStatusEnum
-  "The title of the object"
-  title: String
-}
-
-"Input for the updateFaq mutation."
-input UpdateFaqInput {
-  "This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions."
-  clientMutationId: String
-  "The content of the object"
-  content: String
-  "The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, \"2017\" as the input will use current date with timestamp 20:17 "
-  date: String
-  "The ID of the faq object"
-  id: ID!
-  "Override the edit lock when another user is editing the post"
-  ignoreEditLock: Boolean
-  "A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types."
-  menuOrder: Int
   "The password used to protect the content of the object"
   password: String
   "The slug of the object"

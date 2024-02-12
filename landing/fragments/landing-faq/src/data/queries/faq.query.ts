@@ -2,12 +2,12 @@ import { gql } from '@apollo/client'
 
 const GET_FAQ = gql`
   query Faq {
-    faq {
-      nodes {
-        title
+    generalFragment(id: "cG9zdDoyMjk5") {
+      title
+      details {
         faq {
-          answerForFaq
-          positionForFaq
+          answer
+          question
         }
       }
     }

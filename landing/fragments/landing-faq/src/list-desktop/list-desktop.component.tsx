@@ -13,13 +13,13 @@ const ListDesktop = () => {
 
   return (
     <Box flexWrap='wrap' display={['none', 'none', 'flex']}>
-      {faqArray.map(({ title, faq }, index) => (
+      {faqArray?.map(({ title, details }, index) => (
         <React.Fragment key={title.replace(' ', '')}>
           <Box flexDirection='column'>
             <Item
               question={title}
-              answer={faq.answerForFaq}
-              positionVertical={faq.positionForFaq ? 'top-start' : 'bottom-start'}
+              answer={details.faq.answer}
+              positionVertical={details.faq.question ? 'top-start' : 'bottom-start'}
               active={active}
               setActive={setActive}
             />
