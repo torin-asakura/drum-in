@@ -1,19 +1,19 @@
-import { getClient }                  from '@globals/data'
-import { setCacheHeader }             from '@globals/data'
-
-import { GET_OPENING_THE_RHYTHM_SEO } from './data'
+import { initializeApollo } from '@globals/data'
+import { setCacheHeader }   from '@globals/data'
+import { GET_SEO }          from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
-  const client = getClient()
+  const client = initializeApollo({})
 
   setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
-    query: GET_OPENING_THE_RHYTHM_SEO,
+    query: GET_SEO,
+    variables: { id: 'cG9zdDo0OTc=' }
   })
 
   const SEO = {
-    ...seoData?.pageContentBy.seo,
+    ...seoData?.page.seo,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }

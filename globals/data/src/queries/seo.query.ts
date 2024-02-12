@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
 export const GET_SEO = gql`
-  query GetOpeningTheRhythmSeo($id: ID!) {
+  query GetSeo($id: ID!) {
     page(id: $id) {
       seo {
         metaDesc
