@@ -2,13 +2,21 @@ import { gql } from '@apollo/client'
 
 const GET_HERO = gql`
   query Hero {
-    courseOpeningTheRhytmItem(id: "cG9zdDoxNDM=") {
-      backgroundForHero {
-        backgroundForHero {
-          sourceUrl
-        }
-        backgroundMobileForHero {
-          sourceUrl
+    course(id: "cG9zdDoyMjgx") {
+      details {
+        hero {
+          backgrounddesktop {
+            desktop {
+              node {
+                sourceUrl
+              }
+            }
+            mobile {
+              node {
+                sourceUrl
+              }
+            }
+          }
         }
       }
     }

@@ -37,7 +37,7 @@ const BannerOpeningTheRhythmBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    {banner?.titleInHero}
+                    {banner?.title}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -53,7 +53,7 @@ const BannerOpeningTheRhythmBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      {banner?.descriptionCourseInHero}
+                      {banner?.content}
                     </Text>
                   </Box>
                 </Box>
@@ -76,7 +76,7 @@ const BannerOpeningTheRhythmBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape level={banner?.levelCourseInHero} />
+      <Tape level={banner?.details.hero.runningLine} />
     </Box>
   )
 }

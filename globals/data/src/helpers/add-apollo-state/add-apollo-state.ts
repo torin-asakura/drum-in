@@ -1,4 +1,4 @@
-import { APOLLO_STATE_PROP_NAME } from '../use-apollo.constants'
+import { APOLLO_STATE_PROP_NAME } from '../client.constants'
 import { AddApolloState }         from './add-apollo-state.interfaces'
 
 export const addApolloState: AddApolloState = (client, pageProps) => {

@@ -24,3 +24,17 @@ query new {
       title
   }
 }
+
+### Simple Query over HTTP
+GRAPHQL https://wp.drumin.pro/graphql
+
+query new {
+  pages {
+    nodes {
+      id
+      seo {
+        title
+      }
+    }
+  }
+}

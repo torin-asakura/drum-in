@@ -16,7 +16,7 @@ const HeroOpeningTheRhythmBlock = () => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundImage={`url(${hero[0]?.desktop?.node?.sourceUrl})`}
         backgroundSize='100% 100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center bottom'
@@ -29,7 +29,7 @@ const HeroOpeningTheRhythmBlock = () => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundImage={`url(${hero[0]?.mobile?.node?.sourceUrl})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='right center'

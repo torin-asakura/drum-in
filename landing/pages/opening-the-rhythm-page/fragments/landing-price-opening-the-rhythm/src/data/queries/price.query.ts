@@ -2,17 +2,15 @@ import { gql } from '@apollo/client'
 
 const GET_PRICE = gql`
   query Price {
-    courseOpeningTheRhytmItem(id: "cG9zdDoxNjc=") {
-      title
-      tuitionFees {
-        nameOfTheCharacteristicForCircle
-        numberForTheCircle
-        numberOfMonths
-        numberOfVideoLessons
-        priceInstallmentPlan
-        savingsWithOneTimePayment
-        titleForButton
-        secondLineRectangle
+    course(id: "cG9zdDoyMjgx") {
+      details {
+        price {
+          title
+          priceMonthly
+          priceFull
+          discountIfFull
+          discount
+        }
       }
     }
   }

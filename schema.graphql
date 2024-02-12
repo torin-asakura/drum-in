@@ -341,6 +341,16 @@ interface DetailsContent_Fields {
   levels: [DetailsContentLevels]
 }
 
+"Interface representing fields of the ACF &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
+interface DetailsHeroBackgrounddesktop_Fields {
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
+  desktop: AcfMediaItemConnectionEdge
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
+  mobile: AcfMediaItemConnectionEdge
+}
+
 "Interface representing fields of the ACF &quot;DetailsHeroTagsCloud&quot; Field Group"
 interface DetailsHeroTagsCloud_Fields {
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHeroTagsCloud&quot; Field Group"
@@ -351,6 +361,8 @@ interface DetailsHeroTagsCloud_Fields {
 
 "Interface representing fields of the ACF &quot;DetailsHero&quot; Field Group"
 interface DetailsHero_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
+  backgrounddesktop: [DetailsHeroBackgrounddesktop]
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
   cta: String
   "The name of the field group"
@@ -1516,6 +1528,14 @@ type AcfContentNodeConnectionPageInfo implements ContentNodeConnectionPageInfo &
   startCursor: String
 }
 
+"Connection between the DetailsHeroBackgrounddesktop type and the MediaItem type"
+type AcfMediaItemConnectionEdge implements Edge & MediaItemConnectionEdge & OneToOneConnection {
+  "Opaque reference to the nodes position in the connection. Value can be used with pagination args."
+  cursor: String
+  "The node of the connection, without the edges"
+  node: MediaItem!
+}
+
 "Avatars are profile images for users. WordPress by default uses the Gravatar service to host and fetch avatars from."
 type Avatar {
   "URL for the default image or a default type. Accepts &#039;404&#039; (return a 404 instead of a default image), &#039;retro&#039; (8bit), &#039;monsterid&#039; (monster), &#039;wavatar&#039; (cartoon face), &#039;indenticon&#039; (the &#039;quilt&#039;), &#039;mystery&#039;, &#039;mm&#039;, or &#039;mysteryman&#039; (The Oyster Man), &#039;blank&#039; (transparent GIF), or &#039;gravatar_default&#039; (the Gravatar logo)."
@@ -2604,6 +2624,8 @@ type DetailsContentLevelsTooltip implements AcfFieldGroup & AcfFieldGroupFields 
 
 "The &quot;DetailsHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type DetailsHero implements AcfFieldGroup & AcfFieldGroupFields & DetailsHero_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
+  backgrounddesktop: [DetailsHeroBackgrounddesktop]
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
   cta: String
   "The name of the field group"
@@ -2612,6 +2634,16 @@ type DetailsHero implements AcfFieldGroup & AcfFieldGroupFields & DetailsHero_Fi
   runningLine: String
   "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
   tagsCloud: [DetailsHeroTagsCloud]
+}
+
+"The &quot;DetailsHeroBackgrounddesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type DetailsHeroBackgrounddesktop implements AcfFieldGroup & AcfFieldGroupFields & DetailsHeroBackgrounddesktop_Fields {
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
+  desktop: AcfMediaItemConnectionEdge
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
+  mobile: AcfMediaItemConnectionEdge
 }
 
 "The &quot;DetailsHeroTagsCloud&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
