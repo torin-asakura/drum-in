@@ -30,7 +30,6 @@ interface Props {
 }
 
 export const OpeningTheRhythmPage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)

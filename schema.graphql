@@ -822,6 +822,104 @@ interface IndividualCourseConnectionPageInfo {
   startCursor: String
 }
 
+"Interface representing fields of the ACF &quot;IndividualCourseDataBackground&quot; Field Group"
+interface IndividualCourseDataBackground_Fields {
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  desktop: AcfMediaItemConnectionEdge
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  mobile: AcfMediaItemConnectionEdge
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataHeroBenefits&quot; Field Group"
+interface IndividualCourseDataHeroBenefits_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHeroBenefits&quot; Field Group"
+  content: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataHeroCourseConditions&quot; Field Group"
+interface IndividualCourseDataHeroCourseConditions_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHeroCourseConditions&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHeroCourseConditions&quot; Field Group"
+  number: Float
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataHero&quot; Field Group"
+interface IndividualCourseDataHero_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  benefits: [IndividualCourseDataHeroBenefits]
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  courseConditions: [IndividualCourseDataHeroCourseConditions]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  cta: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  runningLine: String
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataPrice&quot; Field Group"
+interface IndividualCourseDataPrice_Fields {
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  courseLengthInMonths: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  cta: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  discount: Float
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  fullPrice: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  liveTrainingsNumber: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  monthlyPrice: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  oldPrice: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  title: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  videoTrainingsNumber: Float
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataProcessStep&quot; Field Group"
+interface IndividualCourseDataProcessStep_Fields {
+  "Field of the &quot;textarea&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataProcessStep&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataProcessStep&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataProcess&quot; Field Group"
+interface IndividualCourseDataProcess_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataProcess&quot; Field Group"
+  step: [IndividualCourseDataProcessStep]
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseData&quot; Field Group"
+interface IndividualCourseData_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  background: IndividualCourseDataBackground
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  hero: IndividualCourseDataHero
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  price: IndividualCourseDataPrice
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  process: IndividualCourseDataProcess
+}
+
 "Connection to mediaItem Nodes"
 interface MediaItemConnection {
   "A list of edges (relational context) between RootQuery and connected mediaItem Nodes"
@@ -1489,6 +1587,12 @@ interface WithAcfDetails {
   details: Details
 }
 
+"Provides access to fields of the &quot;IndividualCourseData&quot; ACF Field Group via the &quot;individualCourseData&quot; field"
+interface WithAcfIndividualCourseData {
+  "Fields of the IndividualCourseData ACF Field Group"
+  individualCourseData: IndividualCourseData
+}
+
 "Deprecated in favor of MenuItemLinkeable Interface"
 union MenuItemObjectUnion = Category | Course | GeneralFragment | IndividualCourse | Page | Post | Tag
 
@@ -1524,7 +1628,7 @@ type AcfContentNodeConnectionPageInfo implements ContentNodeConnectionPageInfo &
   startCursor: String
 }
 
-"Connection between the DetailsHeroBackgrounddesktop type and the MediaItem type"
+"Connection between the IndividualCourseDataBackground type and the MediaItem type"
 type AcfMediaItemConnectionEdge implements Edge & MediaItemConnectionEdge & OneToOneConnection {
   "Opaque reference to the nodes position in the connection. Value can be used with pagination args."
   cursor: String
@@ -3000,7 +3104,7 @@ type HierarchicalContentNodeToParentContentNodeConnectionEdge implements Content
 }
 
 "The individualCourse type"
-type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable {
+type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfIndividualCourseData {
   "The content of the post."
   content(
     "Format of the field output"
@@ -3054,6 +3158,8 @@ type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLink
   guid: String
   "The globally unique identifier of the individual-course object."
   id: ID!
+  "Fields of the IndividualCourseData ACF Field Group"
+  individualCourseData: IndividualCourseData
   "The id field matches the WP_Post-&gt;ID field."
   individualCourseId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "Whether the node is a Content Node"
@@ -3093,6 +3199,104 @@ type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLink
   ): String
   "The unique resource identifier path"
   uri: String
+}
+
+"The &quot;IndividualCourseData&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseData implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseData_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  background: IndividualCourseDataBackground
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  hero: IndividualCourseDataHero
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  price: IndividualCourseDataPrice
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  process: IndividualCourseDataProcess
+}
+
+"The &quot;IndividualCourseDataBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataBackground implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataBackground_Fields {
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  desktop: AcfMediaItemConnectionEdge
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  mobile: AcfMediaItemConnectionEdge
+}
+
+"The &quot;IndividualCourseDataHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataHero implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataHero_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  benefits: [IndividualCourseDataHeroBenefits]
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  courseConditions: [IndividualCourseDataHeroCourseConditions]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  cta: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHero&quot; Field Group"
+  runningLine: String
+}
+
+"The &quot;IndividualCourseDataHeroBenefits&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataHeroBenefits implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataHeroBenefits_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHeroBenefits&quot; Field Group"
+  content: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+}
+
+"The &quot;IndividualCourseDataHeroCourseConditions&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataHeroCourseConditions implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataHeroCourseConditions_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHeroCourseConditions&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataHeroCourseConditions&quot; Field Group"
+  number: Float
+}
+
+"The &quot;IndividualCourseDataPrice&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataPrice implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataPrice_Fields {
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  courseLengthInMonths: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  cta: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  discount: Float
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  fullPrice: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  liveTrainingsNumber: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  monthlyPrice: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  oldPrice: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  title: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  videoTrainingsNumber: Float
+}
+
+"The &quot;IndividualCourseDataProcess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataProcess implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataProcess_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataProcess&quot; Field Group"
+  step: [IndividualCourseDataProcessStep]
+}
+
+"The &quot;IndividualCourseDataProcessStep&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataProcessStep implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataProcessStep_Fields {
+  "Field of the &quot;textarea&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataProcessStep&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataProcessStep&quot; Field Group"
+  title: String
 }
 
 "Connection between the IndividualCourse type and the individualCourse type"

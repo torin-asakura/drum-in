@@ -29,12 +29,10 @@ query new {
 GRAPHQL https://wp.drumin.pro/graphql
 
 query new {
-  pages {
+  generalFragments {
     nodes {
+      title
       id
-      seo {
-        title
-      }
     }
   }
 }
