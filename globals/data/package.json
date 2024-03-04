@@ -5,6 +5,7 @@
   "devDependencies": {
     "@apollo/client": "3.6.9",
     "@types/lodash": "^4",
+    "@types/react": "18.2.20",
     "graphql": "15.5.1",
     "react": "18.2.0"
   },
