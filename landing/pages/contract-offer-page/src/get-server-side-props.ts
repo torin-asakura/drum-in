@@ -1,7 +1,6 @@
+import { GET_SEO }        from '@globals/data'
 import { getClient }      from '@globals/data'
 import { setCacheHeader } from '@globals/data'
-
-import { GET_OFERTA_SEO } from './data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
@@ -9,11 +8,11 @@ export const getServerSideProps = async ({ res }) => {
   setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
-    query: GET_OFERTA_SEO,
+    query: GET_SEO,
   })
 
   const SEO = {
-    ...seoData?.pageContentBy.seo,
+    ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }

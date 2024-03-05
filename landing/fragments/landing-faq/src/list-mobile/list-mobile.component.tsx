@@ -11,12 +11,13 @@ const ListMobile = () => {
 
   return (
     <Column display={['flex', 'flex', 'none']}>
-      {faqArray.map(({ title, faq }) => (
-        <React.Fragment key={title.replace(' ', '')}>
-          <Accordion title={title} content={faq.answerForFaq} />
-          <Layout flexBasis={[16, 21, 0]} />
-        </React.Fragment>
-      ))}
+      {/* TODO */}
+      {/*{faqArray.map(({ title, faq }) => (*/}
+      {/*  <React.Fragment key={title.replace(' ', '')}>*/}
+      {/*    <Accordion title={title} content={faq.answerForFaq} />*/}
+      {/*    <Layout flexBasis={[16, 21, 0]} />*/}
+      {/*  </React.Fragment>*/}
+      {/*))}*/}
     </Column>
   )
 }

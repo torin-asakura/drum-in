@@ -1,7 +1,7 @@
-import { getClient }              from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
-
-import { GET_PRIVACY_POLICY_SEO } from './data'
+import { PageID }         from '@globals/data'
+import { GET_SEO }        from '@globals/data'
+import { getClient }      from '@globals/data'
+import { setCacheHeader } from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
@@ -9,11 +9,13 @@ export const getServerSideProps = async ({ res }) => {
   setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
-    query: GET_PRIVACY_POLICY_SEO,
+    query: GET_SEO,
+    // TODO: add privacy
+    variables: { id: PageID.INDEX },
   })
 
   const SEO = {
-    ...seoData?.pageContentBy.seo,
+    ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
   }
 

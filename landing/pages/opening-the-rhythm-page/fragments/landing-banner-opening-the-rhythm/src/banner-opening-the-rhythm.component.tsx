@@ -1,17 +1,19 @@
-import React                  from 'react'
+import React                   from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
+import { CourseID }            from '@globals/data'
+import { RightDownArrowIcon }  from '@ui/icons'
+import { Box }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Text }                from '@ui/text'
+import { useCourse }           from '@globals/data'
+import { useIndividualCourse } from '@globals/data'
 
-import { Tape }               from './tape'
-import { useBanner }          from './data'
+import { Tape }                from './tape'
 
 const BannerOpeningTheRhythmBlock = () => {
-  const banner = useBanner()
+  const { course } = useCourse()
 
   return (
     <Box flexDirection='column' width='100%'>
@@ -37,7 +39,8 @@ const BannerOpeningTheRhythmBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    {banner?.title}
+                    {/* TODO */}
+                    {course?.title}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -53,7 +56,8 @@ const BannerOpeningTheRhythmBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      {banner?.content}
+                      {/* TODO */}
+                      {course?.content}
                     </Text>
                   </Box>
                 </Box>
@@ -76,7 +80,7 @@ const BannerOpeningTheRhythmBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape level={banner?.details.hero.runningLine} />
+      <Tape level={course?.details ?? ''} />
     </Box>
   )
 }

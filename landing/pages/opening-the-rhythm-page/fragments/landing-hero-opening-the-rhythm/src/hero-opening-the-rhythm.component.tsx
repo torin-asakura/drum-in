@@ -5,18 +5,14 @@ import { BannerOpeningTheRhythmBlock } from '@landing/banner-opening-the-rhythm-
 import { SkillsBlock }                 from '@landing/skills-fragment'
 import { Box }                         from '@ui/layout'
 
-import { useHero }                     from './data'
-
 const HeroOpeningTheRhythmBlock = () => {
-  const hero = useHero()
-
   return (
     <>
       <Box
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero[0]?.desktop?.node?.sourceUrl})`}
+        // backgroundImage={`url(${hero[0]?.desktop?.node?.sourceUrl})`}
         backgroundSize='100% 100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center bottom'
@@ -29,7 +25,7 @@ const HeroOpeningTheRhythmBlock = () => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero[0]?.mobile?.node?.sourceUrl})`}
+        // backgroundImage={`url(${hero[0]?.mobile?.node?.sourceUrl})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='right center'

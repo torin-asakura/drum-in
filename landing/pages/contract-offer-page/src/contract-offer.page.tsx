@@ -2,12 +2,13 @@ import React                        from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { ContractOfferBlock }       from '@landing/contract-offer-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 
 interface SEOProp {
@@ -17,7 +18,7 @@ interface Props {
   SEO: SEOProp
 }
 
-export const ContractOfferPage = ({ SEO }: Props) => {
+export const ContractOfferPage = () => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
 
@@ -40,7 +41,8 @@ export const ContractOfferPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        {/* TODO: change to contract */}
+        <Seo id={PageID.CONTACT} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <ContractOfferBlock />
           <Box

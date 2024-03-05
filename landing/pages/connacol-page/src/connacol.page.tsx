@@ -4,6 +4,7 @@ import { useEffect }                from 'react'
 import { useState }                 from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { CourseProcessBlock }       from '@landing/course-process-fragment'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
@@ -15,21 +16,12 @@ import { ModalMobileFormConnacol }  from '@landing/modal-form-connacol'
 import { PriceConnacolBlock }       from '@landing/price-connacol-fragment'
 import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { Seo }                      from './seo.component'
-import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const ConnacolPage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const ConnacolPage = () => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -78,13 +70,13 @@ export const ConnacolPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo id={PageID.CONNACOL} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroConnacolBlock />
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            // backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
@@ -97,7 +89,7 @@ export const ConnacolPage = ({ SEO }: Props) => {
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            // backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -107,7 +99,7 @@ export const ConnacolPage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            // backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

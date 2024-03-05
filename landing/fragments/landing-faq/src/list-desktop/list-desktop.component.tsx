@@ -13,22 +13,23 @@ const ListDesktop = () => {
 
   return (
     <Box flexWrap='wrap' display={['none', 'none', 'flex']}>
-      {faqArray?.map(({ title, details }, index) => (
-        <React.Fragment key={title.replace(' ', '')}>
-          <Box flexDirection='column'>
-            <Item
-              question={title}
-              answer={details.faq.answer}
-              positionVertical={details.faq.question ? 'top-start' : 'bottom-start'}
-              active={active}
-              setActive={setActive}
-            />
-            <Layout flexBasis={20} />
-          </Box>
-          <Layout flexBasis={28} flexShrink={0} />
-          {index % 2 !== 0 ? <Layout flexBasis='100%' /> : null}
-        </React.Fragment>
-      ))}
+      {/* TODO */}
+      {/*{faqArray?.map(({ title, details }, index) => (*/}
+      {/*  <React.Fragment key={title.replace(' ', '')}>*/}
+      {/*    <Box flexDirection='column'>*/}
+      {/*      <Item*/}
+      {/*        question={title}*/}
+      {/*        answer={details.faq.answer}*/}
+      {/*        positionVertical={details.faq.question ? 'top-start' : 'bottom-start'}*/}
+      {/*        active={active}*/}
+      {/*        setActive={setActive}*/}
+      {/*      />*/}
+      {/*      <Layout flexBasis={20} />*/}
+      {/*    </Box>*/}
+      {/*    <Layout flexBasis={28} flexShrink={0} />*/}
+      {/*    {index % 2 !== 0 ? <Layout flexBasis='100%' /> : null}*/}
+      {/*  </React.Fragment>*/}
+      {/*))}*/}
     </Box>
   )
 }

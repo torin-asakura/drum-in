@@ -4,6 +4,7 @@ import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
+import { CourseID }                        from '@globals/data'
 import { PageID }                          from '@globals/data'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
@@ -19,6 +20,7 @@ import { StartLearningBlock }              from '@landing/start-learning-fragmen
 import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
+import { useCourse }                       from '@globals/data'
 
 import { useSong }                         from './data'
 
@@ -26,6 +28,8 @@ export const OpeningTheRhythmPage = () => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
+
+  const { course } = useCourse()
 
   const [playSong, setPlaySong] = useState<boolean>(false)
   const urlSongData = useSong()?.songUrl?.mediaItemUrl
@@ -78,7 +82,7 @@ export const OpeningTheRhythmPage = () => {
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            // backgroundImage={`url(${background?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
@@ -91,7 +95,7 @@ export const OpeningTheRhythmPage = () => {
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            // backgroundImage={`url(${background?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -101,7 +105,7 @@ export const OpeningTheRhythmPage = () => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            // backgroundImage={`url(${background?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

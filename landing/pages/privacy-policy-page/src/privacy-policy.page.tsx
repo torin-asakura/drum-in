@@ -2,12 +2,13 @@ import React                        from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 
 interface SEOProp {
@@ -40,7 +41,8 @@ export const OpeningTheRhythmPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        {/* TODO: change to privacy */}
+        <Seo id={PageID.INDEX} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <PrivacyPolicyBlock />
           <Box

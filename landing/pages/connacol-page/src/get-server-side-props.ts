@@ -1,19 +1,29 @@
-import { getClient }        from '@globals/data'
-import { setCacheHeader }   from '@globals/data'
-
-import { GET_KONNAKOL_SEO } from './data'
+import { CourseID }              from '@globals/data'
+import { GET_INDIVIDUAL_COURSE } from '@globals/data'
+import { PageID }                from '@globals/data'
+import { GET_SEO }               from '@globals/data'
+import { initializeApollo }      from '@globals/data'
+import { setCacheHeader }        from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
-  const client = getClient()
+  const client = initializeApollo({})
 
   setCacheHeader(res, 3600, 300)
 
+  const course = client.query({
+    query: GET_INDIVIDUAL_COURSE,
+    variables: { id: CourseID.CONNACOL },
+  })
+
+  await Promise.allSettled([course])
+
   const { data: seoData } = await client.query({
-    query: GET_KONNAKOL_SEO,
+    query: GET_SEO,
+    variables: { id: PageID.CONNACOL },
   })
 
   const SEO = {
-    ...seoData?.pageContentBy.seo,
+    ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }

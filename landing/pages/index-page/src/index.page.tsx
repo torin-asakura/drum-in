@@ -4,6 +4,7 @@ import { useEffect }                from 'react'
 import { useState }                 from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
@@ -13,13 +14,13 @@ import { LearningProcessBlock }     from '@landing/learning-process-fragment'
 import { StudentsBlock }            from '@landing/learning-students'
 import { PrivateLessonBlock }       from '@landing/private-lesson-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 import { SpyScroll }                from '@ui/spy-scroll'
 import { SpyScrollProvider }        from '@ui/spy-scroll'
 import { useIntersectionObserver }  from '@ui/intersection-observer'
 import { useSpyScroll }             from '@ui/spy-scroll'
 
-import { Seo }                      from './seo.component'
 import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
@@ -92,7 +93,7 @@ export const HomePage = ({ SEO }: Props) => {
         <SpyScrollProvider>
           <HeaderBlock />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
-          <Seo SEO={SEO} />
+          <Seo id={PageID.INDEX} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero {...getObserverOptions('hero')} />
             <Box

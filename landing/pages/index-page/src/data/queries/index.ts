@@ -1,6 +1,5 @@
 export * from './useBackgrounds'
 export * from './useSong'
-export * from './seo.query'
 export * from './about.query'
 export * from './feedback.query'
 export * from './hero.query'

@@ -1,10 +1,9 @@
-import { GET_INDIVIDUAL_COURSE } from '@globals/data'
-import { CourseID }              from '@globals/data'
-import { PageID }                from '@globals/data'
-import { GET_SEO }               from '@globals/data'
-import { initializeApollo }      from '@globals/data'
-import { setCacheHeader }        from '@globals/data'
-import { addApolloState }        from '@globals/data'
+import { GET_COURSE }       from '@globals/data'
+import { PageID }           from '@globals/data'
+import { GET_SEO }          from '@globals/data'
+import { initializeApollo } from '@globals/data'
+import { setCacheHeader }   from '@globals/data'
+import { addApolloState }   from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = initializeApollo({})
@@ -12,8 +11,7 @@ export const getServerSideProps = async ({ res }) => {
   setCacheHeader(res, 3600, 300)
 
   const course = client.query({
-    query: GET_INDIVIDUAL_COURSE,
-    variables: { id: CourseID.OPENING_RHYTHM },
+    query: GET_COURSE,
   })
 
   await Promise.allSettled([course])
@@ -24,7 +22,7 @@ export const getServerSideProps = async ({ res }) => {
   })
 
   const SEO = {
-    ...seoData?.page.seo,
+    ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }

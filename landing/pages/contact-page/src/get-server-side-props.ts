@@ -15,7 +15,7 @@ export const getServerSideProps = async ({ res }) => {
   })
 
   const SEO = {
-    ...seoData?.page.seo,
+    ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }

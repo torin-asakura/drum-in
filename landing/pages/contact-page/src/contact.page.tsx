@@ -2,22 +2,16 @@ import React                        from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { ContactBlock }             from '@landing/contact-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { Seo }                      from './seo.component'
 import { useBackground }            from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const ContactPage = ({ SEO }: Props) => {
+export const ContactPage = () => {
   const containerRef = useRef(null)
   const background = useBackground()
 
@@ -40,7 +34,7 @@ export const ContactPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo id={PageID.CONTACT} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Box
             width='100%'

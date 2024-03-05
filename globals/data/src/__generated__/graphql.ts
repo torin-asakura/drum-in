@@ -12128,6 +12128,38 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
+export type GetCourseQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type GetCourseQuery = {
+  __typename?: 'RootQuery'
+  course?: {
+    __typename?: 'Course'
+    title?: string | null
+    content?: string | null
+    details?: {
+      __typename?: 'Details'
+      faq?: Array<{
+        __typename?: 'DetailsFaq'
+        answer?: string | null
+        question?: string | null
+      } | null> | null
+      additionalQuestions?: {
+        __typename?: 'DetailsAdditionalQuestions'
+        title?: string | null
+        button?: string | null
+        cta?: {
+          __typename?: 'DetailsAdditionalQuestionsCta'
+          afterBoldText?: string | null
+          beforeBoldText?: string | null
+          boldText?: string | null
+        } | null
+      } | null
+    } | null
+  } | null
+}
+
 export type IndividualCourseQueryVariables = Exact<{
   id: Scalars['ID']['input']
 }>
@@ -12242,6 +12274,95 @@ export type GetSeoQuery = {
   } | null
 }
 
+export const GetCourseDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'GetCourse' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'course' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'content' } },
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'details' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'faq' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'answer' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'question' } },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'additionalQuestions' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'cta' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'afterBoldText' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'beforeBoldText' },
+                                  },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'boldText' } },
+                                ],
+                              },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'button' } },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<GetCourseQuery, GetCourseQueryVariables>
 export const IndividualCourseDocument = {
   kind: 'Document',
   definitions: [

@@ -14,6 +14,8 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
+  '\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n      content\n      details {\n        faq {\n          answer\n          question\n        }\n        additionalQuestions {\n          title\n          cta {\n            afterBoldText\n            beforeBoldText\n            boldText\n          }\n          button\n        }\n      }\n    }\n  }\n':
+    types.GetCourseDocument,
   '\n  query IndividualCourse($id: ID!) {\n    individualCourse(id: $id) {\n      content\n      title\n      individualCourseData {\n        background {\n          desktop {\n            node {\n              mediaItemUrl\n              sourceUrl\n            }\n          }\n          mobile {\n            node {\n              mediaItemUrl\n              sourceUrl\n            }\n          }\n        }\n        price {\n          cta\n          courseLengthInMonths\n          discount\n          fullPrice\n          liveTrainingsNumber\n          monthlyPrice\n          oldPrice\n          title\n          videoTrainingsNumber\n        }\n        hero {\n          benefits {\n            content\n          }\n          runningLine\n          courseConditions {\n            description\n            number\n          }\n          cta\n        }\n      }\n    }\n  }\n':
     types.IndividualCourseDocument,
   '\n  query GetPreview($uri: String!) {\n    mediaItemBy(uri: $uri) {\n      sourceUrl\n    }\n  }\n':
@@ -36,6 +38,12 @@ const documents = {
  */
 export function gql(source: string): unknown
 
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n      content\n      details {\n        faq {\n          answer\n          question\n        }\n        additionalQuestions {\n          title\n          cta {\n            afterBoldText\n            beforeBoldText\n            boldText\n          }\n          button\n        }\n      }\n    }\n  }\n'
+): typeof documents['\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n      content\n      details {\n        faq {\n          answer\n          question\n        }\n        additionalQuestions {\n          title\n          cta {\n            afterBoldText\n            beforeBoldText\n            boldText\n          }\n          button\n        }\n      }\n    }\n  }\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
