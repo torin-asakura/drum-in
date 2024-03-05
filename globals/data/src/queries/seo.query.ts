@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client'
+import { gql } from '../__generated__'
 
-export const GET_SEO = gql`
+export const GET_SEO = gql(`
   query GetSeo($id: ID!) {
     page(id: $id) {
       seo {
@@ -36,4 +36,4 @@ export const GET_SEO = gql`
       }
     }
   }
-`
+`)

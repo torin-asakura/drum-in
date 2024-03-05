@@ -1,7 +1,7 @@
-import { gql } from '@apollo/client'
+import { gql } from '../__generated__'
 
-const GET_INDIVIDUAL_COURSE = gql`
-  query IndividualCourse($id: String!) {
+const GET_INDIVIDUAL_COURSE = gql(`
+  query IndividualCourse($id: ID!) {
     individualCourse(id: $id) {
       content
       title
@@ -45,6 +45,6 @@ const GET_INDIVIDUAL_COURSE = gql`
       }
     }
   }
-`
+`)
 
 export { GET_INDIVIDUAL_COURSE }

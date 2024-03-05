@@ -4,6 +4,7 @@ import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
+import { PageID }                          from '@globals/data'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
 import { FaqBlock }                        from '@landing/faq'
@@ -16,20 +17,12 @@ import { PriceOpeningTheRhythmBlock }      from '@landing/price-opening-the-rhyt
 import { ProgramBlock }                    from '@landing/program-fragment'
 import { StartLearningBlock }              from '@landing/start-learning-fragment'
 import { TeacherBlock }                    from '@landing/teacher-fragment'
+import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
-import { Seo }                             from './seo.component'
-import { useBackgrounds }                  from './data'
 import { useSong }                         from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const OpeningTheRhythmPage = ({ SEO }: Props) => {
+export const OpeningTheRhythmPage = () => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -78,7 +71,7 @@ export const OpeningTheRhythmPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo id={PageID.OPENING_RHYTHM} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock />
           <ProgramBlock />

@@ -1,0 +1,17 @@
+{
+  "name": "@shared/seo-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@globals/data": "workspace:0.0.1",
+    "@types/react": "18.2.20",
+    "@types/react-helmet": "6.1.6",
+    "react-helmet": "6.1.0"
+  },
+  "peerDependencies": {
+    "@globals/data": "*",
+    "react": "*",
+    "react-helmet": "*"
+  }
+}
