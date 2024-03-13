@@ -3494,6 +3494,7 @@ __metadata:
   resolution: "@landing/hero-connacol-fragment@workspace:landing/pages/connacol-page/fragments/landing-hero-connacol"
   dependencies:
     "@apollo/client": "npm:3.6.9"
+    "@globals/data": "workspace:0.0.1"
     "@landing/advantages-fragment": "workspace:0.0.1"
     "@landing/banner-connacol-fragment": "workspace:0.0.1"
     "@landing/program-connacol-fragment": "workspace:0.0.1"
@@ -3503,6 +3504,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "*"
     next: "*"
     react: "*"
     react-intl: "*"

@@ -9479,12 +9479,14 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.6.9"],\
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.9.3"],\
           ["@forks/react-locomotive-scroll", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll"],\
+          ["@globals/data", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:globals/data"],\
           ["@landing/advantages-fragment", "virtual:7f7b9e541f30f4159a99028a918c09908bf1f3148bf46e757855ed77888ebb21cfdf7c0fe326b0738017291a9b304e600e786b0855cf489738c44c9c6df86a60#workspace:landing/fragments/landing-advantages"],\
           ["@landing/banner-connacol-fragment", "virtual:7f7b9e541f30f4159a99028a918c09908bf1f3148bf46e757855ed77888ebb21cfdf7c0fe326b0738017291a9b304e600e786b0855cf489738c44c9c6df86a60#workspace:landing/pages/connacol-page/fragments/landing-banner-connacol"],\
           ["@landing/program-connacol-fragment", "virtual:7f7b9e541f30f4159a99028a918c09908bf1f3148bf46e757855ed77888ebb21cfdf7c0fe326b0738017291a9b304e600e786b0855cf489738c44c9c6df86a60#workspace:landing/pages/connacol-page/fragments/landing-program-connacol"],\
           ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/forks__react-locomotive-scroll", null],\
+          ["@types/globals__data", null],\
           ["@types/next", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-intl", null],\
@@ -9497,9 +9499,11 @@ const RAW_RUNTIME_STATE =
           "@apollo/client",\
           "@emotion/react",\
           "@forks/react-locomotive-scroll",\
+          "@globals/data",\
           "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/forks__react-locomotive-scroll",\
+          "@types/globals__data",\
           "@types/next",\
           "@types/react-intl",\
           "@types/react",\
@@ -9516,12 +9520,14 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#npm:3.6.9"],\
           ["@emotion/react", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:11.9.3"],\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
+          ["@globals/data", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:globals/data"],\
           ["@landing/advantages-fragment", "virtual:604537ea43b6a571b9201096eea4f510b68d69469bb00e1ed3542f931704a5c1f0d3f579ab2ab4d2674482b62b62c9b8d52639484a866fcabd4f07fe6178c61e#workspace:landing/fragments/landing-advantages"],\
           ["@landing/banner-connacol-fragment", "virtual:604537ea43b6a571b9201096eea4f510b68d69469bb00e1ed3542f931704a5c1f0d3f579ab2ab4d2674482b62b62c9b8d52639484a866fcabd4f07fe6178c61e#workspace:landing/pages/connacol-page/fragments/landing-banner-connacol"],\
           ["@landing/program-connacol-fragment", "virtual:604537ea43b6a571b9201096eea4f510b68d69469bb00e1ed3542f931704a5c1f0d3f579ab2ab4d2674482b62b62c9b8d52639484a866fcabd4f07fe6178c61e#workspace:landing/pages/connacol-page/fragments/landing-program-connacol"],\
           ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/forks__react-locomotive-scroll", null],\
+          ["@types/globals__data", null],\
           ["@types/next", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-intl", null],\
@@ -9534,9 +9540,11 @@ const RAW_RUNTIME_STATE =
           "@apollo/client",\
           "@emotion/react",\
           "@forks/react-locomotive-scroll",\
+          "@globals/data",\
           "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/forks__react-locomotive-scroll",\
+          "@types/globals__data",\
           "@types/next",\
           "@types/react-intl",\
           "@types/react",\
@@ -9551,6 +9559,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@landing/hero-connacol-fragment", "workspace:landing/pages/connacol-page/fragments/landing-hero-connacol"],\
           ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.6.9"],\
+          ["@globals/data", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:globals/data"],\
           ["@landing/advantages-fragment", "virtual:3ceb7f03d6750733013786f89044f4b24ea1bd06f270ece9dd5463d8264cbc11fc01cfc08bbab4f3efd512a6a37100a23b0d979d4329d390d8d2eb18ad562509#workspace:landing/fragments/landing-advantages"],\
           ["@landing/banner-connacol-fragment", "virtual:3ceb7f03d6750733013786f89044f4b24ea1bd06f270ece9dd5463d8264cbc11fc01cfc08bbab4f3efd512a6a37100a23b0d979d4329d390d8d2eb18ad562509#workspace:landing/pages/connacol-page/fragments/landing-banner-connacol"],\
           ["@landing/program-connacol-fragment", "virtual:7f7b9e541f30f4159a99028a918c09908bf1f3148bf46e757855ed77888ebb21cfdf7c0fe326b0738017291a9b304e600e786b0855cf489738c44c9c6df86a60#workspace:landing/pages/connacol-page/fragments/landing-program-connacol"],\

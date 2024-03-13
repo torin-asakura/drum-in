@@ -10,12 +10,14 @@
   },
   "devDependencies": {
     "@apollo/client": "3.6.9",
+    "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.20"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@globals/data": "*",
     "next": "*",
     "react": "*",
     "react-intl": "*"
