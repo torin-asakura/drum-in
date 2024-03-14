@@ -1,7 +1,8 @@
-import React                            from 'react'
-import { useRef }                       from 'react'
-import { useEffect }                    from 'react'
-import { useState }                     from 'react'
+import { CourseID }  from '@globals/data'
+import React         from 'react'
+import { useRef }    from 'react'
+import { useEffect } from 'react'
+import { useState }  from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
 import { PageID }                       from '@globals/data'
@@ -18,7 +19,7 @@ import { StartLearningBlock }           from '@landing/start-learning-fragment'
 import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
-
+import {useIndividualCourse} from '@globals/data'
 import { useBackgrounds }               from './data'
 import { useSong }                      from './data'
 
@@ -30,6 +31,10 @@ interface Props {
 }
 
 export const SeventhHeavenPage = ({ SEO }: Props) => {
+
+  const {individualCourse} = useIndividualCourse(CourseID.SEVENTH_HEAVEN)
+  console.log(individualCourse)
+
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -81,7 +86,7 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.SEVENTH_HEAVEN} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroSeventhHeavenBlock />
+          <HeroSeventhHeavenBlock seventhHeavenData={individualCourse}/>
           <CourseProcessBlock />
           <Box
             width='100%'
