@@ -19,7 +19,6 @@ const Figures: FC<FiguresProps> = ({
   rectangleRotate,
   rectanglePositionY,
   rectanglePositionX,
-  secondLineRectangle,
 }) => {
   const { formatMessage } = useIntl()
 
@@ -28,9 +27,6 @@ const Figures: FC<FiguresProps> = ({
       <Box position='absolute' left={20} bottom={20}>
         <Square
           firstLine={quantityVideoLessons}
-          secondLine={formatMessage({
-            id: 'landing_price.video_lessons',
-          })}
           rotate={squareRotate || 0}
         />
       </Box>
@@ -41,7 +37,6 @@ const Figures: FC<FiguresProps> = ({
         <Rectangle
           color={backgroundRectangle}
           firstLine={quantityMonths}
-          secondLine={secondLineRectangle}
           rotate={rectangleRotate}
         />
       </Box>
