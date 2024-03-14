@@ -9,8 +9,7 @@ import { Text }     from '@ui/text'
 import { Content }  from './content'
 import { usePrice } from './data'
 
-const PriceConnacolBlock = () => {
-  const price = usePrice()
+const PriceConnacolBlock = ({connacolData}) => {
 
   return (
     <Row justifyContent='center'>
@@ -28,11 +27,11 @@ const PriceConnacolBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {price?.title}
+              {connacolData?.individualCourseData.price.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
-          <Content />
+          <Content connacolData={connacolData}/>
           <Layout flexBasis={[24, 32, 120]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

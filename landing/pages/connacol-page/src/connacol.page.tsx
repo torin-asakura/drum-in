@@ -97,7 +97,7 @@ export const ConnacolPage = () => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceConnacolBlock />
+          <PriceConnacolBlock connacolData={individualCourse}/>
           <FaqBlock />
           <CtaBlock />
           <Box
