@@ -61,7 +61,7 @@ const ProgramConnacolBlock = ({ scrollId }) => {
                   <ProgramIcon width='100%' height='auto' />
                 </Box>
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 720, wide: 970 }} flexShrink={0} />
-                <ContentCourse />
+                <ContentCourse/>
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 627 }} flexShrink={0} />
                 <Column justifyContent='end'>
                   <Box width={{ _: 0, tablet: 0, laptop: 170, wide: 283 }}>

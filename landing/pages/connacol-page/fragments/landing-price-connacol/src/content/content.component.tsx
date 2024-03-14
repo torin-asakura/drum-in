@@ -18,11 +18,17 @@ import { Specifications }          from './specifications'
 import { Title }                   from './title'
 import { usePrice }                from '../data'
 
-const Content = () => {
+const Content = ({connacolData}) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
   const price = usePrice()?.tuitionFees
+
+  const fullPrice = ` 
+        ${formatMessage({ id:'/', defaultMessage:'Весь курс за'})} 
+        ${connacolData?.individualCourseData.price.fullPrice} 
+        ${'₽'}
+        `
 
   return (
     <Box
@@ -35,7 +41,7 @@ const Content = () => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={price?.priceInstallmentPlan}
+          currency={connacolData?.individualCourseData.price.monthlyPrice}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
@@ -55,12 +61,13 @@ const Content = () => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='large' textTransform='uppercase'>
-              <FormattedMessage id='landing_price.arrange_an_installment_plan' />
+              {connacolData?.individualCourseData.price.cta}
             </Text>
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={price?.titleForButton} />
+        <FullPrice fullCost={fullPrice}
+        />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -72,7 +79,7 @@ const Content = () => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{price?.savingsWithOneTimePayment}</Text>
+            <Text color='text.green'>{connacolData?.individualCourseData.price.discount}</Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
