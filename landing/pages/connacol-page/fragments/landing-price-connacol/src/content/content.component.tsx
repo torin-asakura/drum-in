@@ -118,10 +118,9 @@ const Content = ({connacolData}) => {
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
-          secondLineRectangle={price?.secondLineRectangle}
+          quantityMonths={connacolData?.individualCourseData.price.courseLengthInMonths}
+          quantityVideoLessons={connacolData?.individualCourseData.price.videoTrainingsNumber}
+          secondLineCircle={connacolData?.individualCourseData.price.liveTrainingsNumber}
           rectangleRotate={-20}
           circleRotate={20}
           squareRotate={-20}

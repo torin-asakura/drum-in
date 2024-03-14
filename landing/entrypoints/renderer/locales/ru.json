@@ -1,4 +1,9 @@
 {
+  "course.price.plural_format_months": "{count, plural, one {месяц} few {месяца} many {месяцев} other {месяца}}",
+  "course.price.plural_format_video_lesson": "{count, plural, one {видео-урок} few {видео-урока} many {видео-уроков} other {видео-урока}}",
+
+
+
   "landing_header.courses": "Курсы",
   "landing_header.connect": "Связаться",
   "landing_header.contacts": "Контакты",
