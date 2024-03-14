@@ -9,8 +9,7 @@ import { Text }     from '@ui/text'
 import { Content }  from './content'
 import { usePrice } from './data'
 
-const PricePolyrhythmicKeyslBlock = () => {
-  const price = usePrice()
+const PricePolyrhythmicKeyslBlock = ({polyrhythmicKeysData}) => {
 
   return (
     <Row justifyContent='center'>
@@ -28,11 +27,11 @@ const PricePolyrhythmicKeyslBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {price?.title}
+              {polyrhythmicKeysData?.individualCourseData.price.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
-          <Content />
+          <Content polyrhythmicKeysData={polyrhythmicKeysData}/>
           <Layout flexBasis={[24, 32, 120]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

@@ -16,7 +16,7 @@ import { Specifications }                  from './specifications'
 import { Title }                           from './title'
 import { usePrice }                        from '../data'
 
-const Content = () => {
+const Content = ({polyrhythmicKeysData}) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const price = usePrice()?.tuitionFeesWithoutInstallment
@@ -44,7 +44,7 @@ const Content = () => {
           </Text>
         </Box>
         <Layout flexBasis={[18, 24, 32]} />
-        <Title price={price?.price} />
+        <Title price={polyrhythmicKeysData?.individualCourseData.price.monthlyPrice} />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
           quantityMonths={price?.numberOfMonths}
@@ -98,8 +98,8 @@ const Content = () => {
         />
         <Layout flexBasis={[23, 30, 155]} />
         <Figures
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
+          quantityMonths={'1'}
+          quantityVideoLessons={polyrhythmicKeysData?.individualCourseData.price.videoTrainingsNumber}
           secondLineRectangle={price?.secondLineRectangle}
           rectangleRotate={-10}
           squareRotate={-5}
