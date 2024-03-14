@@ -9,10 +9,11 @@ import { Text }               from '@ui/text'
 
 import { Tape }               from './tape'
 import { useBanner }          from './data'
+export const formatContent = (content:string | undefined):string|undefined => content?.replace(/<[^>]+>/g, '')
 
-const BannerSeventhHeavenBlock = () => {
-  const banner = useBanner()
-
+const BannerSeventhHeavenBlock = ({seventhHeavenData}) => {
+  const description = formatContent(seventhHeavenData?.content)
+  const runningLine = `#${seventhHeavenData?.individualCourseData.hero.runningLine}`
   return (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>
@@ -22,7 +23,7 @@ const BannerSeventhHeavenBlock = () => {
             <Layout flexBasis={[124, 142, 160]} />
             <Box position='relative'>
               <Column width='100%' alignItems={['start', 'start', 'end']}>
-                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1790 }}>
+                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1400 }}>
                   <Text
                     textAlign={['left', 'left', 'right']}
                     textTransform='uppercase'
@@ -37,11 +38,11 @@ const BannerSeventhHeavenBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    {banner?.titleInHero}
+                    {seventhHeavenData?.title}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
-                <Box width={['100%', '100%', 815]}>
+                <Box width={['100%', '100%', 600]}>
                   <Box width={[282, 428, 460]}>
                     <Text
                       fontWeight='medium'
@@ -53,12 +54,12 @@ const BannerSeventhHeavenBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      {banner?.descriptionCourseInHero}
+                      {description}
                     </Text>
                   </Box>
                 </Box>
               </Column>
-              <Box display={['none', 'none', 'flex']} position='absolute' left={150} top={82}>
+              <Box display={['none', 'none', 'flex']} position='absolute' left={450} top={82}>
                 <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
               </Box>
               <Box
@@ -76,7 +77,7 @@ const BannerSeventhHeavenBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape level={banner?.levelCourseInHero} />
+      <Tape level={runningLine} />
     </Box>
   )
 }

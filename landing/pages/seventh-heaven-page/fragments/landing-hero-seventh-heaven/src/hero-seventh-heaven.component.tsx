@@ -7,8 +7,8 @@ import { Box }                              from '@ui/layout'
 
 import { useHero }                          from './data'
 
-const HeroSeventhHeavenBlock = () => {
-  const hero = useHero()
+const HeroSeventhHeavenBlock = ({seventhHeavenData}) => {
+
 
   return (
     <>
@@ -16,12 +16,12 @@ const HeroSeventhHeavenBlock = () => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundImage={`url(${''})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerSeventhHeavenBlock />
+        <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData}/>
         <TargetAudienceSeventhHeavenBlock />
         <ProgramSeventhHeavenBlock scrollId='desktop-scroll' />
       </Box>
@@ -29,7 +29,7 @@ const HeroSeventhHeavenBlock = () => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundImage={`url(${''})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
