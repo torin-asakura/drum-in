@@ -7,11 +7,9 @@ import { Layout }        from '@ui/layout'
 import { Row }           from '@ui/layout'
 import { Text }          from '@ui/text'
 
-import { useBanner }     from './data'
-
-const BannerPolyrhythmicKeysBlock = () => {
-  const banner = useBanner()
-
+export const formatContent = (content:string | undefined):string|undefined => content?.replace(/<[^>]+>/g, '')
+const BannerPolyrhythmicKeysBlock = ({polyrhythmicKeysData}) => {
+  const description = formatContent(polyrhythmicKeysData?.content)
   return (
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
@@ -28,7 +26,7 @@ const BannerPolyrhythmicKeysBlock = () => {
               lineHeight={['default', 'default', 'semiSmall']}
               color='text.smokyWhite'
             >
-              {banner?.title}
+              {polyrhythmicKeysData?.title}
             </Text>
           </Box>
           <Layout flexBasis={[16, 24, 32]} flexShrink={0} />
@@ -44,7 +42,7 @@ const BannerPolyrhythmicKeysBlock = () => {
                 'text.smokyWhite',
               ]}
             >
-              {banner?.description}
+              {description}
             </Text>
           </Box>
           <Layout flexBasis={72} flexShrink={0} display={['none', 'none', 'flex']} />

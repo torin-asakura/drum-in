@@ -6,8 +6,8 @@ import { Box }                           from '@ui/layout'
 
 import { useHero }                       from './data'
 
-const HeroPolyrhythmicKeysBlock = () => {
-  const hero = useHero()
+const HeroPolyrhythmicKeysBlock = ({polyrhythmicKeysData}) => {
+  // const hero = useHero()
 
   return (
     <>
@@ -15,19 +15,19 @@ const HeroPolyrhythmicKeysBlock = () => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundImage={`url(${'hero?.backgroundForHero?.sourceUrl'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerPolyrhythmicKeysBlock />
+        <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData}/>
         <ProgramPolyrhythmicKeyslBlock scrollId='desktop-scroll' />
       </Box>
       <Box
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundImage={`url(${''})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center -60%'
