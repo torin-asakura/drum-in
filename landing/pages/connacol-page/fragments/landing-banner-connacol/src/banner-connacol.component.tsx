@@ -7,12 +7,15 @@ import { Column }               from '@ui/layout'
 import { Layout }               from '@ui/layout'
 import { Row }                  from '@ui/layout'
 import { Text }                 from '@ui/text'
+import { formatContent }        from '@shared/utils'
 
 import { TagBlock }             from './tag'
-import { useBanner }            from './data'
 
-const BannerConnacolBlock = () => {
-  const banner = useBanner()
+
+
+const BannerConnacolBlock = ({connacolData}) => {
+
+  const content = formatContent(connacolData?.content)
 
   return (
     <Row justifyContent='center'>
@@ -45,14 +48,14 @@ const BannerConnacolBlock = () => {
                   lineHeight={['default', 'default', 'semiSmall']}
                   color='text.smokyWhite'
                 >
-                  {banner?.title}
+                  {connacolData?.title}
                 </Text>
               </Box>
               <Layout order={[2, 2, 0]} flexBasis={[16, 24, 32]} flexShrink={0} />
               <Box order={[5, 5, 0]} flexDirection={['column', 'column', 'row']}>
-                {banner?.tags?.map(({ text }) => (
+                {connacolData?.individualCourseData.hero.benefits.map(({ content }) => (
                   <React.Fragment key={uniqid()}>
-                    <TagBlock text={text} />
+                    <TagBlock text={content} />
                     <Layout flexBasis={16} flexShrink={0} />
                   </React.Fragment>
                 ))}
@@ -70,7 +73,7 @@ const BannerConnacolBlock = () => {
                     'text.smokyWhite',
                   ]}
                 >
-                  {banner?.description}
+                  {content}
                 </Text>
               </Box>
             </Column>

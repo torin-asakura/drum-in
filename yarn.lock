@@ -2909,6 +2909,7 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.6.9"
     "@emotion/styled": "npm:11.11.0"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"

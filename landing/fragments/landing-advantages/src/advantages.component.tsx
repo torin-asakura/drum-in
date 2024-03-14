@@ -9,10 +9,11 @@ import { Text }          from '@ui/text'
 
 import { DesktopCards }  from './desktop-cards'
 import { MobileCards }   from './mobile-cards'
-import { useAdvantages } from './data'
 
-const AdvantagesBlock = () => {
-  const advantages = useAdvantages()
+
+
+const AdvantagesBlock = ({connacolData}) => {
+
 
   return (
     <Row justifyContent='center'>
@@ -29,15 +30,15 @@ const AdvantagesBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {advantages?.title}
+              {connacolData?.individualCourseData.hero?.cta}
             </Text>
             <Box display={['none', 'none', 'flex']} position='absolute' right={-23} top={-47}>
               <OpenOvalIcon width={421} height={150} />
             </Box>
           </Box>
           <Layout flexBasis={{ _: 24, tablet: 40, laptop: 85, wide: 179 }} flexShrink={0} />
-          <DesktopCards />
-          <MobileCards />
+          <DesktopCards connacolData={connacolData}/>
+          <MobileCards connacolData={connacolData}/>
           <Layout flexBasis={[32, 60, 190]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
