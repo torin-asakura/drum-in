@@ -99,7 +99,7 @@ export const FeelingOfTimePage = ({ SEO }: Props) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceFeelingOfTimeBlock />
+          <PriceFeelingOfTimeBlock feelingOfTimeData={individualCourse}/>
           <FaqBlock />
           <CtaBlock />
           <Box

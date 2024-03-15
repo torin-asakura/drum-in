@@ -9,8 +9,7 @@ import { Text }     from '@ui/text'
 import { Content }  from './content'
 import { usePrice } from './data'
 
-const PriceFeelingOfTimeBlock = () => {
-  const price = usePrice()
+const PriceFeelingOfTimeBlock = ({feelingOfTimeData}) => {
 
   return (
     <Row justifyContent='center'>
@@ -28,11 +27,11 @@ const PriceFeelingOfTimeBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {price?.title}
+              {feelingOfTimeData?.individualCourseData.price.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
-          <Content />
+          <Content feelingOfTimeData={feelingOfTimeData}/>
           <Layout flexBasis={[24, 32, 120]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
