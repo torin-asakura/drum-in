@@ -21,7 +21,7 @@ const HeroFeelingOfTimeBlock = ({feelingOfTimeData}) => {
         backgroundPosition='center top'
       >
         <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData}/>
-        <TargetAudienceFeelingOfTimeBlock />
+        <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData}/>
         <ProgramFeelingOfTimeBlock scrollId='desktop-scroll' />
       </Box>
       <Box
