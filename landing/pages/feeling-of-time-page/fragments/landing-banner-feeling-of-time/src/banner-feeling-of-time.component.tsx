@@ -10,8 +10,15 @@ import { Text }               from '@ui/text'
 import { Tape }               from './tape'
 import { useBanner }          from './data'
 
-const BannerFeelingOfTimeBlock = () => {
-  const banner = useBanner()
+
+export const formatContent = (content:string | undefined):string|undefined => content?.replace(/<[^>]+>/g, '')
+
+
+const BannerFeelingOfTimeBlock = ({feelingOfTimeData}) => {
+
+  const description = formatContent(feelingOfTimeData?.content)
+  const runningLine = `#${feelingOfTimeData?.individualCourseData.hero.runningLine}`
+
 
   return (
     <Box flexDirection='column' width='100%'>
@@ -37,7 +44,7 @@ const BannerFeelingOfTimeBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    {banner?.titleInHero}
+                    {feelingOfTimeData?.title}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -53,7 +60,7 @@ const BannerFeelingOfTimeBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      {banner?.descriptionCourseInHero}
+                      {description}
                     </Text>
                   </Box>
                 </Box>
@@ -76,7 +83,7 @@ const BannerFeelingOfTimeBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape level={banner?.levelCourseInHero} />
+      <Tape level={runningLine} />
     </Box>
   )
 }

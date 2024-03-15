@@ -7,8 +7,7 @@ import { Box }                              from '@ui/layout'
 
 import { useHero }                          from './data'
 
-const HeroFeelingOfTimeBlock = () => {
-  const hero = useHero()
+const HeroFeelingOfTimeBlock = ({feelingOfTimeData}) => {
 
   return (
     <>
@@ -16,12 +15,12 @@ const HeroFeelingOfTimeBlock = () => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundImage={`url(${'hero?.backgroundForHero?.sourceUrl'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerFeelingOfTimeBlock />
+        <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData}/>
         <TargetAudienceFeelingOfTimeBlock />
         <ProgramFeelingOfTimeBlock scrollId='desktop-scroll' />
       </Box>
@@ -29,7 +28,7 @@ const HeroFeelingOfTimeBlock = () => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundImage={`url(${'hero?.backgroundMobileForHero?.sourceUrl'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
