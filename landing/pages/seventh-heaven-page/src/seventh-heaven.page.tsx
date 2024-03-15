@@ -1,10 +1,10 @@
-import { CourseID }  from '@globals/data'
-import React         from 'react'
-import { useRef }    from 'react'
-import { useEffect } from 'react'
-import { useState }  from 'react'
+import React                            from 'react'
+import { useRef }                       from 'react'
+import { useEffect }                    from 'react'
+import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
+import { CourseID }                     from '@globals/data'
 import { PageID }                       from '@globals/data'
 import { CourseProcessBlock }           from '@landing/course-process-fragment'
 import { CtaBlock }                     from '@landing/cta-fragment'
@@ -19,7 +19,8 @@ import { StartLearningBlock }           from '@landing/start-learning-fragment'
 import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
-import {useIndividualCourse} from '@globals/data'
+import { useIndividualCourse }          from '@globals/data'
+
 import { useBackgrounds }               from './data'
 import { useSong }                      from './data'
 
@@ -31,8 +32,7 @@ interface Props {
 }
 
 export const SeventhHeavenPage = ({ SEO }: Props) => {
-
-  const {individualCourse} = useIndividualCourse(CourseID.SEVENTH_HEAVEN)
+  const { individualCourse } = useIndividualCourse(CourseID.SEVENTH_HEAVEN)
   console.log(individualCourse)
 
   const backgrounds = useBackgrounds()
@@ -86,7 +86,7 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.SEVENTH_HEAVEN} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroSeventhHeavenBlock seventhHeavenData={individualCourse}/>
+          <HeroSeventhHeavenBlock seventhHeavenData={individualCourse} />
           <CourseProcessBlock />
           <Box
             width='100%'

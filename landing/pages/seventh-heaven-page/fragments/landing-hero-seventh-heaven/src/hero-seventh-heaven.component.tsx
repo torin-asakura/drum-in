@@ -7,9 +7,7 @@ import { Box }                              from '@ui/layout'
 
 import { useHero }                          from './data'
 
-const HeroSeventhHeavenBlock = ({seventhHeavenData}) => {
-
-
+const HeroSeventhHeavenBlock = ({ seventhHeavenData }) => {
   return (
     <>
       <Box
@@ -21,8 +19,8 @@ const HeroSeventhHeavenBlock = ({seventhHeavenData}) => {
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData}/>
-        <TargetAudienceSeventhHeavenBlock />
+        <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
+        <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
         <ProgramSeventhHeavenBlock scrollId='desktop-scroll' />
       </Box>
       <Box
