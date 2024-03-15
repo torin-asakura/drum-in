@@ -9,9 +9,11 @@ import { Text }               from '@ui/text'
 
 import { Tape }               from './tape'
 import { useBanner }          from './data'
-export const formatContent = (content:string | undefined):string|undefined => content?.replace(/<[^>]+>/g, '')
 
-const BannerSeventhHeavenBlock = ({seventhHeavenData}) => {
+export const formatContent = (content: string | undefined): string | undefined =>
+  content?.replace(/<[^>]+>/g, '')
+
+const BannerSeventhHeavenBlock = ({ seventhHeavenData }) => {
   const description = formatContent(seventhHeavenData?.content)
   const runningLine = `#${seventhHeavenData?.individualCourseData.hero.runningLine}`
   return (
