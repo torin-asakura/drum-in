@@ -1,7 +1,9 @@
-import React                             from 'react'
-import { useRef }                        from 'react'
-import { useEffect }                     from 'react'
-import { useState }                      from 'react'
+import { CourseID }            from '@globals/data'
+import { useIndividualCourse } from '@globals/data'
+import React                   from 'react'
+import { useRef }              from 'react'
+import { useEffect }           from 'react'
+import { useState }            from 'react'
 
 import { LocomotiveScrollProvider }      from '@forks/react-locomotive-scroll'
 import { PageID }                        from '@globals/data'
@@ -30,6 +32,11 @@ interface Props {
 }
 
 export const FifthDimensionPage = ({ SEO }: Props) => {
+
+  const { individualCourse } = useIndividualCourse(CourseID.FIFTH_DIMENSION)
+
+  console.log(individualCourse)
+
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -81,7 +88,7 @@ export const FifthDimensionPage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.FIFTH_DIMENSION} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroFifthDimensionBlock />
+          <HeroFifthDimensionBlock fifthDimensionData={individualCourse}/>
           <CourseProcessBlock />
           <Box
             width='100%'

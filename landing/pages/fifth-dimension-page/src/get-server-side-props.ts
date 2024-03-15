@@ -1,14 +1,16 @@
-import { GET_SEO }        from '@globals/data'
-import { getClient }      from '@globals/data'
-import { setCacheHeader } from '@globals/data'
+import { PageID }           from '@globals/data'
+import { initializeApollo } from '@globals/data'
+import { GET_SEO }          from '@globals/data'
+import { setCacheHeader }   from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
-  const client = getClient()
+  const client = initializeApollo({})
 
   setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
+    variables: { id: PageID.FIFTH_DIMENSION },
   })
 
   const SEO = {

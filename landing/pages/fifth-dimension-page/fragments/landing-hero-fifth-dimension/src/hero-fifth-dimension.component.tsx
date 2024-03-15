@@ -7,8 +7,7 @@ import { Box }                               from '@ui/layout'
 
 import { useHero }                           from './data'
 
-const HeroFifthDimensionBlock = () => {
-  const hero = useHero()
+const HeroFifthDimensionBlock = ({fifthDimensionData}) => {
 
   return (
     <>
@@ -16,12 +15,12 @@ const HeroFifthDimensionBlock = () => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundImage={`url(${''})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerFifthDimensionBlock />
+        <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData}/>
         <TargetAudienceFifthDimensionBlock />
         <ProgramFifthDimensionBlock scrollId='desktop-scroll' />
       </Box>
@@ -29,7 +28,7 @@ const HeroFifthDimensionBlock = () => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundImage={`url(${''})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
