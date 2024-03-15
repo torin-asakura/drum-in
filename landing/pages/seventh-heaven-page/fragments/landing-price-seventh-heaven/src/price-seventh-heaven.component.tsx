@@ -9,8 +9,8 @@ import { Text }     from '@ui/text'
 import { Content }  from './content'
 import { usePrice } from './data'
 
-const PriceSeventhHeavenBlock = () => {
-  const price = usePrice()
+const PriceSeventhHeavenBlock = ({seventhHeavenData}) => {
+
 
   return (
     <Row justifyContent='center'>
@@ -28,11 +28,11 @@ const PriceSeventhHeavenBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {price?.title}
+              {seventhHeavenData?.individualCourseData.price.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
-          <Content />
+          <Content seventhHeavenData={seventhHeavenData}/>
           <Layout flexBasis={[24, 32, 120]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

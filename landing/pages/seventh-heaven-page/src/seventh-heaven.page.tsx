@@ -97,7 +97,7 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceSeventhHeavenBlock />
+          <PriceSeventhHeavenBlock seventhHeavenData={individualCourse}/>
           <FaqBlock />
           <CtaBlock />
           <Box
