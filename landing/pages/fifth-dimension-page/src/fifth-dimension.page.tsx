@@ -99,7 +99,7 @@ export const FifthDimensionPage = ({ SEO }: Props) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceFifthDimensionBlock />
+          <PriceFifthDimensionBlock fifthDimensionData={individualCourse}/>
           <FaqBlock />
           <CtaBlock />
           <Box

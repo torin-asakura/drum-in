@@ -18,11 +18,19 @@ import { Specifications }                from './specifications'
 import { Title }                         from './title'
 import { usePrice }                      from '../data'
 
-const Content = () => {
+const Content = ({fifthDimensionData}) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
   const price = usePrice()?.tuitionFees
+
+  const fullPrice = `
+    ${formatMessage({ id:'/', defaultMessage:'Весь курс за'})}
+    ${fifthDimensionData?.individualCourseData.price.fullPrice}
+    ${'₽'}
+    `
+
+  const count = parseInt(fifthDimensionData?.individualCourseData.price.liveTrainingsNumber)
 
   return (
     <Box
@@ -35,7 +43,7 @@ const Content = () => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={price?.priceInstallmentPlan}
+          currency={fifthDimensionData?.individualCourseData.price.monthlyPrice}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
@@ -61,7 +69,7 @@ const Content = () => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={price?.titleForButton} />
+        <FullPrice fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -73,7 +81,7 @@ const Content = () => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{price?.savingsWithOneTimePayment}</Text>
+            <Text color='text.green'>{fifthDimensionData?.individualCourseData.price.discount}</Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -115,11 +123,10 @@ const Content = () => {
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          firstLineCircle={price?.numberForTheCircle}
-          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
-          secondLineRectangle={price?.secondLineRectangle}
+          quantityMonths={fifthDimensionData?.individualCourseData.price.courseLengthInMonths}
+          quantityVideoLessons={fifthDimensionData?.individualCourseData.price.videoTrainingsNumber}
+          firstLineCircle={fifthDimensionData?.individualCourseData.price.liveTrainingsNumber}
+          secondLineCircle={<FormattedMessage id='course.price.plural_format_live_broadcast' values={{count}}/>}
           rectangleRotate={-20}
           circleRotate={20}
           squareRotate={-20}
