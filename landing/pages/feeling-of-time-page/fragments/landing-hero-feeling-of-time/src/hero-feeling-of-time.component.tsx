@@ -33,8 +33,8 @@ const HeroFeelingOfTimeBlock = ({feelingOfTimeData}) => {
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerFeelingOfTimeBlock />
-        <TargetAudienceFeelingOfTimeBlock />
+        <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData}/>
+        <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData}/>
         <ProgramFeelingOfTimeBlock scrollId='mobile-scroll' />
       </Box>
     </>
