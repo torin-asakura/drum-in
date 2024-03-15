@@ -10,9 +10,25 @@ import { Text }              from '@ui/text'
 import { ItemCard }          from './item'
 import { useTargetAudience } from './data'
 
-const TargetAudienceFifthDimensionBlock = () => {
-  const { formatMessage } = useIntl()
-  const targetAudience = useTargetAudience()
+const TargetAudienceFifthDimensionBlock = ({fifthDimensionData}) => {
+
+  const getCourseCondition = (number) =>
+    fifthDimensionData?.individualCourseData.hero.courseConditions?.find(
+      (el) => el.number === number
+    )
+
+  const firstCardData = {
+    number: `0${getCourseCondition(1)?.number}`,
+    description: getCourseCondition(1)?.description,
+  }
+  const secondCardData = {
+    number: `0${getCourseCondition(2)?.number}`,
+    description: getCourseCondition(2)?.description,
+  }
+  const thirdCardData = {
+    number: `0${getCourseCondition(3)?.number}`,
+    description: getCourseCondition(3)?.description,
+  }
 
   return (
     <Row justifyContent='center'>
@@ -29,7 +45,7 @@ const TargetAudienceFifthDimensionBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {targetAudience?.title}
+              {fifthDimensionData?.individualCourseData.hero.cta}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
@@ -39,28 +55,22 @@ const TargetAudienceFifthDimensionBlock = () => {
             height={{ _: 309, tablet: 550, laptop: 912, wide: 694 }}
           >
             <ItemCard
-              number={formatMessage({
-                id: 'landing_target_audience.first',
-              })}
-              text={targetAudience?.targetAudience?.firstCharacteristic}
+              number={firstCardData?.number}
+              text={firstCardData?.description}
               positionHorizontal={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               positionVertical={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
               zIndex={3}
             />
             <ItemCard
-              number={formatMessage({
-                id: 'landing_target_audience.second',
-              })}
-              text={targetAudience?.targetAudience?.secondCharacteristic}
+              number={secondCardData?.number}
+              text={secondCardData?.description}
               positionHorizontal={{ _: 45, tablet: 100, laptop: 0, wide: 313 }}
               positionVertical={{ _: 100, tablet: 175, laptop: 309, wide: 196 }}
               zIndex={2}
             />
             <ItemCard
-              number={formatMessage({
-                id: 'landing_target_audience.third',
-              })}
-              text={targetAudience?.targetAudience?.thirdCharacteristic}
+              number={thirdCardData?.number}
+              text={thirdCardData?.description}
               positionHorizontal={{ _: 89, tablet: 225, laptop: 0, wide: 626 }}
               positionVertical={{ _: 200, tablet: 350, laptop: 618, wide: 400 }}
               zIndex={1}

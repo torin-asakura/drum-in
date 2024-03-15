@@ -21,7 +21,7 @@ const HeroFifthDimensionBlock = ({fifthDimensionData}) => {
         backgroundPosition='center top'
       >
         <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData}/>
-        <TargetAudienceFifthDimensionBlock />
+        <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData}/>
         <ProgramFifthDimensionBlock scrollId='desktop-scroll' />
       </Box>
       <Box
