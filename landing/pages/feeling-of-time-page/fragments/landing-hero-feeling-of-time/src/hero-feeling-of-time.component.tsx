@@ -15,7 +15,7 @@ const HeroFeelingOfTimeBlock = ({feelingOfTimeData}) => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'hero?.backgroundForHero?.sourceUrl'})`}
+        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-hero-feeling-of-time-page.png'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
@@ -28,7 +28,7 @@ const HeroFeelingOfTimeBlock = ({feelingOfTimeData}) => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'hero?.backgroundMobileForHero?.sourceUrl'})`}
+        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/mobile-bg-hero-feeling-of-time-page.png'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
