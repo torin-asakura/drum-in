@@ -4,10 +4,7 @@ import { BannerPolyrhythmicKeysBlock }   from '@landing/banner-polyrhythmic-keys
 import { ProgramPolyrhythmicKeyslBlock } from '@landing/program-polyrhythmic-keys-fragment'
 import { Box }                           from '@ui/layout'
 
-import { useHero }                       from './data'
-
 const HeroPolyrhythmicKeysBlock = ({polyrhythmicKeysData}) => {
-  // const hero = useHero()
 
   return (
     <>
@@ -15,7 +12,7 @@ const HeroPolyrhythmicKeysBlock = ({polyrhythmicKeysData}) => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'hero?.backgroundForHero?.sourceUrl'})`}
+        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-opening-rhythm-desktop.webp'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'

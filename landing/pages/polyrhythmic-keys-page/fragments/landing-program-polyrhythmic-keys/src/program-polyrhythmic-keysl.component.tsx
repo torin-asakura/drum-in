@@ -9,10 +9,8 @@ import { Layout }              from '@ui/layout'
 
 import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
-import { useProgram }          from './data'
 
 const ProgramPolyrhythmicKeyslBlock = ({ scrollId }) => {
-  const program = useProgram()
 
   return (
     <>
@@ -54,7 +52,7 @@ const ProgramPolyrhythmicKeyslBlock = ({ scrollId }) => {
                   wide: '-1000px center',
                 }}
                 backgroundSize='100%'
-                backgroundImage={`url(${program?.background?.sourceUrl})`}
+                backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/progress-horizontal-section.png'})`}
               >
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 1600, wide: 2000 }} flexShrink={0} />
                 <Box width={{ _: 0, tablet: 0, laptop: 2000, wide: 2612 }}>
