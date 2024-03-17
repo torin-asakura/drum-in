@@ -16,7 +16,7 @@ const HeroConnacolBlock = ({connacolData}) => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'url'})`}
+        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-opening-rhythm-desktop.webp'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
@@ -29,7 +29,7 @@ const HeroConnacolBlock = ({connacolData}) => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'url'})`}
+        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-opening-rhythm-mobile.webp'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'

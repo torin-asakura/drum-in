@@ -28,10 +28,9 @@ export const ConnacolPage = () => {
 
 
 
-  const {individualCourse,background} = useIndividualCourse(CourseID.CONNACOL)
+  const {individualCourse} = useIndividualCourse(CourseID.CONNACOL)
 
 
-  console.log(individualCourse)
 
 
 
@@ -90,7 +89,7 @@ export const ConnacolPage = () => {
           <CourseProcessBlock />
           <Box
             width='100%'
-            // backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-teacher-desktop.webp'})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
@@ -103,7 +102,7 @@ export const ConnacolPage = () => {
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            // backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-footer-desktop.webp'})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -113,7 +112,7 @@ export const ConnacolPage = () => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            // backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-footer-mobile.webp'})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

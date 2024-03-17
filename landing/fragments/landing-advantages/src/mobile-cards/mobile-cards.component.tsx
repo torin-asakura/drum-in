@@ -10,7 +10,7 @@ import { SwiperSlide }   from '@ui/slider'
 
 import { Card }          from '../card'
 
-const MobileCards = memo(({connacolData}) => {
+const MobileCards = ({connacolData}) => {
 
   // TODO : incorrect mobile cards display
   const getCount = (number:number):string => `0${number}`
@@ -37,6 +37,6 @@ const MobileCards = memo(({connacolData}) => {
       </Condition>
     </Row>
   )
-})
+}
 
 export { MobileCards }
