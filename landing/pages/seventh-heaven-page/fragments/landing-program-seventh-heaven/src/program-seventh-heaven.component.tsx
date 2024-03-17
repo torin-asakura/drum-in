@@ -55,7 +55,7 @@ const ProgramSeventhHeavenBlock = ({ scrollId }) => {
                   wide: '-1000px center',
                 }}
                 backgroundSize='100%'
-                backgroundImage={`url(${program?.background?.sourceUrl})`}
+                backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/progress-horizontal-section.png'})`}
               >
                 <Layout flexBasis={{ _: 0, tablet: 0, laptop: 2700, wide: 2000 }} flexShrink={0} />
                 <Box width={{ _: 0, tablet: 0, laptop: 2000, wide: 2612 }}>
