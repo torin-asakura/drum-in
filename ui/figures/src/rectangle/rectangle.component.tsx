@@ -4,7 +4,7 @@ import { FC }             from 'react'
 import { Background }       from '@ui/background'
 import { Box }              from '@ui/layout'
 import { Text }             from '@ui/text'
-import { FormattedMessage } from 'react-intl/lib'
+import { FormattedMessage } from 'react-intl'
 
 import { RectangleProps } from './rectangle.interfaces'
 const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {

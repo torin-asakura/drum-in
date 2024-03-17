@@ -9,7 +9,7 @@ import { Row }           from '@ui/layout'
 import { Card }          from '../card'
 import { getUi }         from '../helpers'
 
-const DesktopCards = memo(({connacolData}) => {
+const DesktopCards = ({connacolData}) => {
 
   const getCount = (number:number):string => `0${number}`
   return (
@@ -33,6 +33,6 @@ const DesktopCards = memo(({connacolData}) => {
       ))}
     </Row>
   )
-})
+}
 
 export { DesktopCards }
