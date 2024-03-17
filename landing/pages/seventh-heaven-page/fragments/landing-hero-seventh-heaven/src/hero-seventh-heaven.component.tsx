@@ -14,7 +14,7 @@ const HeroSeventhHeavenBlock = ({ seventhHeavenData }) => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${''})`}
+        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-hero-seventh-heaven-page.png'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
@@ -27,7 +27,7 @@ const HeroSeventhHeavenBlock = ({ seventhHeavenData }) => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${''})`}
+        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/mobile-bg-hero-seventh-heaven-page.png'})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
