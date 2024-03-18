@@ -11,10 +11,8 @@ import { ProgressBar }      from '@ui/progress-bar'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-import { useProgram }       from '../data'
-
 const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
-  const program = useProgram()
+  const mock = ''
 
   return (
     <Box
@@ -41,7 +39,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {program?.numberVideoTutorials}
+                {mock}
               </Text>
             </Box>
             <Layout flexBasis={[8, 12, 12]} flexShrink={0} />
@@ -52,7 +50,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                {program?.numberOfMonths}
+                {mock}
               </Text>
             </Box>
           </Column>
@@ -61,7 +59,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[85, 125, 0]} />
           <Box flexDirection='column' height={[30, 50, 0]}>
-            {program?.secondListOfTopics?.split(';').map((element) => (
+            {mock.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -81,7 +79,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[60, 70, 0]} />
           <Box flexDirection='column' height={[30, 50, 0]}>
-            {program?.firstListOfTopics?.split(';').map((element) => (
+            {mock.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -114,7 +112,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {program?.benefit}
+                {mock}
               </Text>
             </Box>
           </Box>
@@ -123,7 +121,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[60, 100, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {program?.thirdListOfTopics?.split(';').map((element) => (
+            {mock.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
