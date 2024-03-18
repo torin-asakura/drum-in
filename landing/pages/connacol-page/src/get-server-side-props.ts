@@ -10,12 +10,14 @@ export const getServerSideProps = async ({ res }) => {
 
   setCacheHeader(res, 3600, 300)
 
-  // const course = client.query({
-  //   query: GET_INDIVIDUAL_COURSE,
-  //   variables: { id: CourseID.CONNACOL },
-  // })
+  const { data: course } = await client.query({
+    query: GET_INDIVIDUAL_COURSE,
+    variables: { id: CourseID.CONNACOL },
+  })
 
-  // await Promise.allSettled([course])
+  const connacolData = course?.individualCourse
+  const background = course?.individualCourse?.individualCourseData?.background
+
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
@@ -28,5 +30,5 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return { props: { SEO } }
+  return { props: {  SEO,connacolData,background } }
 }
