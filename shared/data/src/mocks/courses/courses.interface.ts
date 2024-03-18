@@ -5,7 +5,7 @@ export interface Courses {
   price: string
   quantityVideoLessons: string
   circleFirstLine: string
-  circleSecondLine: string
+  circleSecondLine: string | JSX.Element
   quantityMonths: string
   textMonths: string
   itemId: string
