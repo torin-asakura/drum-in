@@ -19,7 +19,6 @@ import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
-import { useBackgrounds }                  from './data'
 import { useSong }                         from './data'
 
 interface SEOProp {
@@ -29,8 +28,7 @@ interface Props {
   SEO: SEOProp
 }
 
-export const PolyrhythmicKeysPage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const PolyrhythmicKeysPage = ({ polyrhythmicKeysData,background }: Props) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -79,26 +77,26 @@ export const PolyrhythmicKeysPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo id={PageID.POLIRYTHMIC_KEYS} />
+        <Seo id={PageID.POLYRYTHMIC_KEYS} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroPolyrhythmicKeysBlock />
+          <HeroPolyrhythmicKeysBlock background={background} polyrhythmicKeysData={polyrhythmicKeysData}/>
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${background.desktop.teacher.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PricePolyrhythmicKeyslBlock />
+          <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData}/>
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background.desktop.footer.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -108,7 +106,7 @@ export const PolyrhythmicKeysPage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background.mobile.footer.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

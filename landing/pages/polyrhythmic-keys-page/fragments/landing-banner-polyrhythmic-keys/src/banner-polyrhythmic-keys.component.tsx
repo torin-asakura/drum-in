@@ -6,8 +6,8 @@ import { Column }        from '@ui/layout'
 import { Layout }        from '@ui/layout'
 import { Row }           from '@ui/layout'
 import { Text }          from '@ui/text'
+import {formatContent} from '@shared/utils'
 
-export const formatContent = (content:string | undefined):string|undefined => content?.replace(/<[^>]+>/g, '')
 const BannerPolyrhythmicKeysBlock = ({polyrhythmicKeysData}) => {
   const description = formatContent(polyrhythmicKeysData?.content)
   return (
