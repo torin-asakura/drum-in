@@ -10,7 +10,7 @@ import { Layout }              from '@ui/layout'
 import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 
-const ProgramFeelingOfTimeBlock = ({ scrollId }) => (
+const ProgramFeelingOfTimeBlock = ({ feelingOfTimeData, scrollId }) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <Box
@@ -57,7 +57,7 @@ const ProgramFeelingOfTimeBlock = ({ scrollId }) => (
                 <ProgramIcon width='100%' height='100%' />
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 720, wide: 970 }} flexShrink={0} />
-              <ContentCourse />
+              <ContentCourse feelingOfTimeData={feelingOfTimeData} />
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 627 }} flexShrink={0} />
               <Column justifyContent='end'>
                 <Box width={{ _: 0, tablet: 0, laptop: 170, wide: 283 }}>
