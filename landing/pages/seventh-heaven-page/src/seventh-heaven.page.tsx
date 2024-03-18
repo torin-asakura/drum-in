@@ -22,7 +22,6 @@ import { Box }                          from '@ui/layout'
 import { useSong }                      from './data'
 
 export const SeventhHeavenPage = ({ seventhHeavenData, background }) => {
-
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -84,7 +83,7 @@ export const SeventhHeavenPage = ({ seventhHeavenData, background }) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData}/>
+          <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
           <FaqBlock />
           <CtaBlock />
           <Box

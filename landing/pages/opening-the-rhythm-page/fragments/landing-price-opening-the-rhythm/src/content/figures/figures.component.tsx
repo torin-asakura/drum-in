@@ -19,7 +19,6 @@ const Figures: FC<FiguresProps> = ({
   rectangleRotate,
   rectanglePositionY,
   rectanglePositionX,
-  secondLineRectangle,
 }) => (
   <Box display={['none', 'none', 'flex']}>
     <Box position='absolute' left={20} bottom={20}>
