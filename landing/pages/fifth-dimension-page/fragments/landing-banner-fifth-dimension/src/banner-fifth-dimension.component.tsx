@@ -6,18 +6,13 @@ import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
-
 import { Tape }               from './tape'
-import { useBanner }          from './data'
-
-export const formatContent = (content:string | undefined):string|undefined => content?.replace(/<[^>]+>/g, '')
+import {formatContent} from '@shared/utils'
 
 const BannerFifthDimensionBlock = ({fifthDimensionData}) => {
-  const banner = useBanner()
 
   const description = formatContent(fifthDimensionData?.content)
   const runningLine = `#${fifthDimensionData?.individualCourseData.hero.runningLine}`
-
 
   return (
     <Box flexDirection='column' width='100%'>

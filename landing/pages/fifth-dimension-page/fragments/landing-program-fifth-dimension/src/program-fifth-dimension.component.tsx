@@ -11,10 +11,7 @@ import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 import { useProgram }          from './data'
 
-const ProgramFifthDimensionBlock = ({ scrollId }) => {
-  const program = useProgram()
-
-  return (
+const ProgramFifthDimensionBlock = ({ scrollId }) =>  (
     <>
       <Row justifyContent='center' display={['none', 'none', 'flex']}>
         <Box
@@ -106,6 +103,6 @@ const ProgramFifthDimensionBlock = ({ scrollId }) => {
       </Row>
     </>
   )
-}
+
 
 export { ProgramFifthDimensionBlock }

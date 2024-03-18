@@ -1,5 +1,4 @@
-import { CourseID }            from '@globals/data'
-import { useIndividualCourse } from '@globals/data'
+
 import React                   from 'react'
 import { useRef }              from 'react'
 import { useEffect }           from 'react'
@@ -23,17 +22,7 @@ import { Box }                           from '@ui/layout'
 
 import { useSong }                       from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const FifthDimensionPage = ({ SEO }: Props) => {
-
-  const { individualCourse } = useIndividualCourse(CourseID.FIFTH_DIMENSION)
-
+export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
 
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -85,24 +74,24 @@ export const FifthDimensionPage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.FIFTH_DIMENSION} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroFifthDimensionBlock fifthDimensionData={individualCourse}/>
+          <HeroFifthDimensionBlock background={background} fifthDimensionData={fifthDimensionData}/>
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-middle-fifth-dimension-page.png'})`}
+            backgroundImage={`url(${background.desktop.teacher.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceFifthDimensionBlock fifthDimensionData={individualCourse}/>
+          <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData}/>
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-footer-fifth-dimension-page.png'})`}
+            backgroundImage={`url(${background.desktop.footer.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -112,7 +101,7 @@ export const FifthDimensionPage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-mobile-footer-fifth-dimension-page.png'})`}
+            backgroundImage={`url(${background.mobile.footer.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

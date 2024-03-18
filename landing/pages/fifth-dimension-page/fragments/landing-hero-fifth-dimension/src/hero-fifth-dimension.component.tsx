@@ -5,17 +5,14 @@ import { ProgramFifthDimensionBlock }        from '@landing/program-fifth-dimens
 import { TargetAudienceFifthDimensionBlock } from '@landing/target-audience-fifth-dimension-fragment'
 import { Box }                               from '@ui/layout'
 
-import { useHero }                           from './data'
 
-const HeroFifthDimensionBlock = ({fifthDimensionData}) => {
-
-  return (
+const HeroFifthDimensionBlock = ({background,fifthDimensionData}) =>  (
     <>
       <Box
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-hero-fifth-dimension-page.png'})`}
+        backgroundImage={`url(${background.desktop.hero.node.sourceUrl})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
@@ -28,17 +25,17 @@ const HeroFifthDimensionBlock = ({fifthDimensionData}) => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/mobile-bg-hero-fifth-dimension-page.png'})`}
+        backgroundImage={`url(${background.mobile.hero.node.sourceUrl})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerFifthDimensionBlock />
-        <TargetAudienceFifthDimensionBlock />
+        <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData}/>
+        <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData}/>
         <ProgramFifthDimensionBlock scrollId='mobile-scroll' />
       </Box>
     </>
   )
-}
+
 
 export { HeroFifthDimensionBlock }

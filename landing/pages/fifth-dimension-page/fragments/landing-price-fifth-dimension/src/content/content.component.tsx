@@ -16,13 +16,11 @@ import { Figures }                       from './figures'
 import { FullPrice }                     from './full-price'
 import { Specifications }                from './specifications'
 import { Title }                         from './title'
-import { usePrice }                      from '../data'
 
 const Content = ({fifthDimensionData}) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
-  const price = usePrice()?.tuitionFees
 
   const fullPrice = `
     ${formatMessage({ id:'/', defaultMessage:'Весь курс за'})}
@@ -31,6 +29,7 @@ const Content = ({fifthDimensionData}) => {
     `
 
   const count = parseInt(fifthDimensionData?.individualCourseData.price.liveTrainingsNumber)
+  const mock = ''
 
   return (
     <Box
@@ -50,11 +49,11 @@ const Content = ({fifthDimensionData}) => {
         />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          firstLineCircle={price?.numberForTheCircle}
-          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
-          wordMonth={price?.secondLineRectangle}
+          quantityMonths={mock}
+          quantityVideoLessons={mock}
+          firstLineCircle={mock}
+          secondLineCircle={mock}
+          wordMonth={mock}
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -93,7 +92,7 @@ const Content = ({fifthDimensionData}) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceInstallmentPlan}
+              {mock}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -107,7 +106,7 @@ const Content = ({fifthDimensionData}) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceInstallmentPlan}
+              {mock}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
