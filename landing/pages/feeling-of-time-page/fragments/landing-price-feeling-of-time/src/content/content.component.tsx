@@ -16,21 +16,20 @@ import { Figures }                      from './figures'
 import { FullPrice }                    from './full-price'
 import { Specifications }               from './specifications'
 import { Title }                        from './title'
-import { usePrice }                     from '../data'
 
-const Content = ({feelingOfTimeData}) => {
+const Content = ({ feelingOfTimeData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
-  const price = usePrice()?.tuitionFees
 
   const fullPrice = `
-    ${formatMessage({ id:'/', defaultMessage:'Весь курс за'})}
+    ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })}
     ${feelingOfTimeData?.individualCourseData.price.fullPrice}
     ${'₽'}
     `
 
-  const count = parseInt(feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber)
+  const count = parseInt(feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber, 10)
+  const mock = ''
 
   return (
     <Box
@@ -50,11 +49,11 @@ const Content = ({feelingOfTimeData}) => {
         />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          firstLineCircle={price?.numberForTheCircle}
-          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
-          wordMonth={price?.secondLineRectangle}
+          quantityMonths={mock}
+          quantityVideoLessons={mock}
+          firstLineCircle={mock}
+          secondLineCircle={mock}
+          wordMonth={mock}
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -93,7 +92,7 @@ const Content = ({feelingOfTimeData}) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceInstallmentPlan}
+              {mock}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -107,7 +106,7 @@ const Content = ({feelingOfTimeData}) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceInstallmentPlan}
+              {mock}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -126,7 +125,9 @@ const Content = ({feelingOfTimeData}) => {
           quantityMonths={feelingOfTimeData?.individualCourseData.price.courseLengthInMonths}
           quantityVideoLessons={feelingOfTimeData?.individualCourseData.price.videoTrainingsNumber}
           firstLineCircle={feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber}
-          secondLineCircle={<FormattedMessage id='course.price.plural_format_live_broadcast' values={{count}}/>}
+          secondLineCircle={
+            <FormattedMessage id='course.price.plural_format_live_broadcast' values={{ count }} />
+          }
           rectangleRotate={-20}
           circleRotate={20}
           squareRotate={-20}
