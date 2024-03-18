@@ -24,16 +24,7 @@ import { useSong } from './data'
 
 
 
-export const ConnacolPage = () => {
-
-
-
-  const {individualCourse} = useIndividualCourse(CourseID.CONNACOL)
-
-
-
-
-
+export const ConnacolPage = ({connacolData,background}) => {
 
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -85,24 +76,24 @@ export const ConnacolPage = () => {
         <HeaderBlock />
         <Seo id={PageID.CONNACOL} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroConnacolBlock connacolData={individualCourse}/>
+          <HeroConnacolBlock background={background} connacolData={connacolData}/>
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-teacher-desktop.webp'})`}
+            backgroundImage={`url(${background.desktop.teacher.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceConnacolBlock connacolData={individualCourse}/>
+          <PriceConnacolBlock connacolData={connacolData}/>
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-footer-desktop.webp'})`}
+            backgroundImage={`url(${background.desktop.footer.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -112,7 +103,7 @@ export const ConnacolPage = () => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2024/03/bg-footer-mobile.webp'})`}
+            backgroundImage={`url(${background.mobile.footer.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
