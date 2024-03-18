@@ -14,13 +14,11 @@ import { Text }                            from '@ui/text'
 import { Figures }                         from './figures'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
-import { usePrice }                        from '../data'
 
-const Content = ({polyrhythmicKeysData}) => {
+const Content = ({ polyrhythmicKeysData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const price = usePrice()?.tuitionFeesWithoutInstallment
-
+  const mock = ''
   return (
     <Box
       backgroundColor='background.smokyWhite'
@@ -40,17 +38,13 @@ const Content = ({polyrhythmicKeysData}) => {
           >
             <FormattedMessage id='landing_price.old_price' />
             <Space />
-            {price?.oldPrice}
+            {polyrhythmicKeysData?.individualCourseData.price.oldPrice}
           </Text>
         </Box>
         <Layout flexBasis={[18, 24, 32]} />
         <Title price={polyrhythmicKeysData?.individualCourseData.price.monthlyPrice} />
         <Layout flexBasis={[40, 50, 32]} />
-        <Specifications
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          wordMonth={price?.secondLineRectangle}
-        />
+        <Specifications quantityMonths={mock} quantityVideoLessons={mock} wordMonth={mock} />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
             size='withoutPaddingBigHeight'
@@ -98,9 +92,10 @@ const Content = ({polyrhythmicKeysData}) => {
         />
         <Layout flexBasis={[23, 30, 155]} />
         <Figures
-          quantityMonths={'1'}
-          quantityVideoLessons={polyrhythmicKeysData?.individualCourseData.price.videoTrainingsNumber}
-          secondLineRectangle={price?.secondLineRectangle}
+          quantityMonths={polyrhythmicKeysData?.individualCourseData.price.courseLengthInMonths}
+          quantityVideoLessons={
+            polyrhythmicKeysData?.individualCourseData.price.videoTrainingsNumber
+          }
           rectangleRotate={-10}
           squareRotate={-5}
           rectanglePositionX={8.5}
