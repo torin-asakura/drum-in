@@ -1,8 +1,7 @@
-
-import React                   from 'react'
-import { useRef }              from 'react'
-import { useEffect }           from 'react'
-import { useState }            from 'react'
+import React                             from 'react'
+import { useRef }                        from 'react'
+import { useEffect }                     from 'react'
+import { useState }                      from 'react'
 
 import { LocomotiveScrollProvider }      from '@forks/react-locomotive-scroll'
 import { PageID }                        from '@globals/data'
@@ -23,7 +22,6 @@ import { Box }                           from '@ui/layout'
 import { useSong }                       from './data'
 
 export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
-
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -74,7 +72,10 @@ export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
         <HeaderBlock />
         <Seo id={PageID.FIFTH_DIMENSION} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroFifthDimensionBlock background={background} fifthDimensionData={fifthDimensionData}/>
+          <HeroFifthDimensionBlock
+            background={background}
+            fifthDimensionData={fifthDimensionData}
+          />
           <CourseProcessBlock />
           <Box
             width='100%'
@@ -85,7 +86,7 @@ export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData}/>
+          <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
           <FaqBlock />
           <CtaBlock />
           <Box

@@ -4,7 +4,6 @@ import { PageID }                from '@globals/data'
 import { GET_SEO }               from '@globals/data'
 import { initializeApollo }      from '@globals/data'
 import { setCacheHeader }        from '@globals/data'
-import FifthDimensionPage        from './fifth-dimension.page'
 
 export const getServerSideProps = async ({ res }) => {
   const client = initializeApollo({})

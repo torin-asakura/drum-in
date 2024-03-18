@@ -1,15 +1,14 @@
-import React                 from 'react'
+import React        from 'react'
 
-import { Box }               from '@ui/layout'
-import { Column }            from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Text }              from '@ui/text'
+import { Box }      from '@ui/layout'
+import { Column }   from '@ui/layout'
+import { Layout }   from '@ui/layout'
+import { Row }      from '@ui/layout'
+import { Text }     from '@ui/text'
 
-import { ItemCard }          from './item'
+import { ItemCard } from './item'
 
-const TargetAudienceFifthDimensionBlock = ({fifthDimensionData}) => {
-
+const TargetAudienceFifthDimensionBlock = ({ fifthDimensionData }) => {
   const getCourseCondition = (number) =>
     fifthDimensionData?.individualCourseData.hero.courseConditions?.find(
       (el) => el.number === number

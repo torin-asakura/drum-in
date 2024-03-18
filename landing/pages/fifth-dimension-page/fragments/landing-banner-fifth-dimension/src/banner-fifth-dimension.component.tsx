@@ -6,11 +6,11 @@ import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
+import { formatContent }      from '@shared/utils'
+
 import { Tape }               from './tape'
-import {formatContent} from '@shared/utils'
 
-const BannerFifthDimensionBlock = ({fifthDimensionData}) => {
-
+const BannerFifthDimensionBlock = ({ fifthDimensionData }) => {
   const description = formatContent(fifthDimensionData?.content)
   const runningLine = `#${fifthDimensionData?.individualCourseData.hero.runningLine}`
 

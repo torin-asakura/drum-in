@@ -17,18 +17,18 @@ import { FullPrice }                     from './full-price'
 import { Specifications }                from './specifications'
 import { Title }                         from './title'
 
-const Content = ({fifthDimensionData}) => {
+const Content = ({ fifthDimensionData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
 
   const fullPrice = `
-    ${formatMessage({ id:'/', defaultMessage:'Весь курс за'})}
+    ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })}
     ${fifthDimensionData?.individualCourseData.price.fullPrice}
     ${'₽'}
     `
 
-  const count = parseInt(fifthDimensionData?.individualCourseData.price.liveTrainingsNumber)
+  const count = parseInt(fifthDimensionData?.individualCourseData.price.liveTrainingsNumber, 10)
   const mock = ''
 
   return (
@@ -80,7 +80,9 @@ const Content = ({fifthDimensionData}) => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{fifthDimensionData?.individualCourseData.price.discount}</Text>
+            <Text color='text.green'>
+              {fifthDimensionData?.individualCourseData.price.discount}
+            </Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -125,7 +127,9 @@ const Content = ({fifthDimensionData}) => {
           quantityMonths={fifthDimensionData?.individualCourseData.price.courseLengthInMonths}
           quantityVideoLessons={fifthDimensionData?.individualCourseData.price.videoTrainingsNumber}
           firstLineCircle={fifthDimensionData?.individualCourseData.price.liveTrainingsNumber}
-          secondLineCircle={<FormattedMessage id='course.price.plural_format_live_broadcast' values={{count}}/>}
+          secondLineCircle={
+            <FormattedMessage id='course.price.plural_format_live_broadcast' values={{ count }} />
+          }
           rectangleRotate={-20}
           circleRotate={20}
           squareRotate={-20}

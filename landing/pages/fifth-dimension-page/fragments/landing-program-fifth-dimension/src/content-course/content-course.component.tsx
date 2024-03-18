@@ -11,7 +11,6 @@ import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-
 const ContentCourse = () => {
   const mock = ''
 
