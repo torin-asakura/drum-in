@@ -21,14 +21,7 @@ import { Box }                             from '@ui/layout'
 
 import { useSong }                         from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const PolyrhythmicKeysPage = ({ polyrhythmicKeysData,background }: Props) => {
+export const PolyrhythmicKeysPage = ({ polyrhythmicKeysData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -79,7 +72,10 @@ export const PolyrhythmicKeysPage = ({ polyrhythmicKeysData,background }: Props)
         <HeaderBlock />
         <Seo id={PageID.POLYRYTHMIC_KEYS} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroPolyrhythmicKeysBlock background={background} polyrhythmicKeysData={polyrhythmicKeysData}/>
+          <HeroPolyrhythmicKeysBlock
+            background={background}
+            polyrhythmicKeysData={polyrhythmicKeysData}
+          />
           <CourseProcessBlock />
           <Box
             width='100%'
@@ -90,7 +86,7 @@ export const PolyrhythmicKeysPage = ({ polyrhythmicKeysData,background }: Props)
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData}/>
+          <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
           <FaqBlock />
           <CtaBlock />
           <Box
