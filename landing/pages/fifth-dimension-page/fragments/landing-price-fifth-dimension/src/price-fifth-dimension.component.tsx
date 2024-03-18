@@ -7,11 +7,8 @@ import { Row }      from '@ui/layout'
 import { Text }     from '@ui/text'
 
 import { Content }  from './content'
-import { usePrice } from './data'
 
-const PriceFifthDimensionBlock = ({fifthDimensionData}) => {
-
-  return (
+const PriceFifthDimensionBlock = ({fifthDimensionData}) =>  (
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -38,6 +35,5 @@ const PriceFifthDimensionBlock = ({fifthDimensionData}) => {
       </Box>
     </Row>
   )
-}
 
 export { PriceFifthDimensionBlock }
