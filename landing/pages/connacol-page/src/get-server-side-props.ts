@@ -18,7 +18,6 @@ export const getServerSideProps = async ({ res }) => {
   const connacolData = course?.individualCourse
   const background = course?.individualCourse?.individualCourseData?.background
 
-
   const { data: seoData } = await client.query({
     query: GET_SEO,
     variables: { id: PageID.CONNACOL },
@@ -30,5 +29,5 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return { props: {  SEO,connacolData,background } }
+  return { props: { SEO, connacolData, background } }
 }

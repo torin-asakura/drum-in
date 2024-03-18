@@ -1,9 +1,7 @@
-import { PageID }                  from '@globals/data'
-import { GET_SEO }                 from '@globals/data'
-import { getClient }               from '@globals/data'
-import { setCacheHeader }          from '@globals/data'
-
-import { GET_POLYRHYTMIC_KEY_SEO } from './data'
+import { PageID }         from '@globals/data'
+import { GET_SEO }        from '@globals/data'
+import { getClient }      from '@globals/data'
+import { setCacheHeader } from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()

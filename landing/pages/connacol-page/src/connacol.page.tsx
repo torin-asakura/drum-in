@@ -1,6 +1,9 @@
+import React                        from 'react'
+import { useRef }                   from 'react'
+import { useEffect }                from 'react'
+import { useState }                 from 'react'
+
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { CourseID }                 from '@globals/data'
-import { useIndividualCourse }      from '@globals/data'
 import { PageID }                   from '@globals/data'
 import { CourseProcessBlock }       from '@landing/course-process-fragment'
 import { CtaBlock }                 from '@landing/cta-fragment'
@@ -15,17 +18,10 @@ import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
-import React                        from 'react'
-import { useRef }                   from 'react'
-import { useEffect }                from 'react'
-import { useState }                 from 'react'
 
-import { useSong } from './data'
+import { useSong }                  from './data'
 
-
-
-export const ConnacolPage = ({connacolData,background}) => {
-
+export const ConnacolPage = ({ connacolData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -76,7 +72,7 @@ export const ConnacolPage = ({connacolData,background}) => {
         <HeaderBlock />
         <Seo id={PageID.CONNACOL} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroConnacolBlock background={background} connacolData={connacolData}/>
+          <HeroConnacolBlock background={background} connacolData={connacolData} />
           <CourseProcessBlock />
           <Box
             width='100%'
@@ -87,7 +83,7 @@ export const ConnacolPage = ({connacolData,background}) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceConnacolBlock connacolData={connacolData}/>
+          <PriceConnacolBlock connacolData={connacolData} />
           <FaqBlock />
           <CtaBlock />
           <Box

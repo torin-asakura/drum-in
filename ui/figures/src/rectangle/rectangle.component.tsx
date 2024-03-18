@@ -1,17 +1,21 @@
-import React              from 'react'
-import { FC }             from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import { Background }       from '@ui/background'
 import { Box }              from '@ui/layout'
 import { Text }             from '@ui/text'
-import { FormattedMessage } from 'react-intl'
 
-import { RectangleProps } from './rectangle.interfaces'
+import { RectangleProps }   from './rectangle.interfaces'
+
 const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {
-
-  const count = parseInt(firstLine)
-  return(
-    <Background gradient={color} borderRadius='medium' style={{ transform: `rotate(${rotate}deg)` }}>
+  const count = parseInt(firstLine, 10)
+  return (
+    <Background
+      gradient={color}
+      borderRadius='medium'
+      style={{ transform: `rotate(${rotate}deg)` }}
+    >
       <Box
         display='flex'
         flexDirection='column'
@@ -39,7 +43,7 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {
             fontSize={['semiTiny', 'tiny', 'micro']}
             color='text.smokyWhite'
           >
-            <FormattedMessage id='course.price.plural_format_months' values={{count}}/>
+            <FormattedMessage id='course.price.plural_format_months' values={{ count }} />
           </Text>
         </Box>
       </Box>

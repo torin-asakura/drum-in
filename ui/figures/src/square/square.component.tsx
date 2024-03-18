@@ -1,18 +1,17 @@
-import React           from 'react'
-import { FC }          from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import { Background }       from '@ui/background'
 import { Box }              from '@ui/layout'
 import { Text }             from '@ui/text'
-import { FormattedMessage } from 'react-intl'
 
-import { SquareProps } from './square.interfaces'
+import { SquareProps }      from './square.interfaces'
 
 const Square: FC<SquareProps> = ({ firstLine, rotate }) => {
+  const count = parseInt(firstLine, 10)
 
-  const count = parseInt(firstLine)
-
-  return(
+  return (
     <Background
       gradient='grayWhiteGradient'
       borderRadius={['big', 'extra', 'bigger']}
@@ -45,7 +44,7 @@ const Square: FC<SquareProps> = ({ firstLine, rotate }) => {
             fontSize={['semiTiny', 'tiny', 'micro']}
             color='text.blackAmber'
           >
-            <FormattedMessage id='course.price.plural_format_video_lesson' values={{count}}/>
+            <FormattedMessage id='course.price.plural_format_video_lesson' values={{ count }} />
           </Text>
         </Box>
       </Box>

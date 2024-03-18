@@ -1,16 +1,14 @@
-import React                   from 'react'
+import React                  from 'react'
 
-import { CourseID }            from '@globals/data'
-import { RightDownArrowIcon }  from '@ui/icons'
-import { Box }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { useCourse }           from '@globals/data'
-import { useIndividualCourse } from '@globals/data'
+import { RightDownArrowIcon } from '@ui/icons'
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Text }               from '@ui/text'
+import { useCourse }          from '@globals/data'
 
-import { Tape }                from './tape'
+import { Tape }               from './tape'
 
 const BannerOpeningTheRhythmBlock = () => {
   const { course } = useCourse()
@@ -80,7 +78,7 @@ const BannerOpeningTheRhythmBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape level={course?.details ?? ''} />
+      <Tape level='' />
     </Box>
   )
 }

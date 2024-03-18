@@ -1,17 +1,15 @@
-import { memo } from 'react'
-import React    from 'react'
-import uniqid   from 'uniqid'
+import React      from 'react'
+import uniqid     from 'uniqid'
 
-import { Box }           from '@ui/layout'
-import { Layout }        from '@ui/layout'
-import { Row }           from '@ui/layout'
+import { Box }    from '@ui/layout'
+import { Layout } from '@ui/layout'
+import { Row }    from '@ui/layout'
 
-import { Card }          from '../card'
-import { getUi }         from '../helpers'
+import { Card }   from '../card'
+import { getUi }  from '../helpers'
 
-const DesktopCards = ({connacolData}) => {
-
-  const getCount = (number:number):string => `0${number}`
+const DesktopCards = ({ connacolData }) => {
+  const getCount = (number: number): string => `0${number}`
   return (
     <Row
       display={['none', 'none', 'flex']}
