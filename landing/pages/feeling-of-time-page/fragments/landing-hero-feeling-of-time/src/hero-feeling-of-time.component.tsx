@@ -18,7 +18,7 @@ const HeroFeelingOfTimeBlock = ({ background, feelingOfTimeData }) => (
     >
       <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
       <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock scrollId='desktop-scroll' />
+      <ProgramFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} scrollId='desktop-scroll' />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -31,7 +31,7 @@ const HeroFeelingOfTimeBlock = ({ background, feelingOfTimeData }) => (
     >
       <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
       <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock scrollId='mobile-scroll' />
+      <ProgramFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} scrollId='mobile-scroll' />
     </Box>
   </>
 )
