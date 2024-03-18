@@ -11,7 +11,6 @@ import { ProgressBar }      from '@ui/progress-bar'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-
 const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
   const mock = ''
   return (
