@@ -4,7 +4,6 @@ import { useEffect }                    from 'react'
 import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
-import { CourseID }                     from '@globals/data'
 import { PageID }                       from '@globals/data'
 import { CourseProcessBlock }           from '@landing/course-process-fragment'
 import { CtaBlock }                     from '@landing/cta-fragment'
@@ -19,19 +18,10 @@ import { StartLearningBlock }           from '@landing/start-learning-fragment'
 import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
-import { useIndividualCourse }          from '@globals/data'
 
 import { useSong }                      from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const SeventhHeavenPage = ({ SEO }: Props) => {
-  const { individualCourse } = useIndividualCourse(CourseID.SEVENTH_HEAVEN)
+export const SeventhHeavenPage = ({ seventhHeavenData, background }) => {
 
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -83,24 +73,24 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.SEVENTH_HEAVEN} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroSeventhHeavenBlock seventhHeavenData={individualCourse} />
+          <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-middle-seventh-heaven-page.png'})`}
+            backgroundImage={`url(${background.desktop.teacher.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceSeventhHeavenBlock seventhHeavenData={individualCourse}/>
+          <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData}/>
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-footer-seventh-heaven-page.png'})`}
+            backgroundImage={`url(${background.desktop.footer.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -110,7 +100,7 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-mobile-footer-seventh-heaven-page.png'})`}
+            backgroundImage={`url(${background.mobile.footer.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

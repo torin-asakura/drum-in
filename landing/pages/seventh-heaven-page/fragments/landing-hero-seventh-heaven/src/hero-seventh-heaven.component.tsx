@@ -7,14 +7,13 @@ import { Box }                              from '@ui/layout'
 
 import { useHero }                          from './data'
 
-const HeroSeventhHeavenBlock = ({ seventhHeavenData }) => {
-  return (
+const HeroSeventhHeavenBlock = ({background, seventhHeavenData }) =>  (
     <>
       <Box
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-hero-seventh-heaven-page.png'})`}
+        backgroundImage={`url(${background.desktop.hero.node.sourceUrl})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
@@ -27,17 +26,17 @@ const HeroSeventhHeavenBlock = ({ seventhHeavenData }) => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/mobile-bg-hero-seventh-heaven-page.png'})`}
+        backgroundImage={`url(${background.mobile.hero.node.sourceUrl})`}
         backgroundSize='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerSeventhHeavenBlock />
-        <TargetAudienceSeventhHeavenBlock />
+        <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData}/>
+        <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData}/>
         <ProgramSeventhHeavenBlock scrollId='mobile-scroll' />
       </Box>
     </>
   )
-}
+
 
 export { HeroSeventhHeavenBlock }
