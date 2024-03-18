@@ -11,10 +11,9 @@ import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-import { useProgram }       from '../data'
 
 const ContentCourse = () => {
-  const program = useProgram()
+  const mock = ''
 
   return (
     <Column
@@ -45,7 +44,7 @@ const ContentCourse = () => {
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  {program?.numberVideoTutorials}
+                  {mock}
                 </Text>
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 12, wide: 16 }} flexShrink={0} />
@@ -61,7 +60,7 @@ const ContentCourse = () => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {program?.numberOfMonths}
+                  {mock}
                 </Text>
               </Box>
             </Column>
@@ -70,7 +69,7 @@ const ContentCourse = () => {
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 395, wide: 470 }} flexShrink={0}>
-          {program?.secondListOfTopics?.split(';')?.map((element) => (
+          {mock.split(';')?.map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
@@ -101,7 +100,7 @@ const ContentCourse = () => {
         >
           <Layout flexBasis={83} flexShrink={0} />
           <Column>
-            {program?.firstListOfTopics?.split(';').map((element) => (
+            {mock.split(';').map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -144,14 +143,14 @@ const ContentCourse = () => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {program?.benefit}
+                {mock}
               </Text>
             </Box>
           </Box>
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 280, wide: 340 }} flexShrink={0}>
-          {program?.thirdListOfTopics?.split(';').map((element) => (
+          {mock.split(';').map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'

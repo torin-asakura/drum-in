@@ -1,5 +1,4 @@
 import React                 from 'react'
-import { useIntl }           from 'react-intl'
 
 import { Box }               from '@ui/layout'
 import { Column }            from '@ui/layout'
@@ -8,7 +7,6 @@ import { Row }               from '@ui/layout'
 import { Text }              from '@ui/text'
 
 import { ItemCard }          from './item'
-import { useTargetAudience } from './data'
 
 const TargetAudienceFifthDimensionBlock = ({fifthDimensionData}) => {
 
