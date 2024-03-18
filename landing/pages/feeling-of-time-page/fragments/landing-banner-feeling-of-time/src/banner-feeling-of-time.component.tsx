@@ -6,19 +6,13 @@ import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
+import { formatContent }      from '@shared/utils'
 
 import { Tape }               from './tape'
-import { useBanner }          from './data'
 
-
-export const formatContent = (content:string | undefined):string|undefined => content?.replace(/<[^>]+>/g, '')
-
-
-const BannerFeelingOfTimeBlock = ({feelingOfTimeData}) => {
-
+const BannerFeelingOfTimeBlock = ({ feelingOfTimeData }) => {
   const description = formatContent(feelingOfTimeData?.content)
   const runningLine = `#${feelingOfTimeData?.individualCourseData.hero.runningLine}`
-
 
   return (
     <Box flexDirection='column' width='100%'>
