@@ -78,7 +78,7 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
                         lineHeight={['small', 'small', 'medium']}
                         color='text.smokyWhite'
                       >
-                        {currentValue}
+                        {secondLine}
                       </Text>
                     </Box>
                     <Box flexShrink={0} width={[12, 26, 40]} />

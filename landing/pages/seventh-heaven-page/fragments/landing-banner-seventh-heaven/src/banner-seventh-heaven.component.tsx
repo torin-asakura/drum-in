@@ -6,7 +6,8 @@ import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
-import {formatContent} from '@shared/utils'
+import { formatContent }      from '@shared/utils'
+
 import { Tape }               from './tape'
 
 const BannerSeventhHeavenBlock = ({ seventhHeavenData }) => {
