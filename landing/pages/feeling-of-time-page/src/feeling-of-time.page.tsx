@@ -1,9 +1,7 @@
-import { CourseID }            from '@globals/data'
-import { useIndividualCourse } from '@globals/data'
-import React                   from 'react'
-import { useRef }              from 'react'
-import { useEffect }           from 'react'
-import { useState }            from 'react'
+import React                            from 'react'
+import { useRef }                       from 'react'
+import { useEffect }                    from 'react'
+import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
 import { PageID }                       from '@globals/data'
@@ -23,18 +21,7 @@ import { Box }                          from '@ui/layout'
 
 import { useSong }                      from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const FeelingOfTimePage = ({ SEO }: Props) => {
-
-  const { individualCourse } = useIndividualCourse(CourseID.FEELING_OF_TIME)
-
-
+export const FeelingOfTimePage = ({ feelingOfTimeData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -85,24 +72,24 @@ export const FeelingOfTimePage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.FEELING_OF_TIME} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroFeelingOfTimeBlock feelingOfTimeData={individualCourse}/>
+          <HeroFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} />
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-middle-feeling-of-time-page.png'})`}
+            backgroundImage={`url(${background.desktop.teacher.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceFeelingOfTimeBlock feelingOfTimeData={individualCourse}/>
+          <PriceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-footer-feeling-of-time-page.png'})`}
+            backgroundImage={`url(${background.desktop.footer.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -112,7 +99,7 @@ export const FeelingOfTimePage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/bg-mobile-footer-feeling-of-time-page.png'})`}
+            backgroundImage={`url(${background.mobile.footer.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
