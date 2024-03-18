@@ -4048,6 +4048,7 @@ __metadata:
     "@landing/price-polyrhythmic-keys-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
+    "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/layout": "workspace:0.0.1"

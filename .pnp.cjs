@@ -11993,6 +11993,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/price-polyrhythmic-keys-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"],\
           ["@landing/start-learning-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-start-learning"],\
           ["@landing/teacher-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher"],\
+          ["@shared/seo-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/seo"],\
           ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
@@ -12050,6 +12051,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/price-polyrhythmic-keys-fragment", "virtual:58c9b4a69af26f8d264b9eeeda068198ad8c2aa6f6545be250e422f00d5c6b78a62cd9fee0b85e5222a500f5ca9f4dc7bc8b07db5507a409e739f679169ab8ac#workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"],\
           ["@landing/start-learning-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:landing/fragments/landing-start-learning"],\
           ["@landing/teacher-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:landing/fragments/landing-teacher"],\
+          ["@shared/seo-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:shared/fragments/seo"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.17"],\
           ["@ui/layout", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:ui/layout"],\
