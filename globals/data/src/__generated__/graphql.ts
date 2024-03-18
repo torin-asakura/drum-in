@@ -12593,6 +12593,14 @@ export type IndividualCourseQuery = {
     title?: string | null
     individualCourseData?: {
       __typename?: 'IndividualCourseData'
+      process?: {
+        __typename?: 'IndividualCourseDataProcess'
+        step?: Array<{
+          __typename?: 'IndividualCourseDataProcessStep'
+          description?: string | null
+          title?: string | null
+        } | null> | null
+      } | null
       background?: {
         __typename?: 'IndividualCourseDataBackground'
         desktop?: {
@@ -12839,6 +12847,26 @@ export const IndividualCourseDocument = {
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'process' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'step' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
                       {
                         kind: 'Field',
                         name: { kind: 'Name', value: 'background' },
