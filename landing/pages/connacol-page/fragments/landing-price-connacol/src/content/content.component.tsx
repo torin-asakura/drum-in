@@ -16,20 +16,18 @@ import { Figures }                 from './figures'
 import { FullPrice }               from './full-price'
 import { Specifications }          from './specifications'
 import { Title }                   from './title'
-import { usePrice }                from '../data'
 
-const Content = ({connacolData}) => {
+const Content = ({ connacolData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
-  const price = usePrice()?.tuitionFees
 
   const fullPrice = ` 
-        ${formatMessage({ id:'/', defaultMessage:'Весь курс за'})} 
+        ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })} 
         ${connacolData?.individualCourseData.price.fullPrice} 
         ${'₽'}
         `
-
+  const mock = ''
   return (
     <Box
       backgroundColor='background.smokyWhite'
@@ -48,10 +46,10 @@ const Content = ({connacolData}) => {
         />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
-          wordMonth={price?.secondLineRectangle}
+          quantityMonths=''
+          quantityVideoLessons=''
+          secondLineCircle=''
+          wordMonth=''
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -66,8 +64,7 @@ const Content = ({connacolData}) => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={fullPrice}
-        />
+        <FullPrice fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -91,7 +88,7 @@ const Content = ({connacolData}) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceInstallmentPlan}
+              {mock}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -105,7 +102,7 @@ const Content = ({connacolData}) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceInstallmentPlan}
+              {mock}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>

@@ -1,6 +1,6 @@
 import { HttpLink }    from '@apollo/client'
-import { WP_URI }      from '../client.constants'
 
+import { WP_URI }      from '../client.constants'
 import { GetHttpLink } from './get-http-link.interfaces'
 
 export const getHttpLink: GetHttpLink = (cookies) =>

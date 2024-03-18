@@ -4,7 +4,6 @@ import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
-import { CourseID }                        from '@globals/data'
 import { PageID }                          from '@globals/data'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
@@ -20,7 +19,6 @@ import { StartLearningBlock }              from '@landing/start-learning-fragmen
 import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
-import { useCourse }                       from '@globals/data'
 
 import { useSong }                         from './data'
 
@@ -28,8 +26,6 @@ export const OpeningTheRhythmPage = () => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-
-  const { course } = useCourse()
 
   const [playSong, setPlaySong] = useState<boolean>(false)
   const urlSongData = useSong()?.songUrl?.mediaItemUrl
