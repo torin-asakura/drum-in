@@ -11,8 +11,8 @@ import { ProgressBar }      from '@ui/progress-bar'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
-  const mock = ''
+const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }) => {
+  const stepsArray = polyrhythmicKeysData?.individualCourseData.process.step
 
   return (
     <Box
