@@ -1,26 +1,19 @@
-import React                from 'react'
-import uniqid               from 'uniqid'
-import { FormattedMessage } from 'react-intl'
+import React                     from 'react'
+import uniqid                    from 'uniqid'
+import { FormattedMessage }      from 'react-intl'
 
-import { BullhornIcon }     from '@ui/icons'
-import { LightningIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { BullhornIcon }          from '@ui/icons'
+import { LightningIcon }         from '@ui/icons'
+import { Box }                   from '@ui/layout'
+import { Column }                from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { Row }                   from '@ui/layout'
+import { Space }                 from '@ui/text'
+import { Text }                  from '@ui/text'
+import { splitAndSliceFirstItem } from '@shared/utils'
 
 const ContentCourse = ({ connacolData }) => {
-  const splitAndSliceFirstItem = (string: string): string[] => string.split('- ').slice(1)
-
   const stepsArray = connacolData?.individualCourseData.process.step
-
-  const firstStep = { title: stepsArray[0].title, description: stepsArray[0].description}
-  const secondStep = { description: splitAndSliceFirstItem(stepsArray[1].description)}
-  const thirdStep = { description: splitAndSliceFirstItem(stepsArray[2].description)}
-  const fourthStep = { title: stepsArray[3].title}
-  const fifthStep = { description: splitAndSliceFirstItem(stepsArray[4].description)}
 
   return (
     <Column
@@ -51,7 +44,7 @@ const ContentCourse = ({ connacolData }) => {
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  {firstStep.title}
+                  {stepsArray[0].title}
                 </Text>
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 12, wide: 16 }} flexShrink={0} />
@@ -67,7 +60,7 @@ const ContentCourse = ({ connacolData }) => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {firstStep.description}
+                  {stepsArray[0].description}
                 </Text>
               </Box>
             </Column>
@@ -76,7 +69,7 @@ const ContentCourse = ({ connacolData }) => {
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 395, wide: 470 }} flexShrink={0}>
-          {thirdStep.description.map((element) => (
+          {splitAndSliceFirstItem(stepsArray[2].description).map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
@@ -107,7 +100,7 @@ const ContentCourse = ({ connacolData }) => {
         >
           <Layout flexBasis={83} flexShrink={0} />
           <Column>
-            {secondStep.description.map((element) => (
+            {splitAndSliceFirstItem(stepsArray[1].description).map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -150,14 +143,14 @@ const ContentCourse = ({ connacolData }) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {fourthStep.title}
+                {stepsArray[3].title}
               </Text>
             </Box>
           </Box>
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 280, wide: 340 }} flexShrink={0}>
-          {fifthStep.description.map((element) => (
+          {splitAndSliceFirstItem(stepsArray[4].description).map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
