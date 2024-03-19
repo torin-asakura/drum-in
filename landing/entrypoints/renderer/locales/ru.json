@@ -1,6 +1,7 @@
 {
-  "course.price.plural_format_months": "{count, plural, one {месяц} few {месяца} many {месяцев} other {месяца}}",
-  "course.price.plural_format_video_lesson": "{count, plural, one {видео-урок} few {видео-урока} many {видео-уроков} other {видео-урока}}",
+  "course.price.plural_format_months": "{monthCount, plural, one {месяц} few {месяца} many {месяцев} other {месяца}}",
+  "course.price.plural_format_video_lesson": "{videoLessonCount, plural, one {видео-урок} few {видео-урока} many {видео-уроков} other {видео-урока}}",
+  "currency.ruble": "₽",
 
   "landing_header.courses": "Курсы",
   "landing_header.connect": "Связаться",

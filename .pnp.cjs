@@ -290,6 +290,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:shared/data"\
     },\
     {\
+      "name": "@shared/bulleted-list-fragment",\
+      "reference": "workspace:shared/fragments/bulleted-list"\
+    },\
+    {\
       "name": "@shared/seo-fragment",\
       "reference": "workspace:shared/fragments/seo"\
     },\
@@ -465,6 +469,7 @@ const RAW_RUNTIME_STATE =
     ["@landing/target-audience-fifth-dimension-fragment", ["virtual:54cca9cf4da58f079d10c71f6b64b281f5b4217d26df01500c7284c7a34d604abe48318c7feb90e990373868aebc87692d3cef599b41900109587e2d6b76ffc6#workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension", "virtual:6750215a632601b14a4800c68c111df7f06706bf2689ed42b778b4d6d865fba2861fd3121eac526330e8a76c12026bc8644ffde06bab7209ab43d2e4ab1f1845#workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension", "workspace:landing/pages/fifth-dimension-page/fragments/landing-target-audience-fifth-dimension"]],\
     ["@landing/target-audience-seventh-heaven-fragment", ["virtual:1bcc83d2b7bfc891b2ea045aaf541c1eaab6140c4664d615e17f52b0bcf7115cc679484a08d6059b0cfc898e7d00c5cf15c5c023bb8b4bdbc5ddf7680adccea6#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven", "virtual:63b5dcb970532a4a32156b089ba0aa47471815bdd0db4e55923f22bd2a821a424c56ed54511dc05947316c9cd791595693f00f34a28fb8943eef6df7b4df7dd9#workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven", "workspace:landing/pages/seventh-heaven-page/fragments/landing-target-audience-seventh-heaven"]],\
     ["@landing/teacher-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-teacher", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:landing/fragments/landing-teacher", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher", "workspace:landing/fragments/landing-teacher"]],\
+    ["@shared/bulleted-list-fragment", ["virtual:3399d1b6dfe7d31728d71eb68946d2eaef2fa017cec730920916423636e26b454638f08651089eb315449ebe790500359773d21424361a4ca35823e2f504edcb#workspace:shared/fragments/bulleted-list", "virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:shared/fragments/bulleted-list", "workspace:shared/fragments/bulleted-list"]],\
     ["@shared/data", ["virtual:54fa3fe04d040d7e53d9e57da974b69ff017adc440d07822dfcba4225c0040aa2a47f3b9456938c4eebdf3c45e22a2646c0b2a6b0c7e55b56b777cc1af888139#workspace:shared/data", "virtual:56f503afbc55d8d6af53c3dc7b454c8f2e34acec5ad5f49580ff2f40335f1246c31881945d0cb873b82a51825a440ee5d6bdcd59fb676154b4a28d97157c6af8#workspace:shared/data", "workspace:shared/data"]],\
     ["@shared/seo-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:shared/fragments/seo", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:shared/fragments/seo", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/seo", "workspace:shared/fragments/seo"]],\
     ["@shared/utils", ["workspace:shared/utils"]],\
@@ -12081,6 +12086,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.9.3"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.9.3"],\
           ["@landing/modal-form-connacol", "virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:landing/pages/connacol-page/fragments/landing-modal-form-connacol"],\
+          ["@shared/bulleted-list-fragment", "virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:shared/fragments/bulleted-list"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", null],\
@@ -12115,6 +12121,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:11.9.3"],\
           ["@emotion/styled", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:11.9.3"],\
           ["@landing/modal-form-connacol", "virtual:3399d1b6dfe7d31728d71eb68946d2eaef2fa017cec730920916423636e26b454638f08651089eb315449ebe790500359773d21424361a4ca35823e2f504edcb#workspace:landing/pages/connacol-page/fragments/landing-modal-form-connacol"],\
+          ["@shared/bulleted-list-fragment", "virtual:3399d1b6dfe7d31728d71eb68946d2eaef2fa017cec730920916423636e26b454638f08651089eb315449ebe790500359773d21424361a4ca35823e2f504edcb#workspace:shared/fragments/bulleted-list"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.17"],\
@@ -12150,6 +12157,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.9.3"],\
           ["@emotion/styled", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:11.9.3"],\
           ["@landing/modal-form-connacol", "virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:landing/pages/connacol-page/fragments/landing-modal-form-connacol"],\
+          ["@shared/bulleted-list-fragment", "virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:shared/fragments/bulleted-list"],\
           ["@types/react", "npm:18.2.20"],\
           ["@ui/button", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:ui/button"],\
           ["@ui/figures", "virtual:1538ab6424ae20a248dbd39491d2872141d6ae293bda1e760a6caff889176694f67855ca564c1ce048d76f4606e0314801eb0c77712e961e40a6586e82d51639#workspace:ui/figures"],\
@@ -14365,6 +14373,57 @@ const RAW_RUNTIME_STATE =
           ["@repeaterjs/repeater", "npm:3.0.5"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@shared/bulleted-list-fragment", [\
+      ["virtual:3399d1b6dfe7d31728d71eb68946d2eaef2fa017cec730920916423636e26b454638f08651089eb315449ebe790500359773d21424361a4ca35823e2f504edcb#workspace:shared/fragments/bulleted-list", {\
+        "packageLocation": "./.yarn/__virtual__/@shared-bulleted-list-fragment-virtual-c90e5e160b/1/shared/fragments/bulleted-list/",\
+        "packageDependencies": [\
+          ["@shared/bulleted-list-fragment", "virtual:3399d1b6dfe7d31728d71eb68946d2eaef2fa017cec730920916423636e26b454638f08651089eb315449ebe790500359773d21424361a4ca35823e2f504edcb#workspace:shared/fragments/bulleted-list"],\
+          ["@types/react", "npm:18.2.20"],\
+          ["@types/react-intl", null],\
+          ["@ui/layout", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/layout"],\
+          ["@ui/text", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/text"],\
+          ["react", "npm:18.2.0"],\
+          ["react-intl", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:5.24.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-intl",\
+          "@types/react",\
+          "react-intl",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:shared/fragments/bulleted-list", {\
+        "packageLocation": "./.yarn/__virtual__/@shared-bulleted-list-fragment-virtual-5fce2e9545/1/shared/fragments/bulleted-list/",\
+        "packageDependencies": [\
+          ["@shared/bulleted-list-fragment", "virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:shared/fragments/bulleted-list"],\
+          ["@types/react", "npm:18.2.20"],\
+          ["@types/react-intl", null],\
+          ["@ui/layout", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/layout"],\
+          ["@ui/text", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/text"],\
+          ["react", null],\
+          ["react-intl", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:5.24.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-intl",\
+          "@types/react",\
+          "react-intl",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:shared/fragments/bulleted-list", {\
+        "packageLocation": "./shared/fragments/bulleted-list/",\
+        "packageDependencies": [\
+          ["@shared/bulleted-list-fragment", "workspace:shared/fragments/bulleted-list"],\
+          ["@types/react", "npm:18.2.20"],\
+          ["@ui/layout", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/layout"],\
+          ["@ui/text", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/text"],\
+          ["react-intl", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:5.24.3"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@shared/data", [\
