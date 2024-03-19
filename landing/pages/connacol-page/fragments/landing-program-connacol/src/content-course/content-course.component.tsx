@@ -11,8 +11,25 @@ import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-const ContentCourse = () => {
-  const mock = ''
+const ContentCourse = ({ connacolData }) => {
+  const splitAndSliceFirstItem = (string: string): string[] => string.split('- ').slice(1)
+
+  const stepsArray = connacolData?.individualCourseData.process.step
+
+  const firstStep = { title: stepsArray[0].title, description: stepsArray[0].description }
+  const secondStep = {
+    title: stepsArray[1],
+    description: splitAndSliceFirstItem(stepsArray[1].description),
+  }
+  const thirdStep = {
+    title: stepsArray[2].title,
+    description: splitAndSliceFirstItem(stepsArray[2].description),
+  }
+  const fourthStep = { title: stepsArray[3].title, description: stepsArray[3].description }
+  const fifthStep = {
+    title: stepsArray[4].title,
+    description: splitAndSliceFirstItem(stepsArray[4].description),
+  }
 
   return (
     <Column
@@ -43,7 +60,7 @@ const ContentCourse = () => {
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  {mock}
+                  {firstStep.title}
                 </Text>
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 12, wide: 16 }} flexShrink={0} />
@@ -59,7 +76,7 @@ const ContentCourse = () => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {mock}
+                  {firstStep.description}
                 </Text>
               </Box>
             </Column>
@@ -68,7 +85,7 @@ const ContentCourse = () => {
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 395, wide: 470 }} flexShrink={0}>
-          {mock.split(';')?.map((element) => (
+          {thirdStep.description.map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
@@ -99,7 +116,7 @@ const ContentCourse = () => {
         >
           <Layout flexBasis={83} flexShrink={0} />
           <Column>
-            {mock.split(';').map((element) => (
+            {secondStep.description.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -142,14 +159,14 @@ const ContentCourse = () => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {mock}
+                {fourthStep.title}
               </Text>
             </Box>
           </Box>
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 280, wide: 340 }} flexShrink={0}>
-          {mock.split(';').map((element) => (
+          {fifthStep.description.map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'

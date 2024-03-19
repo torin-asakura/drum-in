@@ -7,6 +7,13 @@ content
 title
 individualCourseData {
 
+process {
+step {
+description
+title
+}
+}
+
 background {
 desktop {
 footer {
