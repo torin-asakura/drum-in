@@ -95,7 +95,7 @@ const ProgramConnacolBlock = ({ connacolData, scrollId }) => (
           <ProgramIcon width='100%' height='auto' />
         </Box>
         <Layout flexBasis={[81, 110, 0]} />
-        <ContentMobileCourse scrollId={scrollId} />
+        <ContentMobileCourse connacolData={connacolData} scrollId={scrollId} />
         <Layout flexBasis={[32, 44, 0]} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
