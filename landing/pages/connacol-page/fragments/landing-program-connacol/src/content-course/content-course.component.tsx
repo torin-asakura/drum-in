@@ -16,20 +16,11 @@ const ContentCourse = ({ connacolData }) => {
 
   const stepsArray = connacolData?.individualCourseData.process.step
 
-  const firstStep = { title: stepsArray[0].title, description: stepsArray[0].description }
-  const secondStep = {
-    title: stepsArray[1],
-    description: splitAndSliceFirstItem(stepsArray[1].description),
-  }
-  const thirdStep = {
-    title: stepsArray[2].title,
-    description: splitAndSliceFirstItem(stepsArray[2].description),
-  }
-  const fourthStep = { title: stepsArray[3].title, description: stepsArray[3].description }
-  const fifthStep = {
-    title: stepsArray[4].title,
-    description: splitAndSliceFirstItem(stepsArray[4].description),
-  }
+  const firstStep = { title: stepsArray[0].title, description: stepsArray[0].description}
+  const secondStep = { description: splitAndSliceFirstItem(stepsArray[1].description)}
+  const thirdStep = { description: splitAndSliceFirstItem(stepsArray[2].description)}
+  const fourthStep = { title: stepsArray[3].title}
+  const fifthStep = { description: splitAndSliceFirstItem(stepsArray[4].description)}
 
   return (
     <Column
