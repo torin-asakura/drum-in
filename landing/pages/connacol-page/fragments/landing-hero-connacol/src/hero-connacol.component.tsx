@@ -18,7 +18,7 @@ const HeroConnacolBlock = ({ background, connacolData }) => (
     >
       <BannerConnacolBlock connacolData={connacolData} />
       <AdvantagesBlock connacolData={connacolData} />
-      <ProgramConnacolBlock scrollId='desktop-scroll' />
+      <ProgramConnacolBlock connacolData={connacolData} scrollId='desktop-scroll' />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -31,7 +31,7 @@ const HeroConnacolBlock = ({ background, connacolData }) => (
     >
       <BannerConnacolBlock connacolData={connacolData} />
       <AdvantagesBlock connacolData={connacolData} />
-      <ProgramConnacolBlock scrollId='mobile-scroll' />
+      <ProgramConnacolBlock connacolData={connacolData} scrollId='mobile-scroll' />
     </Box>
   </>
 )

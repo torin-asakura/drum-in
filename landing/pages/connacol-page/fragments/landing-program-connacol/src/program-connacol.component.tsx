@@ -10,7 +10,7 @@ import { Layout }              from '@ui/layout'
 import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 
-const ProgramConnacolBlock = ({ scrollId }) => (
+const ProgramConnacolBlock = ({ connacolData, scrollId }) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <Box
@@ -50,14 +50,14 @@ const ProgramConnacolBlock = ({ scrollId }) => (
                 wide: '-1000px center',
               }}
               backgroundSize='100%'
-              backgroundImage={`url(${''})`}
+              backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/progress-horizontal-section.png'})`}
             >
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 2700, wide: 2000 }} flexShrink={0} />
               <Box width={{ _: 0, tablet: 0, laptop: 2000, wide: 2612 }}>
                 <ProgramIcon width='100%' height='auto' />
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 720, wide: 970 }} flexShrink={0} />
-              <ContentCourse />
+              <ContentCourse connacolData={connacolData} />
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 627 }} flexShrink={0} />
               <Column justifyContent='end'>
                 <Box width={{ _: 0, tablet: 0, laptop: 170, wide: 283 }}>
