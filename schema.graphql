@@ -107,6 +107,143 @@ interface CommenterConnectionEdge {
   node: Commenter!
 }
 
+"Interface representing fields of the ACF &quot;CommonFragmentsCta&quot; Field Group"
+interface CommonFragmentsCta_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group"
+  heading: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group"
+  tekst: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group"
+  tekstKnopki: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsFooter&quot; Field Group"
+interface CommonFragmentsFooter_Fields {
+  "Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  adresElektronnojPochty: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  kursy(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  logo: AcfMediaItemConnectionEdge
+  "Field of the &quot;url&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  politikaObrabotkiPersonalnyhDannyh: String
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  socials(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsPaymentForm&quot; Field Group"
+interface CommonFragmentsPaymentForm_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPaymentForm&quot; Field Group"
+  placeholder: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsProccess&quot; Field Group"
+interface CommonFragmentsProccess_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;oembed&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  media: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  text: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsTeacherEducationList&quot; Field Group"
+interface CommonFragmentsTeacherEducationList_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationList&quot; Field Group"
+  element: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsTeacherEducation&quot; Field Group"
+interface CommonFragmentsTeacherEducation_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group"
+  list: [CommonFragmentsTeacherEducationList]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsTeacherExperience&quot; Field Group"
+interface CommonFragmentsTeacherExperience_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group"
+  number: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group"
+  text: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsTeacher&quot; Field Group"
+interface CommonFragmentsTeacher_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  description: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  education: CommonFragmentsTeacherEducation
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  experience: [CommonFragmentsTeacherExperience]
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  subtitle: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group"
+interface CommonFragments_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  cta: CommonFragmentsCta
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  faq(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  footer: CommonFragmentsFooter
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  paymentForm: CommonFragmentsPaymentForm
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  proccess: [CommonFragmentsProccess]
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  teacher: CommonFragmentsTeacher
+}
+
 "A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;."
 interface Connection {
   "A list of edges (relational context) between connected nodes"
@@ -325,44 +462,44 @@ interface DetailsAdditionalQuestions_Fields {
   title: String
 }
 
-"Interface representing fields of the ACF &quot;DetailsContentLevelsTooltip&quot; Field Group"
-interface DetailsContentLevelsTooltip_Fields {
+"Interface representing fields of the ACF &quot;DetailsCourseContentLevelsTooltip&quot; Field Group"
+interface DetailsCourseContentLevelsTooltip_Fields {
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevelsTooltip&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevelsTooltip&quot; Field Group"
   title: String
 }
 
-"Interface representing fields of the ACF &quot;DetailsContentLevels&quot; Field Group"
-interface DetailsContentLevels_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+"Interface representing fields of the ACF &quot;DetailsCourseContentLevels&quot; Field Group"
+interface DetailsCourseContentLevels_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   content: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   lengthOfCourseInMonths: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   level: String
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   liveTrainingsNumber: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   target: String
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
-  tooltip: DetailsContentLevelsTooltip
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
+  tooltip: DetailsCourseContentLevelsTooltip
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   videoTrainingsNumber: Float
 }
 
-"Interface representing fields of the ACF &quot;DetailsContent&quot; Field Group"
-interface DetailsContent_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContent&quot; Field Group"
+"Interface representing fields of the ACF &quot;DetailsCourseContent&quot; Field Group"
+interface DetailsCourseContent_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
   courseContentSubtitle: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContent&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
   courseContentTitle: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsContent&quot; Field Group"
-  levels: [DetailsContentLevels]
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
+  levels: [DetailsCourseContentLevels]
 }
 
 "Interface representing fields of the ACF &quot;DetailsFaq&quot; Field Group"
@@ -822,14 +959,38 @@ interface IndividualCourseConnectionPageInfo {
   startCursor: String
 }
 
-"Interface representing fields of the ACF &quot;IndividualCourseDataBackground&quot; Field Group"
-interface IndividualCourseDataBackground_Fields {
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
-  desktop: AcfMediaItemConnectionEdge
+"Interface representing fields of the ACF &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group"
+interface IndividualCourseDataBackgroundDesktop_Fields {
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
-  mobile: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataBackgroundMobile&quot; Field Group"
+interface IndividualCourseDataBackgroundMobile_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundMobile&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundMobile&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundMobile&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
+}
+
+"Interface representing fields of the ACF &quot;IndividualCourseDataBackground&quot; Field Group"
+interface IndividualCourseDataBackground_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  desktop: IndividualCourseDataBackgroundDesktop
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  mobile: IndividualCourseDataBackgroundMobile
 }
 
 "Interface representing fields of the ACF &quot;IndividualCourseDataHeroBenefits&quot; Field Group"
@@ -1572,6 +1733,12 @@ interface WPPageInfo {
   startCursor: String
 }
 
+"Provides access to fields of the &quot;CommonFragments&quot; ACF Field Group via the &quot;commonFragments&quot; field"
+interface WithAcfCommonFragments {
+  "Fields of the CommonFragments ACF Field Group"
+  commonFragments: CommonFragments
+}
+
 "Provides access to fields of the &quot;Details&quot; ACF Field Group via the &quot;details&quot; field"
 interface WithAcfDetails {
   "Fields of the Details ACF Field Group"
@@ -1626,7 +1793,7 @@ type AcfContentNodeConnectionPageInfo implements ContentNodeConnectionPageInfo &
   startCursor: String
 }
 
-"Connection between the IndividualCourseDataBackground type and the MediaItem type"
+"Connection between the IndividualCourseDataBackgroundDesktop type and the MediaItem type"
 type AcfMediaItemConnectionEdge implements Edge & MediaItemConnectionEdge & OneToOneConnection {
   "Opaque reference to the nodes position in the connection. Value can be used with pagination args."
   cursor: String
@@ -2055,6 +2222,143 @@ type CommentToParentCommentConnectionEdge implements CommentConnectionEdge & Edg
   cursor: String
   "The node of the connection, without the edges"
   node: Comment!
+}
+
+"The &quot;CommonFragments&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragments implements AcfFieldGroup & AcfFieldGroupFields & CommonFragments_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  cta: CommonFragmentsCta
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  faq(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  footer: CommonFragmentsFooter
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  paymentForm: CommonFragmentsPaymentForm
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  proccess: [CommonFragmentsProccess]
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  teacher: CommonFragmentsTeacher
+}
+
+"The &quot;CommonFragmentsCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsCta implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsCta_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group"
+  heading: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group"
+  tekst: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group"
+  tekstKnopki: String
+}
+
+"The &quot;CommonFragmentsFooter&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsFooter implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsFooter_Fields {
+  "Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  adresElektronnojPochty: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  kursy(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  logo: AcfMediaItemConnectionEdge
+  "Field of the &quot;url&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  politikaObrabotkiPersonalnyhDannyh: String
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  socials(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+}
+
+"The &quot;CommonFragmentsPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsPaymentForm implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsPaymentForm_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPaymentForm&quot; Field Group"
+  placeholder: String
+}
+
+"The &quot;CommonFragmentsProccess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsProccess implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsProccess_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;oembed&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  media: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  text: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsTeacher&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsTeacher implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacher_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  description: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  education: CommonFragmentsTeacherEducation
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  experience: [CommonFragmentsTeacherExperience]
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  subtitle: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsTeacherEducation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsTeacherEducation implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacherEducation_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group"
+  list: [CommonFragmentsTeacherEducationList]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsTeacherEducationList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsTeacherEducationList implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacherEducationList_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationList&quot; Field Group"
+  element: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+}
+
+"The &quot;CommonFragmentsTeacherExperience&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsTeacherExperience implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacherExperience_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group"
+  number: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group"
+  text: String
 }
 
 "Connection between the ContentNode type and the ContentType type"
@@ -2671,43 +2975,43 @@ type DetailsAdditionalQuestionsCta implements AcfFieldGroup & AcfFieldGroupField
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
 }
 
-"The &quot;DetailsContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsContent implements AcfFieldGroup & AcfFieldGroupFields & DetailsContent_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContent&quot; Field Group"
+"The &quot;DetailsCourseContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type DetailsCourseContent implements AcfFieldGroup & AcfFieldGroupFields & DetailsCourseContent_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
   courseContentSubtitle: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContent&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
   courseContentTitle: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsContent&quot; Field Group"
-  levels: [DetailsContentLevels]
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
+  levels: [DetailsCourseContentLevels]
 }
 
-"The &quot;DetailsContentLevels&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsContentLevels implements AcfFieldGroup & AcfFieldGroupFields & DetailsContentLevels_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+"The &quot;DetailsCourseContentLevels&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type DetailsCourseContentLevels implements AcfFieldGroup & AcfFieldGroupFields & DetailsCourseContentLevels_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   content: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   lengthOfCourseInMonths: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   level: String
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   liveTrainingsNumber: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   target: String
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
-  tooltip: DetailsContentLevelsTooltip
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsContentLevels&quot; Field Group"
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
+  tooltip: DetailsCourseContentLevelsTooltip
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
   videoTrainingsNumber: Float
 }
 
-"The &quot;DetailsContentLevelsTooltip&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsContentLevelsTooltip implements AcfFieldGroup & AcfFieldGroupFields & DetailsContentLevelsTooltip_Fields {
+"The &quot;DetailsCourseContentLevelsTooltip&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type DetailsCourseContentLevelsTooltip implements AcfFieldGroup & AcfFieldGroupFields & DetailsCourseContentLevelsTooltip_Fields {
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsContentLevelsTooltip&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevelsTooltip&quot; Field Group"
   title: String
 }
 
@@ -2893,7 +3197,9 @@ type EnqueuedStylesheet implements EnqueuedAsset & Node {
 }
 
 "The generalFragment type"
-type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfDetails {
+type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfCommonFragments {
+  "Fields of the CommonFragments ACF Field Group"
+  commonFragments: CommonFragments
   "The content of the post."
   content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
@@ -2908,8 +3214,6 @@ type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinka
   dateGmt: String
   "The desired slug of the post"
   desiredSlug: String
-  "Fields of the Details ACF Field Group"
-  details: Details
   "If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds"
   editingLockedBy: ContentNodeToEditLockConnectionEdge
   "The RSS enclosure for the object"
@@ -3194,12 +3498,36 @@ type IndividualCourseData implements AcfFieldGroup & AcfFieldGroupFields & Indiv
 
 "The &quot;IndividualCourseDataBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type IndividualCourseDataBackground implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataBackground_Fields {
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
-  desktop: AcfMediaItemConnectionEdge
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  desktop: IndividualCourseDataBackgroundDesktop
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
-  mobile: AcfMediaItemConnectionEdge
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group"
+  mobile: IndividualCourseDataBackgroundMobile
+}
+
+"The &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataBackgroundDesktop implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataBackgroundDesktop_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
+}
+
+"The &quot;IndividualCourseDataBackgroundMobile&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type IndividualCourseDataBackgroundMobile implements AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataBackgroundMobile_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundMobile&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundMobile&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackgroundMobile&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
 }
 
 "The &quot;IndividualCourseDataHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."

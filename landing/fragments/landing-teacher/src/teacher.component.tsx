@@ -13,14 +13,9 @@ import { Info }            from './info'
 import { PlaySongProps }   from './play-song.interfaces'
 import { SliderBlock }     from './slider'
 import { useTeacher }      from './data'
-import {useGeneralFragments} from '@globals/data'
 
 const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
   const teacher = useTeacher()
-  const { data } = useGeneralFragments()
-
-  console.log(data)
-
   return (
     <Row flexWrap='wrap' justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
