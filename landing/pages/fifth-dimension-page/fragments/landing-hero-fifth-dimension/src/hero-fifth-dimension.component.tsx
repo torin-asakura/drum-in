@@ -18,7 +18,10 @@ const HeroFifthDimensionBlock = ({ background, fifthDimensionData }) => (
     >
       <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
       <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
-      <ProgramFifthDimensionBlock fifthDimensionData={fifthDimensionData} scrollId='desktop-scroll' />
+      <ProgramFifthDimensionBlock
+        fifthDimensionData={fifthDimensionData}
+        scrollId='desktop-scroll'
+      />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -31,7 +34,10 @@ const HeroFifthDimensionBlock = ({ background, fifthDimensionData }) => (
     >
       <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
       <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
-      <ProgramFifthDimensionBlock fifthDimensionData={fifthDimensionData} scrollId='mobile-scroll' />
+      <ProgramFifthDimensionBlock
+        fifthDimensionData={fifthDimensionData}
+        scrollId='mobile-scroll'
+      />
     </Box>
   </>
 )
