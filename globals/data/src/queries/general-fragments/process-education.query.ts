@@ -5,7 +5,7 @@ query ProcessEducation{
   generalFragments {
     nodes {
       commonFragments {
-       
+        fieldGroupName
       }
     }
   }

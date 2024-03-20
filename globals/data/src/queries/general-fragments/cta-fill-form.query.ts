@@ -5,7 +5,7 @@ query CtaFillForm{
   generalFragments {
     nodes {
       commonFragments {
-        
+        fieldGroupName
       }
     }
   }

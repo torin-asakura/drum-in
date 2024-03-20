@@ -5,7 +5,7 @@ query Header{
   generalFragments {
     nodes {
       commonFragments {
-     
+        fieldGroupName
       }
     }
   }

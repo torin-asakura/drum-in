@@ -5,7 +5,7 @@ query Faq{
   generalFragments {
     nodes {
       commonFragments {
-        
+        fieldGroupName
       }
     }
   }
