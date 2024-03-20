@@ -28,7 +28,7 @@ const CourseProcessBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {courseProcess?.title}
+              {courseProcess?.title}ssssssssssss
             </Text>
           </Box>
           <Layout flexBasis={[24, 60, 101]} />
