@@ -418,6 +418,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/next-image@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@atls-ui-parts/next-image@npm:0.1.2"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    next: ^14.1.0
+    react: 18.2.0
+    styled-system: 5.1.5
+  checksum: 5bef57cbf1abdbc9bf131279934f60c83b81daa6e4471b7445ec907ca1e9e34a6283e023f1e1fd06788de7060ac58740ae941a49917021f6689bbc728d5cbee0
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/styles@npm:0.0.4":
   version: 0.0.4
   resolution: "@atls-ui-parts/styles@npm:0.0.4"
@@ -5910,6 +5922,7 @@ __metadata:
   resolution: "@ui/image@workspace:ui/image"
   dependencies:
     "@atls-ui-parts/image": "npm:0.0.4"
+    "@atls-ui-parts/next-image": "npm:0.1.2"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"
