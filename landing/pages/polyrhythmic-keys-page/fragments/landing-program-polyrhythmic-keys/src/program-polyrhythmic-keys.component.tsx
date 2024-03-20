@@ -10,7 +10,7 @@ import { Layout }              from '@ui/layout'
 import { ContentCourse }       from './content-course'
 import { ContentMobileCourse } from './content-mobile-course'
 
-const ProgramPolyrhythmicKeyslBlock = ({polyrhythmicKeysData, scrollId }) => (
+const ProgramPolyrhythmicKeyslBlock = ({ polyrhythmicKeysData, scrollId }) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <Box
@@ -57,7 +57,7 @@ const ProgramPolyrhythmicKeyslBlock = ({polyrhythmicKeysData, scrollId }) => (
                 <ProgramIcon width='100%' height='auto' />
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 970 }} flexShrink={0} />
-              <ContentCourse polyrhythmicKeysData={polyrhythmicKeysData}/>
+              <ContentCourse polyrhythmicKeysData={polyrhythmicKeysData} />
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 500, wide: 627 }} flexShrink={0} />
               <Column justifyContent='end'>
                 <Box width={{ _: 0, tablet: 0, laptop: 170, wide: 283 }}>

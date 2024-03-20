@@ -16,7 +16,10 @@ const HeroPolyrhythmicKeysBlock = ({ background, polyrhythmicKeysData }) => (
       backgroundPosition='center top'
     >
       <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData} />
-      <ProgramPolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} scrollId='desktop-scroll' />
+      <ProgramPolyrhythmicKeyslBlock
+        polyrhythmicKeysData={polyrhythmicKeysData}
+        scrollId='desktop-scroll'
+      />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -28,7 +31,10 @@ const HeroPolyrhythmicKeysBlock = ({ background, polyrhythmicKeysData }) => (
       backgroundPosition='center -60%'
     >
       <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData} />
-      <ProgramPolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} scrollId='mobile-scroll' />
+      <ProgramPolyrhythmicKeyslBlock
+        polyrhythmicKeysData={polyrhythmicKeysData}
+        scrollId='mobile-scroll'
+      />
     </Box>
   </>
 )

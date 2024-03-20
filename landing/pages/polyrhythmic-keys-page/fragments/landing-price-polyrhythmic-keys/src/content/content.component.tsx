@@ -1,6 +1,7 @@
 import React                               from 'react'
 import { FormattedMessage }                from 'react-intl'
 import { useState }                        from 'react'
+import { useIntl }                         from 'react-intl'
 
 import { ModalFormPolyrhythmicKeys }       from '@landing/modal-form-polyrhythmic-keys'
 import { ModalMobileFormPolyrhythmicKeys } from '@landing/modal-form-polyrhythmic-keys'
@@ -12,13 +13,21 @@ import { Space }                           from '@ui/text'
 import { Text }                            from '@ui/text'
 
 import { Figures }                         from './figures'
-import { Specifications }                  from './specifications'
+import { FullPrice }                       from './full-price'
+import { ShortCourseContentList }          from './short-course-content-list'
 import { Title }                           from './title'
 
 const Content = ({ polyrhythmicKeysData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const mock = ''
+  const { formatMessage } = useIntl()
+
+  const fullPrice = ` 
+        ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })} 
+        ${polyrhythmicKeysData?.individualCourseData.price.fullPrice} 
+        ${formatMessage({ id: 'currency.ruble' })}
+        `
+
   return (
     <Box
       backgroundColor='background.smokyWhite'
@@ -44,7 +53,7 @@ const Content = ({ polyrhythmicKeysData }) => {
         <Layout flexBasis={[18, 24, 32]} />
         <Title price={polyrhythmicKeysData?.individualCourseData.price.monthlyPrice} />
         <Layout flexBasis={[40, 50, 32]} />
-        <Specifications quantityMonths={mock} quantityVideoLessons={mock} wordMonth={mock} />
+        <ShortCourseContentList polyrhythmicKeysData={polyrhythmicKeysData} />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
             size='withoutPaddingBigHeight'
@@ -70,6 +79,9 @@ const Content = ({ polyrhythmicKeysData }) => {
             </Text>
           </Button>
         </Box>
+        <FullPrice fullCost={fullPrice} />
+        <Layout flexBasis={[24, 0, 0]} />
+
         <Box display={['flex', 'none', 'none']} width='100%'>
           <Button
             size='withoutPaddingMediumHeight'

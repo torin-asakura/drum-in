@@ -1,18 +1,18 @@
-import React                from 'react'
-import uniqid               from 'uniqid'
-import { FormattedMessage } from 'react-intl'
+import React                      from 'react'
+import uniqid                     from 'uniqid'
+import { FormattedMessage }       from 'react-intl'
+
+import { BullhornIcon }           from '@ui/icons'
+import { LightningIcon }          from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Space }                  from '@ui/text'
+import { Text }                   from '@ui/text'
 import { splitAndSliceFirstItem } from '@shared/utils'
 
-import { BullhornIcon }     from '@ui/icons'
-import { LightningIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
-
-const ContentCourse = ({polyrhythmicKeysData}) => {
+const ContentCourse = ({ polyrhythmicKeysData }) => {
   const stepsArray = polyrhythmicKeysData?.individualCourseData.process.step
 
   return (

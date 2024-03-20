@@ -1,17 +1,18 @@
-import React                from 'react'
-import uniqid               from 'uniqid'
-import { FormattedMessage } from 'react-intl'
+import React                      from 'react'
+import uniqid                     from 'uniqid'
+import { FormattedMessage }       from 'react-intl'
 
-import { LightningIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { ProgressBar }      from '@ui/progress-bar'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { LightningIcon }          from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { ProgressBar }            from '@ui/progress-bar'
+import { Space }                  from '@ui/text'
+import { Text }                   from '@ui/text'
+import { splitAndSliceFirstItem } from '@shared/utils/src'
 
-const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }) => {
+const ContentMobileCourse = ({ polyrhythmicKeysData, scrollId = 'scroll-mobile' }) => {
   const stepsArray = polyrhythmicKeysData?.individualCourseData.process.step
 
   return (
@@ -39,7 +40,7 @@ const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {mock}
+                {stepsArray[0].title}
               </Text>
             </Box>
             <Layout flexBasis={[8, 12, 12]} flexShrink={0} />
@@ -50,7 +51,7 @@ const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                {mock}
+                {stepsArray[0].description}
               </Text>
             </Box>
           </Column>
@@ -59,7 +60,7 @@ const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }
         <Row>
           <Layout flexBasis={[85, 125, 0]} />
           <Box flexDirection='column' height={[30, 50, 0]}>
-            {mock.split(';').map((element) => (
+            {splitAndSliceFirstItem(stepsArray[1].description).map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -79,7 +80,7 @@ const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }
         <Row>
           <Layout flexBasis={[60, 70, 0]} />
           <Box flexDirection='column' height={[30, 50, 0]}>
-            {mock.split(';').map((element) => (
+            {splitAndSliceFirstItem(stepsArray[2].description).map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -112,7 +113,7 @@ const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {mock}
+                {stepsArray[3].title}
               </Text>
             </Box>
           </Box>
@@ -121,7 +122,7 @@ const ContentMobileCourse = ({polyrhythmicKeysData, scrollId = 'scroll-mobile' }
         <Row>
           <Layout flexBasis={[60, 100, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {mock.split(';').map((element) => (
+            {splitAndSliceFirstItem(stepsArray[4].description).map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
