@@ -1,6 +1,7 @@
-import React                           from 'react'
-import { FormattedMessage }            from 'react-intl'
-import { useState }                    from 'react'
+import React                            from 'react'
+import { FormattedMessage }             from 'react-intl'
+import { useState }                     from 'react'
+import {useTeacher} from '@globals/data'
 
 import { InvertedExclamationMarkIcon } from '@ui/icons'
 import { Box }                         from '@ui/layout'
@@ -8,11 +9,11 @@ import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Text }                        from '@ui/text'
 
-import { useTeacher }                  from '../data'
 
 const EducationMobile = () => {
   const [visibleEducation, setVisibleEducation] = useState<boolean>(false)
-  const education = useTeacher()?.teacher.education
+
+  const {teacherData} = useTeacher()
 
   return (
     <Box
@@ -56,8 +57,8 @@ const EducationMobile = () => {
         <Layout flexBasis={[12, 20, 0]} flexShrink={0} />
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
-          {education?.map(({ item }) => (
-            <React.Fragment key={item.substring(0, 3)}>
+          {teacherData.education.list.map(({ element }) => (
+            <React.Fragment key={element.substring(0, 3)}>
               <Box>
                 <Text
                   fontWeight='medium'
@@ -65,7 +66,7 @@ const EducationMobile = () => {
                   lineHeight='primary'
                   color='text.blackAmber'
                 >
-                  {item}
+                  {element}
                 </Text>
               </Box>
               <Layout flexBasis={[6, 10, 0]} />
