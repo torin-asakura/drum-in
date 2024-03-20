@@ -13,7 +13,7 @@ import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
-import { useCta }              from '@globals/data'
+import { useCta }             from '@globals/data'
 
 const CtaBlock = forwardRef(({ data }: any, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)

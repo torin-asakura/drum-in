@@ -5,7 +5,10 @@ query Faq{
   generalFragments {
     nodes {
       commonFragments {
-        fieldGroupName
+        faq {
+          answer
+          question
+        }
       }
     }
   }
