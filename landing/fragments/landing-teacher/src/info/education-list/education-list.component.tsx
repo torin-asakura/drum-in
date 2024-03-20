@@ -10,10 +10,7 @@ import { Text }                from '@ui/text'
 
 import { useTeacher }          from '../../data'
 
-const EducationList = () => {
-  const education = useTeacher()?.teacher.education
-
-  return (
+const EducationList = ({teacherData}) =>  (
     <Box position='relative' display={['none', 'none', 'flex']}>
       <Box position='absolute' top={80} left={-60} style={{ transform: 'rotate(-15deg)' }}>
         <ArrowBottomTailIcon width={100} height={83} />
@@ -26,13 +23,13 @@ const EducationList = () => {
           <Layout flexBasis={8} flexShrink={0} />
           <Box>
             <Text fontWeight='medium' fontSize='mild' lineHeight='medium' color='text.smokyWhite'>
-              <FormattedMessage id='landing_teacher.education' />
+              {teacherData?.education.title}
             </Text>
           </Box>
         </Box>
         <Layout flexBasis={20} />
-        {education?.map(({ item }) => (
-          <React.Fragment key={item.substring(0, 3)}>
+        {teacherData?.education.list.map(({ element }) => (
+          <React.Fragment key={element.substring(0, 3)}>
             <Box>
               <Text
                 fontWeight='medium'
@@ -40,7 +37,7 @@ const EducationList = () => {
                 lineHeight='medium'
                 color='text.transparentSmokyWhite'
               >
-                {item}
+                {element}
               </Text>
             </Box>
             <Layout flexBasis={12} />
@@ -50,6 +47,6 @@ const EducationList = () => {
       </Column>
     </Box>
   )
-}
+
 
 export { EducationList }

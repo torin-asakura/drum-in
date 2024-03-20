@@ -13,7 +13,7 @@ import { Slide }          from './slide'
 import { useTeacher }     from '../data'
 
 const SliderBlock = () => {
-  const teacher = useTeacher()?.teacher.slider
+  const teacher = [{image:{sourceUrl:'1-IMAGE'}},{image:{sourceUrl:'3-IMAGE'}},{image:{sourceUrl:'3-IMAGE'}}]
 
   const teacherChildren = useMemo(
     () => teacher?.map(({ image }) => <Slide pathImage={image.sourceUrl} />),

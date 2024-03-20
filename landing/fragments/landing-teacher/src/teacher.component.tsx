@@ -12,7 +12,6 @@ import { EducationMobile }         from './education-mobile'
 import { Info }                    from './info'
 import { PlaySongProps }           from './play-song.interfaces'
 import { SliderBlock }             from './slider'
-import { useTeacher }              from './data'
 
 const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
 
@@ -20,8 +19,6 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
   const {teacherData} = useTeacherHook()
   console.log(teacherData)
 
-
-  const teacher = useTeacher()
   return (
     <Row flexWrap='wrap' justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
@@ -41,7 +38,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
                 'text.smokyWhite',
               ]}
             >
-              {teacher?.title}
+              {teacherData?.subtitle}
             </Text>
           </Row>
           <Layout flexBasis={[8, 10, 12]} />
@@ -55,7 +52,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {teacher?.teacher.nameTeacher}
+              {teacherData?.title}
             </Text>
           </Row>
           <Layout flexBasis={[12, 32, 52]} />
@@ -67,7 +64,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
               lineHeight='primary'
               color='text.transparentSmokyWhite'
             >
-              {teacher?.teacher.description}
+              {teacherData?.description}
             </Text>
           </Box>
           <Layout display={['flex', 'flex', 'none']} flexBasis={[12, 30, 0]} />
@@ -82,7 +79,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
           <Layout flexBasis={[24, 70, 155]} />
         </Column>
       </Box>
-      <Info playSong={playSong} setPlaySong={setPlaySong} />
+      <Info teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
     </Row>
   )
 })
