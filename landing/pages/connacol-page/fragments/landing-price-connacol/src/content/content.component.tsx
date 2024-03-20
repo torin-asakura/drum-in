@@ -14,7 +14,7 @@ import { Text }                    from '@ui/text'
 
 import { Figures }                 from './figures'
 import { FullPrice }               from './full-price'
-import { ShortCourseContentList }   from './short-course-content-list'
+import { ShortCourseContentList }  from './short-course-content-list'
 import { Title }                   from './title'
 
 const Content = ({ connacolData }) => {

@@ -9,7 +9,7 @@ import { Text }             from '@ui/text'
 import { SquareProps }      from './square.interfaces'
 
 const Square: FC<SquareProps> = ({ firstLine, rotate }) => {
-  const count = parseInt(firstLine, 10)
+  const videoLessonCount = parseInt(firstLine, 10)
 
   return (
     <Background
@@ -44,7 +44,10 @@ const Square: FC<SquareProps> = ({ firstLine, rotate }) => {
             fontSize={['semiTiny', 'tiny', 'micro']}
             color='text.blackAmber'
           >
-            <FormattedMessage id='course.price.plural_format_video_lesson' values={{ count }} />
+            <FormattedMessage
+              id='course.price.plural_format_video_lesson'
+              values={{ videoLessonCount }}
+            />
           </Text>
         </Box>
       </Box>
