@@ -7,7 +7,7 @@ import { Column }                  from '@ui/layout'
 import { Layout }                  from '@ui/layout'
 import { Row }                     from '@ui/layout'
 import { Text }                    from '@ui/text'
-import {useTeacher as useTeacherHook} from '@globals/data'
+import {useTeacher} from '@globals/data'
 import { EducationMobile }         from './education-mobile'
 import { Info }                    from './info'
 import { PlaySongProps }           from './play-song.interfaces'
@@ -16,7 +16,7 @@ import { SliderBlock }             from './slider'
 const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
 
 
-  const {teacherData} = useTeacherHook()
+  const {teacherData} = useTeacher()
   console.log(teacherData)
 
   return (

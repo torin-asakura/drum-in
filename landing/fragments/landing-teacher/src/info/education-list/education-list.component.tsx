@@ -1,5 +1,4 @@
 import React                   from 'react'
-import { FormattedMessage }    from 'react-intl'
 
 import { EducationIcon }       from '@ui/icons'
 import { ArrowBottomTailIcon } from '@ui/icons'
@@ -7,8 +6,6 @@ import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Text }                from '@ui/text'
-
-import { useTeacher }          from '../../data'
 
 const EducationList = ({teacherData}) =>  (
     <Box position='relative' display={['none', 'none', 'flex']}>
