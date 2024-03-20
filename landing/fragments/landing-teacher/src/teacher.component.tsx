@@ -2,20 +2,20 @@ import React               from 'react'
 import { FC }              from 'react'
 import { forwardRef }      from 'react'
 
-import { Box }                     from '@ui/layout'
-import { Column }                  from '@ui/layout'
-import { Layout }                  from '@ui/layout'
-import { Row }                     from '@ui/layout'
-import { Text }                    from '@ui/text'
-import {useTeacher} from '@globals/data'
-import { EducationMobile }         from './education-mobile'
-import { Info }                    from './info'
-import { PlaySongProps }           from './play-song.interfaces'
-import { SliderBlock }             from './slider'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Text }            from '@ui/text'
+import { useTeacher }      from '@globals/data'
+
+import { EducationMobile } from './education-mobile'
+import { Info }            from './info'
+import { PlaySongProps }   from './play-song.interfaces'
+import { SliderBlock }     from './slider'
 
 const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
-
-  const {teacherData} = useTeacher()
+  const { teacherData } = useTeacher()
 
   return (
     <Row flexWrap='wrap' justifyContent='center' ref={ref}>
@@ -66,7 +66,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
             </Text>
           </Box>
           <Layout display={['flex', 'flex', 'none']} flexBasis={[12, 30, 0]} />
-          <EducationMobile />
+          <EducationMobile teacherData={teacherData} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       </Box>
