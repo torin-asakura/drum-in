@@ -1,20 +1,15 @@
-import React                from 'react'
+import React           from 'react'
 
-import { ImageBlock }       from '@ui/image'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Slider }           from '@ui/slider'
-import { SwiperSlide }      from '@ui/slider'
-import { Text }             from '@ui/text'
+import { ImageBlock }  from '@ui/image'
+import { Box }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Slider }      from '@ui/slider'
+import { SwiperSlide } from '@ui/slider'
+import { Text }        from '@ui/text'
 
-import { useCourseProcess } from '../data'
-
-const DesktopSlider = () => {
-  const courseProcess = useCourseProcess()?.courseProcess
-
-  return (
+const DesktopSlider = ({ processEducation }) =>  (
     <Column width='100%'>
       <Box display={['none', 'none', 'flex']}>
         <Slider
@@ -44,12 +39,15 @@ const DesktopSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.smokyWhite'
                   >
-                    {courseProcess?.titleFirstSquare}
+                    {processEducation?.[0]?.title}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={300} height={161}>
-                  <ImageBlock src={courseProcess?.imageForFirstSquare.sourceUrl} />
+                  <ImageBlock
+                    alt={processEducation?.[0]?.picture?.alt}
+                    src={processEducation?.[0]?.picture?.image?.node?.sourceUrl}
+                  />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
@@ -74,12 +72,15 @@ const DesktopSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.blackAmber'
                   >
-                    {courseProcess?.titleSecondSquare}
+                    {processEducation?.[1]?.title}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={240} height={189}>
-                  <ImageBlock src={courseProcess?.imageForSecondSquare.sourceUrl} />
+                  <ImageBlock
+                    alt={processEducation?.[1]?.picture?.alt}
+                    src={processEducation?.[1]?.picture?.image?.node?.sourceUrl}
+                  />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
@@ -105,7 +106,7 @@ const DesktopSlider = () => {
                         lineHeight={['small', 'small', 'default']}
                         color='text.smokyWhite'
                       >
-                        {courseProcess?.titleRectangle}
+                        {processEducation?.[2]?.title}
                       </Text>
                     </Box>
                     <Layout flexBasis={24} />
@@ -116,12 +117,15 @@ const DesktopSlider = () => {
                         lineHeight='medium'
                         color='text.transparentSmokyWhite'
                       >
-                        {courseProcess?.descriptionForRectangle}
+                        {processEducation?.[2]?.text}
                       </Text>
                     </Box>
                   </Column>
                   <Box width={288} height={384} borderRadius='big'>
-                    <ImageBlock src={courseProcess?.imageForRectangle.sourceUrl} />
+                    <ImageBlock
+                      alt={processEducation?.[2]?.picture?.alt}
+                      src={processEducation?.[2]?.picture?.image?.node?.sourceUrl}
+                    />
                   </Box>
                 </Row>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
@@ -134,6 +138,6 @@ const DesktopSlider = () => {
       <Layout flexBasis={[24, 84, 163]} />
     </Column>
   )
-}
+
 
 export { DesktopSlider }
