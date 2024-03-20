@@ -7,18 +7,32 @@ query Teacher{
       commonFragments {
         teacher {
           subtitle
+          
           title
+          
           description
+          
           experience {
             number
             text
           }
+          
           education {
             title
             list {
               element
             }
           }
+          
+          gallery {
+            alt
+            image {
+              node {
+                sourceUrl
+              }
+            }
+          }
+          
         }
       }
     }

@@ -57,7 +57,7 @@ const EducationMobile = () => {
         <Layout flexBasis={[12, 20, 0]} flexShrink={0} />
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
-          {teacherData.education.list.map(({ element }) => (
+          {[{element:''}].map(({ element }) => (
             <React.Fragment key={element.substring(0, 3)}>
               <Box>
                 <Text
