@@ -4,8 +4,26 @@ export const GET_FOOTER = gql(`
 query Footer{
   generalFragments {
     nodes {
-      commonFragments {
-        fieldGroupName
+          commonFragments {
+        footer {
+          logo {
+            node {
+              sourceUrl
+            }
+          }
+          email
+          privacyPolicy
+          courses {
+            nodes {
+              link
+            }
+          }
+          socials {
+            nodes {
+              link
+            }
+          }
+        }
       }
     }
   }
