@@ -1,18 +1,19 @@
-import React                from 'react'
-import uniqid               from 'uniqid'
-import { FormattedMessage } from 'react-intl'
+import React                      from 'react'
+import uniqid                     from 'uniqid'
+import { FormattedMessage }       from 'react-intl'
 
-import { BullhornIcon }     from '@ui/icons'
-import { LightningIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { BullhornIcon }           from '@ui/icons'
+import { LightningIcon }          from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Space }                  from '@ui/text'
+import { Text }                   from '@ui/text'
+import { splitAndSliceFirstItem } from '@shared/utils'
 
-const ContentCourse = () => {
-  const mock = ''
+const ContentCourse = ({ seventhHeavenData }) => {
+  const stepsArray = seventhHeavenData?.individualCourseData.process.step
   return (
     <Column
       flexShrink={0}
@@ -42,7 +43,7 @@ const ContentCourse = () => {
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  {mock}
+                  {stepsArray[0].title}
                 </Text>
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 12, wide: 16 }} flexShrink={0} />
@@ -58,7 +59,7 @@ const ContentCourse = () => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {mock}
+                  {stepsArray[0].description}
                 </Text>
               </Box>
             </Column>
@@ -67,7 +68,7 @@ const ContentCourse = () => {
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 395, wide: 470 }} flexShrink={0}>
-          {mock.split(';')?.map((element) => (
+          {splitAndSliceFirstItem(stepsArray[2].description).map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
@@ -98,7 +99,7 @@ const ContentCourse = () => {
         >
           <Layout flexBasis={83} flexShrink={0} />
           <Column>
-            {mock.split(';').map((element) => (
+            {splitAndSliceFirstItem(stepsArray[1].description).map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -141,14 +142,14 @@ const ContentCourse = () => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {mock}
+                {stepsArray[3].title}
               </Text>
             </Box>
           </Box>
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 280, wide: 340 }} flexShrink={0}>
-          {mock.split(';').map((element) => (
+          {splitAndSliceFirstItem(stepsArray[4].description).map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
