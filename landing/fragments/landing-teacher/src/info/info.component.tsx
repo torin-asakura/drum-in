@@ -10,13 +10,9 @@ import { PlaySongProps }     from '../play-song.interfaces'
 import { EducationList }     from './education-list'
 import { OneCharacteristic } from './one-characteristic'
 import { SongButton }        from './song-button'
-import { useTeacher }        from '../data'
 import { getIndent }         from '../helpers'
 
-const Info: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
-  const teacher = useTeacher()?.teacher
-
-  return (
+const Info: FC<PlaySongProps> = ({teacherData, playSong, setPlaySong }) =>  (
     <Box width={['100%', '100%', 1920]}>
       <Column width='100%'>
         <Box height={['auto', 'auto', 543]}>
@@ -35,18 +31,18 @@ const Info: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
               <ExperianceIcon width={160} height={160} />
             </Box>
             <Column>
-              {teacher?.experience?.map(({ number, characteristic }, index) => (
+              {teacherData?.experience.map(({ number, text }, index) => (
                 <OneCharacteristic
                   indentLeft={getIndent(index)}
                   numeric={number}
-                  title={characteristic}
+                  title={text}
                   key={number}
                 />
               ))}
             </Column>
           </Box>
           <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={1} />
-          <EducationList />
+          <EducationList teacherData={teacherData}/>
           <Layout flexBasis={0} flexGrow={3} order={[3, 3, 0]} />
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} order={[5, 5, 0]} />
         </Box>
@@ -54,5 +50,5 @@ const Info: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
       </Column>
     </Box>
   )
-}
+
 export { Info }
