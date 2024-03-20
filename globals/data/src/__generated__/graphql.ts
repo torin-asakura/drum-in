@@ -1034,8 +1034,8 @@ export type CommonFragments = AcfFieldGroup &
     __typename?: 'CommonFragments'
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     cta?: Maybe<CommonFragmentsCta>
-    /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-    faq?: Maybe<AcfContentNodeConnection>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
@@ -1050,14 +1050,6 @@ export type CommonFragments = AcfFieldGroup &
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     teacher?: Maybe<CommonFragmentsTeacher>
   }
-
-/** The &quot;CommonFragments&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsFaqArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
 
 /** The &quot;CommonFragmentsCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CommonFragmentsCta = AcfFieldGroup &
@@ -1123,6 +1115,35 @@ export type CommonFragmentsCta_Fields = {
   text?: Maybe<CommonFragmentsCtaText>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsFaq = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsFaq_Fields & {
+    __typename?: 'CommonFragmentsFaq'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+    answer?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+    question?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsFaq&quot; Field Group */
+export type CommonFragmentsFaq_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+  answer?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+  question?: Maybe<Scalars['String']['output']>
 }
 
 /** The &quot;CommonFragmentsFooter&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1417,8 +1438,8 @@ export type CommonFragmentsTeacher_Fields = {
 export type CommonFragments_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   cta?: Maybe<CommonFragmentsCta>
-  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-  faq?: Maybe<AcfContentNodeConnection>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -1432,14 +1453,6 @@ export type CommonFragments_Fields = {
   proccess?: Maybe<Array<Maybe<CommonFragmentsProccess>>>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   teacher?: Maybe<CommonFragmentsTeacher>
-}
-
-/** Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group */
-export type CommonFragments_FieldsFaqArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
 }
 
 /** A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;. */
@@ -12681,7 +12694,14 @@ export type FaqQuery = {
     __typename?: 'RootQueryToGeneralFragmentConnection'
     nodes: Array<{
       __typename?: 'GeneralFragment'
-      commonFragments?: { __typename?: 'CommonFragments'; fieldGroupName?: string | null } | null
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        faq?: Array<{
+          __typename?: 'CommonFragmentsFaq'
+          answer?: string | null
+          question?: string | null
+        } | null> | null
+      } | null
     }>
   } | null
 }
@@ -13124,7 +13144,17 @@ export const FaqDocument = {
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'fieldGroupName' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'faq' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'answer' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'question' } },
+                                ],
+                              },
+                            },
                           ],
                         },
                       },

@@ -4,6 +4,6 @@ import { GET_FAQ }  from '../../queries'
 
 export const useFaq = () => {
   const { data } = useQuery(GET_FAQ)
-
-  return { data }
+  const faq = data?.generalFragments?.nodes[0].commonFragments?.faq
+  return { faq }
 }

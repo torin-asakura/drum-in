@@ -18,7 +18,7 @@ const documents = {
     types.GetCourseDocument,
   '\nquery CtaFillForm{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeAccent\n            accent\n            afterAccent\n          }\n          button\n        }\n      }\n    }\n  }\n}\n':
     types.CtaFillFormDocument,
-  '\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n':
+  '\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        faq {\n          answer\n          question\n        }\n      }\n    }\n  }\n}\n':
     types.FaqDocument,
   '\nquery Footer{\n  generalFragments {\n    nodes {\n          commonFragments {\n        footer {\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          email\n          privacyPolicy\n          courses {\n            nodes {\n              link\n            }\n          }\n          socials {\n            nodes {\n              link\n            }\n          }\n        }\n      }\n    }\n  }\n}\n':
     types.FooterDocument,
@@ -66,8 +66,8 @@ export function gql(
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: '\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n'
-): typeof documents['\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n']
+  source: '\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        faq {\n          answer\n          question\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        faq {\n          answer\n          question\n        }\n      }\n    }\n  }\n}\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
