@@ -10,9 +10,13 @@ import { Slider }         from '@ui/slider'
 import { SwiperSlide }    from '@ui/slider'
 
 import { Slide }          from './slide'
-import { useTeacher }     from '../data'
 
-const SliderBlock = () => {
+const SliderBlock = ({teacherData}) => {
+
+  const images = teacherData?.gallery
+
+  console.log(images)
+
   const teacher = [{image:{sourceUrl:'1-IMAGE'}},{image:{sourceUrl:'3-IMAGE'}},{image:{sourceUrl:'3-IMAGE'}}]
 
   const teacherChildren = useMemo(

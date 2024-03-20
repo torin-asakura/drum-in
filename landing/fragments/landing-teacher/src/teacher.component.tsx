@@ -15,9 +15,7 @@ import { SliderBlock }             from './slider'
 
 const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
 
-
   const {teacherData} = useTeacher()
-  console.log(teacherData)
 
   return (
     <Row flexWrap='wrap' justifyContent='center' ref={ref}>
@@ -75,7 +73,7 @@ const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, r
       <Box>
         <Column width='100%'>
           <Layout flexBasis={[24, 70, 130]} />
-          <SliderBlock />
+          <SliderBlock teacherData={teacherData} />
           <Layout flexBasis={[24, 70, 155]} />
         </Column>
       </Box>
