@@ -6,7 +6,7 @@ import { Layout }    from '@ui/layout'
 
 const ListMobile = ({ faq }) => (
     <Column display={['flex', 'flex', 'none']}>
-      {faq.map(({ question, answer }) => (
+      {faq?.map(({ question, answer }) => (
         <React.Fragment key={question}>
           <Accordion title={question} content={answer} />
           <Layout flexBasis={[16, 21, 0]} />
