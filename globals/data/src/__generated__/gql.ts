@@ -14,7 +14,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  */
 const documents = {
     "\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n      content\n      details {\n        faq {\n          answer\n          question\n        }\n        additionalQuestions {\n          title\n          cta {\n            afterBoldText\n            beforeBoldText\n            boldText\n          }\n          button\n        }\n      }\n    }\n  }\n": types.GetCourseDocument,
-    "\nquery CtaFillForm{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n": types.CtaFillFormDocument,
+    "\nquery CtaFillForm{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeBold\n            bold\n            afterBold\n          }\n          button\n        }\n      }\n    }\n  }\n}\n": types.CtaFillFormDocument,
     "\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n": types.FaqDocument,
     "\nquery Footer{\n  generalFragments {\n    nodes {\n          commonFragments {\n        footer {\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          email\n          privacyPolicy\n          courses {\n            nodes {\n              link\n            }\n          }\n          socials {\n            nodes {\n              link\n            }\n          }\n        }\n      }\n    }\n  }\n}\n": types.FooterDocument,
     "\nquery Header{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n": types.HeaderDocument,
@@ -46,7 +46,7 @@ export function gql(source: "\n  query GetCourse($id: ID!) {\n    course(id: $id
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\nquery CtaFillForm{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n"): (typeof documents)["\nquery CtaFillForm{\n  generalFragments {\n    nodes {\n      commonFragments {\n        fieldGroupName\n      }\n    }\n  }\n}\n"];
+export function gql(source: "\nquery CtaFillForm{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeBold\n            bold\n            afterBold\n          }\n          button\n        }\n      }\n    }\n  }\n}\n"): (typeof documents)["\nquery CtaFillForm{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeBold\n            bold\n            afterBold\n          }\n          button\n        }\n      }\n    }\n  }\n}\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
