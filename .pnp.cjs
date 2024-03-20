@@ -13120,6 +13120,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/program-feeling-of-time-fragment", "virtual:37a5bf6cbf0b520122d5faae110f82445a9abde4cd3e3b3ea547773c537116bb45d1b5bf37f49e8f9b77020f0ed4b681e819f8b6b01985cc33b18c1660039826#workspace:landing/pages/feeling-of-time-page/fragments/landing-program-feeling-of-time"],\
           ["@apollo/client", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#npm:3.6.9"],\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
+          ["@shared/utils", "workspace:shared/utils"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-intl", null],\
@@ -13149,6 +13150,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/program-feeling-of-time-fragment", "virtual:ffb71955a7b99b258bd1074cb0d5a1b106bb6fd56773981c7a2dc792e77553f568937e322ffc2d862ee3265b7cbb8ad201069394aa6f5e9c00d925856db3a0c6#workspace:landing/pages/feeling-of-time-page/fragments/landing-program-feeling-of-time"],\
           ["@apollo/client", "virtual:f3fafce9e92c41e7f34a2f7c0599bb812b3e7a8de2044278453d3a250d182f389faf72b93f09e1d8364ef78bba3d510b5992f76389db20efd3061fff2bc83083#npm:3.6.9"],\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
+          ["@shared/utils", "workspace:shared/utils"],\
           ["@types/apollo__client", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-intl", null],\
@@ -13178,6 +13180,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/program-feeling-of-time-fragment", "workspace:landing/pages/feeling-of-time-page/fragments/landing-program-feeling-of-time"],\
           ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.6.9"],\
           ["@forks/react-locomotive-scroll", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll"],\
+          ["@shared/utils", "workspace:shared/utils"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/uniqid", "npm:5.3.2"],\
           ["@ui/icons", "virtual:9295994e19bfd15c8bbd56ce27c1a52d02455d7748cd3c066563a39e576c7c0b5b3ac66f610951cdbd871aba1ff8d08e7fc441f3cbc5a465d6e34614cd6ba7f5#workspace:ui/icons"],\
