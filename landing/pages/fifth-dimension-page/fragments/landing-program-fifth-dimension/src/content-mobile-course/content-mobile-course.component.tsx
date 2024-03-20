@@ -1,18 +1,18 @@
-import { splitAndSliceFirstItem } from '@shared/utils/src'
 import React                      from 'react'
 import uniqid                     from 'uniqid'
 import { FormattedMessage }       from 'react-intl'
 
-import { LightningIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { ProgressBar }      from '@ui/progress-bar'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { LightningIcon }          from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { ProgressBar }            from '@ui/progress-bar'
+import { Space }                  from '@ui/text'
+import { Text }                   from '@ui/text'
+import { splitAndSliceFirstItem } from '@shared/utils/src'
 
-const ContentMobileCourse = ({fifthDimensionData, scrollId = 'scroll-mobile' }) => {
+const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' }) => {
   const stepsArray = fifthDimensionData?.individualCourseData.process.step
   return (
     <Box
