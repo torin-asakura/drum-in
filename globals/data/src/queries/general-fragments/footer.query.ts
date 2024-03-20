@@ -5,7 +5,7 @@ query Footer{
   generalFragments {
     nodes {
       commonFragments {
-        
+        fieldGroupName
       }
     }
   }
