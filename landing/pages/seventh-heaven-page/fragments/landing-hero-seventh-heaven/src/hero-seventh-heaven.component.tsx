@@ -18,7 +18,7 @@ const HeroSeventhHeavenBlock = ({ background, seventhHeavenData }) => (
     >
       <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
       <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <ProgramSeventhHeavenBlock scrollId='desktop-scroll' />
+      <ProgramSeventhHeavenBlock seventhHeavenData={seventhHeavenData} scrollId='desktop-scroll' />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -31,7 +31,7 @@ const HeroSeventhHeavenBlock = ({ background, seventhHeavenData }) => (
     >
       <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
       <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <ProgramSeventhHeavenBlock scrollId='mobile-scroll' />
+      <ProgramSeventhHeavenBlock seventhHeavenData={seventhHeavenData} scrollId='mobile-scroll' />
     </Box>
   </>
 )

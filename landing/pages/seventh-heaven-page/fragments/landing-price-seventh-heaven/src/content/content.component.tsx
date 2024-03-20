@@ -14,21 +14,23 @@ import { Text }                         from '@ui/text'
 
 import { Figures }                      from './figures'
 import { FullPrice }                    from './full-price'
-import { Specifications }               from './specifications'
+import { ShortCourseContentList }       from './short-course-content-list'
 import { Title }                        from './title'
 
 const Content = ({ seventhHeavenData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
-  const count = parseInt(seventhHeavenData?.individualCourseData.price.liveTrainingsNumber, 10)
+  const liveBroadcastCount = parseInt(
+    seventhHeavenData?.individualCourseData.price.liveTrainingsNumber,
+    10
+  )
   const fullPrice = `
     ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })}
     ${seventhHeavenData?.individualCourseData.price.fullPrice}
     ${'₽'}
     `
 
-  const mock = ''
   return (
     <Box
       backgroundColor='background.smokyWhite'
@@ -46,13 +48,8 @@ const Content = ({ seventhHeavenData }) => {
           })}
         />
         <Layout flexBasis={[40, 50, 32]} />
-        <Specifications
-          quantityMonths={mock}
-          quantityVideoLessons={mock}
-          firstLineCircle={mock}
-          secondLineCircle={mock}
-          wordMonth={mock}
-        />
+        <ShortCourseContentList connacolData={seventhHeavenData} />
+
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
             size='withoutPaddingBigHeight'
@@ -90,7 +87,7 @@ const Content = ({ seventhHeavenData }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {mock}
+              {seventhHeavenData?.individualCourseData.price.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -104,7 +101,7 @@ const Content = ({ seventhHeavenData }) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {mock}
+              {seventhHeavenData?.individualCourseData.price.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -124,7 +121,10 @@ const Content = ({ seventhHeavenData }) => {
           quantityVideoLessons={seventhHeavenData?.individualCourseData.price.videoTrainingsNumber}
           firstLineCircle={seventhHeavenData?.individualCourseData.price.liveTrainingsNumber}
           secondLineCircle={
-            <FormattedMessage id='course.price.plural_format_live_broadcast' values={{ count }} />
+            <FormattedMessage
+              id='course.price.plural_format_live_broadcast'
+              values={{ liveBroadcastCount }}
+            />
           }
           rectangleRotate={-20}
           circleRotate={20}

@@ -4,7 +4,6 @@ import { FormattedMessage } from 'react-intl'
 import { BulletedList }     from '@shared/bulleted-list-fragment'
 
 export const ShortCourseContentList = ({ polyrhythmicKeysData }) => {
-
   const videoLessonCount = parseInt(
     polyrhythmicKeysData.individualCourseData.price.videoTrainingsNumber,
     10
