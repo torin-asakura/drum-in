@@ -4123,6 +4123,7 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@landing/modal-form-feeling-of-time": "workspace:0.0.1"
+    "@shared/bulleted-list-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"

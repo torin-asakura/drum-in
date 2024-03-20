@@ -14,7 +14,7 @@ import { Text }                         from '@ui/text'
 
 import { Figures }                      from './figures'
 import { FullPrice }                    from './full-price'
-import { Specifications }               from './specifications'
+import { ShortCourseContentList }       from './short-course-content-list'
 import { Title }                        from './title'
 
 const Content = ({ feelingOfTimeData }) => {
@@ -28,8 +28,10 @@ const Content = ({ feelingOfTimeData }) => {
     ${'₽'}
     `
 
-  const count = parseInt(feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber, 10)
-  const mock = ''
+  const liveBroadcastCount = parseInt(
+    feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber,
+    10
+  )
 
   return (
     <Box
@@ -48,13 +50,8 @@ const Content = ({ feelingOfTimeData }) => {
           })}
         />
         <Layout flexBasis={[40, 50, 32]} />
-        <Specifications
-          quantityMonths={mock}
-          quantityVideoLessons={mock}
-          firstLineCircle={mock}
-          secondLineCircle={mock}
-          wordMonth={mock}
-        />
+        <ShortCourseContentList feelingOfTimeData={feelingOfTimeData} />
+
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
             size='withoutPaddingBigHeight'
@@ -92,7 +89,7 @@ const Content = ({ feelingOfTimeData }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {mock}
+              {feelingOfTimeData?.individualCourseData.price.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -106,7 +103,7 @@ const Content = ({ feelingOfTimeData }) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {mock}
+              {feelingOfTimeData?.individualCourseData.price.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -126,7 +123,10 @@ const Content = ({ feelingOfTimeData }) => {
           quantityVideoLessons={feelingOfTimeData?.individualCourseData.price.videoTrainingsNumber}
           firstLineCircle={feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber}
           secondLineCircle={
-            <FormattedMessage id='course.price.plural_format_live_broadcast' values={{ count }} />
+            <FormattedMessage
+              id='course.price.plural_format_live_broadcast'
+              values={{ liveBroadcastCount }}
+            />
           }
           rectangleRotate={-20}
           circleRotate={20}
