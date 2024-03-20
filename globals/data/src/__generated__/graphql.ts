@@ -1182,6 +1182,8 @@ export type CommonFragmentsProccess_Fields = {
 /** The &quot;CommonFragmentsTeacher&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CommonFragmentsTeacher = AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacher_Fields & {
   __typename?: 'CommonFragmentsTeacher';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
   education?: Maybe<CommonFragmentsTeacherEducation>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
@@ -1192,11 +1194,9 @@ export type CommonFragmentsTeacher = AcfFieldGroup & AcfFieldGroupFields & Commo
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
-  heading?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
   subtitle?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
-  teks?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
 };
 
 /** The &quot;CommonFragmentsTeacherEducation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1208,15 +1208,15 @@ export type CommonFragmentsTeacherEducation = AcfFieldGroup & AcfFieldGroupField
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
-  kontent?: Maybe<Array<Maybe<CommonFragmentsTeacherEducationKontent>>>;
+  list?: Maybe<Array<Maybe<CommonFragmentsTeacherEducationList>>>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>;
 };
 
-/** The &quot;CommonFragmentsTeacherEducationKontent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsTeacherEducationKontent = AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacherEducationKontent_Fields & {
-  __typename?: 'CommonFragmentsTeacherEducationKontent';
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationKontent&quot; Field Group */
+/** The &quot;CommonFragmentsTeacherEducationList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsTeacherEducationList = AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacherEducationList_Fields & {
+  __typename?: 'CommonFragmentsTeacherEducationList';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationList&quot; Field Group */
   element?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
@@ -1225,9 +1225,9 @@ export type CommonFragmentsTeacherEducationKontent = AcfFieldGroup & AcfFieldGro
   fieldGroupName?: Maybe<Scalars['String']['output']>;
 };
 
-/** Interface representing fields of the ACF &quot;CommonFragmentsTeacherEducationKontent&quot; Field Group */
-export type CommonFragmentsTeacherEducationKontent_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationKontent&quot; Field Group */
+/** Interface representing fields of the ACF &quot;CommonFragmentsTeacherEducationList&quot; Field Group */
+export type CommonFragmentsTeacherEducationList_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationList&quot; Field Group */
   element?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
@@ -1244,7 +1244,7 @@ export type CommonFragmentsTeacherEducation_Fields = {
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
-  kontent?: Maybe<Array<Maybe<CommonFragmentsTeacherEducationKontent>>>;
+  list?: Maybe<Array<Maybe<CommonFragmentsTeacherEducationList>>>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>;
 };
@@ -1252,32 +1252,34 @@ export type CommonFragmentsTeacherEducation_Fields = {
 /** The &quot;CommonFragmentsTeacherExperience&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CommonFragmentsTeacherExperience = AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsTeacherExperience_Fields & {
   __typename?: 'CommonFragmentsTeacherExperience';
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
-  chislo?: Maybe<Scalars['Float']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
+  number?: Maybe<Scalars['Float']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
-  tekst?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<Scalars['String']['output']>;
 };
 
 /** Interface representing fields of the ACF &quot;CommonFragmentsTeacherExperience&quot; Field Group */
 export type CommonFragmentsTeacherExperience_Fields = {
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
-  chislo?: Maybe<Scalars['Float']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
+  number?: Maybe<Scalars['Float']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
-  tekst?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<Scalars['String']['output']>;
 };
 
 /** Interface representing fields of the ACF &quot;CommonFragmentsTeacher&quot; Field Group */
 export type CommonFragmentsTeacher_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
   education?: Maybe<CommonFragmentsTeacherEducation>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
@@ -1288,11 +1290,9 @@ export type CommonFragmentsTeacher_Fields = {
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
-  heading?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
   subtitle?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
-  teks?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
 };
 
 /** Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group */
@@ -12277,10 +12277,10 @@ export type GetCourseQueryVariables = Exact<{
 
 export type GetCourseQuery = { __typename?: 'RootQuery', course?: { __typename?: 'Course', title?: string | null, content?: string | null, details?: { __typename?: 'Details', faq?: Array<{ __typename?: 'DetailsFaq', answer?: string | null, question?: string | null } | null> | null, additionalQuestions?: { __typename?: 'DetailsAdditionalQuestions', title?: string | null, button?: string | null, cta?: { __typename?: 'DetailsAdditionalQuestionsCta', afterBoldText?: string | null, beforeBoldText?: string | null, boldText?: string | null } | null } | null } | null } | null };
 
-export type GeneralFragmentsQueryVariables = Exact<{ [key: string]: never; }>;
+export type TeacherQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GeneralFragmentsQuery = { __typename?: 'RootQuery', generalFragments?: { __typename?: 'RootQueryToGeneralFragmentConnection', nodes: Array<{ __typename?: 'GeneralFragment', commonFragments?: { __typename?: 'CommonFragments', teacher?: { __typename?: 'CommonFragmentsTeacher', heading?: string | null, subtitle?: string | null, teks?: string | null } | null } | null }> } | null };
+export type TeacherQuery = { __typename?: 'RootQuery', generalFragments?: { __typename?: 'RootQueryToGeneralFragmentConnection', nodes: Array<{ __typename?: 'GeneralFragment', commonFragments?: { __typename?: 'CommonFragments', teacher?: { __typename?: 'CommonFragmentsTeacher', subtitle?: string | null, title?: string | null, description?: string | null, experience?: Array<{ __typename?: 'CommonFragmentsTeacherExperience', number?: number | null, text?: string | null } | null> | null, education?: { __typename?: 'CommonFragmentsTeacherEducation', title?: string | null, list?: Array<{ __typename?: 'CommonFragmentsTeacherEducationList', element?: string | null } | null> | null } | null } | null } | null }> } | null };
 
 export type IndividualCourseQueryVariables = Exact<{
   id: Scalars['ID']['input'];
@@ -12305,7 +12305,7 @@ export type GetSeoQuery = { __typename?: 'RootQuery', page?: { __typename?: 'Pag
 
 
 export const GetCourseDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetCourse"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"course"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"details"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"faq"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"answer"}},{"kind":"Field","name":{"kind":"Name","value":"question"}}]}},{"kind":"Field","name":{"kind":"Name","value":"additionalQuestions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"cta"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"afterBoldText"}},{"kind":"Field","name":{"kind":"Name","value":"beforeBoldText"}},{"kind":"Field","name":{"kind":"Name","value":"boldText"}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetCourseQuery, GetCourseQueryVariables>;
-export const GeneralFragmentsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GeneralFragments"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"generalFragments"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"commonFragments"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"teacher"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"heading"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"teks"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GeneralFragmentsQuery, GeneralFragmentsQueryVariables>;
+export const TeacherDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Teacher"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"generalFragments"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"commonFragments"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"teacher"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"experience"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"number"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"education"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"list"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"element"}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<TeacherQuery, TeacherQueryVariables>;
 export const IndividualCourseDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"IndividualCourse"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"individualCourse"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"individualCourseData"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"process"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"step"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"background"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"desktop"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"hero"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"teacher"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"mobile"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"hero"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"teacher"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"price"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"cta"}},{"kind":"Field","name":{"kind":"Name","value":"courseLengthInMonths"}},{"kind":"Field","name":{"kind":"Name","value":"discount"}},{"kind":"Field","name":{"kind":"Name","value":"fullPrice"}},{"kind":"Field","name":{"kind":"Name","value":"liveTrainingsNumber"}},{"kind":"Field","name":{"kind":"Name","value":"monthlyPrice"}},{"kind":"Field","name":{"kind":"Name","value":"oldPrice"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"videoTrainingsNumber"}}]}},{"kind":"Field","name":{"kind":"Name","value":"hero"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"benefits"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"content"}}]}},{"kind":"Field","name":{"kind":"Name","value":"runningLine"}},{"kind":"Field","name":{"kind":"Name","value":"courseConditions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"number"}}]}},{"kind":"Field","name":{"kind":"Name","value":"cta"}}]}}]}}]}}]}}]} as unknown as DocumentNode<IndividualCourseQuery, IndividualCourseQueryVariables>;
 export const GetPreviewDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPreview"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemBy"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"uri"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]} as unknown as DocumentNode<GetPreviewQuery, GetPreviewQueryVariables>;
 export const GetSeoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetSeo"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"focuskw"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphType"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphTitle"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphDescription"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphUrl"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphSiteName"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphModifiedTime"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphSiteName"}},{"kind":"Field","name":{"kind":"Name","value":"opengraphImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaDetails"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sizes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"twitterDescription"}},{"kind":"Field","name":{"kind":"Name","value":"twitterTitle"}},{"kind":"Field","name":{"kind":"Name","value":"twitterImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"breadcrumbs"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetSeoQuery, GetSeoQueryVariables>;

@@ -1,0 +1,6 @@
+export * from './teacher.query'
+export * from './process-education.query'
+export * from './header.query'
+export * from './footer.query'
+export * from './faq.query'
+export * from './cta-fill-form.query'
