@@ -1,18 +1,18 @@
-import React                from 'react'
+import React                  from 'react'
+import { FormattedMessage }   from 'react-intl'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
+import { useProcessEducation } from '@globals/data'
 
-import { DesktopSlider }    from './desktop-slider'
-import { MobileSlider }     from './mobile-slider'
-import { useCourseProcess } from './data'
+import { DesktopSlider }      from './desktop-slider'
+import { MobileSlider }       from './mobile-slider'
 
 const CourseProcessBlock = () => {
-  const courseProcess = useCourseProcess()
-
+  const { processEducation } = useProcessEducation()
   return (
     <Row justifyContent='center' flexWrap='wrap'>
       <Box width={['100%', '100%', 1920]}>
@@ -28,15 +28,15 @@ const CourseProcessBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {courseProcess?.title}ssssssssssss
+              <FormattedMessage id='/' defaultMessage='Как проходит обучение' />
             </Text>
           </Box>
           <Layout flexBasis={[24, 60, 101]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       </Box>
-      <DesktopSlider />
-      <MobileSlider />
+      <DesktopSlider processEducation={processEducation} />
+      <MobileSlider processEducation={processEducation} />
     </Row>
   )
 }

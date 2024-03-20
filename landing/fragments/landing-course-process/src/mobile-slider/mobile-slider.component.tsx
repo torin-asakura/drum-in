@@ -1,19 +1,14 @@
-import React                from 'react'
+import React           from 'react'
 
-import { ImageBlock }       from '@ui/image'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Slider }           from '@ui/slider'
-import { SwiperSlide }      from '@ui/slider'
-import { Text }             from '@ui/text'
+import { ImageBlock }  from '@ui/image'
+import { Box }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Slider }      from '@ui/slider'
+import { SwiperSlide } from '@ui/slider'
+import { Text }        from '@ui/text'
 
-import { useCourseProcess } from '../data'
-
-const MobileSlider = () => {
-  const courseProcess = useCourseProcess()?.courseProcess
-
-  return (
+const MobileSlider = ({ processEducation }) =>  (
     <Column>
       <Box display={['flex', 'flex', 'none']}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -40,12 +35,15 @@ const MobileSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.smokyWhite'
                   >
-                    {courseProcess?.titleFirstSquare}
+                    {processEducation?.[0]?.title}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={[200, 220, 0]} height={[107, 120, 0]}>
-                  <ImageBlock src={courseProcess?.imageForFirstSquare.sourceUrl} />
+                  <ImageBlock
+                    alt={processEducation?.[0]?.picture?.alt}
+                    src={processEducation?.[0]?.picture?.image?.node?.sourceUrl}
+                  />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
@@ -70,12 +68,15 @@ const MobileSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.blackAmber'
                   >
-                    {courseProcess?.titleSecondSquare}
+                    {processEducation?.[1]?.title}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={[178, 198, 0]} height={[140, 155, 0]}>
-                  <ImageBlock src={courseProcess?.imageForSecondSquare.sourceUrl} />
+                  <ImageBlock
+                    alt={processEducation?.[1]?.picture?.alt}
+                    src={processEducation?.[1]?.picture?.image?.node?.sourceUrl}
+                  />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
@@ -99,12 +100,15 @@ const MobileSlider = () => {
                     lineHeight={['small', 'small', 'default']}
                     color='text.smokyWhite'
                   >
-                    {courseProcess?.titleRectangle}
+                    {processEducation?.[2]?.title}
                   </Text>
                 </Box>
                 <Layout flexGrow={3} />
                 <Box alignSelf='end' width={[112, 132, 0]} height={[150, 165, 0]}>
-                  <ImageBlock src={courseProcess?.imageForRectangle.sourceUrl} />
+                  <ImageBlock
+                    alt={processEducation?.[2]?.picture?.alt}
+                    src={processEducation?.[2]?.picture?.image?.node?.sourceUrl}
+                  />
                 </Box>
                 <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
               </Column>
@@ -116,6 +120,6 @@ const MobileSlider = () => {
       <Layout flexBasis={[24, 84, 163]} />
     </Column>
   )
-}
+
 
 export { MobileSlider }

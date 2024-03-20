@@ -8,7 +8,14 @@ query ProcessEducation{
         process {
           title
           text
-          media
+          picture {
+            alt
+            image {
+              node {
+                sourceUrl
+              }
+            }
+          }
         }
       }
     }
