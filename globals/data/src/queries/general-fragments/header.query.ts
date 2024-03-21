@@ -5,7 +5,29 @@ query Header{
   generalFragments {
     nodes {
       commonFragments {
-        fieldGroupName
+        header {
+          logo {
+            node {
+              sourceUrl
+            }
+          }
+          dropdownList {
+            title
+            items {
+              title
+              level
+              path
+            }
+          }
+          links {
+            path
+            title
+          }
+          button {
+            text
+            path
+          }
+        }
       }
     }
   }

@@ -18,8 +18,7 @@ import { Logo }                from '@ui/logo'
 import { Text }                from '@ui/text'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 import { useHover }            from '@ui/utils'
-
-import { useHeader }           from './data'
+import {useHeader} from '@globals/data'
 
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
@@ -27,11 +26,13 @@ const HeaderBlock = () => {
   const [hoverLink, hoverLinkProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const header = useHeader()
+  // const header = useHeader()
 
   const { scroll } = useLocomotiveScroll()
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
 
+  const {header} = useHeader()
+  console.log(header)
   useEffect(() => {
     if (scroll) {
       scroll.on('scroll', (instance) => {
@@ -113,12 +114,12 @@ const HeaderBlock = () => {
               </Box>
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
               <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
-                <NextLink path={header?.urlLink}>
+                <NextLink path={'/'}>
                   <Text
                     color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
                     style={{ transition: '0.3s' }}
                   >
-                    {header?.titleLink}
+                    headerTitle
                   </Text>
                 </NextLink>
               </Box>
@@ -134,7 +135,7 @@ const HeaderBlock = () => {
                     fontSize={['semiMedium', 'medium', 'medium']}
                     lineHeight='default'
                   >
-                    {header?.nameButton}
+                    headerNameButton
                   </Text>
                 </Button>
               </Row>
@@ -150,7 +151,7 @@ const HeaderBlock = () => {
                     fontSize={['semiMedium', 'medium', 'medium']}
                     lineHeight='default'
                   >
-                    {header?.nameButton}
+                    headerNameButton
                   </Text>
                 </Button>
               </Row>

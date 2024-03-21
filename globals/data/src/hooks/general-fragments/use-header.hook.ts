@@ -4,6 +4,6 @@ import { GET_HEADER } from '../../queries'
 
 export const useHeader = () => {
   const { data } = useQuery(GET_HEADER)
-
-  return { data }
+  const header = data?.generalFragments?.nodes[0].commonFragments?.header
+  return { header }
 }
