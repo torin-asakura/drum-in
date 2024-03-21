@@ -1,4 +1,4 @@
 export interface LinkSocialProps {
-  text: string
-  path: string
+  text?: string | null
+  path?: string | null
 }
