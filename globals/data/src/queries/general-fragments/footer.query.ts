@@ -2,26 +2,24 @@ import { gql } from '../../__generated__'
 
 export const GET_FOOTER = gql(`
 query Footer{
-  generalFragments {
+ generalFragments {
     nodes {
-          commonFragments {
+      commonFragments {
         footer {
+          email
+          privacyPolicy
           logo {
             node {
               sourceUrl
             }
           }
-          email
-          privacyPolicy
           courses {
-            nodes {
-              link
-            }
+            title
+            path
           }
           socials {
-            nodes {
-              link
-            }
+            title
+            link
           }
         }
       }
