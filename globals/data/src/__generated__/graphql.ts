@@ -20,7 +20,7 @@ export type Scalars = {
   Float: { input: number; output: number }
 }
 
-/** Connection between the MainChooseCourseCourses type and the ContentNode type */
+/** Connection between the DetailsPaymentFormCourses type and the ContentNode type */
 export type AcfContentNodeConnection = Connection &
   ContentNodeConnection & {
     __typename?: 'AcfContentNodeConnection'
@@ -77,7 +77,7 @@ export type AcfFieldGroupFields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
 }
 
-/** Connection between the Audio type and the MediaItem type */
+/** Connection between the IndividualCourseDataBackgroundDesktop type and the MediaItem type */
 export type AcfMediaItemConnectionEdge = Edge &
   MediaItemConnectionEdge &
   OneToOneConnection & {
@@ -87,31 +87,6 @@ export type AcfMediaItemConnectionEdge = Edge &
     /** The node of the connection, without the edges */
     node: MediaItem
   }
-
-/** The &quot;Audio&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Audio = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Audio_Fields & {
-    __typename?: 'Audio'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;file&quot; Field Type added to the schema as part of the &quot;Audio&quot; Field Group */
-    song?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;Audio&quot; Field Group */
-export type Audio_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;file&quot; Field Type added to the schema as part of the &quot;Audio&quot; Field Group */
-  song?: Maybe<AcfMediaItemConnectionEdge>
-}
 
 /** Avatars are profile images for users. WordPress by default uses the Gravatar service to host and fetch avatars from. */
 export type Avatar = {
@@ -1052,60 +1027,58 @@ export enum CommentsConnectionOrderbyEnum {
   UserId = 'USER_ID',
 }
 
-/** A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;. */
-export type Connection = {
-  /** A list of edges (relational context) between connected nodes */
-  edges: Array<Edge>
-  /** A list of connected nodes */
-  nodes: Array<Node>
-  /** Information about pagination in a connection. */
-  pageInfo: PageInfo
-}
-
-/** The &quot;Consultation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Consultation = AcfFieldGroup &
+/** The &quot;CommonFragments&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragments = AcfFieldGroup &
   AcfFieldGroupFields &
-  Consultation_Fields & {
-    __typename?: 'Consultation'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
-    cta?: Maybe<ConsultationCta>
+  CommonFragments_Fields & {
+    __typename?: 'CommonFragments'
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    cta?: Maybe<CommonFragmentsCta>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
-    modal?: Maybe<ConsultationModal>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    footer?: Maybe<CommonFragmentsFooter>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    paymentForm?: Maybe<CommonFragmentsPaymentForm>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    process?: Maybe<Array<Maybe<CommonFragmentsProcess>>>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    teacher?: Maybe<CommonFragmentsTeacher>
   }
 
-/** The &quot;ConsultationCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ConsultationCta = AcfFieldGroup &
+/** The &quot;CommonFragmentsCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsCta = AcfFieldGroup &
   AcfFieldGroupFields &
-  ConsultationCta_Fields & {
-    __typename?: 'ConsultationCta'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+  CommonFragmentsCta_Fields & {
+    __typename?: 'CommonFragmentsCta'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
     button?: Maybe<Scalars['String']['output']>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
-    text?: Maybe<ConsultationCtaText>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
+    text?: Maybe<CommonFragmentsCtaText>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
     title?: Maybe<Scalars['String']['output']>
   }
 
-/** The &quot;ConsultationCtaText&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ConsultationCtaText = AcfFieldGroup &
+/** The &quot;CommonFragmentsCtaText&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsCtaText = AcfFieldGroup &
   AcfFieldGroupFields &
-  ConsultationCtaText_Fields & {
-    __typename?: 'ConsultationCtaText'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+  CommonFragmentsCtaText_Fields & {
+    __typename?: 'CommonFragmentsCtaText'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group */
     accent?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group */
     afterAccent?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group */
     beforeAccent?: Maybe<Scalars['String']['output']>
     /**
      * The name of the field group
@@ -1114,13 +1087,13 @@ export type ConsultationCtaText = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;ConsultationCtaText&quot; Field Group */
-export type ConsultationCtaText_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+/** Interface representing fields of the ACF &quot;CommonFragmentsCtaText&quot; Field Group */
+export type CommonFragmentsCtaText_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group */
   accent?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group */
   afterAccent?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group */
   beforeAccent?: Maybe<Scalars['String']['output']>
   /**
    * The name of the field group
@@ -1129,479 +1102,422 @@ export type ConsultationCtaText_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
 }
 
-/** Interface representing fields of the ACF &quot;ConsultationCta&quot; Field Group */
-export type ConsultationCta_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+/** Interface representing fields of the ACF &quot;CommonFragmentsCta&quot; Field Group */
+export type CommonFragmentsCta_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
   button?: Maybe<Scalars['String']['output']>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
-  text?: Maybe<ConsultationCtaText>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
+  text?: Maybe<CommonFragmentsCtaText>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;ConsultationModal&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ConsultationModal = AcfFieldGroup &
+/** The &quot;CommonFragmentsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsFaq = AcfFieldGroup &
   AcfFieldGroupFields &
-  ConsultationModal_Fields & {
-    __typename?: 'ConsultationModal'
+  CommonFragmentsFaq_Fields & {
+    __typename?: 'CommonFragmentsFaq'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+    answer?: Maybe<Scalars['String']['output']>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
-    subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+    question?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;ConsultationModal&quot; Field Group */
-export type ConsultationModal_Fields = {
+/** Interface representing fields of the ACF &quot;CommonFragmentsFaq&quot; Field Group */
+export type CommonFragmentsFaq_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+  answer?: Maybe<Scalars['String']['output']>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
-  subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
+  question?: Maybe<Scalars['String']['output']>
 }
 
-/** Interface representing fields of the ACF &quot;Consultation&quot; Field Group */
-export type Consultation_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
-  cta?: Maybe<ConsultationCta>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
-  modal?: Maybe<ConsultationModal>
-}
-
-/** The &quot;Contacts&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Contacts = AcfFieldGroup &
+/** The &quot;CommonFragmentsFooter&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsFooter = AcfFieldGroup &
   AcfFieldGroupFields &
-  Contacts_Fields & {
-    __typename?: 'Contacts'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Contacts&quot; Field Group */
-    background?: Maybe<ContactsBackground>
+  CommonFragmentsFooter_Fields & {
+    __typename?: 'CommonFragmentsFooter'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+    courses?: Maybe<Array<Maybe<CommonFragmentsFooterCourses>>>
+    /** Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+    email?: Maybe<Scalars['String']['output']>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Contacts&quot; Field Group */
-    socials?: Maybe<Array<Maybe<ContactsSocials>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Contacts&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+    logo?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;url&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+    privacyPolicy?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+    socials?: Maybe<Array<Maybe<CommonFragmentsFooterSocials>>>
   }
 
-/** The &quot;ContactsBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContactsBackground = AcfFieldGroup &
+/** The &quot;CommonFragmentsFooterCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsFooterCourses = AcfFieldGroup &
   AcfFieldGroupFields &
-  ContactsBackground_Fields & {
-    __typename?: 'ContactsBackground'
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
-    desktop?: Maybe<AcfMediaItemConnectionEdge>
+  CommonFragmentsFooterCourses_Fields & {
+    __typename?: 'CommonFragmentsFooterCourses'
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
-    mobile?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;ContactsBackground&quot; Field Group */
-export type ContactsBackground_Fields = {
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
-  desktop?: Maybe<AcfMediaItemConnectionEdge>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
-  mobile?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** The &quot;ContactsSocials&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContactsSocials = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContactsSocials_Fields & {
-    __typename?: 'ContactsSocials'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContactsSocials&quot; Field Group */
-    content?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContactsSocials&quot; Field Group */
-    link?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContactsSocials&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;ContactsSocials&quot; Field Group */
-export type ContactsSocials_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContactsSocials&quot; Field Group */
-  content?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContactsSocials&quot; Field Group */
-  link?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContactsSocials&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;Contacts&quot; Field Group */
-export type Contacts_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Contacts&quot; Field Group */
-  background?: Maybe<ContactsBackground>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Contacts&quot; Field Group */
-  socials?: Maybe<Array<Maybe<ContactsSocials>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Contacts&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;Content&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Content = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Content_Fields & {
-    __typename?: 'Content'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-    background?: Maybe<ContentBackground>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-    cta?: Maybe<ContentCta>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-    details?: Maybe<ContentDetails>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-    hero?: Maybe<ContentHero>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group */
     path?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-    payment?: Maybe<ContentPayment>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-    price?: Maybe<ContentPrice>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
   }
 
-/** The &quot;ContentBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentBackground = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentBackground_Fields & {
-    __typename?: 'ContentBackground'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
-    desktop?: Maybe<ContentBackgroundDesktop>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
-    mobile?: Maybe<ContentBackgroundMobile>
-  }
-
-/** The &quot;ContentBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentBackgroundDesktop = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentBackgroundDesktop_Fields & {
-    __typename?: 'ContentBackgroundDesktop'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group */
-    footer?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group */
-    hero?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group */
-    teacher?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;ContentBackgroundDesktop&quot; Field Group */
-export type ContentBackgroundDesktop_Fields = {
+/** Interface representing fields of the ACF &quot;CommonFragmentsFooterCourses&quot; Field Group */
+export type CommonFragmentsFooterCourses_Fields = {
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group */
-  footer?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group */
-  hero?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group */
-  teacher?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group */
+  path?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;ContentBackgroundMobile&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentBackgroundMobile = AcfFieldGroup &
+/** The &quot;CommonFragmentsFooterSocials&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsFooterSocials = AcfFieldGroup &
   AcfFieldGroupFields &
-  ContentBackgroundMobile_Fields & {
-    __typename?: 'ContentBackgroundMobile'
+  CommonFragmentsFooterSocials_Fields & {
+    __typename?: 'CommonFragmentsFooterSocials'
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group */
-    footer?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group */
-    hero?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group */
-    teacher?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group */
+    link?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;ContentBackgroundMobile&quot; Field Group */
-export type ContentBackgroundMobile_Fields = {
+/** Interface representing fields of the ACF &quot;CommonFragmentsFooterSocials&quot; Field Group */
+export type CommonFragmentsFooterSocials_Fields = {
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group */
-  footer?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group */
-  hero?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group */
-  teacher?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group */
+  link?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
 }
 
-/** Interface representing fields of the ACF &quot;ContentBackground&quot; Field Group */
-export type ContentBackground_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
-  desktop?: Maybe<ContentBackgroundDesktop>
+/** Interface representing fields of the ACF &quot;CommonFragmentsFooter&quot; Field Group */
+export type CommonFragmentsFooter_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+  courses?: Maybe<Array<Maybe<CommonFragmentsFooterCourses>>>
+  /** Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+  email?: Maybe<Scalars['String']['output']>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
-  mobile?: Maybe<ContentBackgroundMobile>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+  logo?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;url&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+  privacyPolicy?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group */
+  socials?: Maybe<Array<Maybe<CommonFragmentsFooterSocials>>>
 }
 
-/** The &quot;ContentCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentCta = AcfFieldGroup &
+/** The &quot;CommonFragmentsPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsPaymentForm = AcfFieldGroup &
   AcfFieldGroupFields &
-  ContentCta_Fields & {
-    __typename?: 'ContentCta'
+  CommonFragmentsPaymentForm_Fields & {
+    __typename?: 'CommonFragmentsPaymentForm'
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPaymentForm&quot; Field Group */
+    placeholder?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsPaymentForm&quot; Field Group */
+export type CommonFragmentsPaymentForm_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPaymentForm&quot; Field Group */
+  placeholder?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsProcess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsProcess = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsProcess_Fields & {
+    __typename?: 'CommonFragmentsProcess'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
+    picture?: Maybe<CommonFragmentsProcessPicture>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
+    text?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsProcessPicture&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsProcessPicture = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsProcessPicture_Fields & {
+    __typename?: 'CommonFragmentsProcessPicture'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
+    alt?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
+    image?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsProcessPicture&quot; Field Group */
+export type CommonFragmentsProcessPicture_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
+  alt?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsProcess&quot; Field Group */
+export type CommonFragmentsProcess_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
+  picture?: Maybe<CommonFragmentsProcessPicture>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
+  text?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsTeacher&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsTeacher = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsTeacher_Fields & {
+    __typename?: 'CommonFragmentsTeacher'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+    education?: Maybe<CommonFragmentsTeacherEducation>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+    experience?: Maybe<Array<Maybe<CommonFragmentsTeacherExperience>>>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+    gallery?: Maybe<Array<Maybe<CommonFragmentsTeacherGallery>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
     subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
     title?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;ContentCta&quot; Field Group */
-export type ContentCta_Fields = {
+/** The &quot;CommonFragmentsTeacherEducation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsTeacherEducation = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsTeacherEducation_Fields & {
+    __typename?: 'CommonFragmentsTeacherEducation'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
+    list?: Maybe<Array<Maybe<CommonFragmentsTeacherEducationList>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsTeacherEducationList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsTeacherEducationList = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsTeacherEducationList_Fields & {
+    __typename?: 'CommonFragmentsTeacherEducationList'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationList&quot; Field Group */
+    element?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsTeacherEducationList&quot; Field Group */
+export type CommonFragmentsTeacherEducationList_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducationList&quot; Field Group */
+  element?: Maybe<Scalars['String']['output']>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsTeacherEducation&quot; Field Group */
+export type CommonFragmentsTeacherEducation_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
+  list?: Maybe<Array<Maybe<CommonFragmentsTeacherEducationList>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherEducation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsTeacherExperience&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsTeacherExperience = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsTeacherExperience_Fields & {
+    __typename?: 'CommonFragmentsTeacherExperience'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
+    number?: Maybe<Scalars['Float']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
+    text?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsTeacherExperience&quot; Field Group */
+export type CommonFragmentsTeacherExperience_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
+  number?: Maybe<Scalars['Float']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherExperience&quot; Field Group */
+  text?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsTeacherGallery&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsTeacherGallery = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsTeacherGallery_Fields & {
+    __typename?: 'CommonFragmentsTeacherGallery'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherGallery&quot; Field Group */
+    alt?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherGallery&quot; Field Group */
+    image?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsTeacherGallery&quot; Field Group */
+export type CommonFragmentsTeacherGallery_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherGallery&quot; Field Group */
+  alt?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherGallery&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsTeacher&quot; Field Group */
+export type CommonFragmentsTeacher_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+  education?: Maybe<CommonFragmentsTeacherEducation>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+  experience?: Maybe<Array<Maybe<CommonFragmentsTeacherExperience>>>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
+  gallery?: Maybe<Array<Maybe<CommonFragmentsTeacherGallery>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
   subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacher&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;ContentDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentDetails = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentDetails_Fields & {
-    __typename?: 'ContentDetails'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group */
-    levels?: Maybe<Array<Maybe<ContentDetailsLevels>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;ContentDetailsLevels&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentDetailsLevels = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentDetailsLevels_Fields & {
-    __typename?: 'ContentDetailsLevels'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-    content?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-    lengthOfCourseInMonths?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-    level?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-    liveTrainingsNumber?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-    target?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-    tooltip?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-    videoTrainingsNumber?: Maybe<Scalars['Float']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;ContentDetailsLevels&quot; Field Group */
-export type ContentDetailsLevels_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-  content?: Maybe<Scalars['String']['output']>
+/** Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group */
+export type CommonFragments_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  cta?: Maybe<CommonFragmentsCta>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-  lengthOfCourseInMonths?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-  level?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-  liveTrainingsNumber?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-  target?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-  tooltip?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group */
-  videoTrainingsNumber?: Maybe<Scalars['Float']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  footer?: Maybe<CommonFragmentsFooter>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  paymentForm?: Maybe<CommonFragmentsPaymentForm>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  process?: Maybe<Array<Maybe<CommonFragmentsProcess>>>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  teacher?: Maybe<CommonFragmentsTeacher>
 }
 
-/** Interface representing fields of the ACF &quot;ContentDetails&quot; Field Group */
-export type ContentDetails_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group */
-  levels?: Maybe<Array<Maybe<ContentDetailsLevels>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;ContentHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentHero = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentHero_Fields & {
-    __typename?: 'ContentHero'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group */
-    cta?: Maybe<ContentHeroCta>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Running line */
-    runningLine?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;ContentHeroCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentHeroCta = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentHeroCta_Fields & {
-    __typename?: 'ContentHeroCta'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group */
-    tagsCloud?: Maybe<Array<Maybe<ContentHeroCtaTagsCloud>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;ContentHeroCtaTagsCloud&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentHeroCtaTagsCloud = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentHeroCtaTagsCloud_Fields & {
-    __typename?: 'ContentHeroCtaTagsCloud'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCtaTagsCloud&quot; Field Group */
-    tag?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;ContentHeroCtaTagsCloud&quot; Field Group */
-export type ContentHeroCtaTagsCloud_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCtaTagsCloud&quot; Field Group */
-  tag?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;ContentHeroCta&quot; Field Group */
-export type ContentHeroCta_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group */
-  tagsCloud?: Maybe<Array<Maybe<ContentHeroCtaTagsCloud>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;ContentHero&quot; Field Group */
-export type ContentHero_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group */
-  cta?: Maybe<ContentHeroCta>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Running line */
-  runningLine?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
+/** A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;. */
+export type Connection = {
+  /** A list of edges (relational context) between connected nodes */
+  edges: Array<Edge>
+  /** A list of connected nodes */
+  nodes: Array<Node>
+  /** Information about pagination in a connection. */
+  pageInfo: PageInfo
 }
 
 /** Nodes used to manage content */
@@ -1833,129 +1749,6 @@ export type ContentNodeToEnqueuedStylesheetConnectionPageInfo =
       /** When paginating backwards, the cursor to continue. */
       startCursor?: Maybe<Scalars['String']['output']>
     }
-
-/** The &quot;ContentPayment&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPayment = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentPayment_Fields & {
-    __typename?: 'ContentPayment'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
-    benefit?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
-    courses?: Maybe<AcfContentNodeConnection>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;ContentPayment&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPaymentCoursesArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** Interface representing fields of the ACF &quot;ContentPayment&quot; Field Group */
-export type ContentPayment_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
-  benefit?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
-  courses?: Maybe<AcfContentNodeConnection>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;ContentPayment&quot; Field Group */
-export type ContentPayment_FieldsCoursesArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** The &quot;ContentPrice&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPrice = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentPrice_Fields & {
-    __typename?: 'ContentPrice'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-    details?: Maybe<ContentPriceDetails>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-    discount?: Maybe<Scalars['Float']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-    priceFull?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-    priceMonthly?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;ContentPriceDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPriceDetails = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentPriceDetails_Fields & {
-    __typename?: 'ContentPriceDetails'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group */
-    levelsNumber?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group */
-    monthsNumber?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group */
-    videoTrainingsNumber?: Maybe<Scalars['Float']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;ContentPriceDetails&quot; Field Group */
-export type ContentPriceDetails_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group */
-  levelsNumber?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group */
-  monthsNumber?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group */
-  videoTrainingsNumber?: Maybe<Scalars['Float']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;ContentPrice&quot; Field Group */
-export type ContentPrice_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-  details?: Maybe<ContentPriceDetails>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-  discount?: Maybe<Scalars['Float']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-  priceFull?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-  priceMonthly?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
 
 /** The template assigned to a node of content */
 export type ContentTemplate = {
@@ -2242,132 +2035,6 @@ export enum ContentTypesOfTagEnum {
   Post = 'POST',
 }
 
-/** Interface representing fields of the ACF &quot;Content&quot; Field Group */
-export type Content_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  background?: Maybe<ContentBackground>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  cta?: Maybe<ContentCta>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  details?: Maybe<ContentDetails>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  hero?: Maybe<ContentHero>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  path?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  payment?: Maybe<ContentPayment>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  price?: Maybe<ContentPrice>
-}
-
-/** The &quot;ContractOffer&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContractOffer = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContractOffer_Fields & {
-    __typename?: 'ContractOffer'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-    background?: Maybe<ContractOfferBackground>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-    creationYear?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-    points?: Maybe<Array<Maybe<ContractOfferPoints>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-    subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;ContractOfferBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContractOfferBackground = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContractOfferBackground_Fields & {
-    __typename?: 'ContractOfferBackground'
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
-    desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
-    mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;ContractOfferBackground&quot; Field Group */
-export type ContractOfferBackground_Fields = {
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
-  desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
-  mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** The &quot;ContractOfferPoints&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContractOfferPoints = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContractOfferPoints_Fields & {
-    __typename?: 'ContractOfferPoints'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
-    subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;ContractOfferPoints&quot; Field Group */
-export type ContractOfferPoints_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
-  subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;ContractOffer&quot; Field Group */
-export type ContractOffer_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-  background?: Maybe<ContractOfferBackground>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-  creationYear?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-  points?: Maybe<Array<Maybe<ContractOfferPoints>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-  subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
 /** The course type */
 export type Course = ContentNode &
   DatabaseIdentifier &
@@ -2381,14 +2048,14 @@ export type Course = ContentNode &
   NodeWithTitle &
   Previewable &
   UniformResourceIdentifiable &
-  WithAcfContent & {
+  WithAcfDetails & {
     __typename?: 'Course'
     /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
     ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>
     /** Connection between the HierarchicalContentNode type and the ContentNode type */
     children?: Maybe<HierarchicalContentNodeToContentNodeChildrenConnection>
-    /** Fields of the Content ACF Field Group */
-    content?: Maybe<Content>
+    /** The content of the post. */
+    content?: Maybe<Scalars['String']['output']>
     /** Connection between the ContentNode type and the ContentType type */
     contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>
     /** The name of the Content Type the node belongs to */
@@ -2406,6 +2073,8 @@ export type Course = ContentNode &
     dateGmt?: Maybe<Scalars['String']['output']>
     /** The desired slug of the post */
     desiredSlug?: Maybe<Scalars['String']['output']>
+    /** Fields of the Details ACF Field Group */
+    details?: Maybe<Details>
     /** If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds */
     editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>
     /** The RSS enclosure for the object */
@@ -2482,6 +2151,11 @@ export type CourseChildrenArgs = {
   first?: InputMaybe<Scalars['Int']['input']>
   last?: InputMaybe<Scalars['Int']['input']>
   where?: InputMaybe<HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs>
+}
+
+/** The course type */
+export type CourseContentArgs = {
+  format?: InputMaybe<PostObjectFieldFormatEnum>
 }
 
 /** The course type */
@@ -3299,6 +2973,113 @@ export type DetailsAdditionalQuestions_Fields = {
   title?: Maybe<Scalars['String']['output']>
 }
 
+/** The &quot;DetailsCourseContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsCourseContent = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsCourseContent_Fields & {
+    __typename?: 'DetailsCourseContent'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group */
+    courseContentSubtitle?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group */
+    courseContentTitle?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group */
+    levels?: Maybe<Array<Maybe<DetailsCourseContentLevels>>>
+  }
+
+/** The &quot;DetailsCourseContentLevels&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsCourseContentLevels = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsCourseContentLevels_Fields & {
+    __typename?: 'DetailsCourseContentLevels'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+    content?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+    lengthOfCourseInMonths?: Maybe<Scalars['Float']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+    level?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+    liveTrainingsNumber?: Maybe<Scalars['Float']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+    target?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+    tooltip?: Maybe<DetailsCourseContentLevelsTooltip>
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+    videoTrainingsNumber?: Maybe<Scalars['Float']['output']>
+  }
+
+/** The &quot;DetailsCourseContentLevelsTooltip&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsCourseContentLevelsTooltip = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsCourseContentLevelsTooltip_Fields & {
+    __typename?: 'DetailsCourseContentLevelsTooltip'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevelsTooltip&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;DetailsCourseContentLevelsTooltip&quot; Field Group */
+export type DetailsCourseContentLevelsTooltip_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevelsTooltip&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;DetailsCourseContentLevels&quot; Field Group */
+export type DetailsCourseContentLevels_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+  content?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+  lengthOfCourseInMonths?: Maybe<Scalars['Float']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+  level?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+  liveTrainingsNumber?: Maybe<Scalars['Float']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+  target?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+  tooltip?: Maybe<DetailsCourseContentLevelsTooltip>
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group */
+  videoTrainingsNumber?: Maybe<Scalars['Float']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;DetailsCourseContent&quot; Field Group */
+export type DetailsCourseContent_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group */
+  courseContentSubtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group */
+  courseContentTitle?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group */
+  levels?: Maybe<Array<Maybe<DetailsCourseContentLevels>>>
+}
+
 /** The &quot;DetailsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type DetailsFaq = AcfFieldGroup &
   AcfFieldGroupFields &
@@ -3326,6 +3107,274 @@ export type DetailsFaq_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group */
   question?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;DetailsHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsHero = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsHero_Fields & {
+    __typename?: 'DetailsHero'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group */
+    backgrounddesktop?: Maybe<Array<Maybe<DetailsHeroBackgrounddesktop>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group */
+    cta?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Running line */
+    runningLine?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group */
+    tagsCloud?: Maybe<Array<Maybe<DetailsHeroTagsCloud>>>
+  }
+
+/** The &quot;DetailsHeroBackgrounddesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsHeroBackgrounddesktop = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsHeroBackgrounddesktop_Fields & {
+    __typename?: 'DetailsHeroBackgrounddesktop'
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group */
+    desktop?: Maybe<AcfMediaItemConnectionEdge>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group */
+    mobile?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;DetailsHeroBackgrounddesktop&quot; Field Group */
+export type DetailsHeroBackgrounddesktop_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group */
+  desktop?: Maybe<AcfMediaItemConnectionEdge>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group */
+  mobile?: Maybe<AcfMediaItemConnectionEdge>
+}
+
+/** The &quot;DetailsHeroTagsCloud&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsHeroTagsCloud = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsHeroTagsCloud_Fields & {
+    __typename?: 'DetailsHeroTagsCloud'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHeroTagsCloud&quot; Field Group */
+    callToActionTag?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;DetailsHeroTagsCloud&quot; Field Group */
+export type DetailsHeroTagsCloud_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHeroTagsCloud&quot; Field Group */
+  callToActionTag?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;DetailsHero&quot; Field Group */
+export type DetailsHero_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group */
+  backgrounddesktop?: Maybe<Array<Maybe<DetailsHeroBackgrounddesktop>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group */
+  cta?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Running line */
+  runningLine?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group */
+  tagsCloud?: Maybe<Array<Maybe<DetailsHeroTagsCloud>>>
+}
+
+/** The &quot;DetailsPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsPaymentForm = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsPaymentForm_Fields & {
+    __typename?: 'DetailsPaymentForm'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group */
+    courses?: Maybe<Array<Maybe<DetailsPaymentFormCourses>>>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group */
+    paymentType?: Maybe<DetailsPaymentFormPaymentType>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;DetailsPaymentFormCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsPaymentFormCourses = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsPaymentFormCourses_Fields & {
+    __typename?: 'DetailsPaymentFormCourses'
+    /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormCourses&quot; Field Group */
+    course?: Maybe<AcfContentNodeConnection>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;DetailsPaymentFormCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsPaymentFormCoursesCourseArgs = {
+  after?: InputMaybe<Scalars['String']['input']>
+  before?: InputMaybe<Scalars['String']['input']>
+  first?: InputMaybe<Scalars['Int']['input']>
+  last?: InputMaybe<Scalars['Int']['input']>
+}
+
+/** Interface representing fields of the ACF &quot;DetailsPaymentFormCourses&quot; Field Group */
+export type DetailsPaymentFormCourses_Fields = {
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormCourses&quot; Field Group */
+  course?: Maybe<AcfContentNodeConnection>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;DetailsPaymentFormCourses&quot; Field Group */
+export type DetailsPaymentFormCourses_FieldsCourseArgs = {
+  after?: InputMaybe<Scalars['String']['input']>
+  before?: InputMaybe<Scalars['String']['input']>
+  first?: InputMaybe<Scalars['Int']['input']>
+  last?: InputMaybe<Scalars['Int']['input']>
+}
+
+/** The &quot;DetailsPaymentFormPaymentType&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsPaymentFormPaymentType = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsPaymentFormPaymentType_Fields & {
+    __typename?: 'DetailsPaymentFormPaymentType'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group */
+    benefit?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group */
+    installment?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group */
+    oneTime?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;DetailsPaymentFormPaymentType&quot; Field Group */
+export type DetailsPaymentFormPaymentType_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group */
+  benefit?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group */
+  installment?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group */
+  oneTime?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;DetailsPaymentForm&quot; Field Group */
+export type DetailsPaymentForm_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group */
+  courses?: Maybe<Array<Maybe<DetailsPaymentFormCourses>>>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group */
+  paymentType?: Maybe<DetailsPaymentFormPaymentType>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;DetailsPrice&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsPrice = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsPrice_Fields & {
+    __typename?: 'DetailsPrice'
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+    discount?: Maybe<Scalars['Float']['output']>
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+    discountIfFull?: Maybe<Scalars['Float']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+    priceFull?: Maybe<Scalars['Float']['output']>
+    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+    priceMonthly?: Maybe<Scalars['Float']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;DetailsPrice&quot; Field Group */
+export type DetailsPrice_Fields = {
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+  discount?: Maybe<Scalars['Float']['output']>
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+  discountIfFull?: Maybe<Scalars['Float']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+  priceFull?: Maybe<Scalars['Float']['output']>
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+  priceMonthly?: Maybe<Scalars['Float']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;DetailsSummary&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type DetailsSummary = AcfFieldGroup &
+  AcfFieldGroupFields &
+  DetailsSummary_Fields & {
+    __typename?: 'DetailsSummary'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group */
+    cta?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group */
+    subtitle?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;DetailsSummary&quot; Field Group */
+export type DetailsSummary_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group */
+  cta?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group */
+  subtitle?: Maybe<Scalars['String']['output']>
 }
 
 /** Interface representing fields of the ACF &quot;Details&quot; Field Group */
@@ -3532,175 +3581,6 @@ export type EnqueuedStylesheetConnectionPageInfo = {
   startCursor?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;Faq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Faq = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Faq_Fields & {
-    __typename?: 'Faq'
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Faq&quot; Field Group */
-    content?: Maybe<Array<Maybe<FaqContent>>>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;FaqContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type FaqContent = AcfFieldGroup &
-  AcfFieldGroupFields &
-  FaqContent_Fields & {
-    __typename?: 'FaqContent'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FaqContent&quot; Field Group */
-    answer?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FaqContent&quot; Field Group */
-    question?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;FaqContent&quot; Field Group */
-export type FaqContent_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FaqContent&quot; Field Group */
-  answer?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FaqContent&quot; Field Group */
-  question?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;Faq&quot; Field Group */
-export type Faq_Fields = {
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Faq&quot; Field Group */
-  content?: Maybe<Array<Maybe<FaqContent>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;Footer&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Footer = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Footer_Fields & {
-    __typename?: 'Footer'
-    /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-    courses?: Maybe<AcfContentNodeConnection>
-    /** Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-    email?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-    logo?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-    privacyPolicy?: Maybe<FooterPrivacyPolicy>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-    socials?: Maybe<Array<Maybe<FooterSocials>>>
-  }
-
-/** The &quot;Footer&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type FooterCoursesArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** The &quot;FooterPrivacyPolicy&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type FooterPrivacyPolicy = AcfFieldGroup &
-  AcfFieldGroupFields &
-  FooterPrivacyPolicy_Fields & {
-    __typename?: 'FooterPrivacyPolicy'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterPrivacyPolicy&quot; Field Group */
-    path?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterPrivacyPolicy&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;FooterPrivacyPolicy&quot; Field Group */
-export type FooterPrivacyPolicy_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterPrivacyPolicy&quot; Field Group */
-  path?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterPrivacyPolicy&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;FooterSocials&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type FooterSocials = AcfFieldGroup &
-  AcfFieldGroupFields &
-  FooterSocials_Fields & {
-    __typename?: 'FooterSocials'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterSocials&quot; Field Group */
-    link?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterSocials&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;FooterSocials&quot; Field Group */
-export type FooterSocials_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterSocials&quot; Field Group */
-  link?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterSocials&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;Footer&quot; Field Group */
-export type Footer_Fields = {
-  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-  courses?: Maybe<AcfContentNodeConnection>
-  /** Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-  email?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-  logo?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-  privacyPolicy?: Maybe<FooterPrivacyPolicy>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group */
-  socials?: Maybe<Array<Maybe<FooterSocials>>>
-}
-
-/** Interface representing fields of the ACF &quot;Footer&quot; Field Group */
-export type Footer_FieldsCoursesArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
 /** The generalFragment type */
 export type GeneralFragment = ContentNode &
   DatabaseIdentifier &
@@ -3712,33 +3592,16 @@ export type GeneralFragment = ContentNode &
   NodeWithTitle &
   Previewable &
   UniformResourceIdentifiable &
-  WithAcfAudio &
-  WithAcfConsultation &
-  WithAcfContacts &
-  WithAcfContractOffer &
-  WithAcfFaq &
-  WithAcfFooter &
-  WithAcfHeader &
-  WithAcfLearningProcess &
-  WithAcfMain &
-  WithAcfPrivacyPolicy &
-  WithAcfStudents &
-  WithAcfTeacher & {
+  WithAcfCommonFragments & {
     __typename?: 'GeneralFragment'
-    /** Fields of the Audio ACF Field Group */
-    audio?: Maybe<Audio>
-    /** Fields of the Consultation ACF Field Group */
-    consultation?: Maybe<Consultation>
-    /** Fields of the Contacts ACF Field Group */
-    contacts?: Maybe<Contacts>
+    /** Fields of the CommonFragments ACF Field Group */
+    commonFragments?: Maybe<CommonFragments>
     /** The content of the post. */
     content?: Maybe<Scalars['String']['output']>
     /** Connection between the ContentNode type and the ContentType type */
     contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>
     /** The name of the Content Type the node belongs to */
     contentTypeName: Scalars['String']['output']
-    /** Fields of the ContractOffer ACF Field Group */
-    contractOffer?: Maybe<ContractOffer>
     /** The unique identifier stored in the database */
     databaseId: Scalars['Int']['output']
     /** Post publishing date. */
@@ -3755,16 +3618,12 @@ export type GeneralFragment = ContentNode &
     enqueuedScripts?: Maybe<ContentNodeToEnqueuedScriptConnection>
     /** Connection between the ContentNode type and the EnqueuedStylesheet type */
     enqueuedStylesheets?: Maybe<ContentNodeToEnqueuedStylesheetConnection>
-    /** Fields of the Faq ACF Field Group */
-    faq?: Maybe<Faq>
     /** Connection between the NodeWithFeaturedImage type and the MediaItem type */
     featuredImage?: Maybe<NodeWithFeaturedImageToMediaItemConnectionEdge>
     /** The database identifier for the featured image node assigned to the content node */
     featuredImageDatabaseId?: Maybe<Scalars['Int']['output']>
     /** Globally unique ID of the featured image assigned to the node */
     featuredImageId?: Maybe<Scalars['ID']['output']>
-    /** Fields of the Footer ACF Field Group */
-    footer?: Maybe<Footer>
     /**
      * The id field matches the WP_Post-&gt;ID field.
      * @deprecated Deprecated in favor of the databaseId field
@@ -3772,8 +3631,6 @@ export type GeneralFragment = ContentNode &
     generalFragmentId: Scalars['Int']['output']
     /** The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table. */
     guid?: Maybe<Scalars['String']['output']>
-    /** Fields of the Header ACF Field Group */
-    header?: Maybe<Header>
     /** The globally unique identifier of the general-fragment object. */
     id: Scalars['ID']['output']
     /** Whether the node is a Content Node */
@@ -3786,12 +3643,8 @@ export type GeneralFragment = ContentNode &
     isTermNode: Scalars['Boolean']['output']
     /** The user that most recently edited the node */
     lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>
-    /** Fields of the LearningProcess ACF Field Group */
-    learningProcess?: Maybe<LearningProcess>
     /** The permalink of the post */
     link?: Maybe<Scalars['String']['output']>
-    /** Fields of the Main ACF Field Group */
-    main?: Maybe<Main>
     /** The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time. */
     modified?: Maybe<Scalars['String']['output']>
     /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
@@ -3802,18 +3655,12 @@ export type GeneralFragment = ContentNode &
     previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>
     /** Whether the object is a node in the preview state */
     previewRevisionId?: Maybe<Scalars['ID']['output']>
-    /** Fields of the PrivacyPolicy ACF Field Group */
-    privacyPolicy?: Maybe<PrivacyPolicy>
     /** The Yoast SEO data of the ContentNode */
     seo?: Maybe<PostTypeSeo>
     /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
     slug?: Maybe<Scalars['String']['output']>
     /** The current status of the object */
     status?: Maybe<Scalars['String']['output']>
-    /** Fields of the Students ACF Field Group */
-    students?: Maybe<Students>
-    /** Fields of the Teacher ACF Field Group */
-    teacher?: Maybe<Teacher>
     /** The template assigned to the node */
     template?: Maybe<ContentTemplate>
     /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -3924,117 +3771,6 @@ export type GeneralSettings = {
   title?: Maybe<Scalars['String']['output']>
   /** Адрес сайта (URL) */
   url?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;Header&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Header = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Header_Fields & {
-    __typename?: 'Header'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-    ctaButton?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-    dropdownList?: Maybe<HeaderDropdownList>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-    logo?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-    navigationElements?: Maybe<Array<Maybe<HeaderNavigationElements>>>
-  }
-
-/** The &quot;HeaderDropdownList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderDropdownList = AcfFieldGroup &
-  AcfFieldGroupFields &
-  HeaderDropdownList_Fields & {
-    __typename?: 'HeaderDropdownList'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;HeaderDropdownList&quot; Field Group */
-    items?: Maybe<AcfContentNodeConnection>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderDropdownList&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;HeaderDropdownList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderDropdownListItemsArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** Interface representing fields of the ACF &quot;HeaderDropdownList&quot; Field Group */
-export type HeaderDropdownList_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;HeaderDropdownList&quot; Field Group */
-  items?: Maybe<AcfContentNodeConnection>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderDropdownList&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;HeaderDropdownList&quot; Field Group */
-export type HeaderDropdownList_FieldsItemsArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** The &quot;HeaderNavigationElements&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderNavigationElements = AcfFieldGroup &
-  AcfFieldGroupFields &
-  HeaderNavigationElements_Fields & {
-    __typename?: 'HeaderNavigationElements'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderNavigationElements&quot; Field Group */
-    path?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderNavigationElements&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;HeaderNavigationElements&quot; Field Group */
-export type HeaderNavigationElements_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderNavigationElements&quot; Field Group */
-  path?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderNavigationElements&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;Header&quot; Field Group */
-export type Header_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-  ctaButton?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-  dropdownList?: Maybe<HeaderDropdownList>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-  logo?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Header&quot; Field Group */
-  navigationElements?: Maybe<Array<Maybe<HeaderNavigationElements>>>
 }
 
 /** Content node with hierarchical (parent/child) relationships */
@@ -4539,8 +4275,6 @@ export type IndividualCourseData = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
     hero?: Maybe<IndividualCourseDataHero>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
-    path?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
     price?: Maybe<IndividualCourseDataPrice>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
@@ -4552,8 +4286,6 @@ export type IndividualCourseDataBackground = AcfFieldGroup &
   AcfFieldGroupFields &
   IndividualCourseDataBackground_Fields & {
     __typename?: 'IndividualCourseDataBackground'
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
-    courseProgram?: Maybe<AcfMediaItemConnectionEdge>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
     desktop?: Maybe<IndividualCourseDataBackgroundDesktop>
     /**
@@ -4633,8 +4365,6 @@ export type IndividualCourseDataBackgroundMobile_Fields = {
 
 /** Interface representing fields of the ACF &quot;IndividualCourseDataBackground&quot; Field Group */
 export type IndividualCourseDataBackground_Fields = {
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
-  courseProgram?: Maybe<AcfMediaItemConnectionEdge>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
   desktop?: Maybe<IndividualCourseDataBackgroundDesktop>
   /**
@@ -4742,8 +4472,6 @@ export type IndividualCourseDataPrice = AcfFieldGroup &
   AcfFieldGroupFields &
   IndividualCourseDataPrice_Fields & {
     __typename?: 'IndividualCourseDataPrice'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
-    bonuses?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
     courseLengthInMonths?: Maybe<Scalars['Float']['output']>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
@@ -4757,8 +4485,6 @@ export type IndividualCourseDataPrice = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
     fullPrice?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
-    level?: Maybe<Scalars['Float']['output']>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
     liveTrainingsNumber?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
@@ -4773,8 +4499,6 @@ export type IndividualCourseDataPrice = AcfFieldGroup &
 
 /** Interface representing fields of the ACF &quot;IndividualCourseDataPrice&quot; Field Group */
 export type IndividualCourseDataPrice_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
-  bonuses?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
   courseLengthInMonths?: Maybe<Scalars['Float']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
@@ -4788,8 +4512,6 @@ export type IndividualCourseDataPrice_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
   fullPrice?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
-  level?: Maybe<Scalars['Float']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
   liveTrainingsNumber?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group */
@@ -4867,8 +4589,6 @@ export type IndividualCourseData_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
   hero?: Maybe<IndividualCourseDataHero>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
-  path?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
   price?: Maybe<IndividualCourseDataPrice>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
@@ -4897,678 +4617,6 @@ export type IndividualCourseToPreviewConnectionEdge = Edge &
     /** The node of the connection, without the edges */
     node: IndividualCourse
   }
-
-/** The &quot;LearningProcess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type LearningProcess = AcfFieldGroup &
-  AcfFieldGroupFields &
-  LearningProcess_Fields & {
-    __typename?: 'LearningProcess'
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;LearningProcess&quot; Field Group */
-    content?: Maybe<Array<Maybe<LearningProcessContent>>>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcess&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;LearningProcessContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type LearningProcessContent = AcfFieldGroup &
-  AcfFieldGroupFields &
-  LearningProcessContent_Fields & {
-    __typename?: 'LearningProcessContent'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;LearningProcessContent&quot; Field Group */
-    picture?: Maybe<LearningProcessContentPicture>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcessContent&quot; Field Group */
-    text?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcessContent&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;LearningProcessContentPicture&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type LearningProcessContentPicture = AcfFieldGroup &
-  AcfFieldGroupFields &
-  LearningProcessContentPicture_Fields & {
-    __typename?: 'LearningProcessContentPicture'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcessContentPicture&quot; Field Group */
-    alt?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;LearningProcessContentPicture&quot; Field Group */
-    image?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;LearningProcessContentPicture&quot; Field Group */
-export type LearningProcessContentPicture_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcessContentPicture&quot; Field Group */
-  alt?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;LearningProcessContentPicture&quot; Field Group */
-  image?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** Interface representing fields of the ACF &quot;LearningProcessContent&quot; Field Group */
-export type LearningProcessContent_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;LearningProcessContent&quot; Field Group */
-  picture?: Maybe<LearningProcessContentPicture>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcessContent&quot; Field Group */
-  text?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcessContent&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;LearningProcess&quot; Field Group */
-export type LearningProcess_Fields = {
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;LearningProcess&quot; Field Group */
-  content?: Maybe<Array<Maybe<LearningProcessContent>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;LearningProcess&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;Main&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Main = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Main_Fields & {
-    __typename?: 'Main'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    background?: Maybe<MainBackground>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    chooseCourse?: Maybe<MainChooseCourse>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    hero?: Maybe<MainHero>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    individualLesson?: Maybe<MainIndividualLesson>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    runningline?: Maybe<Array<Maybe<MainRunningline>>>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    slider?: Maybe<MainSlider>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    students?: Maybe<MainStudents>
-  }
-
-/** The &quot;MainBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainBackground = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainBackground_Fields & {
-    __typename?: 'MainBackground'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
-    desktop?: Maybe<MainBackgroundDesktop>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
-    mobile?: Maybe<MainBackgroundMobile>
-  }
-
-/** The &quot;MainBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainBackgroundDesktop = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainBackgroundDesktop_Fields & {
-    __typename?: 'MainBackgroundDesktop'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundDesktop&quot; Field Group */
-    footer?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundDesktop&quot; Field Group */
-    hero?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundDesktop&quot; Field Group */
-    teacher?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;MainBackgroundDesktop&quot; Field Group */
-export type MainBackgroundDesktop_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundDesktop&quot; Field Group */
-  footer?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundDesktop&quot; Field Group */
-  hero?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundDesktop&quot; Field Group */
-  teacher?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** The &quot;MainBackgroundMobile&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainBackgroundMobile = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainBackgroundMobile_Fields & {
-    __typename?: 'MainBackgroundMobile'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundMobile&quot; Field Group */
-    footer?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundMobile&quot; Field Group */
-    hero?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundMobile&quot; Field Group */
-    teacher?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;MainBackgroundMobile&quot; Field Group */
-export type MainBackgroundMobile_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundMobile&quot; Field Group */
-  footer?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundMobile&quot; Field Group */
-  hero?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackgroundMobile&quot; Field Group */
-  teacher?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** Interface representing fields of the ACF &quot;MainBackground&quot; Field Group */
-export type MainBackground_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
-  desktop?: Maybe<MainBackgroundDesktop>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
-  mobile?: Maybe<MainBackgroundMobile>
-}
-
-/** The &quot;MainChooseCourse&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainChooseCourse = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainChooseCourse_Fields & {
-    __typename?: 'MainChooseCourse'
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainChooseCourse&quot; Field Group */
-    courses?: Maybe<Array<Maybe<MainChooseCourseCourses>>>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainChooseCourse&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;MainChooseCourseCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainChooseCourseCourses = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainChooseCourseCourses_Fields & {
-    __typename?: 'MainChooseCourseCourses'
-    /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;MainChooseCourseCourses&quot; Field Group */
-    course?: Maybe<AcfContentNodeConnection>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainChooseCourseCourses&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;MainChooseCourseCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainChooseCourseCoursesCourseArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** Interface representing fields of the ACF &quot;MainChooseCourseCourses&quot; Field Group */
-export type MainChooseCourseCourses_Fields = {
-  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;MainChooseCourseCourses&quot; Field Group */
-  course?: Maybe<AcfContentNodeConnection>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainChooseCourseCourses&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;MainChooseCourseCourses&quot; Field Group */
-export type MainChooseCourseCourses_FieldsCourseArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** Interface representing fields of the ACF &quot;MainChooseCourse&quot; Field Group */
-export type MainChooseCourse_Fields = {
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainChooseCourse&quot; Field Group */
-  courses?: Maybe<Array<Maybe<MainChooseCourseCourses>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainChooseCourse&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;MainHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainHero = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainHero_Fields & {
-    __typename?: 'MainHero'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-    about?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-    benefits?: Maybe<Array<Maybe<MainHeroBenefits>>>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-    scrollButton?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-    subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;MainHeroBenefits&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainHeroBenefits = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainHeroBenefits_Fields & {
-    __typename?: 'MainHeroBenefits'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHeroBenefits&quot; Field Group */
-    benefit?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;MainHeroBenefits&quot; Field Group */
-export type MainHeroBenefits_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHeroBenefits&quot; Field Group */
-  benefit?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;MainHero&quot; Field Group */
-export type MainHero_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-  about?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-  benefits?: Maybe<Array<Maybe<MainHeroBenefits>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-  scrollButton?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-  subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainHero&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;MainIndividualLesson&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainIndividualLesson = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainIndividualLesson_Fields & {
-    __typename?: 'MainIndividualLesson'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainIndividualLesson&quot; Field Group */
-    cta?: Maybe<MainIndividualLessonCta>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainIndividualLesson&quot; Field Group */
-    details?: Maybe<Array<Maybe<MainIndividualLessonDetails>>>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLesson&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;MainIndividualLessonCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainIndividualLessonCta = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainIndividualLessonCta_Fields & {
-    __typename?: 'MainIndividualLessonCta'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-    button?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-    price?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;MainIndividualLessonCta&quot; Field Group */
-export type MainIndividualLessonCta_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-  button?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-  price?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonCta&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;MainIndividualLessonDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainIndividualLessonDetails = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainIndividualLessonDetails_Fields & {
-    __typename?: 'MainIndividualLessonDetails'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonDetails&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonDetails&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;MainIndividualLessonDetails&quot; Field Group */
-export type MainIndividualLessonDetails_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonDetails&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLessonDetails&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;MainIndividualLesson&quot; Field Group */
-export type MainIndividualLesson_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainIndividualLesson&quot; Field Group */
-  cta?: Maybe<MainIndividualLessonCta>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainIndividualLesson&quot; Field Group */
-  details?: Maybe<Array<Maybe<MainIndividualLessonDetails>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainIndividualLesson&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;MainRunningline&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainRunningline = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainRunningline_Fields & {
-    __typename?: 'MainRunningline'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningline&quot; Field Group */
-    text?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;MainRunningline&quot; Field Group */
-export type MainRunningline_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningline&quot; Field Group */
-  text?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;MainSlider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainSlider = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainSlider_Fields & {
-    __typename?: 'MainSlider'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainSlider&quot; Field Group */
-    lowerslider?: Maybe<Array<Maybe<MainSliderLowerslider>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainSlider&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainSlider&quot; Field Group */
-    upperslider?: Maybe<Array<Maybe<MainSliderUpperslider>>>
-  }
-
-/** The &quot;MainSliderLowerslider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainSliderLowerslider = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainSliderLowerslider_Fields & {
-    __typename?: 'MainSliderLowerslider'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainSliderLowerslider&quot; Field Group */
-    image?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainSliderLowerslider&quot; Field Group */
-    text?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;MainSliderLowerslider&quot; Field Group */
-export type MainSliderLowerslider_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainSliderLowerslider&quot; Field Group */
-  image?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainSliderLowerslider&quot; Field Group */
-  text?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;MainSliderUpperslider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainSliderUpperslider = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainSliderUpperslider_Fields & {
-    __typename?: 'MainSliderUpperslider'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainSliderUpperslider&quot; Field Group */
-    image?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainSliderUpperslider&quot; Field Group */
-    text?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;MainSliderUpperslider&quot; Field Group */
-export type MainSliderUpperslider_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainSliderUpperslider&quot; Field Group */
-  image?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainSliderUpperslider&quot; Field Group */
-  text?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;MainSlider&quot; Field Group */
-export type MainSlider_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainSlider&quot; Field Group */
-  lowerslider?: Maybe<Array<Maybe<MainSliderLowerslider>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainSlider&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainSlider&quot; Field Group */
-  upperslider?: Maybe<Array<Maybe<MainSliderUpperslider>>>
-}
-
-/** The &quot;MainStudents&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainStudents = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainStudents_Fields & {
-    __typename?: 'MainStudents'
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-    cards?: Maybe<Array<Maybe<MainStudentsCards>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-    cta?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;MainStudentsCards&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainStudentsCards = AcfFieldGroup &
-  AcfFieldGroupFields &
-  MainStudentsCards_Fields & {
-    __typename?: 'MainStudentsCards'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-    firstBadge?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-    leftIcon?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-    rightIcon?: Maybe<AcfMediaItemConnectionEdge>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-    secondBadge?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;MainStudentsCards&quot; Field Group */
-export type MainStudentsCards_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-  firstBadge?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-  leftIcon?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-  rightIcon?: Maybe<AcfMediaItemConnectionEdge>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-  secondBadge?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudentsCards&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;MainStudents&quot; Field Group */
-export type MainStudents_Fields = {
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-  cards?: Maybe<Array<Maybe<MainStudentsCards>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-  cta?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainStudents&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;Main&quot; Field Group */
-export type Main_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  background?: Maybe<MainBackground>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  chooseCourse?: Maybe<MainChooseCourse>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  hero?: Maybe<MainHero>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  individualLesson?: Maybe<MainIndividualLesson>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  runningline?: Maybe<Array<Maybe<MainRunningline>>>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  slider?: Maybe<MainSlider>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  students?: Maybe<MainStudents>
-}
 
 /** File details for a Media Item */
 export type MediaDetails = {
@@ -6478,8 +5526,6 @@ export enum MimeTypeEnum {
   AudioXMsWma = 'AUDIO_X_MS_WMA',
   /** audio/x-realaudio mime type. */
   AudioXRealaudio = 'AUDIO_X_REALAUDIO',
-  /** image/avif mime type. */
-  ImageAvif = 'IMAGE_AVIF',
   /** image/bmp mime type. */
   ImageBmp = 'IMAGE_BMP',
   /** image/gif mime type. */
@@ -8603,64 +7649,6 @@ export type Previewable = {
   previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>
   /** Whether the object is a node in the preview state */
   previewRevisionId?: Maybe<Scalars['ID']['output']>
-}
-
-/** The &quot;PrivacyPolicy&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type PrivacyPolicy = AcfFieldGroup &
-  AcfFieldGroupFields &
-  PrivacyPolicy_Fields & {
-    __typename?: 'PrivacyPolicy'
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
-    content?: Maybe<Array<Maybe<PrivacyPolicyContent>>>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;PrivacyPolicyContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type PrivacyPolicyContent = AcfFieldGroup &
-  AcfFieldGroupFields &
-  PrivacyPolicyContent_Fields & {
-    __typename?: 'PrivacyPolicyContent'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;PrivacyPolicyContent&quot; Field Group */
-export type PrivacyPolicyContent_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;PrivacyPolicy&quot; Field Group */
-export type PrivacyPolicy_Fields = {
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
-  content?: Maybe<Array<Maybe<PrivacyPolicyContent>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
 }
 
 /** The reading setting type */
@@ -11499,72 +10487,6 @@ export type Settings = {
   writingSettingsUseSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
-/** The &quot;Students&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Students = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Students_Fields & {
-    __typename?: 'Students'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
-    list?: Maybe<Array<Maybe<StudentsList>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;StudentsList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type StudentsList = AcfFieldGroup &
-  AcfFieldGroupFields &
-  StudentsList_Fields & {
-    __typename?: 'StudentsList'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
-    firstBadge?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
-    secondBadge?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;StudentsList&quot; Field Group */
-export type StudentsList_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
-  firstBadge?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
-  secondBadge?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;Students&quot; Field Group */
-export type Students_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
-  list?: Maybe<Array<Maybe<StudentsList>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
 /** The tag type */
 export type Tag = DatabaseIdentifier &
   MenuItemLinkable &
@@ -12112,163 +11034,6 @@ export type TaxonomyToTermNodeConnectionPageInfo = PageInfo &
     /** When paginating backwards, the cursor to continue. */
     startCursor?: Maybe<Scalars['String']['output']>
   }
-
-/** The &quot;Teacher&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type Teacher = AcfFieldGroup &
-  AcfFieldGroupFields &
-  Teacher_Fields & {
-    __typename?: 'Teacher'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-    education?: Maybe<TeacherEducation>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-    gallery?: Maybe<Array<Maybe<TeacherGallery>>>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-    statistics?: Maybe<Array<Maybe<TeacherStatistics>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-    subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;TeacherEducation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type TeacherEducation = AcfFieldGroup &
-  AcfFieldGroupFields &
-  TeacherEducation_Fields & {
-    __typename?: 'TeacherEducation'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeacherEducation&quot; Field Group */
-    list?: Maybe<Array<Maybe<TeacherEducationList>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherEducation&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;TeacherEducationList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type TeacherEducationList = AcfFieldGroup &
-  AcfFieldGroupFields &
-  TeacherEducationList_Fields & {
-    __typename?: 'TeacherEducationList'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherEducationList&quot; Field Group */
-    element?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;TeacherEducationList&quot; Field Group */
-export type TeacherEducationList_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherEducationList&quot; Field Group */
-  element?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;TeacherEducation&quot; Field Group */
-export type TeacherEducation_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeacherEducation&quot; Field Group */
-  list?: Maybe<Array<Maybe<TeacherEducationList>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherEducation&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;TeacherGallery&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type TeacherGallery = AcfFieldGroup &
-  AcfFieldGroupFields &
-  TeacherGallery_Fields & {
-    __typename?: 'TeacherGallery'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherGallery&quot; Field Group */
-    alt?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeacherGallery&quot; Field Group */
-    image?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;TeacherGallery&quot; Field Group */
-export type TeacherGallery_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherGallery&quot; Field Group */
-  alt?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeacherGallery&quot; Field Group */
-  image?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** The &quot;TeacherStatistics&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type TeacherStatistics = AcfFieldGroup &
-  AcfFieldGroupFields &
-  TeacherStatistics_Fields & {
-    __typename?: 'TeacherStatistics'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group */
-    number?: Maybe<Scalars['Float']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group */
-    text?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;TeacherStatistics&quot; Field Group */
-export type TeacherStatistics_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group */
-  number?: Maybe<Scalars['Float']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group */
-  text?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;Teacher&quot; Field Group */
-export type Teacher_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-  education?: Maybe<TeacherEducation>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-  gallery?: Maybe<Array<Maybe<TeacherGallery>>>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-  statistics?: Maybe<Array<Maybe<TeacherStatistics>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-  subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
 
 /** Terms are nodes within a Taxonomy, used to group and relate other nodes. */
 export type TermNode = {
@@ -13889,88 +12654,22 @@ export type WpPageInfo = {
   startCursor?: Maybe<Scalars['String']['output']>
 }
 
-/** Provides access to fields of the &quot;Audio&quot; ACF Field Group via the &quot;audio&quot; field */
-export type WithAcfAudio = {
-  /** Fields of the Audio ACF Field Group */
-  audio?: Maybe<Audio>
+/** Provides access to fields of the &quot;CommonFragments&quot; ACF Field Group via the &quot;commonFragments&quot; field */
+export type WithAcfCommonFragments = {
+  /** Fields of the CommonFragments ACF Field Group */
+  commonFragments?: Maybe<CommonFragments>
 }
 
-/** Provides access to fields of the &quot;Consultation&quot; ACF Field Group via the &quot;consultation&quot; field */
-export type WithAcfConsultation = {
-  /** Fields of the Consultation ACF Field Group */
-  consultation?: Maybe<Consultation>
-}
-
-/** Provides access to fields of the &quot;Contacts&quot; ACF Field Group via the &quot;contacts&quot; field */
-export type WithAcfContacts = {
-  /** Fields of the Contacts ACF Field Group */
-  contacts?: Maybe<Contacts>
-}
-
-/** Provides access to fields of the &quot;Content&quot; ACF Field Group via the &quot;content&quot; field */
-export type WithAcfContent = {
-  /** Fields of the Content ACF Field Group */
-  content?: Maybe<Content>
-}
-
-/** Provides access to fields of the &quot;ContractOffer&quot; ACF Field Group via the &quot;contractOffer&quot; field */
-export type WithAcfContractOffer = {
-  /** Fields of the ContractOffer ACF Field Group */
-  contractOffer?: Maybe<ContractOffer>
-}
-
-/** Provides access to fields of the &quot;Faq&quot; ACF Field Group via the &quot;faq&quot; field */
-export type WithAcfFaq = {
-  /** Fields of the Faq ACF Field Group */
-  faq?: Maybe<Faq>
-}
-
-/** Provides access to fields of the &quot;Footer&quot; ACF Field Group via the &quot;footer&quot; field */
-export type WithAcfFooter = {
-  /** Fields of the Footer ACF Field Group */
-  footer?: Maybe<Footer>
-}
-
-/** Provides access to fields of the &quot;Header&quot; ACF Field Group via the &quot;header&quot; field */
-export type WithAcfHeader = {
-  /** Fields of the Header ACF Field Group */
-  header?: Maybe<Header>
+/** Provides access to fields of the &quot;Details&quot; ACF Field Group via the &quot;details&quot; field */
+export type WithAcfDetails = {
+  /** Fields of the Details ACF Field Group */
+  details?: Maybe<Details>
 }
 
 /** Provides access to fields of the &quot;IndividualCourseData&quot; ACF Field Group via the &quot;individualCourseData&quot; field */
 export type WithAcfIndividualCourseData = {
   /** Fields of the IndividualCourseData ACF Field Group */
   individualCourseData?: Maybe<IndividualCourseData>
-}
-
-/** Provides access to fields of the &quot;LearningProcess&quot; ACF Field Group via the &quot;learningProcess&quot; field */
-export type WithAcfLearningProcess = {
-  /** Fields of the LearningProcess ACF Field Group */
-  learningProcess?: Maybe<LearningProcess>
-}
-
-/** Provides access to fields of the &quot;Main&quot; ACF Field Group via the &quot;main&quot; field */
-export type WithAcfMain = {
-  /** Fields of the Main ACF Field Group */
-  main?: Maybe<Main>
-}
-
-/** Provides access to fields of the &quot;PrivacyPolicy&quot; ACF Field Group via the &quot;privacyPolicy&quot; field */
-export type WithAcfPrivacyPolicy = {
-  /** Fields of the PrivacyPolicy ACF Field Group */
-  privacyPolicy?: Maybe<PrivacyPolicy>
-}
-
-/** Provides access to fields of the &quot;Students&quot; ACF Field Group via the &quot;students&quot; field */
-export type WithAcfStudents = {
-  /** Fields of the Students ACF Field Group */
-  students?: Maybe<Students>
-}
-
-/** Provides access to fields of the &quot;Teacher&quot; ACF Field Group via the &quot;teacher&quot; field */
-export type WithAcfTeacher = {
-  /** Fields of the Teacher ACF Field Group */
-  teacher?: Maybe<Teacher>
 }
 
 /** The writing setting type */
@@ -13984,531 +12683,198 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
-export type ConsultationQueryVariables = Exact<{
+export type GetCourseQueryVariables = Exact<{
   id: Scalars['ID']['input']
 }>
 
-export type ConsultationQuery = {
+export type GetCourseQuery = {
   __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    consultation?: {
-      __typename?: 'Consultation'
-      cta?: {
-        __typename?: 'ConsultationCta'
-        title?: string | null
-        button?: string | null
-        text?: {
-          __typename?: 'ConsultationCtaText'
-          beforeAccent?: string | null
-          accent?: string | null
-          afterAccent?: string | null
-        } | null
-      } | null
-      modal?: {
-        __typename?: 'ConsultationModal'
-        title?: string | null
-        subtitle?: string | null
-      } | null
-    } | null
-  } | null
-}
-
-export type ContactsQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type ContactsQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    contacts?: {
-      __typename?: 'Contacts'
-      title?: string | null
-      socials?: Array<{
-        __typename?: 'ContactsSocials'
-        title?: string | null
-        link?: string | null
-        content?: string | null
-      } | null> | null
-      background?: {
-        __typename?: 'ContactsBackground'
-        mobile?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-        } | null
-        desktop?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-        } | null
-      } | null
-    } | null
-  } | null
-}
-
-export type ContractOfferQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type ContractOfferQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    contractOffer?: {
-      __typename?: 'ContractOffer'
-      title?: string | null
-      subtitle?: string | null
-      creationYear?: string | null
-      points?: Array<{
-        __typename?: 'ContractOfferPoints'
-        title?: string | null
-        subtitle?: string | null
-        description?: string | null
-      } | null> | null
-      background?: {
-        __typename?: 'ContractOfferBackground'
-        desktopFooter?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-        } | null
-        mobileFooter?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-        } | null
-      } | null
-    } | null
-  } | null
-}
-
-export type FaqQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type FaqQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    faq?: {
-      __typename?: 'Faq'
-      content?: Array<{
-        __typename?: 'FaqContent'
+  course?: {
+    __typename?: 'Course'
+    title?: string | null
+    content?: string | null
+    details?: {
+      __typename?: 'Details'
+      faq?: Array<{
+        __typename?: 'DetailsFaq'
         answer?: string | null
         question?: string | null
       } | null> | null
+      additionalQuestions?: {
+        __typename?: 'DetailsAdditionalQuestions'
+        title?: string | null
+        button?: string | null
+        cta?: {
+          __typename?: 'DetailsAdditionalQuestionsCta'
+          afterBoldText?: string | null
+          beforeBoldText?: string | null
+          boldText?: string | null
+        } | null
+      } | null
     } | null
   } | null
 }
 
-export type FooterQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
+export type CtaFillFormQueryVariables = Exact<{ [key: string]: never }>
+
+export type CtaFillFormQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        cta?: {
+          __typename?: 'CommonFragmentsCta'
+          title?: string | null
+          button?: string | null
+          text?: {
+            __typename?: 'CommonFragmentsCtaText'
+            beforeAccent?: string | null
+            accent?: string | null
+            afterAccent?: string | null
+          } | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type FaqQueryVariables = Exact<{ [key: string]: never }>
+
+export type FaqQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        faq?: Array<{
+          __typename?: 'CommonFragmentsFaq'
+          answer?: string | null
+          question?: string | null
+        } | null> | null
+      } | null
+    }>
+  } | null
+}
+
+export type FooterQueryVariables = Exact<{ [key: string]: never }>
 
 export type FooterQuery = {
   __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    footer?: {
-      __typename?: 'Footer'
-      email?: string | null
-      logo?: {
-        __typename?: 'AcfMediaItemConnectionEdge'
-        node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        footer?: {
+          __typename?: 'CommonFragmentsFooter'
+          email?: string | null
+          privacyPolicy?: string | null
+          logo?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          courses?: Array<{
+            __typename?: 'CommonFragmentsFooterCourses'
+            title?: string | null
+            path?: string | null
+          } | null> | null
+          socials?: Array<{
+            __typename?: 'CommonFragmentsFooterSocials'
+            title?: string | null
+            link?: string | null
+          } | null> | null
+        } | null
       } | null
-      privacyPolicy?: {
-        __typename?: 'FooterPrivacyPolicy'
-        title?: string | null
-        path?: string | null
-      } | null
-      courses?: {
-        __typename?: 'AcfContentNodeConnection'
-        nodes: Array<
-          | {
-              __typename?: 'Course'
-              title?: string | null
-              content?: { __typename?: 'Content'; path?: string | null } | null
-            }
-          | { __typename?: 'GeneralFragment' }
-          | {
-              __typename?: 'IndividualCourse'
-              title?: string | null
-              individualCourseData?: {
-                __typename?: 'IndividualCourseData'
-                path?: string | null
-              } | null
-            }
-          | { __typename?: 'MediaItem' }
-          | { __typename?: 'Page' }
-          | { __typename?: 'Post' }
-        >
-      } | null
-      socials?: Array<{
-        __typename?: 'FooterSocials'
-        title?: string | null
-        link?: string | null
-      } | null> | null
-    } | null
+    }>
   } | null
 }
 
-export type HeaderQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
+export type HeaderQueryVariables = Exact<{ [key: string]: never }>
 
 export type HeaderQuery = {
   __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    header?: {
-      __typename?: 'Header'
-      ctaButton?: string | null
-      logo?: {
-        __typename?: 'AcfMediaItemConnectionEdge'
-        node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-      } | null
-      dropdownList?: {
-        __typename?: 'HeaderDropdownList'
-        title?: string | null
-        items?: {
-          __typename?: 'AcfContentNodeConnection'
-          nodes: Array<
-            | {
-                __typename?: 'Course'
-                title?: string | null
-                id: string
-                content?: {
-                  __typename?: 'Content'
-                  path?: string | null
-                  price?: {
-                    __typename?: 'ContentPrice'
-                    details?: {
-                      __typename?: 'ContentPriceDetails'
-                      levelsNumber?: number | null
-                      monthsNumber?: number | null
-                      videoTrainingsNumber?: number | null
-                    } | null
-                  } | null
-                } | null
-              }
-            | { __typename?: 'GeneralFragment'; id: string }
-            | {
-                __typename?: 'IndividualCourse'
-                title?: string | null
-                id: string
-                individualCourseData?: {
-                  __typename?: 'IndividualCourseData'
-                  path?: string | null
-                  price?: {
-                    __typename?: 'IndividualCourseDataPrice'
-                    level?: number | null
-                    bonuses?: string | null
-                    liveTrainingsNumber?: string | null
-                    videoTrainingsNumber?: number | null
-                    courseLengthInMonths?: number | null
-                  } | null
-                } | null
-              }
-            | { __typename?: 'MediaItem'; id: string }
-            | { __typename?: 'Page'; id: string }
-            | { __typename?: 'Post'; id: string }
-          >
-        } | null
-      } | null
-      navigationElements?: Array<{
-        __typename?: 'HeaderNavigationElements'
-        title?: string | null
-        path?: string | null
-      } | null> | null
-    } | null
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: { __typename?: 'CommonFragments'; fieldGroupName?: string | null } | null
+    }>
   } | null
 }
 
-export type MainPageQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type MainPageQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    main?: {
-      __typename?: 'Main'
-      hero?: {
-        __typename?: 'MainHero'
-        title?: string | null
-        subtitle?: string | null
-        scrollButton?: string | null
-        about?: string | null
-        benefits?: Array<{ __typename?: 'MainHeroBenefits'; benefit?: string | null } | null> | null
-      } | null
-      runningline?: Array<{ __typename?: 'MainRunningline'; text?: string | null } | null> | null
-      chooseCourse?: {
-        __typename?: 'MainChooseCourse'
-        title?: string | null
-        courses?: Array<{
-          __typename?: 'MainChooseCourseCourses'
-          description?: string | null
-          course?: {
-            __typename?: 'AcfContentNodeConnection'
-            nodes: Array<
-              | {
-                  __typename?: 'Course'
-                  id: string
-                  title?: string | null
-                  content?: {
-                    __typename?: 'Content'
-                    path?: string | null
-                    price?: {
-                      __typename?: 'ContentPrice'
-                      priceMonthly?: number | null
-                      details?: {
-                        __typename?: 'ContentPriceDetails'
-                        videoTrainingsNumber?: number | null
-                        monthsNumber?: number | null
-                        levelsNumber?: number | null
-                      } | null
-                    } | null
-                  } | null
-                }
-              | { __typename?: 'GeneralFragment' }
-              | {
-                  __typename?: 'IndividualCourse'
-                  id: string
-                  title?: string | null
-                  individualCourseData?: {
-                    __typename?: 'IndividualCourseData'
-                    path?: string | null
-                    price?: {
-                      __typename?: 'IndividualCourseDataPrice'
-                      monthlyPrice?: number | null
-                      level?: number | null
-                      videoTrainingsNumber?: number | null
-                      liveTrainingsNumber?: string | null
-                      bonuses?: string | null
-                      courseLengthInMonths?: number | null
-                    } | null
-                  } | null
-                }
-              | { __typename?: 'MediaItem' }
-              | { __typename?: 'Page' }
-              | { __typename?: 'Post' }
-            >
-          } | null
-        } | null> | null
-      } | null
-      individualLesson?: {
-        __typename?: 'MainIndividualLesson'
-        title?: string | null
-        cta?: {
-          __typename?: 'MainIndividualLessonCta'
-          button?: string | null
-          description?: string | null
-          price?: string | null
-          title?: string | null
-        } | null
-        details?: Array<{
-          __typename?: 'MainIndividualLessonDetails'
-          description?: string | null
-          title?: string | null
-        } | null> | null
-      } | null
-      slider?: {
-        __typename?: 'MainSlider'
-        title?: string | null
-        upperslider?: Array<{
-          __typename?: 'MainSliderUpperslider'
-          text?: string | null
-          image?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null> | null
-        lowerslider?: Array<{
-          __typename?: 'MainSliderLowerslider'
-          text?: string | null
-          image?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null> | null
-      } | null
-      students?: {
-        __typename?: 'MainStudents'
-        title?: string | null
-        description?: string | null
-        cta?: string | null
-        cards?: Array<{
-          __typename?: 'MainStudentsCards'
-          firstBadge?: string | null
-          secondBadge?: string | null
-          title?: string | null
-          description?: string | null
-          leftIcon?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          rightIcon?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null> | null
-      } | null
-      background?: {
-        __typename?: 'MainBackground'
-        desktop?: {
-          __typename?: 'MainBackgroundDesktop'
-          footer?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          hero?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          teacher?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null
-        mobile?: {
-          __typename?: 'MainBackgroundMobile'
-          footer?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          hero?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          teacher?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null
-      } | null
-    } | null
-  } | null
-}
-
-export type PrivacyPolicyQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type PrivacyPolicyQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    privacyPolicy?: {
-      __typename?: 'PrivacyPolicy'
-      title?: string | null
-      content?: Array<{
-        __typename?: 'PrivacyPolicyContent'
-        title?: string | null
-        description?: string | null
-      } | null> | null
-    } | null
-  } | null
-}
-
-export type ProcessEducationQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
+export type ProcessEducationQueryVariables = Exact<{ [key: string]: never }>
 
 export type ProcessEducationQuery = {
   __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    learningProcess?: {
-      __typename?: 'LearningProcess'
-      title?: string | null
-      content?: Array<{
-        __typename?: 'LearningProcessContent'
-        title?: string | null
-        text?: string | null
-        picture?: {
-          __typename?: 'LearningProcessContentPicture'
-          alt?: string | null
-          image?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        process?: Array<{
+          __typename?: 'CommonFragmentsProcess'
+          title?: string | null
+          text?: string | null
+          picture?: {
+            __typename?: 'CommonFragmentsProcessPicture'
+            alt?: string | null
+            image?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
           } | null
-        } | null
-      } | null> | null
-    } | null
-  } | null
-}
-
-export type SongQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type SongQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    audio?: {
-      __typename?: 'Audio'
-      song?: {
-        __typename?: 'AcfMediaItemConnectionEdge'
-        node: { __typename?: 'MediaItem'; mediaItemUrl?: string | null }
+        } | null> | null
       } | null
-    } | null
+    }>
   } | null
 }
 
-export type StudentsQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type StudentsQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    students?: {
-      __typename?: 'Students'
-      title?: string | null
-      description?: string | null
-      list?: Array<{
-        __typename?: 'StudentsList'
-        title?: string | null
-        firstBadge?: string | null
-        secondBadge?: string | null
-      } | null> | null
-    } | null
-  } | null
-}
-
-export type TeacherQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
+export type TeacherQueryVariables = Exact<{ [key: string]: never }>
 
 export type TeacherQuery = {
   __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    teacher?: {
-      __typename?: 'Teacher'
-      title?: string | null
-      description?: string | null
-      subtitle?: string | null
-      gallery?: Array<{
-        __typename?: 'TeacherGallery'
-        alt?: string | null
-        image?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        teacher?: {
+          __typename?: 'CommonFragmentsTeacher'
+          subtitle?: string | null
+          title?: string | null
+          description?: string | null
+          experience?: Array<{
+            __typename?: 'CommonFragmentsTeacherExperience'
+            number?: number | null
+            text?: string | null
+          } | null> | null
+          education?: {
+            __typename?: 'CommonFragmentsTeacherEducation'
+            title?: string | null
+            list?: Array<{
+              __typename?: 'CommonFragmentsTeacherEducationList'
+              element?: string | null
+            } | null> | null
+          } | null
+          gallery?: Array<{
+            __typename?: 'CommonFragmentsTeacherGallery'
+            alt?: string | null
+            image?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null> | null
         } | null
-      } | null> | null
-      statistics?: Array<{
-        __typename?: 'TeacherStatistics'
-        text?: string | null
-        number?: number | null
-      } | null> | null
-      education?: {
-        __typename?: 'TeacherEducation'
-        title?: string | null
-        list?: Array<{ __typename?: 'TeacherEducationList'; element?: string | null } | null> | null
       } | null
-    } | null
+    }>
   } | null
 }
 
@@ -14534,10 +12900,6 @@ export type IndividualCourseQuery = {
       } | null
       background?: {
         __typename?: 'IndividualCourseDataBackground'
-        courseProgram?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-        } | null
         desktop?: {
           __typename?: 'IndividualCourseDataBackgroundDesktop'
           footer?: {
@@ -14571,7 +12933,6 @@ export type IndividualCourseQuery = {
       } | null
       price?: {
         __typename?: 'IndividualCourseDataPrice'
-        bonuses?: string | null
         cta?: string | null
         courseLengthInMonths?: number | null
         discount?: number | null
@@ -14653,13 +13014,13 @@ export type GetSeoQuery = {
   } | null
 }
 
-export const ConsultationDocument = {
+export const GetCourseDocument = {
   kind: 'Document',
   definitions: [
     {
       kind: 'OperationDefinition',
       operation: 'query',
-      name: { kind: 'Name', value: 'Consultation' },
+      name: { kind: 'Name', value: 'GetCourse' },
       variableDefinitions: [
         {
           kind: 'VariableDefinition',
@@ -14675,7 +13036,7 @@ export const ConsultationDocument = {
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
+            name: { kind: 'Name', value: 'course' },
             arguments: [
               {
                 kind: 'Argument',
@@ -14686,43 +13047,48 @@ export const ConsultationDocument = {
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'content' } },
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'consultation' },
+                  name: { kind: 'Name', value: 'details' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'cta' },
+                        name: { kind: 'Name', value: 'faq' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'answer' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'question' } },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'additionalQuestions' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
                             { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'cta' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'afterBoldText' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'beforeBoldText' },
+                                  },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'boldText' } },
+                                ],
+                              },
+                            },
                             { kind: 'Field', name: { kind: 'Name', value: 'button' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'text' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'beforeAccent' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'accent' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'afterAccent' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'modal' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
                           ],
                         },
                       },
@@ -14736,106 +13102,61 @@ export const ConsultationDocument = {
       },
     },
   ],
-} as unknown as DocumentNode<ConsultationQuery, ConsultationQueryVariables>
-export const ContactsDocument = {
+} as unknown as DocumentNode<GetCourseQuery, GetCourseQueryVariables>
+export const CtaFillFormDocument = {
   kind: 'Document',
   definitions: [
     {
       kind: 'OperationDefinition',
       operation: 'query',
-      name: { kind: 'Name', value: 'Contacts' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
+      name: { kind: 'Name', value: 'CtaFillForm' },
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
+            name: { kind: 'Name', value: 'generalFragments' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'contacts' },
+                  name: { kind: 'Name', value: 'nodes' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'socials' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'link' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'content' } },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'background' },
+                        name: { kind: 'Name', value: 'commonFragments' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
                             {
                               kind: 'Field',
-                              name: { kind: 'Name', value: 'mobile' },
+                              name: { kind: 'Name', value: 'cta' },
                               selectionSet: {
                                 kind: 'SelectionSet',
                                 selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                                   {
                                     kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
+                                    name: { kind: 'Name', value: 'text' },
                                     selectionSet: {
                                       kind: 'SelectionSet',
                                       selections: [
                                         {
                                           kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                          name: { kind: 'Name', value: 'beforeAccent' },
                                         },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'desktop' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'accent' } },
                                         {
                                           kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                          name: { kind: 'Name', value: 'afterAccent' },
                                         },
                                       ],
                                     },
                                   },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'button' } },
                                 ],
                               },
                             },
@@ -14852,125 +13173,7 @@ export const ContactsDocument = {
       },
     },
   ],
-} as unknown as DocumentNode<ContactsQuery, ContactsQueryVariables>
-export const ContractOfferDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'ContractOffer' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'contractOffer' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'creationYear' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'points' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'background' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'desktopFooter' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'mobileFooter' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<ContractOfferQuery, ContractOfferQueryVariables>
+} as unknown as DocumentNode<CtaFillFormQuery, CtaFillFormQueryVariables>
 export const FaqDocument = {
   kind: 'Document',
   definitions: [
@@ -14978,46 +13181,38 @@ export const FaqDocument = {
       kind: 'OperationDefinition',
       operation: 'query',
       name: { kind: 'Name', value: 'Faq' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
+            name: { kind: 'Name', value: 'generalFragments' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'faq' },
+                  name: { kind: 'Name', value: 'nodes' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'content' },
+                        name: { kind: 'Name', value: 'commonFragments' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'answer' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'question' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'faq' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'answer' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'question' } },
+                                ],
+                              },
+                            },
                           ],
                         },
                       },
@@ -15039,100 +13234,50 @@ export const FooterDocument = {
       kind: 'OperationDefinition',
       operation: 'query',
       name: { kind: 'Name', value: 'Footer' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
+            name: { kind: 'Name', value: 'generalFragments' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'footer' },
+                  name: { kind: 'Name', value: 'nodes' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'logo' },
+                        name: { kind: 'Name', value: 'commonFragments' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
                             {
                               kind: 'Field',
-                              name: { kind: 'Name', value: 'node' },
+                              name: { kind: 'Name', value: 'footer' },
                               selectionSet: {
                                 kind: 'SelectionSet',
                                 selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'sourceUrl' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'privacyPolicy' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'path' } },
-                          ],
-                        },
-                      },
-                      { kind: 'Field', name: { kind: 'Name', value: 'email' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'courses' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'nodes' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'email' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'privacyPolicy' } },
                                   {
-                                    kind: 'InlineFragment',
-                                    typeCondition: {
-                                      kind: 'NamedType',
-                                      name: { kind: 'Name', value: 'Course' },
-                                    },
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'logo' },
                                     selectionSet: {
                                       kind: 'SelectionSet',
                                       selections: [
-                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                                         {
                                           kind: 'Field',
-                                          name: { kind: 'Name', value: 'content' },
+                                          name: { kind: 'Name', value: 'node' },
                                           selectionSet: {
                                             kind: 'SelectionSet',
                                             selections: [
                                               {
                                                 kind: 'Field',
-                                                name: { kind: 'Name', value: 'path' },
+                                                name: { kind: 'Name', value: 'sourceUrl' },
                                               },
                                             ],
                                           },
@@ -15141,45 +13286,30 @@ export const FooterDocument = {
                                     },
                                   },
                                   {
-                                    kind: 'InlineFragment',
-                                    typeCondition: {
-                                      kind: 'NamedType',
-                                      name: { kind: 'Name', value: 'IndividualCourse' },
-                                    },
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'courses' },
                                     selectionSet: {
                                       kind: 'SelectionSet',
                                       selections: [
                                         { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'individualCourseData' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'path' },
-                                              },
-                                            ],
-                                          },
-                                        },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'path' } },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'socials' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'link' } },
                                       ],
                                     },
                                   },
                                 ],
                               },
                             },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'socials' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'link' } },
                           ],
                         },
                       },
@@ -15201,868 +13331,28 @@ export const HeaderDocument = {
       kind: 'OperationDefinition',
       operation: 'query',
       name: { kind: 'Name', value: 'Header' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
+            name: { kind: 'Name', value: 'generalFragments' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'header' },
+                  name: { kind: 'Name', value: 'nodes' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'logo' },
+                        name: { kind: 'Name', value: 'commonFragments' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'node' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'sourceUrl' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'dropdownList' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'items' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'nodes' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'InlineFragment',
-                                          typeCondition: {
-                                            kind: 'NamedType',
-                                            name: { kind: 'Name', value: 'Course' },
-                                          },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'title' },
-                                              },
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'content' },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'path' },
-                                                    },
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'price' },
-                                                      selectionSet: {
-                                                        kind: 'SelectionSet',
-                                                        selections: [
-                                                          {
-                                                            kind: 'Field',
-                                                            name: {
-                                                              kind: 'Name',
-                                                              value: 'details',
-                                                            },
-                                                            selectionSet: {
-                                                              kind: 'SelectionSet',
-                                                              selections: [
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'levelsNumber',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'monthsNumber',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'videoTrainingsNumber',
-                                                                  },
-                                                                },
-                                                              ],
-                                                            },
-                                                          },
-                                                        ],
-                                                      },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'id' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                        {
-                                          kind: 'InlineFragment',
-                                          typeCondition: {
-                                            kind: 'NamedType',
-                                            name: { kind: 'Name', value: 'IndividualCourse' },
-                                          },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'title' },
-                                              },
-                                              {
-                                                kind: 'Field',
-                                                name: {
-                                                  kind: 'Name',
-                                                  value: 'individualCourseData',
-                                                },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'path' },
-                                                    },
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'price' },
-                                                      selectionSet: {
-                                                        kind: 'SelectionSet',
-                                                        selections: [
-                                                          {
-                                                            kind: 'Field',
-                                                            name: { kind: 'Name', value: 'level' },
-                                                          },
-                                                          {
-                                                            kind: 'Field',
-                                                            name: {
-                                                              kind: 'Name',
-                                                              value: 'bonuses',
-                                                            },
-                                                          },
-                                                          {
-                                                            kind: 'Field',
-                                                            name: {
-                                                              kind: 'Name',
-                                                              value: 'liveTrainingsNumber',
-                                                            },
-                                                          },
-                                                          {
-                                                            kind: 'Field',
-                                                            name: {
-                                                              kind: 'Name',
-                                                              value: 'videoTrainingsNumber',
-                                                            },
-                                                          },
-                                                          {
-                                                            kind: 'Field',
-                                                            name: {
-                                                              kind: 'Name',
-                                                              value: 'courseLengthInMonths',
-                                                            },
-                                                          },
-                                                        ],
-                                                      },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                        { kind: 'Field', name: { kind: 'Name', value: 'id' } },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'navigationElements' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'path' } },
-                          ],
-                        },
-                      },
-                      { kind: 'Field', name: { kind: 'Name', value: 'ctaButton' } },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<HeaderQuery, HeaderQueryVariables>
-export const MainPageDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'MainPage' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'main' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'hero' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'scrollButton' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'about' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'benefits' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'benefit' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'runningline' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [{ kind: 'Field', name: { kind: 'Name', value: 'text' } }],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'chooseCourse' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'courses' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'course' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'nodes' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'InlineFragment',
-                                                typeCondition: {
-                                                  kind: 'NamedType',
-                                                  name: { kind: 'Name', value: 'Course' },
-                                                },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'id' },
-                                                    },
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'title' },
-                                                    },
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'content' },
-                                                      selectionSet: {
-                                                        kind: 'SelectionSet',
-                                                        selections: [
-                                                          {
-                                                            kind: 'Field',
-                                                            name: { kind: 'Name', value: 'price' },
-                                                            selectionSet: {
-                                                              kind: 'SelectionSet',
-                                                              selections: [
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'priceMonthly',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'details',
-                                                                  },
-                                                                  selectionSet: {
-                                                                    kind: 'SelectionSet',
-                                                                    selections: [
-                                                                      {
-                                                                        kind: 'Field',
-                                                                        name: {
-                                                                          kind: 'Name',
-                                                                          value:
-                                                                            'videoTrainingsNumber',
-                                                                        },
-                                                                      },
-                                                                      {
-                                                                        kind: 'Field',
-                                                                        name: {
-                                                                          kind: 'Name',
-                                                                          value: 'monthsNumber',
-                                                                        },
-                                                                      },
-                                                                      {
-                                                                        kind: 'Field',
-                                                                        name: {
-                                                                          kind: 'Name',
-                                                                          value: 'levelsNumber',
-                                                                        },
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                },
-                                                              ],
-                                                            },
-                                                          },
-                                                          {
-                                                            kind: 'Field',
-                                                            name: { kind: 'Name', value: 'path' },
-                                                          },
-                                                        ],
-                                                      },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                              {
-                                                kind: 'InlineFragment',
-                                                typeCondition: {
-                                                  kind: 'NamedType',
-                                                  name: { kind: 'Name', value: 'IndividualCourse' },
-                                                },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'id' },
-                                                    },
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'title' },
-                                                    },
-                                                    {
-                                                      kind: 'Field',
-                                                      name: {
-                                                        kind: 'Name',
-                                                        value: 'individualCourseData',
-                                                      },
-                                                      selectionSet: {
-                                                        kind: 'SelectionSet',
-                                                        selections: [
-                                                          {
-                                                            kind: 'Field',
-                                                            name: { kind: 'Name', value: 'price' },
-                                                            selectionSet: {
-                                                              kind: 'SelectionSet',
-                                                              selections: [
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'monthlyPrice',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'level',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'videoTrainingsNumber',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'liveTrainingsNumber',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'bonuses',
-                                                                  },
-                                                                },
-                                                                {
-                                                                  kind: 'Field',
-                                                                  name: {
-                                                                    kind: 'Name',
-                                                                    value: 'courseLengthInMonths',
-                                                                  },
-                                                                },
-                                                              ],
-                                                            },
-                                                          },
-                                                          {
-                                                            kind: 'Field',
-                                                            name: { kind: 'Name', value: 'path' },
-                                                          },
-                                                        ],
-                                                      },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'individualLesson' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'cta' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'button' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'price' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                ],
-                              },
-                            },
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'details' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'slider' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'upperslider' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'text' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'image' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'lowerslider' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'text' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'image' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'students' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'cards' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'leftIcon' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'rightIcon' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'firstBadge' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'secondBadge' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'background' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'desktop' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'footer' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'hero' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'teacher' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'mobile' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'footer' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'hero' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'teacher' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'fieldGroupName' } },
                           ],
                         },
                       },
@@ -16076,69 +13366,7 @@ export const MainPageDocument = {
       },
     },
   ],
-} as unknown as DocumentNode<MainPageQuery, MainPageQueryVariables>
-export const PrivacyPolicyDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'PrivacyPolicy' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'privacyPolicy' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'content' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<PrivacyPolicyQuery, PrivacyPolicyQueryVariables>
+} as unknown as DocumentNode<HeaderQuery, HeaderQueryVariables>
 export const ProcessEducationDocument = {
   kind: 'Document',
   definitions: [
@@ -16146,69 +13374,60 @@ export const ProcessEducationDocument = {
       kind: 'OperationDefinition',
       operation: 'query',
       name: { kind: 'Name', value: 'ProcessEducation' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
+            name: { kind: 'Name', value: 'generalFragments' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'learningProcess' },
+                  name: { kind: 'Name', value: 'nodes' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'content' },
+                        name: { kind: 'Name', value: 'commonFragments' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'text' } },
                             {
                               kind: 'Field',
-                              name: { kind: 'Name', value: 'picture' },
+                              name: { kind: 'Name', value: 'process' },
                               selectionSet: {
                                 kind: 'SelectionSet',
                                 selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'text' } },
                                   {
                                     kind: 'Field',
-                                    name: { kind: 'Name', value: 'image' },
+                                    name: { kind: 'Name', value: 'picture' },
                                     selectionSet: {
                                       kind: 'SelectionSet',
                                       selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
                                         {
                                           kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
+                                          name: { kind: 'Name', value: 'image' },
                                           selectionSet: {
                                             kind: 'SelectionSet',
                                             selections: [
                                               {
                                                 kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
                                               },
                                             ],
                                           },
@@ -16233,139 +13452,6 @@ export const ProcessEducationDocument = {
     },
   ],
 } as unknown as DocumentNode<ProcessEducationQuery, ProcessEducationQueryVariables>
-export const SongDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'Song' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'audio' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'song' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'node' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'mediaItemUrl' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<SongQuery, SongQueryVariables>
-export const StudentsDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'Students' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'students' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'list' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'firstBadge' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'secondBadge' } },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<StudentsQuery, StudentsQueryVariables>
 export const TeacherDocument = {
   kind: 'Document',
   definitions: [
@@ -16373,98 +13459,102 @@ export const TeacherDocument = {
       kind: 'OperationDefinition',
       operation: 'query',
       name: { kind: 'Name', value: 'Teacher' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
+            name: { kind: 'Name', value: 'generalFragments' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'teacher' },
+                  name: { kind: 'Name', value: 'nodes' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'gallery' },
+                        name: { kind: 'Name', value: 'commonFragments' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
                             {
                               kind: 'Field',
-                              name: { kind: 'Name', value: 'image' },
+                              name: { kind: 'Name', value: 'teacher' },
                               selectionSet: {
                                 kind: 'SelectionSet',
                                 selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
                                   {
                                     kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
+                                    name: { kind: 'Name', value: 'experience' },
                                     selectionSet: {
                                       kind: 'SelectionSet',
                                       selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'number' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'text' } },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'education' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                                         {
                                           kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                          name: { kind: 'Name', value: 'list' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'element' },
+                                              },
+                                            ],
+                                          },
                                         },
                                       ],
                                     },
                                   },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'statistics' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'text' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'number' } },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'education' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'list' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'element' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'gallery' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'image' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
                                 ],
                               },
                             },
@@ -16549,28 +13639,6 @@ export const IndividualCourseDocument = {
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'courseProgram' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
                             {
                               kind: 'Field',
                               name: { kind: 'Name', value: 'desktop' },
@@ -16730,7 +13798,6 @@ export const IndividualCourseDocument = {
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'bonuses' } },
                             { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
                             {
                               kind: 'Field',
