@@ -10,7 +10,7 @@ import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
-import { useFooter }         from '@globals/data'
+import { useFooter }        from '@globals/data'
 
 import { BottomRow }        from './bottom-row'
 import { ButtonUp }         from './button-up'

@@ -3487,6 +3487,7 @@ __metadata:
     "@types/react": "npm:18.2.20"
     "@ui/button": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
