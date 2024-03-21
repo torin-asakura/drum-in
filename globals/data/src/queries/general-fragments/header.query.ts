@@ -23,10 +23,7 @@ query Header{
             path
             title
           }
-          button {
-            text
-            path
-          }
+         ctaButton
         }
       }
     }

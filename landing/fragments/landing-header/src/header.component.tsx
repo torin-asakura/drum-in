@@ -1,38 +1,32 @@
 import React                   from 'react'
-import { FormattedMessage }    from 'react-intl'
 import { useState }            from 'react'
 import { useEffect }           from 'react'
 
-import { Consultation }        from '@landing/consultation'
-import { MobileConsultation }  from '@landing/consultation'
 import { NavigationBlock }     from '@landing/navigation-fragment'
 import { Button }              from '@ui/button'
-import { ArrowBottomIcon }     from '@ui/icons'
 import { MenuIcon }            from '@ui/icons'
+import { ImageBlock }          from '@ui/image'
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
-import { NextLink }            from '@ui/link'
-import { Logo }                from '@ui/logo'
-import { Text }                from '@ui/text'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
-import { useHover }            from '@ui/utils'
-import {useHeader} from '@globals/data'
+import { useHeader }            from '@globals/data'
+
+import { CtaButtonMobile }     from './cta-button'
+import { CtaButtonDesktop }    from './cta-button'
+import { DropdownListButton }   from './dropdown-list-button'
+import { ItemLink }             from './item-link'
 
 const HeaderBlock = () => {
   const [visibleNav, setVisibleNav] = useState<boolean>(false)
-  const [hoverArrow, hoverArrowProps] = useHover()
-  const [hoverLink, hoverLinkProps] = useHover()
-  const [visibleModal, setVisibleModal] = useState<boolean>(false)
-  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  // const header = useHeader()
-
-  const { scroll } = useLocomotiveScroll()
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
+  const { scroll } = useLocomotiveScroll()
 
-  const {header} = useHeader()
+  const { header } = useHeader()
+
   console.log(header)
+
   useEffect(() => {
     if (scroll) {
       scroll.on('scroll', (instance) => {
@@ -77,89 +71,19 @@ const HeaderBlock = () => {
               </Box>
               <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
               <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
-                <Logo />
+                <ImageBlock src={header?.logo?.node.sourceUrl || ''} alt='logo' />
               </Box>
               <Layout flexBasis={94} display={['none', 'none', 'flex']} />
-              <Box
-                display={['none', 'none', 'flex']}
-                flexShrink={0}
-                width={83}
-                {...hoverArrowProps}
-              >
-                <Button
-                  size='withoutPaddingMicroHeight'
-                  variant='transparentBackground'
-                  iconSvg={
-                    <ArrowBottomIcon
-                      width={16}
-                      height={16}
-                      color={hoverArrow ? 'rgb(154,101,242)' : ''}
-                    />
-                  }
-                  horizontalLocation='left'
-                  onClick={() => setVisibleNav(true)}
-                  fill
-                >
-                  <Row justifyContent='end'>
-                    <Text
-                      textTransform='uppercase'
-                      fontWeight='semiBold'
-                      fontSize='medium'
-                      lineHeight='default'
-                    >
-                      <FormattedMessage id='landing_header.courses' />
-                    </Text>
-                  </Row>
-                </Button>
-              </Box>
-              <Layout flexBasis={70} display={['none', 'none', 'flex']} />
-              <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
-                <NextLink path={'/'}>
-                  <Text
-                    color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
-                    style={{ transition: '0.3s' }}
-                  >
-                    headerTitle
-                  </Text>
-                </NextLink>
-              </Box>
-              <Row justifyContent='end' display={['none', 'flex', 'flex']}>
-                <Button
-                  size='withoutPaddingMicroHeight'
-                  variant='transparentBackground'
-                  onClick={() => setVisibleModal(true)}
-                >
-                  <Text
-                    textTransform='uppercase'
-                    fontWeight='semiBold'
-                    fontSize={['semiMedium', 'medium', 'medium']}
-                    lineHeight='default'
-                  >
-                    headerNameButton
-                  </Text>
-                </Button>
-              </Row>
-              <Row justifyContent='end' display={['flex', 'none', 'none']}>
-                <Button
-                  size='withoutPaddingMicroHeight'
-                  variant='transparentBackground'
-                  onClick={() => setVisibleModalMobile(true)}
-                >
-                  <Text
-                    textTransform='uppercase'
-                    fontWeight='semiBold'
-                    fontSize={['semiMedium', 'medium', 'medium']}
-                    lineHeight='default'
-                  >
-                    headerNameButton
-                  </Text>
-                </Button>
-              </Row>
-              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-              <MobileConsultation
-                activeRender={visibleModalMobile}
-                onClose={() => setVisibleModalMobile(false)}
+              <DropdownListButton
+                title={header?.dropdownList?.title}
+                setVisibleNav={setVisibleNav}
               />
+              <Layout flexBasis={70} display={['none', 'none', 'flex']} />
+              {header?.links?.map((item) => (
+                <ItemLink item={item} />
+              ))}
+              <CtaButtonDesktop title={header?.ctaButton} />
+              <CtaButtonMobile title={header?.ctaButton} />
             </Row>
             <Layout flexBasis={[26, 33, 40]} />
           </Box>
