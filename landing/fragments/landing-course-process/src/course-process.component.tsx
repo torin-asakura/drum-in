@@ -1,15 +1,15 @@
-import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
+import React                   from 'react'
+import { FormattedMessage }    from 'react-intl'
 
-import { Box }                from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Text }               from '@ui/text'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Text }                from '@ui/text'
 import { useProcessEducation } from '@globals/data'
 
-import { DesktopSlider }      from './desktop-slider'
-import { MobileSlider }       from './mobile-slider'
+import { DesktopSlider }       from './desktop-slider'
+import { MobileSlider }        from './mobile-slider'
 
 const CourseProcessBlock = () => {
   const { processEducation } = useProcessEducation()
