@@ -12,10 +12,9 @@ query Contacts{
             link
             content
           }
-          background{
-            node{
-              sourceUrl
-            }
+           background{
+            mobile{node{sourceUrl}}
+            desktop{node{sourceUrl}}
           }
         }
       }

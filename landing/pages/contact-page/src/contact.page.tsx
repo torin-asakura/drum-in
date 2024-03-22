@@ -9,11 +9,9 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-export const ContactPage = ({contactsData}) => {
-
-  console.log(contactsData)
-
+export const ContactPage = ({ contactsData }) => {
   const containerRef = useRef(null)
+
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
@@ -39,24 +37,24 @@ export const ContactPage = ({contactsData}) => {
             width='100%'
             display={['none', 'none', 'flex']}
             flexWrap='wrap'
-            backgroundImage={`url(${contactsData?.background.node.sourceUrl})`}
+            backgroundImage={`url(${contactsData?.background.desktop.node.sourceUrl})`}
             backgroundSize='100% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <ContactBlock contactsData={contactsData}/>
+            <ContactBlock contactsData={contactsData} />
             <FooterBlock buttonUp={false} />
           </Box>
           <Box
             width='100%'
             display={['flex', 'flex', 'none']}
             flexWrap='wrap'
-            backgroundImage={`url(${''})`}
+            backgroundImage={`url(${contactsData?.background.mobile.node.sourceUrl})`}
             backgroundSize={['100%', '100%', '0']}
             backgroundRepeat='no-repeat'
             backgroundPosition={['center top', 'center top', 'center']}
           >
-            <ContactBlock contactsData={contactsData}/>
+            <ContactBlock contactsData={contactsData} />
             <FooterBlock buttonUp={false} />
           </Box>
         </main>
