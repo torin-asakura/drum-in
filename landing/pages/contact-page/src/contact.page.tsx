@@ -39,12 +39,12 @@ export const ContactPage = ({contactsData}) => {
             width='100%'
             display={['none', 'none', 'flex']}
             flexWrap='wrap'
-            backgroundImage={`url(${''})`}
+            backgroundImage={`url(${contactsData?.background.node.sourceUrl})`}
             backgroundSize='100% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <ContactBlock />
+            <ContactBlock contactsData={contactsData}/>
             <FooterBlock buttonUp={false} />
           </Box>
           <Box
@@ -56,7 +56,7 @@ export const ContactPage = ({contactsData}) => {
             backgroundRepeat='no-repeat'
             backgroundPosition={['center top', 'center top', 'center']}
           >
-            <ContactBlock />
+            <ContactBlock contactsData={contactsData}/>
             <FooterBlock buttonUp={false} />
           </Box>
         </main>

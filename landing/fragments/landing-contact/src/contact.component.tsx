@@ -10,10 +10,10 @@ import { Row }                 from '@ui/layout'
 import { Text }                from '@ui/text'
 
 import { Card }                from './card'
-import { useContact }          from './data'
 
-const ContactBlock = () => {
-  const contact = useContact()
+const ContactBlock = ({contactsData}) => {
+
+
 
   return (
     <Row justifyContent='center'>
@@ -30,7 +30,7 @@ const ContactBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {contact?.title}
+              {contactsData?.title}
             </Text>
           </Box>
           <Layout display={['none', 'none', 'flex']} flexBasis={104} />
@@ -48,9 +48,9 @@ const ContactBlock = () => {
               <ArrowLeftBottomIcon width={70} height={50} />
             </Box>
             <Layout display={['flex', 'flex', 'none']} flexBasis={[25, 40, 0]} />
-            {contact?.contacts?.contacts?.map(({ title, link, href, domainName }) => (
+            {contactsData?.socials.map(({ title,link, content }) => (
               <React.Fragment key={uniqid()}>
-                <Card title={title} link={link} href={href} domainName={domainName} />
+                <Card title={title} link={link} content={content}  />
                 <Layout flexBasis={[12, 24, 118]} />
               </React.Fragment>
             ))}
