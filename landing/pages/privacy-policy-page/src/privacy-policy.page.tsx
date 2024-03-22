@@ -11,14 +11,7 @@ import { Box }                      from '@ui/layout'
 
 import { useBackgrounds }           from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const OpeningTheRhythmPage = ({ SEO }: Props) => {
+export const OpeningTheRhythmPage = ({privacyPolicy }) => {
   const backgrounds = useBackgrounds()
   const containerRef = useRef(null)
 
@@ -41,10 +34,9 @@ export const OpeningTheRhythmPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        {/* TODO: change to privacy */}
         <Seo id={PageID.INDEX} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <PrivacyPolicyBlock />
+          <PrivacyPolicyBlock privacyPolicy={privacyPolicy}/>
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
