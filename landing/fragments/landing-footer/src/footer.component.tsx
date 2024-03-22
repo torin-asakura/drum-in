@@ -28,7 +28,9 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
           <Layout flexBasis={[40, 85, 128]} />
           <Box width='100%' flexDirection={['column', 'column', 'row']}>
             <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
-              <ImageBlock src={footer?.logo?.node.sourceUrl || ''} />
+              <NextLink path='/'>
+                <ImageBlock src={footer?.logo?.node.sourceUrl || ''} />
+              </NextLink>
             </Box>
             <Layout flexGrow={[0, 0, 2]} flexBasis={[40, 50, 0]} flexShrink={0} />
             <Column>

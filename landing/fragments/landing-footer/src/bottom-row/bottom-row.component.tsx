@@ -1,5 +1,4 @@
 import React                from 'react'
-import { FormattedMessage } from 'react-intl'
 
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -15,7 +14,7 @@ const BottomRow = ({ footer }) => (
     justifyContent='space-between'
   >
     <Box>
-      <NextLink path={footer?.privacyPolicy}>
+      <NextLink path={footer?.privacyPolicy.path}>
         <Text
           textTransform='none'
           fontWeight='medium'
@@ -23,7 +22,7 @@ const BottomRow = ({ footer }) => (
           lineHeight='medium'
           color='text.transparentSmokyWhite'
         >
-          <FormattedMessage id='footer.privacy_policy' />
+          {footer?.privacyPolicy.title}
         </Text>
       </NextLink>
     </Box>

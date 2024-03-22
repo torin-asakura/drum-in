@@ -1,4 +1,5 @@
 import { useQuery }           from '@apollo/client'
+
 import { GET_PRIVACY_POLICY } from '../../queries'
 
 export const usePrivacyPolicy = () => {

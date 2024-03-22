@@ -1,8 +1,8 @@
-import { GET_PRIVACY_POLICY }   from '@globals/data'
-import { PageID }         from '@globals/data'
-import { GET_SEO }        from '@globals/data'
-import { getClient }      from '@globals/data'
-import { setCacheHeader } from '@globals/data'
+import { GET_PRIVACY_POLICY } from '@globals/data'
+import { PageID }             from '@globals/data'
+import { GET_SEO }            from '@globals/data'
+import { getClient }          from '@globals/data'
+import { setCacheHeader }     from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
@@ -22,5 +22,5 @@ export const getServerSideProps = async ({ res }) => {
     ogLocale: 'ru_RU',
   }
 
-  return { props: { SEO,privacyPolicy } }
+  return { props: { SEO, privacyPolicy } }
 }
