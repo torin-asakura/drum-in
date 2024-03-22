@@ -15,11 +15,11 @@ import { useHeader }            from '@globals/data'
 
 import { CtaButtonMobile }     from './cta-button'
 import { CtaButtonDesktop }    from './cta-button'
-import { DropdownListButton }   from './dropdown-list-button'
+import { DrawerButton }   from './drawer-button'
 import { ItemLink }             from './item-link'
 
 const HeaderBlock = () => {
-  const [visibleNav, setVisibleNav] = useState<boolean>(false)
+  const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
 
@@ -45,7 +45,7 @@ const HeaderBlock = () => {
 
   return (
     <>
-      <NavigationBlock visible={visibleNav} setVisible={setVisibleNav} />
+      <NavigationBlock headerData={header} visible={visibleDrawer} setVisible={setVisibleDrawer} />
       <Box
         width='100%'
         zIndex={100}
@@ -64,7 +64,7 @@ const HeaderBlock = () => {
                 <Button
                   size='withoutPaddingMicroHeight'
                   variant='transparentBackground'
-                  onClick={() => setVisibleNav(true)}
+                  onClick={() => setVisibleDrawer(true)}
                 >
                   <MenuIcon width={40} height={40} />
                 </Button>
@@ -74,9 +74,10 @@ const HeaderBlock = () => {
                 <ImageBlock src={header?.logo?.node.sourceUrl || ''} alt='logo' />
               </Box>
               <Layout flexBasis={94} display={['none', 'none', 'flex']} />
-              <DropdownListButton
+              <DrawerButton
                 title={header?.dropdownList?.title}
-                setVisibleNav={setVisibleNav}
+                visibleDrawer={visibleDrawer}
+                setVisibleDrawer={setVisibleDrawer}
               />
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
               {header?.links?.map((item) => (
