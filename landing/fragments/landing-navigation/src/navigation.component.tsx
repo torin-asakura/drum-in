@@ -9,7 +9,7 @@ import { Layout }          from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Box }             from '@ui/layout'
 import { ImageBlock }      from '@ui/image'
-import {CtaButtonDesktop,CtaButtonMobile,DrawerButton,ItemLink}  from '@landing/header-fragment'
+import {CtaButton,DrawerButton,ItemLink}  from '@landing/header-fragment'
 import { Elements }        from './elements'
 import { NavigationProps } from './navigation.interfaces'
 
@@ -52,8 +52,7 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData,visible, setVisible }
                   <ItemLink item={item} />
                 ))}
               </Box>
-              <CtaButtonDesktop title={headerData?.ctaButton} />
-              <CtaButtonMobile title={headerData?.ctaButton} />
+              <CtaButton title={headerData?.ctaButton} />
             </Row>
             <Layout flexBasis={[60, 70, 125]} flexGrow={2} />
             <Elements stateHover={stateHover} />

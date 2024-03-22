@@ -15,13 +15,53 @@ import { Text }               from '@ui/text'
 
 import { Element }            from './element'
 import { ElementsProps }      from './elements.interfaces'
-import { useNavigation }      from '../data'
 import { getUi }              from '../helpers'
 
 const Elements: FC<ElementsProps> = ({ stateHover }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const navigation = useNavigation()?.menuCourses?.nodes
+
+  const courses = [
+    {
+      title:'title1',
+      id:'cG9zdDoyNjY=',
+      menuCourse:{
+        link:'/test1',
+        level:'',
+
+        quantityVideoLessons:'1',
+        quantityMonths:'2',
+        circleFirstLine:'3',
+        circleSecondLine:'circleSecondLine',
+      }
+    },
+    {
+      title:'title2',
+      id:'cG9zdDoyNjQ=',
+      menuCourse:{
+        link:'/test2',
+        level:'',
+
+        quantityVideoLessons:'1',
+        quantityMonths:'2',
+        circleFirstLine:'3',
+        circleSecondLine:'circleSecondLine',
+      }
+     },
+    {
+      title:'title3',
+      id:'cG9zdDoyNjM=',
+      menuCourse:{
+        link:'/test3',
+        level:'',
+
+        quantityVideoLessons:'1',
+        quantityMonths:'2',
+        circleFirstLine:'3',
+        circleSecondLine:'circleSecondLine',
+      }
+    }
+  ]
 
   return (
     <Row>
@@ -38,7 +78,7 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
           </Text>
         </Box>
         <Layout display={['flex', 'flex', 'none']} flexBasis={[20, 24, 0]} />
-        {navigation?.map(({ title, id, menuCourse }) => (
+        {courses?.map(({ title, id, menuCourse }) => (
           <React.Fragment key={id}>
             <Element
               stateHover={stateHover}
@@ -53,7 +93,6 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
               rectanglePositionX={getUi(id).rectanglePositionX}
               rectanglePositionY={getUi(id).rectanglePositionY}
               quantityMonths={menuCourse.quantityMonths}
-              textMonths={menuCourse.textMonths}
               rectangleColor={getUi(id).rectangleColor}
               circlePositionX={getUi(id).circlePositionX}
               circlePositionY={getUi(id).circlePositionY}

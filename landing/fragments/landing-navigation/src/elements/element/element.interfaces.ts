@@ -15,7 +15,7 @@ export interface ElementProps {
   rectanglePositionX: number
   rectanglePositionY: number
   quantityMonths: number
-  textMonths: string
+  textMonths?: string | null
   rectangleColor: string
   path: string
 }

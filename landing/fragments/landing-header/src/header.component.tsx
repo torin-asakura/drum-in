@@ -13,8 +13,7 @@ import { Row }                 from '@ui/layout'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 import { useHeader }            from '@globals/data'
 
-import { CtaButtonMobile }     from './cta-button'
-import { CtaButtonDesktop }    from './cta-button'
+import { CtaButton }     from './cta-button'
 import { DrawerButton }   from './drawer-button'
 import { ItemLink }             from './item-link'
 
@@ -83,8 +82,7 @@ const HeaderBlock = () => {
               {header?.links?.map((item) => (
                 <ItemLink item={item} />
               ))}
-              <CtaButtonDesktop title={header?.ctaButton} />
-              <CtaButtonMobile title={header?.ctaButton} />
+              <CtaButton title={header?.ctaButton} />
             </Row>
             <Layout flexBasis={[26, 33, 40]} />
           </Box>
