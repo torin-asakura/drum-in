@@ -7,10 +7,8 @@ import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
-import { usePrivacyPolicy } from './data'
 
-const PrivacyPolicyBlock = () => {
-  const privacyPolicy = usePrivacyPolicy()
+const PrivacyPolicyBlock = ({privacyPolicy}) => {
 
   return (
     <Row justifyContent='center'>
@@ -27,12 +25,12 @@ const PrivacyPolicyBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {privacyPolicy?.title}
+              aa
             </Text>
           </Box>
           <Layout flexBasis={[20, 30, 50]} flexShrink={0} />
           <Column>
-            {privacyPolicy?.privacyPolicy?.text?.split('<br />\r').map((item) => (
+            {['111','222','333'].map((item) => (
               <React.Fragment key={uniqid()}>
                 <Row>
                   <Text
