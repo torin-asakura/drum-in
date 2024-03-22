@@ -8,12 +8,12 @@ import { Button }       from '@ui/button'
 import { Row }          from '@ui/layout'
 import { Text }         from '@ui/text'
 
-export const CtaButtonDesktop: FC<{ title?: string | null }> = memo(({ title }) => {
+export const CtaButton: FC<{ title?: string | null }> = memo(({ title }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
 
   return (
     <>
-      <Row justifyContent='end' display={['none', 'flex', 'flex']}>
+      <Row justifyContent='end' display={['none', 'none', 'flex']}>
         <Button
           size='withoutPaddingMicroHeight'
           variant='transparentBackground'
