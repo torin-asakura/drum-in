@@ -7,7 +7,10 @@ query Footer{
       commonFragments {
         footer {
           email
-          privacyPolicy
+          privacyPolicy{
+            title
+            path
+          }
           logo {
             node {
               sourceUrl

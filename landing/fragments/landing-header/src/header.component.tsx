@@ -10,6 +10,7 @@ import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
+import { NextLink }            from '@ui/link'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 import { useHeader }           from '@globals/data'
 
@@ -68,7 +69,9 @@ const HeaderBlock = () => {
               </Box>
               <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
               <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
-                <ImageBlock src={header?.logo?.node.sourceUrl || ''} alt='logo' />
+                <NextLink path='/'>
+                  <ImageBlock src={header?.logo?.node.sourceUrl || ''} alt='logo' />
+                </NextLink>
               </Box>
               <Layout flexBasis={94} display={['none', 'none', 'flex']} />
               <DrawerButton
