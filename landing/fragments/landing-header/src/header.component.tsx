@@ -24,7 +24,6 @@ const HeaderBlock = () => {
 
   const { header } = useHeader()
 
-  console.log(header)
 
   useEffect(() => {
     if (scroll) {
