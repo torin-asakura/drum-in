@@ -8,16 +8,12 @@ import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
-import {useContacts}                from '@globals/data'
-import { useBackground }            from './data'
 
-export const ContactPage = () => {
+export const ContactPage = ({contactsData}) => {
+
+  console.log(contactsData)
+
   const containerRef = useRef(null)
-  const background = useBackground()
-  const { contacts } = useContacts()
-
-  console.log(contacts)
-
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
@@ -43,7 +39,7 @@ export const ContactPage = () => {
             width='100%'
             display={['none', 'none', 'flex']}
             flexWrap='wrap'
-            backgroundImage={`url(${background?.backgroundForHero?.sourceUrl})`}
+            backgroundImage={`url(${''})`}
             backgroundSize='100% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
@@ -55,7 +51,7 @@ export const ContactPage = () => {
             width='100%'
             display={['flex', 'flex', 'none']}
             flexWrap='wrap'
-            backgroundImage={`url(${background?.backgroundMobileForHero?.sourceUrl})`}
+            backgroundImage={`url(${''})`}
             backgroundSize={['100%', '100%', '0']}
             backgroundRepeat='no-repeat'
             backgroundPosition={['center top', 'center top', 'center']}
