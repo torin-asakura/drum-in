@@ -8,9 +8,7 @@ import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
 
-const PrivacyPolicyBlock = ({privacyPolicy}) => {
-
-  return (
+const PrivacyPolicyBlock = ({privacyPolicy}) => (
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -21,16 +19,16 @@ const PrivacyPolicyBlock = ({privacyPolicy}) => {
               textTransform='uppercase'
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={['regular', 'mild', 'big']}
+              fontSize={['semiRegular', 'mild', 'big']}
               lineHeight='default'
               color='text.smokyWhite'
             >
-              aa
+              {privacyPolicy?.title}
             </Text>
           </Box>
           <Layout flexBasis={[20, 30, 50]} flexShrink={0} />
           <Column>
-            {['111','222','333'].map((item) => (
+            {privacyPolicy?.content.map((item) => (
               <React.Fragment key={uniqid()}>
                 <Row>
                   <Text
@@ -39,10 +37,23 @@ const PrivacyPolicyBlock = ({privacyPolicy}) => {
                     lineHeight='primary'
                     color='text.smokyWhite'
                   >
-                    {item}
+                    {item.title}
                   </Text>
                 </Row>
-                <Layout flexBasis={[7, 10, 15]} flexShrink={0} />
+                <Layout flexBasis={[4, 6, 8]} flexShrink={0} />
+                <Row>
+                  <Text
+                    opacity='50%'
+                    fontWeight='medium'
+                    fontSize={['micro', 'middling', 'medium']}
+                    lineHeight='primary'
+                    color='text.smokyWhite'
+                  >
+                    {item.description}
+                  </Text>
+                  <Layout width={[16, 100, 200]}  flexShrink={0} />
+                </Row>
+                <Layout flexBasis={[16, 24, 40]}  />
               </React.Fragment>
             ))}
           </Column>
@@ -52,6 +63,6 @@ const PrivacyPolicyBlock = ({privacyPolicy}) => {
       </Box>
     </Row>
   )
-}
+
 
 export { PrivacyPolicyBlock }
