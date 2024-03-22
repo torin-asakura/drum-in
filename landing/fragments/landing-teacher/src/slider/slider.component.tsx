@@ -8,10 +8,12 @@ import { Box }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Slider }         from '@ui/slider'
 import { SwiperSlide }    from '@ui/slider'
-
 import { Slide }          from './slide'
+import {useViewportBreakpoint} from './hooks'
 
 const SliderBlock = ({ teacherData }) => {
+  const {isWideViewport} = useViewportBreakpoint()
+
   const teacherChildren = useMemo(
     () =>
       teacherData?.gallery.map(({ image, alt }) => (
@@ -26,7 +28,7 @@ const SliderBlock = ({ teacherData }) => {
         <Box position='absolute' top={-109} right={247}>
           <DrumsticksIcon width={182} height={182} />
         </Box>
-        <Condition match={teacherChildren !== [] && teacherChildren !== undefined}>
+        <Condition match={isWideViewport && teacherChildren !== [] && teacherChildren !== undefined}>
           <Slider
             slidesPerView='auto'
             clName='teacher-slider'
@@ -43,6 +45,7 @@ const SliderBlock = ({ teacherData }) => {
           </Slider>
         </Condition>
       </Box>
+
       <Box display={['flex', 'flex', 'none']}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Condition match={teacherChildren !== [] && teacherChildren !== undefined}>
