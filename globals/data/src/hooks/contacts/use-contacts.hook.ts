@@ -1,6 +1,6 @@
-import { useQuery } from '@apollo/client'
+import { useQuery }     from '@apollo/client'
 
-import { GET_CONTACTS }  from '../../queries'
+import { GET_CONTACTS } from '../../queries'
 
 export const useContacts = () => {
   const { data } = useQuery(GET_CONTACTS)

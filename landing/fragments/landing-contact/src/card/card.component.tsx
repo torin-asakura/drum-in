@@ -11,14 +11,12 @@ import { Text }      from '@ui/text'
 import { CardProps } from './card.interfaces'
 
 const Card: FC<CardProps> = ({ title, link, content, domainName }) => {
-
-
   const patternEmail = /\w+@\w+\.\w+/
 
+  const href = patternEmail.test(content) ? `mailto:${content}` : link
 
-  return(
-    <Link href={patternEmail.test(content)? `mailto:${content}`: link } target='_blank'>
-
+  return (
+    <Link href={href} target='_blank'>
       <Box
         width={['100%', 450, 368]}
         height={[127, 160, 300]}

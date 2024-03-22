@@ -23,44 +23,44 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
 
   const courses = [
     {
-      title:'title1',
-      id:'cG9zdDoyNjY=',
-      menuCourse:{
-        link:'/test1',
-        level:'',
+      title: 'title1',
+      id: 'cG9zdDoyNjY=',
+      menuCourse: {
+        link: '/test1',
+        level: '',
 
-        quantityVideoLessons:'1',
-        quantityMonths:'2',
-        circleFirstLine:'3',
-        circleSecondLine:'circleSecondLine',
-      }
+        quantityVideoLessons: '1',
+        quantityMonths: '2',
+        circleFirstLine: '3',
+        circleSecondLine: 'circleSecondLine',
+      },
     },
     {
-      title:'title2',
-      id:'cG9zdDoyNjQ=',
-      menuCourse:{
-        link:'/test2',
-        level:'',
+      title: 'title2',
+      id: 'cG9zdDoyNjQ=',
+      menuCourse: {
+        link: '/test2',
+        level: '',
 
-        quantityVideoLessons:'1',
-        quantityMonths:'2',
-        circleFirstLine:'3',
-        circleSecondLine:'circleSecondLine',
-      }
-     },
+        quantityVideoLessons: '1',
+        quantityMonths: '2',
+        circleFirstLine: '3',
+        circleSecondLine: 'circleSecondLine',
+      },
+    },
     {
-      title:'title3',
-      id:'cG9zdDoyNjM=',
-      menuCourse:{
-        link:'/test3',
-        level:'',
+      title: 'title3',
+      id: 'cG9zdDoyNjM=',
+      menuCourse: {
+        link: '/test3',
+        level: '',
 
-        quantityVideoLessons:'1',
-        quantityMonths:'2',
-        circleFirstLine:'3',
-        circleSecondLine:'circleSecondLine',
-      }
-    }
+        quantityVideoLessons: '1',
+        quantityMonths: '2',
+        circleFirstLine: '3',
+        circleSecondLine: 'circleSecondLine',
+      },
+    },
   ]
 
   return (

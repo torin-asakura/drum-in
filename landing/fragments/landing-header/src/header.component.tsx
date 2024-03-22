@@ -11,11 +11,11 @@ import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
-import { useHeader }            from '@globals/data'
+import { useHeader }           from '@globals/data'
 
-import { CtaButton }     from './cta-button'
-import { DrawerButton }   from './drawer-button'
-import { ItemLink }             from './item-link'
+import { CtaButton }           from './cta-button'
+import { DrawerButton }        from './drawer-button'
+import { ItemLink }            from './item-link'
 
 const HeaderBlock = () => {
   const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
@@ -23,7 +23,6 @@ const HeaderBlock = () => {
   const { scroll } = useLocomotiveScroll()
 
   const { header } = useHeader()
-
 
   useEffect(() => {
     if (scroll) {
