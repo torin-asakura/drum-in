@@ -8,12 +8,15 @@ import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
-
+import {useContacts}                from '@globals/data'
 import { useBackground }            from './data'
 
 export const ContactPage = () => {
   const containerRef = useRef(null)
   const background = useBackground()
+  const { contacts } = useContacts()
+
+  console.log(contacts)
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
