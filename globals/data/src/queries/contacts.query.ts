@@ -8,7 +8,8 @@ query Contacts{
         contacts {
           title
           socials {
-            title
+              title
+            link
             content
           }
           background{

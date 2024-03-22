@@ -13,7 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-    "\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n            title\n            content\n          }\n          background{\n            node{\n              sourceUrl\n            }\n          }\n        }\n      }\n    }\n  }\n}\n": types.ContactsDocument,
+    "\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n          background{\n            node{\n              sourceUrl\n            }\n          }\n        }\n      }\n    }\n  }\n}\n": types.ContactsDocument,
     "\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n      content\n      details {\n        faq {\n          answer\n          question\n        }\n        additionalQuestions {\n          title\n          cta {\n            afterBoldText\n            beforeBoldText\n            boldText\n          }\n          button\n        }\n      }\n    }\n  }\n": types.GetCourseDocument,
     "\nquery Cta{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeAccent\n            accent\n            afterAccent\n          }\n          button\n        }\n      }\n    }\n  }\n}\n": types.CtaDocument,
     "\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        faq {\n          answer\n          question\n        }\n      }\n    }\n  }\n}\n": types.FaqDocument,
@@ -43,7 +43,7 @@ export function gql(source: string): unknown;
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n            title\n            content\n          }\n          background{\n            node{\n              sourceUrl\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"): (typeof documents)["\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n            title\n            content\n          }\n          background{\n            node{\n              sourceUrl\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"];
+export function gql(source: "\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n          background{\n            node{\n              sourceUrl\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"): (typeof documents)["\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n          background{\n            node{\n              sourceUrl\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
