@@ -9,15 +9,12 @@ import { Slider }      from '@ui/slider'
 import { SwiperSlide } from '@ui/slider'
 
 import { Slide }       from './slide'
-import { useProgram }  from '../data'
 import { getUi }       from '../helpers'
 
-const MobileList = ({openingTheRhythm}) => {
-  const program = useProgram()?.programOpeningTheRhythm?.levelItem
-
+const MobileList = ({ openingTheRhythm }) => {
   const programOpeningTheRhythmChildren = useMemo(
     () =>
-      openingTheRhythm?.details.levels.map((item,index) => (
+      openingTheRhythm?.details.levels.map((item, index) => (
         <Slide
           forWhom={item.target}
           level={item.level}
@@ -36,7 +33,7 @@ const MobileList = ({openingTheRhythm}) => {
           quantityLiveBroadcast={item.liveTrainingsNumber}
         />
       )),
-    [program]
+    [openingTheRhythm]
   )
 
   return (

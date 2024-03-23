@@ -1,10 +1,9 @@
-import { GET_OPENING_THE_RHYTHM }            from '@globals/data'
-import { CourseID }              from '@globals/data'
-
-import { GET_SEO }               from '@globals/data'
-import { initializeApollo }      from '@globals/data'
-import { setCacheHeader }        from '@globals/data'
-import { addApolloState }        from '@globals/data'
+import { GET_OPENING_THE_RHYTHM } from '@globals/data'
+import { CourseID }               from '@globals/data'
+import { GET_SEO }                from '@globals/data'
+import { initializeApollo }       from '@globals/data'
+import { setCacheHeader }         from '@globals/data'
+import { addApolloState }         from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = initializeApollo({})
@@ -16,8 +15,8 @@ export const getServerSideProps = async ({ res }) => {
     variables: { id: CourseID.OPENING_RHYTHM },
   })
 
-    const openingTheRhythm = data?.course?.content
-    const background = data?.course?.content?.background
+  const openingTheRhythm = data?.course?.content
+  const background = data?.course?.content?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
@@ -30,5 +29,5 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return addApolloState(client, { props: { SEO,background,openingTheRhythm } })
+  return addApolloState(client, { props: { SEO, background, openingTheRhythm } })
 }
