@@ -17,7 +17,7 @@ export const getServerSideProps = async ({ res }) => {
   })
 
     const openingTheRhythm = data?.course?.content
-
+    const background = data?.course?.content?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
@@ -30,5 +30,5 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return addApolloState(client, { props: { SEO,openingTheRhythm } })
+  return addApolloState(client, { props: { SEO,background,openingTheRhythm } })
 }
