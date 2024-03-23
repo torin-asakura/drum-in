@@ -22,7 +22,7 @@ import { Box }                             from '@ui/layout'
 
 import { useSong }                         from './data'
 
-export const OpeningTheRhythmPage = ({openingTheRhythm}) => {
+export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -30,7 +30,7 @@ export const OpeningTheRhythmPage = ({openingTheRhythm}) => {
   const [playSong, setPlaySong] = useState<boolean>(false)
   const urlSongData = useSong()?.songUrl?.mediaItemUrl
   const songElement = useRef<HTMLAudioElement | undefined>()
-  console.log(openingTheRhythm)
+
   useEffect(() => {
     if (typeof window !== 'undefined' && urlSongData !== undefined) {
       songElement.current = new Audio(urlSongData)
@@ -51,6 +51,8 @@ export const OpeningTheRhythmPage = ({openingTheRhythm}) => {
       songElement?.current?.pause()
     }
   }, [playSong])
+
+  console.log(openingTheRhythm)
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
@@ -73,12 +75,12 @@ export const OpeningTheRhythmPage = ({openingTheRhythm}) => {
         <HeaderBlock />
         <Seo id={PageID.OPENING_RHYTHM} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroOpeningTheRhythmBlock />
+          <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm}/>
           <ProgramBlock />
           <CourseProcessBlock />
           <Box
             width='100%'
-            // backgroundImage={`url(${background?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop.teacher.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
@@ -91,7 +93,7 @@ export const OpeningTheRhythmPage = ({openingTheRhythm}) => {
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            // backgroundImage={`url(${background?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop.footer.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -101,7 +103,7 @@ export const OpeningTheRhythmPage = ({openingTheRhythm}) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            // backgroundImage={`url(${background?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.mobile.footer.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
