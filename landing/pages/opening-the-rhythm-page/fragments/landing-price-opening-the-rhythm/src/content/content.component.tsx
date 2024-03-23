@@ -16,13 +16,22 @@ import { Figures }                         from './figures'
 import { FullPrice }                       from './full-price'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
-import { usePrice }                        from '../data'
 
-const Content = () => {
+const Content = ({openingTheRhythm}) => {
+  const { formatMessage } = useIntl()
+
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const { formatMessage } = useIntl()
-  const price = usePrice()
+
+
+  const fullPrice = ` 
+        ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })} 
+        ${openingTheRhythm?.price.priceFull} 
+        ${'₽'}
+        `
+
+  const levelCount = parseInt(openingTheRhythm?.price.details.levelsNumber,10)
+
 
   return (
     <Box
@@ -35,18 +44,17 @@ const Content = () => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={price?.priceMonthly}
+          currency={openingTheRhythm?.price.priceMonthly}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
         />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          firstLineCircle={price?.numberForTheCircle}
-          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
-          wordMonth={price?.secondLineRectangle}
+          quantityMonths={openingTheRhythm?.price.details.monthsNumber}
+          quantityVideoLessons={openingTheRhythm?.price.details.videoTrainingsNumber}
+          firstLineCircle={openingTheRhythm?.price.details.levelsNumber}
+          secondLineCircle={<FormattedMessage id='course.price.plural_format_level' values={{levelCount}}/>}
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -61,7 +69,7 @@ const Content = () => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={price?.priceFull} />
+        <FullPrice fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -73,7 +81,7 @@ const Content = () => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{price?.discountIfFull}</Text>
+            <Text color='text.green'>{openingTheRhythm?.price.discount} {formatMessage({id:'currency.ruble'})}</Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -85,7 +93,7 @@ const Content = () => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceMonthly}
+              {openingTheRhythm?.price.priceMonthly}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -99,7 +107,7 @@ const Content = () => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {price?.priceMonthly}
+              {openingTheRhythm?.price.priceMonthly}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -115,11 +123,10 @@ const Content = () => {
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={price?.numberOfMonths}
-          quantityVideoLessons={price?.numberOfVideoLessons}
-          firstLineCircle={price?.numberForTheCircle}
-          secondLineCircle={price?.nameOfTheCharacteristicForCircle}
-          secondLineRectangle={price?.secondLineRectangle}
+          quantityMonths={openingTheRhythm?.price.details.monthsNumber}
+          quantityVideoLessons={openingTheRhythm?.price.details.videoTrainingsNumber}
+          firstLineCircle={openingTheRhythm?.price.details.levelsNumber}
+          secondLineCircle={<FormattedMessage id='course.price.plural_format_level' values={{levelCount}}/>}
           rectangleRotate={-30}
           circleRotate={-20}
           squareRotate={20}
