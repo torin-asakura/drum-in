@@ -8,44 +8,29 @@ import { Item }       from './item'
 import { useProgram } from '../data'
 import { getUi }      from '../helpers'
 
-const DesktopList = () => {
+const DesktopList = ({openingTheRhythm}) => {
   const program = useProgram()?.programOpeningTheRhythm?.levelItem
 
   return (
     <Column display={['none', 'none', 'flex']} width='100%'>
-      {program?.map((
-        {
-          descriptionLevel,
-          forWhoThisLevel,
-          listNecessaryKnowledge,
-          nameLevel,
-          quantityLiveBroadcast,
-          quantityMonths,
-          quantityVideoLessons,
-          titleHoverBlock,
-          textMonths,
-        },
-        index
-      ) => (
+      {openingTheRhythm?.details.levels.map((item,index) => (
         <React.Fragment key={uniqid()}>
           <Item
-            forWhom={forWhoThisLevel}
-            level={nameLevel}
-            desc={descriptionLevel}
-            titleHoverBlock={titleHoverBlock}
-            listNecessaryKnowledge={listNecessaryKnowledge}
+            forWhom={item.target}
+            level={item.level}
+            desc={item.content}
+            listNecessaryKnowledge={item.tooltip}
             squareRotate={getUi(index).squareRotate}
             squarePositionX={getUi(index).squarePositionX}
             squarePositionY={getUi(index).squarePositionY}
-            quantityVideoLessons={quantityVideoLessons}
+            quantityVideoLessons={item.videoTrainingsNumber}
             circlePositionX={getUi(index).circlePositionX}
             circlePositionY={getUi(index).circlePositionY}
-            quantityLiveBroadcast={quantityLiveBroadcast}
+            quantityLiveBroadcast={item.liveTrainingsNumber}
             rectangleRotate={getUi(index).rectangleRotate}
             rectanglePositionX={getUi(index).rectanglePositionX}
             rectanglePositionY={getUi(index).rectanglePositionY}
-            quantityMonths={quantityMonths}
-            textMonths={textMonths}
+            quantityMonths={item.lengthOfCourseInMonths}
             rectangleColor={getUi(index).rectangleColor}
           />
           <Layout flexBasis={40} />
