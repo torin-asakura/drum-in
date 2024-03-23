@@ -22,7 +22,7 @@ import { Box }                             from '@ui/layout'
 
 import { useSong }                         from './data'
 
-export const OpeningTheRhythmPage = () => {
+export const OpeningTheRhythmPage = ({openingTheRhythm}) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -30,7 +30,7 @@ export const OpeningTheRhythmPage = () => {
   const [playSong, setPlaySong] = useState<boolean>(false)
   const urlSongData = useSong()?.songUrl?.mediaItemUrl
   const songElement = useRef<HTMLAudioElement | undefined>()
-
+  console.log(openingTheRhythm)
   useEffect(() => {
     if (typeof window !== 'undefined' && urlSongData !== undefined) {
       songElement.current = new Audio(urlSongData)
