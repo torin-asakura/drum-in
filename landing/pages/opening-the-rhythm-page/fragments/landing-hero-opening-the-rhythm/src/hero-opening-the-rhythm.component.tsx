@@ -18,7 +18,7 @@ const HeroOpeningTheRhythmBlock = ({background,openingTheRhythm}) => (
     >
       <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
       <AfterTheCourseBlock openingTheRhythm={openingTheRhythm}/>
-      <SkillsBlock />
+      <SkillsBlock openingTheRhythm={openingTheRhythm}/>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -31,7 +31,7 @@ const HeroOpeningTheRhythmBlock = ({background,openingTheRhythm}) => (
     >
       <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
       <AfterTheCourseBlock openingTheRhythm={openingTheRhythm}/>
-      <SkillsBlock />
+      <SkillsBlock openingTheRhythm={openingTheRhythm}/>
     </Box>
   </>
 )
