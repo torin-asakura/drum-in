@@ -22,7 +22,7 @@ import { Box }                             from '@ui/layout'
 
 import { useSong }                         from './data'
 
-export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
+export const OpeningTheRhythmPage = ({ background, openingTheRhythm }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -52,8 +52,6 @@ export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
     }
   }, [playSong])
 
-  console.log(openingTheRhythm)
-
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
@@ -75,8 +73,8 @@ export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
         <HeaderBlock />
         <Seo id={PageID.OPENING_RHYTHM} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm}/>
-          <ProgramBlock openingTheRhythm={openingTheRhythm}/>
+          <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
+          <ProgramBlock openingTheRhythm={openingTheRhythm} />
           <CourseProcessBlock />
           <Box
             width='100%'
@@ -87,7 +85,7 @@ export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
+          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
           <FaqBlock />
           <CtaBlock />
           <Box

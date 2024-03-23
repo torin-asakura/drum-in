@@ -5,7 +5,7 @@ import { BannerOpeningTheRhythmBlock } from '@landing/banner-opening-the-rhythm-
 import { SkillsBlock }                 from '@landing/skills-fragment'
 import { Box }                         from '@ui/layout'
 
-const HeroOpeningTheRhythmBlock = ({background,openingTheRhythm}) => (
+const HeroOpeningTheRhythmBlock = ({ background, openingTheRhythm }) => (
   <>
     <Box
       display={['none', 'flex', 'flex']}
@@ -16,9 +16,9 @@ const HeroOpeningTheRhythmBlock = ({background,openingTheRhythm}) => (
       backgroundRepeat='no-repeat'
       backgroundPosition='center bottom'
     >
-      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
-      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm}/>
-      <SkillsBlock openingTheRhythm={openingTheRhythm}/>
+      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
+      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm} />
+      <SkillsBlock openingTheRhythm={openingTheRhythm} />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -29,9 +29,9 @@ const HeroOpeningTheRhythmBlock = ({background,openingTheRhythm}) => (
       backgroundRepeat='no-repeat'
       backgroundPosition='right center'
     >
-      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
-      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm}/>
-      <SkillsBlock openingTheRhythm={openingTheRhythm}/>
+      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
+      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm} />
+      <SkillsBlock openingTheRhythm={openingTheRhythm} />
     </Box>
   </>
 )

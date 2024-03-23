@@ -1,15 +1,14 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React          from 'react'
 
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Text }       from '@ui/text'
 
-import { SkillsList }       from './skills-list'
+import { SkillsList } from './skills-list'
 
-const SkillsBlock = ({openingTheRhythm}) => (
+const SkillsBlock = ({ openingTheRhythm }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} />

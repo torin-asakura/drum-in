@@ -9,9 +9,7 @@ import { Text }               from '@ui/text'
 
 import { Tape }               from './tape'
 
-const BannerOpeningTheRhythmBlock = ({openingTheRhythm}) => {
-
-  return (
+const BannerOpeningTheRhythmBlock = ({ openingTheRhythm }) => (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>
         <Box width={['100%', '100%', 1920]}>
@@ -36,7 +34,6 @@ const BannerOpeningTheRhythmBlock = ({openingTheRhythm}) => {
                     color='text.smokyWhite'
                   >
                     {openingTheRhythm?.hero.title}
-
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -53,7 +50,6 @@ const BannerOpeningTheRhythmBlock = ({openingTheRhythm}) => {
                       ]}
                     >
                       {openingTheRhythm?.hero.description}
-
                     </Text>
                   </Box>
                 </Box>
@@ -79,6 +75,6 @@ const BannerOpeningTheRhythmBlock = ({openingTheRhythm}) => {
       <Tape level='' />
     </Box>
   )
-}
+
 
 export { BannerOpeningTheRhythmBlock }

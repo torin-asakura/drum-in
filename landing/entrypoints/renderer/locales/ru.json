@@ -5,7 +5,6 @@
   "course.price.plural_format_level": "{levelCount, plural, one {уровень} few {уровня} many {уровней} other {уровня}}",
   "currency.ruble": "₽",
 
-
   "footer.privacy_policy": "Политика обработки персональных данных",
   "landing_header.courses": "Курсы",
   "landing_header.connect": "Связаться",

@@ -17,12 +17,11 @@ import { FullPrice }                       from './full-price'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
 
-const Content = ({openingTheRhythm}) => {
+const Content = ({ openingTheRhythm }) => {
   const { formatMessage } = useIntl()
 
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-
 
   const fullPrice = ` 
         ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })} 
@@ -30,8 +29,7 @@ const Content = ({openingTheRhythm}) => {
         ${'₽'}
         `
 
-  const levelCount = parseInt(openingTheRhythm?.price.details.levelsNumber,10)
-
+  const levelCount = parseInt(openingTheRhythm?.price.details.levelsNumber, 10)
 
   return (
     <Box
@@ -54,7 +52,9 @@ const Content = ({openingTheRhythm}) => {
           quantityMonths={openingTheRhythm?.price.details.monthsNumber}
           quantityVideoLessons={openingTheRhythm?.price.details.videoTrainingsNumber}
           firstLineCircle={openingTheRhythm?.price.details.levelsNumber}
-          secondLineCircle={<FormattedMessage id='course.price.plural_format_level' values={{levelCount}}/>}
+          secondLineCircle={
+            <FormattedMessage id='course.price.plural_format_level' values={{ levelCount }} />
+          }
         />
         <Box display={['none', 'none', 'flex']} width={514}>
           <Button
@@ -81,7 +81,9 @@ const Content = ({openingTheRhythm}) => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{openingTheRhythm?.price.discount} {formatMessage({id:'currency.ruble'})}</Text>
+            <Text color='text.green'>
+              {openingTheRhythm?.price.discount} {formatMessage({ id: 'currency.ruble' })}
+            </Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -126,7 +128,9 @@ const Content = ({openingTheRhythm}) => {
           quantityMonths={openingTheRhythm?.price.details.monthsNumber}
           quantityVideoLessons={openingTheRhythm?.price.details.videoTrainingsNumber}
           firstLineCircle={openingTheRhythm?.price.details.levelsNumber}
-          secondLineCircle={<FormattedMessage id='course.price.plural_format_level' values={{levelCount}}/>}
+          secondLineCircle={
+            <FormattedMessage id='course.price.plural_format_level' values={{ levelCount }} />
+          }
           rectangleRotate={-30}
           circleRotate={-20}
           squareRotate={20}
