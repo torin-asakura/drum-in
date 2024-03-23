@@ -9,7 +9,7 @@ import { Text }             from '@ui/text'
 
 import { SkillsList }       from './skills-list'
 
-const SkillsBlock = () => (
+const SkillsBlock = ({openingTheRhythm}) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} />
@@ -24,7 +24,7 @@ const SkillsBlock = () => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            <FormattedMessage id='landing_skills.during_the_course_you_will_master' />s
+            {openingTheRhythm?.cta.title}
           </Text>
         </Box>
         <Layout flexBasis={[8, 12, 0]} display={['flex', 'flex', 'none']} />
@@ -35,7 +35,7 @@ const SkillsBlock = () => (
             lineHeight='primary'
             color='text.transparentSmokyWhite'
           >
-            <FormattedMessage id='landing_skills.rhythms_of_different_musical_styles' />
+            {openingTheRhythm?.cta.subtitle}
           </Text>
         </Box>
         <Layout flexBasis={[16, 22, 0]} display={['flex', 'flex', 'none']} />
@@ -59,7 +59,7 @@ const SkillsBlock = () => (
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                <FormattedMessage id='landing_skills.during_the_course_you_will_master' />
+                {openingTheRhythm?.cta.title}
               </Text>
             </Row>
             <Layout flexBasis={24} display={['none', 'none', 'flex']} />
@@ -71,7 +71,7 @@ const SkillsBlock = () => (
                 lineHeight='primary'
                 color='text.gray'
               >
-                <FormattedMessage id='landing_skills.rhythms_of_different_musical_styles' />
+                {openingTheRhythm?.cta.subtitle}
               </Text>
             </Box>
             <SkillsList />
