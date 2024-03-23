@@ -9,7 +9,7 @@ import { Text }               from '@ui/text'
 
 import { Tape }               from './tape'
 
-const BannerOpeningTheRhythmBlock = () => {
+const BannerOpeningTheRhythmBlock = ({openingTheRhythm}) => {
 
   return (
     <Box flexDirection='column' width='100%'>
@@ -35,7 +35,7 @@ const BannerOpeningTheRhythmBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    {/* TODO */}
+                    {openingTheRhythm?.hero.title}
 
                   </Text>
                 </Box>
@@ -52,7 +52,7 @@ const BannerOpeningTheRhythmBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      {/* TODO */}
+                      {openingTheRhythm?.hero.description}
 
                     </Text>
                   </Box>

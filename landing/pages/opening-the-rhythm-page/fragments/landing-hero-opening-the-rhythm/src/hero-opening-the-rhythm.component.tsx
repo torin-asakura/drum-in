@@ -16,8 +16,8 @@ const HeroOpeningTheRhythmBlock = ({background,openingTheRhythm}) => (
       backgroundRepeat='no-repeat'
       backgroundPosition='center bottom'
     >
-      <BannerOpeningTheRhythmBlock />
-      <AfterTheCourseBlock />
+      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
+      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm}/>
       <SkillsBlock />
     </Box>
     <Box
@@ -29,8 +29,8 @@ const HeroOpeningTheRhythmBlock = ({background,openingTheRhythm}) => (
       backgroundRepeat='no-repeat'
       backgroundPosition='right center'
     >
-      <BannerOpeningTheRhythmBlock />
-      <AfterTheCourseBlock />
+      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
+      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm}/>
       <SkillsBlock />
     </Box>
   </>
