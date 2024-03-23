@@ -15,6 +15,6 @@ export interface ItemProps {
   rectanglePositionX: number
   rectanglePositionY: number
   quantityMonths: string
-  textMonths: string
+  textMonths?: string
   rectangleColor: string
 }

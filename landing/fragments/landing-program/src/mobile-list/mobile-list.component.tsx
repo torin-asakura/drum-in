@@ -12,42 +12,28 @@ import { Slide }       from './slide'
 import { useProgram }  from '../data'
 import { getUi }       from '../helpers'
 
-const MobileList = () => {
+const MobileList = ({openingTheRhythm}) => {
   const program = useProgram()?.programOpeningTheRhythm?.levelItem
 
   const programOpeningTheRhythmChildren = useMemo(
     () =>
-      program?.map((
-        {
-          descriptionLevel,
-          forWhoThisLevel,
-          listNecessaryKnowledge,
-          nameLevel,
-          quantityLiveBroadcast,
-          quantityMonths,
-          quantityVideoLessons,
-          titleHoverBlock,
-          textMonths,
-        },
-        index
-      ) => (
+      openingTheRhythm?.details.levels.map((item,index) => (
         <Slide
-          forWhom={forWhoThisLevel}
-          level={nameLevel}
-          desc={descriptionLevel}
+          forWhom={item.target}
+          level={item.level}
+          desc={item.content}
           squareRotate={getUi(index).squareRotateMobile}
           squarePositionX={getUi(index).squarePositionXMobile}
           squarePositionY={getUi(index).squarePositionYMobile}
-          quantityVideoLessons={quantityVideoLessons}
+          quantityVideoLessons={item.videoTrainingsNumber}
           rectangleRotate={getUi(index).rectangleRotateMobile}
           rectanglePositionX={getUi(index).rectanglePositionXMobile}
           rectanglePositionY={getUi(index).rectanglePositionYMobile}
-          quantityMonths={quantityMonths}
-          textMonths={textMonths}
+          quantityMonths={item.lengthOfCourseInMonths}
           rectangleColor={getUi(index).rectangleColor}
           circlePositionX={getUi(index).circlePositionXMobile}
           circlePositionY={getUi(index).circlePositionYMobile}
-          quantityLiveBroadcast={quantityLiveBroadcast}
+          quantityLiveBroadcast={item.liveTrainingsNumber}
         />
       )),
     [program]

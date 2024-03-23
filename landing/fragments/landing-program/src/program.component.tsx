@@ -10,8 +10,7 @@ import { DesktopList } from './desktop-list'
 import { MobileList }  from './mobile-list'
 import { useProgram }  from './data'
 
-const ProgramBlock = () => {
-  const program = useProgram()
+const ProgramBlock = ({openingTheRhythm}) => {
 
   return (
     <Row justifyContent='center' flexWrap='wrap'>
@@ -29,7 +28,7 @@ const ProgramBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {program?.title}
+              {openingTheRhythm?.details.title}
             </Text>
           </Box>
           <Layout flexBasis={[8, 16, 24]} />
@@ -42,17 +41,18 @@ const ProgramBlock = () => {
               lineHeight='primary'
               color='text.transparentSmokyWhite'
             >
-              {program?.programOpeningTheRhythm?.description}
+              {openingTheRhythm?.details.description}
+
             </Text>
           </Box>
           <Layout flexBasis={[36, 58, 80]} />
-          <DesktopList />
+          <DesktopList openingTheRhythm={openingTheRhythm}/>
           <Layout display={['none', 'none', 'flex']} flexBasis={[32, 75, 80]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} />
       </Box>
       <Column>
-        <MobileList />
+        <MobileList openingTheRhythm={openingTheRhythm}/>
         <Layout display={['flex', 'flex', 'none']} flexBasis={[32, 75, 80]} />
       </Column>
     </Row>
