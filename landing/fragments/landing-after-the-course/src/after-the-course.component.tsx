@@ -10,7 +10,7 @@ import { Text }                   from '@ui/text'
 import { Tape }                   from './tape'
 import { useAfterTheCourse }      from './data'
 
-const AfterTheCourseBlock = () => {
+const AfterTheCourseBlock = ({openingTheRhythm}) => {
   const afterTheCourse = useAfterTheCourse()
 
   return (
@@ -29,7 +29,7 @@ const AfterTheCourseBlock = () => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {afterTheCourse?.title}
+                {openingTheRhythm?.hero.cta.title}
               </Text>
             </Box>
             <Layout display={['none', 'none', 'flex']} flexBasis={36} flexShrink={0} />
@@ -42,9 +42,9 @@ const AfterTheCourseBlock = () => {
             </Box>
             <Box width={{ _: 0, tablet: 0, laptop: 740, wide: 940 }}>
               <Tape
-                firstLine={afterTheCourse?.afterTheCourse.fitstLineTape}
-                secondLine={afterTheCourse?.afterTheCourse.secondLineTape}
-                thirdLine={afterTheCourse?.afterTheCourse.thirdLineTape}
+                firstLine={openingTheRhythm?.hero.cta.tagsCloud[0].tag}
+                secondLine={`${openingTheRhythm?.hero.cta.tagsCloud[1].tag} ${openingTheRhythm?.hero.cta.tagsCloud[2].tag}`}
+                thirdLine={openingTheRhythm?.hero.cta.tagsCloud[3].tag}
               />
             </Box>
           </Row>

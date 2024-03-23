@@ -76,8 +76,8 @@ export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
         <Seo id={PageID.OPENING_RHYTHM} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm}/>
-          <ProgramBlock />
-          <CourseProcessBlock />
+          <ProgramBlock openingTheRhythm={openingTheRhythm}/>
+          <CourseProcessBlock openingTheRhythm={openingTheRhythm}/>
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop.teacher.node.sourceUrl})`}
@@ -87,7 +87,7 @@ export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceOpeningTheRhythmBlock />
+          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm}/>
           <FaqBlock />
           <CtaBlock />
           <Box

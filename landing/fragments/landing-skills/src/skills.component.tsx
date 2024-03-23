@@ -24,7 +24,7 @@ const SkillsBlock = () => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            <FormattedMessage id='landing_skills.during_the_course_you_will_master' />
+            <FormattedMessage id='landing_skills.during_the_course_you_will_master' />s
           </Text>
         </Box>
         <Layout flexBasis={[8, 12, 0]} display={['flex', 'flex', 'none']} />
