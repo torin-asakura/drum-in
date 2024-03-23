@@ -9,7 +9,7 @@ import { Text }     from '@ui/text'
 import { Content }  from './content'
 import { usePrice } from './data'
 
-const PriceOpeningTheRhythmBlock = () => {
+const PriceOpeningTheRhythmBlock = ({openingTheRhythm}) => {
   const price = usePrice()
 
   return (
@@ -28,11 +28,11 @@ const PriceOpeningTheRhythmBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {price?.title}
+              {openingTheRhythm?.price.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
-          <Content />
+          <Content openingTheRhythm={openingTheRhythm}/>
           <Layout flexBasis={[24, 32, 120]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

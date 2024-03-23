@@ -77,7 +77,7 @@ export const OpeningTheRhythmPage = ({background,openingTheRhythm}) => {
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm}/>
           <ProgramBlock openingTheRhythm={openingTheRhythm}/>
-          <CourseProcessBlock openingTheRhythm={openingTheRhythm}/>
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop.teacher.node.sourceUrl})`}

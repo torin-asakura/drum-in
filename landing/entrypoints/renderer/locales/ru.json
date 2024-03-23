@@ -2,6 +2,10 @@
   "course.price.plural_format_months": "{count, plural, one {месяц} few {месяца} many {месяцев} other {месяца}}",
   "course.price.plural_format_video_lesson": "{count, plural, one {видео-урок} few {видео-урока} many {видео-уроков} other {видео-урока}}",
   "course.price.plural_format_live_broadcast": "{count, plural, one {прямой эфир} few {прямых эфира} many {прямых эфиров} other {прямых эфира}}",
+  "course.price.plural_format_level": "{levelCount, plural, one {уровень} few {уровня} many {уровней} other {уровня}}",
+  "currency.ruble": "₽",
+
+
   "footer.privacy_policy": "Политика обработки персональных данных",
   "landing_header.courses": "Курсы",
   "landing_header.connect": "Связаться",
