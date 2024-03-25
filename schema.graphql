@@ -107,14 +107,48 @@ interface CommenterConnectionEdge {
   node: Commenter!
 }
 
+"Interface representing fields of the ACF &quot;CommonFragmentsContactsBackground&quot; Field Group"
+interface CommonFragmentsContactsBackground_Fields {
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsBackground&quot; Field Group"
+  desktop: AcfMediaItemConnectionEdge
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsBackground&quot; Field Group"
+  mobile: AcfMediaItemConnectionEdge
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsContactsSocials&quot; Field Group"
+interface CommonFragmentsContactsSocials_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsSocials&quot; Field Group"
+  content: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsSocials&quot; Field Group"
+  link: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsSocials&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsContacts&quot; Field Group"
+interface CommonFragmentsContacts_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group"
+  background: CommonFragmentsContactsBackground
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group"
+  socials: [CommonFragmentsContactsSocials]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group"
+  title: String
+}
+
 "Interface representing fields of the ACF &quot;CommonFragmentsCtaText&quot; Field Group"
 interface CommonFragmentsCtaText_Fields {
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group"
-  afterBold: String
+  accent: String
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group"
-  beforeBold: String
+  afterAccent: String
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group"
-  bold: String
+  beforeAccent: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
 }
@@ -131,38 +165,103 @@ interface CommonFragmentsCta_Fields {
   title: String
 }
 
+"Interface representing fields of the ACF &quot;CommonFragmentsFaq&quot; Field Group"
+interface CommonFragmentsFaq_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group"
+  answer: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group"
+  question: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsFooterCourses&quot; Field Group"
+interface CommonFragmentsFooterCourses_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group"
+  path: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsFooterPrivacyPolicy&quot; Field Group"
+interface CommonFragmentsFooterPrivacyPolicy_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterPrivacyPolicy&quot; Field Group"
+  path: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterPrivacyPolicy&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsFooterSocials&quot; Field Group"
+interface CommonFragmentsFooterSocials_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group"
+  link: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group"
+  title: String
+}
+
 "Interface representing fields of the ACF &quot;CommonFragmentsFooter&quot; Field Group"
 interface CommonFragmentsFooter_Fields {
-  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
-  courses(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): AcfContentNodeConnection
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  courses: [CommonFragmentsFooterCourses]
   "Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
   email: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
   logo: AcfMediaItemConnectionEdge
-  "Field of the &quot;url&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
-  privacyPolicy: String
-  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
-  socials(
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  privacyPolicy: CommonFragmentsFooterPrivacyPolicy
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  socials: [CommonFragmentsFooterSocials]
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsHeaderDropdownList&quot; Field Group"
+interface CommonFragmentsHeaderDropdownList_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderDropdownList&quot; Field Group"
+  items(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderDropdownList&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsHeaderNavigationElements&quot; Field Group"
+interface CommonFragmentsHeaderNavigationElements_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderNavigationElements&quot; Field Group"
+  path: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderNavigationElements&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsHeader&quot; Field Group"
+interface CommonFragmentsHeader_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  ctaButton: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  dropdownList: CommonFragmentsHeaderDropdownList
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  logo: AcfMediaItemConnectionEdge
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  navigationElements: [CommonFragmentsHeaderNavigationElements]
 }
 
 "Interface representing fields of the ACF &quot;CommonFragmentsPaymentForm&quot; Field Group"
@@ -173,15 +272,45 @@ interface CommonFragmentsPaymentForm_Fields {
   placeholder: String
 }
 
-"Interface representing fields of the ACF &quot;CommonFragmentsProccess&quot; Field Group"
-interface CommonFragmentsProccess_Fields {
+"Interface representing fields of the ACF &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group"
+interface CommonFragmentsPrivacyPolicyContent_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group"
+  description: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;oembed&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
-  media: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsPrivacyPolicy&quot; Field Group"
+interface CommonFragmentsPrivacyPolicy_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group"
+  content: [CommonFragmentsPrivacyPolicyContent]
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsProcessPicture&quot; Field Group"
+interface CommonFragmentsProcessPicture_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group"
+  alt: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group"
+  image: AcfMediaItemConnectionEdge
+}
+
+"Interface representing fields of the ACF &quot;CommonFragmentsProcess&quot; Field Group"
+interface CommonFragmentsProcess_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group"
+  picture: CommonFragmentsProcessPicture
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group"
   text: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group"
   title: String
 }
 
@@ -244,26 +373,23 @@ interface CommonFragmentsTeacher_Fields {
 "Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group"
 interface CommonFragments_Fields {
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  contacts: CommonFragmentsContacts
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   cta: CommonFragmentsCta
-  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
-  faq(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): AcfContentNodeConnection
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  faq: [CommonFragmentsFaq]
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   footer: CommonFragmentsFooter
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  header: CommonFragmentsHeader
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   paymentForm: CommonFragmentsPaymentForm
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  privacyPolicy: CommonFragmentsPrivacyPolicy
   "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
-  proccess: [CommonFragmentsProccess]
+  process: [CommonFragmentsProcess]
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   teacher: CommonFragmentsTeacher
 }
@@ -276,6 +402,114 @@ interface Connection {
   nodes: [Node!]!
   "Information about pagination in a connection."
   pageInfo: PageInfo!
+}
+
+"Interface representing fields of the ACF &quot;ContentBackgroundDesktop&quot; Field Group"
+interface ContentBackgroundDesktop_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
+}
+
+"Interface representing fields of the ACF &quot;ContentBackgroundMobile&quot; Field Group"
+interface ContentBackgroundMobile_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
+}
+
+"Interface representing fields of the ACF &quot;ContentBackground&quot; Field Group"
+interface ContentBackground_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group"
+  desktop: ContentBackgroundDesktop
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group"
+  mobile: ContentBackgroundMobile
+}
+
+"Interface representing fields of the ACF &quot;ContentCta&quot; Field Group"
+interface ContentCta_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group"
+  subtitle: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;ContentDetailsLevels&quot; Field Group"
+interface ContentDetailsLevels_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  content: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  lengthOfCourseInMonths: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  level: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  liveTrainingsNumber: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  target: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  tooltip: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  videoTrainingsNumber: Float
+}
+
+"Interface representing fields of the ACF &quot;ContentDetails&quot; Field Group"
+interface ContentDetails_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group"
+  levels: [ContentDetailsLevels]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;ContentHeroCtaTagsCloud&quot; Field Group"
+interface ContentHeroCtaTagsCloud_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCtaTagsCloud&quot; Field Group"
+  tag: String
+}
+
+"Interface representing fields of the ACF &quot;ContentHeroCta&quot; Field Group"
+interface ContentHeroCta_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group"
+  tagsCloud: [ContentHeroCtaTagsCloud]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;ContentHero&quot; Field Group"
+interface ContentHero_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group"
+  cta: ContentHeroCta
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Running line"
+  runningLine: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group"
+  title: String
 }
 
 "Nodes used to manage content"
@@ -299,22 +533,22 @@ interface ContentNode {
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -386,6 +620,75 @@ interface ContentNodeConnectionPageInfo {
   startCursor: String
 }
 
+"Interface representing fields of the ACF &quot;ContentPaymentFormCourses&quot; Field Group"
+interface ContentPaymentFormCourses_Fields {
+  "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormCourses&quot; Field Group"
+  course(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String,
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String,
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int,
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+}
+
+"Interface representing fields of the ACF &quot;ContentPaymentFormPaymentType&quot; Field Group"
+interface ContentPaymentFormPaymentType_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group"
+  benefit: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group"
+  installment: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group"
+  oneTime: String
+}
+
+"Interface representing fields of the ACF &quot;ContentPaymentForm&quot; Field Group"
+interface ContentPaymentForm_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group"
+  courses: [ContentPaymentFormCourses]
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group"
+  paymentType: ContentPaymentFormPaymentType
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group"
+  title: String
+}
+
+"Interface representing fields of the ACF &quot;ContentPriceDetails&quot; Field Group"
+interface ContentPriceDetails_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group"
+  levelsNumber: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group"
+  monthsNumber: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group"
+  videoTrainingsNumber: Float
+}
+
+"Interface representing fields of the ACF &quot;ContentPrice&quot; Field Group"
+interface ContentPrice_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  details: ContentPriceDetails
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  discount: Float
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  priceFull: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  priceMonthly: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  title: String
+}
+
 "The template assigned to a node of content"
 interface ContentTemplate {
   "The name of the template"
@@ -422,6 +725,26 @@ interface ContentTypeConnectionPageInfo {
   seo: SEOPostTypePageInfo
   "When paginating backwards, the cursor to continue."
   startCursor: String
+}
+
+"Interface representing fields of the ACF &quot;Content&quot; Field Group"
+interface Content_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  background: ContentBackground
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  cta: ContentCta
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  details: ContentDetails
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  hero: ContentHero
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  path: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  paymentForm: ContentPaymentForm
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  price: ContentPrice
 }
 
 "Connection to course Nodes"
@@ -486,46 +809,6 @@ interface DetailsAdditionalQuestions_Fields {
   title: String
 }
 
-"Interface representing fields of the ACF &quot;DetailsCourseContentLevelsTooltip&quot; Field Group"
-interface DetailsCourseContentLevelsTooltip_Fields {
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevelsTooltip&quot; Field Group"
-  title: String
-}
-
-"Interface representing fields of the ACF &quot;DetailsCourseContentLevels&quot; Field Group"
-interface DetailsCourseContentLevels_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  content: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  lengthOfCourseInMonths: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  level: String
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  liveTrainingsNumber: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  target: String
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  tooltip: DetailsCourseContentLevelsTooltip
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  videoTrainingsNumber: Float
-}
-
-"Interface representing fields of the ACF &quot;DetailsCourseContent&quot; Field Group"
-interface DetailsCourseContent_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
-  courseContentSubtitle: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
-  courseContentTitle: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
-  levels: [DetailsCourseContentLevels]
-}
-
 "Interface representing fields of the ACF &quot;DetailsFaq&quot; Field Group"
 interface DetailsFaq_Fields {
   "Field of the &quot;textarea&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
@@ -534,105 +817,6 @@ interface DetailsFaq_Fields {
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
   question: String
-}
-
-"Interface representing fields of the ACF &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
-interface DetailsHeroBackgrounddesktop_Fields {
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
-  desktop: AcfMediaItemConnectionEdge
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
-  mobile: AcfMediaItemConnectionEdge
-}
-
-"Interface representing fields of the ACF &quot;DetailsHeroTagsCloud&quot; Field Group"
-interface DetailsHeroTagsCloud_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHeroTagsCloud&quot; Field Group"
-  callToActionTag: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-}
-
-"Interface representing fields of the ACF &quot;DetailsHero&quot; Field Group"
-interface DetailsHero_Fields {
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
-  backgrounddesktop: [DetailsHeroBackgrounddesktop]
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
-  cta: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Running line"
-  runningLine: String
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
-  tagsCloud: [DetailsHeroTagsCloud]
-}
-
-"Interface representing fields of the ACF &quot;DetailsPaymentFormCourses&quot; Field Group"
-interface DetailsPaymentFormCourses_Fields {
-  "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormCourses&quot; Field Group"
-  course(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): AcfContentNodeConnection
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-}
-
-"Interface representing fields of the ACF &quot;DetailsPaymentFormPaymentType&quot; Field Group"
-interface DetailsPaymentFormPaymentType_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group"
-  benefit: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group"
-  installment: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group"
-  oneTime: String
-}
-
-"Interface representing fields of the ACF &quot;DetailsPaymentForm&quot; Field Group"
-interface DetailsPaymentForm_Fields {
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group"
-  courses: [DetailsPaymentFormCourses]
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group"
-  paymentType: DetailsPaymentFormPaymentType
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group"
-  title: String
-}
-
-"Interface representing fields of the ACF &quot;DetailsPrice&quot; Field Group"
-interface DetailsPrice_Fields {
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  discount: Float
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  discountIfFull: Float
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  priceFull: Float
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  priceMonthly: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  title: String
-}
-
-"Interface representing fields of the ACF &quot;DetailsSummary&quot; Field Group"
-interface DetailsSummary_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group"
-  cta: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group"
-  subtitle: String
 }
 
 "Interface representing fields of the ACF &quot;Details&quot; Field Group"
@@ -778,26 +962,26 @@ interface HierarchicalContentNode {
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
@@ -820,22 +1004,22 @@ interface HierarchicalContentNode {
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -904,22 +1088,22 @@ interface HierarchicalTermNode {
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -1061,6 +1245,8 @@ interface IndividualCourseDataPrice_Fields {
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
   fullPrice: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  level: Float
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
   liveTrainingsNumber: String
   "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
@@ -1099,6 +1285,8 @@ interface IndividualCourseData_Fields {
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
   hero: IndividualCourseDataHero
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  path: String
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
   price: IndividualCourseDataPrice
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
@@ -1254,7 +1442,10 @@ interface NodeWithComments {
 "A node that supports the content editor"
 interface NodeWithContentEditor {
   "The content of the post."
-  content("Format of the field output" format: PostObjectFieldFormatEnum): String
+  content(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The globally unique ID for the object"
   id: ID!
 }
@@ -1262,7 +1453,10 @@ interface NodeWithContentEditor {
 "A node that can have an excerpt"
 interface NodeWithExcerpt {
   "The excerpt of the post."
-  excerpt("Format of the field output" format: PostObjectFieldFormatEnum): String
+  excerpt(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The globally unique ID for the object"
   id: ID!
 }
@@ -1312,7 +1506,10 @@ interface NodeWithTitle {
   "The Yoast SEO data of the ContentNode"
   seo: PostTypeSEO
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title("Format of the field output" format: PostObjectFieldFormatEnum): String
+  title(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
 }
 
 "A node that can have trackbacks and pingbacks"
@@ -1560,22 +1757,22 @@ interface TermNode {
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -1763,10 +1960,10 @@ interface WithAcfCommonFragments {
   commonFragments: CommonFragments
 }
 
-"Provides access to fields of the &quot;Details&quot; ACF Field Group via the &quot;details&quot; field"
-interface WithAcfDetails {
-  "Fields of the Details ACF Field Group"
-  details: Details
+"Provides access to fields of the &quot;Content&quot; ACF Field Group via the &quot;content&quot; field"
+interface WithAcfContent {
+  "Fields of the Content ACF Field Group"
+  content: Content
 }
 
 "Provides access to fields of the &quot;IndividualCourseData&quot; ACF Field Group via the &quot;individualCourseData&quot; field"
@@ -1776,16 +1973,9 @@ interface WithAcfIndividualCourseData {
 }
 
 "Deprecated in favor of MenuItemLinkeable Interface"
-union MenuItemObjectUnion =
-    Category
-  | Course
-  | GeneralFragment
-  | IndividualCourse
-  | Page
-  | Post
-  | Tag
+union MenuItemObjectUnion = Category | Course | GeneralFragment | IndividualCourse | Page | Post | Tag
 
-"Connection between the DetailsPaymentFormCourses type and the ContentNode type"
+"Connection between the ContentPaymentFormCourses type and the ContentNode type"
 type AcfContentNodeConnection implements Connection & ContentNodeConnection {
   "Edges for the AcfContentNodeConnection connection"
   edges: [AcfContentNodeConnectionEdge!]!
@@ -1856,11 +2046,11 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "The ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): CategoryToAncestorsCategoryConnection
@@ -1869,26 +2059,26 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "Connection between the category type and its children categories."
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: CategoryToCategoryConnectionWhereArgs
   ): CategoryToCategoryConnection
   "Connection between the Category type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: CategoryToContentNodeConnectionWhereArgs
   ): CategoryToContentNodeConnection
@@ -1901,22 +2091,22 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -1941,13 +2131,13 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "Connection between the Category type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: CategoryToPostConnectionWhereArgs
   ): CategoryToPostConnection
@@ -2126,7 +2316,10 @@ type Comment implements DatabaseIdentifier & Node {
   "Connection between the Comment type and the ContentNode type"
   commentedOn: CommentToContentNodeConnectionEdge
   "Content of the comment. This field is equivalent to WP_Comment-&gt;comment_content and the value matching the &quot;comment_content&quot; column in SQL."
-  content("Format of the field output" format: PostObjectFieldFormatEnum): String
+  content(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The unique identifier stored in the database"
   databaseId: Int!
   "Date the comment was posted in local time. This field is equivalent to WP_Comment-&gt;date and the value matching the &quot;date&quot; column in SQL."
@@ -2151,13 +2344,13 @@ type Comment implements DatabaseIdentifier & Node {
   "Connection between the Comment type and the Comment type"
   replies(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: CommentToCommentConnectionWhereArgs
   ): CommentToCommentConnection
@@ -2172,9 +2365,9 @@ type CommentAuthor implements Commenter & DatabaseIdentifier & Node {
   "Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument."
   avatar(
     "Whether to always show the default image, never the Gravatar. Default false"
-    forceDefault: Boolean
+    forceDefault: Boolean,
     "The rating level of the avatar."
-    rating: AvatarRatingEnum
+    rating: AvatarRatingEnum,
     "The size attribute of the avatar field can be used to fetch avatars of different sizes. The value corresponds to the dimension in pixels to fetch. The default is 96 pixels."
     size: Int = 96
   ): Avatar
@@ -2251,28 +2444,59 @@ type CommentToParentCommentConnectionEdge implements CommentConnectionEdge & Edg
 "The &quot;CommonFragments&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type CommonFragments implements AcfFieldGroup & AcfFieldGroupFields & CommonFragments_Fields {
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  contacts: CommonFragmentsContacts
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   cta: CommonFragmentsCta
-  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
-  faq(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): AcfContentNodeConnection
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  faq: [CommonFragmentsFaq]
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   footer: CommonFragmentsFooter
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  header: CommonFragmentsHeader
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   paymentForm: CommonFragmentsPaymentForm
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
+  privacyPolicy: CommonFragmentsPrivacyPolicy
   "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
-  proccess: [CommonFragmentsProccess]
+  process: [CommonFragmentsProcess]
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group"
   teacher: CommonFragmentsTeacher
+}
+
+"The &quot;CommonFragmentsContacts&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsContacts implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsContacts_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group"
+  background: CommonFragmentsContactsBackground
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group"
+  socials: [CommonFragmentsContactsSocials]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsContactsBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsContactsBackground implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsContactsBackground_Fields {
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsBackground&quot; Field Group"
+  desktop: AcfMediaItemConnectionEdge
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsBackground&quot; Field Group"
+  mobile: AcfMediaItemConnectionEdge
+}
+
+"The &quot;CommonFragmentsContactsSocials&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsContactsSocials implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsContactsSocials_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsSocials&quot; Field Group"
+  content: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsSocials&quot; Field Group"
+  link: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContactsSocials&quot; Field Group"
+  title: String
 }
 
 "The &quot;CommonFragmentsCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
@@ -2290,47 +2514,112 @@ type CommonFragmentsCta implements AcfFieldGroup & AcfFieldGroupFields & CommonF
 "The &quot;CommonFragmentsCtaText&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type CommonFragmentsCtaText implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsCtaText_Fields {
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group"
-  afterBold: String
+  accent: String
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group"
-  beforeBold: String
+  afterAccent: String
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCtaText&quot; Field Group"
-  bold: String
+  beforeAccent: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
 }
 
+"The &quot;CommonFragmentsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsFaq implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsFaq_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group"
+  answer: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group"
+  question: String
+}
+
 "The &quot;CommonFragmentsFooter&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type CommonFragmentsFooter implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsFooter_Fields {
-  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
-  courses(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): AcfContentNodeConnection
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  courses: [CommonFragmentsFooterCourses]
   "Field of the &quot;email&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
   email: String
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
   logo: AcfMediaItemConnectionEdge
-  "Field of the &quot;url&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
-  privacyPolicy: String
-  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
-  socials(
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  privacyPolicy: CommonFragmentsFooterPrivacyPolicy
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooter&quot; Field Group"
+  socials: [CommonFragmentsFooterSocials]
+}
+
+"The &quot;CommonFragmentsFooterCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsFooterCourses implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsFooterCourses_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group"
+  path: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterCourses&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsFooterPrivacyPolicy&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsFooterPrivacyPolicy implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsFooterPrivacyPolicy_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterPrivacyPolicy&quot; Field Group"
+  path: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterPrivacyPolicy&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsFooterSocials&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsFooterSocials implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsFooterSocials_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group"
+  link: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFooterSocials&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsHeader&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsHeader implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsHeader_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  ctaButton: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  dropdownList: CommonFragmentsHeaderDropdownList
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  logo: AcfMediaItemConnectionEdge
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeader&quot; Field Group"
+  navigationElements: [CommonFragmentsHeaderNavigationElements]
+}
+
+"The &quot;CommonFragmentsHeaderDropdownList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsHeaderDropdownList implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsHeaderDropdownList_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderDropdownList&quot; Field Group"
+  items(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderDropdownList&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsHeaderNavigationElements&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsHeaderNavigationElements implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsHeaderNavigationElements_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderNavigationElements&quot; Field Group"
+  path: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsHeaderNavigationElements&quot; Field Group"
+  title: String
 }
 
 "The &quot;CommonFragmentsPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
@@ -2341,16 +2630,46 @@ type CommonFragmentsPaymentForm implements AcfFieldGroup & AcfFieldGroupFields &
   placeholder: String
 }
 
-"The &quot;CommonFragmentsProccess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type CommonFragmentsProccess implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsProccess_Fields {
+"The &quot;CommonFragmentsPrivacyPolicy&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsPrivacyPolicy implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsPrivacyPolicy_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group"
+  content: [CommonFragmentsPrivacyPolicyContent]
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;oembed&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
-  media: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
-  text: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProccess&quot; Field Group"
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group"
   title: String
+}
+
+"The &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsPrivacyPolicyContent implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsPrivacyPolicyContent_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsProcess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsProcess implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsProcess_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group"
+  picture: CommonFragmentsProcessPicture
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group"
+  text: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group"
+  title: String
+}
+
+"The &quot;CommonFragmentsProcessPicture&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type CommonFragmentsProcessPicture implements AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsProcessPicture_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group"
+  alt: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group"
+  image: AcfMediaItemConnectionEdge
 }
 
 "The &quot;CommonFragmentsTeacher&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
@@ -2407,6 +2726,134 @@ type CommonFragmentsTeacherGallery implements AcfFieldGroup & AcfFieldGroupField
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsTeacherGallery&quot; Field Group"
   image: AcfMediaItemConnectionEdge
+}
+
+"The &quot;Content&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type Content implements AcfFieldGroup & AcfFieldGroupFields & Content_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  background: ContentBackground
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  cta: ContentCta
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  details: ContentDetails
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  hero: ContentHero
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  path: String
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  paymentForm: ContentPaymentForm
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group"
+  price: ContentPrice
+}
+
+"The &quot;ContentBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentBackground implements AcfFieldGroup & AcfFieldGroupFields & ContentBackground_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group"
+  desktop: ContentBackgroundDesktop
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group"
+  mobile: ContentBackgroundMobile
+}
+
+"The &quot;ContentBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentBackgroundDesktop implements AcfFieldGroup & AcfFieldGroupFields & ContentBackgroundDesktop_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundDesktop&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
+}
+
+"The &quot;ContentBackgroundMobile&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentBackgroundMobile implements AcfFieldGroup & AcfFieldGroupFields & ContentBackgroundMobile_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group"
+  footer: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group"
+  hero: AcfMediaItemConnectionEdge
+  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackgroundMobile&quot; Field Group"
+  teacher: AcfMediaItemConnectionEdge
+}
+
+"The &quot;ContentCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentCta implements AcfFieldGroup & AcfFieldGroupFields & ContentCta_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group"
+  subtitle: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group"
+  title: String
+}
+
+"The &quot;ContentDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentDetails implements AcfFieldGroup & AcfFieldGroupFields & ContentDetails_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group"
+  levels: [ContentDetailsLevels]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetails&quot; Field Group"
+  title: String
+}
+
+"The &quot;ContentDetailsLevels&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentDetailsLevels implements AcfFieldGroup & AcfFieldGroupFields & ContentDetailsLevels_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  content: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  lengthOfCourseInMonths: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  level: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  liveTrainingsNumber: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  target: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  tooltip: String
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentDetailsLevels&quot; Field Group"
+  videoTrainingsNumber: Float
+}
+
+"The &quot;ContentHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentHero implements AcfFieldGroup & AcfFieldGroupFields & ContentHero_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group"
+  cta: ContentHeroCta
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group"
+  description: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Running line"
+  runningLine: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHero&quot; Field Group"
+  title: String
+}
+
+"The &quot;ContentHeroCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentHeroCta implements AcfFieldGroup & AcfFieldGroupFields & ContentHeroCta_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group"
+  tagsCloud: [ContentHeroCtaTagsCloud]
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCta&quot; Field Group"
+  title: String
+}
+
+"The &quot;ContentHeroCtaTagsCloud&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentHeroCtaTagsCloud implements AcfFieldGroup & AcfFieldGroupFields & ContentHeroCtaTagsCloud_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentHeroCtaTagsCloud&quot; Field Group"
+  tag: String
 }
 
 "Connection between the ContentNode type and the ContentType type"
@@ -2499,6 +2946,75 @@ type ContentNodeToEnqueuedStylesheetConnectionPageInfo implements EnqueuedStyles
   startCursor: String
 }
 
+"The &quot;ContentPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentPaymentForm implements AcfFieldGroup & AcfFieldGroupFields & ContentPaymentForm_Fields {
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group"
+  courses: [ContentPaymentFormCourses]
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group"
+  paymentType: ContentPaymentFormPaymentType
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group"
+  title: String
+}
+
+"The &quot;ContentPaymentFormCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentPaymentFormCourses implements AcfFieldGroup & AcfFieldGroupFields & ContentPaymentFormCourses_Fields {
+  "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormCourses&quot; Field Group"
+  course(
+    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
+    after: String,
+    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
+    before: String,
+    "The number of items to return after the referenced \"after\" cursor"
+    first: Int,
+    "The number of items to return before the referenced \"before\" cursor"
+    last: Int
+  ): AcfContentNodeConnection
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+}
+
+"The &quot;ContentPaymentFormPaymentType&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentPaymentFormPaymentType implements AcfFieldGroup & AcfFieldGroupFields & ContentPaymentFormPaymentType_Fields {
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group"
+  benefit: String
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group"
+  installment: String
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group"
+  oneTime: String
+}
+
+"The &quot;ContentPrice&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentPrice implements AcfFieldGroup & AcfFieldGroupFields & ContentPrice_Fields {
+  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  details: ContentPriceDetails
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  discount: Float
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  priceFull: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  priceMonthly: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPrice&quot; Field Group"
+  title: String
+}
+
+"The &quot;ContentPriceDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type ContentPriceDetails implements AcfFieldGroup & AcfFieldGroupFields & ContentPriceDetails_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group"
+  levelsNumber: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group"
+  monthsNumber: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ContentPriceDetails&quot; Field Group"
+  videoTrainingsNumber: Float
+}
+
 "An Post Type object"
 type ContentType implements Node & UniformResourceIdentifiable {
   "Whether this content type should can be exported."
@@ -2506,24 +3022,24 @@ type ContentType implements Node & UniformResourceIdentifiable {
   "Connection between the ContentType type and the Taxonomy type"
   connectedTaxonomies(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentTypeToTaxonomyConnection
   "Connection between the ContentType type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: ContentTypeToContentNodeConnectionWhereArgs
   ): ContentTypeToContentNodeConnection
@@ -2652,35 +3168,35 @@ type ContentTypeToTaxonomyConnectionPageInfo implements PageInfo & TaxonomyConne
 }
 
 "The course type"
-type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfDetails {
+type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfContent {
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
-  "The content of the post."
-  content("Format of the field output" format: PostObjectFieldFormatEnum): String
+  "Fields of the Content ACF Field Group"
+  content: Content
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -2695,8 +3211,6 @@ type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNod
   dateGmt: String
   "The desired slug of the post"
   desiredSlug: String
-  "Fields of the Details ACF Field Group"
-  details: Details
   "If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds"
   editingLockedBy: ContentNodeToEditLockConnectionEdge
   "The RSS enclosure for the object"
@@ -2704,22 +3218,22 @@ type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNod
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -2770,7 +3284,10 @@ type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNod
   "The template assigned to a node of content"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title("Format of the field output" format: PostObjectFieldFormatEnum): String
+  title(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The unique resource identifier path"
   uri: String
 }
@@ -3023,46 +3540,6 @@ type DetailsAdditionalQuestionsCta implements AcfFieldGroup & AcfFieldGroupField
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
 }
 
-"The &quot;DetailsCourseContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsCourseContent implements AcfFieldGroup & AcfFieldGroupFields & DetailsCourseContent_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
-  courseContentSubtitle: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
-  courseContentTitle: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsCourseContent&quot; Field Group"
-  levels: [DetailsCourseContentLevels]
-}
-
-"The &quot;DetailsCourseContentLevels&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsCourseContentLevels implements AcfFieldGroup & AcfFieldGroupFields & DetailsCourseContentLevels_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  content: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  lengthOfCourseInMonths: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  level: String
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  liveTrainingsNumber: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  target: String
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  tooltip: DetailsCourseContentLevelsTooltip
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevels&quot; Field Group"
-  videoTrainingsNumber: Float
-}
-
-"The &quot;DetailsCourseContentLevelsTooltip&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsCourseContentLevelsTooltip implements AcfFieldGroup & AcfFieldGroupFields & DetailsCourseContentLevelsTooltip_Fields {
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsCourseContentLevelsTooltip&quot; Field Group"
-  title: String
-}
-
 "The &quot;DetailsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type DetailsFaq implements AcfFieldGroup & AcfFieldGroupFields & DetailsFaq_Fields {
   "Field of the &quot;textarea&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
@@ -3071,105 +3548,6 @@ type DetailsFaq implements AcfFieldGroup & AcfFieldGroupFields & DetailsFaq_Fiel
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsFaq&quot; Field Group"
   question: String
-}
-
-"The &quot;DetailsHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsHero implements AcfFieldGroup & AcfFieldGroupFields & DetailsHero_Fields {
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
-  backgrounddesktop: [DetailsHeroBackgrounddesktop]
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
-  cta: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Running line"
-  runningLine: String
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsHero&quot; Field Group"
-  tagsCloud: [DetailsHeroTagsCloud]
-}
-
-"The &quot;DetailsHeroBackgrounddesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsHeroBackgrounddesktop implements AcfFieldGroup & AcfFieldGroupFields & DetailsHeroBackgrounddesktop_Fields {
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
-  desktop: AcfMediaItemConnectionEdge
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;DetailsHeroBackgrounddesktop&quot; Field Group"
-  mobile: AcfMediaItemConnectionEdge
-}
-
-"The &quot;DetailsHeroTagsCloud&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsHeroTagsCloud implements AcfFieldGroup & AcfFieldGroupFields & DetailsHeroTagsCloud_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsHeroTagsCloud&quot; Field Group"
-  callToActionTag: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-}
-
-"The &quot;DetailsPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsPaymentForm implements AcfFieldGroup & AcfFieldGroupFields & DetailsPaymentForm_Fields {
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group"
-  courses: [DetailsPaymentFormCourses]
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group"
-  paymentType: DetailsPaymentFormPaymentType
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentForm&quot; Field Group"
-  title: String
-}
-
-"The &quot;DetailsPaymentFormCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsPaymentFormCourses implements AcfFieldGroup & AcfFieldGroupFields & DetailsPaymentFormCourses_Fields {
-  "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormCourses&quot; Field Group"
-  course(
-    "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
-    "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
-    "The number of items to return after the referenced \"after\" cursor"
-    first: Int
-    "The number of items to return before the referenced \"before\" cursor"
-    last: Int
-  ): AcfContentNodeConnection
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-}
-
-"The &quot;DetailsPaymentFormPaymentType&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsPaymentFormPaymentType implements AcfFieldGroup & AcfFieldGroupFields & DetailsPaymentFormPaymentType_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group"
-  benefit: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group"
-  installment: String
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPaymentFormPaymentType&quot; Field Group"
-  oneTime: String
-}
-
-"The &quot;DetailsPrice&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsPrice implements AcfFieldGroup & AcfFieldGroupFields & DetailsPrice_Fields {
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  discount: Float
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  discountIfFull: Float
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  priceFull: Float
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  priceMonthly: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsPrice&quot; Field Group"
-  title: String
-}
-
-"The &quot;DetailsSummary&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type DetailsSummary implements AcfFieldGroup & AcfFieldGroupFields & DetailsSummary_Fields {
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group"
-  cta: String
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;DetailsSummary&quot; Field Group"
-  subtitle: String
 }
 
 "The discussion setting type"
@@ -3249,7 +3627,10 @@ type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinka
   "Fields of the CommonFragments ACF Field Group"
   commonFragments: CommonFragments
   "The content of the post."
-  content("Format of the field output" format: PostObjectFieldFormatEnum): String
+  content(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -3269,22 +3650,22 @@ type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinka
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -3331,7 +3712,10 @@ type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinka
   "The template assigned to the node"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title("Format of the field output" format: PostObjectFieldFormatEnum): String
+  title(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The unique resource identifier path"
   uri: String
 }
@@ -3441,7 +3825,10 @@ type HierarchicalContentNodeToParentContentNodeConnectionEdge implements Content
 "The individualCourse type"
 type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfIndividualCourseData {
   "The content of the post."
-  content("Format of the field output" format: PostObjectFieldFormatEnum): String
+  content(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -3461,22 +3848,22 @@ type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLink
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -3525,7 +3912,10 @@ type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLink
   "The template assigned to the node"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title("Format of the field output" format: PostObjectFieldFormatEnum): String
+  title(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The unique resource identifier path"
   uri: String
 }
@@ -3538,6 +3928,8 @@ type IndividualCourseData implements AcfFieldGroup & AcfFieldGroupFields & Indiv
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
   hero: IndividualCourseDataHero
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
+  path: String
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
   price: IndividualCourseDataPrice
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group"
@@ -3622,6 +4014,8 @@ type IndividualCourseDataPrice implements AcfFieldGroup & AcfFieldGroupFields & 
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
   fullPrice: Float
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
+  level: Float
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
   liveTrainingsNumber: String
   "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataPrice&quot; Field Group"
@@ -3671,7 +4065,7 @@ type MediaDetails {
   "The available sizes of the mediaItem"
   sizes(
     "The sizes to exclude. Will take precedence over `include`."
-    exclude: [MediaItemSizeEnum]
+    exclude: [MediaItemSizeEnum],
     "The sizes to include. Can be overridden by `exclude`."
     include: [MediaItemSizeEnum]
   ): [MediaSize]
@@ -3686,13 +4080,13 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
@@ -3703,17 +4097,20 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The globally unique identifier of the author of the node"
   authorId: ID
   "The caption for the resource"
-  caption("Format of the field output" format: PostObjectFieldFormatEnum): String
+  caption(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
@@ -3724,13 +4121,13 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "Connection between the MediaItem type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: MediaItemToCommentConnectionWhereArgs
   ): MediaItemToCommentConnection
@@ -3745,7 +4142,10 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The publishing date set in GMT."
   dateGmt: String
   "Description of the image (stored as post_content)"
-  description("Format of the field output" format: PostObjectFieldFormatEnum): String
+  description(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The desired slug of the post"
   desiredSlug: String
   "If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds"
@@ -3755,27 +4155,30 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
   "The filesize in bytes of the resource"
-  fileSize("Size of the MediaItem to return" size: MediaItemSizeEnum): Int
+  fileSize(
+    "Size of the MediaItem to return"
+    size: MediaItemSizeEnum
+  ): Int
   "The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table."
   guid: String
   "The globally unique identifier of the attachment object."
@@ -3819,19 +4222,31 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The Yoast SEO data of the ContentNode"
   seo: PostTypeSEO
   "The sizes attribute value for an image."
-  sizes("Size of the MediaItem to calculate sizes with" size: MediaItemSizeEnum): String
+  sizes(
+    "Size of the MediaItem to calculate sizes with"
+    size: MediaItemSizeEnum
+  ): String
   "The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table."
   slug: String
   "Url of the mediaItem"
-  sourceUrl("Size of the MediaItem to return" size: MediaItemSizeEnum): String
+  sourceUrl(
+    "Size of the MediaItem to return"
+    size: MediaItemSizeEnum
+  ): String
   "The srcset attribute specifies the URL of the image to use in different situations. It is a comma separated string of urls and their widths."
-  srcSet("Size of the MediaItem to calculate srcSet with" size: MediaItemSizeEnum): String
+  srcSet(
+    "Size of the MediaItem to calculate srcSet with"
+    size: MediaItemSizeEnum
+  ): String
   "The current status of the object"
   status: String
   "The template assigned to a node of content"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title("Format of the field output" format: PostObjectFieldFormatEnum): String
+  title(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The unique resource identifier path"
   uri: String
 }
@@ -3931,13 +4346,13 @@ type Menu implements DatabaseIdentifier & Node {
   "Connection between the Menu type and the MenuItem type"
   menuItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: MenuToMenuItemConnectionWhereArgs
   ): MenuToMenuItemConnection
@@ -3952,21 +4367,20 @@ type MenuItem implements DatabaseIdentifier & Node {
   "Connection between the MenuItem type and the MenuItem type"
   childItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: MenuItemToMenuItemConnectionWhereArgs
   ): MenuItemToMenuItemConnection
   "Connection from MenuItem to it&#039;s connected node"
   connectedNode: MenuItemToMenuItemLinkableConnectionEdge
   "The object connected to this menu item."
-  connectedObject: MenuItemObjectUnion
-    @deprecated(reason: "Deprecated in favor of the connectedNode field")
+  connectedObject: MenuItemObjectUnion @deprecated(reason: "Deprecated in favor of the connectedNode field")
   "Class attribute for the menu item link"
   cssClasses: [String]
   "The unique identifier stored in the database"
@@ -4114,13 +4528,13 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
@@ -4133,13 +4547,13 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
@@ -4150,18 +4564,21 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the Page type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PageToCommentConnectionWhereArgs
   ): PageToCommentConnection
   "The content of the post."
-  content("Format of the field output" format: PostObjectFieldFormatEnum): String
+  content(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -4181,22 +4598,22 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -4255,13 +4672,13 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the Page type and the page type"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PageToRevisionConnectionWhereArgs
   ): PageToRevisionConnection
@@ -4274,7 +4691,10 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "The template assigned to a node of content"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title("Format of the field output" format: PostObjectFieldFormatEnum): String
+  title(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "The unique resource identifier path"
   uri: String
 }
@@ -4384,13 +4804,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the category type"
   categories(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostToCategoryConnectionWhereArgs
   ): PostToCategoryConnection
@@ -4401,18 +4821,21 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostToCommentConnectionWhereArgs
   ): PostToCommentConnection
   "The content of the post."
-  content("Format of the field output" format: PostObjectFieldFormatEnum): String
+  content(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -4432,27 +4855,30 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
   "The excerpt of the post."
-  excerpt("Format of the field output" format: PostObjectFieldFormatEnum): String
+  excerpt(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "Connection between the NodeWithFeaturedImage type and the MediaItem type"
   featuredImage: NodeWithFeaturedImageToMediaItemConnectionEdge
   "The database identifier for the featured image node assigned to the content node"
@@ -4490,13 +4916,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the postFormat type"
   postFormats(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostToPostFormatConnectionWhereArgs
   ): PostToPostFormatConnection
@@ -4513,13 +4939,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the post type"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostToRevisionConnectionWhereArgs
   ): PostToRevisionConnection
@@ -4532,13 +4958,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the tag type"
   tags(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostToTagConnectionWhereArgs
   ): PostToTagConnection
@@ -4547,18 +4973,21 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the TermNode type"
   terms(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostToTermNodeConnectionWhereArgs
   ): PostToTermNodeConnection
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title("Format of the field output" format: PostObjectFieldFormatEnum): String
+  title(
+    "Format of the field output"
+    format: PostObjectFieldFormatEnum
+  ): String
   "URLs queued to be pinged."
   toPing: [String]
   "The unique resource identifier path"
@@ -4570,13 +4999,13 @@ type PostFormat implements DatabaseIdentifier & Node & TermNode & UniformResourc
   "Connection between the PostFormat type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostFormatToContentNodeConnectionWhereArgs
   ): PostFormatToContentNodeConnection
@@ -4589,22 +5018,22 @@ type PostFormat implements DatabaseIdentifier & Node & TermNode & UniformResourc
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -4625,13 +5054,13 @@ type PostFormat implements DatabaseIdentifier & Node & TermNode & UniformResourc
   "Connection between the PostFormat type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: PostFormatToPostConnectionWhereArgs
   ): PostFormatToPostConnection
@@ -5062,7 +5491,10 @@ type RootMutation {
     input: CreateCommentInput!
   ): CreateCommentPayload
   "The createCourse mutation"
-  createCourse("Input for the createCourse mutation" input: CreateCourseInput!): CreateCoursePayload
+  createCourse(
+    "Input for the createCourse mutation"
+    input: CreateCourseInput!
+  ): CreateCoursePayload
   "The createGeneralFragment mutation"
   createGeneralFragment(
     "Input for the createGeneralFragment mutation"
@@ -5079,18 +5511,30 @@ type RootMutation {
     input: CreateMediaItemInput!
   ): CreateMediaItemPayload
   "The createPage mutation"
-  createPage("Input for the createPage mutation" input: CreatePageInput!): CreatePagePayload
+  createPage(
+    "Input for the createPage mutation"
+    input: CreatePageInput!
+  ): CreatePagePayload
   "The createPost mutation"
-  createPost("Input for the createPost mutation" input: CreatePostInput!): CreatePostPayload
+  createPost(
+    "Input for the createPost mutation"
+    input: CreatePostInput!
+  ): CreatePostPayload
   "The createPostFormat mutation"
   createPostFormat(
     "Input for the createPostFormat mutation"
     input: CreatePostFormatInput!
   ): CreatePostFormatPayload
   "The createTag mutation"
-  createTag("Input for the createTag mutation" input: CreateTagInput!): CreateTagPayload
+  createTag(
+    "Input for the createTag mutation"
+    input: CreateTagInput!
+  ): CreateTagPayload
   "The createUser mutation"
-  createUser("Input for the createUser mutation" input: CreateUserInput!): CreateUserPayload
+  createUser(
+    "Input for the createUser mutation"
+    input: CreateUserInput!
+  ): CreateUserPayload
   "The deleteCategory mutation"
   deleteCategory(
     "Input for the deleteCategory mutation"
@@ -5102,7 +5546,10 @@ type RootMutation {
     input: DeleteCommentInput!
   ): DeleteCommentPayload
   "The deleteCourse mutation"
-  deleteCourse("Input for the deleteCourse mutation" input: DeleteCourseInput!): DeleteCoursePayload
+  deleteCourse(
+    "Input for the deleteCourse mutation"
+    input: DeleteCourseInput!
+  ): DeleteCoursePayload
   "The deleteGeneralFragment mutation"
   deleteGeneralFragment(
     "Input for the deleteGeneralFragment mutation"
@@ -5119,22 +5566,40 @@ type RootMutation {
     input: DeleteMediaItemInput!
   ): DeleteMediaItemPayload
   "The deletePage mutation"
-  deletePage("Input for the deletePage mutation" input: DeletePageInput!): DeletePagePayload
+  deletePage(
+    "Input for the deletePage mutation"
+    input: DeletePageInput!
+  ): DeletePagePayload
   "The deletePost mutation"
-  deletePost("Input for the deletePost mutation" input: DeletePostInput!): DeletePostPayload
+  deletePost(
+    "Input for the deletePost mutation"
+    input: DeletePostInput!
+  ): DeletePostPayload
   "The deletePostFormat mutation"
   deletePostFormat(
     "Input for the deletePostFormat mutation"
     input: DeletePostFormatInput!
   ): DeletePostFormatPayload
   "The deleteTag mutation"
-  deleteTag("Input for the deleteTag mutation" input: DeleteTagInput!): DeleteTagPayload
+  deleteTag(
+    "Input for the deleteTag mutation"
+    input: DeleteTagInput!
+  ): DeleteTagPayload
   "The deleteUser mutation"
-  deleteUser("Input for the deleteUser mutation" input: DeleteUserInput!): DeleteUserPayload
+  deleteUser(
+    "Input for the deleteUser mutation"
+    input: DeleteUserInput!
+  ): DeleteUserPayload
   "Increase the count."
-  increaseCount("The count to increase" count: Int): Int
+  increaseCount(
+    "The count to increase"
+    count: Int
+  ): Int
   "The registerUser mutation"
-  registerUser("Input for the registerUser mutation" input: RegisterUserInput!): RegisterUserPayload
+  registerUser(
+    "Input for the registerUser mutation"
+    input: RegisterUserInput!
+  ): RegisterUserPayload
   "The resetUserPassword mutation"
   resetUserPassword(
     "Input for the resetUserPassword mutation"
@@ -5161,7 +5626,10 @@ type RootMutation {
     input: UpdateCommentInput!
   ): UpdateCommentPayload
   "The updateCourse mutation"
-  updateCourse("Input for the updateCourse mutation" input: UpdateCourseInput!): UpdateCoursePayload
+  updateCourse(
+    "Input for the updateCourse mutation"
+    input: UpdateCourseInput!
+  ): UpdateCoursePayload
   "The updateGeneralFragment mutation"
   updateGeneralFragment(
     "Input for the updateGeneralFragment mutation"
@@ -5178,9 +5646,15 @@ type RootMutation {
     input: UpdateMediaItemInput!
   ): UpdateMediaItemPayload
   "The updatePage mutation"
-  updatePage("Input for the updatePage mutation" input: UpdatePageInput!): UpdatePagePayload
+  updatePage(
+    "Input for the updatePage mutation"
+    input: UpdatePageInput!
+  ): UpdatePagePayload
   "The updatePost mutation"
-  updatePost("Input for the updatePost mutation" input: UpdatePostInput!): UpdatePostPayload
+  updatePost(
+    "Input for the updatePost mutation"
+    input: UpdatePostInput!
+  ): UpdatePostPayload
   "The updatePostFormat mutation"
   updatePostFormat(
     "Input for the updatePostFormat mutation"
@@ -5192,9 +5666,15 @@ type RootMutation {
     input: UpdateSettingsInput!
   ): UpdateSettingsPayload
   "The updateTag mutation"
-  updateTag("Input for the updateTag mutation" input: UpdateTagInput!): UpdateTagPayload
+  updateTag(
+    "Input for the updateTag mutation"
+    input: UpdateTagInput!
+  ): UpdateTagPayload
   "The updateUser mutation"
-  updateUser("Input for the updateUser mutation" input: UpdateUserInput!): UpdateUserPayload
+  updateUser(
+    "Input for the updateUser mutation"
+    input: UpdateUserInput!
+  ): UpdateUserPayload
 }
 
 "The root entry point into the Graph"
@@ -5204,116 +5684,113 @@ type RootQuery {
   "Connection between the RootQuery type and the category type"
   categories(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToCategoryConnectionWhereArgs
   ): RootQueryToCategoryConnection
   "A 0bject"
   category(
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: CategoryIdType
   ): Category
   "Returns a Comment"
   comment(
     "Unique identifier for the comment node."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a comment by. Default is Global ID"
     idType: CommentNodeIdTypeEnum
   ): Comment
   "Connection between the RootQuery type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToCommentConnectionWhereArgs
   ): RootQueryToCommentConnection
   "A node used to manage content"
   contentNode(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean
+    asPreview: Boolean,
     "The content type the node is used for. Required when idType is set to \"name\" or \"slug\""
-    contentType: ContentTypeEnum
+    contentType: ContentTypeEnum,
     "Unique identifier for the content node."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a content node by. Default is Global ID"
     idType: ContentNodeIdTypeEnum
   ): ContentNode
   "Connection between the RootQuery type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToContentNodeConnectionWhereArgs
   ): RootQueryToContentNodeConnection
   "Fetch a Content Type node by unique Identifier"
   contentType(
     "Unique Identifier for the Content Type node."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a content type by. Default is Global ID"
     idType: ContentTypeIdTypeEnum
   ): ContentType
   "Connection between the RootQuery type and the ContentType type"
   contentTypes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToContentTypeConnection
   "An object of the course Type. "
   course(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean
+    asPreview: Boolean,
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: CourseIdType
   ): Course
   "A course object"
   courseBy(
     "Get the course by its database ID"
-    courseId: Int
+    courseId: Int,
     "Get the course object by its global ID"
-    id: ID
+    id: ID,
     "Get the course by its uri"
     uri: String
-  ): Course
-    @deprecated(
-      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
-    )
+  ): Course @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
   "Connection between the RootQuery type and the course type"
   courses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToCourseConnectionWhereArgs
   ): RootQueryToCourseConnection
@@ -5322,36 +5799,33 @@ type RootQuery {
   "An object of the generalFragment Type. "
   generalFragment(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean
+    asPreview: Boolean,
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: GeneralFragmentIdType
   ): GeneralFragment
   "A generalFragment object"
   generalFragmentBy(
     "Get the generalFragment by its database ID"
-    generalFragmentId: Int
+    generalFragmentId: Int,
     "Get the generalFragment object by its global ID"
-    id: ID
+    id: ID,
     "Get the generalFragment by its slug (only available for non-hierarchical types)"
-    slug: String
+    slug: String,
     "Get the generalFragment by its uri"
     uri: String
-  ): GeneralFragment
-    @deprecated(
-      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
-    )
+  ): GeneralFragment @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
   "Connection between the RootQuery type and the generalFragment type"
   generalFragments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToGeneralFragmentConnectionWhereArgs
   ): RootQueryToGeneralFragmentConnection
@@ -5360,117 +5834,114 @@ type RootQuery {
   "An object of the individualCourse Type. "
   individualCourse(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean
+    asPreview: Boolean,
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: IndividualCourseIdType
   ): IndividualCourse
   "A individualCourse object"
   individualCourseBy(
     "Get the individualCourse object by its global ID"
-    id: ID
+    id: ID,
     "Get the individualCourse by its database ID"
-    individualCourseId: Int
+    individualCourseId: Int,
     "Get the individualCourse by its slug (only available for non-hierarchical types)"
-    slug: String
+    slug: String,
     "Get the individualCourse by its uri"
     uri: String
-  ): IndividualCourse
-    @deprecated(
-      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
-    )
+  ): IndividualCourse @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
   "Connection between the RootQuery type and the individualCourse type"
   individualCourses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToIndividualCourseConnectionWhereArgs
   ): RootQueryToIndividualCourseConnection
   "An object of the mediaItem Type. "
   mediaItem(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean
+    asPreview: Boolean,
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: MediaItemIdType
   ): MediaItem
   "A mediaItem object"
   mediaItemBy(
     "Get the mediaItem object by its global ID"
-    id: ID
+    id: ID,
     "Get the mediaItem by its database ID"
-    mediaItemId: Int
+    mediaItemId: Int,
     "Get the mediaItem by its slug (only available for non-hierarchical types)"
-    slug: String
+    slug: String,
     "Get the mediaItem by its uri"
     uri: String
-  ): MediaItem
-    @deprecated(
-      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
-    )
+  ): MediaItem @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
   "Connection between the RootQuery type and the mediaItem type"
   mediaItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToMediaItemConnectionWhereArgs
   ): RootQueryToMediaItemConnection
   "A WordPress navigation menu"
   menu(
     "The globally unique identifier of the menu."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a menu by. Default is Global ID"
     idType: MenuNodeIdTypeEnum
   ): Menu
   "A WordPress navigation menu item"
   menuItem(
     "The globally unique identifier of the menu item."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a menu item by. Default is Global ID"
     idType: MenuItemNodeIdTypeEnum
   ): MenuItem
   "Connection between the RootQuery type and the MenuItem type"
   menuItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToMenuItemConnectionWhereArgs
   ): RootQueryToMenuItemConnection
   "Connection between the RootQuery type and the Menu type"
   menus(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToMenuConnectionWhereArgs
   ): RootQueryToMenuConnection
   "Fetches an object given its ID"
-  node("The unique identifier of the node" id: ID): Node
+  node(
+    "The unique identifier of the node"
+    id: ID
+  ): Node
   "Fetches an object given its Unique Resource Identifier"
   nodeByUri(
     "Unique Resource Identifier in the form of a path or permalink for a node. Ex: \"/hello-world\""
@@ -5479,105 +5950,102 @@ type RootQuery {
   "An object of the page Type. "
   page(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean
+    asPreview: Boolean,
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: PageIdType
   ): Page
   "A page object"
   pageBy(
     "Get the page object by its global ID"
-    id: ID
+    id: ID,
     "Get the page by its database ID"
-    pageId: Int
+    pageId: Int,
     "Get the page by its uri"
     uri: String
-  ): Page
-    @deprecated(
-      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
-    )
+  ): Page @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
   "Connection between the RootQuery type and the page type"
   pages(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToPageConnectionWhereArgs
   ): RootQueryToPageConnection
   "A WordPress plugin"
-  plugin("The globally unique identifier of the plugin." id: ID!): Plugin
+  plugin(
+    "The globally unique identifier of the plugin."
+    id: ID!
+  ): Plugin
   "Connection between the RootQuery type and the Plugin type"
   plugins(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToPluginConnectionWhereArgs
   ): RootQueryToPluginConnection
   "An object of the post Type. "
   post(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean
+    asPreview: Boolean,
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: PostIdType
   ): Post
   "A post object"
   postBy(
     "Get the post object by its global ID"
-    id: ID
+    id: ID,
     "Get the post by its database ID"
-    postId: Int
+    postId: Int,
     "Get the post by its slug (only available for non-hierarchical types)"
-    slug: String
+    slug: String,
     "Get the post by its uri"
     uri: String
-  ): Post
-    @deprecated(
-      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
-    )
+  ): Post @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
   "A 0bject"
   postFormat(
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: PostFormatIdType
   ): PostFormat
   "Connection between the RootQuery type and the postFormat type"
   postFormats(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToPostFormatConnectionWhereArgs
   ): RootQueryToPostFormatConnection
   "Connection between the RootQuery type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToPostConnectionWhereArgs
   ): RootQueryToPostConnection
@@ -5586,35 +6054,35 @@ type RootQuery {
   "Connection between the RootQuery type and the EnqueuedScript type"
   registeredScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToEnqueuedScriptConnection
   "Connection between the RootQuery type and the EnqueuedStylesheet type"
   registeredStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToEnqueuedStylesheetConnection
   "Connection between the RootQuery type and the ContentNode type"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToRevisionsConnectionWhereArgs
   ): RootQueryToRevisionsConnection
@@ -5623,106 +6091,112 @@ type RootQuery {
   "A 0bject"
   tag(
     "The globally unique identifier of the object."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: TagIdType
   ): Tag
   "Connection between the RootQuery type and the tag type"
   tags(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToTagConnectionWhereArgs
   ): RootQueryToTagConnection
   "Connection between the RootQuery type and the Taxonomy type"
   taxonomies(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToTaxonomyConnection
   "Fetch a Taxonomy node by unique Identifier"
   taxonomy(
     "Unique Identifier for the Taxonomy node."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a taxonomy by. Default is Global ID"
     idType: TaxonomyIdTypeEnum
   ): Taxonomy
   "A node in a taxonomy used to group and relate content nodes"
   termNode(
     "Unique identifier for the term node."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a term node by. Default is Global ID"
-    idType: TermNodeIdTypeEnum
+    idType: TermNodeIdTypeEnum,
     "The taxonomy of the tern node. Required when idType is set to \"name\" or \"slug\""
     taxonomy: TaxonomyEnum
   ): TermNode
   "Connection between the RootQuery type and the TermNode type"
   terms(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToTermNodeConnectionWhereArgs
   ): RootQueryToTermNodeConnection
   "A Theme object"
-  theme("The globally unique identifier of the theme." id: ID!): Theme
+  theme(
+    "The globally unique identifier of the theme."
+    id: ID!
+  ): Theme
   "Connection between the RootQuery type and the Theme type"
   themes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToThemeConnection
   "Returns a user"
   user(
     "The globally unique identifier of the user."
-    id: ID!
+    id: ID!,
     "Type of unique identifier to fetch a user by. Default is Global ID"
     idType: UserNodeIdTypeEnum
   ): User
   "Returns a user role"
-  userRole("The globally unique identifier of the user object." id: ID!): UserRole
+  userRole(
+    "The globally unique identifier of the user object."
+    id: ID!
+  ): UserRole
   "Connection between the RootQuery type and the UserRole type"
   userRoles(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToUserRoleConnection
   "Connection between the RootQuery type and the User type"
   users(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: RootQueryToUserConnectionWhereArgs
   ): RootQueryToUserConnection
@@ -6778,13 +7252,13 @@ type Tag implements DatabaseIdentifier & MenuItemLinkable & Node & TermNode & Un
   "Connection between the Tag type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: TagToContentNodeConnectionWhereArgs
   ): TagToContentNodeConnection
@@ -6797,22 +7271,22 @@ type Tag implements DatabaseIdentifier & MenuItemLinkable & Node & TermNode & Un
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -6831,13 +7305,13 @@ type Tag implements DatabaseIdentifier & MenuItemLinkable & Node & TermNode & Un
   "Connection between the Tag type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: TagToPostConnectionWhereArgs
   ): TagToPostConnection
@@ -6936,22 +7410,22 @@ type Taxonomy implements Node {
   "List of Content Types associated with the Taxonomy"
   connectedContentTypes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TaxonomyToContentTypeConnection
   "List of Term Nodes associated with the Taxonomy"
   connectedTerms(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TaxonomyToTermNodeConnection
@@ -7287,9 +7761,9 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument."
   avatar(
     "Whether to always show the default image, never the Gravatar. Default false"
-    forceDefault: Boolean
+    forceDefault: Boolean,
     "The rating level of the avatar."
-    rating: AvatarRatingEnum
+    rating: AvatarRatingEnum,
     "The size attribute of the avatar field can be used to fetch avatars of different sizes. The value corresponds to the dimension in pixels to fetch. The default is 96 pixels."
     size: Int = 96
   ): Avatar
@@ -7300,13 +7774,13 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: UserToCommentConnectionWhereArgs
   ): UserToCommentConnection
@@ -7319,22 +7793,22 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): UserToEnqueuedScriptConnection
   "Connection between the User type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): UserToEnqueuedStylesheetConnection
@@ -7357,13 +7831,13 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the mediaItem type"
   mediaItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: UserToMediaItemConnectionWhereArgs
   ): UserToMediaItemConnection
@@ -7376,26 +7850,26 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the page type"
   pages(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: UserToPageConnectionWhereArgs
   ): UserToPageConnection
   "Connection between the User type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: UserToPostConnectionWhereArgs
   ): UserToPostConnection
@@ -7404,24 +7878,24 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User and Revisions authored by the user"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int
+    last: Int,
     "Arguments for filtering the connection"
     where: UserToRevisionsConnectionWhereArgs
   ): UserToRevisionsConnection
   "Connection between the User type and the UserRole type"
   roles(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String
+    after: String,
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String
+    before: String,
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int
+    first: Int,
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): UserToUserRoleConnection
@@ -8987,7 +9461,7 @@ input CreateUserInput {
   displayName: String
   "A string containing the user's email address."
   email: String
-  "	The user's first name."
+  "\tThe user's first name."
   firstName: String
   "User's Jabber account."
   jabber: String
@@ -9943,7 +10417,7 @@ input RegisterUserInput {
   displayName: String
   "A string containing the user's email address."
   email: String
-  "	The user's first name."
+  "\tThe user's first name."
   firstName: String
   "User's Jabber account."
   jabber: String
@@ -11083,7 +11557,7 @@ input UpdateUserInput {
   displayName: String
   "A string containing the user's email address."
   email: String
-  "	The user's first name."
+  "\tThe user's first name."
   firstName: String
   "The ID of the user"
   id: ID!

@@ -1,8 +1,9 @@
 import React                  from 'react'
 import { FC }                 from 'react'
+import { useIntl }            from 'react-intl'
 import { FormattedMessage }   from 'react-intl'
 import { useState }           from 'react'
-
+import {CourseID}             from '@globals/data'
 import { Consultation }       from '@landing/consultation'
 import { MobileConsultation } from '@landing/consultation'
 import { Button }             from '@ui/button'
@@ -17,51 +18,22 @@ import { Element }            from './element'
 import { ElementsProps }      from './elements.interfaces'
 import { getUi }              from '../helpers'
 
-const Elements: FC<ElementsProps> = ({ stateHover }) => {
+
+const Elements: FC<ElementsProps> = ({headerData, stateHover }) => {
+  const {formatMessage} = useIntl()
+
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
-  const courses = [
-    {
-      title: 'title1',
-      id: 'cG9zdDoyNjY=',
-      menuCourse: {
-        link: '/test1',
-        level: '',
+  const course = headerData?.dropdownList.items.nodes.find(el => el.id === CourseID.OPENING_RHYTHM)
+  const individualCourses = headerData?.dropdownList.items.nodes.filter(el => el.id !== CourseID.OPENING_RHYTHM)
 
-        quantityVideoLessons: '1',
-        quantityMonths: '2',
-        circleFirstLine: '3',
-        circleSecondLine: 'circleSecondLine',
-      },
-    },
-    {
-      title: 'title2',
-      id: 'cG9zdDoyNjQ=',
-      menuCourse: {
-        link: '/test2',
-        level: '',
+  const countLevel = course?.content.price.details.levelsNumber
 
-        quantityVideoLessons: '1',
-        quantityMonths: '2',
-        circleFirstLine: '3',
-        circleSecondLine: 'circleSecondLine',
-      },
-    },
-    {
-      title: 'title3',
-      id: 'cG9zdDoyNjM=',
-      menuCourse: {
-        link: '/test3',
-        level: '',
-
-        quantityVideoLessons: '1',
-        quantityMonths: '2',
-        circleFirstLine: '3',
-        circleSecondLine: 'circleSecondLine',
-      },
-    },
-  ]
+  const getCircleSecondLineValue = (item) => {
+    const countLiveBroadcast = parseInt(item?.individualCourseData?.price?.liveTrainingsNumber)
+    return !!countLiveBroadcast? <FormattedMessage id='course.price.plural_format_live_broadcast' values={{countLiveBroadcast}}/> : null
+  }
 
   return (
     <Row>
@@ -74,31 +46,51 @@ const Elements: FC<ElementsProps> = ({ stateHover }) => {
             lineHeight='default'
             color='gray'
           >
-            <FormattedMessage id='landing_header.courses' />
+            {headerData?.dropdownList.title}
           </Text>
         </Box>
         <Layout display={['flex', 'flex', 'none']} flexBasis={[20, 24, 0]} />
-        {courses?.map(({ title, id, menuCourse }) => (
-          <React.Fragment key={id}>
+
             <Element
               stateHover={stateHover}
-              title={title}
-              level={menuCourse.level}
-              levelBackground={getUi(id).levelBackground}
-              squareRotate={getUi(id).squareRotate}
-              squarePositionX={getUi(id).squarePositionX}
-              squarePositionY={getUi(id).squarePositionY}
-              quantityVideoLessons={menuCourse.quantityVideoLessons}
-              rectangleRotate={getUi(id).rectangleRotate}
-              rectanglePositionX={getUi(id).rectanglePositionX}
-              rectanglePositionY={getUi(id).rectanglePositionY}
-              quantityMonths={menuCourse.quantityMonths}
-              rectangleColor={getUi(id).rectangleColor}
-              circlePositionX={getUi(id).circlePositionX}
-              circlePositionY={getUi(id).circlePositionY}
-              circleFirstLine={menuCourse.circleFirstLine}
-              circleSecondLine={menuCourse.circleSecondLine}
-              path={menuCourse.link}
+              title={course?.title}
+              squareRotate={getUi(course.id)?.squareRotate}
+              squarePositionX={getUi(course.id)?.squarePositionX}
+              squarePositionY={getUi(course.id)?.squarePositionY}
+              quantityVideoLessons={course.content.price.details.videoTrainingsNumber}
+              rectangleRotate={getUi(course.id)?.rectangleRotate}
+              rectanglePositionX={getUi(course.id)?.rectanglePositionX}
+              rectanglePositionY={getUi(course.id)?.rectanglePositionY}
+              quantityMonths={course.content.price.details.monthsNumber}
+              rectangleColor={getUi(course.id)?.rectangleColor}
+              circlePositionX={getUi(course.id)?.circlePositionX}
+              circlePositionY={getUi(course.id)?.circlePositionY}
+              circleFirstLine={course.content.price.details.levelsNumber}
+              circleSecondLine={<FormattedMessage id='course.price.plural_format_level' values={{countLevel}}/>}
+              path={course.content.path}
+            />
+            <Layout flexBasis={16} />
+        {individualCourses.map((item) => (
+          <React.Fragment key={item.title}>
+            <Element
+              stateHover={stateHover}
+              title={item?.title}
+              level={item?.individualCourseData?.price?.level ? `${formatMessage({id:'course.price.level'})} ${item?.individualCourseData?.price?.level}` : null}
+              levelBackground={getUi(item.id)?.levelBackground}
+              squareRotate={getUi(item.id)?.squareRotate}
+              squarePositionX={getUi(item.id)?.squarePositionX}
+              squarePositionY={getUi(item.id)?.squarePositionY}
+              quantityVideoLessons={item?.individualCourseData?.price?.videoTrainingsNumber}
+              rectangleRotate={getUi(item.id)?.rectangleRotate}
+              rectanglePositionX={getUi(item.id)?.rectanglePositionX}
+              rectanglePositionY={getUi(item.id)?.rectanglePositionY}
+              quantityMonths={item?.individualCourseData?.price?.courseLengthInMonths}
+              rectangleColor={getUi(item.id)?.rectangleColor}
+              circlePositionX={getUi(item.id)?.circlePositionX}
+              circlePositionY={getUi(item.id)?.circlePositionY}
+              circleFirstLine={item?.individualCourseData?.price?.liveTrainingsNumber}
+              circleSecondLine={item?.individualCourseData?.price?.bonuses || getCircleSecondLineValue(item)}
+              path={item?.content?.path}
             />
             <Layout flexBasis={16} />
           </React.Fragment>

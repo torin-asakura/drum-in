@@ -3991,6 +3991,7 @@ __metadata:
   resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
   dependencies:
     "@apollo/client": "npm:3.6.9"
+    "@globals/data": "workspace:0.0.1"
     "@landing/consultation": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"

@@ -80,7 +80,7 @@ const HeaderBlock = () => {
                 setVisibleDrawer={setVisibleDrawer}
               />
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
-              {header?.links?.map((item) => (
+              {header?.navigationElements?.map((item) => (
                 <ItemLink item={item} />
               ))}
               <CtaButton title={header?.ctaButton} />

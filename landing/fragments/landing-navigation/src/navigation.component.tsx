@@ -58,7 +58,7 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible 
             <CtaButton title={headerData?.ctaButton} />
           </Row>
           <Layout flexBasis={[60, 70, 125]} flexGrow={2} />
-          <Elements stateHover={stateHover} />
+          <Elements headerData={headerData} stateHover={stateHover} />
           <Layout flexBasis={[55, 50, 40]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
