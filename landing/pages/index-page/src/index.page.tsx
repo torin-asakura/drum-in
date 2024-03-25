@@ -21,18 +21,13 @@ import { SpyScrollProvider }        from '@ui/spy-scroll'
 import { useIntersectionObserver }  from '@ui/intersection-observer'
 import { useSpyScroll }             from '@ui/spy-scroll'
 
-import { useBackgrounds }           from './data'
 import { useSong }                  from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
 
-export const HomePage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const HomePage = ({ mainPageData,background }) => {
+
+  console.log(mainPageData)
+
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -95,11 +90,11 @@ export const HomePage = ({ SEO }: Props) => {
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo id={PageID.INDEX} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-            <Hero {...getObserverOptions('hero')} />
+            <Hero background={background} {...getObserverOptions('hero')} />
             <Box
               width='100%'
               flexWrap='wrap'
-              backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+              backgroundImage={`url(${background?.desktop.teacher.node.sourceUrl})`}
               backgroundSize={['200%', '100% auto', '1800px']}
               backgroundRepeat='no-repeat'
               backgroundPosition={['center top', 'center center', 'center 75%']}
@@ -118,7 +113,7 @@ export const HomePage = ({ SEO }: Props) => {
             <Box
               display={['none', 'none', 'flex']}
               width='100%'
-              backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+              backgroundImage={`url(${background?.desktop.footer.node.sourceUrl})`}
               backgroundSize='80% 100%'
               backgroundRepeat='no-repeat'
               backgroundPosition='left bottom'
@@ -128,7 +123,7 @@ export const HomePage = ({ SEO }: Props) => {
             <Box
               display={['flex', 'flex', 'none']}
               width='100%'
-              backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+              backgroundImage={`url(${background?.mobile.footer.node.sourceUrl})`}
               backgroundSize='100% 80%'
               backgroundRepeat='no-repeat'
               backgroundPosition='center bottom'
