@@ -99,6 +99,42 @@ generalFragments {
               description
             }
           }
+            background {
+            desktop {
+              footer {
+                node {
+                  sourceUrl
+                }
+              }
+              hero {
+                node {
+                  sourceUrl
+                }
+              }
+              teacher {
+                node {
+                  sourceUrl
+                }
+              }
+            }
+            mobile {
+              footer {
+                node {
+                  sourceUrl
+                }
+              }
+              hero {
+                node {
+                  sourceUrl
+                }
+              }
+              teacher {
+                node {
+                  sourceUrl
+                }
+              }
+            }
+          }        
         }
       }
     }

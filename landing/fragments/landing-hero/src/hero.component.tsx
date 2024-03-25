@@ -8,7 +8,7 @@ import { Box }               from '@ui/layout'
 
 import { useHero }           from './data'
 
-const Hero = forwardRef(({ data }: any, ref: any) => {
+const Hero = forwardRef(({background, data }: any, ref: any) => {
   const hero = useHero()
 
   return (
@@ -17,7 +17,7 @@ const Hero = forwardRef(({ data }: any, ref: any) => {
         display={['none', 'flex', 'flex']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundForHero?.sourceUrl})`}
+        backgroundImage={`url(${background?.desktop.hero.node.sourceUrl})`}
         backgroundSize='100% 100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
@@ -30,7 +30,7 @@ const Hero = forwardRef(({ data }: any, ref: any) => {
         display={['flex', 'none', 'none']}
         flexDirection='column'
         width='100%'
-        backgroundImage={`url(${hero?.backgroundMobileForHero?.sourceUrl})`}
+        backgroundImage={`url(${background?.mobile.hero.node.sourceUrl})`}
         backgroundSize='contain'
         backgroundRepeat='no-repeat'
         backgroundPosition='right center'
