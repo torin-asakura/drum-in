@@ -52,6 +52,7 @@ sourceUrl
 }
 
 price {
+bonuses
 cta
 courseLengthInMonths
 discount

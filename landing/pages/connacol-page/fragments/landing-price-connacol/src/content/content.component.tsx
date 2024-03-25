@@ -14,7 +14,7 @@ import { Text }                    from '@ui/text'
 
 import { Figures }                 from './figures'
 import { FullPrice }               from './full-price'
-import { ShortCourseContentList }   from './short-course-content-list'
+import { ShortCourseContentList }  from './short-course-content-list'
 import { Title }                   from './title'
 
 const Content = ({ connacolData }) => {
@@ -118,7 +118,7 @@ const Content = ({ connacolData }) => {
         <Figures
           quantityMonths={connacolData?.individualCourseData.price.courseLengthInMonths}
           quantityVideoLessons={connacolData?.individualCourseData.price.videoTrainingsNumber}
-          secondLineCircle={connacolData?.individualCourseData.price.liveTrainingsNumber}
+          secondLineCircle={connacolData?.individualCourseData.price.bonuses}
           rectangleRotate={-20}
           circleRotate={20}
           squareRotate={-20}

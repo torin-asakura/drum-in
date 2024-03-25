@@ -6,14 +6,10 @@ import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
-import { useCourse }          from '@globals/data'
 
 import { Tape }               from './tape'
 
-const BannerOpeningTheRhythmBlock = () => {
-  const { course } = useCourse()
-
-  return (
+const BannerOpeningTheRhythmBlock = () => (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>
         <Box width={['100%', '100%', 1920]}>
@@ -38,7 +34,6 @@ const BannerOpeningTheRhythmBlock = () => {
                     color='text.smokyWhite'
                   >
                     {/* TODO */}
-                    {course?.title}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -55,7 +50,6 @@ const BannerOpeningTheRhythmBlock = () => {
                       ]}
                     >
                       {/* TODO */}
-                      {course?.content}
                     </Text>
                   </Box>
                 </Box>
@@ -81,6 +75,6 @@ const BannerOpeningTheRhythmBlock = () => {
       <Tape level='' />
     </Box>
   )
-}
+
 
 export { BannerOpeningTheRhythmBlock }
