@@ -1,18 +1,13 @@
 {
-  "course.price.plural_format_months": "{monthCount, plural, one {месяц} few {месяца} many {месяцев} other {месяца}}",
-  "course.price.plural_format_video_lesson": "{videoLessonCount, plural, one {видео-урок} few {видео-урока} many {видео-уроков} other {видео-урока}}",
-  "course.price.plural_format_live_broadcast": "{liveBroadcastCount, plural, one {прямой эфир} few {прямых эфира} many {прямых эфиров} other {прямых эфира}}",
-
   "course.price.plural_format_level": "{countLevel, plural, one {уровень} few {уровня} many {уровней} other {уровня}}",
 
+  "course.price.plural_format_months": "{count, plural, one {месяц} few {месяца} many {месяцев} other {месяца}}",
+  "course.price.plural_format_video_lesson": "{count, plural, one {видео-урок} few {видео-урока} many {видео-уроков} other {видео-урока}}",
+  "course.price.plural_format_live_broadcast": "{countLiveBroadcast, plural, one {прямой эфир} few {прямых эфира} many {прямых эфиров} other {прямых эфира}}",
   "course.price.level": "ур.",
   "course.price.bonus_module": "бонус-модуль",
 
-  "currency.ruble": "₽",
-  "course.price.full_course_for": "Весь курс за",
-  "course.payment.buy_course": "Купить курс",
-  "course.payment.discount": "Выгода",
-
+  "footer.privacy_policy": "Политика обработки персональных данных",
   "landing_header.courses": "Курсы",
   "landing_header.connect": "Связаться",
   "landing_header.contacts": "Контакты",
