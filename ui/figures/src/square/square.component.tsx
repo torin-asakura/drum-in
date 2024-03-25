@@ -9,7 +9,7 @@ import { Text }             from '@ui/text'
 import { SquareProps }      from './square.interfaces'
 
 const Square: FC<SquareProps> = ({ firstLine, rotate }) => {
-  const count = parseInt(firstLine, 10)
+  const count = parseInt(firstLine || '', 10)
 
   return (
     <Background

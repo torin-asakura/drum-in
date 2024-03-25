@@ -1,5 +1,5 @@
 export interface RectangleProps {
-  color: string
-  firstLine: string
-  rotate: number
+  color?: string
+  firstLine?: string
+  rotate?: number
 }
