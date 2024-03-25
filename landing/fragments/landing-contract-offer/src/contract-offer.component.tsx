@@ -27,12 +27,12 @@ const ContractOfferBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {contractOffer?.title}
+              contract-offer.title
             </Text>
           </Box>
           <Layout flexBasis={[20, 30, 50]} flexShrink={0} />
           <Column>
-            {contractOffer?.contractOffer?.text?.split('<br />\r').map((item) => (
+            {['contract-offer.text','contract-offer.text','contract-offer.text'].map((item) => (
               <React.Fragment key={uniqid()}>
                 <Row>
                   <Text

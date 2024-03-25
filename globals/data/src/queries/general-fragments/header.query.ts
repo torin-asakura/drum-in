@@ -14,16 +14,43 @@ query Header{
           dropdownList {
             title
             items {
-              title
-              level
-              path
+              nodes {
+                ... on Course {
+                  title
+                  content {
+                    path
+                    price {
+                      details {
+                        levelsNumber
+                        monthsNumber
+                        videoTrainingsNumber
+                      }
+                    }
+                  }
+                  id
+                }
+                ... on IndividualCourse {
+                  title
+                  individualCourseData {
+                    path
+                    price {
+                      level
+                      bonuses
+                      liveTrainingsNumber
+                      videoTrainingsNumber
+                      courseLengthInMonths
+                    }
+                  }
+                }
+                id
+              }
             }
           }
-          links {
-            path
+          navigationElements {
             title
+            path
           }
-         ctaButton
+          ctaButton
         }
       }
     }
