@@ -5,13 +5,13 @@ import { Row }                from '@ui/layout'
 import { DesktopSliderBlock } from './desktop-slider'
 import { MobileSliderBlock }  from './mobile-slider'
 
-const SliderBlock = () => (
+const SliderBlock = ({mainPageData}) => (
   <>
     <Row display={['none', 'flex', 'flex']}>
-      <DesktopSliderBlock />
+      <DesktopSliderBlock mainPageData={mainPageData}/>
     </Row>
     <Row display={['flex', 'none', 'none']}>
-      <MobileSliderBlock />
+      <MobileSliderBlock mainPageData={mainPageData}/>
     </Row>
   </>
 )

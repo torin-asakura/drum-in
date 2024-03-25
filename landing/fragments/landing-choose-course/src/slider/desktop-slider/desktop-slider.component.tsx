@@ -1,63 +1,42 @@
-import React              from 'react'
-import { Children }       from 'react'
-import { useMemo }        from 'react'
+import { CourseID } from '@globals/data'
+import React        from 'react'
+import { Children } from 'react'
+import { Slider }           from '@ui/slider'
+import { SwiperSlide }      from '@ui/slider'
+import {Row,Layout}         from '@ui/layout'
+import {MainCourse}         from './main-course'
+import {IndividualCourses} from './individual-courses'
 
-import { Condition }      from '@ui/condition'
-import { Slider }         from '@ui/slider'
-import { SwiperSlide }    from '@ui/slider'
 
-import { Slide }          from '../slide'
-import { useChoseCourse } from '../../data'
-import { getUi }          from '../../helpers'
 
-const DesktopSliderBlock = () => {
-  const choseCourseData = useChoseCourse()
+const DesktopSliderBlock = ({mainPageData}) => {
 
-  const coursesChildren = useMemo(
-    () =>
-      choseCourseData?.map(({ id, title, choseCourse }) => (
-        <Slide
-          title={title}
-          level={choseCourse.level}
-          desc={choseCourse.description}
-          price={choseCourse.price}
-          squareRotate={getUi(id).squareRotate}
-          squarePositionX={getUi(id).squarePositionX}
-          squarePositionY={getUi(id).squarePositionY}
-          quantityVideoLessons={choseCourse.quantityVideoLessons}
-          rectangleRotate={getUi(id).rectangleRotate}
-          rectanglePositionX={getUi(id).rectanglePositionX}
-          rectanglePositionY={getUi(id).rectanglePositionY}
-          quantityMonths={choseCourse.quantityMonths}
-          textMonths={choseCourse.textMonths}
-          rectangleColor={getUi(id).rectangleColor}
-          circlePositionX={getUi(id).circlePositionX}
-          circlePositionY={getUi(id).circlePositionY}
-          circleFirstLine={choseCourse.circleFirstLine}
-          circleSecondLine={choseCourse.circleSecondLine}
-          link={choseCourse.link}
-        />
-      )),
-    [choseCourseData]
+  const individualCourseData = mainPageData.chooseCourse.courses.filter(el => el.course.nodes[0].id !== CourseID.OPENING_RHYTHM)
+  const mainCourseData = mainPageData.chooseCourse.courses.find(el => el.course.nodes[0].id === CourseID.OPENING_RHYTHM)
+
+  const coursesChildren = () => (
+      <Row>
+        <MainCourse mainCourse={mainCourseData}/>
+        <Layout flexBasis={40} flexShrink={0}/>
+        <IndividualCourses individualCourses={individualCourseData}/>
+      </Row>
   )
 
   return (
-    <Condition match={choseCourseData !== [] && choseCourseData !== undefined}>
       <Slider
         clName='choose-courses-slider'
-        spaceBetween={40}
+        spaceBetween={0}
         slidesPerView='auto'
-        slidesOffsetAfter={40}
+        slidesOffsetAfter={240}
         slidesOffsetBefore={40}
         mousewheel
         grabCursor
         forceToAxis
       >
-        {Children.map(coursesChildren, (child) => (
+        {Children.map(coursesChildren(), (child) => (
           <SwiperSlide>{child}</SwiperSlide>
         ))}
       </Slider>
-    </Condition>
   )
 }
 

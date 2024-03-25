@@ -13,7 +13,7 @@ import { ButtonCourse }         from './button-course'
 import { TagBlock }             from './tag'
 import { useBanner }            from './data'
 
-const BannerBlock = () => {
+const BannerBlock = ({mainPageData}) => {
   const banner = useBanner()
 
   return (
@@ -54,9 +54,9 @@ const BannerBlock = () => {
           </Box>
           <Layout order={[4, 4, -1]} flexBasis={[16, 24, 60]} />
           <Box width='100%' flexDirection={['column', 'column', 'row']} order={[7, 7, -1]}>
-            {banner?.tagsList?.map(({ text }) => (
-              <React.Fragment key={text.substring(0, 3)}>
-                <TagBlock text={text} />
+            {mainPageData.benefits.map(({ benefit }) => (
+              <React.Fragment key={benefit.substring(0, 3)}>
+                <TagBlock text={benefit} />
                 <Layout flexBasis={16} />
               </React.Fragment>
             ))}
@@ -74,10 +74,10 @@ const BannerBlock = () => {
                   'text.smokyWhite',
                 ]}
               >
-                {banner?.description}
+                {mainPageData.about}
               </Text>
             </Box>
-            <ButtonCourse />
+            <ButtonCourse mainPageData={mainPageData}/>
           </Row>
           <Layout flexBasis={[24, 32, 40]} order={[8, 8, -1]} />
         </Column>

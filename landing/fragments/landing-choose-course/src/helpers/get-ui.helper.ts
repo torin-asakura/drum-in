@@ -1,3 +1,5 @@
+import {CourseID} from '@globals/data'
+
 const getUi = (itemId) => {
   if (itemId === 'cG9zdDozNDU=')
     return {
@@ -19,7 +21,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 43,
       rectangleColor: 'transparentPurpleGradient',
     }
-  if (itemId === 'cG9zdDozNDY=')
+  if (itemId === CourseID.FEELING_OF_TIME)
     return {
       squareRotate: 10,
       squarePositionX: 389,
@@ -39,7 +41,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 104,
       rectangleColor: 'transparentBlueGradient',
     }
-  if (itemId === 'cG9zdDozNDc=')
+  if (itemId === CourseID.FIFTH_DIMENSION)
     return {
       squareRotate: 0,
       squarePositionX: 400,
@@ -59,7 +61,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 40,
       rectangleColor: 'transparentGreenGradient',
     }
-  if (itemId === 'cG9zdDozNDg=')
+  if (itemId === CourseID.SEVENTH_HEAVEN)
     return {
       squareRotate: 0,
       squarePositionX: 184,
@@ -79,7 +81,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 44,
       rectangleColor: 'transparentPinkGradient',
     }
-  if (itemId === 'cG9zdDozNTA=')
+  if (itemId === CourseID.CONNACOL)
     return {
       squareRotate: 15,
       squarePositionX: 385,
@@ -99,7 +101,7 @@ const getUi = (itemId) => {
       rectanglePositionYMobile: 102,
       rectangleColor: 'transparentPurpleGradient',
     }
-  if (itemId === 'cG9zdDozNTE=')
+  if (itemId === CourseID.POLYRYTHMIC_KEYS)
     return {
       squareRotate: 0,
       squarePositionX: 27,
