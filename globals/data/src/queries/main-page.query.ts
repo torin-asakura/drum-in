@@ -36,6 +36,7 @@ generalFragments {
                           levelsNumber
                         }
                       }
+                      path
                     }
                   }
                   ... on IndividualCourse {
@@ -50,6 +51,7 @@ generalFragments {
                         bonuses
                         courseLengthInMonths
                       }
+                      path
                     }
                   }
                 }

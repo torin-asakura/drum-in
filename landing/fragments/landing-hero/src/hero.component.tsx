@@ -6,12 +6,8 @@ import { ChooseCourseBlock } from '@landing/choose-course-fragment'
 import { TapeBlock }         from '@landing/tape-fragment'
 import { Box }               from '@ui/layout'
 
-import { useHero }           from './data'
 
-const Hero = forwardRef(({background, data }: any, ref: any) => {
-  const hero = useHero()
-
-  return (
+const Hero = forwardRef(({mainPageData,background, data }: any, ref: any) =>  (
     <Box ref={ref}>
       <Box
         display={['none', 'flex', 'flex']}
@@ -22,9 +18,9 @@ const Hero = forwardRef(({background, data }: any, ref: any) => {
         backgroundRepeat='no-repeat'
         backgroundPosition='center top'
       >
-        <BannerBlock />
+        <BannerBlock mainPageData={mainPageData.hero}/>
         <TapeBlock />
-        <ChooseCourseBlock />
+        <ChooseCourseBlock mainPageData={mainPageData}/>
       </Box>
       <Box
         display={['flex', 'none', 'none']}
@@ -35,12 +31,12 @@ const Hero = forwardRef(({background, data }: any, ref: any) => {
         backgroundRepeat='no-repeat'
         backgroundPosition='right center'
       >
-        <BannerBlock />
+        <BannerBlock mainPageData={mainPageData.hero}/>
         <TapeBlock />
-        <ChooseCourseBlock />
+        <ChooseCourseBlock mainPageData={mainPageData}/>
       </Box>
     </Box>
   )
-})
+)
 
 export { Hero }

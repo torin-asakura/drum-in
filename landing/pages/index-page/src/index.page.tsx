@@ -26,7 +26,7 @@ import { useSong }                  from './data'
 
 export const HomePage = ({ mainPageData,background }) => {
 
-  console.log(mainPageData)
+  // console.log(mainPageData)
 
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
@@ -90,7 +90,7 @@ export const HomePage = ({ mainPageData,background }) => {
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo id={PageID.INDEX} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-            <Hero background={background} {...getObserverOptions('hero')} />
+            <Hero mainPageData={mainPageData} background={background} {...getObserverOptions('hero')} />
             <Box
               width='100%'
               flexWrap='wrap'

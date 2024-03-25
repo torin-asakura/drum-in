@@ -12,7 +12,7 @@ import { useHover }            from '@ui/utils'
 
 import { useBanner }           from '../data'
 
-const ButtonCourse = () => {
+const ButtonCourse = ({mainPageData}) => {
   const { scroll } = useLocomotiveScroll()
   const [hoverIcon, hoverIconProps] = useHover()
   const banner = useBanner()
@@ -55,7 +55,7 @@ const ButtonCourse = () => {
             fontSize='regular'
             lineHeight='primary'
           >
-            {banner?.titleButton}
+            {mainPageData.scrollButton}
           </Text>
         </Row>
         <Box
