@@ -1,4 +1,4 @@
 export interface ElementsProps {
   stateHover: boolean
-  headerData:any
+  headerData: any
 }

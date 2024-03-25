@@ -1,18 +1,6 @@
-import {CourseID} from '@globals/data'
+import { CourseID } from '@globals/data'
 
-const getUi = (itemId:string|undefined) => {
-  if (itemId === CourseID.OPENING_RHYTHM)
-    return {
-      squareRotate: -4,
-      squarePositionX: 372,
-      squarePositionY: 2,
-      circlePositionX: 218,
-      circlePositionY: 145,
-      rectangleRotate: 7,
-      rectanglePositionX: 2,
-      rectanglePositionY: 27,
-      rectangleColor: 'transparentPurpleGradient',
-    }
+const getUi = (itemId: string | undefined) => {
   if (itemId === CourseID.FEELING_OF_TIME)
     return {
       squareRotate: 10,
@@ -74,6 +62,18 @@ const getUi = (itemId:string|undefined) => {
       rectanglePositionY: 35,
       rectangleColor: 'transparentPurpleGradient',
     }
+
+  return {
+    squareRotate: -4,
+    squarePositionX: 372,
+    squarePositionY: 2,
+    circlePositionX: 218,
+    circlePositionY: 145,
+    rectangleRotate: 7,
+    rectanglePositionX: 2,
+    rectanglePositionY: 27,
+    rectangleColor: 'transparentPurpleGradient',
+  }
 }
 
 export { getUi }
