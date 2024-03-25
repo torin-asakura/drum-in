@@ -26,7 +26,7 @@ import { useSong }                  from './data'
 
 export const HomePage = ({ mainPageData,background }) => {
 
-  // console.log(mainPageData)
+  console.log(mainPageData)
 
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
@@ -104,7 +104,7 @@ export const HomePage = ({ mainPageData,background }) => {
                 setPlaySong={setPlaySong}
                 {...getObserverOptions('teacher')}
               />
-              <PrivateLessonBlock {...getObserverOptions('private-lesson')} />
+              <PrivateLessonBlock privateLessonData={mainPageData.individualLesson} {...getObserverOptions('private-lesson')} />
               <LearningProcessBlock {...getObserverOptions('learning-process')} />
             </Box>
             <StudentsBlock {...getObserverOptions('students')} />

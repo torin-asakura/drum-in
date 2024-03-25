@@ -10,7 +10,7 @@ import { Text }               from '@ui/text'
 
 import { usePrivateLesson }   from '../../data'
 
-const Buttons = () => {
+const Buttons = ({privateLessonData}) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const privateLesson = usePrivateLesson()?.privateLesson
@@ -29,7 +29,7 @@ const Buttons = () => {
             fontSize={['micro', 'semiRegular', 'large']}
             textTransform='uppercase'
           >
-            {privateLesson?.textButton}
+            {privateLessonData.cta.button}
           </Text>
         </Button>
       </Box>
@@ -41,7 +41,7 @@ const Buttons = () => {
           onClick={() => setVisibleModalMobile(true)}
         >
           <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-            {privateLesson?.textButton}
+            {privateLessonData.cta.button}
           </Text>
         </Button>
       </Row>
