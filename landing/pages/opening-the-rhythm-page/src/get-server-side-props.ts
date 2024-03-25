@@ -1,4 +1,3 @@
-import { GET_COURSE }       from '@globals/data'
 import { PageID }           from '@globals/data'
 import { GET_SEO }          from '@globals/data'
 import { initializeApollo } from '@globals/data'
@@ -9,12 +8,6 @@ export const getServerSideProps = async ({ res }) => {
   const client = initializeApollo({})
 
   setCacheHeader(res, 3600, 300)
-
-  const course = client.query({
-    query: GET_COURSE,
-  })
-
-  await Promise.allSettled([course])
 
   const { data: seoData } = await client.query({
     query: GET_SEO,

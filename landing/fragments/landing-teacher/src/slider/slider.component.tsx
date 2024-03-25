@@ -1,15 +1,15 @@
-import React                    from 'react'
-import { Children }             from 'react'
-import { useMemo }              from 'react'
+import React                     from 'react'
+import { Children }              from 'react'
+import { useMemo }               from 'react'
 
-import { Condition }            from '@ui/condition'
-import { DrumsticksIcon }       from '@ui/icons'
-import { Box }                  from '@ui/layout'
-import { Layout }               from '@ui/layout'
-import { Slider }               from '@ui/slider'
-import { SwiperSlide }          from '@ui/slider'
+import { Condition }             from '@ui/condition'
+import { DrumsticksIcon }        from '@ui/icons'
+import { Box }                   from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { Slider }                from '@ui/slider'
+import { SwiperSlide }           from '@ui/slider'
 
-import { Slide }                from './slide'
+import { Slide }                 from './slide'
 import { useViewportBreakpoint } from './hooks'
 
 const SliderBlock = ({ teacherData }) => {
