@@ -1035,6 +1035,8 @@ export type CommonFragments = AcfFieldGroup &
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     contacts?: Maybe<CommonFragmentsContacts>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    contractOffer?: Maybe<CommonFragmentsContractOffer>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     cta?: Maybe<CommonFragmentsCta>
     /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
@@ -1047,6 +1049,8 @@ export type CommonFragments = AcfFieldGroup &
     footer?: Maybe<CommonFragmentsFooter>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     header?: Maybe<CommonFragmentsHeader>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    main?: Maybe<CommonFragmentsMain>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     paymentForm?: Maybe<CommonFragmentsPaymentForm>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
@@ -1149,6 +1153,109 @@ export type CommonFragmentsContacts_Fields = {
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group */
   socials?: Maybe<Array<Maybe<CommonFragmentsContactsSocials>>>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContacts&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsContractOffer&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsContractOffer = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsContractOffer_Fields & {
+    __typename?: 'CommonFragmentsContractOffer'
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+    background?: Maybe<CommonFragmentsContractOfferBackground>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+    creationYear?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+    points?: Maybe<Array<Maybe<CommonFragmentsContractOfferPoints>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+    subtitle?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsContractOfferBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsContractOfferBackground = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsContractOfferBackground_Fields & {
+    __typename?: 'CommonFragmentsContractOfferBackground'
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+    desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+    mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+export type CommonFragmentsContractOfferBackground_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+  desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+  mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
+}
+
+/** The &quot;CommonFragmentsContractOfferPoints&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsContractOfferPoints = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsContractOfferPoints_Fields & {
+    __typename?: 'CommonFragmentsContractOfferPoints'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
+    subtitle?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
+export type CommonFragmentsContractOfferPoints_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
+  subtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsContractOffer&quot; Field Group */
+export type CommonFragmentsContractOffer_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+  background?: Maybe<CommonFragmentsContractOfferBackground>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+  creationYear?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+  points?: Maybe<Array<Maybe<CommonFragmentsContractOfferPoints>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+  subtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
 }
 
@@ -1486,6 +1593,587 @@ export type CommonFragmentsHeader_Fields = {
   navigationElements?: Maybe<Array<Maybe<CommonFragmentsHeaderNavigationElements>>>
 }
 
+/** The &quot;CommonFragmentsMain&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMain = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMain_Fields & {
+    __typename?: 'CommonFragmentsMain'
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+    background?: Maybe<CommonFragmentsMainBackground>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+    chooseCourse?: Maybe<CommonFragmentsMainChooseCourse>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+    hero?: Maybe<CommonFragmentsMainHero>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+    individualLesson?: Maybe<CommonFragmentsMainIndividualLesson>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+    runningline?: Maybe<Array<Maybe<CommonFragmentsMainRunningline>>>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+    slider?: Maybe<CommonFragmentsMainSlider>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+    students?: Maybe<CommonFragmentsMainStudents>
+  }
+
+/** The &quot;CommonFragmentsMainBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainBackground = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainBackground_Fields & {
+    __typename?: 'CommonFragmentsMainBackground'
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackground&quot; Field Group */
+    desktop?: Maybe<CommonFragmentsMainBackgroundDesktop>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackground&quot; Field Group */
+    mobile?: Maybe<CommonFragmentsMainBackgroundMobile>
+  }
+
+/** The &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainBackgroundDesktop = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainBackgroundDesktop_Fields & {
+    __typename?: 'CommonFragmentsMainBackgroundDesktop'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group */
+    footer?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group */
+    hero?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group */
+    teacher?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group */
+export type CommonFragmentsMainBackgroundDesktop_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group */
+  footer?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group */
+  hero?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundDesktop&quot; Field Group */
+  teacher?: Maybe<AcfMediaItemConnectionEdge>
+}
+
+/** The &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainBackgroundMobile = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainBackgroundMobile_Fields & {
+    __typename?: 'CommonFragmentsMainBackgroundMobile'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group */
+    footer?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group */
+    hero?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group */
+    teacher?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group */
+export type CommonFragmentsMainBackgroundMobile_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group */
+  footer?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group */
+  hero?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackgroundMobile&quot; Field Group */
+  teacher?: Maybe<AcfMediaItemConnectionEdge>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainBackground&quot; Field Group */
+export type CommonFragmentsMainBackground_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackground&quot; Field Group */
+  desktop?: Maybe<CommonFragmentsMainBackgroundDesktop>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainBackground&quot; Field Group */
+  mobile?: Maybe<CommonFragmentsMainBackgroundMobile>
+}
+
+/** The &quot;CommonFragmentsMainChooseCourse&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainChooseCourse = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainChooseCourse_Fields & {
+    __typename?: 'CommonFragmentsMainChooseCourse'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourse&quot; Field Group */
+    courses?: Maybe<Array<Maybe<CommonFragmentsMainChooseCourseCourses>>>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourse&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainChooseCourseCourses = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainChooseCourseCourses_Fields & {
+    __typename?: 'CommonFragmentsMainChooseCourseCourses'
+    /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group */
+    course?: Maybe<AcfContentNodeConnection>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainChooseCourseCoursesCourseArgs = {
+  after?: InputMaybe<Scalars['String']['input']>
+  before?: InputMaybe<Scalars['String']['input']>
+  first?: InputMaybe<Scalars['Int']['input']>
+  last?: InputMaybe<Scalars['Int']['input']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group */
+export type CommonFragmentsMainChooseCourseCourses_Fields = {
+  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group */
+  course?: Maybe<AcfContentNodeConnection>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainChooseCourseCourses&quot; Field Group */
+export type CommonFragmentsMainChooseCourseCourses_FieldsCourseArgs = {
+  after?: InputMaybe<Scalars['String']['input']>
+  before?: InputMaybe<Scalars['String']['input']>
+  first?: InputMaybe<Scalars['Int']['input']>
+  last?: InputMaybe<Scalars['Int']['input']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainChooseCourse&quot; Field Group */
+export type CommonFragmentsMainChooseCourse_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourse&quot; Field Group */
+  courses?: Maybe<Array<Maybe<CommonFragmentsMainChooseCourseCourses>>>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainChooseCourse&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsMainHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainHero = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainHero_Fields & {
+    __typename?: 'CommonFragmentsMainHero'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+    about?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+    benefits?: Maybe<Array<Maybe<CommonFragmentsMainHeroBenefits>>>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+    scrollButton?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+    subtitle?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsMainHeroBenefits&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainHeroBenefits = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainHeroBenefits_Fields & {
+    __typename?: 'CommonFragmentsMainHeroBenefits'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHeroBenefits&quot; Field Group */
+    benefit?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainHeroBenefits&quot; Field Group */
+export type CommonFragmentsMainHeroBenefits_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHeroBenefits&quot; Field Group */
+  benefit?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainHero&quot; Field Group */
+export type CommonFragmentsMainHero_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+  about?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+  benefits?: Maybe<Array<Maybe<CommonFragmentsMainHeroBenefits>>>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+  scrollButton?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+  subtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainHero&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsMainIndividualLesson&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainIndividualLesson = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainIndividualLesson_Fields & {
+    __typename?: 'CommonFragmentsMainIndividualLesson'
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLesson&quot; Field Group */
+    cta?: Maybe<CommonFragmentsMainIndividualLessonCta>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLesson&quot; Field Group */
+    details?: Maybe<Array<Maybe<CommonFragmentsMainIndividualLessonDetails>>>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLesson&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainIndividualLessonCta = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainIndividualLessonCta_Fields & {
+    __typename?: 'CommonFragmentsMainIndividualLessonCta'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+    button?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+    price?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+export type CommonFragmentsMainIndividualLessonCta_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+  button?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+  price?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonCta&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsMainIndividualLessonDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainIndividualLessonDetails = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainIndividualLessonDetails_Fields & {
+    __typename?: 'CommonFragmentsMainIndividualLessonDetails'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonDetails&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonDetails&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainIndividualLessonDetails&quot; Field Group */
+export type CommonFragmentsMainIndividualLessonDetails_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonDetails&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLessonDetails&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainIndividualLesson&quot; Field Group */
+export type CommonFragmentsMainIndividualLesson_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLesson&quot; Field Group */
+  cta?: Maybe<CommonFragmentsMainIndividualLessonCta>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLesson&quot; Field Group */
+  details?: Maybe<Array<Maybe<CommonFragmentsMainIndividualLessonDetails>>>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainIndividualLesson&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsMainRunningline&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainRunningline = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainRunningline_Fields & {
+    __typename?: 'CommonFragmentsMainRunningline'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainRunningline&quot; Field Group */
+    text?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainRunningline&quot; Field Group */
+export type CommonFragmentsMainRunningline_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainRunningline&quot; Field Group */
+  text?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsMainSlider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainSlider = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainSlider_Fields & {
+    __typename?: 'CommonFragmentsMainSlider'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSlider&quot; Field Group */
+    lowerslider?: Maybe<Array<Maybe<CommonFragmentsMainSliderLowerslider>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSlider&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSlider&quot; Field Group */
+    upperslider?: Maybe<Array<Maybe<CommonFragmentsMainSliderUpperslider>>>
+  }
+
+/** The &quot;CommonFragmentsMainSliderLowerslider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainSliderLowerslider = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainSliderLowerslider_Fields & {
+    __typename?: 'CommonFragmentsMainSliderLowerslider'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderLowerslider&quot; Field Group */
+    image?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderLowerslider&quot; Field Group */
+    text?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainSliderLowerslider&quot; Field Group */
+export type CommonFragmentsMainSliderLowerslider_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderLowerslider&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderLowerslider&quot; Field Group */
+  text?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;CommonFragmentsMainSliderUpperslider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainSliderUpperslider = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainSliderUpperslider_Fields & {
+    __typename?: 'CommonFragmentsMainSliderUpperslider'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderUpperslider&quot; Field Group */
+    image?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderUpperslider&quot; Field Group */
+    text?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainSliderUpperslider&quot; Field Group */
+export type CommonFragmentsMainSliderUpperslider_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderUpperslider&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSliderUpperslider&quot; Field Group */
+  text?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainSlider&quot; Field Group */
+export type CommonFragmentsMainSlider_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSlider&quot; Field Group */
+  lowerslider?: Maybe<Array<Maybe<CommonFragmentsMainSliderLowerslider>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSlider&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainSlider&quot; Field Group */
+  upperslider?: Maybe<Array<Maybe<CommonFragmentsMainSliderUpperslider>>>
+}
+
+/** The &quot;CommonFragmentsMainStudents&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainStudents = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainStudents_Fields & {
+    __typename?: 'CommonFragmentsMainStudents'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+    cards?: Maybe<Array<Maybe<CommonFragmentsMainStudentsCards>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+    cta?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;CommonFragmentsMainStudentsCards&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsMainStudentsCards = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsMainStudentsCards_Fields & {
+    __typename?: 'CommonFragmentsMainStudentsCards'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+    firstBadge?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+    leftIcon?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+    rightIcon?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+    secondBadge?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+export type CommonFragmentsMainStudentsCards_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+  firstBadge?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+  leftIcon?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+  rightIcon?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+  secondBadge?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudentsCards&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMainStudents&quot; Field Group */
+export type CommonFragmentsMainStudents_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+  cards?: Maybe<Array<Maybe<CommonFragmentsMainStudentsCards>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+  cta?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMainStudents&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsMain&quot; Field Group */
+export type CommonFragmentsMain_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+  background?: Maybe<CommonFragmentsMainBackground>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+  chooseCourse?: Maybe<CommonFragmentsMainChooseCourse>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+  hero?: Maybe<CommonFragmentsMainHero>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+  individualLesson?: Maybe<CommonFragmentsMainIndividualLesson>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+  runningline?: Maybe<Array<Maybe<CommonFragmentsMainRunningline>>>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+  slider?: Maybe<CommonFragmentsMainSlider>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsMain&quot; Field Group */
+  students?: Maybe<CommonFragmentsMainStudents>
+}
+
 /** The &quot;CommonFragmentsPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CommonFragmentsPaymentForm = AcfFieldGroup &
   AcfFieldGroupFields &
@@ -1793,6 +2481,8 @@ export type CommonFragments_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   contacts?: Maybe<CommonFragmentsContacts>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  contractOffer?: Maybe<CommonFragmentsContractOffer>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   cta?: Maybe<CommonFragmentsCta>
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
@@ -1805,6 +2495,8 @@ export type CommonFragments_Fields = {
   footer?: Maybe<CommonFragmentsFooter>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   header?: Maybe<CommonFragmentsHeader>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  main?: Maybe<CommonFragmentsMain>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   paymentForm?: Maybe<CommonFragmentsPaymentForm>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
@@ -13181,6 +13873,44 @@ export type ContactsQuery = {
   } | null
 }
 
+export type ContractOfferQueryVariables = Exact<{ [key: string]: never }>
+
+export type ContractOfferQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        contractOffer?: {
+          __typename?: 'CommonFragmentsContractOffer'
+          title?: string | null
+          subtitle?: string | null
+          creationYear?: string | null
+          points?: Array<{
+            __typename?: 'CommonFragmentsContractOfferPoints'
+            title?: string | null
+            subtitle?: string | null
+            description?: string | null
+          } | null> | null
+          background?: {
+            __typename?: 'CommonFragmentsContractOfferBackground'
+            desktopFooter?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+            mobileFooter?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
 export type CtaQueryVariables = Exact<{ [key: string]: never }>
 
 export type CtaQuery = {
@@ -13688,6 +14418,131 @@ export const ContactsDocument = {
     },
   ],
 } as unknown as DocumentNode<ContactsQuery, ContactsQueryVariables>
+export const ContractOfferDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'ContractOffer' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'contractOffer' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'creationYear' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'points' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'subtitle' },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'description' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'background' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'desktopFooter' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'mobileFooter' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ContractOfferQuery, ContractOfferQueryVariables>
 export const CtaDocument = {
   kind: 'Document',
   definitions: [
