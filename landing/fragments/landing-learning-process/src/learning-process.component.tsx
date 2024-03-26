@@ -11,8 +11,7 @@ import { SliderBottom }       from './slider-bottom'
 import { SliderTop }          from './slider-top'
 import { useLearningProcess } from './data'
 
-const LearningProcessBlock = forwardRef(({ data }: any, ref: any) => {
-  const learningProcess = useLearningProcess()
+const LearningProcessBlock = forwardRef(({learningProcessData, data }: any, ref: any) => {
 
   return (
     <Box
@@ -37,7 +36,7 @@ const LearningProcessBlock = forwardRef(({ data }: any, ref: any) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {learningProcess?.title}
+                {learningProcessData?.title}
               </Text>
             </Box>
             <Layout flexBasis={[24, 46, 68]} />
@@ -47,9 +46,9 @@ const LearningProcessBlock = forwardRef(({ data }: any, ref: any) => {
       </Row>
       <Box>
         <Column>
-          <SliderTop />
+          <SliderTop upperSliderData={learningProcessData.upperslider}/>
           <Layout flexBasis={[16, 28, 40]} />
-          <SliderBottom />
+          <SliderBottom lowerSliderData={learningProcessData.lowerslider}/>
           <Layout flexBasis={[64, 77, 90]} />
         </Column>
       </Box>

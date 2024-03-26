@@ -8,22 +8,21 @@ import { Repeater }           from '@ui/utils'
 
 import { SlideImage }         from '../slide-image'
 import { SlideText }          from '../slide-text'
-import { useLearningProcess } from '../data'
 
-const SliderBottom = () => {
-  const learningProcess = useLearningProcess()?.learningProcess?.secondLine
+const SliderBottom = ({lowerSliderData}) => {
 
   const learningProcessBottomChildren = useMemo(() => {
-    let i = 0
-    return learningProcess?.map(({ image, text = '' }, index) => {
-      if (index % 2 === 1) {
-        i += 1
-        return <SlideText text={text} activeIcons={i % 2 === 0 ? 'target' : 'sheetMusic'} />
-      }
+    return lowerSliderData?.map(({ image, text },index) => {
 
-      return <SlideImage pathImage={image?.sourceUrl} />
+      return (
+        <>
+          <SlideText text={text}  activeIcons={index % 2 === 0 ? 'target' : 'sheetMusic'}/>
+          <Layout flexBasis={40} flexShrink={0}/>
+          <SlideImage pathImage={image?.node.sourceUrl} />
+        </>
+      )
     })
-  }, [learningProcess])
+  }, [lowerSliderData])
 
   return (
     <Row

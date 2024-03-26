@@ -19,6 +19,7 @@ const SlideText: FC<SlideTextProps> = ({ text, activeIcons }) => {
   const [active, activeProps] = useHover()
 
   return (
+    text? (
     <Box
       {...activeProps}
       position='relative'
@@ -109,6 +110,7 @@ const SlideText: FC<SlideTextProps> = ({ text, activeIcons }) => {
         </Box>
       )}
     </Box>
+      ): null
   )
 }
 

@@ -13,7 +13,6 @@ import { RightColumn }        from './right-column'
 import { usePrivateLesson }   from './data'
 
 const PrivateLessonBlock = forwardRef(({privateLessonData, data }: any, ref: any) => {
-  console.log(privateLessonData)
   return (
     <Row justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>

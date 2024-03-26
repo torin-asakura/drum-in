@@ -7,6 +7,7 @@ import { Box }             from '@ui/layout'
 import { SlideImageProps } from './slide-image.interfaces'
 
 const SlideImage: FC<SlideImageProps> = ({ pathImage }) => (
+  pathImage?(
   <Box
     width={[246, 350, 480]}
     height={[164, 240, 320]}
@@ -16,6 +17,7 @@ const SlideImage: FC<SlideImageProps> = ({ pathImage }) => (
   >
     <ImageBlock src={pathImage} />
   </Box>
+  ):null
 )
 
 export { SlideImage }
