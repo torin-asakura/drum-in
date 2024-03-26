@@ -99,6 +99,8 @@ generalFragments {
               secondBadge
               title
               description
+              leftIcon{node{sourceUrl}}
+              rightIcon{node{sourceUrl}}
             }
           }
             background {

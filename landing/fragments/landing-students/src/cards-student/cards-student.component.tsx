@@ -12,22 +12,22 @@ import { SwiperSlide }     from '@ui/slider'
 import { BackgroundBlock } from './background'
 import { CardsSwiper }     from './cards-swiper'
 import { Item }            from './item'
-import { useStudents }     from '../data'
 import { getUi }           from '../helpers'
 
-const CardsStudent = () => {
-  const students = useStudents()?.students?.cardsStudents
+const CardsStudent = ({studentCardsData}) => {
 
   const studentsSliderChildren = useMemo(
     () =>
-      students?.map(({ name, age, specialization, firstIcon, secondIcon, description }, index) => (
+      studentCardsData.map(({
+        leftIcon,rightIcon,firstBadge,secondBadge,title,description
+      }, index) => (
         <Item
-          fullName={name}
-          age={age}
-          profession={specialization}
+          fullName={title}
+          age={firstBadge}
+          profession={secondBadge}
           description={description}
-          urlFirstIcon={firstIcon.sourceUrl}
-          urlSecondIcon={secondIcon.sourceUrl}
+          urlFirstIcon={leftIcon.node.sourceUrl}
+          urlSecondIcon={rightIcon.node.sourceUrl}
           verticalPositionFirstIcon={getUi(index).verticalPositionFirstIcon}
           horizontalPositionFirstIcon={getUi(index).horizontalPositionFirstIcon}
           verticalPositionSecondIcon={getUi(index).verticalPositionSecondIcon}
@@ -35,19 +35,18 @@ const CardsStudent = () => {
           rotateCard={getUi(index).rotateCard}
         />
       )),
-    [students]
+    [studentCardsData]
   )
 
   return (
     <>
-      <Column display={['none', 'none', 'flex']}>
-        <Row>
-          <Condition match={studentsSliderChildren !== [] && studentsSliderChildren !== undefined}>
+      <Column >
+        <Row display={['none', 'flex', 'flex']}>
             <Slider
               clName='students-slider-desktop'
               spaceBetween={40}
               slidesPerView='auto'
-              slidesOffsetAfter={40}
+              slidesOffsetAfter={-40}
               slidesOffsetBefore={40}
               mousewheel
               grabCursor
@@ -57,9 +56,24 @@ const CardsStudent = () => {
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
             </Slider>
-          </Condition>
         </Row>
-        <Layout flexBasis={[64, 70, 42]} />
+        <Row display={['flex', 'none', 'none']}>
+          <Slider
+            clName='students-slider-desktop'
+            spaceBetween={20}
+            slidesPerView='auto'
+            slidesOffsetAfter={20}
+            slidesOffsetBefore={20}
+            mousewheel
+            grabCursor
+            forceToAxis
+          >
+            {Children.map(studentsSliderChildren, (child) => (
+              <SwiperSlide>{child}</SwiperSlide>
+            ))}
+          </Slider>
+        </Row>
+        <Layout flexBasis={[0, 0, 42]} />
         <BackgroundBlock />
       </Column>
       <CardsSwiper />

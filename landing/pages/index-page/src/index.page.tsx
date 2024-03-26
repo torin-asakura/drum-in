@@ -107,7 +107,7 @@ export const HomePage = ({ mainPageData,background }) => {
               <PrivateLessonBlock privateLessonData={mainPageData.individualLesson} {...getObserverOptions('private-lesson')} />
               <LearningProcessBlock learningProcessData={mainPageData.slider} {...getObserverOptions('learning-process')} />
             </Box>
-            <StudentsBlock {...getObserverOptions('students')} />
+            <StudentsBlock studentsData={ mainPageData.students} {...getObserverOptions('students')} />
             <FaqBlock {...getObserverOptions('faq')} />
             <CtaBlock {...getObserverOptions('cta')} />
             <Box
