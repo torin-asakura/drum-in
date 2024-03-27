@@ -1,5 +1,6 @@
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useIntl }                from 'react-intl'
 
 import { Button }                 from '@ui/button'
 import { Condition }              from '@ui/condition'
@@ -17,12 +18,13 @@ import { Text }                   from '@ui/text'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useModalForm }           from '../data'
 import { useContent }             from './content.hook'
 
-const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
-  const modalForm = useModalForm()
-  const { amount } = useContent(roleVar[0], modalForm)
+const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, options, setRole }) => {
+  const installmentPlan = connacolData?.individualCourseData.price.monthlyPrice
+  const oneTimePayment = connacolData?.individualCourseData.price.fullPrice
+  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
+  const { formatMessage } = useIntl()
 
   return (
     <>
@@ -32,7 +34,7 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
         justifyContent={['start', 'space-between', 'space-between']}
         alignItems='start'
       >
-        <Box width={['100%', 419, 419]}>
+        <Box width={['100%', 410, 410]}>
           <Text
             fontWeight='medium'
             fontSize={['large', 'moderate', 'semiIncreased']}
@@ -40,7 +42,8 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
             color='text.smokyWhite'
             display='inline'
           >
-            {modalForm?.title}
+            {formatMessage({ id: 'course.payment.buy_course' })}
+            {` "${connacolData.title}"`}
           </Text>
         </Box>
         <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
@@ -90,16 +93,16 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
           style={{ transform: 'rotate(15deg)' }}
         >
           <Text fontWeight='medium' fontSize='medium' lineHeight='medium' color='text.smokyWhite'>
-            {modalForm?.benefit}
+            benefit
           </Text>
         </Box>
       </Row>
       <Layout flexBasis={28} flexShrink={0} />
       <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
-        <ContentInstallmentPlan />
+        <ContentInstallmentPlan connacolData={connacolData} />
       </Condition>
       <Condition match={roleVar.includes(options[1].value)}>
-        <ContentOneTimePayment />
+        <ContentOneTimePayment connacolData={connacolData} />
       </Condition>
       <Condition match={!!amount}>
         <Form amount={amount} form='payment' key={amount} />

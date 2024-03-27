@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { FormattedNumber }  from 'react-intl'
+import { useIntl }          from 'react-intl'
 
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -10,14 +11,16 @@ import { Text }             from '@ui/text'
 import { SelectedCourse }   from '../selected-course'
 import { useModalForm }     from '../../data'
 
-const ContentOneTimePayment = () => {
-  const modalForm = useModalForm()
+const ContentOneTimePayment = ({ connacolData }) => {
+  const { formatMessage } = useIntl()
 
   return (
     <>
-      {modalForm?.courses?.map(({ name, description }) => (
-        <SelectedCourse title={name} description={description} />
-      ))}
+      {/* TODO: description course */}
+      <SelectedCourse
+        title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${connacolData?.title}"`}
+        description='description'
+      />
       <Layout flexBasis={[8, 16, 24]} flexShrink={0} />
       <Row justifyContent='end'>
         <Text
@@ -29,7 +32,7 @@ const ContentOneTimePayment = () => {
           <FormattedMessage id='landing_modal_forms.amount' />
           <Space />
           <FormattedNumber
-            value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+            value={connacolData?.individualCourseData.price.fullPrice}
             style='currency' // eslint-disable-line
             currency='RUB'
             maximumFractionDigits={0}

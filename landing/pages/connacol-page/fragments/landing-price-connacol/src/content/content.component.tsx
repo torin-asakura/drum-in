@@ -111,7 +111,11 @@ const Content: FC<ContentProps> = ({ connacolData }) => {
             </Text>
           </Button>
         </Box>
-        <ModalFormConnacol activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+        <ModalFormConnacol
+          connacolData={connacolData}
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+        />
         <ModalMobileFormConnacol
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
