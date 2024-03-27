@@ -1,4 +1,5 @@
 import React                       from 'react'
+import { FC }                      from 'react'
 import { FormattedMessage }        from 'react-intl'
 import { useState }                from 'react'
 import { useIntl }                 from 'react-intl'
@@ -12,19 +13,20 @@ import { Layout }                  from '@ui/layout'
 import { Space }                   from '@ui/text'
 import { Text }                    from '@ui/text'
 
+import { ContentProps }            from './content.interfaces'
 import { Figures }                 from './figures'
 import { FullPrice }               from './full-price'
 import { ShortCourseContentList }  from './short-course-content-list'
 import { Title }                   from './title'
 
-const Content = ({ connacolData }) => {
+const Content: FC<ContentProps> = ({ connacolData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
 
   const fullPrice = ` 
-        ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })} 
-        ${connacolData?.individualCourseData.price.fullPrice} 
+        ${formatMessage({ id: 'course.price.full_course_for' })} 
+        ${connacolData?.individualCourseData?.price?.fullPrice} 
         ${formatMessage({ id: 'currency.ruble' })}
         `
 
@@ -39,7 +41,7 @@ const Content = ({ connacolData }) => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={connacolData?.individualCourseData.price.monthlyPrice}
+          currency={connacolData?.individualCourseData?.price?.monthlyPrice}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
@@ -56,7 +58,7 @@ const Content = ({ connacolData }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='large' textTransform='uppercase'>
-              {connacolData?.individualCourseData.price.cta}
+              {connacolData?.individualCourseData?.price?.cta}
             </Text>
           </Button>
         </Box>
@@ -74,7 +76,7 @@ const Content = ({ connacolData }) => {
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
             <Text color='text.green'>
-              {connacolData?.individualCourseData.price.discount}
+              {connacolData?.individualCourseData?.price?.discount}
               <Space />
               {formatMessage({ id: 'currency.ruble' })}
             </Text>
@@ -89,7 +91,7 @@ const Content = ({ connacolData }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {connacolData.individualCourseData.price.monthlyPrice}
+              {connacolData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -103,7 +105,7 @@ const Content = ({ connacolData }) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {connacolData.individualCourseData.price.monthlyPrice}
+              {connacolData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -116,9 +118,9 @@ const Content = ({ connacolData }) => {
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={connacolData?.individualCourseData.price.courseLengthInMonths}
-          quantityVideoLessons={connacolData?.individualCourseData.price.videoTrainingsNumber}
-          secondLineCircle={connacolData?.individualCourseData.price.bonuses}
+          quantityMonths={connacolData?.individualCourseData?.price?.courseLengthInMonths}
+          quantityVideoLessons={connacolData?.individualCourseData?.price?.videoTrainingsNumber}
+          secondLineCircle={connacolData?.individualCourseData?.price?.bonuses}
           rectangleRotate={-20}
           circleRotate={20}
           squareRotate={-20}

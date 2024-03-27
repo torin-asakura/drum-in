@@ -1,6 +1,6 @@
 export interface CircleProps {
-  firstLine?: string
-  secondLine: string
+  firstLine?: string | null
+  secondLine?: string | null
   gradient?: string
   rotate?: number
 }

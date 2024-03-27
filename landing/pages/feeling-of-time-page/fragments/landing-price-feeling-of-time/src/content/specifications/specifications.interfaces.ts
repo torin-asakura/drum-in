@@ -1,7 +1,7 @@
 export interface SpecificationsProps {
-  quantityVideoLessons: string
+  quantityVideoLessons: number
   firstLineCircle: string
   secondLineCircle: string
-  quantityMonths: string
+  quantityMonths: number
   wordMonth: string
 }

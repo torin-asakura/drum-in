@@ -10,13 +10,13 @@ export const getServerSideProps = async ({ res }) => {
 
   setCacheHeader(res, 3600, 300)
 
-  const { data: course } = await client.query({
+  const { data } = await client.query({
     query: GET_INDIVIDUAL_COURSE,
     variables: { id: CourseID.CONNACOL },
   })
 
-  const connacolData = course?.individualCourse
-  const background = course?.individualCourse?.individualCourseData?.background
+  const connacolData = data?.individualCourse
+  const background = data?.individualCourse?.individualCourseData?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,

@@ -5,14 +5,14 @@ export interface SlideProps {
   squareRotate: number
   squarePositionX: number
   squarePositionY: number
-  quantityVideoLessons: string
+  quantityVideoLessons: number
   circlePositionX: number
   circlePositionY: number
   quantityLiveBroadcast: string
   rectangleRotate: number
   rectanglePositionX: number
   rectanglePositionY: number
-  quantityMonths: string
+  quantityMonths: number
   textMonths: string
   rectangleColor: string
 }

@@ -1,16 +1,18 @@
-import React                   from 'react'
+import React                    from 'react'
+import { FC }                   from 'react'
 
-import { ArrowTopDownIcon }    from '@ui/icons'
-import { ProgramIcon }         from '@ui/icons'
-import { Box }                 from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
+import { ArrowTopDownIcon }     from '@ui/icons'
+import { ProgramIcon }          from '@ui/icons'
+import { Box }                  from '@ui/layout'
+import { Row }                  from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Layout }               from '@ui/layout'
 
-import { ContentCourse }       from './content-course'
-import { ContentMobileCourse } from './content-mobile-course'
+import { ContentCourse }        from './content-course'
+import { ContentMobileCourse }  from './content-mobile-course'
+import { ProgramConnacolProps } from './program-connacol.interfaces'
 
-const ProgramConnacolBlock = ({ connacolData, scrollId }) => (
+const ProgramConnacolBlock: FC<ProgramConnacolProps> = ({ background, connacolData, scrollId }) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <Box
@@ -50,7 +52,7 @@ const ProgramConnacolBlock = ({ connacolData, scrollId }) => (
                 wide: '-1000px center',
               }}
               backgroundSize='100%'
-              backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/progress-horizontal-section.png'})`}
+              backgroundImage={`url(${background?.courseProgram?.node?.sourceUrl})`}
             >
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 2700, wide: 2000 }} flexShrink={0} />
               <Box width={{ _: 0, tablet: 0, laptop: 2000, wide: 2612 }}>

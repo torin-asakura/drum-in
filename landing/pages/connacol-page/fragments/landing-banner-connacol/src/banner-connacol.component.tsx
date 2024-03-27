@@ -1,5 +1,6 @@
 import React                    from 'react'
 import uniqid                   from 'uniqid'
+import { FC }                   from 'react'
 
 import { ArrowRightBottomIcon } from '@ui/icons'
 import { Box }                  from '@ui/layout'
@@ -9,9 +10,10 @@ import { Row }                  from '@ui/layout'
 import { Text }                 from '@ui/text'
 import { formatContent }        from '@shared/utils'
 
+import { BannerConnacolProps }  from './banner-connacol.interfaces'
 import { TagBlock }             from './tag'
 
-const BannerConnacolBlock = ({ connacolData }) => {
+const BannerConnacolBlock: FC<BannerConnacolProps> = ({ connacolData }) => {
   const bannerContent = formatContent(connacolData?.content)
 
   return (
@@ -50,9 +52,9 @@ const BannerConnacolBlock = ({ connacolData }) => {
               </Box>
               <Layout order={[2, 2, 0]} flexBasis={[16, 24, 32]} flexShrink={0} />
               <Box order={[5, 5, 0]} flexDirection={['column', 'column', 'row']}>
-                {connacolData?.individualCourseData.hero.benefits.map(({ content }) => (
+                {connacolData?.individualCourseData?.hero?.benefits?.map((item) => (
                   <React.Fragment key={uniqid()}>
-                    <TagBlock text={content} />
+                    <TagBlock text={item?.content} />
                     <Layout flexBasis={16} flexShrink={0} />
                   </React.Fragment>
                 ))}

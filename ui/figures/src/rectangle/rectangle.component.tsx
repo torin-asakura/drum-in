@@ -9,7 +9,7 @@ import { Text }             from '@ui/text'
 import { RectangleProps }   from './rectangle.interfaces'
 
 const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {
-  const monthCount = parseInt(firstLine, 10)
+  const monthCount = firstLine
   return (
     <Background
       gradient={color}

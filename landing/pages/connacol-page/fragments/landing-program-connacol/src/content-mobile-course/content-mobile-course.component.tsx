@@ -1,19 +1,25 @@
-import React                      from 'react'
-import uniqid                     from 'uniqid'
-import { FormattedMessage }       from 'react-intl'
+import React                        from 'react'
+import uniqid                       from 'uniqid'
+import { FC }                       from 'react'
+import { FormattedMessage }         from 'react-intl'
 
-import { LightningIcon }          from '@ui/icons'
-import { Box }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { ProgressBar }            from '@ui/progress-bar'
-import { Space }                  from '@ui/text'
-import { Text }                   from '@ui/text'
-import { splitAndSliceFirstItem } from '@shared/utils/src'
+import { LightningIcon }            from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { ProgressBar }              from '@ui/progress-bar'
+import { Space }                    from '@ui/text'
+import { Text }                     from '@ui/text'
+import { splitAndSliceFirstItem }   from '@shared/utils/src'
 
-const ContentMobileCourse = ({ connacolData, scrollId = 'scroll-mobile' }) => {
-  const stepsArray = connacolData?.individualCourseData.process.step
+import { ContentMobileCourseProps } from './content-mobile-course.interfaces'
+
+const ContentMobileCourse: FC<ContentMobileCourseProps> = ({
+  connacolData,
+  scrollId = 'scroll-mobile',
+}) => {
+  const stepsArray = connacolData?.individualCourseData?.process?.step
   return (
     <Box
       display='block'
@@ -38,7 +44,7 @@ const ContentMobileCourse = ({ connacolData, scrollId = 'scroll-mobile' }) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {stepsArray[0].title}
+                {stepsArray?.[0]?.title}
               </Text>
             </Box>
             <Layout flexBasis={[8, 12, 12]} flexShrink={0} />
@@ -49,7 +55,7 @@ const ContentMobileCourse = ({ connacolData, scrollId = 'scroll-mobile' }) => {
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                {stepsArray[0].description}
+                {stepsArray?.[0]?.description}
               </Text>
             </Box>
           </Column>
@@ -58,7 +64,7 @@ const ContentMobileCourse = ({ connacolData, scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[95, 130, 0]} />
           <Box flexDirection='column' height={[50, 50, 0]}>
-            {splitAndSliceFirstItem(stepsArray[1].description).map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[1]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -78,7 +84,7 @@ const ContentMobileCourse = ({ connacolData, scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[65, 80, 0]} />
           <Box flexDirection='column' height={[50, 50, 0]}>
-            {splitAndSliceFirstItem(stepsArray[2].description).map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[2]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -111,7 +117,7 @@ const ContentMobileCourse = ({ connacolData, scrollId = 'scroll-mobile' }) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {stepsArray[3].title}
+                {stepsArray?.[3]?.title}
               </Text>
             </Box>
           </Box>
@@ -120,7 +126,7 @@ const ContentMobileCourse = ({ connacolData, scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[65, 105, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {splitAndSliceFirstItem(stepsArray[4].description).map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[4]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'

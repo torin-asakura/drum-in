@@ -12,7 +12,7 @@ import { BulletedListProps } from './bulleted-list.interfaces'
 export const BulletedList: FC<BulletedListProps> = ({ list }) => (
   <Box display={['flex', 'flex', 'none']}>
     <Column>
-      {list.map(({ number, text }) => (
+      {list?.map(({ number, text }) => (
         <Box>
           <Text
             fontWeight='medium'

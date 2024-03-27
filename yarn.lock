@@ -2856,6 +2856,7 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -2909,6 +2910,7 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.6.9"
     "@emotion/styled": "npm:11.11.0"
+    "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/icons": "workspace:0.0.1"
@@ -4078,6 +4080,7 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@globals/data": "workspace:0.0.1"
     "@landing/modal-form-connacol": "workspace:0.0.1"
     "@shared/bulleted-list-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
@@ -4324,6 +4327,7 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/uniqid": "npm:5.3.2"

@@ -1,16 +1,18 @@
-import React            from 'react'
+import React               from 'react'
+import { FC }              from 'react'
 
-import { OpenOvalIcon } from '@ui/icons'
-import { Box }          from '@ui/layout'
-import { Column }       from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Row }          from '@ui/layout'
-import { Text }         from '@ui/text'
+import { OpenOvalIcon }    from '@ui/icons'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Text }            from '@ui/text'
 
-import { DesktopCards } from './desktop-cards'
-import { MobileCards }  from './mobile-cards'
+import { AdvantagesProps } from './advantages.interfaces'
+import { DesktopCards }    from './desktop-cards'
+import { MobileCards }     from './mobile-cards'
 
-const AdvantagesBlock = ({ connacolData }) => (
+const AdvantagesBlock: FC<AdvantagesProps> = ({ connacolData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -25,7 +27,7 @@ const AdvantagesBlock = ({ connacolData }) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {connacolData.individualCourseData.hero.cta}
+            {connacolData?.individualCourseData?.hero?.cta}
           </Text>
           <Box display={['none', 'none', 'flex']} position='absolute' right={-23} top={-47}>
             <OpenOvalIcon width={421} height={150} />

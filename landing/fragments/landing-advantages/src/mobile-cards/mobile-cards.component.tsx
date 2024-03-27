@@ -1,21 +1,23 @@
-import React           from 'react'
-import { Children }    from 'react'
-import { useMemo }     from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { Children }         from 'react'
+import { useMemo }          from 'react'
 
-import { Condition }   from '@ui/condition'
-import { Row }         from '@ui/layout'
-import { Slider }      from '@ui/slider'
-import { SwiperSlide } from '@ui/slider'
+import { Condition }        from '@ui/condition'
+import { Row }              from '@ui/layout'
+import { Slider }           from '@ui/slider'
+import { SwiperSlide }      from '@ui/slider'
 
-import { Card }        from '../card'
+import { Card }             from '../card'
+import { MobileCardsProps } from './mobile-cards.interfaces'
 
-const MobileCards = ({ connacolData }) => {
-  const getCount = (number: number): string => `0${number}`
+const MobileCards: FC<MobileCardsProps> = ({ connacolData }) => {
+  const getCount = (number?: number | null): string => `0${number}`
 
   const advantagesChildren = useMemo(
     () =>
-      connacolData?.individualCourseData.hero.courseConditions.map(({ number, description }) => (
-        <Card counter={getCount(number)} text={description} />
+      connacolData?.individualCourseData?.hero?.courseConditions?.map((element) => (
+        <Card counter={getCount(element?.number)} text={element?.description} />
       )),
     [connacolData]
   )

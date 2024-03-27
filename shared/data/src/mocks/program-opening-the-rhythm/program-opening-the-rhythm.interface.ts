@@ -3,9 +3,9 @@ export interface ProgramOpeningTheRhythm {
   level: string
   desc: string
   necessaryKnowledge: string
-  quantityVideoLessons: string
+  quantityVideoLessons: number
   quantityLiveBroadcast: string
-  quantityMonths: string
+  quantityMonths: number
   textMonths: string
   itemId: string
   titleHoverBlock: string

@@ -1,4 +1,4 @@
-import { gql } from '../__generated__'
+import { gql } from '../../__generated__'
 
 const GET_INDIVIDUAL_COURSE = gql(`
 query IndividualCourse($id: ID!) {
@@ -15,6 +15,7 @@ title
 }
 
 background {
+courseProgram{node{sourceUrl}}
 desktop {
 footer {
 node {

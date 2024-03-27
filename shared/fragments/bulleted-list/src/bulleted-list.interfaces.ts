@@ -1,3 +1,3 @@
 export interface BulletedListProps {
-  list: { number?: number; text: string | JSX.Element }[]
+  list?: { number?: number | null; text?: string | null | JSX.Element }[] | null
 }

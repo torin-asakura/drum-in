@@ -1,4 +1,4 @@
 export interface CardProps {
   counter: string
-  text: string
+  text?: string | null
 }

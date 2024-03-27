@@ -1,19 +1,22 @@
-import React                      from 'react'
-import uniqid                     from 'uniqid'
-import { FormattedMessage }       from 'react-intl'
+import React                       from 'react'
+import uniqid                      from 'uniqid'
+import { FC }                      from 'react'
+import { FormattedMessage }        from 'react-intl'
 
-import { BullhornIcon }           from '@ui/icons'
-import { LightningIcon }          from '@ui/icons'
-import { Box }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { Space }                  from '@ui/text'
-import { Text }                   from '@ui/text'
-import { splitAndSliceFirstItem } from '@shared/utils'
+import { BullhornIcon }            from '@ui/icons'
+import { LightningIcon }           from '@ui/icons'
+import { Box }                     from '@ui/layout'
+import { Column }                  from '@ui/layout'
+import { Layout }                  from '@ui/layout'
+import { Row }                     from '@ui/layout'
+import { Space }                   from '@ui/text'
+import { Text }                    from '@ui/text'
+import { splitAndSliceFirstItem }  from '@shared/utils'
 
-const ContentCourse = ({ connacolData }) => {
-  const stepsArray = connacolData?.individualCourseData.process.step
+import { ContentCourseInterfaces } from './content-course.interfaces'
+
+const ContentCourse: FC<ContentCourseInterfaces> = ({ connacolData }) => {
+  const stepsArray = connacolData?.individualCourseData?.process?.step
 
   return (
     <Column
@@ -44,7 +47,7 @@ const ContentCourse = ({ connacolData }) => {
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  {stepsArray[0].title}
+                  {stepsArray?.[0]?.title}
                 </Text>
               </Box>
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 12, wide: 16 }} flexShrink={0} />
@@ -60,7 +63,7 @@ const ContentCourse = ({ connacolData }) => {
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {stepsArray[0].description}
+                  {stepsArray?.[0]?.description}
                 </Text>
               </Box>
             </Column>
@@ -69,7 +72,7 @@ const ContentCourse = ({ connacolData }) => {
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 395, wide: 470 }} flexShrink={0}>
-          {splitAndSliceFirstItem(stepsArray[2].description).map((element) => (
+          {splitAndSliceFirstItem(stepsArray?.[2]?.description)?.map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
@@ -100,7 +103,7 @@ const ContentCourse = ({ connacolData }) => {
         >
           <Layout flexBasis={83} flexShrink={0} />
           <Column>
-            {splitAndSliceFirstItem(stepsArray[1].description).map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[1]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -143,14 +146,14 @@ const ContentCourse = ({ connacolData }) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {stepsArray[3].title}
+                {stepsArray?.[3]?.title}
               </Text>
             </Box>
           </Box>
         </Box>
         <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 280, wide: 340 }} flexShrink={0}>
-          {splitAndSliceFirstItem(stepsArray[4].description).map((element) => (
+          {splitAndSliceFirstItem(stepsArray?.[4]?.description)?.map((element) => (
             <Box key={uniqid()}>
               <Text
                 fontWeight='medium'
