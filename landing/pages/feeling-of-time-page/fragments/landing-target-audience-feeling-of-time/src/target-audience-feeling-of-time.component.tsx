@@ -1,4 +1,5 @@
-import React        from 'react'
+import { FC } from 'react'
+import React  from 'react'
 
 import { Box }      from '@ui/layout'
 import { Column }   from '@ui/layout'
@@ -6,12 +7,13 @@ import { Layout }   from '@ui/layout'
 import { Row }      from '@ui/layout'
 import { Text }     from '@ui/text'
 
-import { ItemCard } from './item'
+import { ItemCard }                         from './item'
+import { TargetAudienceFeelingOfTimeProps } from './target-audience-feeling-of-time.interfaces'
 
-const TargetAudienceFeelingOfTimeBlock = ({ feelingOfTimeData }) => {
+const TargetAudienceFeelingOfTimeBlock:FC<TargetAudienceFeelingOfTimeProps> = ({ feelingOfTimeData }) => {
   const getCourseCondition = (number) =>
-    feelingOfTimeData?.individualCourseData.hero.courseConditions?.find(
-      (el) => el.number === number
+    feelingOfTimeData?.individualCourseData?.hero?.courseConditions?.find(
+      (el) => el?.number === number
     )
 
   const firstCardData = {
@@ -42,7 +44,7 @@ const TargetAudienceFeelingOfTimeBlock = ({ feelingOfTimeData }) => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {feelingOfTimeData?.individualCourseData.hero.cta}
+              {feelingOfTimeData?.individualCourseData?.hero?.cta}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />

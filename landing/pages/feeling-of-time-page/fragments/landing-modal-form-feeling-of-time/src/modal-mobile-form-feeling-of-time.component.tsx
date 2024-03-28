@@ -13,6 +13,7 @@ import { RoleModalForm }               from './modal-form-feeling-of-time.enum'
 import { ModalFormFeelingOfTimeProps } from './modal-form-feeling-of-time.interfaces'
 
 const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
+  feelingOfTimeData,
   activeRender,
   onClose,
   scroll = true,

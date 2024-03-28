@@ -1,7 +1,8 @@
-import React                            from 'react'
-import { FormattedMessage }             from 'react-intl'
-import { useState }                     from 'react'
-import { useIntl }                      from 'react-intl'
+import { FC }               from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
+import { useIntl }          from 'react-intl'
 
 import { ModalFormFeelingOfTime }       from '@landing/modal-form-feeling-of-time'
 import { ModalMobileFormFeelingOfTime } from '@landing/modal-form-feeling-of-time'
@@ -11,25 +12,26 @@ import { Column }                       from '@ui/layout'
 import { Layout }                       from '@ui/layout'
 import { Space }                        from '@ui/text'
 import { Text }                         from '@ui/text'
+import { ContentProps }                 from './content.interfaces'
 
 import { Figures }                      from './figures'
 import { FullPrice }                    from './full-price'
 import { ShortCourseContentList }       from './short-course-content-list'
 import { Title }                        from './title'
 
-const Content = ({ feelingOfTimeData }) => {
+const Content:FC<ContentProps> = ({ feelingOfTimeData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
 
   const fullPrice = `
-    ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })}
-    ${feelingOfTimeData?.individualCourseData.price.fullPrice}
-    ${'₽'}
+    ${formatMessage({ id: 'course.price.full_course_for' })}
+    ${feelingOfTimeData?.individualCourseData?.price?.fullPrice}
+    ${formatMessage({id:'currency.ruble'})}
     `
 
   const liveBroadcastCount = parseInt(
-    feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber,
+    feelingOfTimeData?.individualCourseData?.price?.liveTrainingsNumber || '',
     10
   )
 
@@ -44,7 +46,7 @@ const Content = ({ feelingOfTimeData }) => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={feelingOfTimeData?.individualCourseData.price.monthlyPrice}
+          currency={feelingOfTimeData?.individualCourseData?.price?.monthlyPrice}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
@@ -65,7 +67,7 @@ const Content = ({ feelingOfTimeData }) => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={fullPrice} />
+        <FullPrice feelingOfTimeData={feelingOfTimeData} fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -77,7 +79,7 @@ const Content = ({ feelingOfTimeData }) => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{feelingOfTimeData?.individualCourseData.price.discount}</Text>
+            <Text color='text.green'>{feelingOfTimeData?.individualCourseData?.price?.discount}</Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -89,7 +91,7 @@ const Content = ({ feelingOfTimeData }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {feelingOfTimeData?.individualCourseData.price.monthlyPrice}
+              {feelingOfTimeData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -103,25 +105,27 @@ const Content = ({ feelingOfTimeData }) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {feelingOfTimeData?.individualCourseData.price.monthlyPrice}
+              {feelingOfTimeData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
           </Button>
         </Box>
         <ModalFormFeelingOfTime
+          feelingOfTimeData={feelingOfTimeData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFeelingOfTime
+          feelingOfTimeData={feelingOfTimeData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={feelingOfTimeData?.individualCourseData.price.courseLengthInMonths}
-          quantityVideoLessons={feelingOfTimeData?.individualCourseData.price.videoTrainingsNumber}
-          firstLineCircle={feelingOfTimeData?.individualCourseData.price.liveTrainingsNumber}
+          quantityMonths={feelingOfTimeData?.individualCourseData?.price?.courseLengthInMonths}
+          quantityVideoLessons={feelingOfTimeData?.individualCourseData?.price?.videoTrainingsNumber}
+          firstLineCircle={feelingOfTimeData?.individualCourseData?.price?.liveTrainingsNumber}
           secondLineCircle={
             <FormattedMessage
               id='course.price.plural_format_live_broadcast'

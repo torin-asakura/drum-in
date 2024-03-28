@@ -1,18 +1,20 @@
-import React                  from 'react'
+import { FC } from 'react'
+import React  from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
-import { formatContent }      from '@shared/utils'
+import { RightDownArrowIcon }       from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { Text }                     from '@ui/text'
+import { formatContent }            from '@shared/utils'
+import { BannerFeelingOfTimeProps } from './banner-feeling-of-time.interfaces'
 
 import { Tape }               from './tape'
 
-const BannerFeelingOfTimeBlock = ({ feelingOfTimeData }) => {
+const BannerFeelingOfTimeBlock:FC<BannerFeelingOfTimeProps> = ({ feelingOfTimeData }) => {
   const description = formatContent(feelingOfTimeData?.content)
-  const runningLine = `#${feelingOfTimeData?.individualCourseData.hero.runningLine}`
+  const runningLine = `#${feelingOfTimeData?.individualCourseData?.hero?.runningLine}`
 
   return (
     <Box flexDirection='column' width='100%'>

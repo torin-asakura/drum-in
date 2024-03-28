@@ -12,7 +12,7 @@ import { useHover }                     from '@ui/utils'
 
 import { FullPriceProps }               from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({feelingOfTimeData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -93,8 +93,9 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormFeelingOfTime activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalFormFeelingOfTime feelingOfTimeData={feelingOfTimeData} activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
       <ModalMobileFormFeelingOfTime
+        feelingOfTimeData={feelingOfTimeData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />
