@@ -1,6 +1,5 @@
-import { useConsultation }  from '@globals/data'
-import React                from 'react'
-import { FC }               from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
 
 import { Button }                   from '@ui/button'
 import { Form }                     from '@ui/form'
@@ -9,12 +8,13 @@ import { Column }                   from '@ui/layout'
 import { Layout }                   from '@ui/layout'
 import { Box }                      from '@ui/layout'
 import { Text }                     from '@ui/text'
+import { useConsultation }          from '@globals/data'
 
 import { ConsultationContentProps } from './consultation-content.interfaces'
 
 const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
-  const {consultation} = useConsultation()
-  return(
+  const { consultation } = useConsultation()
+  return (
     <>
       <Box
         width='100%'
