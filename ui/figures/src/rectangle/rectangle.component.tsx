@@ -9,7 +9,7 @@ import { Text }             from '@ui/text'
 import { RectangleProps }   from './rectangle.interfaces'
 
 const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {
-  const count = parseInt(firstLine || '', 10)
+  const monthCount = firstLine
   return (
     <Background
       gradient={color}
@@ -43,7 +43,7 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {
             fontSize={['semiTiny', 'tiny', 'micro']}
             color='text.smokyWhite'
           >
-            <FormattedMessage id='course.price.plural_format_months' values={{ count }} />
+            <FormattedMessage id='course.price.plural_format_months' values={{ monthCount }} />
           </Text>
         </Box>
       </Box>

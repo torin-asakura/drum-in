@@ -1,4 +1,4 @@
 export interface SquareProps {
-  firstLine?: string
+  firstLine?: number | null
   rotate?: number
 }
