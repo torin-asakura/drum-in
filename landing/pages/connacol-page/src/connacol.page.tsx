@@ -113,8 +113,13 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background }
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}
         />
-        <ModalFormConnacol activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+        <ModalFormConnacol
+          connacolData={connacolData}
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+        />
         <ModalMobileFormConnacol
+          connacolData={connacolData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

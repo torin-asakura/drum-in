@@ -1,5 +1,5 @@
 import React                      from 'react'
-
+import { FC }                     from 'react'
 import { useState }               from 'react'
 import { useGoogleReCaptcha }     from 'react-google-recaptcha-v3'
 
@@ -14,21 +14,19 @@ import { Row }                    from '@ui/layout'
 import { Layout }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
 
+import { ConsultationProps }      from './consultation.interface'
 import { useActionHook }          from '../../data'
 import { useData }                from '../../data'
 import { messages }               from '../../messages'
 import { getFieldDataByLanguage } from '../../utils'
 
-export interface ConsultationProps{
-
-}
-
-export const Consultation = ({ onSuccess,
+export const Consultation: FC<ConsultationProps> = ({
+  onSuccess,
   onFailure,
-  privacyPolicy, setPrivacyPolicy,
-  arrow
+  privacyPolicy,
+  setPrivacyPolicy,
+  arrow,
 }) => {
-
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
@@ -36,7 +34,6 @@ export const Consultation = ({ onSuccess,
 
   const { executeRecaptcha } = useGoogleReCaptcha()
   const forms = useData()
-
 
   const getError = (field: string) => {
     if (data && data.errors) {
@@ -96,7 +93,7 @@ export const Consultation = ({ onSuccess,
     }
   }
 
-  return(
+  return (
     <>
       <Box display={['none', 'flex', 'flex']}>
         <Input

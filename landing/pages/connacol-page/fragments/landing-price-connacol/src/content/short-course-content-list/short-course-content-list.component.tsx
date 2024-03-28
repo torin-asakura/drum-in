@@ -20,7 +20,7 @@ export const ShortCourseContentList: FC<ShortCourseContentListProps> = ({ connac
         />
       ),
     },
-    { text: connacolData?.individualCourseData?.price?.liveTrainingsNumber },
+    { text: connacolData?.individualCourseData?.price?.bonuses },
     {
       number: connacolData?.individualCourseData?.price?.courseLengthInMonths,
       text: <FormattedMessage id='course.price.plural_format_months' values={{ monthCount }} />,

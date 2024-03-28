@@ -13,6 +13,7 @@ import { RoleModalForm }          from './modal-form-connacol.enum'
 import { ModalFormConnacolProps } from './modal-form-connacol.interfaces'
 
 const ModalMobileFormConnacol: FC<ModalFormConnacolProps> = ({
+  connacolData,
   activeRender,
   onClose,
   scroll = true,
@@ -68,7 +69,12 @@ const ModalMobileFormConnacol: FC<ModalFormConnacolProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <ContentMobile roleVar={roleVar} options={options} setRole={setRole} />
+          <ContentMobile
+            connacolData={connacolData}
+            roleVar={roleVar}
+            options={options}
+            setRole={setRole}
+          />
         </ContainerMobile>
       </motion.div>
     </Renderer>

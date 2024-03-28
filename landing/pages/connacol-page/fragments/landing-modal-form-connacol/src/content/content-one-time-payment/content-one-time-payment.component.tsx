@@ -1,17 +1,18 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { FormattedMessage }           from 'react-intl'
+import { FormattedNumber }            from 'react-intl'
+import { useIntl }                    from 'react-intl'
 
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Layout }                     from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Space }                      from '@ui/text'
+import { Text }                       from '@ui/text'
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse }             from '../selected-course'
+import { ContentOneTimePaymentProps } from './content-one-time-payment.interface'
 
-const ContentOneTimePayment = ({ connacolData }) => {
+const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({ connacolData }) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -32,7 +33,7 @@ const ContentOneTimePayment = ({ connacolData }) => {
           <FormattedMessage id='landing_modal_forms.amount' />
           <Space />
           <FormattedNumber
-            value={connacolData?.individualCourseData.price.fullPrice}
+            value={connacolData?.individualCourseData?.price?.fullPrice || 0}
             style='currency' // eslint-disable-line
             currency='RUB'
             maximumFractionDigits={0}

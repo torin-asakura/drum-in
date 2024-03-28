@@ -63,7 +63,7 @@ const Content: FC<ContentProps> = ({ connacolData }) => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={fullPrice} />
+        <FullPrice connacolData={connacolData} fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -117,6 +117,7 @@ const Content: FC<ContentProps> = ({ connacolData }) => {
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormConnacol
+          connacolData={connacolData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

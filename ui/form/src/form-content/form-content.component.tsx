@@ -1,20 +1,22 @@
-import React                      from 'react'
-import { FC }                     from 'react'
-import { useState }               from 'react'
-import { Checkbox }               from '@ui/checkbox'
-import { CheckboxMobile }         from '@ui/checkbox'
-import { Condition }              from '@ui/condition'
+import React                from 'react'
+import { FC }               from 'react'
+import { useState }         from 'react'
+
+import { Checkbox }         from '@ui/checkbox'
+import { CheckboxMobile }   from '@ui/checkbox'
+import { Condition }        from '@ui/condition'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
+
+import { Consultation }     from './consultation'
 import { FormContentProps } from './form-content.interfaces'
 import { Terminal }         from './terminal'
 import { TerminalScreen }   from './terminal'
 import { messages }         from '../messages'
-import {Consultation}       from './consultation'
 
 const FormContent: FC<FormContentProps> = ({
   amount = 0,
@@ -23,7 +25,6 @@ const FormContent: FC<FormContentProps> = ({
   onSuccess,
   onFailure,
 }) => {
-
   const [privacyPolicy, setPrivacyPolicy] = useState<boolean>(false)
 
   return (
@@ -64,7 +65,13 @@ const FormContent: FC<FormContentProps> = ({
       </Condition>
 
       <Condition match={form === 'consultation'}>
-        <Consultation arrow={arrow} onSuccess={onSuccess} onFailure={onFailure} privacyPolicy={privacyPolicy} setPrivacyPolicy={setPrivacyPolicy}/>
+        <Consultation
+          arrow={arrow}
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          privacyPolicy={privacyPolicy}
+          setPrivacyPolicy={setPrivacyPolicy}
+        />
       </Condition>
       <Layout flexBasis={[42, 102, 102]} flexShrink={0} />
     </Box>

@@ -13,6 +13,7 @@ import { Box }                    from '@ui/layout'
 import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
+import { Space }                  from '@ui/text'
 import { Text }                   from '@ui/text'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
@@ -21,8 +22,8 @@ import { ContentProps }           from './content.interfaces'
 import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, options, setRole }) => {
-  const installmentPlan = connacolData?.individualCourseData.price.monthlyPrice
-  const oneTimePayment = connacolData?.individualCourseData.price.fullPrice
+  const installmentPlan = connacolData?.individualCourseData?.price?.monthlyPrice
+  const oneTimePayment = connacolData?.individualCourseData?.price?.fullPrice
   const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
   const { formatMessage } = useIntl()
 
@@ -43,7 +44,7 @@ const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, opti
             display='inline'
           >
             {formatMessage({ id: 'course.payment.buy_course' })}
-            {` "${connacolData.title}"`}
+            {` "${connacolData?.title}"`}
           </Text>
         </Box>
         <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
@@ -93,7 +94,10 @@ const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, opti
           style={{ transform: 'rotate(15deg)' }}
         >
           <Text fontWeight='medium' fontSize='medium' lineHeight='medium' color='text.smokyWhite'>
-            benefit
+            {formatMessage({ id: 'course.payment.discount' })}
+            <Space />
+            {connacolData?.individualCourseData?.price?.discount}
+            {formatMessage({ id: 'currency.ruble' })}
           </Text>
         </Box>
       </Row>

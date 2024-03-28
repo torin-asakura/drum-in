@@ -1,23 +1,26 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { FormattedMessage }            from 'react-intl'
+import { FormattedNumber }             from 'react-intl'
+import { useIntl }                     from 'react-intl'
 
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Box }                         from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Space }                       from '@ui/text'
+import { Text }                        from '@ui/text'
 
-import { Text }      from '@ui/text'
+import { SelectedCourse }              from '../selected-course'
+import { ContentInstallmentPlanProps } from './content-installment-plan.interface'
 
-import { SelectedCourse }   from '../selected-course'
-
-const ContentInstallmentPlan = ({ connacolData }) => {
+const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({ connacolData }) => {
   const { formatMessage } = useIntl()
-  const monthCount = connacolData?.individualCourseData.price.courseLengthInMonths
-  const monthlyPrice = connacolData?.individualCourseData.price.monthlyPrice
-  const courseLengthInMonths = connacolData?.individualCourseData.price.courseLengthInMonths
+  const monthCount = connacolData?.individualCourseData?.price?.courseLengthInMonths
+  const monthlyPrice = connacolData?.individualCourseData?.price?.monthlyPrice
+  const courseLengthInMonths = connacolData?.individualCourseData?.price?.courseLengthInMonths
+  const totalAmountIfMonthly = (courseLengthInMonths || 0) * (monthlyPrice || 0)
+
   return (
     <>
       {/* TODO: description course */}
@@ -47,7 +50,7 @@ const ContentInstallmentPlan = ({ connacolData }) => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={monthlyPrice}
+                value={monthlyPrice || 0}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}
@@ -101,7 +104,7 @@ const ContentInstallmentPlan = ({ connacolData }) => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={courseLengthInMonths * monthlyPrice}
+                value={totalAmountIfMonthly}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}

@@ -12,7 +12,7 @@ import { useHover }                from '@ui/utils'
 
 import { FullPriceProps }          from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({ connacolData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -93,8 +93,13 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormConnacol activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalFormConnacol
+        connacolData={connacolData}
+        activeRender={visibleModal}
+        onClose={() => setVisibleModal(false)}
+      />
       <ModalMobileFormConnacol
+        connacolData={connacolData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />
