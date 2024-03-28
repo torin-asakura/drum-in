@@ -5,5 +5,5 @@ export interface ProgramFifthDimensionProps {
   fifthDimensionData: IndividualCourseDataType
   background: IndividualCourseBackgroundType
 
-  scrollId:string
+  scrollId: string
 }

@@ -1,13 +1,17 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                                 from 'react'
+import { FC }                                from 'react'
 
 import { BannerFifthDimensionBlock }         from '@landing/banner-fifth-dimension-fragment'
 import { ProgramFifthDimensionBlock }        from '@landing/program-fifth-dimension-fragment'
 import { TargetAudienceFifthDimensionBlock } from '@landing/target-audience-fifth-dimension-fragment'
 import { Box }                               from '@ui/layout'
+
 import { HeroFifthDimensionProps }           from './hero-fifth-dimension.interfaces'
 
-const HeroFifthDimensionBlock:FC<HeroFifthDimensionProps> = ({ background, fifthDimensionData }) => (
+const HeroFifthDimensionBlock: FC<HeroFifthDimensionProps> = ({
+  background,
+  fifthDimensionData,
+}) => (
   <>
     <Box
       display={['none', 'flex', 'flex']}

@@ -1,11 +1,12 @@
-import { FC }               from 'react'
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { FormattedMessage }            from 'react-intl'
 
 import { BulletedList }                from '@shared/bulleted-list-fragment'
+
 import { ShortCourseContentListProps } from './short-course-content-list.interfaces'
 
-export const ShortCourseContentList:FC<ShortCourseContentListProps> = ({ fifthDimensionData }) => {
+export const ShortCourseContentList: FC<ShortCourseContentListProps> = ({ fifthDimensionData }) => {
   const videoLessonCount = fifthDimensionData?.individualCourseData?.price?.videoTrainingsNumber
 
   const monthCount = fifthDimensionData?.individualCourseData?.price?.courseLengthInMonths
@@ -26,7 +27,10 @@ export const ShortCourseContentList:FC<ShortCourseContentListProps> = ({ fifthDi
       ),
     },
     {
-      number: parseInt(fifthDimensionData?.individualCourseData?.price?.liveTrainingsNumber || '',10),
+      number: parseInt(
+        fifthDimensionData?.individualCourseData?.price?.liveTrainingsNumber || '',
+        10
+      ),
       text: (
         <FormattedMessage
           id='course.price.plural_format_live_broadcast'

@@ -1,18 +1,22 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                          from 'react'
+import { FC }                         from 'react'
 
-import { ArrowTopDownIcon }    from '@ui/icons'
-import { ProgramIcon }         from '@ui/icons'
-import { Box }                 from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
+import { ArrowTopDownIcon }           from '@ui/icons'
+import { ProgramIcon }                from '@ui/icons'
+import { Box }                        from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Column }                     from '@ui/layout'
+import { Layout }                     from '@ui/layout'
 
 import { ContentCourse }              from './content-course'
 import { ContentMobileCourse }        from './content-mobile-course'
 import { ProgramFifthDimensionProps } from './program-fifth-dimension.interfaces'
 
-const ProgramFifthDimensionBlock:FC<ProgramFifthDimensionProps> = ({ background,fifthDimensionData, scrollId }) => (
+const ProgramFifthDimensionBlock: FC<ProgramFifthDimensionProps> = ({
+  background,
+  fifthDimensionData,
+  scrollId,
+}) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <Box

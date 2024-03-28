@@ -1,8 +1,8 @@
-import { FC }        from 'react'
-import React         from 'react'
-import { useRef }    from 'react'
-import { useEffect } from 'react'
-import { useState }  from 'react'
+import React                             from 'react'
+import { FC }                            from 'react'
+import { useRef }                        from 'react'
+import { useEffect }                     from 'react'
+import { useState }                      from 'react'
 
 import { LocomotiveScrollProvider }      from '@forks/react-locomotive-scroll'
 import { PageID }                        from '@globals/data'
@@ -20,10 +20,10 @@ import { TeacherBlock }                  from '@landing/teacher-fragment'
 import { Seo }                           from '@shared/seo-fragment'
 import { Box }                           from '@ui/layout'
 
-import { useSong }             from './data'
-import { FifthDimensionProps } from './fifth-dimension.interfaces'
+import { FifthDimensionProps }           from './fifth-dimension.interfaces'
+import { useSong }                       from './data'
 
-export const FifthDimensionPage:FC<FifthDimensionProps> = ({ fifthDimensionData, background }) => {
+export const FifthDimensionPage: FC<FifthDimensionProps> = ({ fifthDimensionData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -117,10 +117,12 @@ export const FifthDimensionPage:FC<FifthDimensionProps> = ({ fifthDimensionData,
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormFifthDimension
+          fifthDimensionData={fifthDimensionData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFifthDimension
+          fifthDimensionData={fifthDimensionData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

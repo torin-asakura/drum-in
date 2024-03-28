@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
 import { RightDownArrowIcon }        from '@ui/icons'
 import { Box }                       from '@ui/layout'
@@ -8,11 +8,11 @@ import { Layout }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
 import { Text }                      from '@ui/text'
 import { formatContent }             from '@shared/utils'
+
 import { BannerFifthDimensionProps } from './banner-fifth-dimension.interfaces'
+import { Tape }                      from './tape'
 
-import { Tape }               from './tape'
-
-const BannerFifthDimensionBlock:FC<BannerFifthDimensionProps> = ({ fifthDimensionData }) => {
+const BannerFifthDimensionBlock: FC<BannerFifthDimensionProps> = ({ fifthDimensionData }) => {
   const description = formatContent(fifthDimensionData?.content)
   const runningLine = `#${fifthDimensionData?.individualCourseData?.hero?.runningLine}`
 

@@ -1,8 +1,8 @@
-import { FC }               from 'react'
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
-import { useIntl }          from 'react-intl'
+import React                             from 'react'
+import { FC }                            from 'react'
+import { FormattedMessage }              from 'react-intl'
+import { useState }                      from 'react'
+import { useIntl }                       from 'react-intl'
 
 import { ModalFormFifthDimension }       from '@landing/modal-form-fifth-dimension'
 import { ModalMobileFormFifthDimension } from '@landing/modal-form-fifth-dimension'
@@ -12,14 +12,14 @@ import { Column }                        from '@ui/layout'
 import { Layout }                        from '@ui/layout'
 import { Space }                         from '@ui/text'
 import { Text }                          from '@ui/text'
-import { ContentProps }                  from './content.interfaces'
 
+import { ContentProps }                  from './content.interfaces'
 import { Figures }                       from './figures'
 import { FullPrice }                     from './full-price'
 import { ShortCourseContentList }        from './short-course-content-list'
 import { Title }                         from './title'
 
-const Content:FC<ContentProps> = ({ fifthDimensionData }) => {
+const Content: FC<ContentProps> = ({ fifthDimensionData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
@@ -27,7 +27,7 @@ const Content:FC<ContentProps> = ({ fifthDimensionData }) => {
   const fullPrice = `
     ${formatMessage({ id: 'course.price.full_course_for' })}
     ${fifthDimensionData?.individualCourseData?.price?.fullPrice}
-    ${formatMessage({id:'currency.ruble'})}
+    ${formatMessage({ id: 'currency.ruble' })}
     `
 
   const liveBroadcastCount = parseInt(
@@ -66,7 +66,7 @@ const Content:FC<ContentProps> = ({ fifthDimensionData }) => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={fullPrice} />
+        <FullPrice fifthDimensionData={fifthDimensionData} fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -125,7 +125,9 @@ const Content:FC<ContentProps> = ({ fifthDimensionData }) => {
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
           quantityMonths={fifthDimensionData?.individualCourseData?.price?.courseLengthInMonths}
-          quantityVideoLessons={fifthDimensionData?.individualCourseData?.price?.videoTrainingsNumber}
+          quantityVideoLessons={
+            fifthDimensionData?.individualCourseData?.price?.videoTrainingsNumber
+          }
           firstLineCircle={fifthDimensionData?.individualCourseData?.price?.liveTrainingsNumber}
           secondLineCircle={
             <FormattedMessage

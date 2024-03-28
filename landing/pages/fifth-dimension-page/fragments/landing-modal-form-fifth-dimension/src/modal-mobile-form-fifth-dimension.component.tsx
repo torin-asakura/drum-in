@@ -16,6 +16,7 @@ const ModalMobileFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
   activeRender,
   onClose,
   scroll = true,
+  fifthDimensionData,
 }) => {
   const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
   const { formatMessage } = useIntl()
@@ -68,7 +69,12 @@ const ModalMobileFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <ContentMobile roleVar={roleVar} options={options} setRole={setRole} />
+          <ContentMobile
+            fifthDimensionData={fifthDimensionData}
+            roleVar={roleVar}
+            options={options}
+            setRole={setRole}
+          />
         </ContainerMobile>
       </motion.div>
     </Renderer>
