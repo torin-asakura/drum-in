@@ -17,7 +17,7 @@ import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
 import { useModalForm }     from '../data'
 
-const ContentDesktop: FC<ContentProps> = ({ onClose }) => {
+const ContentDesktop: FC<ContentProps> = ({polyrhythmicKeysData, onClose }) => {
   const modalForm = useModalForm()
 
   return (

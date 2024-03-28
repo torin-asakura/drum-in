@@ -1,4 +1,5 @@
-import React                   from 'react'
+import { FC } from 'react'
+import React  from 'react'
 
 import { ArrowTopDownIcon }    from '@ui/icons'
 import { ProgramIcon }         from '@ui/icons'
@@ -7,10 +8,11 @@ import { Row }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 
-import { ContentCourse }       from './content-course'
-import { ContentMobileCourse } from './content-mobile-course'
+import { ContentCourse }                from './content-course'
+import { ContentMobileCourse }          from './content-mobile-course'
+import { ProgramPolyrhythmicKeysProps } from './program-polyrhythmic-keys.interfaces'
 
-const ProgramPolyrhythmicKeyslBlock = ({ polyrhythmicKeysData, scrollId }) => (
+const ProgramPolyrhythmicKeyslBlock:FC<ProgramPolyrhythmicKeysProps> = ({ polyrhythmicKeysData,background, scrollId }) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <Box

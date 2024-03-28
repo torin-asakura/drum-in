@@ -1,7 +1,8 @@
-import React                               from 'react'
-import { FormattedMessage }                from 'react-intl'
-import { useState }                        from 'react'
-import { useIntl }                         from 'react-intl'
+import { FC }               from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
+import { useIntl }          from 'react-intl'
 
 import { ModalFormPolyrhythmicKeys }       from '@landing/modal-form-polyrhythmic-keys'
 import { ModalMobileFormPolyrhythmicKeys } from '@landing/modal-form-polyrhythmic-keys'
@@ -11,20 +12,21 @@ import { Column }                          from '@ui/layout'
 import { Layout }                          from '@ui/layout'
 import { Space }                           from '@ui/text'
 import { Text }                            from '@ui/text'
+import { ContentProps }                    from './content.interfaces'
 
 import { Figures }                         from './figures'
 import { FullPrice }                       from './full-price'
 import { ShortCourseContentList }          from './short-course-content-list'
 import { Title }                           from './title'
 
-const Content = ({ polyrhythmicKeysData }) => {
+const Content:FC<ContentProps> = ({ polyrhythmicKeysData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
 
   const fullPrice = ` 
-        ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })} 
-        ${polyrhythmicKeysData?.individualCourseData.price.fullPrice} 
+        ${formatMessage({ id: 'course.price.full_course_for' })} 
+        ${polyrhythmicKeysData?.individualCourseData?.price?.fullPrice} 
         ${formatMessage({ id: 'currency.ruble' })}
         `
 
@@ -47,11 +49,11 @@ const Content = ({ polyrhythmicKeysData }) => {
           >
             <FormattedMessage id='landing_price.old_price' />
             <Space />
-            {polyrhythmicKeysData?.individualCourseData.price.oldPrice}
+            {polyrhythmicKeysData?.individualCourseData?.price?.oldPrice}
           </Text>
         </Box>
         <Layout flexBasis={[18, 24, 32]} />
-        <Title price={polyrhythmicKeysData?.individualCourseData.price.monthlyPrice} />
+        <Title price={polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice} />
         <Layout flexBasis={[40, 50, 32]} />
         <ShortCourseContentList polyrhythmicKeysData={polyrhythmicKeysData} />
         <Box display={['none', 'none', 'flex']} width={514}>
@@ -95,18 +97,20 @@ const Content = ({ polyrhythmicKeysData }) => {
           </Button>
         </Box>
         <ModalFormPolyrhythmicKeys
+          polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormPolyrhythmicKeys
+          polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />
         <Layout flexBasis={[23, 30, 155]} />
         <Figures
-          quantityMonths={polyrhythmicKeysData?.individualCourseData.price.courseLengthInMonths}
+          quantityMonths={polyrhythmicKeysData?.individualCourseData?.price?.courseLengthInMonths}
           quantityVideoLessons={
-            polyrhythmicKeysData?.individualCourseData.price.videoTrainingsNumber
+            polyrhythmicKeysData?.individualCourseData?.price?.videoTrainingsNumber
           }
           rectangleRotate={-10}
           squareRotate={-5}

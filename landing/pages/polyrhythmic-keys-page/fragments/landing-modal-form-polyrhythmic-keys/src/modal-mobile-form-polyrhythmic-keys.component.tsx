@@ -7,9 +7,10 @@ import { Renderer }                        from '@ui/modal'
 import { Backdrop }                        from '@ui/modal'
 
 import { ContentMobile }                   from './content'
-import { ModalFormPolyrhythmicKeyslProps } from './modal-form-polyrhythmic-keysl.interfaces'
+import { ModalFormPolyrhythmicKeyslProps } from './modal-form-polyrhythmic-keys.interfaces'
 
 const ModalMobileFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
+  polyrhythmicKeysData,
   activeRender,
   onClose,
   scroll = true,
@@ -32,7 +33,7 @@ const ModalMobileFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
       id='modal-form-mobile'
     >
       <ContainerMobile scroll={scroll}>
-        <ContentMobile />
+        <ContentMobile polyrhythmicKeysData={polyrhythmicKeysData} />
       </ContainerMobile>
     </motion.div>
   </Renderer>

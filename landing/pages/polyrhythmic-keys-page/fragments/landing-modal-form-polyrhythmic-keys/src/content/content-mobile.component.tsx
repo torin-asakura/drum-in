@@ -1,21 +1,23 @@
+import { FC }               from 'react'
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { FormattedNumber }  from 'react-intl'
 
-import { Condition }        from '@ui/condition'
-import { Form }             from '@ui/form'
-import { RoundedLineIcon }  from '@ui/icons'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Condition }       from '@ui/condition'
+import { Form }            from '@ui/form'
+import { RoundedLineIcon } from '@ui/icons'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Box }             from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Space }           from '@ui/text'
+import { Text }            from '@ui/text'
+import { ContentProps }    from './content.interfaces'
 
 import { SelectedCourse }   from './selected-course'
 import { useModalForm }     from '../data'
 
-const ContentMobile = () => {
+const ContentMobile:FC<ContentProps> = ({polyrhythmicKeysData}) => {
   const modalForm = useModalForm()
 
   return (
