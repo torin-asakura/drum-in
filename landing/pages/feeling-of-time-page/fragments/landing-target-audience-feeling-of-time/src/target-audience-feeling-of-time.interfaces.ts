@@ -1,5 +1,5 @@
 import { IndividualCourseDataType } from '@globals/data/src'
 
-export interface TargetAudienceFeelingOfTimeProps{
-  feelingOfTimeData:IndividualCourseDataType
+export interface TargetAudienceFeelingOfTimeProps {
+  feelingOfTimeData: IndividualCourseDataType
 }

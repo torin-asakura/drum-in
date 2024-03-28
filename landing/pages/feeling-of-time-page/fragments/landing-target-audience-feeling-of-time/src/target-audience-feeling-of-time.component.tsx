@@ -1,16 +1,18 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                                from 'react'
+import { FC }                               from 'react'
 
-import { Box }      from '@ui/layout'
-import { Column }   from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { Text }     from '@ui/text'
+import { Box }                              from '@ui/layout'
+import { Column }                           from '@ui/layout'
+import { Layout }                           from '@ui/layout'
+import { Row }                              from '@ui/layout'
+import { Text }                             from '@ui/text'
 
 import { ItemCard }                         from './item'
 import { TargetAudienceFeelingOfTimeProps } from './target-audience-feeling-of-time.interfaces'
 
-const TargetAudienceFeelingOfTimeBlock:FC<TargetAudienceFeelingOfTimeProps> = ({ feelingOfTimeData }) => {
+const TargetAudienceFeelingOfTimeBlock: FC<TargetAudienceFeelingOfTimeProps> = ({
+  feelingOfTimeData,
+}) => {
   const getCourseCondition = (number) =>
     feelingOfTimeData?.individualCourseData?.hero?.courseConditions?.find(
       (el) => el?.number === number

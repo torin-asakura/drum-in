@@ -1,11 +1,12 @@
-import { FC }               from 'react'
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { FormattedMessage }            from 'react-intl'
 
 import { BulletedList }                from '@shared/bulleted-list-fragment'
+
 import { ShortCourseContentListProps } from './short-course-content-list.interfaces'
 
-export const ShortCourseContentList:FC<ShortCourseContentListProps> = ({ feelingOfTimeData }) => {
+export const ShortCourseContentList: FC<ShortCourseContentListProps> = ({ feelingOfTimeData }) => {
   const videoLessonCount = feelingOfTimeData?.individualCourseData?.price?.videoTrainingsNumber
 
   const monthCount = feelingOfTimeData?.individualCourseData?.price?.courseLengthInMonths
@@ -25,7 +26,10 @@ export const ShortCourseContentList:FC<ShortCourseContentListProps> = ({ feeling
       ),
     },
     {
-      number: parseInt(feelingOfTimeData?.individualCourseData?.price?.liveTrainingsNumber || '',10),
+      number: parseInt(
+        feelingOfTimeData?.individualCourseData?.price?.liveTrainingsNumber || '',
+        10
+      ),
       text: (
         <FormattedMessage
           id='course.price.plural_format_live_broadcast'

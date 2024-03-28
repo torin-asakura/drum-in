@@ -1,7 +1,7 @@
 import { IndividualCourseDataType } from '@globals/data/src'
 
 export interface ModalFormFeelingOfTimeProps {
-  feelingOfTimeData:IndividualCourseDataType
+  feelingOfTimeData: IndividualCourseDataType
   activeRender: boolean
   onClose: () => any
   scroll?: boolean

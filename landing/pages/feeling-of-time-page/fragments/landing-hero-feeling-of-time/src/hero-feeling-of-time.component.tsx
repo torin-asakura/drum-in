@@ -1,13 +1,14 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                                from 'react'
+import { FC }                               from 'react'
 
 import { BannerFeelingOfTimeBlock }         from '@landing/banner-feeling-of-time-fragment'
 import { ProgramFeelingOfTimeBlock }        from '@landing/program-feeling-of-time-fragment'
 import { TargetAudienceFeelingOfTimeBlock } from '@landing/target-audience-feeling-of-time-fragment'
 import { Box }                              from '@ui/layout'
+
 import { HeroFeelingOfTimeProps }           from './hero-feeling-of-time.interfaces'
 
-const HeroFeelingOfTimeBlock:FC<HeroFeelingOfTimeProps> = ({ background, feelingOfTimeData }) => (
+const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelingOfTimeData }) => (
   <>
     <Box
       display={['none', 'flex', 'flex']}
@@ -20,7 +21,11 @@ const HeroFeelingOfTimeBlock:FC<HeroFeelingOfTimeProps> = ({ background, feeling
     >
       <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
       <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} scrollId='desktop-scroll' />
+      <ProgramFeelingOfTimeBlock
+        background={background}
+        feelingOfTimeData={feelingOfTimeData}
+        scrollId='desktop-scroll'
+      />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -33,7 +38,11 @@ const HeroFeelingOfTimeBlock:FC<HeroFeelingOfTimeProps> = ({ background, feeling
     >
       <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
       <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} scrollId='mobile-scroll' />
+      <ProgramFeelingOfTimeBlock
+        background={background}
+        feelingOfTimeData={feelingOfTimeData}
+        scrollId='mobile-scroll'
+      />
     </Box>
   </>
 )

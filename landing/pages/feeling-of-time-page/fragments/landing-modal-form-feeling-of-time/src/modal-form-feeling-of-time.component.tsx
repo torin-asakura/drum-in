@@ -77,6 +77,7 @@ const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                feelingOfTimeData={feelingOfTimeData}
                 onClose={onClose}
                 roleVar={roleVar}
                 options={options}

@@ -1,9 +1,8 @@
-import { ModalFormFeelingOfTimeProps } from '@landing/modal-form-feeling-of-time/src/modal-form-feeling-of-time.interfaces'
-import { FC }                          from 'react'
-import React                           from 'react'
-import { useRef }                      from 'react'
-import { useEffect }                   from 'react'
-import { useState }                    from 'react'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { useRef }                       from 'react'
+import { useEffect }                    from 'react'
+import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
 import { PageID }                       from '@globals/data'
@@ -21,10 +20,10 @@ import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
 
-import { useSong }                 from './data'
-import { FeelingOfTimeProps }      from './feeling-of-time.interfaces'
+import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
+import { useSong }                      from './data'
 
-export const FeelingOfTimePage:FC<FeelingOfTimeProps> = ({ feelingOfTimeData, background }) => {
+export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({ feelingOfTimeData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)

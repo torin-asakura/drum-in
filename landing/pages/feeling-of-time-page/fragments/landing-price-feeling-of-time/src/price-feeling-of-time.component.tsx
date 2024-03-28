@@ -1,16 +1,16 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                       from 'react'
+import { FC }                      from 'react'
 
-import { Box }     from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Box }                     from '@ui/layout'
+import { Column }                  from '@ui/layout'
+import { Layout }                  from '@ui/layout'
+import { Row }                     from '@ui/layout'
+import { Text }                    from '@ui/text'
 
 import { Content }                 from './content'
 import { PriceFeelingOfTimeProps } from './price-feeling-of-time.interfaces'
 
-const PriceFeelingOfTimeBlock:FC<PriceFeelingOfTimeProps> = ({ feelingOfTimeData }) => (
+const PriceFeelingOfTimeBlock: FC<PriceFeelingOfTimeProps> = ({ feelingOfTimeData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

@@ -69,7 +69,12 @@ const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <ContentMobile roleVar={roleVar} options={options} setRole={setRole} />
+          <ContentMobile
+            feelingOfTimeData={feelingOfTimeData}
+            roleVar={roleVar}
+            options={options}
+            setRole={setRole}
+          />
         </ContainerMobile>
       </motion.div>
     </Renderer>
