@@ -1,4 +1,5 @@
 import React                            from 'react'
+import { FC }                           from 'react'
 import { useRef }                       from 'react'
 import { useEffect }                    from 'react'
 import { useState }                     from 'react'
@@ -19,18 +20,10 @@ import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
 
-import { useBackgrounds }               from './data'
+import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 import { useSong }                      from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const SeventhHeavenPage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({ seventhHeavenData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -81,24 +74,24 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.SEVENTH_HEAVEN} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroSeventhHeavenBlock />
+          <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceSeventhHeavenBlock />
+          <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -108,7 +101,7 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
@@ -121,10 +114,12 @@ export const SeventhHeavenPage = ({ SEO }: Props) => {
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormSeventhHeaven
+          seventhHeavenData={seventhHeavenData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormSeventhHeaven
+          seventhHeavenData={seventhHeavenData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

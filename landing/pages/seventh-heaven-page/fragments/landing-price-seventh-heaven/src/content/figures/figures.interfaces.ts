@@ -1,10 +1,10 @@
 export interface FiguresProps {
-  quantityVideoLessons: number
-  firstLineCircle: string
-  secondLineCircle: string
-  quantityMonths: number
+  quantityVideoLessons?: number | null
+  firstLineCircle?: string | null
+  secondLineCircle: string | JSX.Element | null
+  quantityMonths?: number | null
   backgroundRectangle: string
-  secondLineRectangle: string
+  secondLineRectangle?: string
   squareRotate: number
   circleRotate: number
   rectangleRotate: number
