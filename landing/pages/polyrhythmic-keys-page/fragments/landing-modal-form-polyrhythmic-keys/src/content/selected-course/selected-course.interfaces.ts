@@ -1,4 +1,4 @@
 export interface SelectedCourseProps {
-  title: string
+  title?: string | null
   description: string
 }

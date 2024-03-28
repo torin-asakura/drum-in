@@ -1,17 +1,18 @@
-import React             from 'react'
+import React                           from 'react'
+import { FC }                          from 'react'
 
-import { ArrowDownIcon } from '@ui/icons'
-import { Box }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Layout }        from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Text }          from '@ui/text'
+import { ArrowDownIcon }               from '@ui/icons'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Text }                        from '@ui/text'
+import { formatContent }               from '@shared/utils'
 
-import { useBanner }     from './data'
+import { BannerPolyrhythmicKeysProps } from './banner-polyrhythmic-keys.interfaces'
 
-const BannerPolyrhythmicKeysBlock = () => {
-  const banner = useBanner()
-
+const BannerPolyrhythmicKeysBlock: FC<BannerPolyrhythmicKeysProps> = ({ polyrhythmicKeysData }) => {
+  const description = formatContent(polyrhythmicKeysData?.content)
   return (
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
@@ -28,7 +29,7 @@ const BannerPolyrhythmicKeysBlock = () => {
               lineHeight={['default', 'default', 'semiSmall']}
               color='text.smokyWhite'
             >
-              {banner?.title}
+              {polyrhythmicKeysData?.title}
             </Text>
           </Box>
           <Layout flexBasis={[16, 24, 32]} flexShrink={0} />
@@ -44,7 +45,7 @@ const BannerPolyrhythmicKeysBlock = () => {
                 'text.smokyWhite',
               ]}
             >
-              {banner?.description}
+              {description}
             </Text>
           </Box>
           <Layout flexBasis={72} flexShrink={0} display={['none', 'none', 'flex']} />

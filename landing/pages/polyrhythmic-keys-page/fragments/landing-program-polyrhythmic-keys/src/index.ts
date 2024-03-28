@@ -1,1 +1,1 @@
-export * from './program-polyrhythmic-keysl.component'
+export * from './program-polyrhythmic-keys.component'

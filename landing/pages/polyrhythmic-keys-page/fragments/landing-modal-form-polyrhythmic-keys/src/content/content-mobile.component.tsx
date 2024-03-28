@@ -1,6 +1,8 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { FormattedNumber }  from 'react-intl'
+import { useIntl }          from 'react-intl'
 
 import { Condition }        from '@ui/condition'
 import { Form }             from '@ui/form'
@@ -12,11 +14,11 @@ import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
+import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
-import { useModalForm }     from '../data'
 
-const ContentMobile = () => {
-  const modalForm = useModalForm()
+const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
+  const { formatMessage } = useIntl()
 
   return (
     <Row height={540}>
@@ -35,13 +37,19 @@ const ContentMobile = () => {
             color='text.smokyWhite'
             display='inline'
           >
-            {modalForm?.title}
+            {formatMessage({ id: 'course.payment.buy_course' })}
+            <Space />
+            {`"${polyrhythmicKeysData?.title}"`}
           </Text>
         </Box>
         <Layout flexBasis={12} flexShrink={0} />
-        {modalForm?.courses?.map(({ name, description }) => (
-          <SelectedCourse title={name} description={description} />
-        ))}
+        {/* TODO: add description course */}
+        <SelectedCourse
+          title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
+            polyrhythmicKeysData?.title
+          }"`}
+          description='description'
+        />
         <Layout flexBasis={18} flexShrink={0} />
         <Row justifyContent='end'>
           <Text
@@ -53,7 +61,7 @@ const ContentMobile = () => {
             <FormattedMessage id='landing_modal_forms.amount' />
             <Space />
             <FormattedNumber
-              value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+              value={polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice || 0}
               style='currency' // eslint-disable-line
               currency='RUB'
               maximumFractionDigits={0}
@@ -61,8 +69,11 @@ const ContentMobile = () => {
           </Text>
         </Row>
         <Layout flexBasis={50} flexShrink={0} />
-        <Condition match={!!modalForm?.finalPriceForOneTimePaymentNumber}>
-          <Form amount={modalForm.finalPriceForOneTimePaymentNumber} form='payment' />
+        <Condition match={!!polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice}>
+          <Form
+            amount={polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice || 0}
+            form='payment'
+          />
         </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

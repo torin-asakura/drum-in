@@ -1,3 +1,3 @@
 export interface TitleProps {
-  price: string
+  price?: number | null
 }

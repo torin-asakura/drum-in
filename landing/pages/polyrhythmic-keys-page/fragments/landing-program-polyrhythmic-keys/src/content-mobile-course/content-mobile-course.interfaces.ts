@@ -1,6 +1,6 @@
 import { IndividualCourseDataType } from '@globals/data'
 
-export interface ContentProps {
-  onClose?: () => any
+export interface ContentMobileCourseProps {
   polyrhythmicKeysData: IndividualCourseDataType
+  scrollId: string
 }
