@@ -1,12 +1,16 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                             from 'react'
+import { FC }                            from 'react'
 
 import { BannerPolyrhythmicKeysBlock }   from '@landing/banner-polyrhythmic-keys-fragment'
 import { ProgramPolyrhythmicKeyslBlock } from '@landing/program-polyrhythmic-keys-fragment'
 import { Box }                           from '@ui/layout'
+
 import { HeroPolyrhythmicKeysProps }     from './hero-polyrhythmic-keys.interfaces'
 
-const HeroPolyrhythmicKeysBlock:FC<HeroPolyrhythmicKeysProps> = ({ background, polyrhythmicKeysData }) => (
+const HeroPolyrhythmicKeysBlock: FC<HeroPolyrhythmicKeysProps> = ({
+  background,
+  polyrhythmicKeysData,
+}) => (
   <>
     <Box
       display={['none', 'flex', 'flex']}

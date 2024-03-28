@@ -1,8 +1,7 @@
-import { FC }               from 'react'
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
-import { useIntl }          from 'react-intl'
+import React                               from 'react'
+import { FC }                              from 'react'
+import { FormattedMessage }                from 'react-intl'
+import { useState }                        from 'react'
 
 import { ModalFormPolyrhythmicKeys }       from '@landing/modal-form-polyrhythmic-keys'
 import { ModalMobileFormPolyrhythmicKeys } from '@landing/modal-form-polyrhythmic-keys'
@@ -12,23 +11,15 @@ import { Column }                          from '@ui/layout'
 import { Layout }                          from '@ui/layout'
 import { Space }                           from '@ui/text'
 import { Text }                            from '@ui/text'
-import { ContentProps }                    from './content.interfaces'
 
+import { ContentProps }                    from './content.interfaces'
 import { Figures }                         from './figures'
-import { FullPrice }                       from './full-price'
 import { ShortCourseContentList }          from './short-course-content-list'
 import { Title }                           from './title'
 
-const Content:FC<ContentProps> = ({ polyrhythmicKeysData }) => {
+const Content: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const { formatMessage } = useIntl()
-
-  const fullPrice = ` 
-        ${formatMessage({ id: 'course.price.full_course_for' })} 
-        ${polyrhythmicKeysData?.individualCourseData?.price?.fullPrice} 
-        ${formatMessage({ id: 'currency.ruble' })}
-        `
 
   return (
     <Box
@@ -81,9 +72,7 @@ const Content:FC<ContentProps> = ({ polyrhythmicKeysData }) => {
             </Text>
           </Button>
         </Box>
-        <FullPrice fullCost={fullPrice} />
         <Layout flexBasis={[24, 0, 0]} />
-
         <Box display={['flex', 'none', 'none']} width='100%'>
           <Button
             size='withoutPaddingMediumHeight'

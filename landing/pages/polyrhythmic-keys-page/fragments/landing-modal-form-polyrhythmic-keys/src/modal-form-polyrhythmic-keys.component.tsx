@@ -40,7 +40,7 @@ const ModalFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
-            <ContentDesktop onClose={onClose} polyrhythmicKeysData={polyrhythmicKeysData}/>
+            <ContentDesktop onClose={onClose} polyrhythmicKeysData={polyrhythmicKeysData} />
           </Column>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         </Box>

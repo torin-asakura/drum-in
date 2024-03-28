@@ -3,5 +3,5 @@ import { IndividualCourseDataType }       from '@globals/data/src'
 
 export interface PolyrhythmicKeysProps {
   polyrhythmicKeysData: IndividualCourseDataType
-  background:IndividualCourseBackgroundType
+  background: IndividualCourseBackgroundType
 }

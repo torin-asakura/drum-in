@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                           from 'react'
+import { FC }                          from 'react'
 
 import { ArrowDownIcon }               from '@ui/icons'
 import { Box }                         from '@ui/layout'
@@ -8,9 +8,10 @@ import { Layout }                      from '@ui/layout'
 import { Row }                         from '@ui/layout'
 import { Text }                        from '@ui/text'
 import { formatContent }               from '@shared/utils'
+
 import { BannerPolyrhythmicKeysProps } from './banner-polyrhythmic-keys.interfaces'
 
-const BannerPolyrhythmicKeysBlock:FC<BannerPolyrhythmicKeysProps> = ({ polyrhythmicKeysData }) => {
+const BannerPolyrhythmicKeysBlock: FC<BannerPolyrhythmicKeysProps> = ({ polyrhythmicKeysData }) => {
   const description = formatContent(polyrhythmicKeysData?.content)
   return (
     <Row justifyContent='center'>

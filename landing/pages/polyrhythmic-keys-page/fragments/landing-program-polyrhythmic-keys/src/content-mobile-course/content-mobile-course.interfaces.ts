@@ -1,6 +1,6 @@
-import { IndividualCourseDataType }       from '@globals/data'
+import { IndividualCourseDataType } from '@globals/data'
 
-export interface ContentMobileCourseProps{
+export interface ContentMobileCourseProps {
   polyrhythmicKeysData: IndividualCourseDataType
-  scrollId:string
+  scrollId: string
 }

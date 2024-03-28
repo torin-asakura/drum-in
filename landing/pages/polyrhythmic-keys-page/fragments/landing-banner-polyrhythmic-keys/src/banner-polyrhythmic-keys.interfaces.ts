@@ -1,5 +1,5 @@
-import { IndividualCourseDataType }       from '@globals/data'
+import { IndividualCourseDataType } from '@globals/data'
 
-export interface BannerPolyrhythmicKeysProps{
+export interface BannerPolyrhythmicKeysProps {
   polyrhythmicKeysData: IndividualCourseDataType
 }
