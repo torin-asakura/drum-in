@@ -1112,6 +1112,8 @@ export type CommonFragmentsContacts_Fields = {
 /** The &quot;CommonFragmentsContractOffer&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CommonFragmentsContractOffer = AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsContractOffer_Fields & {
   __typename?: 'CommonFragmentsContractOffer';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+  background?: Maybe<CommonFragmentsContractOfferBackground>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
   creationYear?: Maybe<Scalars['String']['output']>;
   /**
@@ -1125,6 +1127,33 @@ export type CommonFragmentsContractOffer = AcfFieldGroup & AcfFieldGroupFields &
   subtitle?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;CommonFragmentsContractOfferBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsContractOfferBackground = AcfFieldGroup & AcfFieldGroupFields & CommonFragmentsContractOfferBackground_Fields & {
+  __typename?: 'CommonFragmentsContractOfferBackground';
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+  desktopFooter?: Maybe<AcfMediaItemConnectionEdge>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+  mobileFooter?: Maybe<AcfMediaItemConnectionEdge>;
+};
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+export type CommonFragmentsContractOfferBackground_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+  desktopFooter?: Maybe<AcfMediaItemConnectionEdge>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
+  mobileFooter?: Maybe<AcfMediaItemConnectionEdge>;
 };
 
 /** The &quot;CommonFragmentsContractOfferPoints&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1160,6 +1189,8 @@ export type CommonFragmentsContractOfferPoints_Fields = {
 
 /** Interface representing fields of the ACF &quot;CommonFragmentsContractOffer&quot; Field Group */
 export type CommonFragmentsContractOffer_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
+  background?: Maybe<CommonFragmentsContractOfferBackground>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
   creationYear?: Maybe<Scalars['String']['output']>;
   /**
@@ -5184,6 +5215,8 @@ export type IndividualCourseData = AcfFieldGroup & AcfFieldGroupFields & Individ
 /** The &quot;IndividualCourseDataBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type IndividualCourseDataBackground = AcfFieldGroup & AcfFieldGroupFields & IndividualCourseDataBackground_Fields & {
   __typename?: 'IndividualCourseDataBackground';
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
+  courseProgram?: Maybe<AcfMediaItemConnectionEdge>;
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
   desktop?: Maybe<IndividualCourseDataBackgroundDesktop>;
   /**
@@ -5259,6 +5292,8 @@ export type IndividualCourseDataBackgroundMobile_Fields = {
 
 /** Interface representing fields of the ACF &quot;IndividualCourseDataBackground&quot; Field Group */
 export type IndividualCourseDataBackground_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
+  courseProgram?: Maybe<AcfMediaItemConnectionEdge>;
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
   desktop?: Maybe<IndividualCourseDataBackgroundDesktop>;
   /**
