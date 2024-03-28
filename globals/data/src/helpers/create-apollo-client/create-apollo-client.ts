@@ -2,9 +2,9 @@ import { ApolloClient }       from '@apollo/client'
 import { InMemoryCache }      from '@apollo/client'
 import { from }               from '@apollo/client'
 import { concatPagination }   from '@apollo/client/utilities'
+
 import { IS_SERVER }          from '../client.constants'
 import { WP_URI }             from '../client.constants'
-
 import { CreateApolloClient } from './create-apollo-client.interfaces'
 import { errorLink }          from '../error-link'
 import { getHttpLink }        from '../get-http-link'

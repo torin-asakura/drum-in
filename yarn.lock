@@ -2089,7 +2089,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/apollo-engine-loader@npm:^8.0.0":
+"@graphql-tools/apollo-engine-loader@npm:8.0.1, @graphql-tools/apollo-engine-loader@npm:^8.0.0":
   version: 8.0.1
   resolution: "@graphql-tools/apollo-engine-loader@npm:8.0.1"
   dependencies:
@@ -2856,6 +2856,7 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -2909,6 +2910,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.6.9"
     "@emotion/styled": "npm:11.11.0"
+    "@globals/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -3767,6 +3770,7 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -4049,6 +4053,7 @@ __metadata:
     "@landing/price-polyrhythmic-keys-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
+    "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/layout": "workspace:0.0.1"
@@ -4076,7 +4081,9 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@globals/data": "workspace:0.0.1"
     "@landing/modal-form-connacol": "workspace:0.0.1"
+    "@shared/bulleted-list-fragment": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/button": "workspace:0.0.1"
     "@ui/figures": "workspace:0.0.1"
@@ -4321,6 +4328,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/uniqid": "npm:5.3.2"
     "@ui/icons": "workspace:0.0.1"
@@ -4868,6 +4877,20 @@ __metadata:
   checksum: 678837d59ffd48646da5098f48a480a9795c62dd5e714d443942b8fbfadf847c8c15b6cf858f01a9d2122db4970e819fee0d5beadb8c4f5da9517bd48b1a3330
   languageName: node
   linkType: hard
+
+"@shared/bulleted-list-fragment@workspace:0.0.1, @shared/bulleted-list-fragment@workspace:shared/fragments/bulleted-list":
+  version: 0.0.0-use.local
+  resolution: "@shared/bulleted-list-fragment@workspace:shared/fragments/bulleted-list"
+  dependencies:
+    "@types/react": "npm:18.2.20"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: "npm:5.24.3"
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
 
 "@shared/data@workspace:0.0.1, @shared/data@workspace:shared/data":
   version: 0.0.0-use.local

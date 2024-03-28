@@ -1,4 +1,5 @@
 import React                        from 'react'
+import { FC }                       from 'react'
 import { useRef }                   from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
@@ -19,9 +20,10 @@ import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
+import { ConnacolPageProps }        from './connacol.interfaces'
 import { useSong }                  from './data'
 
-export const ConnacolPage = () => {
+export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -72,24 +74,24 @@ export const ConnacolPage = () => {
         <HeaderBlock />
         <Seo id={PageID.CONNACOL} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroConnacolBlock />
+          <HeroConnacolBlock background={background} connacolData={connacolData} />
           <CourseProcessBlock />
           <Box
             width='100%'
-            // backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceConnacolBlock />
+          <PriceConnacolBlock connacolData={connacolData} />
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            // backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -99,7 +101,7 @@ export const ConnacolPage = () => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            // backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
@@ -111,8 +113,13 @@ export const ConnacolPage = () => {
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}
         />
-        <ModalFormConnacol activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+        <ModalFormConnacol
+          connacolData={connacolData}
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+        />
         <ModalMobileFormConnacol
+          connacolData={connacolData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

@@ -1,6 +1,5 @@
 import React          from 'react'
 import { FC }         from 'react'
-import { useIntl }    from 'react-intl'
 
 import { Button }     from '@ui/button'
 import { Circle }     from '@ui/figures'
@@ -37,8 +36,6 @@ const Slide: FC<SlideProps> = ({
   textMonths,
   link,
 }) => {
-  const { formatMessage } = useIntl()
-
   if (level) {
     return (
       <SlideLevel
@@ -76,13 +73,7 @@ const Slide: FC<SlideProps> = ({
         <Column>
           <Box width='100%' position='relative' overflow='hidden' height={[194, 300, 340]}>
             <Box position='absolute' left={squarePositionX} bottom={squarePositionY}>
-              <Square
-                firstLine={quantityVideoLessons}
-                secondLine={formatMessage({
-                  id: 'landing_choose_course.video_lessons',
-                })}
-                rotate={squareRotate}
-              />
+              <Square firstLine={quantityVideoLessons} rotate={squareRotate} />
             </Box>
             {circleSecondLine ? (
               <Box position='absolute' left={circlePositionX} bottom={circlePositionY}>
@@ -93,7 +84,6 @@ const Slide: FC<SlideProps> = ({
               <Rectangle
                 color={rectangleColor}
                 firstLine={quantityMonths}
-                secondLine={textMonths}
                 rotate={rectangleRotate}
               />
             </Box>

@@ -24,8 +24,6 @@ const Content = () => {
   const { formatMessage } = useIntl()
   const price = usePrice()
 
-  console.log(price)
-
   return (
     <Box
       backgroundColor='background.smokyWhite'

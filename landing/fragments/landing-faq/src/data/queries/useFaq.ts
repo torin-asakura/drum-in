@@ -1,8 +1,6 @@
-import { useQuery }   from '@apollo/client'
+import { useQuery } from '@apollo/client'
 
-import { normalizer } from '@globals/data'
-
-import { GET_FAQ }    from './faq.query'
+import { GET_FAQ }  from './faq.query'
 
 const useFaq = () => useQuery(GET_FAQ)?.data ?? []
 

@@ -1,8 +1,8 @@
 export interface FiguresProps {
-  quantityVideoLessons: string
+  quantityVideoLessons: number
   firstLineCircle: string
   secondLineCircle: string
-  quantityMonths: string
+  quantityMonths: number
   backgroundRectangle: string
   secondLineRectangle: string
   squareRotate: number

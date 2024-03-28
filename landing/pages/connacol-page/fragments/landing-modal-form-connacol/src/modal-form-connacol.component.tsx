@@ -16,6 +16,7 @@ import { RoleModalForm }          from './modal-form-connacol.enum'
 import { ModalFormConnacolProps } from './modal-form-connacol.interfaces'
 
 const ModalFormConnacol: FC<ModalFormConnacolProps> = ({
+  connacolData,
   activeRender,
   onClose,
   scroll = true,
@@ -76,6 +77,7 @@ const ModalFormConnacol: FC<ModalFormConnacolProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                connacolData={connacolData}
                 onClose={onClose}
                 roleVar={roleVar}
                 options={options}

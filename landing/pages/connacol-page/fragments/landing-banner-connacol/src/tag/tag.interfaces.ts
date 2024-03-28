@@ -1,3 +1,3 @@
 export interface TagProps {
-  text: string
+  text?: string | null
 }

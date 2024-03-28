@@ -1,5 +1,5 @@
 export interface SpecificationsProps {
-  quantityVideoLessons: string
-  quantityMonths: string
+  quantityVideoLessons: number
+  quantityMonths: number
   wordMonth: string
 }

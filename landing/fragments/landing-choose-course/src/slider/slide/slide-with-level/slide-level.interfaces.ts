@@ -6,7 +6,7 @@ export interface SlideLevelProps {
   squareRotate: number
   squarePositionX: number
   squarePositionY: number
-  quantityVideoLessons: string
+  quantityVideoLessons: number
   circlePositionX?: number
   circlePositionY?: number
   circleFirstLine?: string
@@ -14,7 +14,7 @@ export interface SlideLevelProps {
   rectangleRotate: number
   rectanglePositionX: number
   rectanglePositionY: number
-  quantityMonths: string
+  quantityMonths: number
   textMonths: string
   rectangleColor: string
   link: string

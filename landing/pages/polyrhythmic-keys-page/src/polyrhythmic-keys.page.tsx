@@ -4,6 +4,7 @@ import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
+import { PageID }                          from '@globals/data/src'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
 import { FaqBlock }                        from '@landing/faq'
@@ -15,9 +16,9 @@ import { ModalMobileFormPolyrhythmicKeys } from '@landing/modal-form-polyrhythmi
 import { PricePolyrhythmicKeyslBlock }     from '@landing/price-polyrhythmic-keys-fragment'
 import { StartLearningBlock }              from '@landing/start-learning-fragment'
 import { TeacherBlock }                    from '@landing/teacher-fragment'
+import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
-import { Seo }                             from './seo.component'
 import { useBackgrounds }                  from './data'
 import { useSong }                         from './data'
 
@@ -78,7 +79,7 @@ export const PolyrhythmicKeysPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo id={PageID.POLIRYTHMIC_KEYS} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroPolyrhythmicKeysBlock />
           <CourseProcessBlock />

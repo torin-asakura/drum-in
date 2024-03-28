@@ -3,8 +3,6 @@ import { GET_SEO }        from '@globals/data'
 import { getClient }      from '@globals/data'
 import { setCacheHeader } from '@globals/data'
 
-import { GET_INDEX_SEO }  from './data'
-
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
 
