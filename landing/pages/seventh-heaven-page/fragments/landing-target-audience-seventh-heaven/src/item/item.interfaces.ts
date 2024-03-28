@@ -1,6 +1,6 @@
 export interface ItemProps {
   number: string
-  text: string
+  text?: string | null
   positionHorizontal: object
   positionVertical: object
   zIndex: number

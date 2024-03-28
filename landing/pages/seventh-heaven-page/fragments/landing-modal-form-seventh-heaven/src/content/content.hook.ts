@@ -4,16 +4,13 @@ import { useState }      from 'react'
 
 import { RoleModalForm } from '../modal-form-seventh-heaven.enum'
 import { Content }       from './content.interfaces'
-import { ModalForm }     from './content.interfaces'
 
-export const useContent = (roleVar: string, modalForm: ModalForm): Content => {
+export const useContent = (roleVar: string, installmentPlan, oneTimePayment): Content => {
   const getAmount = useCallback((): number => {
-    if (modalForm)
-      return roleVar === RoleModalForm.OneTimePayment
-        ? modalForm.finalPriceForOneTimePaymentNumber
-        : modalForm.monthlyPaymentNumber
+    if (installmentPlan && oneTimePayment)
+      return roleVar === RoleModalForm.OneTimePayment ? oneTimePayment : installmentPlan
     return 0
-  }, [roleVar, modalForm])
+  }, [roleVar, installmentPlan, oneTimePayment])
 
   const [amount, setAmount] = useState<number>(getAmount())
 

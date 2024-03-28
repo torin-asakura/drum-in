@@ -13,6 +13,7 @@ import { RoleModalForm }               from './modal-form-seventh-heaven.enum'
 import { ModalFormSeventhHeavenProps } from './modal-form-seventh-heaven.interfaces'
 
 const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
+  seventhHeavenData,
   activeRender,
   onClose,
   scroll = true,
@@ -68,7 +69,12 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <ContentMobile roleVar={roleVar} options={options} setRole={setRole} />
+          <ContentMobile
+            seventhHeavenData={seventhHeavenData}
+            roleVar={roleVar}
+            options={options}
+            setRole={setRole}
+          />
         </ContainerMobile>
       </motion.div>
     </Renderer>

@@ -1,18 +1,22 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { ArrowTopDownIcon }    from '@ui/icons'
-import { ProgramIcon }         from '@ui/icons'
-import { Box }                 from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
+import { ArrowTopDownIcon }          from '@ui/icons'
+import { ProgramIcon }               from '@ui/icons'
+import { Box }                       from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
 
 import { ContentCourse }             from './content-course'
 import { ContentMobileCourse }       from './content-mobile-course'
 import { ProgramSeventhHeavenProps } from './program-seventh-heaven.interfaces'
 
-const ProgramSeventhHeavenBlock:FC<ProgramSeventhHeavenProps> = ({background, seventhHeavenData, scrollId }) => (
+const ProgramSeventhHeavenBlock: FC<ProgramSeventhHeavenProps> = ({
+  background,
+  seventhHeavenData,
+  scrollId,
+}) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <Box

@@ -1,13 +1,14 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                                from 'react'
+import { FC }                               from 'react'
 
 import { BannerSeventhHeavenBlock }         from '@landing/banner-seventh-heaven-fragment'
 import { ProgramSeventhHeavenBlock }        from '@landing/program-seventh-heaven-fragment'
 import { TargetAudienceSeventhHeavenBlock } from '@landing/target-audience-seventh-heaven-fragment'
 import { Box }                              from '@ui/layout'
+
 import { HeroSeventhHeavenProps }           from './hero-seventh-heaven.interfaces'
 
-const HeroSeventhHeavenBlock:FC<HeroSeventhHeavenProps> = ({ background, seventhHeavenData }) => (
+const HeroSeventhHeavenBlock: FC<HeroSeventhHeavenProps> = ({ background, seventhHeavenData }) => (
   <>
     <Box
       display={['none', 'flex', 'flex']}
@@ -20,7 +21,11 @@ const HeroSeventhHeavenBlock:FC<HeroSeventhHeavenProps> = ({ background, seventh
     >
       <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
       <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <ProgramSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} scrollId='desktop-scroll' />
+      <ProgramSeventhHeavenBlock
+        background={background}
+        seventhHeavenData={seventhHeavenData}
+        scrollId='desktop-scroll'
+      />
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -33,7 +38,11 @@ const HeroSeventhHeavenBlock:FC<HeroSeventhHeavenProps> = ({ background, seventh
     >
       <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
       <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <ProgramSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} scrollId='mobile-scroll' />
+      <ProgramSeventhHeavenBlock
+        background={background}
+        seventhHeavenData={seventhHeavenData}
+        scrollId='mobile-scroll'
+      />
     </Box>
   </>
 )

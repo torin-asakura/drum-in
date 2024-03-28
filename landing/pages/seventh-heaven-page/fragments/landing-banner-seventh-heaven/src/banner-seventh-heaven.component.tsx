@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
 
 import { RightDownArrowIcon }       from '@ui/icons'
 import { Box }                      from '@ui/layout'
@@ -8,11 +8,11 @@ import { Layout }                   from '@ui/layout'
 import { Row }                      from '@ui/layout'
 import { Text }                     from '@ui/text'
 import { formatContent }            from '@shared/utils'
+
 import { BannerSeventhHeavenProps } from './banner-seventh-heaven.interfaces'
+import { Tape }                     from './tape'
 
-import { Tape }               from './tape'
-
-const BannerSeventhHeavenBlock:FC<BannerSeventhHeavenProps> = ({ seventhHeavenData }) => {
+const BannerSeventhHeavenBlock: FC<BannerSeventhHeavenProps> = ({ seventhHeavenData }) => {
   const description = formatContent(seventhHeavenData?.content)
   const runningLine = `#${seventhHeavenData?.individualCourseData?.hero?.runningLine}`
   return (

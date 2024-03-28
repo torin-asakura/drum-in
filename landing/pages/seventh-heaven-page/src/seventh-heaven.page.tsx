@@ -1,8 +1,8 @@
-import { FC }        from 'react'
-import React         from 'react'
-import { useRef }    from 'react'
-import { useEffect } from 'react'
-import { useState }  from 'react'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { useRef }                       from 'react'
+import { useEffect }                    from 'react'
+import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
 import { PageID }                       from '@globals/data'
@@ -20,10 +20,10 @@ import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
 
-import { useSong }            from './data'
-import { SeventhHeavenProps } from './seventh-heaven.interfaces'
+import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
+import { useSong }                      from './data'
 
-export const SeventhHeavenPage:FC<SeventhHeavenProps> = ({ seventhHeavenData, background }) => {
+export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({ seventhHeavenData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -114,10 +114,12 @@ export const SeventhHeavenPage:FC<SeventhHeavenProps> = ({ seventhHeavenData, ba
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormSeventhHeaven
+          seventhHeavenData={seventhHeavenData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormSeventhHeaven
+          seventhHeavenData={seventhHeavenData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

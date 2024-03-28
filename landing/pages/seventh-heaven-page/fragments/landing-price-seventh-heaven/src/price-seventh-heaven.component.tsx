@@ -1,16 +1,16 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                       from 'react'
+import { FC }                      from 'react'
 
-import { Box }     from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Box }                     from '@ui/layout'
+import { Column }                  from '@ui/layout'
+import { Layout }                  from '@ui/layout'
+import { Row }                     from '@ui/layout'
+import { Text }                    from '@ui/text'
 
 import { Content }                 from './content'
 import { PriceSeventhHeavenProps } from './price-seventh-heaven.interfaces'
 
-const PriceSeventhHeavenBlock:FC<PriceSeventhHeavenProps> = ({ seventhHeavenData }) => (
+const PriceSeventhHeavenBlock: FC<PriceSeventhHeavenProps> = ({ seventhHeavenData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

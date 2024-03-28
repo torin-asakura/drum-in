@@ -16,6 +16,7 @@ import { RoleModalForm }               from './modal-form-seventh-heaven.enum'
 import { ModalFormSeventhHeavenProps } from './modal-form-seventh-heaven.interfaces'
 
 const ModalFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
+  seventhHeavenData,
   activeRender,
   onClose,
   scroll = true,
@@ -76,6 +77,7 @@ const ModalFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                seventhHeavenData={seventhHeavenData}
                 onClose={onClose}
                 roleVar={roleVar}
                 options={options}

@@ -11,7 +11,7 @@ import { useHover }                        from '@ui/utils'
 
 import { FullPriceProps }                  from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({ polyrhythmicKeysData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
@@ -47,6 +47,7 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
         </Box>
       </Box>
       <ModalMobileFormPolyrhythmicKeys
+        polyrhythmicKeysData={polyrhythmicKeysData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />

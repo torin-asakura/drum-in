@@ -1,7 +1,7 @@
-import { FC }               from 'react'
-import React                from 'react'
-import uniqid               from 'uniqid'
-import { FormattedMessage } from 'react-intl'
+import React                        from 'react'
+import uniqid                       from 'uniqid'
+import { FC }                       from 'react'
+import { FormattedMessage }         from 'react-intl'
 
 import { LightningIcon }            from '@ui/icons'
 import { Box }                      from '@ui/layout'
@@ -12,9 +12,13 @@ import { ProgressBar }              from '@ui/progress-bar'
 import { Space }                    from '@ui/text'
 import { Text }                     from '@ui/text'
 import { splitAndSliceFirstItem }   from '@shared/utils/src'
+
 import { ContentMobileCourseProps } from './content-mobile-course.interfaces'
 
-const ContentMobileCourse:FC<ContentMobileCourseProps> = ({ seventhHeavenData, scrollId = 'scroll-mobile' }) => {
+const ContentMobileCourse: FC<ContentMobileCourseProps> = ({
+  seventhHeavenData,
+  scrollId = 'scroll-mobile',
+}) => {
   const stepsArray = seventhHeavenData?.individualCourseData?.process?.step
 
   return (

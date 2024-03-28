@@ -1,19 +1,21 @@
-import { FC } from 'react'
-import React  from 'react'
+import React                                from 'react'
+import { FC }                               from 'react'
 
-import { Box }      from '@ui/layout'
-import { Column }   from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { Text }     from '@ui/text'
+import { Box }                              from '@ui/layout'
+import { Column }                           from '@ui/layout'
+import { Layout }                           from '@ui/layout'
+import { Row }                              from '@ui/layout'
+import { Text }                             from '@ui/text'
 
 import { ItemCard }                         from './item'
 import { TargetAudienceSeventhHeavenProps } from './target-audience-seventh-heaven.interfaces'
 
-const TargetAudienceSeventhHeavenBlock:FC<TargetAudienceSeventhHeavenProps> = ({ seventhHeavenData }) => {
+const TargetAudienceSeventhHeavenBlock: FC<TargetAudienceSeventhHeavenProps> = ({
+  seventhHeavenData,
+}) => {
   const getCourseCondition = (number) =>
     seventhHeavenData?.individualCourseData?.hero?.courseConditions?.find(
-      (el) => el.number === number
+      (el) => el?.number === number
     )
 
   const firstCardData = {

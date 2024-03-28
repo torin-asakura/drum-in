@@ -1,7 +1,7 @@
 export interface FiguresProps {
   quantityVideoLessons?: number | null
   firstLineCircle?: string | null
-  secondLineCircle: string | JSX.Element
+  secondLineCircle: string | JSX.Element | null
   quantityMonths?: number | null
   backgroundRectangle: string
   secondLineRectangle?: string

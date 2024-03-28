@@ -1,8 +1,8 @@
-import { FC }               from 'react'
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
-import { useIntl }          from 'react-intl'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { FormattedMessage }             from 'react-intl'
+import { useState }                     from 'react'
+import { useIntl }                      from 'react-intl'
 
 import { ModalFormSeventhHeaven }       from '@landing/modal-form-seventh-heaven'
 import { ModalMobileFormSeventhHeaven } from '@landing/modal-form-seventh-heaven'
@@ -12,14 +12,14 @@ import { Column }                       from '@ui/layout'
 import { Layout }                       from '@ui/layout'
 import { Space }                        from '@ui/text'
 import { Text }                         from '@ui/text'
-import { ContentProps }                 from './content.interfaces'
 
+import { ContentProps }                 from './content.interfaces'
 import { Figures }                      from './figures'
 import { FullPrice }                    from './full-price'
 import { ShortCourseContentList }       from './short-course-content-list'
 import { Title }                        from './title'
 
-const Content:FC<ContentProps> = ({ seventhHeavenData }) => {
+const Content: FC<ContentProps> = ({ seventhHeavenData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
@@ -30,7 +30,7 @@ const Content:FC<ContentProps> = ({ seventhHeavenData }) => {
   const fullPrice = `
     ${formatMessage({ id: 'course.price.full_course_for' })}
     ${seventhHeavenData?.individualCourseData?.price?.fullPrice}
-    ${formatMessage({id:'currency.ruble'})}
+    ${formatMessage({ id: 'currency.ruble' })}
     `
 
   return (
@@ -65,7 +65,7 @@ const Content:FC<ContentProps> = ({ seventhHeavenData }) => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={fullPrice} />
+        <FullPrice seventhHeavenData={seventhHeavenData} fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -77,7 +77,9 @@ const Content:FC<ContentProps> = ({ seventhHeavenData }) => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{seventhHeavenData?.individualCourseData?.price?.discount}</Text>
+            <Text color='text.green'>
+              {seventhHeavenData?.individualCourseData?.price?.discount}
+            </Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -122,7 +124,9 @@ const Content:FC<ContentProps> = ({ seventhHeavenData }) => {
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
           quantityMonths={seventhHeavenData?.individualCourseData?.price?.courseLengthInMonths}
-          quantityVideoLessons={seventhHeavenData?.individualCourseData?.price?.videoTrainingsNumber}
+          quantityVideoLessons={
+            seventhHeavenData?.individualCourseData?.price?.videoTrainingsNumber
+          }
           firstLineCircle={seventhHeavenData?.individualCourseData?.price?.liveTrainingsNumber}
           secondLineCircle={
             <FormattedMessage

@@ -3,6 +3,6 @@ import { IndividualCourseDataType }       from '@globals/data'
 
 export interface ProgramSeventhHeavenProps {
   seventhHeavenData: IndividualCourseDataType
-  scrollId:string
+  scrollId: string
   background: IndividualCourseBackgroundType
 }
