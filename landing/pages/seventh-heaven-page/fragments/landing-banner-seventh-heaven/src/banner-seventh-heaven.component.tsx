@@ -1,18 +1,20 @@
-import React                  from 'react'
+import { FC } from 'react'
+import React  from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
-import { formatContent }      from '@shared/utils'
+import { RightDownArrowIcon }       from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { Text }                     from '@ui/text'
+import { formatContent }            from '@shared/utils'
+import { BannerSeventhHeavenProps } from './banner-seventh-heaven.interfaces'
 
 import { Tape }               from './tape'
 
-const BannerSeventhHeavenBlock = ({ seventhHeavenData }) => {
+const BannerSeventhHeavenBlock:FC<BannerSeventhHeavenProps> = ({ seventhHeavenData }) => {
   const description = formatContent(seventhHeavenData?.content)
-  const runningLine = `#${seventhHeavenData?.individualCourseData.hero.runningLine}`
+  const runningLine = `#${seventhHeavenData?.individualCourseData?.hero?.runningLine}`
   return (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>

@@ -1,7 +1,8 @@
-import React                            from 'react'
-import { FormattedMessage }             from 'react-intl'
-import { useState }                     from 'react'
-import { useIntl }                      from 'react-intl'
+import { FC }               from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
+import { useIntl }          from 'react-intl'
 
 import { ModalFormSeventhHeaven }       from '@landing/modal-form-seventh-heaven'
 import { ModalMobileFormSeventhHeaven } from '@landing/modal-form-seventh-heaven'
@@ -11,24 +12,25 @@ import { Column }                       from '@ui/layout'
 import { Layout }                       from '@ui/layout'
 import { Space }                        from '@ui/text'
 import { Text }                         from '@ui/text'
+import { ContentProps }                 from './content.interfaces'
 
 import { Figures }                      from './figures'
 import { FullPrice }                    from './full-price'
 import { ShortCourseContentList }       from './short-course-content-list'
 import { Title }                        from './title'
 
-const Content = ({ seventhHeavenData }) => {
+const Content:FC<ContentProps> = ({ seventhHeavenData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
   const liveBroadcastCount = parseInt(
-    seventhHeavenData?.individualCourseData.price.liveTrainingsNumber,
+    seventhHeavenData?.individualCourseData?.price?.liveTrainingsNumber || '',
     10
   )
   const fullPrice = `
-    ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })}
-    ${seventhHeavenData?.individualCourseData.price.fullPrice}
-    ${'₽'}
+    ${formatMessage({ id: 'course.price.full_course_for' })}
+    ${seventhHeavenData?.individualCourseData?.price?.fullPrice}
+    ${formatMessage({id:'currency.ruble'})}
     `
 
   return (
@@ -42,7 +44,7 @@ const Content = ({ seventhHeavenData }) => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={seventhHeavenData?.individualCourseData.price.monthlyPrice}
+          currency={seventhHeavenData?.individualCourseData?.price?.monthlyPrice}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
@@ -75,7 +77,7 @@ const Content = ({ seventhHeavenData }) => {
           >
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
-            <Text color='text.green'>{seventhHeavenData?.individualCourseData.price.discount}</Text>
+            <Text color='text.green'>{seventhHeavenData?.individualCourseData?.price?.discount}</Text>
           </Text>
         </Box>
         <Layout flexBasis={[24, 32, 0]} display={['flex', 'flex', 'none']} />
@@ -87,7 +89,7 @@ const Content = ({ seventhHeavenData }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {seventhHeavenData?.individualCourseData.price.monthlyPrice}
+              {seventhHeavenData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -101,25 +103,27 @@ const Content = ({ seventhHeavenData }) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {seventhHeavenData?.individualCourseData.price.monthlyPrice}
+              {seventhHeavenData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
           </Button>
         </Box>
         <ModalFormSeventhHeaven
+          seventhHeavenData={seventhHeavenData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormSeventhHeaven
+          seventhHeavenData={seventhHeavenData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={seventhHeavenData?.individualCourseData.price.courseLengthInMonths}
-          quantityVideoLessons={seventhHeavenData?.individualCourseData.price.videoTrainingsNumber}
-          firstLineCircle={seventhHeavenData?.individualCourseData.price.liveTrainingsNumber}
+          quantityMonths={seventhHeavenData?.individualCourseData?.price?.courseLengthInMonths}
+          quantityVideoLessons={seventhHeavenData?.individualCourseData?.price?.videoTrainingsNumber}
+          firstLineCircle={seventhHeavenData?.individualCourseData?.price?.liveTrainingsNumber}
           secondLineCircle={
             <FormattedMessage
               id='course.price.plural_format_live_broadcast'

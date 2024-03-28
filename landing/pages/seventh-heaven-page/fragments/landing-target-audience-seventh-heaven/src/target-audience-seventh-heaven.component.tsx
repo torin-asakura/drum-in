@@ -1,4 +1,5 @@
-import React        from 'react'
+import { FC } from 'react'
+import React  from 'react'
 
 import { Box }      from '@ui/layout'
 import { Column }   from '@ui/layout'
@@ -6,11 +7,12 @@ import { Layout }   from '@ui/layout'
 import { Row }      from '@ui/layout'
 import { Text }     from '@ui/text'
 
-import { ItemCard } from './item'
+import { ItemCard }                         from './item'
+import { TargetAudienceSeventhHeavenProps } from './target-audience-seventh-heaven.interfaces'
 
-const TargetAudienceSeventhHeavenBlock = ({ seventhHeavenData }) => {
+const TargetAudienceSeventhHeavenBlock:FC<TargetAudienceSeventhHeavenProps> = ({ seventhHeavenData }) => {
   const getCourseCondition = (number) =>
-    seventhHeavenData?.individualCourseData.hero.courseConditions?.find(
+    seventhHeavenData?.individualCourseData?.hero?.courseConditions?.find(
       (el) => el.number === number
     )
 
@@ -42,7 +44,7 @@ const TargetAudienceSeventhHeavenBlock = ({ seventhHeavenData }) => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {seventhHeavenData?.individualCourseData.hero.cta}
+              {seventhHeavenData?.individualCourseData?.hero?.cta}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />
