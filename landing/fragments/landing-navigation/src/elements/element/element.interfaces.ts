@@ -6,7 +6,7 @@ export interface ElementProps {
   squareRotate?: number
   squarePositionX?: number
   squarePositionY?: number
-  quantityVideoLessons: string
+  quantityVideoLessons?: number | null
   circlePositionX?: number
   circlePositionY?: number
   circleFirstLine?: string
@@ -14,7 +14,7 @@ export interface ElementProps {
   rectangleRotate?: number
   rectanglePositionX?: number
   rectanglePositionY?: number
-  quantityMonths: string
+  quantityMonths?: number | null
   textMonths?: string | null
   rectangleColor?: string
   path: string
