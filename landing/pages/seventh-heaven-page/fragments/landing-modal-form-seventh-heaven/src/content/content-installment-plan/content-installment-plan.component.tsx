@@ -9,8 +9,7 @@ import { Layout }                      from '@ui/layout'
 import { Box }                         from '@ui/layout'
 import { Row }                         from '@ui/layout'
 import { Space }                       from '@ui/text'
-
-import { Text }                 from '@ui/text'
+import { Text }                        from '@ui/text'
 
 import { SelectedCourse }              from '../selected-course'
 import { ContentInstallmentPlanProps } from './content-installment-plan.interfaces'

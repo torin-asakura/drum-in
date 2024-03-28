@@ -57,7 +57,7 @@ const ProgramSeventhHeavenBlock: FC<ProgramSeventhHeavenProps> = ({
                 wide: '-1000px center',
               }}
               backgroundSize='100%'
-              backgroundImage={`url(${'https://wp.drumin.pro/wp-content/uploads/2023/03/progress-horizontal-section.png'})`}
+              backgroundImage={`url(${background?.courseProgram?.node.sourceUrl})`}
             >
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 2700, wide: 2000 }} flexShrink={0} />
               <Box width={{ _: 0, tablet: 0, laptop: 2000, wide: 2612 }}>
