@@ -1,19 +1,21 @@
-import React                      from 'react'
-import uniqid                     from 'uniqid'
-import { FormattedMessage }       from 'react-intl'
+import { FC }               from 'react'
+import React                from 'react'
+import uniqid               from 'uniqid'
+import { FormattedMessage } from 'react-intl'
 
-import { LightningIcon }          from '@ui/icons'
-import { Box }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { ProgressBar }            from '@ui/progress-bar'
-import { Space }                  from '@ui/text'
-import { Text }                   from '@ui/text'
-import { splitAndSliceFirstItem } from '@shared/utils/src'
+import { LightningIcon }            from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { ProgressBar }              from '@ui/progress-bar'
+import { Space }                    from '@ui/text'
+import { Text }                     from '@ui/text'
+import { splitAndSliceFirstItem }   from '@shared/utils/src'
+import { ContentMobileCourseProps } from './content-mobile-course.interfaces'
 
-const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' }) => {
-  const stepsArray = fifthDimensionData?.individualCourseData.process.step
+const ContentMobileCourse:FC<ContentMobileCourseProps> = ({ fifthDimensionData, scrollId = 'scroll-mobile' }) => {
+  const stepsArray = fifthDimensionData?.individualCourseData?.process?.step
   return (
     <Box
       display='block'
@@ -38,7 +40,7 @@ const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' })
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {stepsArray[0].title}
+                {stepsArray?.[0]?.title}
               </Text>
             </Box>
             <Layout flexBasis={[8, 12, 12]} flexShrink={0} />
@@ -49,7 +51,7 @@ const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' })
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                {stepsArray[0].description}
+                {stepsArray?.[0]?.description}
               </Text>
             </Box>
           </Column>
@@ -58,7 +60,7 @@ const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' })
         <Row>
           <Layout flexBasis={[95, 140, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {splitAndSliceFirstItem(stepsArray[1].description).map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[1]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -78,7 +80,7 @@ const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' })
         <Row>
           <Layout flexBasis={[65, 80, 0]} />
           <Box flexDirection='column' height={[68, 100, 0]}>
-            {splitAndSliceFirstItem(stepsArray[2].description).map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[2]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -111,7 +113,7 @@ const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' })
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {stepsArray[3].title}
+                {stepsArray?.[3]?.title}
               </Text>
             </Box>
           </Box>
@@ -120,7 +122,7 @@ const ContentMobileCourse = ({ fifthDimensionData, scrollId = 'scroll-mobile' })
         <Row>
           <Layout flexBasis={[65, 100, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {splitAndSliceFirstItem(stepsArray[4].description).map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[4]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'

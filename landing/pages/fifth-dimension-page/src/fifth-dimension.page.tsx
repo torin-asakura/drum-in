@@ -1,7 +1,8 @@
-import React                             from 'react'
-import { useRef }                        from 'react'
-import { useEffect }                     from 'react'
-import { useState }                      from 'react'
+import { FC }        from 'react'
+import React         from 'react'
+import { useRef }    from 'react'
+import { useEffect } from 'react'
+import { useState }  from 'react'
 
 import { LocomotiveScrollProvider }      from '@forks/react-locomotive-scroll'
 import { PageID }                        from '@globals/data'
@@ -19,9 +20,10 @@ import { TeacherBlock }                  from '@landing/teacher-fragment'
 import { Seo }                           from '@shared/seo-fragment'
 import { Box }                           from '@ui/layout'
 
-import { useSong }                       from './data'
+import { useSong }             from './data'
+import { FifthDimensionProps } from './fifth-dimension.interfaces'
 
-export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
+export const FifthDimensionPage:FC<FifthDimensionProps> = ({ fifthDimensionData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -79,7 +81,7 @@ export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${background.desktop.teacher.node.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
@@ -92,7 +94,7 @@ export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${background.desktop.footer.node.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -102,7 +104,7 @@ export const FifthDimensionPage = ({ fifthDimensionData, background }) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${background.mobile.footer.node.sourceUrl})`}
+            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

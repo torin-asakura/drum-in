@@ -1,7 +1,8 @@
-import React                             from 'react'
-import { FormattedMessage }              from 'react-intl'
-import { useState }                      from 'react'
-import { useIntl }                       from 'react-intl'
+import { FC }               from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
+import { useIntl }          from 'react-intl'
 
 import { ModalFormFifthDimension }       from '@landing/modal-form-fifth-dimension'
 import { ModalMobileFormFifthDimension } from '@landing/modal-form-fifth-dimension'
@@ -11,25 +12,26 @@ import { Column }                        from '@ui/layout'
 import { Layout }                        from '@ui/layout'
 import { Space }                         from '@ui/text'
 import { Text }                          from '@ui/text'
+import { ContentProps }                  from './content.interfaces'
 
 import { Figures }                       from './figures'
 import { FullPrice }                     from './full-price'
 import { ShortCourseContentList }        from './short-course-content-list'
 import { Title }                         from './title'
 
-const Content = ({ fifthDimensionData }) => {
+const Content:FC<ContentProps> = ({ fifthDimensionData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
 
   const fullPrice = `
-    ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })}
-    ${fifthDimensionData?.individualCourseData.price.fullPrice}
-    ${'₽'}
+    ${formatMessage({ id: 'course.price.full_course_for' })}
+    ${fifthDimensionData?.individualCourseData?.price?.fullPrice}
+    ${formatMessage({id:'currency.ruble'})}
     `
 
   const liveBroadcastCount = parseInt(
-    fifthDimensionData?.individualCourseData.price.liveTrainingsNumber,
+    fifthDimensionData?.individualCourseData?.price?.liveTrainingsNumber || '',
     10
   )
 
@@ -44,7 +46,7 @@ const Content = ({ fifthDimensionData }) => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={fifthDimensionData?.individualCourseData.price.monthlyPrice}
+          currency={fifthDimensionData?.individualCourseData?.price?.monthlyPrice}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
@@ -77,7 +79,7 @@ const Content = ({ fifthDimensionData }) => {
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
             <Text color='text.green'>
-              {fifthDimensionData?.individualCourseData.price.discount}
+              {fifthDimensionData?.individualCourseData?.price?.discount}
             </Text>
           </Text>
         </Box>
@@ -90,7 +92,7 @@ const Content = ({ fifthDimensionData }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {fifthDimensionData?.individualCourseData.price.monthlyPrice}
+              {fifthDimensionData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -104,25 +106,27 @@ const Content = ({ fifthDimensionData }) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {fifthDimensionData?.individualCourseData.price.monthlyPrice}
+              {fifthDimensionData?.individualCourseData?.price?.monthlyPrice}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
           </Button>
         </Box>
         <ModalFormFifthDimension
+          fifthDimensionData={fifthDimensionData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFifthDimension
+          fifthDimensionData={fifthDimensionData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={fifthDimensionData?.individualCourseData.price.courseLengthInMonths}
-          quantityVideoLessons={fifthDimensionData?.individualCourseData.price.videoTrainingsNumber}
-          firstLineCircle={fifthDimensionData?.individualCourseData.price.liveTrainingsNumber}
+          quantityMonths={fifthDimensionData?.individualCourseData?.price?.courseLengthInMonths}
+          quantityVideoLessons={fifthDimensionData?.individualCourseData?.price?.videoTrainingsNumber}
+          firstLineCircle={fifthDimensionData?.individualCourseData?.price?.liveTrainingsNumber}
           secondLineCircle={
             <FormattedMessage
               id='course.price.plural_format_live_broadcast'

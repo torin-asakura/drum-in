@@ -1,4 +1,5 @@
-import React        from 'react'
+import { FC } from 'react'
+import React  from 'react'
 
 import { Box }      from '@ui/layout'
 import { Column }   from '@ui/layout'
@@ -6,12 +7,13 @@ import { Layout }   from '@ui/layout'
 import { Row }      from '@ui/layout'
 import { Text }     from '@ui/text'
 
-import { ItemCard } from './item'
+import { ItemCard }                          from './item'
+import { TargetAudienceFifthDimensionProps } from './target-audience-fifth-dimension.interfaces'
 
-const TargetAudienceFifthDimensionBlock = ({ fifthDimensionData }) => {
+const TargetAudienceFifthDimensionBlock:FC<TargetAudienceFifthDimensionProps> = ({ fifthDimensionData }) => {
   const getCourseCondition = (number) =>
-    fifthDimensionData?.individualCourseData.hero.courseConditions?.find(
-      (el) => el.number === number
+    fifthDimensionData?.individualCourseData?.hero?.courseConditions?.find(
+      (el) => el?.number === number
     )
 
   const firstCardData = {
@@ -42,7 +44,7 @@ const TargetAudienceFifthDimensionBlock = ({ fifthDimensionData }) => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {fifthDimensionData?.individualCourseData.hero.cta}
+              {fifthDimensionData?.individualCourseData?.hero?.cta}
             </Text>
           </Box>
           <Layout flexBasis={[24, 44, 64]} />

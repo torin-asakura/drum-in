@@ -1,4 +1,5 @@
-import React       from 'react'
+import { FC } from 'react'
+import React  from 'react'
 
 import { Box }     from '@ui/layout'
 import { Column }  from '@ui/layout'
@@ -6,9 +7,10 @@ import { Layout }  from '@ui/layout'
 import { Row }     from '@ui/layout'
 import { Text }    from '@ui/text'
 
-import { Content } from './content'
+import { Content }                  from './content'
+import { PriceFifthDimensionProps } from './price-fifth-dimension.interfaces'
 
-const PriceFifthDimensionBlock = ({ fifthDimensionData }) => (
+const PriceFifthDimensionBlock:FC<PriceFifthDimensionProps> = ({ fifthDimensionData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -24,7 +26,7 @@ const PriceFifthDimensionBlock = ({ fifthDimensionData }) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {fifthDimensionData?.individualCourseData.price.title}
+            {fifthDimensionData?.individualCourseData?.price?.title}
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
