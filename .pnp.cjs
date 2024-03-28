@@ -5368,6 +5368,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@graphql-codegen-plugin-helpers-virtual-dcfc685d4e/0/cache/@graphql-codegen-plugin-helpers-npm-5.0.3-e3267cb0ad-33b5042c04.zip/node_modules/@graphql-codegen/plugin-helpers/",\
         "packageDependencies": [\
           ["@graphql-codegen/plugin-helpers", "virtual:d60e73302c9129749fe83fa44b08ba442b7501502d0274f50a3ff0a480dcbf3617681f0e061ce9f71fa7a83dbffaa03a75fb0f69c33e04fd694999a7e1a6f2ae#npm:5.0.3"],\
+          ["@graphql-tools/apollo-engine-loader", "virtual:d60e73302c9129749fe83fa44b08ba442b7501502d0274f50a3ff0a480dcbf3617681f0e061ce9f71fa7a83dbffaa03a75fb0f69c33e04fd694999a7e1a6f2ae#npm:8.0.1"],\
           ["@graphql-tools/utils", "virtual:d60e73302c9129749fe83fa44b08ba442b7501502d0274f50a3ff0a480dcbf3617681f0e061ce9f71fa7a83dbffaa03a75fb0f69c33e04fd694999a7e1a6f2ae#npm:10.1.0"],\
           ["@types/graphql", null],\
           ["change-case-all", "npm:1.0.15"],\
@@ -9503,6 +9504,7 @@ const RAW_RUNTIME_STATE =
           ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/forks__react-locomotive-scroll", null],\
+          ["@types/globals__data", null],\
           ["@types/next", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-intl", null],\
@@ -9515,9 +9517,11 @@ const RAW_RUNTIME_STATE =
           "@apollo/client",\
           "@emotion/react",\
           "@forks/react-locomotive-scroll",\
+          "@globals/data",\
           "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/forks__react-locomotive-scroll",\
+          "@types/globals__data",\
           "@types/next",\
           "@types/react-intl",\
           "@types/react",\
@@ -9541,6 +9545,7 @@ const RAW_RUNTIME_STATE =
           ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/forks__react-locomotive-scroll", null],\
+          ["@types/globals__data", null],\
           ["@types/next", null],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-intl", null],\
@@ -9553,9 +9558,11 @@ const RAW_RUNTIME_STATE =
           "@apollo/client",\
           "@emotion/react",\
           "@forks/react-locomotive-scroll",\
+          "@globals/data",\
           "@types/apollo__client",\
           "@types/emotion__react",\
           "@types/forks__react-locomotive-scroll",\
+          "@types/globals__data",\
           "@types/next",\
           "@types/react-intl",\
           "@types/react",\
