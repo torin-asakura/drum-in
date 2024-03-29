@@ -37,11 +37,11 @@ const Elements: FC<ElementsProps> = ({ headerData, stateHover }) => {
   const countLevel = course?.content.price.details.levelsNumber
 
   const getCircleSecondLineValue = (item) => {
-    const countLiveBroadcast = parseInt(item?.individualCourseData?.price?.liveTrainingsNumber, 10)
-    return !!countLiveBroadcast ? (
+    const liveBroadcastCount = parseInt(item?.individualCourseData?.price?.liveTrainingsNumber, 10)
+    return !!liveBroadcastCount ? (
       <FormattedMessage
         id='course.price.plural_format_live_broadcast'
-        values={{ countLiveBroadcast }}
+        values={{ liveBroadcastCount }}
       />
     ) : null
   }
