@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@landing/modal-form-fifth-dimension": "workspace:0.0.1",
+    "@shared/bulleted-list-fragment": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/figures": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
@@ -15,6 +16,7 @@
     "@apollo/client": "3.6.9",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
+    "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.20",
     "@types/react-dom": "17.0.20",
     "react": "18.2.0",

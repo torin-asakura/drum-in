@@ -19,6 +19,7 @@ const ModalFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
   activeRender,
   onClose,
   scroll = true,
+  fifthDimensionData,
 }) => {
   const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
   const { formatMessage } = useIntl()
@@ -76,6 +77,7 @@ const ModalFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                fifthDimensionData={fifthDimensionData}
                 onClose={onClose}
                 roleVar={roleVar}
                 options={options}

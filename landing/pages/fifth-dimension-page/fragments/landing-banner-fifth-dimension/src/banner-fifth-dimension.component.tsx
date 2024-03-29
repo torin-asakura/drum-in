@@ -1,17 +1,20 @@
-import React                  from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
+import { RightDownArrowIcon }        from '@ui/icons'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Text }                      from '@ui/text'
+import { formatContent }             from '@shared/utils'
 
-import { Tape }               from './tape'
-import { useBanner }          from './data'
+import { BannerFifthDimensionProps } from './banner-fifth-dimension.interfaces'
+import { Tape }                      from './tape'
 
-const BannerFifthDimensionBlock = () => {
-  const banner = useBanner()
+const BannerFifthDimensionBlock: FC<BannerFifthDimensionProps> = ({ fifthDimensionData }) => {
+  const description = formatContent(fifthDimensionData?.content)
+  const runningLine = `#${fifthDimensionData?.individualCourseData?.hero?.runningLine}`
 
   return (
     <Box flexDirection='column' width='100%'>
@@ -37,7 +40,7 @@ const BannerFifthDimensionBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    {banner?.titleInHero}
+                    {fifthDimensionData?.title}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -53,7 +56,7 @@ const BannerFifthDimensionBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      {banner?.descriptionCourseInHero}
+                      {description}
                     </Text>
                   </Box>
                 </Box>
@@ -76,7 +79,7 @@ const BannerFifthDimensionBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape level={banner?.levelCourseInHero} />
+      <Tape level={runningLine} />
     </Box>
   )
 }

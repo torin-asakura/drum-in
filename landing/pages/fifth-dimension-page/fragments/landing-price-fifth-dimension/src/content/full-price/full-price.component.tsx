@@ -12,7 +12,7 @@ import { useHover }                      from '@ui/utils'
 
 import { FullPriceProps }                from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -93,8 +93,13 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormFifthDimension activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalFormFifthDimension
+        fifthDimensionData={fifthDimensionData}
+        activeRender={visibleModal}
+        onClose={() => setVisibleModal(false)}
+      />
       <ModalMobileFormFifthDimension
+        fifthDimensionData={fifthDimensionData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />

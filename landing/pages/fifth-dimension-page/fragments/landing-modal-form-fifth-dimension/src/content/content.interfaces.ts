@@ -1,4 +1,7 @@
+import { IndividualCourseDataType } from '@globals/data/src'
+
 export interface ContentProps {
+  fifthDimensionData: IndividualCourseDataType
   onClose?: () => any
   roleVar: Array<string>
   options: Array<{
@@ -11,23 +14,4 @@ export interface ContentProps {
 
 export interface Content {
   amount: number
-}
-
-interface Course {
-  description: string
-  name: string
-  price: number
-}
-
-export interface ModalForm {
-  benefit: string
-  finalPriceForInstallment: string
-  finalPriceForInstallmentNumber: number
-  finalPriceForOneTimePayment: string
-  finalPriceForOneTimePaymentNumber: number
-  installmentDuration: string
-  monthlyPayment: string
-  monthlyPaymentNumber: number
-  title: string
-  courses: Course[]
 }
