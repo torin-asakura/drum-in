@@ -13910,6 +13910,44 @@ export type ContactsQuery = {
   } | null
 }
 
+export type ContractOfferQueryVariables = Exact<{ [key: string]: never }>
+
+export type ContractOfferQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        contractOffer?: {
+          __typename?: 'CommonFragmentsContractOffer'
+          title?: string | null
+          subtitle?: string | null
+          creationYear?: string | null
+          points?: Array<{
+            __typename?: 'CommonFragmentsContractOfferPoints'
+            title?: string | null
+            subtitle?: string | null
+            description?: string | null
+          } | null> | null
+          background?: {
+            __typename?: 'CommonFragmentsContractOfferBackground'
+            desktopFooter?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+            mobileFooter?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
 export type ConsultationQueryVariables = Exact<{ [key: string]: never }>
 
 export type ConsultationQuery = {
@@ -14442,6 +14480,131 @@ export const ContactsDocument = {
     },
   ],
 } as unknown as DocumentNode<ContactsQuery, ContactsQueryVariables>
+export const ContractOfferDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'ContractOffer' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'contractOffer' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'creationYear' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'points' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'subtitle' },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'description' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'background' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'desktopFooter' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'mobileFooter' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ContractOfferQuery, ContractOfferQueryVariables>
 export const ConsultationDocument = {
   kind: 'Document',
   definitions: [

@@ -1,2 +1,2 @@
 export * from './seo.component'
-export { SeoProps } from './seo.interfaces'
+export * from './seo.interfaces'
