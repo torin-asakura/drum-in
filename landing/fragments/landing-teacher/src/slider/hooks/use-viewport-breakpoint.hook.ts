@@ -14,5 +14,6 @@ export const useViewportBreakpoint = () => {
 
   return {
     isWideViewport: viewport > 1500,
+    isMobileViewport: viewport < 832,
   }
 }

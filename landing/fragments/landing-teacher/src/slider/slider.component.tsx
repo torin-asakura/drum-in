@@ -13,7 +13,7 @@ import { Slide }                 from './slide'
 import { useViewportBreakpoint } from './hooks'
 
 const SliderBlock = ({ teacherData }) => {
-  const { isWideViewport } = useViewportBreakpoint()
+  const { isWideViewport, isMobileViewport } = useViewportBreakpoint()
 
   const teacherChildren = useMemo(
     () =>
@@ -25,22 +25,34 @@ const SliderBlock = ({ teacherData }) => {
 
   return (
     <>
-      <Box position='relative' display={['none', 'none', 'flex']}>
-        <Box position='absolute' top={-109} right={247}>
+      <Box position='relative'>
+        <Box position='absolute' top={-109} right={247} display={['none', 'none', 'flex']}>
           <DrumsticksIcon width={182} height={182} />
         </Box>
         <Condition
           match={isWideViewport && teacherChildren !== [] && teacherChildren !== undefined}
         >
+          <Slider slidesPerView={2} clName='teacher-slider' spaceBetween={120} centeredSlides loop>
+            {Children.map(teacherChildren, (child) => (
+              <SwiperSlide>{child}</SwiperSlide>
+            ))}
+          </Slider>
+        </Condition>
+
+        <Condition
+          match={
+            !isWideViewport &&
+            !isMobileViewport &&
+            teacherChildren !== [] &&
+            teacherChildren !== undefined
+          }
+        >
           <Slider
             slidesPerView='auto'
             clName='teacher-slider'
+            spaceBetween={120}
             centeredSlides
-            spaceBetween={197}
-            mousewheel
-            forceToAxis
             loop
-            grabCursor
           >
             {Children.map(teacherChildren, (child) => (
               <SwiperSlide>{child}</SwiperSlide>
@@ -49,10 +61,18 @@ const SliderBlock = ({ teacherData }) => {
         </Condition>
       </Box>
 
-      <Box display={['flex', 'flex', 'none']}>
+      <Box>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-        <Condition match={teacherChildren !== [] && teacherChildren !== undefined}>
-          <Slider slidesPerView='auto' clName='teacher-slider' spaceBetween={20} loop>
+        <Condition
+          match={isMobileViewport && teacherChildren !== [] && teacherChildren !== undefined}
+        >
+          <Slider
+            slidesPerView='auto'
+            clName='teacher-slider'
+            spaceBetween={40}
+            allowTouchMove
+            loop
+          >
             {Children.map(teacherChildren, (child) => (
               <SwiperSlide>{child}</SwiperSlide>
             ))}
