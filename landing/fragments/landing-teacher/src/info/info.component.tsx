@@ -6,13 +6,13 @@ import { Box }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Layout }            from '@ui/layout'
 
-import { PlaySongProps }     from '../play-song.interfaces'
+import { TeacherBlockProps } from '../teacher.interfaces'
 import { EducationList }     from './education-list'
 import { OneCharacteristic } from './one-characteristic'
 import { SongButton }        from './song-button'
 import { getIndent }         from '../helpers'
 
-const Info: FC<PlaySongProps> = ({ teacherData, playSong, setPlaySong }) => (
+const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => (
   <Box width={['100%', '100%', 1920]}>
     <Column width='100%'>
       <Box height={['auto', 'auto', 543]}>

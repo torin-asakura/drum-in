@@ -1,5 +1,5 @@
-export interface PlaySongProps {
-  teacherData?: any
+export interface TeacherBlockProps {
   playSong: boolean
   setPlaySong: (newState: boolean) => any
+  teacherData?: any
 }

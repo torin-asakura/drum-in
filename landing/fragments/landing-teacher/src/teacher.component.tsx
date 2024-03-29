@@ -1,20 +1,20 @@
-import React               from 'react'
-import { FC }              from 'react'
-import { forwardRef }      from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
+import { forwardRef }        from 'react'
 
-import { Box }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Text }            from '@ui/text'
-import { useTeacher }      from '@globals/data'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Text }              from '@ui/text'
+import { useTeacher }        from '@globals/data'
 
-import { EducationMobile } from './education-mobile'
-import { Info }            from './info'
-import { PlaySongProps }   from './play-song.interfaces'
-import { SliderBlock }     from './slider'
+import { EducationMobile }   from './education-mobile'
+import { Info }              from './info'
+import { SliderBlock }       from './slider'
+import { TeacherBlockProps } from './teacher.interfaces'
 
-const TeacherBlock: FC<PlaySongProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
+const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
   const { teacherData } = useTeacher()
 
   return (

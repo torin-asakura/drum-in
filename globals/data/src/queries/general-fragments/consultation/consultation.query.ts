@@ -1,4 +1,4 @@
-import { gql } from '../../__generated__'
+import { gql } from '../../../__generated__'
 
 export const GET_CONSULTATION = gql(`
 query Consultation{

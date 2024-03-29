@@ -13,9 +13,9 @@ import { Layout }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
 import { useHover }               from '@ui/utils'
 
-import { PlaySongProps }          from '../../play-song.interfaces'
+import { TeacherBlockProps }      from '../../teacher.interfaces'
 
-const SongButton: FC<PlaySongProps> = ({ playSong, setPlaySong }) => {
+const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
   const [hoverIcon, hoverIconProps] = useHover()
 
   return (
