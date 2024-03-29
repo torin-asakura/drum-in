@@ -12,7 +12,7 @@ import { LeftColumn }         from './left-column'
 import { RightColumn }        from './right-column'
 import { usePrivateLesson }   from './data'
 
-const PrivateLessonBlock = forwardRef(({privateLessonData, data }: any, ref: any) => {
+const PrivateLessonBlock = forwardRef(({ privateLessonData, data }: any, ref: any) => {
   return (
     <Row justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
@@ -39,13 +39,13 @@ const PrivateLessonBlock = forwardRef(({privateLessonData, data }: any, ref: any
               <Row>
                 <Layout flexBasis={[24, 38, 52]} flexShrink={0} />
                 <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
-                  <LeftColumn privateLessonData={privateLessonData}/>
+                  <LeftColumn privateLessonData={privateLessonData} />
                   <Layout flexBasis={0} flexGrow={3} display={['none', 'none', 'flex']} />
                   <Box display={['none', 'none', 'flex']} alignItems='center' height='100%'>
-                    <RightDownArrowIcon  width={105} height={130} />
+                    <RightDownArrowIcon width={105} height={130} />
                   </Box>
                   <Layout display={['none', 'none', 'flex']} flexBasis={20} flexShrink={2} />
-                  <RightColumn privateLessonData={privateLessonData}/>
+                  <RightColumn privateLessonData={privateLessonData} />
                 </Row>
                 <Layout flexBasis={[24, 38, 52]} flexShrink={0} />
               </Row>

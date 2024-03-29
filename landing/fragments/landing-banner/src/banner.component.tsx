@@ -13,7 +13,7 @@ import { ButtonCourse }         from './button-course'
 import { TagBlock }             from './tag'
 import { useBanner }            from './data'
 
-const BannerBlock = ({mainPageData}) => {
+const BannerBlock = ({ mainPageData }) => {
   const banner = useBanner()
 
   return (
@@ -77,7 +77,7 @@ const BannerBlock = ({mainPageData}) => {
                 {mainPageData.about}
               </Text>
             </Box>
-            <ButtonCourse mainPageData={mainPageData}/>
+            <ButtonCourse mainPageData={mainPageData} />
           </Row>
           <Layout flexBasis={[24, 32, 40]} order={[8, 8, -1]} />
         </Column>

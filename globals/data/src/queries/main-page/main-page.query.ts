@@ -1,4 +1,4 @@
-import { gql } from '../__generated__'
+import { gql } from '../../__generated__'
 
 export const GET_MAIN_PAGE = gql(`
 query MainPage{
@@ -95,12 +95,11 @@ generalFragments {
             description
             cta
             cards {
+            leftIcon{node{sourceUrl}},rightIcon{node{sourceUrl}}
               firstBadge
               secondBadge
               title
               description
-              leftIcon{node{sourceUrl}}
-              rightIcon{node{sourceUrl}}
             }
           }
             background {

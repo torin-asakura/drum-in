@@ -1,8 +1,8 @@
-import { GET_MAIN_PAGE }         from '@globals/data'
-import { PageID }                from '@globals/data'
-import { GET_SEO }               from '@globals/data'
-import { getClient }             from '@globals/data'
-import { setCacheHeader }        from '@globals/data'
+import { GET_MAIN_PAGE }  from '@globals/data'
+import { PageID }         from '@globals/data'
+import { GET_SEO }        from '@globals/data'
+import { getClient }      from '@globals/data'
+import { setCacheHeader } from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
@@ -10,7 +10,7 @@ export const getServerSideProps = async ({ res }) => {
   setCacheHeader(res, 3600, 300)
 
   const { data } = await client.query({
-    query: GET_MAIN_PAGE
+    query: GET_MAIN_PAGE,
   })
 
   const mainPageData = data?.generalFragments?.nodes[0].commonFragments?.main
@@ -27,5 +27,5 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return { props: { SEO,mainPageData,background } }
+  return { props: { SEO, mainPageData, background } }
 }

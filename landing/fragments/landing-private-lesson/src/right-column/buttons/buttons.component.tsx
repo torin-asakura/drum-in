@@ -10,7 +10,7 @@ import { Text }               from '@ui/text'
 
 import { usePrivateLesson }   from '../../data'
 
-const Buttons = ({privateLessonData}) => {
+const Buttons = ({ privateLessonData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const privateLesson = usePrivateLesson()?.privateLesson

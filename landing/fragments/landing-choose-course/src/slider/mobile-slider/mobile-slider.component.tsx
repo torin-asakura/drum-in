@@ -1,60 +1,43 @@
-import React              from 'react'
-import { Children }       from 'react'
-import { useMemo }        from 'react'
+import React                 from 'react'
+import { Children }          from 'react'
 
-import { Condition }      from '@ui/condition'
-import { Slider }         from '@ui/slider'
-import { SwiperSlide }    from '@ui/slider'
+import { CourseID }          from '@globals/data/src'
+import { Layout }            from '@ui/layout/src'
+import { Row }               from '@ui/layout/src'
+import { Slider }            from '@ui/slider'
+import { SwiperSlide }       from '@ui/slider'
 
-import { Slide }          from '../slide'
-import { useChoseCourse } from '../../data'
-import { getUi }          from '../../helpers'
+import { IndividualCourses } from './individual-courses'
+import { MainCourse }        from './main-course'
 
-const MobileSliderBlock = () => {
-  const choseCourseData = useChoseCourse()
+const MobileSliderBlock = ({ mainPageData }) => {
+  const individualCourseData = mainPageData.chooseCourse.courses.filter(
+    (el) => el.course.nodes[0].id !== CourseID.OPENING_RHYTHM
+  )
+  const mainCourseData = mainPageData.chooseCourse.courses.find(
+    (el) => el.course.nodes[0].id === CourseID.OPENING_RHYTHM
+  )
 
-  const coursesChildren = useMemo(
-    () =>
-      choseCourseData?.map(({ id, title, choseCourse }) => (
-        <Slide
-          title={title}
-          level={choseCourse.level}
-          desc={choseCourse.description}
-          price={choseCourse.price}
-          squareRotate={getUi(id).squareRotateMobile}
-          squarePositionX={getUi(id).squarePositionXMobile}
-          squarePositionY={getUi(id).squarePositionYMobile}
-          quantityVideoLessons={choseCourse.quantityVideoLessons}
-          rectangleRotate={getUi(id).rectangleRotateMobile}
-          rectanglePositionX={getUi(id).rectanglePositionXMobile}
-          rectanglePositionY={getUi(id).rectanglePositionYMobile}
-          quantityMonths={choseCourse.quantityMonths}
-          textMonths={choseCourse.textMonths}
-          rectangleColor={getUi(id).rectangleColor}
-          circlePositionX={getUi(id).circlePositionXMobile}
-          circlePositionY={getUi(id).circlePositionYMobile}
-          circleFirstLine={choseCourse.circleFirstLine}
-          circleSecondLine={choseCourse.circleSecondLine}
-          link={choseCourse.link}
-        />
-      )),
-    [choseCourseData]
+  const coursesChildren = () => (
+    <Row>
+      <MainCourse mainCourse={mainCourseData} />
+      <Layout flexBasis={40} flexShrink={0} />
+      <IndividualCourses individualCourses={individualCourseData} />
+    </Row>
   )
 
   return (
-    <Condition match={choseCourseData !== [] && choseCourseData !== undefined}>
-      <Slider
-        clName='choose-courses-slider'
-        spaceBetween={16}
-        slidesPerView='auto'
-        progressbar
-        autoHeight
-      >
-        {Children.map(coursesChildren, (child) => (
-          <SwiperSlide>{child}</SwiperSlide>
-        ))}
-      </Slider>
-    </Condition>
+    <Slider
+      clName='choose-courses-slider'
+      spaceBetween={20}
+      slidesPerView='auto'
+      progressbar
+      autoHeight
+    >
+      {Children.map(coursesChildren(), (child) => (
+        <SwiperSlide>{child}</SwiperSlide>
+      ))}
+    </Slider>
   )
 }
 

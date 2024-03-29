@@ -9,7 +9,7 @@ import { Text }             from '@ui/text'
 
 import { SliderBlock }      from './slider'
 
-const ChooseCourseBlock = ({mainPageData}) => (
+const ChooseCourseBlock = ({ mainPageData }) => (
   <Row justifyContent='center' id='choose-course'>
     <Box width={['100%', '100%', 1920]}>
       <Column width='100%'>
@@ -28,7 +28,7 @@ const ChooseCourseBlock = ({mainPageData}) => (
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
-        <SliderBlock mainPageData={mainPageData}/>
+        <SliderBlock mainPageData={mainPageData} />
         <Layout flexBasis={[32, 60, 90]} />
       </Column>
     </Box>

@@ -12,7 +12,7 @@ import { useHover }            from '@ui/utils'
 
 import { useBanner }           from '../data'
 
-const ButtonCourse = ({mainPageData}) => {
+const ButtonCourse = ({ mainPageData }) => {
   const { scroll } = useLocomotiveScroll()
   const [hoverIcon, hoverIconProps] = useHover()
   const banner = useBanner()

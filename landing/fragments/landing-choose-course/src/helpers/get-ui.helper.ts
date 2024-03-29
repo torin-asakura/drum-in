@@ -1,4 +1,4 @@
-import {CourseID} from '@globals/data'
+import { CourseID } from '@globals/data'
 
 const getUi = (itemId) => {
   if (itemId === 'cG9zdDozNDU=')

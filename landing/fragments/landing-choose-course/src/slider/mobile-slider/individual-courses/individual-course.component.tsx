@@ -41,17 +41,17 @@ export const IndividualCourses = memo(({ individualCourses }) => {
           price={`${element.monthlyPrice} ${formatMessage({
             id: 'landing_price.rubles_per_month',
           })}`}
-          squareRotate={getUi(id).squareRotate}
-          squarePositionX={getUi(id).squarePositionX}
-          squarePositionY={getUi(id).squarePositionY}
+          squareRotate={getUi(id).squareRotateMobile}
+          squarePositionX={getUi(id).squarePositionXMobile}
+          squarePositionY={getUi(id).squarePositionYMobile}
           quantityVideoLessons={element.videoTrainingsNumber}
-          rectangleRotate={getUi(id).rectangleRotate}
-          rectanglePositionX={getUi(id).rectanglePositionX}
-          rectanglePositionY={getUi(id).rectanglePositionY}
+          rectangleRotate={getUi(id).rectangleRotateMobile}
+          rectanglePositionX={getUi(id).rectanglePositionXMobile}
+          rectanglePositionY={getUi(id).rectanglePositionYMobile}
           quantityMonths={element.courseLengthInMonths}
           rectangleColor={getUi(id).rectangleColor}
-          circlePositionX={getUi(id).circlePositionX}
-          circlePositionY={getUi(id).circlePositionY}
+          circlePositionX={getUi(id).circlePositionXMobile}
+          circlePositionY={getUi(id).circlePositionYMobile}
           circleFirstLine={element.liveTrainingsNumber}
           circleSecondLine={element.bonuses || getCircleSecondLine(element)}
           link={item.course.nodes[0].individualCourseData.path}

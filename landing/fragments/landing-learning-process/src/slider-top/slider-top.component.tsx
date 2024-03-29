@@ -1,26 +1,24 @@
-import React                  from 'react'
-import uniqid                 from 'uniqid'
-import { useMemo }            from 'react'
+import React          from 'react'
+import uniqid         from 'uniqid'
+import { useMemo }    from 'react'
 
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Repeater }           from '@ui/utils'
+import { Layout }     from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Repeater }   from '@ui/utils'
 
-import { SlideImage }         from '../slide-image'
-import { SlideText }          from '../slide-text'
+import { SlideImage } from '../slide-image'
+import { SlideText }  from '../slide-text'
 
-const SliderTop = ({upperSliderData}) => {
-
+const SliderTop = ({ upperSliderData }) => {
   const learningProcessTopChildren = useMemo(() => {
-    return upperSliderData?.map(({ image, text },index) => {
-
-        return (
-      <>
-      <SlideText text={text}  activeIcons={index % 2 === 0 ? 'target' : 'sheetMusic'}/>
-        <Layout flexBasis={40} flexShrink={0}/>
-      <SlideImage pathImage={image?.node.sourceUrl} />
-      </>
-        )
+    return upperSliderData?.map(({ image, text }, index) => {
+      return (
+        <>
+          <SlideText text={text} activeIcons={index % 2 === 0 ? 'target' : 'sheetMusic'} />
+          <Layout flexBasis={40} flexShrink={0} />
+          <SlideImage pathImage={image?.node.sourceUrl} />
+        </>
+      )
     })
   }, [upperSliderData])
 

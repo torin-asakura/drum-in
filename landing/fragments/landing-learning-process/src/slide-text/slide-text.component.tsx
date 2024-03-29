@@ -18,8 +18,7 @@ import { SlideTextProps }    from './slide-text.interfaces'
 const SlideText: FC<SlideTextProps> = ({ text, activeIcons }) => {
   const [active, activeProps] = useHover()
 
-  return (
-    text? (
+  return text ? (
     <Box
       {...activeProps}
       position='relative'
@@ -110,8 +109,7 @@ const SlideText: FC<SlideTextProps> = ({ text, activeIcons }) => {
         </Box>
       )}
     </Box>
-      ): null
-  )
+  ) : null
 }
 
 export { SlideText }

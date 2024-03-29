@@ -1,4 +1,5 @@
 import React                        from 'react'
+import { FC }                       from 'react'
 import { useRef }                   from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
@@ -21,13 +22,11 @@ import { SpyScrollProvider }        from '@ui/spy-scroll'
 import { useIntersectionObserver }  from '@ui/intersection-observer'
 import { useSpyScroll }             from '@ui/spy-scroll'
 
+import { IndexPageProps }           from './index-page.interfaces'
 import { useSong }                  from './data'
 
-
-export const HomePage = ({ mainPageData,background }) => {
-
-  console.log(mainPageData)
-
+export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
+  console.log(background)
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -90,7 +89,11 @@ export const HomePage = ({ mainPageData,background }) => {
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo id={PageID.INDEX} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-            <Hero mainPageData={mainPageData} background={background} {...getObserverOptions('hero')} />
+            <Hero
+              mainPageData={mainPageData}
+              background={background}
+              {...getObserverOptions('hero')}
+            />
             <Box
               width='100%'
               flexWrap='wrap'
@@ -104,10 +107,19 @@ export const HomePage = ({ mainPageData,background }) => {
                 setPlaySong={setPlaySong}
                 {...getObserverOptions('teacher')}
               />
-              <PrivateLessonBlock privateLessonData={mainPageData.individualLesson} {...getObserverOptions('private-lesson')} />
-              <LearningProcessBlock learningProcessData={mainPageData.slider} {...getObserverOptions('learning-process')} />
+              <PrivateLessonBlock
+                privateLessonData={mainPageData.individualLesson}
+                {...getObserverOptions('private-lesson')}
+              />
+              <LearningProcessBlock
+                learningProcessData={mainPageData.slider}
+                {...getObserverOptions('learning-process')}
+              />
             </Box>
-            <StudentsBlock studentsData={ mainPageData.students} {...getObserverOptions('students')} />
+            <StudentsBlock
+              studentsData={mainPageData.students}
+              {...getObserverOptions('students')}
+            />
             <FaqBlock {...getObserverOptions('faq')} />
             <CtaBlock {...getObserverOptions('cta')} />
             <Box

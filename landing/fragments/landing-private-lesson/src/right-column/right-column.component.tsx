@@ -1,20 +1,20 @@
-import { Row }              from '@ui/layout/src'
 import React                from 'react'
-import { useIntl }          from 'react-intl'
 import { FormattedMessage } from 'react-intl'
+import { useIntl }          from 'react-intl'
 
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
+import { Row }              from '@ui/layout/src'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 import { Buttons }          from './buttons'
 import { usePrivateLesson } from '../data'
 
-const RightColumn = ({privateLessonData}) => {
+const RightColumn = ({ privateLessonData }) => {
   const privateLesson = usePrivateLesson()?.privateLesson
-  const {formatMessage} = useIntl()
+  const { formatMessage } = useIntl()
   return (
     <Column width={['100%', '100%', 598]}>
       <Box display={['none', 'none', 'flex']}>
@@ -35,22 +35,26 @@ const RightColumn = ({privateLessonData}) => {
       </Box>
       <Layout order={[4, 4, 0]} flexShrink={0} flexBasis={[12, 18, 28]} />
       <Column order={[5, 5, 0]} display={['flex', 'flex', 'none']}>
-        {privateLessonData.details.map(({title,description})=>(
+        {privateLessonData.details.map(({ title, description }) => (
           <Row>
             <Box>
-              <Text fontWeight='medium'
-                    fontSize={['semiMedium', 'semiRegular', 'large']}
-                    lineHeight='primary'
-                    color='text.purple'>
+              <Text
+                fontWeight='medium'
+                fontSize={['semiMedium', 'semiRegular', 'large']}
+                lineHeight='primary'
+                color='text.purple'
+              >
                 {title}
                 <Space />
               </Text>
             </Box>
             <Box>
-              <Text fontWeight='medium'
-                    fontSize={['semiMedium', 'semiRegular', 'large']}
-                    lineHeight='primary'
-                    color='text.blackAmber'>
+              <Text
+                fontWeight='medium'
+                fontSize={['semiMedium', 'semiRegular', 'large']}
+                lineHeight='primary'
+                color='text.blackAmber'
+              >
                 <FormattedMessage id='landing_private_lesson.dash' />
                 <Space />
                 {description}
@@ -70,12 +74,12 @@ const RightColumn = ({privateLessonData}) => {
           color='text.blackAmber'
         >
           {privateLessonData.cta.price}
-          <Space/>
-          {formatMessage({id:'course.price.rubles_currency'})}
+          <Space />
+          {formatMessage({ id: 'course.price.rubles_currency' })}
         </Text>
       </Box>
       <Layout order={[6, 6, 0]} flexShrink={0} flexBasis={65} />
-      <Buttons privateLessonData={privateLessonData}/>
+      <Buttons privateLessonData={privateLessonData} />
     </Column>
   )
 }

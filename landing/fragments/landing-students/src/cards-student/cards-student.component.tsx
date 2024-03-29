@@ -14,20 +14,20 @@ import { CardsSwiper }     from './cards-swiper'
 import { Item }            from './item'
 import { getUi }           from '../helpers'
 
-const CardsStudent = ({studentCardsData}) => {
-
+const CardsStudent = ({ studentCardsData }) => {
   const studentsSliderChildren = useMemo(
     () =>
-      studentCardsData.map(({
-        leftIcon,rightIcon,firstBadge,secondBadge,title,description
-      }, index) => (
+      studentCardsData.map((
+        { leftIcon, rightIcon, firstBadge, secondBadge, title, description },
+        index
+      ) => (
         <Item
           fullName={title}
           age={firstBadge}
           profession={secondBadge}
           description={description}
-          urlFirstIcon={leftIcon.node.sourceUrl}
-          urlSecondIcon={rightIcon.node.sourceUrl}
+          urlFirstIcon={leftIcon?.node?.sourceUrl}
+          urlSecondIcon={rightIcon?.node?.sourceUrl}
           verticalPositionFirstIcon={getUi(index).verticalPositionFirstIcon}
           horizontalPositionFirstIcon={getUi(index).horizontalPositionFirstIcon}
           verticalPositionSecondIcon={getUi(index).verticalPositionSecondIcon}
@@ -40,22 +40,22 @@ const CardsStudent = ({studentCardsData}) => {
 
   return (
     <>
-      <Column >
+      <Column>
         <Row display={['none', 'flex', 'flex']}>
-            <Slider
-              clName='students-slider-desktop'
-              spaceBetween={40}
-              slidesPerView='auto'
-              slidesOffsetAfter={-40}
-              slidesOffsetBefore={40}
-              mousewheel
-              grabCursor
-              forceToAxis
-            >
-              {Children.map(studentsSliderChildren, (child) => (
-                <SwiperSlide>{child}</SwiperSlide>
-              ))}
-            </Slider>
+          <Slider
+            clName='students-slider-desktop'
+            spaceBetween={40}
+            slidesPerView='auto'
+            slidesOffsetAfter={-40}
+            slidesOffsetBefore={40}
+            mousewheel
+            grabCursor
+            forceToAxis
+          >
+            {Children.map(studentsSliderChildren, (child) => (
+              <SwiperSlide>{child}</SwiperSlide>
+            ))}
+          </Slider>
         </Row>
         <Row display={['flex', 'none', 'none']}>
           <Slider
