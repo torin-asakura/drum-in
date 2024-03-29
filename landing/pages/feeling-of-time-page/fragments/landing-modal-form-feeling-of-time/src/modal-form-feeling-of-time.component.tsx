@@ -16,6 +16,7 @@ import { RoleModalForm }               from './modal-form-feeling-of-time.enum'
 import { ModalFormFeelingOfTimeProps } from './modal-form-feeling-of-time.interfaces'
 
 const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
+  feelingOfTimeData,
   activeRender,
   onClose,
   scroll = true,
@@ -76,6 +77,7 @@ const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                feelingOfTimeData={feelingOfTimeData}
                 onClose={onClose}
                 roleVar={roleVar}
                 options={options}

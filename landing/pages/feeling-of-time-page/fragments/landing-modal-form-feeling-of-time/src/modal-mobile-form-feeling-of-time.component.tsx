@@ -13,6 +13,7 @@ import { RoleModalForm }               from './modal-form-feeling-of-time.enum'
 import { ModalFormFeelingOfTimeProps } from './modal-form-feeling-of-time.interfaces'
 
 const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
+  feelingOfTimeData,
   activeRender,
   onClose,
   scroll = true,
@@ -68,7 +69,12 @@ const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <ContentMobile roleVar={roleVar} options={options} setRole={setRole} />
+          <ContentMobile
+            feelingOfTimeData={feelingOfTimeData}
+            roleVar={roleVar}
+            options={options}
+            setRole={setRole}
+          />
         </ContainerMobile>
       </motion.div>
     </Renderer>

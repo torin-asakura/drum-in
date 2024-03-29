@@ -1,4 +1,5 @@
 import React                            from 'react'
+import { FC }                           from 'react'
 import { useRef }                       from 'react'
 import { useEffect }                    from 'react'
 import { useState }                     from 'react'
@@ -19,18 +20,10 @@ import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
 
-import { useBackgrounds }               from './data'
+import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
 import { useSong }                      from './data'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const FeelingOfTimePage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({ feelingOfTimeData, background }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -81,24 +74,24 @@ export const FeelingOfTimePage = ({ SEO }: Props) => {
         <HeaderBlock />
         <Seo id={PageID.FEELING_OF_TIME} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroFeelingOfTimeBlock />
+          <HeroFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} />
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceFeelingOfTimeBlock />
+          <PriceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -108,7 +101,7 @@ export const FeelingOfTimePage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
@@ -121,10 +114,12 @@ export const FeelingOfTimePage = ({ SEO }: Props) => {
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormFeelingOfTime
+          feelingOfTimeData={feelingOfTimeData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFeelingOfTime
+          feelingOfTimeData={feelingOfTimeData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

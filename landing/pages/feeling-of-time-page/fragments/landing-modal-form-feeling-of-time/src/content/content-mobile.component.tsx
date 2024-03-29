@@ -1,5 +1,6 @@
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useIntl }                from 'react-intl'
 
 import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
@@ -15,12 +16,13 @@ import { Text }                   from '@ui/text'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useModalForm }           from '../data'
 import { useContent }             from './content.hook'
 
-const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
-  const modalForm = useModalForm()
-  const { amount } = useContent(roleVar[0], modalForm)
+const ContentMobile: FC<ContentProps> = ({ feelingOfTimeData, roleVar, options, setRole }) => {
+  const installmentPlan = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
+  const oneTimePayment = feelingOfTimeData?.individualCourseData?.price?.fullPrice
+  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
+  const { formatMessage } = useIntl()
 
   return (
     <Row height={540}>
@@ -68,15 +70,16 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {modalForm?.title}
+            {formatMessage({ id: 'course.payment.buy_course' })}
+            {` "${feelingOfTimeData?.title}"`}
           </Text>
         </Box>
         <Layout flexBasis={16} flexShrink={0} />
         <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
-          <ContentInstallmentPlan />
+          <ContentInstallmentPlan feelingOfTimeData={feelingOfTimeData} />
         </Condition>
         <Condition match={roleVar.includes(options[1].value)}>
-          <ContentOneTimePayment />
+          <ContentOneTimePayment feelingOfTimeData={feelingOfTimeData} />
         </Condition>
         <Condition match={!!amount}>
           <Form amount={amount} form='payment' key={amount} />

@@ -1,5 +1,6 @@
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useIntl }                from 'react-intl'
 
 import { Button }                 from '@ui/button'
 import { Condition }              from '@ui/condition'
@@ -12,17 +13,25 @@ import { Box }                    from '@ui/layout'
 import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
+import { Space }                  from '@ui/text'
 import { Text }                   from '@ui/text'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useModalForm }           from '../data'
 import { useContent }             from './content.hook'
 
-const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
-  const modalForm = useModalForm()
-  const { amount } = useContent(roleVar[0], modalForm)
+const ContentDesktop: FC<ContentProps> = ({
+  feelingOfTimeData,
+  onClose,
+  roleVar,
+  options,
+  setRole,
+}) => {
+  const installmentPlan = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
+  const oneTimePayment = feelingOfTimeData?.individualCourseData?.price?.fullPrice
+  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
+  const { formatMessage } = useIntl()
 
   return (
     <>
@@ -40,7 +49,9 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
             color='text.smokyWhite'
             display='inline'
           >
-            {modalForm?.title}
+            {formatMessage({ id: 'course.payment.buy_course' })}
+            <Space />
+            {feelingOfTimeData?.title}
           </Text>
         </Box>
         <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
@@ -90,16 +101,19 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
           style={{ transform: 'rotate(15deg)' }}
         >
           <Text fontWeight='medium' fontSize='medium' lineHeight='medium' color='text.smokyWhite'>
-            {modalForm?.benefit}
+            {formatMessage({ id: 'course.payment.discount' })}
+            <Space />
+            {feelingOfTimeData?.individualCourseData?.price?.discount}
+            {formatMessage({ id: 'currency.ruble' })}
           </Text>
         </Box>
       </Row>
       <Layout flexBasis={28} flexShrink={0} />
       <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
-        <ContentInstallmentPlan />
+        <ContentInstallmentPlan feelingOfTimeData={feelingOfTimeData} />
       </Condition>
       <Condition match={roleVar.includes(options[1].value)}>
-        <ContentOneTimePayment />
+        <ContentOneTimePayment feelingOfTimeData={feelingOfTimeData} />
       </Condition>
       <Condition match={!!amount}>
         <Form amount={amount} form='payment' key={amount} />
