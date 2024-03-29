@@ -1,15 +1,16 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                      from 'react'
+import { FC }                     from 'react'
 
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Text }                   from '@ui/text'
 
-import { SliderBlock }      from './slider'
+import { ChooseCourseBlockProps } from './choose-course.interfaces'
+import { SliderBlock }            from './slider'
 
-const ChooseCourseBlock = ({ mainPageData }) => (
+const ChooseCourseBlock: FC<ChooseCourseBlockProps> = ({ mainPageData }) => (
   <Row justifyContent='center' id='choose-course'>
     <Box width={['100%', '100%', 1920]}>
       <Column width='100%'>
@@ -24,11 +25,11 @@ const ChooseCourseBlock = ({ mainPageData }) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {mainPageData.chooseCourse.title}
+            {mainPageData?.chooseCourse?.title}
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
-        <SliderBlock mainPageData={mainPageData} />
+        <SliderBlock chooseCourseData={mainPageData.chooseCourse} />
         <Layout flexBasis={[32, 60, 90]} />
       </Column>
     </Box>

@@ -1,19 +1,21 @@
-import React              from 'react'
-import { useState }       from 'react'
-import { forwardRef }     from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { useState }           from 'react'
+import { forwardRef }         from 'react'
 
-import { Button }         from '@ui/button'
-import { ArrowRightIcon } from '@ui/icons'
-import { Box }            from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { Text }           from '@ui/text'
+import { Button }             from '@ui/button'
+import { ArrowRightIcon }     from '@ui/icons'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
 
-import { CardsStudent }   from './cards-student'
-import { ModalWindow }    from './modal-window'
+import { CardsStudent }       from './cards-student'
+import { ModalWindow }        from './modal-window'
+import { StudentsBlockProps } from './students.interfaces'
 
-const StudentsBlock = forwardRef(({ studentsData, data }: any, ref: any) => {
+const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
 
   return (
@@ -88,7 +90,7 @@ const StudentsBlock = forwardRef(({ studentsData, data }: any, ref: any) => {
               </Column>
             </Box>
             <Layout flexBasis={[32, 82, 175]} />
-            <CardsStudent studentCardsData={studentsData.cards} />
+            <CardsStudent studentCardsData={studentsData?.cards} />
             <Layout display={['flex', 'flex', 'none']} flexBasis={[24, 34, 0]} />
           </Column>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

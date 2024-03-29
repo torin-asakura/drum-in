@@ -1,33 +1,31 @@
-import React               from 'react'
-import { Children }        from 'react'
-import { useMemo }         from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
+import { Children }          from 'react'
+import { useMemo }           from 'react'
 
-import { Condition }       from '@ui/condition'
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Slider }          from '@ui/slider'
-import { SwiperSlide }     from '@ui/slider'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Slider }            from '@ui/slider'
+import { SwiperSlide }       from '@ui/slider'
 
-import { BackgroundBlock } from './background'
-import { CardsSwiper }     from './cards-swiper'
-import { Item }            from './item'
-import { getUi }           from '../helpers'
+import { BackgroundBlock }   from './background'
+import { CardsStudentProps } from './cards-student.interfaces'
+import { CardsSwiper }       from './cards-swiper'
+import { Item }              from './item'
+import { getUi }             from '../helpers'
 
-const CardsStudent = ({ studentCardsData }) => {
+const CardsStudent: FC<CardsStudentProps> = ({ studentCardsData }) => {
   const studentsSliderChildren = useMemo(
     () =>
-      studentCardsData.map((
-        { leftIcon, rightIcon, firstBadge, secondBadge, title, description },
-        index
-      ) => (
+      studentCardsData?.map((item, index) => (
         <Item
-          fullName={title}
-          age={firstBadge}
-          profession={secondBadge}
-          description={description}
-          urlFirstIcon={leftIcon?.node?.sourceUrl}
-          urlSecondIcon={rightIcon?.node?.sourceUrl}
+          fullName={item?.title}
+          age={item?.firstBadge}
+          profession={item?.secondBadge}
+          description={item?.description}
+          urlFirstIcon={item?.leftIcon?.node?.sourceUrl}
+          urlSecondIcon={item?.rightIcon?.node?.sourceUrl}
           verticalPositionFirstIcon={getUi(index).verticalPositionFirstIcon}
           horizontalPositionFirstIcon={getUi(index).horizontalPositionFirstIcon}
           verticalPositionSecondIcon={getUi(index).verticalPositionSecondIcon}

@@ -104,7 +104,7 @@ const Item: FC<ItemProps> = ({
           width={110}
           height={110}
         >
-          <ImageBlock src={urlFirstIcon} />
+          <ImageBlock src={urlFirstIcon || ''} />
         </Box>
         <Box
           display={['none', 'none', 'flex']}
@@ -115,7 +115,7 @@ const Item: FC<ItemProps> = ({
           width={110}
           height={110}
         >
-          <ImageBlock src={urlSecondIcon} />
+          <ImageBlock src={urlSecondIcon || ''} />
         </Box>
       </Box>
       <Layout display={['flex', 'flex', 'none']} flexBasis={24} flexShrink={0} />

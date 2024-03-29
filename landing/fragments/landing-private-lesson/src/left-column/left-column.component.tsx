@@ -1,4 +1,5 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Box }              from '@ui/layout'
@@ -8,7 +9,9 @@ import { Layout }           from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-const LeftColumn = ({ privateLessonData }) => (
+import { LeftColumnProps }  from './left-column.interfaces'
+
+const LeftColumn: FC<LeftColumnProps> = ({ privateLessonData }) => (
   <Column display={['none', 'none', 'flex']}>
     <Box>
       <Text
@@ -20,15 +23,15 @@ const LeftColumn = ({ privateLessonData }) => (
         lineHeight='default'
         color='text.blackAmber'
       >
-        {privateLessonData.title}
+        {privateLessonData?.title}
       </Text>
     </Box>
     <Layout flexBasis={0} flexGrow={3} />
-    {privateLessonData.details.map(({ title, description }) => (
+    {privateLessonData?.details?.map((item) => (
       <Row>
         <Box>
           <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.purple'>
-            {title}
+            {item?.title}
             <Space />
           </Text>
         </Box>
@@ -36,7 +39,7 @@ const LeftColumn = ({ privateLessonData }) => (
           <Text fontWeight='medium' fontSize='large' lineHeight='primary' color='text.blackAmber'>
             <FormattedMessage id='landing_private_lesson.dash' />
             <Space />
-            {description}
+            {item?.description}
           </Text>
         </Box>
 

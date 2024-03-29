@@ -26,7 +26,6 @@ import { IndexPageProps }           from './index-page.interfaces'
 import { useSong }                  from './data'
 
 export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
-  console.log(background)
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -97,7 +96,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
             <Box
               width='100%'
               flexWrap='wrap'
-              backgroundImage={`url(${background?.desktop.teacher.node.sourceUrl})`}
+              backgroundImage={`url(${background?.desktop?.teacher?.node?.sourceUrl})`}
               backgroundSize={['200%', '100% auto', '1800px']}
               backgroundRepeat='no-repeat'
               backgroundPosition={['center top', 'center center', 'center 75%']}
@@ -125,7 +124,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
             <Box
               display={['none', 'none', 'flex']}
               width='100%'
-              backgroundImage={`url(${background?.desktop.footer.node.sourceUrl})`}
+              backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
               backgroundSize='80% 100%'
               backgroundRepeat='no-repeat'
               backgroundPosition='left bottom'
@@ -135,7 +134,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
             <Box
               display={['flex', 'flex', 'none']}
               width='100%'
-              backgroundImage={`url(${background?.mobile.footer.node.sourceUrl})`}
+              backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
               backgroundSize='100% 80%'
               backgroundRepeat='no-repeat'
               backgroundPosition='center bottom'

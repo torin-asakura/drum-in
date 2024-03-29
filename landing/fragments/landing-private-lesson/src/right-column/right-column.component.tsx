@@ -1,4 +1,5 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
@@ -10,16 +11,15 @@ import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 import { Buttons }          from './buttons'
-import { usePrivateLesson } from '../data'
+import { RightColumnProps } from './right-column.interfaces'
 
-const RightColumn = ({ privateLessonData }) => {
-  const privateLesson = usePrivateLesson()?.privateLesson
+const RightColumn: FC<RightColumnProps> = ({ privateLessonData }) => {
   const { formatMessage } = useIntl()
   return (
     <Column width={['100%', '100%', 598]}>
       <Box display={['none', 'none', 'flex']}>
         <Text fontWeight='medium' fontSize='mild' lineHeight='medium' color='text.purple'>
-          {privateLessonData.cta.title}
+          {privateLessonData?.cta?.title}
         </Text>
       </Box>
       <Layout order={[2, 2, 0]} flexBasis={[20, 30, 12]} flexShrink={0} />
@@ -30,12 +30,12 @@ const RightColumn = ({ privateLessonData }) => {
           lineHeight={['primary', 'primary', 'medium']}
           color='text.gray'
         >
-          {privateLessonData.cta.description}
+          {privateLessonData?.cta?.description}
         </Text>
       </Box>
       <Layout order={[4, 4, 0]} flexShrink={0} flexBasis={[12, 18, 28]} />
       <Column order={[5, 5, 0]} display={['flex', 'flex', 'none']}>
-        {privateLessonData.details.map(({ title, description }) => (
+        {privateLessonData?.details?.map((item) => (
           <Row>
             <Box>
               <Text
@@ -44,7 +44,7 @@ const RightColumn = ({ privateLessonData }) => {
                 lineHeight='primary'
                 color='text.purple'
               >
-                {title}
+                {item?.title}
                 <Space />
               </Text>
             </Box>
@@ -57,7 +57,7 @@ const RightColumn = ({ privateLessonData }) => {
               >
                 <FormattedMessage id='landing_private_lesson.dash' />
                 <Space />
-                {description}
+                {item?.description}
               </Text>
             </Box>
 
@@ -73,7 +73,7 @@ const RightColumn = ({ privateLessonData }) => {
           lineHeight='default'
           color='text.blackAmber'
         >
-          {privateLessonData.cta.price}
+          {privateLessonData?.cta?.price}
           <Space />
           {formatMessage({ id: 'course.price.rubles_currency' })}
         </Text>
