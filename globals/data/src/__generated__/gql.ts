@@ -14,8 +14,26 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-  '\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n    }\n  }\n':
-    types.GetCourseDocument,
+  '\nquery ContractOffer{\n  generalFragments {\n    nodes {\n      commonFragments {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n':
+    types.ContractOfferDocument,
+  '\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n':
+    types.ConsultationDocument,
+  '\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n':
+    types.ContactsDocument,
+  '\nquery Cta{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeAccent\n            accent\n            afterAccent\n          }\n          button\n        }\n      }\n    }\n  }\n}\n':
+    types.CtaDocument,
+  '\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        faq {\n          answer\n          question\n        }\n      }\n    }\n  }\n}\n':
+    types.FaqDocument,
+  '\nquery Footer{\n generalFragments {\n    nodes {\n      commonFragments {\n        footer {\n          email\n          privacyPolicy{\n            title\n            path\n          }\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          courses {\n            title\n            path\n          }\n          socials {\n            title\n            link\n          }\n        }\n      }\n    }\n  }\n}\n':
+    types.FooterDocument,
+  '\nquery Header{\n  generalFragments {\n    nodes {\n      commonFragments {\n        header {\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          dropdownList {\n            title\n            items {\n              nodes {\n                ... on Course {\n                  title\n                  content {\n                    path\n                    price {\n                      details {\n                        levelsNumber\n                        monthsNumber\n                        videoTrainingsNumber\n                      }\n                    }\n                  }\n                  id\n                }\n                ... on IndividualCourse {\n                  title\n                  individualCourseData {\n                    path\n                    price {\n                      level\n                      bonuses\n                      liveTrainingsNumber\n                      videoTrainingsNumber\n                      courseLengthInMonths\n                    }\n                  }\n                }\n                id\n              }\n            }\n          }\n          navigationElements {\n            title\n            path\n          }\n          ctaButton\n        }\n      }\n    }\n  }\n}\n':
+    types.HeaderDocument,
+  '\nquery PrivacyPolicy{\n generalFragments {\n    nodes {\n      commonFragments {\n        privacyPolicy {\n          title\n          content {\n            title\n            description\n          }\n        }\n      }\n    }\n  }\n}\n':
+    types.PrivacyPolicyDocument,
+  '\nquery ProcessEducation{\n  generalFragments {\n    nodes {\n      commonFragments {\n        process {\n          title\n          text\n          picture {\n            alt\n            image {\n              node {\n                sourceUrl\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n':
+    types.ProcessEducationDocument,
+  '\nquery Teacher{\n  generalFragments {\n    nodes {\n      commonFragments {\n        teacher {\n          subtitle\n          \n          title\n          \n          description\n          \n          experience {\n            number\n            text\n          }\n          \n          education {\n            title\n            list {\n              element\n            }\n          }\n          \n          gallery {\n            alt\n            image {\n              node {\n                sourceUrl\n              }\n            }\n          }\n          \n        }\n      }\n    }\n  }\n}\n':
+    types.TeacherDocument,
   '\nquery IndividualCourse($id: ID!) {\nindividualCourse(id: $id) {\ncontent\ntitle\nindividualCourseData {\n\nprocess {\nstep {\ndescription\ntitle\n}\n}\n\nbackground {\ncourseProgram{node{sourceUrl}}\ndesktop {\nfooter {\nnode {\nsourceUrl\n}\n}\nhero {\nnode {\nsourceUrl\n}\n}\nteacher {\nnode {\nsourceUrl\n}\n}\n}\nmobile {\nfooter {\nnode {\nsourceUrl\n}\n}\nhero {\nnode {\nsourceUrl\n}\n}\nteacher {\nnode {\nsourceUrl\n}\n}\n}\n}\n\nprice {\nbonuses\ncta\ncourseLengthInMonths\ndiscount\nfullPrice\nliveTrainingsNumber\nmonthlyPrice\noldPrice\ntitle\nvideoTrainingsNumber\n}\nhero {\nbenefits {\ncontent\n}\nrunningLine\ncourseConditions {\ndescription\nnumber\n}\ncta\n}\n}\n}\n}\n':
     types.IndividualCourseDocument,
   '\n  query GetPreview($uri: String!) {\n    mediaItemBy(uri: $uri) {\n      sourceUrl\n    }\n  }\n':
@@ -42,8 +60,62 @@ export function gql(source: string): unknown
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: '\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n    }\n  }\n'
-): typeof documents['\n  query GetCourse($id: ID!) {\n    course(id: $id) {\n      title\n    }\n  }\n']
+  source: '\nquery ContractOffer{\n  generalFragments {\n    nodes {\n      commonFragments {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery ContractOffer{\n  generalFragments {\n    nodes {\n      commonFragments {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Contacts{\n generalFragments {\n    nodes {\n      commonFragments {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Cta{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeAccent\n            accent\n            afterAccent\n          }\n          button\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Cta{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeAccent\n            accent\n            afterAccent\n          }\n          button\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        faq {\n          answer\n          question\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Faq{\n  generalFragments {\n    nodes {\n      commonFragments {\n        faq {\n          answer\n          question\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Footer{\n generalFragments {\n    nodes {\n      commonFragments {\n        footer {\n          email\n          privacyPolicy{\n            title\n            path\n          }\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          courses {\n            title\n            path\n          }\n          socials {\n            title\n            link\n          }\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Footer{\n generalFragments {\n    nodes {\n      commonFragments {\n        footer {\n          email\n          privacyPolicy{\n            title\n            path\n          }\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          courses {\n            title\n            path\n          }\n          socials {\n            title\n            link\n          }\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Header{\n  generalFragments {\n    nodes {\n      commonFragments {\n        header {\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          dropdownList {\n            title\n            items {\n              nodes {\n                ... on Course {\n                  title\n                  content {\n                    path\n                    price {\n                      details {\n                        levelsNumber\n                        monthsNumber\n                        videoTrainingsNumber\n                      }\n                    }\n                  }\n                  id\n                }\n                ... on IndividualCourse {\n                  title\n                  individualCourseData {\n                    path\n                    price {\n                      level\n                      bonuses\n                      liveTrainingsNumber\n                      videoTrainingsNumber\n                      courseLengthInMonths\n                    }\n                  }\n                }\n                id\n              }\n            }\n          }\n          navigationElements {\n            title\n            path\n          }\n          ctaButton\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Header{\n  generalFragments {\n    nodes {\n      commonFragments {\n        header {\n          logo {\n            node {\n              sourceUrl\n            }\n          }\n          dropdownList {\n            title\n            items {\n              nodes {\n                ... on Course {\n                  title\n                  content {\n                    path\n                    price {\n                      details {\n                        levelsNumber\n                        monthsNumber\n                        videoTrainingsNumber\n                      }\n                    }\n                  }\n                  id\n                }\n                ... on IndividualCourse {\n                  title\n                  individualCourseData {\n                    path\n                    price {\n                      level\n                      bonuses\n                      liveTrainingsNumber\n                      videoTrainingsNumber\n                      courseLengthInMonths\n                    }\n                  }\n                }\n                id\n              }\n            }\n          }\n          navigationElements {\n            title\n            path\n          }\n          ctaButton\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery PrivacyPolicy{\n generalFragments {\n    nodes {\n      commonFragments {\n        privacyPolicy {\n          title\n          content {\n            title\n            description\n          }\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery PrivacyPolicy{\n generalFragments {\n    nodes {\n      commonFragments {\n        privacyPolicy {\n          title\n          content {\n            title\n            description\n          }\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery ProcessEducation{\n  generalFragments {\n    nodes {\n      commonFragments {\n        process {\n          title\n          text\n          picture {\n            alt\n            image {\n              node {\n                sourceUrl\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery ProcessEducation{\n  generalFragments {\n    nodes {\n      commonFragments {\n        process {\n          title\n          text\n          picture {\n            alt\n            image {\n              node {\n                sourceUrl\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Teacher{\n  generalFragments {\n    nodes {\n      commonFragments {\n        teacher {\n          subtitle\n          \n          title\n          \n          description\n          \n          experience {\n            number\n            text\n          }\n          \n          education {\n            title\n            list {\n              element\n            }\n          }\n          \n          gallery {\n            alt\n            image {\n              node {\n                sourceUrl\n              }\n            }\n          }\n          \n        }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Teacher{\n  generalFragments {\n    nodes {\n      commonFragments {\n        teacher {\n          subtitle\n          \n          title\n          \n          description\n          \n          experience {\n            number\n            text\n          }\n          \n          education {\n            title\n            list {\n              element\n            }\n          }\n          \n          gallery {\n            alt\n            image {\n              node {\n                sourceUrl\n              }\n            }\n          }\n          \n        }\n      }\n    }\n  }\n}\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

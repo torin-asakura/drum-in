@@ -1033,6 +1033,8 @@ export type CommonFragments = AcfFieldGroup &
   CommonFragments_Fields & {
     __typename?: 'CommonFragments'
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+    consultation?: Maybe<CommonFragmentsConsultation>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     contacts?: Maybe<CommonFragmentsContacts>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     contractOffer?: Maybe<CommonFragmentsContractOffer>
@@ -1060,6 +1062,35 @@ export type CommonFragments = AcfFieldGroup &
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     teacher?: Maybe<CommonFragmentsTeacher>
   }
+
+/** The &quot;CommonFragmentsConsultation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CommonFragmentsConsultation = AcfFieldGroup &
+  AcfFieldGroupFields &
+  CommonFragmentsConsultation_Fields & {
+    __typename?: 'CommonFragmentsConsultation'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsConsultation&quot; Field Group */
+    cta?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsConsultation&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;CommonFragmentsConsultation&quot; Field Group */
+export type CommonFragmentsConsultation_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsConsultation&quot; Field Group */
+  cta?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsConsultation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
 
 /** The &quot;CommonFragmentsContacts&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CommonFragmentsContacts = AcfFieldGroup &
@@ -2478,6 +2509,8 @@ export type CommonFragmentsTeacher_Fields = {
 
 /** Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group */
 export type CommonFragments_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
+  consultation?: Maybe<CommonFragmentsConsultation>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   contacts?: Maybe<CommonFragmentsContacts>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
@@ -13841,13 +13874,352 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
-export type GetCourseQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
+export type ContractOfferQueryVariables = Exact<{ [key: string]: never }>
 
-export type GetCourseQuery = {
+export type ContractOfferQuery = {
   __typename?: 'RootQuery'
-  course?: { __typename?: 'Course'; title?: string | null } | null
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        contractOffer?: {
+          __typename?: 'CommonFragmentsContractOffer'
+          title?: string | null
+          subtitle?: string | null
+          creationYear?: string | null
+          points?: Array<{
+            __typename?: 'CommonFragmentsContractOfferPoints'
+            title?: string | null
+            subtitle?: string | null
+            description?: string | null
+          } | null> | null
+          background?: {
+            __typename?: 'CommonFragmentsContractOfferBackground'
+            desktopFooter?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+            mobileFooter?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type ConsultationQueryVariables = Exact<{ [key: string]: never }>
+
+export type ConsultationQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        consultation?: {
+          __typename?: 'CommonFragmentsConsultation'
+          title?: string | null
+          cta?: string | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type ContactsQueryVariables = Exact<{ [key: string]: never }>
+
+export type ContactsQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        contacts?: {
+          __typename?: 'CommonFragmentsContacts'
+          title?: string | null
+          socials?: Array<{
+            __typename?: 'CommonFragmentsContactsSocials'
+            title?: string | null
+            link?: string | null
+            content?: string | null
+          } | null> | null
+          background?: {
+            __typename?: 'CommonFragmentsContactsBackground'
+            mobile?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+            desktop?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type CtaQueryVariables = Exact<{ [key: string]: never }>
+
+export type CtaQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        cta?: {
+          __typename?: 'CommonFragmentsCta'
+          title?: string | null
+          button?: string | null
+          text?: {
+            __typename?: 'CommonFragmentsCtaText'
+            beforeAccent?: string | null
+            accent?: string | null
+            afterAccent?: string | null
+          } | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type FaqQueryVariables = Exact<{ [key: string]: never }>
+
+export type FaqQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        faq?: Array<{
+          __typename?: 'CommonFragmentsFaq'
+          answer?: string | null
+          question?: string | null
+        } | null> | null
+      } | null
+    }>
+  } | null
+}
+
+export type FooterQueryVariables = Exact<{ [key: string]: never }>
+
+export type FooterQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        footer?: {
+          __typename?: 'CommonFragmentsFooter'
+          email?: string | null
+          privacyPolicy?: {
+            __typename?: 'CommonFragmentsFooterPrivacyPolicy'
+            title?: string | null
+            path?: string | null
+          } | null
+          logo?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          courses?: Array<{
+            __typename?: 'CommonFragmentsFooterCourses'
+            title?: string | null
+            path?: string | null
+          } | null> | null
+          socials?: Array<{
+            __typename?: 'CommonFragmentsFooterSocials'
+            title?: string | null
+            link?: string | null
+          } | null> | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type HeaderQueryVariables = Exact<{ [key: string]: never }>
+
+export type HeaderQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        header?: {
+          __typename?: 'CommonFragmentsHeader'
+          ctaButton?: string | null
+          logo?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          dropdownList?: {
+            __typename?: 'CommonFragmentsHeaderDropdownList'
+            title?: string | null
+            items?: {
+              __typename?: 'AcfContentNodeConnection'
+              nodes: Array<
+                | {
+                    __typename?: 'Course'
+                    title?: string | null
+                    id: string
+                    content?: {
+                      __typename?: 'Content'
+                      path?: string | null
+                      price?: {
+                        __typename?: 'ContentPrice'
+                        details?: {
+                          __typename?: 'ContentPriceDetails'
+                          levelsNumber?: number | null
+                          monthsNumber?: number | null
+                          videoTrainingsNumber?: number | null
+                        } | null
+                      } | null
+                    } | null
+                  }
+                | { __typename?: 'GeneralFragment'; id: string }
+                | {
+                    __typename?: 'IndividualCourse'
+                    title?: string | null
+                    id: string
+                    individualCourseData?: {
+                      __typename?: 'IndividualCourseData'
+                      path?: string | null
+                      price?: {
+                        __typename?: 'IndividualCourseDataPrice'
+                        level?: number | null
+                        bonuses?: string | null
+                        liveTrainingsNumber?: string | null
+                        videoTrainingsNumber?: number | null
+                        courseLengthInMonths?: number | null
+                      } | null
+                    } | null
+                  }
+                | { __typename?: 'MediaItem'; id: string }
+                | { __typename?: 'Page'; id: string }
+                | { __typename?: 'Post'; id: string }
+              >
+            } | null
+          } | null
+          navigationElements?: Array<{
+            __typename?: 'CommonFragmentsHeaderNavigationElements'
+            title?: string | null
+            path?: string | null
+          } | null> | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type PrivacyPolicyQueryVariables = Exact<{ [key: string]: never }>
+
+export type PrivacyPolicyQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        privacyPolicy?: {
+          __typename?: 'CommonFragmentsPrivacyPolicy'
+          title?: string | null
+          content?: Array<{
+            __typename?: 'CommonFragmentsPrivacyPolicyContent'
+            title?: string | null
+            description?: string | null
+          } | null> | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type ProcessEducationQueryVariables = Exact<{ [key: string]: never }>
+
+export type ProcessEducationQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        process?: Array<{
+          __typename?: 'CommonFragmentsProcess'
+          title?: string | null
+          text?: string | null
+          picture?: {
+            __typename?: 'CommonFragmentsProcessPicture'
+            alt?: string | null
+            image?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null
+        } | null> | null
+      } | null
+    }>
+  } | null
+}
+
+export type TeacherQueryVariables = Exact<{ [key: string]: never }>
+
+export type TeacherQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        teacher?: {
+          __typename?: 'CommonFragmentsTeacher'
+          subtitle?: string | null
+          title?: string | null
+          description?: string | null
+          experience?: Array<{
+            __typename?: 'CommonFragmentsTeacherExperience'
+            number?: number | null
+            text?: string | null
+          } | null> | null
+          education?: {
+            __typename?: 'CommonFragmentsTeacherEducation'
+            title?: string | null
+            list?: Array<{
+              __typename?: 'CommonFragmentsTeacherEducationList'
+              element?: string | null
+            } | null> | null
+          } | null
+          gallery?: Array<{
+            __typename?: 'CommonFragmentsTeacherGallery'
+            alt?: string | null
+            image?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null> | null
+        } | null
+      } | null
+    }>
+  } | null
 }
 
 export type IndividualCourseQueryVariables = Exact<{
@@ -13991,46 +14363,1095 @@ export type GetSeoQuery = {
   } | null
 }
 
-export const GetCourseDocument = {
+export const ContractOfferDocument = {
   kind: 'Document',
   definitions: [
     {
       kind: 'OperationDefinition',
       operation: 'query',
-      name: { kind: 'Name', value: 'GetCourse' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
+      name: { kind: 'Name', value: 'ContractOffer' },
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'course' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
+            name: { kind: 'Name', value: 'generalFragments' },
             selectionSet: {
               kind: 'SelectionSet',
-              selections: [{ kind: 'Field', name: { kind: 'Name', value: 'title' } }],
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'contractOffer' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'creationYear' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'points' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'subtitle' },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'description' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'background' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'desktopFooter' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'mobileFooter' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
             },
           },
         ],
       },
     },
   ],
-} as unknown as DocumentNode<GetCourseQuery, GetCourseQueryVariables>
+} as unknown as DocumentNode<ContractOfferQuery, ContractOfferQueryVariables>
+export const ConsultationDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Consultation' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'consultation' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ConsultationQuery, ConsultationQueryVariables>
+export const ContactsDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Contacts' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'contacts' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'socials' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'link' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'content' } },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'background' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'mobile' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'desktop' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ContactsQuery, ContactsQueryVariables>
+export const CtaDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Cta' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'cta' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'text' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'beforeAccent' },
+                                        },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'accent' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'afterAccent' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'button' } },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<CtaQuery, CtaQueryVariables>
+export const FaqDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Faq' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'faq' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'answer' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'question' } },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<FaqQuery, FaqQueryVariables>
+export const FooterDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Footer' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'footer' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'email' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'privacyPolicy' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'path' } },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'logo' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'courses' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'path' } },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'socials' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'link' } },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<FooterQuery, FooterQueryVariables>
+export const HeaderDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Header' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'header' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'logo' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'dropdownList' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'items' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'nodes' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'InlineFragment',
+                                                      typeCondition: {
+                                                        kind: 'NamedType',
+                                                        name: { kind: 'Name', value: 'Course' },
+                                                      },
+                                                      selectionSet: {
+                                                        kind: 'SelectionSet',
+                                                        selections: [
+                                                          {
+                                                            kind: 'Field',
+                                                            name: { kind: 'Name', value: 'title' },
+                                                          },
+                                                          {
+                                                            kind: 'Field',
+                                                            name: {
+                                                              kind: 'Name',
+                                                              value: 'content',
+                                                            },
+                                                            selectionSet: {
+                                                              kind: 'SelectionSet',
+                                                              selections: [
+                                                                {
+                                                                  kind: 'Field',
+                                                                  name: {
+                                                                    kind: 'Name',
+                                                                    value: 'path',
+                                                                  },
+                                                                },
+                                                                {
+                                                                  kind: 'Field',
+                                                                  name: {
+                                                                    kind: 'Name',
+                                                                    value: 'price',
+                                                                  },
+                                                                  selectionSet: {
+                                                                    kind: 'SelectionSet',
+                                                                    selections: [
+                                                                      {
+                                                                        kind: 'Field',
+                                                                        name: {
+                                                                          kind: 'Name',
+                                                                          value: 'details',
+                                                                        },
+                                                                        selectionSet: {
+                                                                          kind: 'SelectionSet',
+                                                                          selections: [
+                                                                            {
+                                                                              kind: 'Field',
+                                                                              name: {
+                                                                                kind: 'Name',
+                                                                                value:
+                                                                                  'levelsNumber',
+                                                                              },
+                                                                            },
+                                                                            {
+                                                                              kind: 'Field',
+                                                                              name: {
+                                                                                kind: 'Name',
+                                                                                value:
+                                                                                  'monthsNumber',
+                                                                              },
+                                                                            },
+                                                                            {
+                                                                              kind: 'Field',
+                                                                              name: {
+                                                                                kind: 'Name',
+                                                                                value:
+                                                                                  'videoTrainingsNumber',
+                                                                              },
+                                                                            },
+                                                                          ],
+                                                                        },
+                                                                      },
+                                                                    ],
+                                                                  },
+                                                                },
+                                                              ],
+                                                            },
+                                                          },
+                                                          {
+                                                            kind: 'Field',
+                                                            name: { kind: 'Name', value: 'id' },
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                    {
+                                                      kind: 'InlineFragment',
+                                                      typeCondition: {
+                                                        kind: 'NamedType',
+                                                        name: {
+                                                          kind: 'Name',
+                                                          value: 'IndividualCourse',
+                                                        },
+                                                      },
+                                                      selectionSet: {
+                                                        kind: 'SelectionSet',
+                                                        selections: [
+                                                          {
+                                                            kind: 'Field',
+                                                            name: { kind: 'Name', value: 'title' },
+                                                          },
+                                                          {
+                                                            kind: 'Field',
+                                                            name: {
+                                                              kind: 'Name',
+                                                              value: 'individualCourseData',
+                                                            },
+                                                            selectionSet: {
+                                                              kind: 'SelectionSet',
+                                                              selections: [
+                                                                {
+                                                                  kind: 'Field',
+                                                                  name: {
+                                                                    kind: 'Name',
+                                                                    value: 'path',
+                                                                  },
+                                                                },
+                                                                {
+                                                                  kind: 'Field',
+                                                                  name: {
+                                                                    kind: 'Name',
+                                                                    value: 'price',
+                                                                  },
+                                                                  selectionSet: {
+                                                                    kind: 'SelectionSet',
+                                                                    selections: [
+                                                                      {
+                                                                        kind: 'Field',
+                                                                        name: {
+                                                                          kind: 'Name',
+                                                                          value: 'level',
+                                                                        },
+                                                                      },
+                                                                      {
+                                                                        kind: 'Field',
+                                                                        name: {
+                                                                          kind: 'Name',
+                                                                          value: 'bonuses',
+                                                                        },
+                                                                      },
+                                                                      {
+                                                                        kind: 'Field',
+                                                                        name: {
+                                                                          kind: 'Name',
+                                                                          value:
+                                                                            'liveTrainingsNumber',
+                                                                        },
+                                                                      },
+                                                                      {
+                                                                        kind: 'Field',
+                                                                        name: {
+                                                                          kind: 'Name',
+                                                                          value:
+                                                                            'videoTrainingsNumber',
+                                                                        },
+                                                                      },
+                                                                      {
+                                                                        kind: 'Field',
+                                                                        name: {
+                                                                          kind: 'Name',
+                                                                          value:
+                                                                            'courseLengthInMonths',
+                                                                        },
+                                                                      },
+                                                                    ],
+                                                                  },
+                                                                },
+                                                              ],
+                                                            },
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'id' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'navigationElements' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'path' } },
+                                      ],
+                                    },
+                                  },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'ctaButton' } },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<HeaderQuery, HeaderQueryVariables>
+export const PrivacyPolicyDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'PrivacyPolicy' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'privacyPolicy' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'content' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'description' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<PrivacyPolicyQuery, PrivacyPolicyQueryVariables>
+export const ProcessEducationDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'ProcessEducation' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'process' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'text' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'picture' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'image' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ProcessEducationQuery, ProcessEducationQueryVariables>
+export const TeacherDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Teacher' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'teacher' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'experience' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'number' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'text' } },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'education' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'list' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'element' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'gallery' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'image' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<TeacherQuery, TeacherQueryVariables>
 export const IndividualCourseDocument = {
   kind: 'Document',
   definitions: [

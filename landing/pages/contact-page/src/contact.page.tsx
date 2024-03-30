@@ -1,4 +1,5 @@
 import React                        from 'react'
+import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
@@ -9,11 +10,10 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { useBackground }            from './data'
+import { ContactPageProps }         from './contact-page.interfaces'
 
-export const ContactPage = () => {
+export const ContactPage: FC<ContactPageProps> = ({ contactsData }) => {
   const containerRef = useRef(null)
-  const background = useBackground()
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
@@ -40,24 +40,24 @@ export const ContactPage = () => {
             width='100%'
             display={['none', 'none', 'flex']}
             flexWrap='wrap'
-            backgroundImage={`url(${background?.backgroundForHero?.sourceUrl})`}
+            backgroundImage={`url(${contactsData?.background?.desktop?.node.sourceUrl})`}
             backgroundSize='100% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <ContactBlock />
+            <ContactBlock contactsData={contactsData} />
             <FooterBlock buttonUp={false} />
           </Box>
           <Box
             width='100%'
             display={['flex', 'flex', 'none']}
             flexWrap='wrap'
-            backgroundImage={`url(${background?.backgroundMobileForHero?.sourceUrl})`}
+            backgroundImage={`url(${contactsData?.background?.mobile?.node.sourceUrl})`}
             backgroundSize={['100%', '100%', '0']}
             backgroundRepeat='no-repeat'
             backgroundPosition={['center top', 'center top', 'center']}
           >
-            <ContactBlock />
+            <ContactBlock contactsData={contactsData} />
             <FooterBlock buttonUp={false} />
           </Box>
         </main>

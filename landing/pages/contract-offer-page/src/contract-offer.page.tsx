@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React                        from 'react'
 import { useRef }                   from 'react'
 
@@ -11,19 +9,8 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { useBackgrounds }           from './data'
-
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const ContractOfferPage = () => {
-  const backgrounds = useBackgrounds()
+export const ContractOfferPage = ({ contractOfferData }) => {
   const containerRef = useRef(null)
-
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
@@ -46,11 +33,11 @@ export const ContractOfferPage = () => {
         {/* TODO: change to contract */}
         <Seo id={PageID.CONTACT} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <ContractOfferBlock />
+          <ContractOfferBlock contractOfferData={contractOfferData} />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${contractOfferData.background.desktopFooter.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -60,7 +47,7 @@ export const ContractOfferPage = () => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${contractOfferData.background.mobileFooter.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'

@@ -4,12 +4,14 @@
   "main": "src/index.ts",
   "dependencies": {
     "@landing/consultation": "workspace:0.0.1",
+    "@landing/header-fragment": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/drawer": "workspace:0.0.1",
     "@ui/figures": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
     "@ui/logo": "workspace:0.0.1",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@apollo/client": "3.6.9",
+    "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.20",
     "react-intl": "5.24.3",
     "styled-system": "5.1.5",

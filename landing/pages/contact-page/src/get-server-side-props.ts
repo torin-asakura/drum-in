@@ -1,3 +1,4 @@
+import { GET_CONTACTS }     from '@globals/data'
 import { PageID }           from '@globals/data'
 import { GET_SEO }          from '@globals/data'
 import { addApolloState }   from '@globals/data'
@@ -8,6 +9,10 @@ export const getServerSideProps = async ({ res }) => {
   const client = initializeApollo({})
 
   setCacheHeader(res, 3600, 300)
+
+  const { data } = await client.query({ query: GET_CONTACTS })
+
+  const contactsData = data?.generalFragments?.nodes[0].commonFragments?.contacts
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
@@ -20,5 +25,5 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return addApolloState(client, { props: { SEO } })
+  return addApolloState(client, { props: { SEO, contactsData } })
 }

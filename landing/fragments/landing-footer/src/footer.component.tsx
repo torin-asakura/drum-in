@@ -3,22 +3,22 @@ import uniqid               from 'uniqid'
 import { FormattedMessage } from 'react-intl'
 import { forwardRef }       from 'react'
 
+import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
-import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
+import { useFooter }        from '@globals/data'
 
 import { BottomRow }        from './bottom-row'
 import { ButtonUp }         from './button-up'
 import { FooterProps }      from './footer.interfaces'
 import { LinkSocial }       from './link-social'
-import { useFooter }        from './data'
 
 const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }, ref: any) => {
-  const footer = useFooter()
+  const { footer } = useFooter()
 
   return (
     <Row justifyContent='center' ref={ref}>
@@ -28,7 +28,9 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
           <Layout flexBasis={[40, 85, 128]} />
           <Box width='100%' flexDirection={['column', 'column', 'row']}>
             <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
-              <Logo />
+              <NextLink path='/'>
+                <ImageBlock src={footer?.logo?.node.sourceUrl || ''} />
+              </NextLink>
             </Box>
             <Layout flexGrow={[0, 0, 2]} flexBasis={[40, 50, 0]} flexShrink={0} />
             <Column>
@@ -48,17 +50,17 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              {footer?.menuCourses?.nodes?.map(({ title, menuCourse }, index: number) => {
+              {footer?.courses?.map((element, index: number) => {
                 if (index === 3) {
                   return (
                     <React.Fragment key={uniqid()}>
-                      <NextLink path={menuCourse.link} target='_blank'>
+                      <NextLink path={element?.path} target='_blank'>
                         <Text
                           fontFamily='secondary'
                           fontWeight='bold'
                           fontSize={['medium', 'regular', 'regular']}
                         >
-                          {title}
+                          {element?.title}
                         </Text>
                       </NextLink>
                       <Layout flexBasis={[28, 30, 32]} />
@@ -67,13 +69,13 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 }
                 return (
                   <React.Fragment key={uniqid()}>
-                    <NextLink path={menuCourse.link} target='_blank'>
+                    <NextLink path={element?.path} target='_blank'>
                       <Text
                         fontFamily='secondary'
                         fontWeight='bold'
                         fontSize={['medium', 'regular', 'regular']}
                       >
-                        {title}
+                        {element?.title}
                       </Text>
                     </NextLink>
                     <Layout flexBasis={16} />
@@ -99,9 +101,9 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              {footer?.fragmentNewItem?.footer?.networksList?.map(({ name, link }) => (
+              {footer?.socials?.map((element) => (
                 <React.Fragment key={uniqid()}>
-                  <LinkSocial text={name} path={link} />
+                  <LinkSocial text={element?.title} path={element?.link} />
                   <Layout flexBasis={16} />
                 </React.Fragment>
               ))}
@@ -110,7 +112,7 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
             <ButtonUp buttonUp={buttonUp} />
           </Box>
           <Layout flexBasis={[83, 83, 77]} />
-          <BottomRow />
+          <BottomRow footer={footer} />
           <Layout flexBasis={[24, 32, 39]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
