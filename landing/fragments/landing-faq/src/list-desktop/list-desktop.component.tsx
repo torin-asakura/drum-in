@@ -1,15 +1,14 @@
-import { FC }           from 'react'
-import React            from 'react'
-import { useState }     from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { useState }         from 'react'
 
-import { Box }      from '@ui/layout'
-import { Layout }   from '@ui/layout'
+import { Box }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
 
 import { Item }             from './item'
 import { ListDesktopProps } from './list-desktop.interfaces'
 
-
-const ListDesktop:FC<ListDesktopProps> = ({ faq }) => {
+const ListDesktop: FC<ListDesktopProps> = ({ faq }) => {
   const [active, setActive] = useState<boolean>(false)
 
   return (

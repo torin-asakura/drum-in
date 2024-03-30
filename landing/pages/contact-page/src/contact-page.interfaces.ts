@@ -1,5 +1,5 @@
 import { ContactsDataProps } from '@globals/data'
 
-export interface ContactPageProps{
-  contactsData?:ContactsDataProps | null
+export interface ContactPageProps {
+  contactsData?: ContactsDataProps | null
 }

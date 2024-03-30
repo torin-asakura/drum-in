@@ -1,3 +1,3 @@
-export interface ItemLinkProps{
-  item?:{title?: string | null, path?: string | null}| null
+export interface ItemLinkProps {
+  item?: { title?: string | null; path?: string | null } | null
 }

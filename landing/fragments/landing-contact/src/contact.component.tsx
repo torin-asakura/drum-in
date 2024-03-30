@@ -1,6 +1,6 @@
-import { FC }                from 'react'
-import React                 from 'react'
-import uniqid                from 'uniqid'
+import React                   from 'react'
+import uniqid                  from 'uniqid'
+import { FC }                  from 'react'
 
 import { ArrowLeftBottomIcon } from '@ui/icons'
 import { ArrowTopRightIcon }   from '@ui/icons'
@@ -10,11 +10,10 @@ import { Layout }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { Text }                from '@ui/text'
 
-import { Card }              from './card'
-import { ContactBlockProps } from './contact.interfaces'
+import { Card }                from './card'
+import { ContactBlockProps }   from './contact.interfaces'
 
-
-const ContactBlock:FC<ContactBlockProps> = ({ contactsData }) => (
+const ContactBlock: FC<ContactBlockProps> = ({ contactsData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -49,7 +48,11 @@ const ContactBlock:FC<ContactBlockProps> = ({ contactsData }) => (
           <Layout display={['flex', 'flex', 'none']} flexBasis={[25, 40, 0]} />
           {contactsData?.socials?.map((item) => (
             <React.Fragment key={uniqid()}>
-              <Card title={item?.title || ''} link={item?.link || ''} content={item?.content || ''} />
+              <Card
+                title={item?.title || ''}
+                link={item?.link || ''}
+                content={item?.content || ''}
+              />
               <Layout flexBasis={[12, 24, 118]} />
             </React.Fragment>
           ))}

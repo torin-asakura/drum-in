@@ -1,5 +1,5 @@
 import { TeacherDataProps } from '@globals/data/src'
 
-export interface EducationMobileProps{
-  teacherData?: TeacherDataProps |null
+export interface EducationMobileProps {
+  teacherData?: TeacherDataProps | null
 }

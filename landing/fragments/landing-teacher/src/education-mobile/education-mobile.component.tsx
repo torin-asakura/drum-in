@@ -1,18 +1,17 @@
-import { TeacherDataProps } from '@globals/data/src'
-import { FC }               from 'react'
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { FormattedMessage }            from 'react-intl'
+import { useState }                    from 'react'
 
 import { InvertedExclamationMarkIcon } from '@ui/icons'
 import { Box }                         from '@ui/layout'
 import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Text }                        from '@ui/text'
+
 import { EducationMobileProps }        from './education-mobile.interfaces'
 
-
-const EducationMobile:FC<EducationMobileProps> = ({ teacherData }) => {
+const EducationMobile: FC<EducationMobileProps> = ({ teacherData }) => {
   const [visibleEducation, setVisibleEducation] = useState<boolean>(false)
 
   return (

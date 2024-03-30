@@ -1,6 +1,6 @@
-import { FC }     from 'react'
-import React      from 'react'
-import { useRef } from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { PageID }                   from '@globals/data'
@@ -9,10 +9,10 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
+
 import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
 
-
-export const PrivacyPolicyPage:FC<PrivacyPolicyPageProps> = ({ privacyPolicy }) => {
+export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ privacyPolicy }) => {
   const containerRef = useRef(null)
 
   return (

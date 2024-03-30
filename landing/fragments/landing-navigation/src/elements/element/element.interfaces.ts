@@ -9,13 +9,13 @@ export interface ElementProps {
   quantityVideoLessons?: number | null
   circlePositionX?: number
   circlePositionY?: number
-  circleFirstLine?: string
-  circleSecondLine?: string | JSX.Element
+  circleFirstLine?: string | number | null
+  circleSecondLine?: string | JSX.Element | null
   rectangleRotate?: number
   rectanglePositionX?: number
   rectanglePositionY?: number
   quantityMonths?: number | null
   textMonths?: string | null
   rectangleColor?: string
-  path: string
+  path?: string | null
 }

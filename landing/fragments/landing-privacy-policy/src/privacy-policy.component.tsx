@@ -1,17 +1,16 @@
-import { FC }                     from 'react'
-import React                      from 'react'
-import uniqid                     from 'uniqid'
+import React                  from 'react'
+import uniqid                 from 'uniqid'
+import { FC }                 from 'react'
 
 import { Box }                from '@ui/layout'
 import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
+
 import { PrivacyPolicyProps } from './privacy-policy.interfaces'
 
-
-
-const PrivacyPolicyBlock:FC<PrivacyPolicyProps> = ({ privacyPolicy }) => (
+const PrivacyPolicyBlock: FC<PrivacyPolicyProps> = ({ privacyPolicy }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

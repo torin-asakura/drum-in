@@ -1,20 +1,20 @@
-import { ProcessEducationDataProps } from '@globals/data/src'
-import { FC }                        from 'react'
 import React                         from 'react'
+import { FC }                        from 'react'
 
-import { ImageBlock }  from '@ui/image'
-import { Box }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Slider }      from '@ui/slider'
-import { SwiperSlide } from '@ui/slider'
-import { Text }        from '@ui/text'
+import { ProcessEducationDataProps } from '@globals/data/src'
+import { ImageBlock }                from '@ui/image'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Slider }                    from '@ui/slider'
+import { SwiperSlide }               from '@ui/slider'
+import { Text }                      from '@ui/text'
 
-export interface MobileSliderProps{
-  processEducation?:ProcessEducationDataProps|null
+export interface MobileSliderProps {
+  processEducation?: ProcessEducationDataProps | null
 }
 
-const MobileSlider:FC<MobileSliderProps> = ({ processEducation }) => (
+const MobileSlider: FC<MobileSliderProps> = ({ processEducation }) => (
   <Column>
     <Box display={['flex', 'flex', 'none']}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -47,8 +47,8 @@ const MobileSlider:FC<MobileSliderProps> = ({ processEducation }) => (
               <Layout flexGrow={3} />
               <Box alignSelf='end' width={[200, 220, 0]} height={[107, 120, 0]}>
                 <ImageBlock
-                  alt={processEducation?.[0]?.picture?.alt}
-                  src={processEducation?.[0]?.picture?.image?.node?.sourceUrl}
+                  alt={processEducation?.[0]?.picture?.alt || ''}
+                  src={processEducation?.[0]?.picture?.image?.node?.sourceUrl || ''}
                 />
               </Box>
               <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
@@ -80,8 +80,8 @@ const MobileSlider:FC<MobileSliderProps> = ({ processEducation }) => (
               <Layout flexGrow={3} />
               <Box alignSelf='end' width={[178, 198, 0]} height={[140, 155, 0]}>
                 <ImageBlock
-                  alt={processEducation?.[1]?.picture?.alt}
-                  src={processEducation?.[1]?.picture?.image?.node?.sourceUrl}
+                  alt={processEducation?.[1]?.picture?.alt || ''}
+                  src={processEducation?.[1]?.picture?.image?.node?.sourceUrl || ''}
                 />
               </Box>
               <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
@@ -112,8 +112,8 @@ const MobileSlider:FC<MobileSliderProps> = ({ processEducation }) => (
               <Layout flexGrow={3} />
               <Box alignSelf='end' width={[112, 132, 0]} height={[150, 165, 0]}>
                 <ImageBlock
-                  alt={processEducation?.[2]?.picture?.alt}
-                  src={processEducation?.[2]?.picture?.image?.node?.sourceUrl}
+                  alt={processEducation?.[2]?.picture?.alt || ''}
+                  src={processEducation?.[2]?.picture?.image?.node?.sourceUrl || ''}
                 />
               </Box>
               <Layout flexBasis={[20, 26, 32]} flexShrink={0} />

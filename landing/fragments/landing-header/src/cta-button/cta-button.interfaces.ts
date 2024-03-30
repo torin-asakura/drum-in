@@ -1,3 +1,3 @@
-export interface CtaButtonProps{
-  title?:string | null
+export interface CtaButtonProps {
+  title?: string | null
 }

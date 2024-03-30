@@ -1,6 +1,6 @@
-import { FC }     from 'react'
-import React      from 'react'
-import { useRef } from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { PageID }                   from '@globals/data'
@@ -9,8 +9,10 @@ import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
-import {ContactPageProps} from './contact-page.interfaces'
-export const ContactPage:FC<ContactPageProps> = ({ contactsData }) => {
+
+import { ContactPageProps }         from './contact-page.interfaces'
+
+export const ContactPage: FC<ContactPageProps> = ({ contactsData }) => {
   const containerRef = useRef(null)
 
   return (

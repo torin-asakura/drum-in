@@ -1,21 +1,21 @@
-import { ProcessEducationDataProps } from '@globals/data'
-import { FC }                        from 'react'
 import React                         from 'react'
+import { FC }                        from 'react'
 
-import { ImageBlock }  from '@ui/image'
-import { Box }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Slider }      from '@ui/slider'
-import { SwiperSlide } from '@ui/slider'
-import { Text }        from '@ui/text'
+import { ProcessEducationDataProps } from '@globals/data'
+import { ImageBlock }                from '@ui/image'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Slider }                    from '@ui/slider'
+import { SwiperSlide }               from '@ui/slider'
+import { Text }                      from '@ui/text'
 
-export interface DesktopSliderProps{
-  processEducation?:ProcessEducationDataProps|null
+export interface DesktopSliderProps {
+  processEducation?: ProcessEducationDataProps | null
 }
 
-const DesktopSlider:FC<DesktopSliderProps> = ({ processEducation }) => (
+const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
   <Column width='100%'>
     <Box display={['none', 'none', 'flex']}>
       <Slider
@@ -51,8 +51,8 @@ const DesktopSlider:FC<DesktopSliderProps> = ({ processEducation }) => (
               <Layout flexGrow={3} />
               <Box alignSelf='end' width={300} height={161}>
                 <ImageBlock
-                  alt={processEducation?.[0]?.picture?.alt}
-                  src={processEducation?.[0]?.picture?.image?.node?.sourceUrl}
+                  alt={processEducation?.[0]?.picture?.alt || ''}
+                  src={processEducation?.[0]?.picture?.image?.node?.sourceUrl || ''}
                 />
               </Box>
               <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
@@ -84,8 +84,8 @@ const DesktopSlider:FC<DesktopSliderProps> = ({ processEducation }) => (
               <Layout flexGrow={3} />
               <Box alignSelf='end' width={240} height={189}>
                 <ImageBlock
-                  alt={processEducation?.[1]?.picture?.alt}
-                  src={processEducation?.[1]?.picture?.image?.node?.sourceUrl}
+                  alt={processEducation?.[1]?.picture?.alt || ''}
+                  src={processEducation?.[1]?.picture?.image?.node?.sourceUrl || ''}
                 />
               </Box>
               <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
@@ -129,8 +129,8 @@ const DesktopSlider:FC<DesktopSliderProps> = ({ processEducation }) => (
                 </Column>
                 <Box width={288} height={384} borderRadius='big'>
                   <ImageBlock
-                    alt={processEducation?.[2]?.picture?.alt}
-                    src={processEducation?.[2]?.picture?.image?.node?.sourceUrl}
+                    alt={processEducation?.[2]?.picture?.alt || ''}
+                    src={processEducation?.[2]?.picture?.image?.node?.sourceUrl || ''}
                   />
                 </Box>
               </Row>

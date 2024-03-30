@@ -15,8 +15,6 @@ import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
 import { useCta }             from '@globals/data'
 
-
-
 const CtaBlock = forwardRef(({ data }: any, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)

@@ -1,15 +1,15 @@
-import { FC }              from 'react'
-import React               from 'react'
+import React              from 'react'
+import { FC }             from 'react'
 
 import { Box }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { NextLink }       from '@ui/link'
 import { Link }           from '@ui/link'
 import { Text }           from '@ui/text'
+
 import { BottomRowProps } from './bottom-row.interfaces'
 
-
-const BottomRow:FC<BottomRowProps> = ({ footer }) => (
+const BottomRow: FC<BottomRowProps> = ({ footer }) => (
   <Box
     width='100%'
     flexDirection={['column', 'column', 'row']}
