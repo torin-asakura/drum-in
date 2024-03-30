@@ -1,4 +1,3 @@
-import { FaqDataProps } from '@globals/data/src'
 import { FC }           from 'react'
 import React            from 'react'
 import { useState }     from 'react'
@@ -6,12 +5,9 @@ import { useState }     from 'react'
 import { Box }      from '@ui/layout'
 import { Layout }   from '@ui/layout'
 
-import { Item }     from './item'
+import { Item }             from './item'
+import { ListDesktopProps } from './list-desktop.interfaces'
 
-export interface ListDesktopProps {
-
-  faq?:FaqDataProps |null
-}
 
 const ListDesktop:FC<ListDesktopProps> = ({ faq }) => {
   const [active, setActive] = useState<boolean>(false)
@@ -22,8 +18,8 @@ const ListDesktop:FC<ListDesktopProps> = ({ faq }) => {
         <React.Fragment key={item?.answer}>
           <Box flexDirection='column'>
             <Item
-              question={item?.question}
-              answer={item?.answer}
+              question={item?.question || ''}
+              answer={item?.answer || ''}
               positionVertical={item?.question ? 'top-start' : 'bottom-start'}
               active={active}
               setActive={setActive}

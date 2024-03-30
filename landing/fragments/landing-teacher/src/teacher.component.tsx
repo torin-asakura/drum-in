@@ -73,7 +73,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
       <Box>
         <Column width='100%'>
           <Layout flexBasis={[24, 70, 130]} />
-          <SliderBlock teacherData={teacherData} />
+          <SliderBlock gallery={teacherData?.gallery} />
           <Layout flexBasis={[24, 70, 155]} />
         </Column>
       </Box>

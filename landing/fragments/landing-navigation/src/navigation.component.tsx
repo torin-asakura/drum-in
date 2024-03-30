@@ -51,14 +51,14 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible 
             />
             <Layout flexBasis={[0, 45, 70]} />
             <Box display={['none', 'none', 'flex']}>
-              {headerData?.links?.map((item) => (
+              {headerData?.navigationElements?.map((item) => (
                 <ItemLink item={item} />
               ))}
             </Box>
             <CtaButton title={headerData?.ctaButton} />
           </Row>
           <Layout flexBasis={[60, 70, 125]} flexGrow={2} />
-          <Elements headerData={headerData} stateHover={stateHover} />
+          <Elements list={headerData?.dropdownList} stateHover={stateHover} />
           <Layout flexBasis={[55, 50, 40]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

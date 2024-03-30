@@ -1,5 +1,6 @@
-import React                        from 'react'
-import { useRef }                   from 'react'
+import { FC }     from 'react'
+import React      from 'react'
+import { useRef } from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { PageID }                   from '@globals/data'
@@ -8,11 +9,10 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
+import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
 
-import { useBackgrounds }           from './data'
 
-export const OpeningTheRhythmPage = ({ privacyPolicy }) => {
-  const backgrounds = useBackgrounds()
+export const PrivacyPolicyPage:FC<PrivacyPolicyPageProps> = ({ privacyPolicy }) => {
   const containerRef = useRef(null)
 
   return (
@@ -40,7 +40,7 @@ export const OpeningTheRhythmPage = ({ privacyPolicy }) => {
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${''})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -50,7 +50,7 @@ export const OpeningTheRhythmPage = ({ privacyPolicy }) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${''})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
@@ -63,4 +63,4 @@ export const OpeningTheRhythmPage = ({ privacyPolicy }) => {
   )
 }
 
-export default OpeningTheRhythmPage
+export default PrivacyPolicyPage

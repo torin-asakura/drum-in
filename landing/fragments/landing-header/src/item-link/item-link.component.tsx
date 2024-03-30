@@ -2,13 +2,14 @@ import React        from 'react'
 import { FC }       from 'react'
 import { memo }     from 'react'
 
-import { Box }      from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { NextLink } from '@ui/link'
-import { Text }     from '@ui/text'
-import { useHover } from '@ui/utils'
+import { Box }           from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { NextLink }      from '@ui/link'
+import { Text }          from '@ui/text'
+import { useHover }      from '@ui/utils'
+import { ItemLinkProps } from './item-link.interfaces'
 
-export const ItemLink: FC<{ item: { title?: string | null; path?: string | null } | null }> = memo(
+export const ItemLink: FC<ItemLinkProps> = memo(
   ({ item }) => {
     const [hover, hoverProps] = useHover()
 

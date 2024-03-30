@@ -1,3 +1,12 @@
+export type GalleryDataProps = Array<{
+                                      alt?: string | null
+                                      image?: {
+                                                node: {
+                                                        sourceUrl?: string | null
+                                                      } | null
+                                              } | null
+                                    } | null>
+
 export type TeacherDataProps = {
 
             subtitle?: string | null
@@ -13,12 +22,5 @@ export type TeacherDataProps = {
                 element?: string | null
               } | null> | null
             } | null
-            gallery?: Array<{
-              alt?: string | null
-              image?: {
-                node: {
-                  sourceUrl?: string | null
-                } | null
-              } | null
-            } | null> | null
+            gallery?: GalleryDataProps | null
           } | null

@@ -9,10 +9,8 @@ import { Box }                         from '@ui/layout'
 import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Text }                        from '@ui/text'
+import { EducationMobileProps }        from './education-mobile.interfaces'
 
-export interface EducationMobileProps{
-  teacherData?: TeacherDataProps |null
-}
 
 const EducationMobile:FC<EducationMobileProps> = ({ teacherData }) => {
   const [visibleEducation, setVisibleEducation] = useState<boolean>(false)
@@ -60,7 +58,7 @@ const EducationMobile:FC<EducationMobileProps> = ({ teacherData }) => {
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
           {teacherData?.education?.list?.map((item) => (
-            <React.Fragment key={item?.element.substring(0, 3)}>
+            <React.Fragment key={item?.element?.substring(0, 3)}>
               <Box>
                 <Text
                   fontWeight='medium'

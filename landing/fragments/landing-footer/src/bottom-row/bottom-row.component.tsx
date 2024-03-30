@@ -1,16 +1,13 @@
-import { FooterDataProps } from '@globals/data/src'
 import { FC }              from 'react'
 import React               from 'react'
 
-import { Box }      from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { NextLink } from '@ui/link'
-import { Link }     from '@ui/link'
-import { Text }     from '@ui/text'
+import { Box }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { NextLink }       from '@ui/link'
+import { Link }           from '@ui/link'
+import { Text }           from '@ui/text'
+import { BottomRowProps } from './bottom-row.interfaces'
 
-export interface BottomRowProps{
-  footer?: FooterDataProps |null
-}
 
 const BottomRow:FC<BottomRowProps> = ({ footer }) => (
   <Box

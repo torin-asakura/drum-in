@@ -1,10 +1,12 @@
 /* eslint-disable no-extra-boolean-cast */
 
-import React                  from 'react'
-import { FC }                 from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useState }           from 'react'
-import { useIntl }            from 'react-intl'
+import { IndividualCourseDataProps } from '@globals/data'
+import { MainCourseDataProps }       from '@globals/data'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { FormattedMessage }          from 'react-intl'
+import { useState }                  from 'react'
+import { useIntl }                   from 'react-intl'
 
 import { CourseID }           from '@globals/data'
 import { Consultation }       from '@landing/consultation'
@@ -21,20 +23,15 @@ import { Element }            from './element'
 import { ElementsProps }      from './elements.interfaces'
 import { getUi }              from '../helpers'
 
-const Elements: FC<ElementsProps> = ({ headerData, stateHover }) => {
+export interface IndividualCourseItemsProps{
+  individualCoursesData?: MainCourseDataProps | IndividualCourseDataProps | null
+  stateHover:boolean
+}
+
+
+export const IndividualCourseItems:FC<IndividualCourseItemsProps> = ({individualCoursesData,stateHover}) => {
+
   const { formatMessage } = useIntl()
-
-  const [visibleModal, setVisibleModal] = useState<boolean>(false)
-  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-
-  const course = headerData?.dropdownList.items.nodes.find(
-    (el) => el.id === CourseID.OPENING_RHYTHM
-  )
-  const individualCourses = headerData?.dropdownList.items.nodes.filter(
-    (el) => el.id !== CourseID.OPENING_RHYTHM
-  )
-
-  const countLevel = course?.content.price.details.levelsNumber
 
   const getCircleSecondLineValue = (item) => {
     const liveBroadcastCount = parseInt(item?.individualCourseData?.price?.liveTrainingsNumber, 10)
@@ -45,6 +42,98 @@ const Elements: FC<ElementsProps> = ({ headerData, stateHover }) => {
       />
     ) : null
   }
+
+  return(
+    <>
+        { individualCoursesData?.map((item) => (
+          <React.Fragment key={item?.title}>
+            <Element
+              stateHover={stateHover}
+              title={item?.title}
+              level={
+                item?.individualCourseData?.price?.level
+                  ? `${formatMessage({ id: 'course.price.level' })} ${
+                    item?.individualCourseData?.price?.level
+                  }`
+                  : null
+              }
+              levelBackground={getUi(item?.id)?.levelBackground}
+              squareRotate={getUi(item?.id)?.squareRotate}
+              squarePositionX={getUi(item?.id)?.squarePositionX}
+              squarePositionY={getUi(item?.id)?.squarePositionY}
+              quantityVideoLessons={item?.individualCourseData?.price?.videoTrainingsNumber}
+              rectangleRotate={getUi(item?.id)?.rectangleRotate}
+              rectanglePositionX={getUi(item?.id)?.rectanglePositionX}
+              rectanglePositionY={getUi(item?.id)?.rectanglePositionY}
+              quantityMonths={item?.individualCourseData?.price?.courseLengthInMonths}
+              rectangleColor={getUi(item?.id)?.rectangleColor}
+              circlePositionX={getUi(item?.id)?.circlePositionX}
+              circlePositionY={getUi(item?.id)?.circlePositionY}
+              circleFirstLine={item?.individualCourseData?.price?.liveTrainingsNumber}
+              circleSecondLine={
+                item?.individualCourseData?.price?.bonuses || getCircleSecondLineValue(item)
+              }
+              path={item?.content?.path}
+            />
+            <Layout flexBasis={16} />
+          </React.Fragment>
+        ))}
+
+    </>
+  )
+}
+
+export interface MainCourseItemProps{
+  mainCourseData?: MainCourseDataProps | IndividualCourseDataProps | null
+  stateHover:boolean
+}
+
+export const MainCourseItem:FC<MainCourseItemProps> = ({mainCourseData,stateHover}) => {
+
+
+
+  const countLevel = mainCourseData?.content?.price.details.levelsNumber
+  const mainCourseId = mainCourseData?.id
+
+  return(
+    <Element
+      stateHover={stateHover}
+      title={mainCourseData?.title}
+      squareRotate={getUi(mainCourseId)?.squareRotate}
+      squarePositionX={getUi(mainCourseId)?.squarePositionX}
+      squarePositionY={getUi(mainCourseId)?.squarePositionY}
+      quantityVideoLessons={mainCourseData?.content.price.details.videoTrainingsNumber}
+      rectangleRotate={getUi(mainCourseId)?.rectangleRotate}
+      rectanglePositionX={getUi(mainCourseId)?.rectanglePositionX}
+      rectanglePositionY={getUi(mainCourseId)?.rectanglePositionY}
+      quantityMonths={mainCourseData?.content.price.details.monthsNumber}
+      rectangleColor={getUi(mainCourseId)?.rectangleColor}
+      circlePositionX={getUi(mainCourseId)?.circlePositionX}
+      circlePositionY={getUi(mainCourseId)?.circlePositionY}
+      circleFirstLine={mainCourseData?.content.price.details.levelsNumber}
+      circleSecondLine={
+        <FormattedMessage id='course.price.plural_format_level' values={{ countLevel }} />
+      }
+      path={mainCourseData?.content?.path}
+    />
+  )
+}
+
+
+const Elements: FC<ElementsProps> = ({ list, stateHover }) => {
+
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
+
+  const mainCourseData = list?.items?.nodes.find(
+    (el) => el.id === CourseID.OPENING_RHYTHM
+  )
+
+  const individualCoursesData = list?.items?.nodes.filter(
+    (el) => el.id !== CourseID.OPENING_RHYTHM
+  )
+
+
 
   return (
     <Row>
@@ -57,65 +146,13 @@ const Elements: FC<ElementsProps> = ({ headerData, stateHover }) => {
             lineHeight='default'
             color='gray'
           >
-            {headerData?.dropdownList.title}
+            {list?.title}
           </Text>
         </Box>
         <Layout display={['flex', 'flex', 'none']} flexBasis={[20, 24, 0]} />
-
-        <Element
-          stateHover={stateHover}
-          title={course?.title}
-          squareRotate={getUi(course.id)?.squareRotate}
-          squarePositionX={getUi(course.id)?.squarePositionX}
-          squarePositionY={getUi(course.id)?.squarePositionY}
-          quantityVideoLessons={course.content.price.details.videoTrainingsNumber}
-          rectangleRotate={getUi(course.id)?.rectangleRotate}
-          rectanglePositionX={getUi(course.id)?.rectanglePositionX}
-          rectanglePositionY={getUi(course.id)?.rectanglePositionY}
-          quantityMonths={course.content.price.details.monthsNumber}
-          rectangleColor={getUi(course.id)?.rectangleColor}
-          circlePositionX={getUi(course.id)?.circlePositionX}
-          circlePositionY={getUi(course.id)?.circlePositionY}
-          circleFirstLine={course.content.price.details.levelsNumber}
-          circleSecondLine={
-            <FormattedMessage id='course.price.plural_format_level' values={{ countLevel }} />
-          }
-          path={course.content.path}
-        />
+        <MainCourseItem mainCourseData={mainCourseData} stateHover={stateHover}/>
         <Layout flexBasis={16} />
-        {individualCourses.map((item) => (
-          <React.Fragment key={item.title}>
-            <Element
-              stateHover={stateHover}
-              title={item?.title}
-              level={
-                item?.individualCourseData?.price?.level
-                  ? `${formatMessage({ id: 'course.price.level' })} ${
-                      item?.individualCourseData?.price?.level
-                    }`
-                  : null
-              }
-              levelBackground={getUi(item.id)?.levelBackground}
-              squareRotate={getUi(item.id)?.squareRotate}
-              squarePositionX={getUi(item.id)?.squarePositionX}
-              squarePositionY={getUi(item.id)?.squarePositionY}
-              quantityVideoLessons={item?.individualCourseData?.price?.videoTrainingsNumber}
-              rectangleRotate={getUi(item.id)?.rectangleRotate}
-              rectanglePositionX={getUi(item.id)?.rectanglePositionX}
-              rectanglePositionY={getUi(item.id)?.rectanglePositionY}
-              quantityMonths={item?.individualCourseData?.price?.courseLengthInMonths}
-              rectangleColor={getUi(item.id)?.rectangleColor}
-              circlePositionX={getUi(item.id)?.circlePositionX}
-              circlePositionY={getUi(item.id)?.circlePositionY}
-              circleFirstLine={item?.individualCourseData?.price?.liveTrainingsNumber}
-              circleSecondLine={
-                item?.individualCourseData?.price?.bonuses || getCircleSecondLineValue(item)
-              }
-              path={item?.content?.path}
-            />
-            <Layout flexBasis={16} />
-          </React.Fragment>
-        ))}
+        <IndividualCourseItems individualCoursesData={individualCoursesData} stateHover={stateHover} />
         <Layout display={['flex', 'flex', 'none']} flexBasis={[60, 50, 0]} />
         <Box display={['flex', 'flex', 'none']}>
           <NextLink path='/contact'>

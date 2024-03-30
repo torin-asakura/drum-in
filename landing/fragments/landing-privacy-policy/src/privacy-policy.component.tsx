@@ -1,13 +1,17 @@
-import React      from 'react'
-import uniqid     from 'uniqid'
+import { FC }                     from 'react'
+import React                      from 'react'
+import uniqid                     from 'uniqid'
 
-import { Box }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
-import { Row }    from '@ui/layout'
-import { Text }   from '@ui/text'
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Text }               from '@ui/text'
+import { PrivacyPolicyProps } from './privacy-policy.interfaces'
 
-const PrivacyPolicyBlock = ({ privacyPolicy }) => (
+
+
+const PrivacyPolicyBlock:FC<PrivacyPolicyProps> = ({ privacyPolicy }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -27,7 +31,7 @@ const PrivacyPolicyBlock = ({ privacyPolicy }) => (
         </Box>
         <Layout flexBasis={[20, 30, 50]} flexShrink={0} />
         <Column>
-          {privacyPolicy?.content.map((item) => (
+          {privacyPolicy?.content?.map((item) => (
             <React.Fragment key={uniqid()}>
               <Row>
                 <Text
@@ -36,7 +40,7 @@ const PrivacyPolicyBlock = ({ privacyPolicy }) => (
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {item.title}
+                  {item?.title}
                 </Text>
               </Row>
               <Layout flexBasis={[4, 6, 8]} flexShrink={0} />
@@ -48,7 +52,7 @@ const PrivacyPolicyBlock = ({ privacyPolicy }) => (
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {item.description}
+                  {item?.description}
                 </Text>
                 <Layout width={[16, 100, 200]} flexShrink={0} />
               </Row>

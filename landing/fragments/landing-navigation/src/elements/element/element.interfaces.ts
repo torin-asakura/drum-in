@@ -1,6 +1,6 @@
 export interface ElementProps {
   stateHover: boolean
-  title: string
+  title?: string | null
   level?: string | null
   levelBackground?: string
   squareRotate?: number

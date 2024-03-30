@@ -3,12 +3,14 @@ import { FC }           from 'react'
 import { memo }         from 'react'
 import { useState }     from 'react'
 
-import { Consultation } from '@landing/consultation'
-import { Button }       from '@ui/button'
-import { Row }          from '@ui/layout'
-import { Text }         from '@ui/text'
+import { Consultation }   from '@landing/consultation'
+import { Button }         from '@ui/button'
+import { Row }            from '@ui/layout'
+import { Text }           from '@ui/text'
+import { CtaButtonProps } from './cta-button.interfaces'
 
-export const CtaButton: FC<{ title?: string | null }> = memo(({ title }) => {
+
+export const CtaButton: FC<CtaButtonProps> = memo(({ title }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
 
   return (

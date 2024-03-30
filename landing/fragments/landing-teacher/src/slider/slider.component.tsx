@@ -13,20 +13,18 @@ import { SwiperSlide }           from '@ui/slider'
 
 import { Slide }                 from './slide'
 import { useViewportBreakpoint } from './hooks'
+import { SliderBlockProps }      from './slider.interfaces'
 
-export interface SliderBlockProps{
-  teacherData?: TeacherDataProps|null
-}
 
-const SliderBlock:FC<SliderBlockProps> = ({ teacherData }) => {
+const SliderBlock:FC<SliderBlockProps> = ({ gallery }) => {
   const { isWideViewport, isMobileViewport } = useViewportBreakpoint()
 
   const teacherChildren = useMemo(
     () =>
-      teacherData?.gallery?.map((item) => (
+      gallery?.map((item) => (
         <Slide pathImage={item?.image?.node?.sourceUrl || ''} alt={item?.alt || ''} />
       )),
-    [teacherData]
+    [gallery]
   )
 
   return (
