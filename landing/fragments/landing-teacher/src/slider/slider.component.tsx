@@ -32,7 +32,17 @@ const SliderBlock = ({ teacherData }) => {
         <Condition
           match={isWideViewport && teacherChildren !== [] && teacherChildren !== undefined}
         >
-          <Slider slidesPerView={2} clName='teacher-slider' spaceBetween={120} centeredSlides loop>
+          <Slider
+            slidesPerView={2}
+            allowTouchMove
+            clName='teacher-slider'
+            spaceBetween={120}
+            centeredSlides
+            mousewheel
+            forceToAxis
+            grabCursor
+            loop
+          >
             {Children.map(teacherChildren, (child) => (
               <SwiperSlide>{child}</SwiperSlide>
             ))}
@@ -50,6 +60,10 @@ const SliderBlock = ({ teacherData }) => {
           <Slider
             slidesPerView='auto'
             clName='teacher-slider'
+            allowTouchMove
+            mousewheel
+            grabCursor
+            forceToAxis
             spaceBetween={120}
             centeredSlides
             loop
