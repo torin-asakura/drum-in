@@ -1,11 +1,1 @@
-export interface FaqDataProps {
-  faqData: {
-    generalFragments?: {
-      nodes: Array<{
-        commonFragments?: {
-          faq?: Array<{ answer?: string | null; question?: string | null } | null> | null
-        } | null
-      }>
-    } | null
-  }
-}
+export type FaqDataProps = Array<{ answer?: string | null; question?: string | null } | null> | null

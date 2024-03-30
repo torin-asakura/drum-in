@@ -1,6 +1,8 @@
-import React                     from 'react'
-import { Children }              from 'react'
-import { useMemo }               from 'react'
+import { TeacherDataProps } from '@globals/data/src'
+import { FC }               from 'react'
+import React                from 'react'
+import { Children }         from 'react'
+import { useMemo }          from 'react'
 
 import { Condition }             from '@ui/condition'
 import { DrumsticksIcon }        from '@ui/icons'
@@ -12,13 +14,17 @@ import { SwiperSlide }           from '@ui/slider'
 import { Slide }                 from './slide'
 import { useViewportBreakpoint } from './hooks'
 
-const SliderBlock = ({ teacherData }) => {
+export interface SliderBlockProps{
+  teacherData?: TeacherDataProps|null
+}
+
+const SliderBlock:FC<SliderBlockProps> = ({ teacherData }) => {
   const { isWideViewport, isMobileViewport } = useViewportBreakpoint()
 
   const teacherChildren = useMemo(
     () =>
-      teacherData?.gallery.map(({ image, alt }) => (
-        <Slide pathImage={image.node.sourceUrl} alt={alt} />
+      teacherData?.gallery?.map((item) => (
+        <Slide pathImage={item?.image?.node?.sourceUrl || ''} alt={item?.alt || ''} />
       )),
     [teacherData]
   )

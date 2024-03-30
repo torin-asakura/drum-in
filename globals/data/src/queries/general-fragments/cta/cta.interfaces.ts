@@ -1,9 +1,4 @@
-export interface CtaDataProps {
-  ctaData: {
-    generalFragments?: {
-      nodes: Array<{
-        commonFragments?: {
-          cta?: {
+export type CtaDataProps = {
             title?: string | null
             button?: string | null
             text?: {
@@ -12,8 +7,3 @@ export interface CtaDataProps {
               afterAccent?: string | null
             } | null
           } | null
-        } | null
-      }>
-    } | null
-  }
-}

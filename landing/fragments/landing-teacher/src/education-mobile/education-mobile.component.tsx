@@ -1,6 +1,8 @@
-import React                           from 'react'
-import { FormattedMessage }            from 'react-intl'
-import { useState }                    from 'react'
+import { TeacherDataProps } from '@globals/data/src'
+import { FC }               from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
 
 import { InvertedExclamationMarkIcon } from '@ui/icons'
 import { Box }                         from '@ui/layout'
@@ -8,7 +10,11 @@ import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Text }                        from '@ui/text'
 
-const EducationMobile = ({ teacherData }) => {
+export interface EducationMobileProps{
+  teacherData?: TeacherDataProps |null
+}
+
+const EducationMobile:FC<EducationMobileProps> = ({ teacherData }) => {
   const [visibleEducation, setVisibleEducation] = useState<boolean>(false)
 
   return (
@@ -53,8 +59,8 @@ const EducationMobile = ({ teacherData }) => {
         <Layout flexBasis={[12, 20, 0]} flexShrink={0} />
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
-          {teacherData?.education?.list?.map(({ element }) => (
-            <React.Fragment key={element.substring(0, 3)}>
+          {teacherData?.education?.list?.map((item) => (
+            <React.Fragment key={item?.element.substring(0, 3)}>
               <Box>
                 <Text
                   fontWeight='medium'
@@ -62,7 +68,7 @@ const EducationMobile = ({ teacherData }) => {
                   lineHeight='primary'
                   color='text.blackAmber'
                 >
-                  {element}
+                  {item?.element}
                 </Text>
               </Box>
               <Layout flexBasis={[6, 10, 0]} />

@@ -1,9 +1,4 @@
-export interface ProcessEducationDataProps {
-  processEducationData: {
-    generalFragments?: {
-      nodes: Array<{
-        commonFragments?: {
-          process?: Array<{
+export type ProcessEducationDataProps =  Array<{
             title?: string | null
             text?: string | null
             picture?: {
@@ -15,8 +10,3 @@ export interface ProcessEducationDataProps {
               } | null
             } | null
           } | null> | null
-        } | null
-      }>
-    } | null
-  }
-}

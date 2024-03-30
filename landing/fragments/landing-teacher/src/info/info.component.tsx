@@ -31,12 +31,12 @@ const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => 
             <ExperianceIcon width={160} height={160} />
           </Box>
           <Column>
-            {teacherData?.experience.map(({ number, text }, index) => (
+            {teacherData?.experience?.map((item, index) => (
               <OneCharacteristic
                 indentLeft={getIndent(index)}
-                numeric={number}
-                title={text}
-                key={number}
+                numeric={item?.number}
+                title={item?.text}
+                key={item?.number}
               />
             ))}
           </Column>

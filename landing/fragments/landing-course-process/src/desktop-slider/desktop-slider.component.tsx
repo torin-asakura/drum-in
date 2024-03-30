@@ -1,4 +1,6 @@
-import React           from 'react'
+import { ProcessEducationDataProps } from '@globals/data'
+import { FC }                        from 'react'
+import React                         from 'react'
 
 import { ImageBlock }  from '@ui/image'
 import { Box }         from '@ui/layout'
@@ -9,7 +11,11 @@ import { Slider }      from '@ui/slider'
 import { SwiperSlide } from '@ui/slider'
 import { Text }        from '@ui/text'
 
-const DesktopSlider = ({ processEducation }) => (
+export interface DesktopSliderProps{
+  processEducation?:ProcessEducationDataProps|null
+}
+
+const DesktopSlider:FC<DesktopSliderProps> = ({ processEducation }) => (
   <Column width='100%'>
     <Box display={['none', 'none', 'flex']}>
       <Slider

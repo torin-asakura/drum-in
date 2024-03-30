@@ -1,9 +1,5 @@
-export interface TeacherDataProps {
-  teacherData: {
-    generalFragments?: {
-      nodes: Array<{
-        commonFragments?: {
-          teacher?: {
+export type TeacherDataProps = {
+
             subtitle?: string | null
             title?: string | null
             description?: string | null
@@ -26,8 +22,3 @@ export interface TeacherDataProps {
               } | null
             } | null> | null
           } | null
-        } | null
-      }>
-    } | null
-  }
-}

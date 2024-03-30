@@ -13,6 +13,7 @@ import { MobileSlider }        from './mobile-slider'
 
 const CourseProcessBlock = () => {
   const { processEducation } = useProcessEducation()
+  console.log(processEducation)
   return (
     <Row justifyContent='center' flexWrap='wrap'>
       <Box width={['100%', '100%', 1920]}>
@@ -28,7 +29,7 @@ const CourseProcessBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              <FormattedMessage id='/' defaultMessage='Как проходит обучение' />
+              <FormattedMessage id='course.process_title' />
             </Text>
           </Box>
           <Layout flexBasis={[24, 60, 101]} />

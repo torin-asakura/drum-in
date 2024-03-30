@@ -5,6 +5,8 @@
   "course.price.plural_format_live_broadcast": "{liveBroadcastCount, plural, one {прямой эфир} few {прямых эфира} many {прямых эфиров} other {прямых эфира}}",
   "course.price.level": "ур.",
   "course.price.bonus_module": "бонус-модуль",
+  "course.process_title": "Как проходит обучение",
+
 
   "footer.privacy_policy": "Политика обработки персональных данных",
   "landing_header.courses": "Курсы",

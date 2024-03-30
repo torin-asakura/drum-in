@@ -1,23 +1,30 @@
-import React        from 'react'
-import { useState } from 'react'
+import { FaqDataProps } from '@globals/data/src'
+import { FC }           from 'react'
+import React            from 'react'
+import { useState }     from 'react'
 
 import { Box }      from '@ui/layout'
 import { Layout }   from '@ui/layout'
 
 import { Item }     from './item'
 
-const ListDesktop = ({ faq }) => {
+export interface ListDesktopProps {
+
+  faq?:FaqDataProps |null
+}
+
+const ListDesktop:FC<ListDesktopProps> = ({ faq }) => {
   const [active, setActive] = useState<boolean>(false)
 
   return (
     <Box flexWrap='wrap' display={['none', 'none', 'flex']}>
-      {faq?.map(({ question, answer }, index) => (
-        <React.Fragment key={answer}>
+      {faq?.map((item, index) => (
+        <React.Fragment key={item?.answer}>
           <Box flexDirection='column'>
             <Item
-              question={question}
-              answer={answer}
-              positionVertical={question ? 'top-start' : 'bottom-start'}
+              question={item?.question}
+              answer={item?.answer}
+              positionVertical={item?.question ? 'top-start' : 'bottom-start'}
               active={active}
               setActive={setActive}
             />

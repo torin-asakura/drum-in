@@ -1,4 +1,6 @@
-import React        from 'react'
+import { FooterDataProps } from '@globals/data/src'
+import { FC }              from 'react'
+import React               from 'react'
 
 import { Box }      from '@ui/layout'
 import { Layout }   from '@ui/layout'
@@ -6,7 +8,11 @@ import { NextLink } from '@ui/link'
 import { Link }     from '@ui/link'
 import { Text }     from '@ui/text'
 
-const BottomRow = ({ footer }) => (
+export interface BottomRowProps{
+  footer?: FooterDataProps |null
+}
+
+const BottomRow:FC<BottomRowProps> = ({ footer }) => (
   <Box
     width='100%'
     flexDirection={['column', 'column', 'row']}
@@ -14,7 +20,7 @@ const BottomRow = ({ footer }) => (
     justifyContent='space-between'
   >
     <Box>
-      <NextLink path={footer?.privacyPolicy.path}>
+      <NextLink path={footer?.privacyPolicy?.path}>
         <Text
           textTransform='none'
           fontWeight='medium'
@@ -22,7 +28,7 @@ const BottomRow = ({ footer }) => (
           lineHeight='medium'
           color='text.transparentSmokyWhite'
         >
-          {footer?.privacyPolicy.title}
+          {footer?.privacyPolicy?.title}
         </Text>
       </NextLink>
     </Box>

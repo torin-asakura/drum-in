@@ -1,4 +1,6 @@
-import React           from 'react'
+import { ProcessEducationDataProps } from '@globals/data/src'
+import { FC }                        from 'react'
+import React                         from 'react'
 
 import { ImageBlock }  from '@ui/image'
 import { Box }         from '@ui/layout'
@@ -8,7 +10,11 @@ import { Slider }      from '@ui/slider'
 import { SwiperSlide } from '@ui/slider'
 import { Text }        from '@ui/text'
 
-const MobileSlider = ({ processEducation }) => (
+export interface MobileSliderProps{
+  processEducation?:ProcessEducationDataProps|null
+}
+
+const MobileSlider:FC<MobileSliderProps> = ({ processEducation }) => (
   <Column>
     <Box display={['flex', 'flex', 'none']}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
