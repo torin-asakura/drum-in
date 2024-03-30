@@ -7,6 +7,11 @@
   "course.price.bonus_module": "бонус-модуль",
   "course.process_title": "Как проходит обучение",
 
+  "currency.ruble": "₽",
+  "course.price.full_course_for": "Весь курс за",
+  "course.payment.buy_course": "Купить курс",
+  "course.payment.discount": "Выгода",
+
   "footer.privacy_policy": "Политика обработки персональных данных",
   "landing_header.courses": "Курсы",
   "landing_header.connect": "Связаться",

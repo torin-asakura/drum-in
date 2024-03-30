@@ -13874,42 +13874,6 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
-export type ContactsQueryVariables = Exact<{ [key: string]: never }>
-
-export type ContactsQuery = {
-  __typename?: 'RootQuery'
-  generalFragments?: {
-    __typename?: 'RootQueryToGeneralFragmentConnection'
-    nodes: Array<{
-      __typename?: 'GeneralFragment'
-      commonFragments?: {
-        __typename?: 'CommonFragments'
-        contacts?: {
-          __typename?: 'CommonFragmentsContacts'
-          title?: string | null
-          socials?: Array<{
-            __typename?: 'CommonFragmentsContactsSocials'
-            title?: string | null
-            link?: string | null
-            content?: string | null
-          } | null> | null
-          background?: {
-            __typename?: 'CommonFragmentsContactsBackground'
-            mobile?: {
-              __typename?: 'AcfMediaItemConnectionEdge'
-              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-            } | null
-            desktop?: {
-              __typename?: 'AcfMediaItemConnectionEdge'
-              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-            } | null
-          } | null
-        } | null
-      } | null
-    }>
-  } | null
-}
-
 export type ContractOfferQueryVariables = Exact<{ [key: string]: never }>
 
 export type ContractOfferQuery = {
@@ -13962,6 +13926,42 @@ export type ConsultationQuery = {
           __typename?: 'CommonFragmentsConsultation'
           title?: string | null
           cta?: string | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type ContactsQueryVariables = Exact<{ [key: string]: never }>
+
+export type ContactsQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        contacts?: {
+          __typename?: 'CommonFragmentsContacts'
+          title?: string | null
+          socials?: Array<{
+            __typename?: 'CommonFragmentsContactsSocials'
+            title?: string | null
+            link?: string | null
+            content?: string | null
+          } | null> | null
+          background?: {
+            __typename?: 'CommonFragmentsContactsBackground'
+            mobile?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+            desktop?: {
+              __typename?: 'AcfMediaItemConnectionEdge'
+              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+            } | null
+          } | null
         } | null
       } | null
     }>
@@ -14121,6 +14121,30 @@ export type HeaderQuery = {
             __typename?: 'CommonFragmentsHeaderNavigationElements'
             title?: string | null
             path?: string | null
+          } | null> | null
+        } | null
+      } | null
+    }>
+  } | null
+}
+
+export type PrivacyPolicyQueryVariables = Exact<{ [key: string]: never }>
+
+export type PrivacyPolicyQuery = {
+  __typename?: 'RootQuery'
+  generalFragments?: {
+    __typename?: 'RootQueryToGeneralFragmentConnection'
+    nodes: Array<{
+      __typename?: 'GeneralFragment'
+      commonFragments?: {
+        __typename?: 'CommonFragments'
+        privacyPolicy?: {
+          __typename?: 'CommonFragmentsPrivacyPolicy'
+          title?: string | null
+          content?: Array<{
+            __typename?: 'CommonFragmentsPrivacyPolicyContent'
+            title?: string | null
+            description?: string | null
           } | null> | null
         } | null
       } | null
@@ -14295,30 +14319,6 @@ export type GetPreviewQuery = {
   mediaItemBy?: { __typename?: 'MediaItem'; sourceUrl?: string | null } | null
 }
 
-export type PrivacyPolicyQueryVariables = Exact<{ [key: string]: never }>
-
-export type PrivacyPolicyQuery = {
-  __typename?: 'RootQuery'
-  generalFragments?: {
-    __typename?: 'RootQueryToGeneralFragmentConnection'
-    nodes: Array<{
-      __typename?: 'GeneralFragment'
-      commonFragments?: {
-        __typename?: 'CommonFragments'
-        privacyPolicy?: {
-          __typename?: 'CommonFragmentsPrivacyPolicy'
-          title?: string | null
-          content?: Array<{
-            __typename?: 'CommonFragmentsPrivacyPolicyContent'
-            title?: string | null
-            description?: string | null
-          } | null> | null
-        } | null
-      } | null
-    }>
-  } | null
-}
-
 export type GetSeoQueryVariables = Exact<{
   id: Scalars['ID']['input']
 }>
@@ -14363,123 +14363,6 @@ export type GetSeoQuery = {
   } | null
 }
 
-export const ContactsDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'Contacts' },
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragments' },
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'nodes' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'commonFragments' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'contacts' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'socials' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                        { kind: 'Field', name: { kind: 'Name', value: 'link' } },
-                                        { kind: 'Field', name: { kind: 'Name', value: 'content' } },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'background' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'mobile' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'node' },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'sourceUrl' },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'desktop' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'node' },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'sourceUrl' },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<ContactsQuery, ContactsQueryVariables>
 export const ContractOfferDocument = {
   kind: 'Document',
   definitions: [
@@ -14658,6 +14541,123 @@ export const ConsultationDocument = {
     },
   ],
 } as unknown as DocumentNode<ConsultationQuery, ConsultationQueryVariables>
+export const ContactsDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Contacts' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'contacts' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'socials' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'link' } },
+                                        { kind: 'Field', name: { kind: 'Name', value: 'content' } },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'background' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'mobile' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'desktop' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'node' },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'sourceUrl' },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ContactsQuery, ContactsQueryVariables>
 export const CtaDocument = {
   kind: 'Document',
   definitions: [
@@ -15181,6 +15181,72 @@ export const HeaderDocument = {
     },
   ],
 } as unknown as DocumentNode<HeaderQuery, HeaderQueryVariables>
+export const PrivacyPolicyDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'PrivacyPolicy' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragments' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'commonFragments' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'privacyPolicy' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'content' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'description' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<PrivacyPolicyQuery, PrivacyPolicyQueryVariables>
 export const ProcessEducationDocument = {
   kind: 'Document',
   definitions: [
@@ -15736,72 +15802,6 @@ export const GetPreviewDocument = {
     },
   ],
 } as unknown as DocumentNode<GetPreviewQuery, GetPreviewQueryVariables>
-export const PrivacyPolicyDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'PrivacyPolicy' },
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragments' },
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'nodes' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'commonFragments' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'privacyPolicy' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'content' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'description' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<PrivacyPolicyQuery, PrivacyPolicyQueryVariables>
 export const GetSeoDocument = {
   kind: 'Document',
   definitions: [
