@@ -19,6 +19,7 @@ const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
   activeRender,
   onClose,
   scroll = true,
+  openingTheRhythm,
 }) => {
   const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
   const { formatMessage } = useIntl()
@@ -76,6 +77,7 @@ const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                openingTheRhythm={openingTheRhythm}
                 onClose={onClose}
                 roleVar={roleVar}
                 options={options}

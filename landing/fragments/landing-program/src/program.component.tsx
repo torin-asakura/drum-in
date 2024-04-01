@@ -1,19 +1,16 @@
-import React                         from 'react'
-import { FC }                        from 'react'
+import React            from 'react'
+import { FC }           from 'react'
 
-import { OpeningTheRhythmDataProps } from '@globals/data/src'
-import { Box }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { Text }                      from '@ui/text'
+import { Box }          from '@ui/layout'
+import { Column }       from '@ui/layout'
+import { Layout }       from '@ui/layout'
+import { Row }          from '@ui/layout'
+import { Text }         from '@ui/text'
 
-import { DesktopList }               from './desktop-list'
-import { MobileList }                from './mobile-list'
+import { DesktopList }  from './desktop-list'
+import { MobileList }   from './mobile-list'
+import { ProgramProps } from './program.interfaces'
 
-export interface ProgramProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-}
 const ProgramBlock: FC<ProgramProps> = ({ openingTheRhythm }) => (
   <Row justifyContent='center' flexWrap='wrap'>
     <Box width={['100%', '100%', 1920]}>

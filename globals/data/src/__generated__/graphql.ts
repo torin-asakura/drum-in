@@ -20,7 +20,7 @@ export type Scalars = {
   Float: { input: number; output: number }
 }
 
-/** Connection between the ContentPaymentFormCourses type and the ContentNode type */
+/** Connection between the ContentPayment type and the ContentNode type */
 export type AcfContentNodeConnection = Connection &
   ContentNodeConnection & {
     __typename?: 'AcfContentNodeConnection'
@@ -2571,7 +2571,7 @@ export type Content = AcfFieldGroup &
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
     path?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-    paymentForm?: Maybe<ContentPaymentForm>
+    payment?: Maybe<ContentPayment>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
     price?: Maybe<ContentPrice>
   }
@@ -3103,111 +3103,53 @@ export type ContentNodeToEnqueuedStylesheetConnectionPageInfo =
       startCursor?: Maybe<Scalars['String']['output']>
     }
 
-/** The &quot;ContentPaymentForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPaymentForm = AcfFieldGroup &
+/** The &quot;ContentPayment&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ContentPayment = AcfFieldGroup &
   AcfFieldGroupFields &
-  ContentPaymentForm_Fields & {
-    __typename?: 'ContentPaymentForm'
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group */
-    courses?: Maybe<Array<Maybe<ContentPaymentFormCourses>>>
+  ContentPayment_Fields & {
+    __typename?: 'ContentPayment'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
+    benefit?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
+    courses?: Maybe<AcfContentNodeConnection>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group */
-    paymentType?: Maybe<ContentPaymentFormPaymentType>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group */
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
     title?: Maybe<Scalars['String']['output']>
   }
 
-/** The &quot;ContentPaymentFormCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPaymentFormCourses = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentPaymentFormCourses_Fields & {
-    __typename?: 'ContentPaymentFormCourses'
-    /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormCourses&quot; Field Group */
-    course?: Maybe<AcfContentNodeConnection>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;ContentPaymentFormCourses&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPaymentFormCoursesCourseArgs = {
+/** The &quot;ContentPayment&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ContentPaymentCoursesArgs = {
   after?: InputMaybe<Scalars['String']['input']>
   before?: InputMaybe<Scalars['String']['input']>
   first?: InputMaybe<Scalars['Int']['input']>
   last?: InputMaybe<Scalars['Int']['input']>
 }
 
-/** Interface representing fields of the ACF &quot;ContentPaymentFormCourses&quot; Field Group */
-export type ContentPaymentFormCourses_Fields = {
-  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormCourses&quot; Field Group */
-  course?: Maybe<AcfContentNodeConnection>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;ContentPaymentFormCourses&quot; Field Group */
-export type ContentPaymentFormCourses_FieldsCourseArgs = {
-  after?: InputMaybe<Scalars['String']['input']>
-  before?: InputMaybe<Scalars['String']['input']>
-  first?: InputMaybe<Scalars['Int']['input']>
-  last?: InputMaybe<Scalars['Int']['input']>
-}
-
-/** The &quot;ContentPaymentFormPaymentType&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type ContentPaymentFormPaymentType = AcfFieldGroup &
-  AcfFieldGroupFields &
-  ContentPaymentFormPaymentType_Fields & {
-    __typename?: 'ContentPaymentFormPaymentType'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group */
-    benefit?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group */
-    installment?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group */
-    oneTime?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;ContentPaymentFormPaymentType&quot; Field Group */
-export type ContentPaymentFormPaymentType_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group */
+/** Interface representing fields of the ACF &quot;ContentPayment&quot; Field Group */
+export type ContentPayment_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
   benefit?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
+  courses?: Maybe<AcfContentNodeConnection>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group */
-  installment?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentFormPaymentType&quot; Field Group */
-  oneTime?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
 }
 
-/** Interface representing fields of the ACF &quot;ContentPaymentForm&quot; Field Group */
-export type ContentPaymentForm_Fields = {
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group */
-  courses?: Maybe<Array<Maybe<ContentPaymentFormCourses>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group */
-  paymentType?: Maybe<ContentPaymentFormPaymentType>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentPaymentForm&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
+/** Interface representing fields of the ACF &quot;ContentPayment&quot; Field Group */
+export type ContentPayment_FieldsCoursesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>
+  before?: InputMaybe<Scalars['String']['input']>
+  first?: InputMaybe<Scalars['Int']['input']>
+  last?: InputMaybe<Scalars['Int']['input']>
 }
 
 /** The &quot;ContentPrice&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -3587,7 +3529,7 @@ export type Content_Fields = {
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
   path?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
-  paymentForm?: Maybe<ContentPaymentForm>
+  payment?: Maybe<ContentPayment>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
   price?: Maybe<ContentPrice>
 }
@@ -14320,6 +14262,33 @@ export type GetOpeningTheRhythmQuery = {
     __typename?: 'Course'
     content?: {
       __typename?: 'Content'
+      payment?: {
+        __typename?: 'ContentPayment'
+        title?: string | null
+        benefit?: string | null
+        courses?: {
+          __typename?: 'AcfContentNodeConnection'
+          nodes: Array<
+            | { __typename?: 'Course' }
+            | { __typename?: 'GeneralFragment' }
+            | {
+                __typename?: 'IndividualCourse'
+                title?: string | null
+                id: string
+                individualCourseData?: {
+                  __typename?: 'IndividualCourseData'
+                  price?: {
+                    __typename?: 'IndividualCourseDataPrice'
+                    fullPrice?: number | null
+                  } | null
+                } | null
+              }
+            | { __typename?: 'MediaItem' }
+            | { __typename?: 'Page' }
+            | { __typename?: 'Post' }
+          >
+        } | null
+      } | null
       hero?: {
         __typename?: 'ContentHero'
         title?: string | null
@@ -15891,6 +15860,83 @@ export const GetOpeningTheRhythmDocument = {
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'payment' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'benefit' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'courses' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'nodes' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'InlineFragment',
+                                          typeCondition: {
+                                            kind: 'NamedType',
+                                            name: { kind: 'Name', value: 'IndividualCourse' },
+                                          },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'title' },
+                                              },
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'id' },
+                                              },
+                                              {
+                                                kind: 'Field',
+                                                name: {
+                                                  kind: 'Name',
+                                                  value: 'individualCourseData',
+                                                },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: { kind: 'Name', value: 'price' },
+                                                      selectionSet: {
+                                                        kind: 'SelectionSet',
+                                                        selections: [
+                                                          {
+                                                            kind: 'Field',
+                                                            name: {
+                                                              kind: 'Name',
+                                                              value: 'fullPrice',
+                                                            },
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
                       {
                         kind: 'Field',
                         name: { kind: 'Name', value: 'hero' },

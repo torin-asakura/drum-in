@@ -1,24 +1,36 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { FormattedMessage }            from 'react-intl'
+import { FormattedNumber }             from 'react-intl'
 
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Box }                         from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Space }                       from '@ui/text'
+import { Text }                        from '@ui/text'
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse }              from '../selected-course'
+import { ContentInstallmentPlanProps } from './content-installment-plan.interfaces'
 
-const ContentInstallmentPlan = () => {
-  const modalForm = useModalForm()
+// TODO: add description for courses & displaying valid count months
 
+const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
+  openingTheRhythm,
+  amount,
+  recalculate,
+}) => {
+  const monthCount = openingTheRhythm?.price?.details?.monthsNumber
   return (
     <>
-      {modalForm?.courses?.map(({ description, name }) => (
+      {openingTheRhythm?.payment?.courses?.nodes.map((item) => (
         <>
-          <SelectedCourse title={name} description={description} />
+          <SelectedCourse
+            title={item?.title || ''}
+            description='description'
+            price={item?.individualCourseData?.price?.fullPrice || 0}
+            recalculate={recalculate}
+          />
           <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
         </>
       ))}
@@ -43,7 +55,7 @@ const ContentInstallmentPlan = () => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={modalForm?.monthlyPaymentNumber || 0}
+                value={openingTheRhythm?.price?.priceMonthly || 0}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}
@@ -70,7 +82,9 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {modalForm?.installmentDuration}
+              {openingTheRhythm?.price?.details?.monthsNumber}
+              <Space />
+              <FormattedMessage id='course.price.plural_format_months' values={{ monthCount }} />
             </Text>
           </Box>
         </Column>
@@ -93,7 +107,7 @@ const ContentInstallmentPlan = () => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={modalForm?.finalPriceForInstallmentNumber || 0}
+                value={amount}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}

@@ -1,21 +1,18 @@
-import React                         from 'react'
-import { FC }                        from 'react'
-import { Children }                  from 'react'
-import { useMemo }                   from 'react'
+import React               from 'react'
+import { FC }              from 'react'
+import { Children }        from 'react'
+import { useMemo }         from 'react'
 
-import { OpeningTheRhythmDataProps } from '@globals/data/src'
-import { Condition }                 from '@ui/condition'
-import { Box }                       from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Slider }                    from '@ui/slider'
-import { SwiperSlide }               from '@ui/slider'
+import { Condition }       from '@ui/condition'
+import { Box }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Slider }          from '@ui/slider'
+import { SwiperSlide }     from '@ui/slider'
 
-import { Slide }                     from './slide'
-import { getUi }                     from '../helpers'
+import { MobileListProps } from './mobile-list.interfaces'
+import { Slide }           from './slide'
+import { getUi }           from '../helpers'
 
-export interface MobileListProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-}
 const MobileList: FC<MobileListProps> = ({ openingTheRhythm }) => {
   const programOpeningTheRhythmChildren = useMemo(
     () =>

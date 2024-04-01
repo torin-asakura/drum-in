@@ -16,6 +16,7 @@ const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
   activeRender,
   onClose,
   scroll = true,
+  openingTheRhythm,
 }) => {
   const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
   const { formatMessage } = useIntl()
@@ -68,7 +69,12 @@ const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <ContentMobile roleVar={roleVar} options={options} setRole={setRole} />
+          <ContentMobile
+            openingTheRhythm={openingTheRhythm}
+            roleVar={roleVar}
+            options={options}
+            setRole={setRole}
+          />
         </ContainerMobile>
       </motion.div>
     </Renderer>

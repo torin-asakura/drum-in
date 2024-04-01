@@ -1,18 +1,14 @@
-import React                         from 'react'
-import { FC }                        from 'react'
+import React                          from 'react'
+import { FC }                         from 'react'
 
-import { OpeningTheRhythmDataProps } from '@globals/data'
-import { Box }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { Text }                      from '@ui/text'
+import { Box }                        from '@ui/layout'
+import { Column }                     from '@ui/layout'
+import { Layout }                     from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Text }                       from '@ui/text'
 
-import { Content }                   from './content'
-
-export interface PriceOpeningTheRhythmProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-}
+import { Content }                    from './content'
+import { PriceOpeningTheRhythmProps } from './price-opening-the-rhythm.interfaces'
 
 const PriceOpeningTheRhythmBlock: FC<PriceOpeningTheRhythmProps> = ({ openingTheRhythm }) => (
   <Row justifyContent='center'>

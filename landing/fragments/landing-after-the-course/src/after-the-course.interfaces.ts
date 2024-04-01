@@ -1,8 +1,5 @@
 import { OpeningTheRhythmDataProps } from '@globals/data/src'
 
-export interface ModalFormOpeningTheRhythmProps {
-  activeRender: boolean
-  onClose: () => any
-  scroll?: boolean
+export interface AfterTheCourseBlockProps {
   openingTheRhythm?: OpeningTheRhythmDataProps | null
 }

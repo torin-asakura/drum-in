@@ -1,19 +1,16 @@
-import React                         from 'react'
-import { FC }                        from 'react'
+import React                           from 'react'
+import { FC }                          from 'react'
 
-import { OpeningTheRhythmDataProps } from '@globals/data/src'
-import { RightDownArrowIcon }        from '@ui/icons'
-import { Box }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { Text }                      from '@ui/text'
+import { RightDownArrowIcon }          from '@ui/icons'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Text }                        from '@ui/text'
 
-import { Tape }                      from './tape'
+import { BannerOpeningTheRhythmProps } from './banner-opening-the-rhythm.interfaces'
+import { Tape }                        from './tape'
 
-export interface BannerOpeningTheRhythmProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-}
 const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingTheRhythm }) => (
   <Box flexDirection='column' width='100%'>
     <Row justifyContent='center'>

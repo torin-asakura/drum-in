@@ -12,6 +12,21 @@ export type OpeningTheRhythmBackgroundProps = {
 }
 
 export type OpeningTheRhythmDataProps = {
+  payment?: {
+    title?: string | null
+    benefit?: string | null
+    courses?: {
+      nodes: Array<{
+        title?: string | null
+        id: string
+        individualCourseData?: {
+          price?: {
+            fullPrice?: number | null
+          } | null
+        } | null
+      }>
+    } | null
+  } | null
   hero?: {
     title?: string | null
     description?: string | null

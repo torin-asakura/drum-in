@@ -1,7 +1,7 @@
 import { OpeningTheRhythmDataProps } from '@globals/data/src'
 
-export interface ContentOneTimePaymentProps {
+export interface ContentInstallmentPlanProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
   amount: number
   recalculate: (price: number, operation: boolean) => void
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
 }

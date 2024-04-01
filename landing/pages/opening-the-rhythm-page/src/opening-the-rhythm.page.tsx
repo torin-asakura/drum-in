@@ -5,8 +5,6 @@ import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
-import { OpeningTheRhythmBackgroundProps } from '@globals/data'
-import { OpeningTheRhythmDataProps }       from '@globals/data'
 import { PageID }                          from '@globals/data'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
@@ -23,12 +21,8 @@ import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
+import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
 import { useSong }                         from './data'
-
-export interface OpeningTheRhythmPageProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-  background?: OpeningTheRhythmBackgroundProps | null
-}
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   background,
@@ -125,10 +119,12 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormOpeningTheRhythm
+          openingTheRhythm={openingTheRhythm}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
+          openingTheRhythm={openingTheRhythm}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

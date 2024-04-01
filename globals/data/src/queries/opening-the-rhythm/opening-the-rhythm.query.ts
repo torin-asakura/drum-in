@@ -4,6 +4,23 @@ export const GET_OPENING_THE_RHYTHM = gql(`
   query GetOpeningTheRhythm($id: ID!) {
   course(id: $id) {
       content {
+            payment {
+        title
+        benefit
+        courses {
+          nodes {
+            ... on IndividualCourse {
+              title
+              id
+              individualCourseData {
+                price {
+                  fullPrice
+                }
+              }
+            }
+          }
+        }
+      }
         hero {
           title
           description

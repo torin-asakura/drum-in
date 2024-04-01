@@ -4,7 +4,6 @@ import { FormattedMessage }                from 'react-intl'
 import { useState }                        from 'react'
 import { useIntl }                         from 'react-intl'
 
-import { OpeningTheRhythmDataProps }       from '@globals/data'
 import { ModalFormOpeningTheRhythm }       from '@landing/modal-form-opening-the-rhythm'
 import { ModalMobileFormOpeningTheRhythm } from '@landing/modal-form-opening-the-rhythm'
 import { Button }                          from '@ui/button'
@@ -14,14 +13,11 @@ import { Layout }                          from '@ui/layout'
 import { Space }                           from '@ui/text'
 import { Text }                            from '@ui/text'
 
+import { ContentProps }                    from './content.interfaces'
 import { Figures }                         from './figures'
 import { FullPrice }                       from './full-price'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
-
-export interface ContentProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-}
 
 const Content: FC<ContentProps> = ({ openingTheRhythm }) => {
   const { formatMessage } = useIntl()
@@ -75,7 +71,7 @@ const Content: FC<ContentProps> = ({ openingTheRhythm }) => {
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice fullCost={fullPrice} />
+        <FullPrice openingTheRhythm={openingTheRhythm} fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -122,10 +118,12 @@ const Content: FC<ContentProps> = ({ openingTheRhythm }) => {
           </Button>
         </Box>
         <ModalFormOpeningTheRhythm
+          openingTheRhythm={openingTheRhythm}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
+          openingTheRhythm={openingTheRhythm}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

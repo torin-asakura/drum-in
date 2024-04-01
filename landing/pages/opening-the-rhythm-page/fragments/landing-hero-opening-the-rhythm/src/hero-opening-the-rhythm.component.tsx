@@ -1,17 +1,13 @@
-import React                               from 'react'
-import { FC }                              from 'react'
+import React                           from 'react'
+import { FC }                          from 'react'
 
-import { OpeningTheRhythmDataProps }       from '@globals/data/src'
-import { OpeningTheRhythmBackgroundProps } from '@globals/data/src'
-import { AfterTheCourseBlock }             from '@landing/after-the-course-fragment'
-import { BannerOpeningTheRhythmBlock }     from '@landing/banner-opening-the-rhythm-fragment'
-import { SkillsBlock }                     from '@landing/skills-fragment'
-import { Box }                             from '@ui/layout'
+import { AfterTheCourseBlock }         from '@landing/after-the-course-fragment'
+import { BannerOpeningTheRhythmBlock } from '@landing/banner-opening-the-rhythm-fragment'
+import { SkillsBlock }                 from '@landing/skills-fragment'
+import { Box }                         from '@ui/layout'
 
-export interface HeroOpeningTheRhythmProps {
-  background?: OpeningTheRhythmBackgroundProps | null
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-}
+import { HeroOpeningTheRhythmProps }   from './hero-opening-the-rhythm.interfaces'
+
 const HeroOpeningTheRhythmBlock: FC<HeroOpeningTheRhythmProps> = ({
   background,
   openingTheRhythm,

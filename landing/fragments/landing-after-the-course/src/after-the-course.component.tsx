@@ -1,19 +1,16 @@
-import React                         from 'react'
-import { FC }                        from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
 
-import { OpeningTheRhythmDataProps } from '@globals/data'
-import { TwistedArrowBottomIcon }    from '@ui/icons'
-import { Box }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { Text }                      from '@ui/text'
+import { TwistedArrowBottomIcon }   from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { Text }                     from '@ui/text'
 
-import { Tape }                      from './tape'
+import { AfterTheCourseBlockProps } from './after-the-course.interfaces'
+import { Tape }                     from './tape'
 
-export interface AfterTheCourseBlockProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
-}
 const AfterTheCourseBlock: FC<AfterTheCourseBlockProps> = ({ openingTheRhythm }) => (
   <Box width='100%' justifyContent='center' position='relative'>
     <Box width={['100%', '100%', 1920]}>
