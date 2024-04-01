@@ -1,8 +1,10 @@
 import React                               from 'react'
+import { FC }                              from 'react'
 import { FormattedMessage }                from 'react-intl'
 import { useState }                        from 'react'
 import { useIntl }                         from 'react-intl'
 
+import { OpeningTheRhythmDataProps }       from '@globals/data'
 import { ModalFormOpeningTheRhythm }       from '@landing/modal-form-opening-the-rhythm'
 import { ModalMobileFormOpeningTheRhythm } from '@landing/modal-form-opening-the-rhythm'
 import { Button }                          from '@ui/button'
@@ -17,19 +19,23 @@ import { FullPrice }                       from './full-price'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
 
-const Content = ({ openingTheRhythm }) => {
+export interface ContentProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
+}
+
+const Content: FC<ContentProps> = ({ openingTheRhythm }) => {
   const { formatMessage } = useIntl()
 
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const fullPrice = ` 
-        ${formatMessage({ id: '/', defaultMessage: 'Весь курс за' })} 
-        ${openingTheRhythm?.price.priceFull} 
-        ${'₽'}
+        ${formatMessage({ id: 'course.price.full_course_for' })} 
+        ${openingTheRhythm?.price?.priceFull} 
+        ${formatMessage({ id: 'currency.ruble' })}
         `
 
-  const levelCount = parseInt(openingTheRhythm?.price.details.levelsNumber, 10)
+  const levelCount = openingTheRhythm?.price?.details?.levelsNumber
 
   return (
     <Box
@@ -42,16 +48,16 @@ const Content = ({ openingTheRhythm }) => {
       <Column alignItems={['start', 'start', 'center']} width='100%'>
         <Layout flexBasis={[40, 80, 120]} />
         <Title
-          currency={openingTheRhythm?.price.priceMonthly}
+          currency={openingTheRhythm?.price?.priceMonthly}
           costPerMonth={formatMessage({
             id: 'landing_price.rubles_per_month',
           })}
         />
         <Layout flexBasis={[40, 50, 32]} />
         <Specifications
-          quantityMonths={openingTheRhythm?.price.details.monthsNumber}
-          quantityVideoLessons={openingTheRhythm?.price.details.videoTrainingsNumber}
-          firstLineCircle={openingTheRhythm?.price.details.levelsNumber}
+          quantityMonths={openingTheRhythm?.price?.details?.monthsNumber}
+          quantityVideoLessons={openingTheRhythm?.price?.details?.videoTrainingsNumber}
+          firstLineCircle={openingTheRhythm?.price?.details?.levelsNumber}
           secondLineCircle={
             <FormattedMessage id='course.price.plural_format_level' values={{ levelCount }} />
           }
@@ -82,7 +88,7 @@ const Content = ({ openingTheRhythm }) => {
             <FormattedMessage id='landing_price.with_a_one_time_payment_of_the_course_you_save' />
             <Space />
             <Text color='text.green'>
-              {openingTheRhythm?.price.discount} {formatMessage({ id: 'currency.ruble' })}
+              {openingTheRhythm?.price?.discount} {formatMessage({ id: 'currency.ruble' })}
             </Text>
           </Text>
         </Box>
@@ -95,7 +101,7 @@ const Content = ({ openingTheRhythm }) => {
             onClick={() => setVisibleModal(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {openingTheRhythm?.price.priceMonthly}
+              {openingTheRhythm?.price?.priceMonthly}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -109,7 +115,7 @@ const Content = ({ openingTheRhythm }) => {
             onClick={() => setVisibleModalMobile(true)}
           >
             <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-              {openingTheRhythm?.price.priceMonthly}
+              {openingTheRhythm?.price?.priceMonthly}
               <Space />
               <FormattedMessage id='landing_price.rubles_per_month' />
             </Text>
@@ -125,9 +131,9 @@ const Content = ({ openingTheRhythm }) => {
         />
         <Layout flexBasis={[23, 48, 74]} />
         <Figures
-          quantityMonths={openingTheRhythm?.price.details.monthsNumber}
-          quantityVideoLessons={openingTheRhythm?.price.details.videoTrainingsNumber}
-          firstLineCircle={openingTheRhythm?.price.details.levelsNumber}
+          quantityMonths={openingTheRhythm?.price?.details?.monthsNumber}
+          quantityVideoLessons={openingTheRhythm?.price?.details?.videoTrainingsNumber}
+          firstLineCircle={openingTheRhythm?.price?.details?.levelsNumber}
           secondLineCircle={
             <FormattedMessage id='course.price.plural_format_level' values={{ levelCount }} />
           }

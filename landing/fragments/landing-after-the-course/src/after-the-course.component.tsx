@@ -1,15 +1,20 @@
-import React                      from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { TwistedArrowBottomIcon } from '@ui/icons'
-import { Box }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { Text }                   from '@ui/text'
+import { OpeningTheRhythmDataProps } from '@globals/data'
+import { TwistedArrowBottomIcon }    from '@ui/icons'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Text }                      from '@ui/text'
 
-import { Tape }                   from './tape'
+import { Tape }                      from './tape'
 
-const AfterTheCourseBlock = ({ openingTheRhythm }) => (
+export interface AfterTheCourseBlockProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
+}
+const AfterTheCourseBlock: FC<AfterTheCourseBlockProps> = ({ openingTheRhythm }) => (
   <Box width='100%' justifyContent='center' position='relative'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} />
@@ -25,7 +30,7 @@ const AfterTheCourseBlock = ({ openingTheRhythm }) => (
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {openingTheRhythm?.hero.cta.title}
+              {openingTheRhythm?.hero?.cta?.title}
             </Text>
           </Box>
           <Layout display={['none', 'none', 'flex']} flexBasis={36} flexShrink={0} />
@@ -38,9 +43,9 @@ const AfterTheCourseBlock = ({ openingTheRhythm }) => (
           </Box>
           <Box width={{ _: 0, tablet: 0, laptop: 740, wide: 940 }}>
             <Tape
-              firstLine={openingTheRhythm?.hero.cta.tagsCloud[0].tag}
-              secondLine={`${openingTheRhythm?.hero.cta.tagsCloud[1].tag} ${openingTheRhythm?.hero.cta.tagsCloud[2].tag}`}
-              thirdLine={openingTheRhythm?.hero.cta.tagsCloud[3].tag}
+              firstLine={openingTheRhythm?.hero?.cta?.tagsCloud?.[0]?.tag}
+              secondLine={`${openingTheRhythm?.hero?.cta?.tagsCloud?.[1]?.tag} ${openingTheRhythm?.hero?.cta?.tagsCloud?.[2]?.tag}`}
+              thirdLine={openingTheRhythm?.hero?.cta?.tagsCloud?.[3]?.tag}
             />
           </Box>
         </Row>

@@ -1,14 +1,20 @@
-import React       from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { Box }     from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Text }    from '@ui/text'
+import { OpeningTheRhythmDataProps } from '@globals/data'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Text }                      from '@ui/text'
 
-import { Content } from './content'
+import { Content }                   from './content'
 
-const PriceOpeningTheRhythmBlock = ({ openingTheRhythm }) => (
+export interface PriceOpeningTheRhythmProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
+}
+
+const PriceOpeningTheRhythmBlock: FC<PriceOpeningTheRhythmProps> = ({ openingTheRhythm }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -24,7 +30,7 @@ const PriceOpeningTheRhythmBlock = ({ openingTheRhythm }) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {openingTheRhythm?.price.title}
+            {openingTheRhythm?.price?.title}
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />

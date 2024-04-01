@@ -1,15 +1,20 @@
-import React                  from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
+import { OpeningTheRhythmDataProps } from '@globals/data/src'
+import { RightDownArrowIcon }        from '@ui/icons'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Text }                      from '@ui/text'
 
-import { Tape }               from './tape'
+import { Tape }                      from './tape'
 
-const BannerOpeningTheRhythmBlock = ({ openingTheRhythm }) => (
+export interface BannerOpeningTheRhythmProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
+}
+const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingTheRhythm }) => (
   <Box flexDirection='column' width='100%'>
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
@@ -33,7 +38,7 @@ const BannerOpeningTheRhythmBlock = ({ openingTheRhythm }) => (
                   lineHeight={['default', 'default', 'semiSmall']}
                   color='text.smokyWhite'
                 >
-                  {openingTheRhythm?.hero.title}
+                  {openingTheRhythm?.hero?.title}
                 </Text>
               </Box>
               <Layout flexBasis={[16, 28, 40]} />
@@ -49,7 +54,7 @@ const BannerOpeningTheRhythmBlock = ({ openingTheRhythm }) => (
                       'text.smokyWhite',
                     ]}
                   >
-                    {openingTheRhythm?.hero.description}
+                    {openingTheRhythm?.hero?.description}
                   </Text>
                 </Box>
               </Box>

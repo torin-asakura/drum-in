@@ -1,14 +1,19 @@
-import React          from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Text }       from '@ui/text'
+import { OpeningTheRhythmDataProps } from '@globals/data'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Text }                      from '@ui/text'
 
-import { SkillsList } from './skills-list'
+import { SkillsList }                from './skills-list'
 
-const SkillsBlock = ({ openingTheRhythm }) => (
+export interface SkillsBlockProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
+}
+const SkillsBlock: FC<SkillsBlockProps> = ({ openingTheRhythm }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} />
@@ -23,7 +28,7 @@ const SkillsBlock = ({ openingTheRhythm }) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {openingTheRhythm?.cta.title}
+            {openingTheRhythm?.cta?.title}
           </Text>
         </Box>
         <Layout flexBasis={[8, 12, 0]} display={['flex', 'flex', 'none']} />
@@ -34,7 +39,7 @@ const SkillsBlock = ({ openingTheRhythm }) => (
             lineHeight='primary'
             color='text.transparentSmokyWhite'
           >
-            {openingTheRhythm?.cta.subtitle}
+            {openingTheRhythm?.cta?.subtitle}
           </Text>
         </Box>
         <Layout flexBasis={[16, 22, 0]} display={['flex', 'flex', 'none']} />
@@ -58,7 +63,7 @@ const SkillsBlock = ({ openingTheRhythm }) => (
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {openingTheRhythm?.cta.title}
+                {openingTheRhythm?.cta?.title}
               </Text>
             </Row>
             <Layout flexBasis={24} display={['none', 'none', 'flex']} />
@@ -70,7 +75,7 @@ const SkillsBlock = ({ openingTheRhythm }) => (
                 lineHeight='primary'
                 color='text.gray'
               >
-                {openingTheRhythm?.cta.subtitle}
+                {openingTheRhythm?.cta?.subtitle}
               </Text>
             </Box>
             <SkillsList />

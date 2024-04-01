@@ -1,18 +1,18 @@
 export interface SlideProps {
-  forWhom: string
-  level: string
-  desc: string
+  forWhom?: string | null
+  level?: string | null
+  desc?: string | null
   squareRotate: number
   squarePositionX: number
   squarePositionY: number
-  quantityVideoLessons: number
+  quantityVideoLessons?: number | null
   circlePositionX: number
   circlePositionY: number
-  quantityLiveBroadcast: string
+  quantityLiveBroadcast?: number | null
   rectangleRotate: number
   rectanglePositionX: number
   rectanglePositionY: number
-  quantityMonths: number
-  textMonths: string
+  quantityMonths?: number | null
+  textMonths?: string
   rectangleColor: string
 }

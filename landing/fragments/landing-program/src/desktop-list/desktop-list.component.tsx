@@ -1,32 +1,37 @@
-import React      from 'react'
-import uniqid     from 'uniqid'
+import React                         from 'react'
+import uniqid                        from 'uniqid'
+import { FC }                        from 'react'
 
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
+import { OpeningTheRhythmDataProps } from '@globals/data/src'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
 
-import { Item }   from './item'
-import { getUi }  from '../helpers'
+import { Item }                      from './item'
+import { getUi }                     from '../helpers'
 
-const DesktopList = ({ openingTheRhythm }) => (
+export interface DesktopListProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
+}
+const DesktopList: FC<DesktopListProps> = ({ openingTheRhythm }) => (
   <Column display={['none', 'none', 'flex']} width='100%'>
-    {openingTheRhythm?.details.levels.map((item, index) => (
+    {openingTheRhythm?.details?.levels?.map((item, index) => (
       <React.Fragment key={uniqid()}>
         <Item
-          forWhom={item.target}
-          level={item.level}
-          desc={item.content}
-          listNecessaryKnowledge={item.tooltip}
+          forWhom={item?.target}
+          level={item?.level}
+          desc={item?.content}
+          listNecessaryKnowledge={item?.tooltip}
           squareRotate={getUi(index).squareRotate}
           squarePositionX={getUi(index).squarePositionX}
           squarePositionY={getUi(index).squarePositionY}
-          quantityVideoLessons={item.videoTrainingsNumber}
+          quantityVideoLessons={item?.videoTrainingsNumber}
           circlePositionX={getUi(index).circlePositionX}
           circlePositionY={getUi(index).circlePositionY}
-          quantityLiveBroadcast={item.liveTrainingsNumber}
+          quantityLiveBroadcast={item?.liveTrainingsNumber}
           rectangleRotate={getUi(index).rectangleRotate}
           rectanglePositionX={getUi(index).rectanglePositionX}
           rectanglePositionY={getUi(index).rectanglePositionY}
-          quantityMonths={item.lengthOfCourseInMonths}
+          quantityMonths={item?.lengthOfCourseInMonths}
           rectangleColor={getUi(index).rectangleColor}
         />
         <Layout flexBasis={40} />
