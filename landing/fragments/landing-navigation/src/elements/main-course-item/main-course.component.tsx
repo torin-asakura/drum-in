@@ -14,7 +14,7 @@ export const MainCourseItem: FC<MainCourseItemProps> = ({ mainCourseData, stateH
     return null
   }
 
-  const countLevel = getContentData()?.price?.details?.levelsNumber
+  const levelCount = getContentData()?.price?.details?.levelsNumber
   const mainCourseId = mainCourseData?.id
 
   return (
@@ -34,7 +34,7 @@ export const MainCourseItem: FC<MainCourseItemProps> = ({ mainCourseData, stateH
       circlePositionY={getUi(mainCourseId)?.circlePositionY}
       circleFirstLine={getContentData()?.price?.details?.levelsNumber}
       circleSecondLine={
-        <FormattedMessage id='course.price.plural_format_level' values={{ countLevel }} />
+        <FormattedMessage id='course.price.plural_format_level' values={{ levelCount }} />
       }
       path={getContentData()?.path}
     />
