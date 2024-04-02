@@ -1,10 +1,8 @@
-import { gql } from '../__generated__'
+import { gql } from '../../../__generated__'
 
 export const GET_CONTRACT_OFFER = gql(`
-query ContractOffer{
-  generalFragments {
-    nodes {
-      commonFragments {
+query ContractOffer($id: ID!){
+  generalFragment(id:$id) {
         contractOffer {
           title
           subtitle
@@ -21,6 +19,4 @@ query ContractOffer{
         }
       }
     }
-  }
-}
 `)

@@ -14,12 +14,12 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-  '\nquery ContractOffer{\n  generalFragments {\n    nodes {\n      commonFragments {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n':
-    types.ContractOfferDocument,
   '\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n':
     types.ConsultationDocument,
   '\nquery Contacts($id: ID!){\n    generalFragment(id:$id ) {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n    }\n  }\n':
     types.ContactsDocument,
+  '\nquery ContractOffer($id: ID!){\n  generalFragment(id:$id) {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n':
+    types.ContractOfferDocument,
   '\nquery Cta{\n generalFragments {\n    nodes {\n      commonFragments {\n        cta {\n          title\n          text{\n            beforeAccent\n            accent\n            afterAccent\n          }\n          button\n        }\n      }\n    }\n  }\n}\n':
     types.CtaDocument,
   '\nquery Faq($id: ID!){\n    generalFragment(id:$id ) {\n      faq{\n        content {\n          answer\n          question\n      }\n    }\n  }\n}\n':
@@ -62,12 +62,6 @@ export function gql(source: string): unknown
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: '\nquery ContractOffer{\n  generalFragments {\n    nodes {\n      commonFragments {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n'
-): typeof documents['\nquery ContractOffer{\n  generalFragments {\n    nodes {\n      commonFragments {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n  }\n}\n']
-/**
- * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
- */
-export function gql(
   source: '\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n'
 ): typeof documents['\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n']
 /**
@@ -76,6 +70,12 @@ export function gql(
 export function gql(
   source: '\nquery Contacts($id: ID!){\n    generalFragment(id:$id ) {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n    }\n  }\n'
 ): typeof documents['\nquery Contacts($id: ID!){\n    generalFragment(id:$id ) {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n    }\n  }\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery ContractOffer($id: ID!){\n  generalFragment(id:$id) {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n'
+): typeof documents['\nquery ContractOffer($id: ID!){\n  generalFragment(id:$id) {\n        contractOffer {\n          title\n          subtitle\n          creationYear\n          points {\n            title\n            subtitle\n            description\n          }\n          background{\n          desktopFooter{node{sourceUrl}}\n          mobileFooter{node{sourceUrl}}\n          }\n        }\n      }\n    }\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

@@ -16,7 +16,7 @@ export const getServerSideProps = async ({ res }) => {
     variables: { id: GeneralFragmentID.CONTACTS },
   })
 
-  const contactsData = data?.generalFragment?.contacts || {}
+  const contactsData = data?.generalFragment?.contacts
 
   const { data: seoData } = await client.query({
     query: GET_SEO,

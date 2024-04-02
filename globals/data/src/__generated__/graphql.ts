@@ -77,7 +77,7 @@ export type AcfFieldGroupFields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
 }
 
-/** Connection between the IndividualCourseDataBackgroundDesktop type and the MediaItem type */
+/** Connection between the ContractOfferBackground type and the MediaItem type */
 export type AcfMediaItemConnectionEdge = Edge &
   MediaItemConnectionEdge &
   OneToOneConnection & {
@@ -1040,8 +1040,6 @@ export type CommonFragments = AcfFieldGroup &
     contractOffer?: Maybe<CommonFragmentsContractOffer>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     cta?: Maybe<CommonFragmentsCta>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-    faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
@@ -1057,8 +1055,6 @@ export type CommonFragments = AcfFieldGroup &
     paymentForm?: Maybe<CommonFragmentsPaymentForm>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     privacyPolicy?: Maybe<CommonFragmentsPrivacyPolicy>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-    process?: Maybe<Array<Maybe<CommonFragmentsProcess>>>
   }
 
 /** The &quot;CommonFragmentsConsultation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1116,102 +1112,20 @@ export type CommonFragmentsContractOffer = AcfFieldGroup &
   AcfFieldGroupFields &
   CommonFragmentsContractOffer_Fields & {
     __typename?: 'CommonFragmentsContractOffer'
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-    background?: Maybe<CommonFragmentsContractOfferBackground>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-    creationYear?: Maybe<Scalars['String']['output']>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-    points?: Maybe<Array<Maybe<CommonFragmentsContractOfferPoints>>>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-    subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
   }
-
-/** The &quot;CommonFragmentsContractOfferBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsContractOfferBackground = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsContractOfferBackground_Fields & {
-    __typename?: 'CommonFragmentsContractOfferBackground'
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
-    desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
-    mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
-export type CommonFragmentsContractOfferBackground_Fields = {
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
-  desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferBackground&quot; Field Group */
-  mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** The &quot;CommonFragmentsContractOfferPoints&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsContractOfferPoints = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsContractOfferPoints_Fields & {
-    __typename?: 'CommonFragmentsContractOfferPoints'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
-    subtitle?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
-export type CommonFragmentsContractOfferPoints_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
-  subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOfferPoints&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
 
 /** Interface representing fields of the ACF &quot;CommonFragmentsContractOffer&quot; Field Group */
 export type CommonFragmentsContractOffer_Fields = {
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-  background?: Maybe<CommonFragmentsContractOfferBackground>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-  creationYear?: Maybe<Scalars['String']['output']>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-  points?: Maybe<Array<Maybe<CommonFragmentsContractOfferPoints>>>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-  subtitle?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsContractOffer&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
 }
 
 /** The &quot;CommonFragmentsCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1278,35 +1192,6 @@ export type CommonFragmentsCta_Fields = {
   text?: Maybe<CommonFragmentsCtaText>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsCta&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;CommonFragmentsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsFaq = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsFaq_Fields & {
-    __typename?: 'CommonFragmentsFaq'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
-    answer?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
-    question?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsFaq&quot; Field Group */
-export type CommonFragmentsFaq_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
-  answer?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsFaq&quot; Field Group */
-  question?: Maybe<Scalars['String']['output']>
 }
 
 /** The &quot;CommonFragmentsFooter&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -2212,64 +2097,6 @@ export type CommonFragmentsPrivacyPolicy_Fields = {
   title?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;CommonFragmentsProcess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsProcess = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsProcess_Fields & {
-    __typename?: 'CommonFragmentsProcess'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
-    picture?: Maybe<CommonFragmentsProcessPicture>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
-    text?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;CommonFragmentsProcessPicture&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsProcessPicture = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsProcessPicture_Fields & {
-    __typename?: 'CommonFragmentsProcessPicture'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
-    alt?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
-    image?: Maybe<AcfMediaItemConnectionEdge>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsProcessPicture&quot; Field Group */
-export type CommonFragmentsProcessPicture_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
-  alt?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcessPicture&quot; Field Group */
-  image?: Maybe<AcfMediaItemConnectionEdge>
-}
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsProcess&quot; Field Group */
-export type CommonFragmentsProcess_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
-  picture?: Maybe<CommonFragmentsProcessPicture>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsProcess&quot; Field Group */
-  text?: Maybe<Scalars['String']['output']>
-}
-
 /** Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group */
 export type CommonFragments_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
@@ -2280,8 +2107,6 @@ export type CommonFragments_Fields = {
   contractOffer?: Maybe<CommonFragmentsContractOffer>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   cta?: Maybe<CommonFragmentsCta>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-  faq?: Maybe<Array<Maybe<CommonFragmentsFaq>>>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -2297,8 +2122,6 @@ export type CommonFragments_Fields = {
   paymentForm?: Maybe<CommonFragmentsPaymentForm>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   privacyPolicy?: Maybe<CommonFragmentsPrivacyPolicy>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-  process?: Maybe<Array<Maybe<CommonFragmentsProcess>>>
 }
 
 /** A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;. */
@@ -3416,20 +3239,102 @@ export type ContractOffer = AcfFieldGroup &
   AcfFieldGroupFields &
   ContractOffer_Fields & {
     __typename?: 'ContractOffer'
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+    background?: Maybe<ContractOfferBackground>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+    creationYear?: Maybe<Scalars['String']['output']>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+    points?: Maybe<Array<Maybe<ContractOfferPoints>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+    subtitle?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;ContractOffer&quot; Field Group */
-export type ContractOffer_Fields = {
+/** The &quot;ContractOfferBackground&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ContractOfferBackground = AcfFieldGroup &
+  AcfFieldGroupFields &
+  ContractOfferBackground_Fields & {
+    __typename?: 'ContractOfferBackground'
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
+    desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
+    mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;ContractOfferBackground&quot; Field Group */
+export type ContractOfferBackground_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
+  desktopFooter?: Maybe<AcfMediaItemConnectionEdge>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContractOfferBackground&quot; Field Group */
+  mobileFooter?: Maybe<AcfMediaItemConnectionEdge>
+}
+
+/** The &quot;ContractOfferPoints&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ContractOfferPoints = AcfFieldGroup &
+  AcfFieldGroupFields &
+  ContractOfferPoints_Fields & {
+    __typename?: 'ContractOfferPoints'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
+    subtitle?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;ContractOfferPoints&quot; Field Group */
+export type ContractOfferPoints_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
+  subtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOfferPoints&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;ContractOffer&quot; Field Group */
+export type ContractOffer_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+  background?: Maybe<ContractOfferBackground>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+  creationYear?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+  points?: Maybe<Array<Maybe<ContractOfferPoints>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+  subtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContractOffer&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
 }
 
 /** The course type */
@@ -14206,44 +14111,6 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
-export type ContractOfferQueryVariables = Exact<{ [key: string]: never }>
-
-export type ContractOfferQuery = {
-  __typename?: 'RootQuery'
-  generalFragments?: {
-    __typename?: 'RootQueryToGeneralFragmentConnection'
-    nodes: Array<{
-      __typename?: 'GeneralFragment'
-      commonFragments?: {
-        __typename?: 'CommonFragments'
-        contractOffer?: {
-          __typename?: 'CommonFragmentsContractOffer'
-          title?: string | null
-          subtitle?: string | null
-          creationYear?: string | null
-          points?: Array<{
-            __typename?: 'CommonFragmentsContractOfferPoints'
-            title?: string | null
-            subtitle?: string | null
-            description?: string | null
-          } | null> | null
-          background?: {
-            __typename?: 'CommonFragmentsContractOfferBackground'
-            desktopFooter?: {
-              __typename?: 'AcfMediaItemConnectionEdge'
-              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-            } | null
-            mobileFooter?: {
-              __typename?: 'AcfMediaItemConnectionEdge'
-              node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-            } | null
-          } | null
-        } | null
-      } | null
-    }>
-  } | null
-}
-
 export type ConsultationQueryVariables = Exact<{ [key: string]: never }>
 
 export type ConsultationQuery = {
@@ -14288,6 +14155,40 @@ export type ContactsQuery = {
           node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
         } | null
         desktop?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
+      } | null
+    } | null
+  } | null
+}
+
+export type ContractOfferQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type ContractOfferQuery = {
+  __typename?: 'RootQuery'
+  generalFragment?: {
+    __typename?: 'GeneralFragment'
+    contractOffer?: {
+      __typename?: 'ContractOffer'
+      title?: string | null
+      subtitle?: string | null
+      creationYear?: string | null
+      points?: Array<{
+        __typename?: 'ContractOfferPoints'
+        title?: string | null
+        subtitle?: string | null
+        description?: string | null
+      } | null> | null
+      background?: {
+        __typename?: 'ContractOfferBackground'
+        desktopFooter?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
+        mobileFooter?: {
           __typename?: 'AcfMediaItemConnectionEdge'
           node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
         } | null
@@ -14860,131 +14761,6 @@ export type GetSeoQuery = {
   } | null
 }
 
-export const ContractOfferDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'ContractOffer' },
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragments' },
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'nodes' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'commonFragments' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'contractOffer' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'creationYear' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'points' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'subtitle' },
-                                        },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'description' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'background' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'desktopFooter' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'node' },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'sourceUrl' },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'mobileFooter' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'node' },
-                                                selectionSet: {
-                                                  kind: 'SelectionSet',
-                                                  selections: [
-                                                    {
-                                                      kind: 'Field',
-                                                      name: { kind: 'Name', value: 'sourceUrl' },
-                                                    },
-                                                  ],
-                                                },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<ContractOfferQuery, ContractOfferQueryVariables>
 export const ConsultationDocument = {
   kind: 'Document',
   definitions: [
@@ -15154,6 +14930,124 @@ export const ContactsDocument = {
     },
   ],
 } as unknown as DocumentNode<ContactsQuery, ContactsQueryVariables>
+export const ContractOfferDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'ContractOffer' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragment' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'contractOffer' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'creationYear' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'points' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'background' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'desktopFooter' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'mobileFooter' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ContractOfferQuery, ContractOfferQueryVariables>
 export const CtaDocument = {
   kind: 'Document',
   definitions: [

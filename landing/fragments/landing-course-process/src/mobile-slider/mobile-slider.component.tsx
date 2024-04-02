@@ -1,18 +1,15 @@
-import React                         from 'react'
-import { FC }                        from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { ProcessEducationDataProps } from '@globals/data/src'
-import { ImageBlock }                from '@ui/image'
-import { Box }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Slider }                    from '@ui/slider'
-import { SwiperSlide }               from '@ui/slider'
-import { Text }                      from '@ui/text'
+import { ImageBlock }        from '@ui/image'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Slider }            from '@ui/slider'
+import { SwiperSlide }       from '@ui/slider'
+import { Text }              from '@ui/text'
 
-export interface MobileSliderProps {
-  processEducation?: ProcessEducationDataProps | null
-}
+import { MobileSliderProps } from './mobile-slider.interfaces'
 
 const MobileSlider: FC<MobileSliderProps> = ({ processEducation }) => (
   <Column>

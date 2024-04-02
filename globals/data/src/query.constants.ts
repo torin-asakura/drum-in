@@ -28,4 +28,5 @@ export enum GeneralFragmentID {
   CONSULTATION = 'cG9zdDoyNTU0',
   MAIN = 'cG9zdDoyNTQ5',
   CONTACTS = 'cG9zdDoyNTM3',
+  CONTRACT_OFFER = 'cG9zdDoyNTUy',
 }

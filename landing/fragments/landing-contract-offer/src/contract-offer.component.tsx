@@ -1,13 +1,16 @@
-import React      from 'react'
-import uniqid     from 'uniqid'
+import React                       from 'react'
+import uniqid                      from 'uniqid'
+import { FC }                      from 'react'
 
-import { Box }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
-import { Row }    from '@ui/layout'
-import { Text }   from '@ui/text'
+import { Box }                     from '@ui/layout'
+import { Column }                  from '@ui/layout'
+import { Layout }                  from '@ui/layout'
+import { Row }                     from '@ui/layout'
+import { Text }                    from '@ui/text'
 
-const ContractOfferBlock = ({ contractOfferData }) => (
+import { ContractOfferBlockProps } from './contract-offer.interfaces'
+
+const ContractOfferBlock: FC<ContractOfferBlockProps> = ({ contractOfferData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -22,7 +25,7 @@ const ContractOfferBlock = ({ contractOfferData }) => (
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {contractOfferData.title}
+            {contractOfferData?.title}
           </Text>
         </Box>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -33,12 +36,12 @@ const ContractOfferBlock = ({ contractOfferData }) => (
             lineHeight='primary'
             color='text.smokyWhite'
           >
-            {contractOfferData.subtitle}
+            {contractOfferData?.subtitle}
           </Text>
         </Box>
         <Layout flexBasis={[20, 30, 50]} flexShrink={0} />
         <Column>
-          {contractOfferData.points.map(({ title, subtitle, description }) => (
+          {contractOfferData?.points?.map((item) => (
             <React.Fragment key={uniqid()}>
               <Row>
                 <Text
@@ -47,11 +50,11 @@ const ContractOfferBlock = ({ contractOfferData }) => (
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {title}
+                  {item?.title}
                 </Text>
               </Row>
               <Layout flexBasis={[6, 8, 8]} flexShrink={0} />
-              <Row display={subtitle ? 'flex' : 'none'}>
+              <Row display={item?.subtitle ? 'flex' : 'none'}>
                 <Layout flexBasis={[6, 8, 10]} flexShrink={0} />
                 <Text
                   opacity='80%'
@@ -60,12 +63,12 @@ const ContractOfferBlock = ({ contractOfferData }) => (
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {subtitle}
+                  {item?.subtitle}
                 </Text>
               </Row>
               <Layout flexBasis={[4, 6, 6]} flexShrink={0} />
               <Row>
-                <Layout flexBasis={subtitle ? [12, 16, 20] : 0} flexShrink={0} />
+                <Layout flexBasis={item?.subtitle ? [12, 16, 20] : 0} flexShrink={0} />
                 <Text
                   opacity='60%'
                   fontWeight='medium'
@@ -73,7 +76,7 @@ const ContractOfferBlock = ({ contractOfferData }) => (
                   lineHeight='primary'
                   color='text.smokyWhite'
                 >
-                  {description}
+                  {item?.description}
                 </Text>
               </Row>
               <Layout flexBasis={[7, 10, 30]} flexShrink={0} />
@@ -93,7 +96,7 @@ const ContractOfferBlock = ({ contractOfferData }) => (
           lineHeight='primary'
           color='text.smokyWhite'
         >
-          {contractOfferData.creationYear}
+          {contractOfferData?.creationYear}
         </Text>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
