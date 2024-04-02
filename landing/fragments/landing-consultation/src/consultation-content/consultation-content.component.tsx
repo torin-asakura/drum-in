@@ -30,7 +30,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {consultation?.title}
+              {consultation?.modal?.title}
             </Text>
           </Box>
           <Layout flexBasis={[6, 9, 12]} flexShrink={0} />
@@ -41,7 +41,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
-              {consultation?.cta}
+              {consultation?.modal?.subtitle}
             </Text>
           </Box>
         </Column>

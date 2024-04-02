@@ -14,7 +14,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-  '\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n':
+  '\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n      }\n    }\n  }\n}\n':
     types.ConsultationDocument,
   '\nquery Contacts($id: ID!){\n    generalFragment(id:$id ) {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n    }\n  }\n':
     types.ContactsDocument,
@@ -62,8 +62,8 @@ export function gql(source: string): unknown
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: '\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n'
-): typeof documents['\nquery Consultation{\n   generalFragments {\n    nodes {\n      commonFragments {\n        consultation {\n          title\n          cta\n        }\n      }\n    }\n  }\n}\n']
+  source: '\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n      }\n    }\n  }\n}\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

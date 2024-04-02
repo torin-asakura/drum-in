@@ -13,12 +13,12 @@ import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
-import { useCta }             from '@globals/data'
+import { useConsultation }    from '@globals/data'
 
 const CtaBlock = forwardRef(({ data }: any, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const { cta } = useCta()
+  const { consultation } = useConsultation()
 
   return (
     <Row justifyContent='center' ref={ref}>
@@ -35,7 +35,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {cta?.title}
+              {consultation?.cta?.title}
             </Text>
           </Box>
           <Layout flexBasis={[8, 40, 86]} />
@@ -52,7 +52,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   lineHeight={['primary', 'medium', 'medium']}
                   color='text.gray'
                 >
-                  {cta?.text?.beforeAccent}
+                  {consultation?.cta?.text?.beforeAccent}
                   <Space />
                   <Text
                     fontWeight='medium'
@@ -60,7 +60,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                     lineHeight={['primary', 'medium', 'medium']}
                     color='text.smokyWhite'
                   >
-                    {cta?.text?.accent}
+                    {consultation?.cta?.text?.accent}
                   </Text>
                 </Text>
               </Box>
@@ -71,7 +71,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   lineHeight={['primary', 'medium', 'medium']}
                   color='text.gray'
                 >
-                  {cta?.text?.afterAccent}
+                  {consultation?.cta?.text?.afterAccent}
                 </Text>
               </Box>
               <Layout flexBasis={[20, 26, 32]} />
@@ -106,7 +106,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                     fontSize='semiMedium'
                     lineHeight='default'
                   >
-                    {cta?.button}
+                    {consultation?.cta?.button}
                   </Text>
                 </Button>
               </Box>

@@ -1049,8 +1049,6 @@ export type CommonFragments = AcfFieldGroup &
     main?: Maybe<CommonFragmentsMain>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     paymentForm?: Maybe<CommonFragmentsPaymentForm>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-    privacyPolicy?: Maybe<CommonFragmentsPrivacyPolicy>
   }
 
 /** The &quot;CommonFragmentsConsultation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1993,64 +1991,6 @@ export type CommonFragmentsPaymentForm_Fields = {
   placeholder?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;CommonFragmentsPrivacyPolicy&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsPrivacyPolicy = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsPrivacyPolicy_Fields & {
-    __typename?: 'CommonFragmentsPrivacyPolicy'
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group */
-    content?: Maybe<Array<Maybe<CommonFragmentsPrivacyPolicyContent>>>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** The &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsPrivacyPolicyContent = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsPrivacyPolicyContent_Fields & {
-    __typename?: 'CommonFragmentsPrivacyPolicyContent'
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group */
-    description?: Maybe<Scalars['String']['output']>
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group */
-    title?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group */
-export type CommonFragmentsPrivacyPolicyContent_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group */
-  description?: Maybe<Scalars['String']['output']>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicyContent&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsPrivacyPolicy&quot; Field Group */
-export type CommonFragmentsPrivacyPolicy_Fields = {
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group */
-  content?: Maybe<Array<Maybe<CommonFragmentsPrivacyPolicyContent>>>
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsPrivacyPolicy&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>
-}
-
 /** Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group */
 export type CommonFragments_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
@@ -2070,8 +2010,6 @@ export type CommonFragments_Fields = {
   main?: Maybe<CommonFragmentsMain>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   paymentForm?: Maybe<CommonFragmentsPaymentForm>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-  privacyPolicy?: Maybe<CommonFragmentsPrivacyPolicy>
 }
 
 /** A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;. */
@@ -2089,6 +2027,46 @@ export type Consultation = AcfFieldGroup &
   AcfFieldGroupFields &
   Consultation_Fields & {
     __typename?: 'Consultation'
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
+    cta?: Maybe<ConsultationCta>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
+    modal?: Maybe<ConsultationModal>
+  }
+
+/** The &quot;ConsultationCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ConsultationCta = AcfFieldGroup &
+  AcfFieldGroupFields &
+  ConsultationCta_Fields & {
+    __typename?: 'ConsultationCta'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+    button?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+    text?: Maybe<ConsultationCtaText>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;ConsultationCtaText&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ConsultationCtaText = AcfFieldGroup &
+  AcfFieldGroupFields &
+  ConsultationCtaText_Fields & {
+    __typename?: 'ConsultationCtaText'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+    accent?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+    afterAccent?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+    beforeAccent?: Maybe<Scalars['String']['output']>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
@@ -2096,13 +2074,76 @@ export type Consultation = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;Consultation&quot; Field Group */
-export type Consultation_Fields = {
+/** Interface representing fields of the ACF &quot;ConsultationCtaText&quot; Field Group */
+export type ConsultationCtaText_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+  accent?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+  afterAccent?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCtaText&quot; Field Group */
+  beforeAccent?: Maybe<Scalars['String']['output']>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;ConsultationCta&quot; Field Group */
+export type ConsultationCta_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+  button?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+  text?: Maybe<ConsultationCtaText>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationCta&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** The &quot;ConsultationModal&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ConsultationModal = AcfFieldGroup &
+  AcfFieldGroupFields &
+  ConsultationModal_Fields & {
+    __typename?: 'ConsultationModal'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
+    subtitle?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;ConsultationModal&quot; Field Group */
+export type ConsultationModal_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
+  subtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;Consultation&quot; Field Group */
+export type Consultation_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
+  cta?: Maybe<ConsultationCta>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Consultation&quot; Field Group */
+  modal?: Maybe<ConsultationModal>
 }
 
 /** The &quot;Contacts&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -14094,23 +14135,33 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
-export type ConsultationQueryVariables = Exact<{ [key: string]: never }>
+export type ConsultationQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
 
 export type ConsultationQuery = {
   __typename?: 'RootQuery'
-  generalFragments?: {
-    __typename?: 'RootQueryToGeneralFragmentConnection'
-    nodes: Array<{
-      __typename?: 'GeneralFragment'
-      commonFragments?: {
-        __typename?: 'CommonFragments'
-        consultation?: {
-          __typename?: 'CommonFragmentsConsultation'
-          title?: string | null
-          cta?: string | null
+  generalFragment?: {
+    __typename?: 'GeneralFragment'
+    consultation?: {
+      __typename?: 'Consultation'
+      cta?: {
+        __typename?: 'ConsultationCta'
+        title?: string | null
+        button?: string | null
+        text?: {
+          __typename?: 'ConsultationCtaText'
+          beforeAccent?: string | null
+          accent?: string | null
+          afterAccent?: string | null
         } | null
       } | null
-    }>
+      modal?: {
+        __typename?: 'ConsultationModal'
+        title?: string | null
+        subtitle?: string | null
+      } | null
+    } | null
   } | null
 }
 
@@ -14747,38 +14798,69 @@ export const ConsultationDocument = {
       kind: 'OperationDefinition',
       operation: 'query',
       name: { kind: 'Name', value: 'Consultation' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragments' },
+            name: { kind: 'Name', value: 'generalFragment' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'nodes' },
+                  name: { kind: 'Name', value: 'consultation' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'commonFragments' },
+                        name: { kind: 'Name', value: 'cta' },
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'button' } },
                             {
                               kind: 'Field',
-                              name: { kind: 'Name', value: 'consultation' },
+                              name: { kind: 'Name', value: 'text' },
                               selectionSet: {
                                 kind: 'SelectionSet',
                                 selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'beforeAccent' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'accent' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'afterAccent' } },
                                 ],
                               },
                             },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'modal' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
                           ],
                         },
                       },
