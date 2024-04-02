@@ -15,7 +15,7 @@ query Teacher($id: ID!){
           }
         }
       }
-      experience {
+      statistics {
         text
         number
       }
