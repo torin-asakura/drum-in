@@ -1,8 +1,9 @@
-import { GET_MAIN_PAGE }  from '@globals/data'
-import { PageID }         from '@globals/data'
-import { GET_SEO }        from '@globals/data'
-import { getClient }      from '@globals/data'
-import { setCacheHeader } from '@globals/data'
+import { GeneralFragmentID } from '@globals/data'
+import { GET_MAIN_PAGE }     from '@globals/data'
+import { PageID }            from '@globals/data'
+import { GET_SEO }           from '@globals/data'
+import { getClient }         from '@globals/data'
+import { setCacheHeader }    from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
@@ -11,10 +12,11 @@ export const getServerSideProps = async ({ res }) => {
 
   const { data } = await client.query({
     query: GET_MAIN_PAGE,
+    variables: { id: GeneralFragmentID.MAIN },
   })
 
-  const mainPageData = data?.generalFragments?.nodes[0].commonFragments?.main
-  const background = data?.generalFragments?.nodes[0].commonFragments?.main?.background
+  const mainPageData = data?.generalFragment?.main
+  const background = data?.generalFragment?.main?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,

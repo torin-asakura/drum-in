@@ -1,10 +1,8 @@
 import { gql } from '../../../__generated__'
 
 export const GET_MAIN_PAGE = gql(`
-query MainPage{
-generalFragments {
-    nodes {
-      commonFragments {
+query MainPage($id:ID!){
+generalFragment(id:$id) {
         main {
           hero {
             title
@@ -138,8 +136,8 @@ generalFragments {
               }
             }
           }        
-        }
-      }
+        
+      
     }
   }
 }
