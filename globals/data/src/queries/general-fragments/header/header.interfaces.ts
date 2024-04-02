@@ -1,4 +1,3 @@
-
 export type MainCourseDataProps = {
   id: string
   title?: string | null

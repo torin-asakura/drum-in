@@ -1,40 +1,31 @@
 import { gql } from '../../../__generated__'
 
 export const GET_TEACHER = gql(`
-query Teacher{
-  generalFragments {
-    nodes {
-      commonFragments {
-        teacher {
-          subtitle
-          
-          title
-          
-          description
-          
-          experience {
-            number
-            text
+query Teacher($id: ID!){
+    generalFragment(id:$id ) {
+    teacher {
+      title
+      description
+      subtitle
+      gallery {
+        alt
+        image {
+          node {
+            sourceUrl
           }
-          
-          education {
-            title
-            list {
-              element
-            }
-          }
-          
-          gallery {
-            alt
-            image {
-              node {
-                sourceUrl
-              }
-            }
-          }
-          
         }
       }
+      experience {
+        text
+        number
+      }
+      education {
+        title
+        list {
+          element
+        }
+      }
+      
     }
   }
 }

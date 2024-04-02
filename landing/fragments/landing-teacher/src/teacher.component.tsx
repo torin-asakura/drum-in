@@ -16,7 +16,6 @@ import { TeacherBlockProps } from './teacher.interfaces'
 
 const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
   const { teacherData } = useTeacher()
-
   return (
     <Row flexWrap='wrap' justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
@@ -36,7 +35,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
                 'text.smokyWhite',
               ]}
             >
-              {teacherData?.subtitle}
+              {teacherData.subtitle}
             </Text>
           </Row>
           <Layout flexBasis={[8, 10, 12]} />
@@ -50,7 +49,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {teacherData?.title}
+              {teacherData.title}
             </Text>
           </Row>
           <Layout flexBasis={[12, 32, 52]} />
@@ -62,7 +61,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
               lineHeight='primary'
               color='text.transparentSmokyWhite'
             >
-              {teacherData?.description}
+              {teacherData.description}
             </Text>
           </Box>
           <Layout display={['flex', 'flex', 'none']} flexBasis={[12, 30, 0]} />
@@ -73,7 +72,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
       <Box>
         <Column width='100%'>
           <Layout flexBasis={[24, 70, 130]} />
-          <SliderBlock gallery={teacherData?.gallery} />
+          <SliderBlock gallery={teacherData.gallery} />
           <Layout flexBasis={[24, 70, 155]} />
         </Column>
       </Box>
