@@ -16,6 +16,7 @@ import { BottomRow }        from './bottom-row'
 import { ButtonUp }         from './button-up'
 import { FooterProps }      from './footer.interfaces'
 import { LinkSocial }       from './link-social'
+import { getCoursePath }     from './helpers'
 
 const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }, ref: any) => {
   const { footer } = useFooter()
@@ -50,17 +51,17 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 </Text>
               </Box>
               <Layout flexBasis={[20, 22, 24]} />
-              {footer?.courses?.map((element, index: number) => {
+              {footer?.courses?.nodes.map((element, index: number) => {
                 if (index === 3) {
                   return (
                     <React.Fragment key={uniqid()}>
-                      <NextLink path={element?.path} target='_blank'>
+                      <NextLink path={getCoursePath(element)} target='_blank'>
                         <Text
                           fontFamily='secondary'
                           fontWeight='bold'
                           fontSize={['medium', 'regular', 'regular']}
                         >
-                          {element?.title}
+                          {'title' in element ? element.title : ''}
                         </Text>
                       </NextLink>
                       <Layout flexBasis={[28, 30, 32]} />
@@ -69,13 +70,13 @@ const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }
                 }
                 return (
                   <React.Fragment key={uniqid()}>
-                    <NextLink path={element?.path} target='_blank'>
+                    <NextLink path={getCoursePath(element)} target='_blank'>
                       <Text
                         fontFamily='secondary'
                         fontWeight='bold'
                         fontSize={['medium', 'regular', 'regular']}
                       >
-                        {element?.title}
+                        {'title' in element ? element.title : ''}
                       </Text>
                     </NextLink>
                     <Layout flexBasis={16} />
