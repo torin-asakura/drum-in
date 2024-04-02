@@ -1,10 +1,8 @@
 import { gql } from '../../../__generated__'
 
 export const GET_CONTACTS = gql(`
-query Contacts{
- generalFragments {
-    nodes {
-      commonFragments {
+query Contacts($id: ID!){
+    generalFragment(id:$id ) {
         contacts {
           title
           socials {
@@ -17,8 +15,6 @@ query Contacts{
             desktop{node{sourceUrl}}
           }
         }
-      }
     }
   }
-}
 `)
