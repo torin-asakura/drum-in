@@ -1,9 +1,10 @@
 import { useQuery }     from '@apollo/client'
 
-import { GET_CONTACTS } from '../../queries'
+import { GET_CONTACTS }      from '../../queries'
+import { GeneralFragmentID } from '../../query.constants'
 
 export const useContacts = () => {
-  const { data } = useQuery(GET_CONTACTS)
-  const contacts = data?.generalFragments?.nodes[0].commonFragments?.contacts
+  const { data } = useQuery(GET_CONTACTS,{variables: { id: GeneralFragmentID.CONTACTS }})
+  const contacts = data?.generalFragment?.contacts || {}
   return { contacts }
 }
