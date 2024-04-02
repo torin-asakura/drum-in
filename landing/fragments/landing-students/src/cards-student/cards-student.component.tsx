@@ -55,26 +55,10 @@ const CardsStudent: FC<CardsStudentProps> = ({ studentCardsData }) => {
             ))}
           </Slider>
         </Row>
-        <Row display={['flex', 'none', 'none']}>
-          <Slider
-            clName='students-slider-desktop'
-            spaceBetween={20}
-            slidesPerView='auto'
-            slidesOffsetAfter={20}
-            slidesOffsetBefore={20}
-            mousewheel
-            grabCursor
-            forceToAxis
-          >
-            {Children.map(studentsSliderChildren, (child) => (
-              <SwiperSlide>{child}</SwiperSlide>
-            ))}
-          </Slider>
-        </Row>
         <Layout flexBasis={[0, 0, 42]} />
         <BackgroundBlock />
       </Column>
-      <CardsSwiper />
+      <CardsSwiper studentCardsData={studentCardsData} />
     </>
   )
 }

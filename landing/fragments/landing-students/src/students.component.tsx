@@ -1,23 +1,19 @@
-import React                 from 'react'
-import { FC }                from 'react'
-import { useState }          from 'react'
-import { forwardRef }        from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { useState }           from 'react'
+import { forwardRef }         from 'react'
 
-import { StudentsDataProps } from '@globals/data/src'
-import { Button }            from '@ui/button'
-import { ArrowRightIcon }    from '@ui/icons'
-import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Column }            from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Text }              from '@ui/text'
+import { Button }             from '@ui/button'
+import { ArrowRightIcon }     from '@ui/icons'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
 
-import { CardsStudent }      from './cards-student'
-import { ModalWindow }       from './modal-window'
-
-export interface StudentsBlockProps {
-  studentsData?: StudentsDataProps | null
-}
+import { CardsStudent }       from './cards-student'
+import { ModalWindow }        from './modal-window'
+import { StudentsBlockProps } from './students.interfaces'
 
 const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
