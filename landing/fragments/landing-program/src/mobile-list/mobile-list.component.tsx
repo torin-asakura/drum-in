@@ -12,6 +12,7 @@ import { SwiperSlide }     from '@ui/slider'
 import { MobileListProps } from './mobile-list.interfaces'
 import { Slide }           from './slide'
 import { getUi }           from '../helpers'
+// TODO: tooltip for levels
 
 const MobileList: FC<MobileListProps> = ({ openingTheRhythm }) => {
   const programOpeningTheRhythmChildren = useMemo(
@@ -52,7 +53,7 @@ const MobileList: FC<MobileListProps> = ({ openingTheRhythm }) => {
           slidesPerView='auto'
           progressbar
           autoHeight
-          loop
+          slidesOffsetAfter={20}
         >
           {Children.map(programOpeningTheRhythmChildren, (child) => (
             <SwiperSlide>{child}</SwiperSlide>

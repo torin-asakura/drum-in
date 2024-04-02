@@ -8,7 +8,7 @@ import { Layout }           from '@ui/layout'
 import { DesktopListProps } from './desktop-list.interfaces'
 import { Item }             from './item'
 import { getUi }            from '../helpers'
-
+// TODO: tooltip for levels
 const DesktopList: FC<DesktopListProps> = ({ openingTheRhythm }) => (
   <Column display={['none', 'none', 'flex']} width='100%'>
     {openingTheRhythm?.details?.levels?.map((item, index) => (
