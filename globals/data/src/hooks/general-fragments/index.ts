@@ -1,4 +1,3 @@
-export * from './use-cta.hook'
 export * from './use-faq.hook'
 export * from './use-footer.hook'
 export * from './use-header.hook'

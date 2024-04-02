@@ -1,10 +1,8 @@
 import { gql } from '../../../__generated__'
 
 export const GET_HEADER = gql(`
-query Header{
-  generalFragments {
-    nodes {
-      commonFragments {
+query Header($id: ID!){
+  generalFragment(id:$id ) {
         header {
           logo {
             node {
@@ -53,7 +51,5 @@ query Header{
           ctaButton
         }
       }
-    }
-  }
 }
 `)

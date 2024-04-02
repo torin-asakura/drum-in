@@ -14,6 +14,9 @@ import { ConsultationContentProps } from './consultation-content.interfaces'
 
 const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
   const { consultation } = useConsultation()
+
+  // TODO: mutation for send form
+
   return (
     <>
       <Box
