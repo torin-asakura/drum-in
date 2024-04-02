@@ -1,5 +1,4 @@
 import React                   from 'react'
-import { FormattedMessage }    from 'react-intl'
 
 import { Box }                 from '@ui/layout'
 import { Row }                 from '@ui/layout'
@@ -28,7 +27,7 @@ const CourseProcessBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              <FormattedMessage id='course.process_title' />
+              {processEducation?.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 60, 101]} />
