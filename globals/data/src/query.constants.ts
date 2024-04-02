@@ -31,4 +31,5 @@ export enum GeneralFragmentID {
   CONTRACT_OFFER = 'cG9zdDoyNTUy',
   PRIVACY_POLICY = 'cG9zdDoyNTU1',
   STUDENTS = 'cG9zdDoyNjA2',
+  SONG = 'cG9zdDoyNjIz',
 }

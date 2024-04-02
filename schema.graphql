@@ -17,6 +17,14 @@ interface AcfFieldGroupFields {
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
 }
 
+"Interface representing fields of the ACF &quot;Audio&quot; Field Group"
+interface Audio_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;file&quot; Field Type added to the schema as part of the &quot;Audio&quot; Field Group"
+  song: AcfMediaItemConnectionEdge
+}
+
 "Connection to category Nodes"
 interface CategoryConnection {
   "A list of edges (relational context) between RootQuery and connected category Nodes"
@@ -324,22 +332,22 @@ interface ContentNode {
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -418,11 +426,11 @@ interface ContentPayment_Fields {
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group"
   courses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -777,11 +785,11 @@ interface Footer_Fields {
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group"
   courses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -836,11 +844,11 @@ interface HeaderDropdownList_Fields {
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;HeaderDropdownList&quot; Field Group"
   items(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -877,26 +885,26 @@ interface HierarchicalContentNode {
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
@@ -919,22 +927,22 @@ interface HierarchicalContentNode {
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -1003,22 +1011,22 @@ interface HierarchicalTermNode {
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -1283,11 +1291,11 @@ interface MainChooseCourseCourses_Fields {
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;MainChooseCourseCourses&quot; Field Group"
   course(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -1608,10 +1616,7 @@ interface NodeWithComments {
 "A node that supports the content editor"
 interface NodeWithContentEditor {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The globally unique ID for the object"
   id: ID!
 }
@@ -1619,10 +1624,7 @@ interface NodeWithContentEditor {
 "A node that can have an excerpt"
 interface NodeWithExcerpt {
   "The excerpt of the post."
-  excerpt(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  excerpt("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The globally unique ID for the object"
   id: ID!
 }
@@ -1672,10 +1674,7 @@ interface NodeWithTitle {
   "The Yoast SEO data of the ContentNode"
   seo: PostTypeSEO
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  title("Format of the field output" format: PostObjectFieldFormatEnum): String
 }
 
 "A node that can have trackbacks and pingbacks"
@@ -1974,16 +1973,6 @@ interface TeacherEducation_Fields {
   title: String
 }
 
-"Interface representing fields of the ACF &quot;TeacherExperience&quot; Field Group"
-interface TeacherExperience_Fields {
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeacherExperience&quot; Field Group"
-  number: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherExperience&quot; Field Group"
-  text: String
-}
-
 "Interface representing fields of the ACF &quot;TeacherGallery&quot; Field Group"
 interface TeacherGallery_Fields {
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherGallery&quot; Field Group"
@@ -1994,18 +1983,28 @@ interface TeacherGallery_Fields {
   image: AcfMediaItemConnectionEdge
 }
 
+"Interface representing fields of the ACF &quot;TeacherStatistics&quot; Field Group"
+interface TeacherStatistics_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group"
+  number: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group"
+  text: String
+}
+
 "Interface representing fields of the ACF &quot;Teacher&quot; Field Group"
 interface Teacher_Fields {
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
   description: String
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
   education: TeacherEducation
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
-  experience: [TeacherExperience]
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
   gallery: [TeacherGallery]
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
+  statistics: [TeacherStatistics]
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
   subtitle: String
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
@@ -2023,22 +2022,22 @@ interface TermNode {
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -2220,6 +2219,12 @@ interface WPPageInfo {
   startCursor: String
 }
 
+"Provides access to fields of the &quot;Audio&quot; ACF Field Group via the &quot;audio&quot; field"
+interface WithAcfAudio {
+  "Fields of the Audio ACF Field Group"
+  audio: Audio
+}
+
 "Provides access to fields of the &quot;Consultation&quot; ACF Field Group via the &quot;consultation&quot; field"
 interface WithAcfConsultation {
   "Fields of the Consultation ACF Field Group"
@@ -2299,7 +2304,14 @@ interface WithAcfTeacher {
 }
 
 "Deprecated in favor of MenuItemLinkeable Interface"
-union MenuItemObjectUnion = Category | Course | GeneralFragment | IndividualCourse | Page | Post | Tag
+union MenuItemObjectUnion =
+    Category
+  | Course
+  | GeneralFragment
+  | IndividualCourse
+  | Page
+  | Post
+  | Tag
 
 "Connection between the MainChooseCourseCourses type and the ContentNode type"
 type AcfContentNodeConnection implements Connection & ContentNodeConnection {
@@ -2333,12 +2345,20 @@ type AcfContentNodeConnectionPageInfo implements ContentNodeConnectionPageInfo &
   startCursor: String
 }
 
-"Connection between the MainSliderUpperslider type and the MediaItem type"
+"Connection between the Audio type and the MediaItem type"
 type AcfMediaItemConnectionEdge implements Edge & MediaItemConnectionEdge & OneToOneConnection {
   "Opaque reference to the nodes position in the connection. Value can be used with pagination args."
   cursor: String
   "The node of the connection, without the edges"
   node: MediaItem!
+}
+
+"The &quot;Audio&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type Audio implements AcfFieldGroup & AcfFieldGroupFields & Audio_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;file&quot; Field Type added to the schema as part of the &quot;Audio&quot; Field Group"
+  song: AcfMediaItemConnectionEdge
 }
 
 "Avatars are profile images for users. WordPress by default uses the Gravatar service to host and fetch avatars from."
@@ -2372,11 +2392,11 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "The ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): CategoryToAncestorsCategoryConnection
@@ -2385,26 +2405,26 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "Connection between the category type and its children categories."
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: CategoryToCategoryConnectionWhereArgs
   ): CategoryToCategoryConnection
   "Connection between the Category type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: CategoryToContentNodeConnectionWhereArgs
   ): CategoryToContentNodeConnection
@@ -2417,22 +2437,22 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -2457,13 +2477,13 @@ type Category implements DatabaseIdentifier & HierarchicalNode & HierarchicalTer
   "Connection between the Category type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: CategoryToPostConnectionWhereArgs
   ): CategoryToPostConnection
@@ -2642,10 +2662,7 @@ type Comment implements DatabaseIdentifier & Node {
   "Connection between the Comment type and the ContentNode type"
   commentedOn: CommentToContentNodeConnectionEdge
   "Content of the comment. This field is equivalent to WP_Comment-&gt;comment_content and the value matching the &quot;comment_content&quot; column in SQL."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The unique identifier stored in the database"
   databaseId: Int!
   "Date the comment was posted in local time. This field is equivalent to WP_Comment-&gt;date and the value matching the &quot;date&quot; column in SQL."
@@ -2670,13 +2687,13 @@ type Comment implements DatabaseIdentifier & Node {
   "Connection between the Comment type and the Comment type"
   replies(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: CommentToCommentConnectionWhereArgs
   ): CommentToCommentConnection
@@ -2691,9 +2708,9 @@ type CommentAuthor implements Commenter & DatabaseIdentifier & Node {
   "Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument."
   avatar(
     "Whether to always show the default image, never the Gravatar. Default false"
-    forceDefault: Boolean,
+    forceDefault: Boolean
     "The rating level of the avatar."
-    rating: AvatarRatingEnum,
+    rating: AvatarRatingEnum
     "The size attribute of the avatar field can be used to fetch avatars of different sizes. The value corresponds to the dimension in pixels to fetch. The default is 96 pixels."
     size: Int = 96
   ): Avatar
@@ -3070,11 +3087,11 @@ type ContentPayment implements AcfFieldGroup & AcfFieldGroupFields & ContentPaym
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ContentPayment&quot; Field Group"
   courses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -3119,24 +3136,24 @@ type ContentType implements Node & UniformResourceIdentifiable {
   "Connection between the ContentType type and the Taxonomy type"
   connectedTaxonomies(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentTypeToTaxonomyConnection
   "Connection between the ContentType type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: ContentTypeToContentNodeConnectionWhereArgs
   ): ContentTypeToContentNodeConnection
@@ -3307,26 +3324,26 @@ type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNod
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
@@ -3353,22 +3370,22 @@ type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNod
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -3419,10 +3436,7 @@ type Course implements ContentNode & DatabaseIdentifier & HierarchicalContentNod
   "The template assigned to a node of content"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  title("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The unique resource identifier path"
   uri: String
 }
@@ -3780,11 +3794,11 @@ type Footer implements AcfFieldGroup & AcfFieldGroupFields & Footer_Fields {
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;Footer&quot; Field Group"
   courses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -3821,16 +3835,15 @@ type FooterSocials implements AcfFieldGroup & AcfFieldGroupFields & FooterSocial
 }
 
 "The generalFragment type"
-type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfConsultation & WithAcfContacts & WithAcfContractOffer & WithAcfFaq & WithAcfFooter & WithAcfHeader & WithAcfLearningProcess & WithAcfMain & WithAcfPrivacyPolicy & WithAcfStudents & WithAcfTeacher {
+type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfAudio & WithAcfConsultation & WithAcfContacts & WithAcfContractOffer & WithAcfFaq & WithAcfFooter & WithAcfHeader & WithAcfLearningProcess & WithAcfMain & WithAcfPrivacyPolicy & WithAcfStudents & WithAcfTeacher {
+  "Fields of the Audio ACF Field Group"
+  audio: Audio
   "Fields of the Consultation ACF Field Group"
   consultation: Consultation
   "Fields of the Contacts ACF Field Group"
   contacts: Contacts
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -3852,22 +3865,22 @@ type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinka
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -3930,10 +3943,7 @@ type GeneralFragment implements ContentNode & DatabaseIdentifier & MenuItemLinka
   "The template assigned to the node"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  title("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The unique resource identifier path"
   uri: String
 }
@@ -3989,11 +3999,11 @@ type HeaderDropdownList implements AcfFieldGroup & AcfFieldGroupFields & HeaderD
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;HeaderDropdownList&quot; Field Group"
   items(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -4086,10 +4096,7 @@ type HierarchicalContentNodeToParentContentNodeConnectionEdge implements Content
 "The individualCourse type"
 type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfIndividualCourseData {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -4109,22 +4116,22 @@ type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLink
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -4173,10 +4180,7 @@ type IndividualCourse implements ContentNode & DatabaseIdentifier & MenuItemLink
   "The template assigned to the node"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  title("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The unique resource identifier path"
   uri: String
 }
@@ -4420,11 +4424,11 @@ type MainChooseCourseCourses implements AcfFieldGroup & AcfFieldGroupFields & Ma
   "Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;MainChooseCourseCourses&quot; Field Group"
   course(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): AcfContentNodeConnection
@@ -4577,7 +4581,7 @@ type MediaDetails {
   "The available sizes of the mediaItem"
   sizes(
     "The sizes to exclude. Will take precedence over `include`."
-    exclude: [MediaItemSizeEnum],
+    exclude: [MediaItemSizeEnum]
     "The sizes to include. Can be overridden by `exclude`."
     include: [MediaItemSizeEnum]
   ): [MediaSize]
@@ -4592,13 +4596,13 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
@@ -4609,20 +4613,17 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The globally unique identifier of the author of the node"
   authorId: ID
   "The caption for the resource"
-  caption(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  caption("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
@@ -4633,13 +4634,13 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "Connection between the MediaItem type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: MediaItemToCommentConnectionWhereArgs
   ): MediaItemToCommentConnection
@@ -4654,10 +4655,7 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The publishing date set in GMT."
   dateGmt: String
   "Description of the image (stored as post_content)"
-  description(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  description("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The desired slug of the post"
   desiredSlug: String
   "If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds"
@@ -4667,30 +4665,27 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
   "The filesize in bytes of the resource"
-  fileSize(
-    "Size of the MediaItem to return"
-    size: MediaItemSizeEnum
-  ): Int
+  fileSize("Size of the MediaItem to return" size: MediaItemSizeEnum): Int
   "The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table."
   guid: String
   "The globally unique identifier of the attachment object."
@@ -4734,31 +4729,19 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The Yoast SEO data of the ContentNode"
   seo: PostTypeSEO
   "The sizes attribute value for an image."
-  sizes(
-    "Size of the MediaItem to calculate sizes with"
-    size: MediaItemSizeEnum
-  ): String
+  sizes("Size of the MediaItem to calculate sizes with" size: MediaItemSizeEnum): String
   "The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table."
   slug: String
   "Url of the mediaItem"
-  sourceUrl(
-    "Size of the MediaItem to return"
-    size: MediaItemSizeEnum
-  ): String
+  sourceUrl("Size of the MediaItem to return" size: MediaItemSizeEnum): String
   "The srcset attribute specifies the URL of the image to use in different situations. It is a comma separated string of urls and their widths."
-  srcSet(
-    "Size of the MediaItem to calculate srcSet with"
-    size: MediaItemSizeEnum
-  ): String
+  srcSet("Size of the MediaItem to calculate srcSet with" size: MediaItemSizeEnum): String
   "The current status of the object"
   status: String
   "The template assigned to a node of content"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  title("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The unique resource identifier path"
   uri: String
 }
@@ -4858,13 +4841,13 @@ type Menu implements DatabaseIdentifier & Node {
   "Connection between the Menu type and the MenuItem type"
   menuItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: MenuToMenuItemConnectionWhereArgs
   ): MenuToMenuItemConnection
@@ -4879,20 +4862,21 @@ type MenuItem implements DatabaseIdentifier & Node {
   "Connection between the MenuItem type and the MenuItem type"
   childItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: MenuItemToMenuItemConnectionWhereArgs
   ): MenuItemToMenuItemConnection
   "Connection from MenuItem to it&#039;s connected node"
   connectedNode: MenuItemToMenuItemLinkableConnectionEdge
   "The object connected to this menu item."
-  connectedObject: MenuItemObjectUnion @deprecated(reason: "Deprecated in favor of the connectedNode field")
+  connectedObject: MenuItemObjectUnion
+    @deprecated(reason: "Deprecated in favor of the connectedNode field")
   "Class attribute for the menu item link"
   cssClasses: [String]
   "The unique identifier stored in the database"
@@ -5040,13 +5024,13 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root)."
   ancestors(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeAncestorsConnection
@@ -5059,13 +5043,13 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   ): HierarchicalContentNodeToContentNodeChildrenConnection
@@ -5076,21 +5060,18 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the Page type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PageToCommentConnectionWhereArgs
   ): PageToCommentConnection
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -5110,22 +5091,22 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
@@ -5184,13 +5165,13 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "Connection between the Page type and the page type"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PageToRevisionConnectionWhereArgs
   ): PageToRevisionConnection
@@ -5203,10 +5184,7 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "The template assigned to a node of content"
   template: ContentTemplate
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  title("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The unique resource identifier path"
   uri: String
 }
@@ -5316,13 +5294,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the category type"
   categories(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostToCategoryConnectionWhereArgs
   ): PostToCategoryConnection
@@ -5333,21 +5311,18 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostToCommentConnectionWhereArgs
   ): PostToCommentConnection
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The name of the Content Type the node belongs to"
@@ -5367,30 +5342,27 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the ContentNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedScriptConnection
   "Connection between the ContentNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
   "The excerpt of the post."
-  excerpt(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  excerpt("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the NodeWithFeaturedImage type and the MediaItem type"
   featuredImage: NodeWithFeaturedImageToMediaItemConnectionEdge
   "The database identifier for the featured image node assigned to the content node"
@@ -5428,13 +5400,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the postFormat type"
   postFormats(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostToPostFormatConnectionWhereArgs
   ): PostToPostFormatConnection
@@ -5451,13 +5423,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the post type"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostToRevisionConnectionWhereArgs
   ): PostToRevisionConnection
@@ -5470,13 +5442,13 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the tag type"
   tags(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostToTagConnectionWhereArgs
   ): PostToTagConnection
@@ -5485,21 +5457,18 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   "Connection between the Post type and the TermNode type"
   terms(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostToTermNodeConnectionWhereArgs
   ): PostToTermNodeConnection
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
-  title(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  title("Format of the field output" format: PostObjectFieldFormatEnum): String
   "URLs queued to be pinged."
   toPing: [String]
   "The unique resource identifier path"
@@ -5511,13 +5480,13 @@ type PostFormat implements DatabaseIdentifier & Node & TermNode & UniformResourc
   "Connection between the PostFormat type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostFormatToContentNodeConnectionWhereArgs
   ): PostFormatToContentNodeConnection
@@ -5530,22 +5499,22 @@ type PostFormat implements DatabaseIdentifier & Node & TermNode & UniformResourc
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -5566,13 +5535,13 @@ type PostFormat implements DatabaseIdentifier & Node & TermNode & UniformResourc
   "Connection between the PostFormat type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: PostFormatToPostConnectionWhereArgs
   ): PostFormatToPostConnection
@@ -6023,10 +5992,7 @@ type RootMutation {
     input: CreateCommentInput!
   ): CreateCommentPayload
   "The createCourse mutation"
-  createCourse(
-    "Input for the createCourse mutation"
-    input: CreateCourseInput!
-  ): CreateCoursePayload
+  createCourse("Input for the createCourse mutation" input: CreateCourseInput!): CreateCoursePayload
   "The createGeneralFragment mutation"
   createGeneralFragment(
     "Input for the createGeneralFragment mutation"
@@ -6043,30 +6009,18 @@ type RootMutation {
     input: CreateMediaItemInput!
   ): CreateMediaItemPayload
   "The createPage mutation"
-  createPage(
-    "Input for the createPage mutation"
-    input: CreatePageInput!
-  ): CreatePagePayload
+  createPage("Input for the createPage mutation" input: CreatePageInput!): CreatePagePayload
   "The createPost mutation"
-  createPost(
-    "Input for the createPost mutation"
-    input: CreatePostInput!
-  ): CreatePostPayload
+  createPost("Input for the createPost mutation" input: CreatePostInput!): CreatePostPayload
   "The createPostFormat mutation"
   createPostFormat(
     "Input for the createPostFormat mutation"
     input: CreatePostFormatInput!
   ): CreatePostFormatPayload
   "The createTag mutation"
-  createTag(
-    "Input for the createTag mutation"
-    input: CreateTagInput!
-  ): CreateTagPayload
+  createTag("Input for the createTag mutation" input: CreateTagInput!): CreateTagPayload
   "The createUser mutation"
-  createUser(
-    "Input for the createUser mutation"
-    input: CreateUserInput!
-  ): CreateUserPayload
+  createUser("Input for the createUser mutation" input: CreateUserInput!): CreateUserPayload
   "The deleteCategory mutation"
   deleteCategory(
     "Input for the deleteCategory mutation"
@@ -6078,10 +6032,7 @@ type RootMutation {
     input: DeleteCommentInput!
   ): DeleteCommentPayload
   "The deleteCourse mutation"
-  deleteCourse(
-    "Input for the deleteCourse mutation"
-    input: DeleteCourseInput!
-  ): DeleteCoursePayload
+  deleteCourse("Input for the deleteCourse mutation" input: DeleteCourseInput!): DeleteCoursePayload
   "The deleteGeneralFragment mutation"
   deleteGeneralFragment(
     "Input for the deleteGeneralFragment mutation"
@@ -6098,40 +6049,22 @@ type RootMutation {
     input: DeleteMediaItemInput!
   ): DeleteMediaItemPayload
   "The deletePage mutation"
-  deletePage(
-    "Input for the deletePage mutation"
-    input: DeletePageInput!
-  ): DeletePagePayload
+  deletePage("Input for the deletePage mutation" input: DeletePageInput!): DeletePagePayload
   "The deletePost mutation"
-  deletePost(
-    "Input for the deletePost mutation"
-    input: DeletePostInput!
-  ): DeletePostPayload
+  deletePost("Input for the deletePost mutation" input: DeletePostInput!): DeletePostPayload
   "The deletePostFormat mutation"
   deletePostFormat(
     "Input for the deletePostFormat mutation"
     input: DeletePostFormatInput!
   ): DeletePostFormatPayload
   "The deleteTag mutation"
-  deleteTag(
-    "Input for the deleteTag mutation"
-    input: DeleteTagInput!
-  ): DeleteTagPayload
+  deleteTag("Input for the deleteTag mutation" input: DeleteTagInput!): DeleteTagPayload
   "The deleteUser mutation"
-  deleteUser(
-    "Input for the deleteUser mutation"
-    input: DeleteUserInput!
-  ): DeleteUserPayload
+  deleteUser("Input for the deleteUser mutation" input: DeleteUserInput!): DeleteUserPayload
   "Increase the count."
-  increaseCount(
-    "The count to increase"
-    count: Int
-  ): Int
+  increaseCount("The count to increase" count: Int): Int
   "The registerUser mutation"
-  registerUser(
-    "Input for the registerUser mutation"
-    input: RegisterUserInput!
-  ): RegisterUserPayload
+  registerUser("Input for the registerUser mutation" input: RegisterUserInput!): RegisterUserPayload
   "The resetUserPassword mutation"
   resetUserPassword(
     "Input for the resetUserPassword mutation"
@@ -6158,10 +6091,7 @@ type RootMutation {
     input: UpdateCommentInput!
   ): UpdateCommentPayload
   "The updateCourse mutation"
-  updateCourse(
-    "Input for the updateCourse mutation"
-    input: UpdateCourseInput!
-  ): UpdateCoursePayload
+  updateCourse("Input for the updateCourse mutation" input: UpdateCourseInput!): UpdateCoursePayload
   "The updateGeneralFragment mutation"
   updateGeneralFragment(
     "Input for the updateGeneralFragment mutation"
@@ -6178,15 +6108,9 @@ type RootMutation {
     input: UpdateMediaItemInput!
   ): UpdateMediaItemPayload
   "The updatePage mutation"
-  updatePage(
-    "Input for the updatePage mutation"
-    input: UpdatePageInput!
-  ): UpdatePagePayload
+  updatePage("Input for the updatePage mutation" input: UpdatePageInput!): UpdatePagePayload
   "The updatePost mutation"
-  updatePost(
-    "Input for the updatePost mutation"
-    input: UpdatePostInput!
-  ): UpdatePostPayload
+  updatePost("Input for the updatePost mutation" input: UpdatePostInput!): UpdatePostPayload
   "The updatePostFormat mutation"
   updatePostFormat(
     "Input for the updatePostFormat mutation"
@@ -6198,15 +6122,9 @@ type RootMutation {
     input: UpdateSettingsInput!
   ): UpdateSettingsPayload
   "The updateTag mutation"
-  updateTag(
-    "Input for the updateTag mutation"
-    input: UpdateTagInput!
-  ): UpdateTagPayload
+  updateTag("Input for the updateTag mutation" input: UpdateTagInput!): UpdateTagPayload
   "The updateUser mutation"
-  updateUser(
-    "Input for the updateUser mutation"
-    input: UpdateUserInput!
-  ): UpdateUserPayload
+  updateUser("Input for the updateUser mutation" input: UpdateUserInput!): UpdateUserPayload
 }
 
 "The root entry point into the Graph"
@@ -6216,113 +6134,116 @@ type RootQuery {
   "Connection between the RootQuery type and the category type"
   categories(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToCategoryConnectionWhereArgs
   ): RootQueryToCategoryConnection
   "A 0bject"
   category(
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: CategoryIdType
   ): Category
   "Returns a Comment"
   comment(
     "Unique identifier for the comment node."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a comment by. Default is Global ID"
     idType: CommentNodeIdTypeEnum
   ): Comment
   "Connection between the RootQuery type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToCommentConnectionWhereArgs
   ): RootQueryToCommentConnection
   "A node used to manage content"
   contentNode(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
+    asPreview: Boolean
     "The content type the node is used for. Required when idType is set to \"name\" or \"slug\""
-    contentType: ContentTypeEnum,
+    contentType: ContentTypeEnum
     "Unique identifier for the content node."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a content node by. Default is Global ID"
     idType: ContentNodeIdTypeEnum
   ): ContentNode
   "Connection between the RootQuery type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToContentNodeConnectionWhereArgs
   ): RootQueryToContentNodeConnection
   "Fetch a Content Type node by unique Identifier"
   contentType(
     "Unique Identifier for the Content Type node."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a content type by. Default is Global ID"
     idType: ContentTypeIdTypeEnum
   ): ContentType
   "Connection between the RootQuery type and the ContentType type"
   contentTypes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToContentTypeConnection
   "An object of the course Type. "
   course(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
+    asPreview: Boolean
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: CourseIdType
   ): Course
   "A course object"
   courseBy(
     "Get the course by its database ID"
-    courseId: Int,
+    courseId: Int
     "Get the course object by its global ID"
-    id: ID,
+    id: ID
     "Get the course by its uri"
     uri: String
-  ): Course @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
+  ): Course
+    @deprecated(
+      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
+    )
   "Connection between the RootQuery type and the course type"
   courses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToCourseConnectionWhereArgs
   ): RootQueryToCourseConnection
@@ -6331,33 +6252,36 @@ type RootQuery {
   "An object of the generalFragment Type. "
   generalFragment(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
+    asPreview: Boolean
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: GeneralFragmentIdType
   ): GeneralFragment
   "A generalFragment object"
   generalFragmentBy(
     "Get the generalFragment by its database ID"
-    generalFragmentId: Int,
+    generalFragmentId: Int
     "Get the generalFragment object by its global ID"
-    id: ID,
+    id: ID
     "Get the generalFragment by its slug (only available for non-hierarchical types)"
-    slug: String,
+    slug: String
     "Get the generalFragment by its uri"
     uri: String
-  ): GeneralFragment @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
+  ): GeneralFragment
+    @deprecated(
+      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
+    )
   "Connection between the RootQuery type and the generalFragment type"
   generalFragments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToGeneralFragmentConnectionWhereArgs
   ): RootQueryToGeneralFragmentConnection
@@ -6366,114 +6290,117 @@ type RootQuery {
   "An object of the individualCourse Type. "
   individualCourse(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
+    asPreview: Boolean
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: IndividualCourseIdType
   ): IndividualCourse
   "A individualCourse object"
   individualCourseBy(
     "Get the individualCourse object by its global ID"
-    id: ID,
+    id: ID
     "Get the individualCourse by its database ID"
-    individualCourseId: Int,
+    individualCourseId: Int
     "Get the individualCourse by its slug (only available for non-hierarchical types)"
-    slug: String,
+    slug: String
     "Get the individualCourse by its uri"
     uri: String
-  ): IndividualCourse @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
+  ): IndividualCourse
+    @deprecated(
+      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
+    )
   "Connection between the RootQuery type and the individualCourse type"
   individualCourses(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToIndividualCourseConnectionWhereArgs
   ): RootQueryToIndividualCourseConnection
   "An object of the mediaItem Type. "
   mediaItem(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
+    asPreview: Boolean
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: MediaItemIdType
   ): MediaItem
   "A mediaItem object"
   mediaItemBy(
     "Get the mediaItem object by its global ID"
-    id: ID,
+    id: ID
     "Get the mediaItem by its database ID"
-    mediaItemId: Int,
+    mediaItemId: Int
     "Get the mediaItem by its slug (only available for non-hierarchical types)"
-    slug: String,
+    slug: String
     "Get the mediaItem by its uri"
     uri: String
-  ): MediaItem @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
+  ): MediaItem
+    @deprecated(
+      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
+    )
   "Connection between the RootQuery type and the mediaItem type"
   mediaItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToMediaItemConnectionWhereArgs
   ): RootQueryToMediaItemConnection
   "A WordPress navigation menu"
   menu(
     "The globally unique identifier of the menu."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a menu by. Default is Global ID"
     idType: MenuNodeIdTypeEnum
   ): Menu
   "A WordPress navigation menu item"
   menuItem(
     "The globally unique identifier of the menu item."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a menu item by. Default is Global ID"
     idType: MenuItemNodeIdTypeEnum
   ): MenuItem
   "Connection between the RootQuery type and the MenuItem type"
   menuItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToMenuItemConnectionWhereArgs
   ): RootQueryToMenuItemConnection
   "Connection between the RootQuery type and the Menu type"
   menus(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToMenuConnectionWhereArgs
   ): RootQueryToMenuConnection
   "Fetches an object given its ID"
-  node(
-    "The unique identifier of the node"
-    id: ID
-  ): Node
+  node("The unique identifier of the node" id: ID): Node
   "Fetches an object given its Unique Resource Identifier"
   nodeByUri(
     "Unique Resource Identifier in the form of a path or permalink for a node. Ex: \"/hello-world\""
@@ -6482,102 +6409,105 @@ type RootQuery {
   "An object of the page Type. "
   page(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
+    asPreview: Boolean
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: PageIdType
   ): Page
   "A page object"
   pageBy(
     "Get the page object by its global ID"
-    id: ID,
+    id: ID
     "Get the page by its database ID"
-    pageId: Int,
+    pageId: Int
     "Get the page by its uri"
     uri: String
-  ): Page @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
+  ): Page
+    @deprecated(
+      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
+    )
   "Connection between the RootQuery type and the page type"
   pages(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToPageConnectionWhereArgs
   ): RootQueryToPageConnection
   "A WordPress plugin"
-  plugin(
-    "The globally unique identifier of the plugin."
-    id: ID!
-  ): Plugin
+  plugin("The globally unique identifier of the plugin." id: ID!): Plugin
   "Connection between the RootQuery type and the Plugin type"
   plugins(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToPluginConnectionWhereArgs
   ): RootQueryToPluginConnection
   "An object of the post Type. "
   post(
     "Whether to return the Preview Node instead of the Published Node. When the ID of a Node is provided along with asPreview being set to true, the preview node with un-published changes will be returned instead of the published node. If no preview node exists or the requester doesn't have proper capabilities to preview, no node will be returned. If the ID provided is a URI and has a preview query arg, it will be used as a fallback if the \"asPreview\" argument is not explicitly provided as an argument."
-    asPreview: Boolean,
+    asPreview: Boolean
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: PostIdType
   ): Post
   "A post object"
   postBy(
     "Get the post object by its global ID"
-    id: ID,
+    id: ID
     "Get the post by its database ID"
-    postId: Int,
+    postId: Int
     "Get the post by its slug (only available for non-hierarchical types)"
-    slug: String,
+    slug: String
     "Get the post by its uri"
     uri: String
-  ): Post @deprecated(reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)")
+  ): Post
+    @deprecated(
+      reason: "Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)"
+    )
   "A 0bject"
   postFormat(
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: PostFormatIdType
   ): PostFormat
   "Connection between the RootQuery type and the postFormat type"
   postFormats(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToPostFormatConnectionWhereArgs
   ): RootQueryToPostFormatConnection
   "Connection between the RootQuery type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToPostConnectionWhereArgs
   ): RootQueryToPostConnection
@@ -6586,35 +6516,35 @@ type RootQuery {
   "Connection between the RootQuery type and the EnqueuedScript type"
   registeredScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToEnqueuedScriptConnection
   "Connection between the RootQuery type and the EnqueuedStylesheet type"
   registeredStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToEnqueuedStylesheetConnection
   "Connection between the RootQuery type and the ContentNode type"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToRevisionsConnectionWhereArgs
   ): RootQueryToRevisionsConnection
@@ -6623,112 +6553,106 @@ type RootQuery {
   "A 0bject"
   tag(
     "The globally unique identifier of the object."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch by. Default is Global ID"
     idType: TagIdType
   ): Tag
   "Connection between the RootQuery type and the tag type"
   tags(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToTagConnectionWhereArgs
   ): RootQueryToTagConnection
   "Connection between the RootQuery type and the Taxonomy type"
   taxonomies(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToTaxonomyConnection
   "Fetch a Taxonomy node by unique Identifier"
   taxonomy(
     "Unique Identifier for the Taxonomy node."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a taxonomy by. Default is Global ID"
     idType: TaxonomyIdTypeEnum
   ): Taxonomy
   "A node in a taxonomy used to group and relate content nodes"
   termNode(
     "Unique identifier for the term node."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a term node by. Default is Global ID"
-    idType: TermNodeIdTypeEnum,
+    idType: TermNodeIdTypeEnum
     "The taxonomy of the tern node. Required when idType is set to \"name\" or \"slug\""
     taxonomy: TaxonomyEnum
   ): TermNode
   "Connection between the RootQuery type and the TermNode type"
   terms(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToTermNodeConnectionWhereArgs
   ): RootQueryToTermNodeConnection
   "A Theme object"
-  theme(
-    "The globally unique identifier of the theme."
-    id: ID!
-  ): Theme
+  theme("The globally unique identifier of the theme." id: ID!): Theme
   "Connection between the RootQuery type and the Theme type"
   themes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToThemeConnection
   "Returns a user"
   user(
     "The globally unique identifier of the user."
-    id: ID!,
+    id: ID!
     "Type of unique identifier to fetch a user by. Default is Global ID"
     idType: UserNodeIdTypeEnum
   ): User
   "Returns a user role"
-  userRole(
-    "The globally unique identifier of the user object."
-    id: ID!
-  ): UserRole
+  userRole("The globally unique identifier of the user object." id: ID!): UserRole
   "Connection between the RootQuery type and the UserRole type"
   userRoles(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): RootQueryToUserRoleConnection
   "Connection between the RootQuery type and the User type"
   users(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: RootQueryToUserConnectionWhereArgs
   ): RootQueryToUserConnection
@@ -7808,13 +7732,13 @@ type Tag implements DatabaseIdentifier & MenuItemLinkable & Node & TermNode & Un
   "Connection between the Tag type and the ContentNode type"
   contentNodes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: TagToContentNodeConnectionWhereArgs
   ): TagToContentNodeConnection
@@ -7827,22 +7751,22 @@ type Tag implements DatabaseIdentifier & MenuItemLinkable & Node & TermNode & Un
   "Connection between the TermNode type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedScriptConnection
   "Connection between the TermNode type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TermNodeToEnqueuedStylesheetConnection
@@ -7861,13 +7785,13 @@ type Tag implements DatabaseIdentifier & MenuItemLinkable & Node & TermNode & Un
   "Connection between the Tag type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: TagToPostConnectionWhereArgs
   ): TagToPostConnection
@@ -7966,22 +7890,22 @@ type Taxonomy implements Node {
   "List of Content Types associated with the Taxonomy"
   connectedContentTypes(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TaxonomyToContentTypeConnection
   "List of Term Nodes associated with the Taxonomy"
   connectedTerms(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): TaxonomyToTermNodeConnection
@@ -8122,12 +8046,12 @@ type Teacher implements AcfFieldGroup & AcfFieldGroupFields & Teacher_Fields {
   description: String
   "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
   education: TeacherEducation
-  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
-  experience: [TeacherExperience]
   "The name of the field group"
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
   gallery: [TeacherGallery]
+  "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
+  statistics: [TeacherStatistics]
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
   subtitle: String
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Teacher&quot; Field Group"
@@ -8152,16 +8076,6 @@ type TeacherEducationList implements AcfFieldGroup & AcfFieldGroupFields & Teach
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
 }
 
-"The &quot;TeacherExperience&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
-type TeacherExperience implements AcfFieldGroup & AcfFieldGroupFields & TeacherExperience_Fields {
-  "The name of the field group"
-  fieldGroupName: String @deprecated(reason: "Use __typename instead")
-  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeacherExperience&quot; Field Group"
-  number: Float
-  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherExperience&quot; Field Group"
-  text: String
-}
-
 "The &quot;TeacherGallery&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
 type TeacherGallery implements AcfFieldGroup & AcfFieldGroupFields & TeacherGallery_Fields {
   "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherGallery&quot; Field Group"
@@ -8170,6 +8084,16 @@ type TeacherGallery implements AcfFieldGroup & AcfFieldGroupFields & TeacherGall
   fieldGroupName: String @deprecated(reason: "Use __typename instead")
   "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeacherGallery&quot; Field Group"
   image: AcfMediaItemConnectionEdge
+}
+
+"The &quot;TeacherStatistics&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;."
+type TeacherStatistics implements AcfFieldGroup & AcfFieldGroupFields & TeacherStatistics_Fields {
+  "The name of the field group"
+  fieldGroupName: String @deprecated(reason: "Use __typename instead")
+  "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group"
+  number: Float
+  "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeacherStatistics&quot; Field Group"
+  text: String
 }
 
 "Connection between the TermNode type and the EnqueuedScript type"
@@ -8373,9 +8297,9 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument."
   avatar(
     "Whether to always show the default image, never the Gravatar. Default false"
-    forceDefault: Boolean,
+    forceDefault: Boolean
     "The rating level of the avatar."
-    rating: AvatarRatingEnum,
+    rating: AvatarRatingEnum
     "The size attribute of the avatar field can be used to fetch avatars of different sizes. The value corresponds to the dimension in pixels to fetch. The default is 96 pixels."
     size: Int = 96
   ): Avatar
@@ -8386,13 +8310,13 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the Comment type"
   comments(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: UserToCommentConnectionWhereArgs
   ): UserToCommentConnection
@@ -8405,22 +8329,22 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the EnqueuedScript type"
   enqueuedScripts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): UserToEnqueuedScriptConnection
   "Connection between the User type and the EnqueuedStylesheet type"
   enqueuedStylesheets(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): UserToEnqueuedStylesheetConnection
@@ -8443,13 +8367,13 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the mediaItem type"
   mediaItems(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: UserToMediaItemConnectionWhereArgs
   ): UserToMediaItemConnection
@@ -8462,26 +8386,26 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User type and the page type"
   pages(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: UserToPageConnectionWhereArgs
   ): UserToPageConnection
   "Connection between the User type and the post type"
   posts(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: UserToPostConnectionWhereArgs
   ): UserToPostConnection
@@ -8490,24 +8414,24 @@ type User implements Commenter & DatabaseIdentifier & Node & UniformResourceIden
   "Connection between the User and Revisions authored by the user"
   revisions(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
-    last: Int,
+    last: Int
     "Arguments for filtering the connection"
     where: UserToRevisionsConnectionWhereArgs
   ): UserToRevisionsConnection
   "Connection between the User type and the UserRole type"
   roles(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
-    after: String,
+    after: String
     "Cursor used along with the \"last\" argument to reference where in the dataset to get data"
-    before: String,
+    before: String
     "The number of items to return after the referenced \"after\" cursor"
-    first: Int,
+    first: Int
     "The number of items to return before the referenced \"before\" cursor"
     last: Int
   ): UserToUserRoleConnection
@@ -10075,7 +9999,7 @@ input CreateUserInput {
   displayName: String
   "A string containing the user's email address."
   email: String
-  "\tThe user's first name."
+  "	The user's first name."
   firstName: String
   "User's Jabber account."
   jabber: String
@@ -11031,7 +10955,7 @@ input RegisterUserInput {
   displayName: String
   "A string containing the user's email address."
   email: String
-  "\tThe user's first name."
+  "	The user's first name."
   firstName: String
   "User's Jabber account."
   jabber: String
@@ -12171,7 +12095,7 @@ input UpdateUserInput {
   displayName: String
   "A string containing the user's email address."
   email: String
-  "\tThe user's first name."
+  "	The user's first name."
   firstName: String
   "The ID of the user"
   id: ID!

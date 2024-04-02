@@ -13,8 +13,8 @@ export type TeacherDataProps = {
   description?: string | null
   subtitle?: string | null
   gallery?: GalleryDataProps | null
-                                 statistics?: Array<{
-    __typename?: 'TeacherExperience'
+  statistics?: Array<{
+    __typename?: 'TeacherStatistics'
     text?: string | null
     number?: number | null
   } | null> | null
@@ -23,4 +23,4 @@ export type TeacherDataProps = {
     title?: string | null
     list?: Array<{ __typename?: 'TeacherEducationList'; element?: string | null } | null> | null
   } | null
-} | null
+}

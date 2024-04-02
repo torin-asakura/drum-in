@@ -23,9 +23,8 @@ import { useIntersectionObserver }  from '@ui/intersection-observer'
 import { useSpyScroll }             from '@ui/spy-scroll'
 
 import { IndexPageProps }           from './index-page.interfaces'
-import { useSong }                  from './data'
 
-export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
+export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl }) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -44,12 +43,12 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
   })
 
   const [playSong, setPlaySong] = useState<boolean>(false)
-  const urlSongData = useSong()?.songUrl?.mediaItemUrl
+
   const songElement = useRef<HTMLAudioElement | undefined>()
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && urlSongData !== undefined) {
-      songElement.current = new Audio(urlSongData)
+    if (typeof window !== 'undefined' && songUrl !== undefined) {
+      songElement.current = new Audio(songUrl || '')
     }
 
     return () => {
@@ -58,7 +57,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background }) => {
         songElement.current = undefined
       }
     }
-  }, [urlSongData])
+  }, [songUrl])
 
   useEffect(() => {
     if (playSong) {
