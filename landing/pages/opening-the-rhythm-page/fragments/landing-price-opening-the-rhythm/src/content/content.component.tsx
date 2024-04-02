@@ -31,7 +31,7 @@ const Content: FC<ContentProps> = ({ openingTheRhythm }) => {
         ${formatMessage({ id: 'currency.ruble' })}
         `
 
-  const levelCount = openingTheRhythm?.price?.details?.levelsNumber
+  const countLevel = openingTheRhythm?.price?.details?.levelsNumber
 
   return (
     <Box
@@ -55,7 +55,7 @@ const Content: FC<ContentProps> = ({ openingTheRhythm }) => {
           quantityVideoLessons={openingTheRhythm?.price?.details?.videoTrainingsNumber}
           firstLineCircle={openingTheRhythm?.price?.details?.levelsNumber}
           secondLineCircle={
-            <FormattedMessage id='course.price.plural_format_level' values={{ levelCount }} />
+            <FormattedMessage id='course.price.plural_format_level' values={{ countLevel }} />
           }
         />
         <Box display={['none', 'none', 'flex']} width={514}>
@@ -133,7 +133,7 @@ const Content: FC<ContentProps> = ({ openingTheRhythm }) => {
           quantityVideoLessons={openingTheRhythm?.price?.details?.videoTrainingsNumber}
           firstLineCircle={openingTheRhythm?.price?.details?.levelsNumber}
           secondLineCircle={
-            <FormattedMessage id='course.price.plural_format_level' values={{ levelCount }} />
+            <FormattedMessage id='course.price.plural_format_level' values={{ countLevel }} />
           }
           rectangleRotate={-30}
           circleRotate={-20}

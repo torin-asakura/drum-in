@@ -1,3 +1,5 @@
+import { GeneralFragmentID }      from '@globals/data'
+import { GET_SONG }               from '@globals/data'
 import { GET_OPENING_THE_RHYTHM } from '@globals/data'
 import { CourseID }               from '@globals/data'
 import { GET_SEO }                from '@globals/data'
@@ -29,5 +31,12 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return addApolloState(client, { props: { SEO, background, openingTheRhythm } })
+  const { data: songData } = await client.query({
+    query: GET_SONG,
+    variables: { id: GeneralFragmentID.SONG },
+  })
+
+  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
+
+  return addApolloState(client, { props: { SEO, background, openingTheRhythm, songUrl } })
 }
