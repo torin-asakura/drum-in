@@ -21,23 +21,22 @@ import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
 import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
-import { useSong }                         from './data'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
   polyrhythmicKeysData,
   background,
+  songUrl,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const [playSong, setPlaySong] = useState<boolean>(false)
-  const urlSongData = useSong()?.songUrl?.mediaItemUrl
   const songElement = useRef<HTMLAudioElement | undefined>()
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && urlSongData !== undefined) {
-      songElement.current = new Audio(urlSongData)
+    if (typeof window !== 'undefined' && songUrl !== undefined) {
+      songElement.current = new Audio(songUrl || '')
     }
 
     return () => {
@@ -46,7 +45,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
         songElement.current = undefined
       }
     }
-  }, [urlSongData])
+  }, [songUrl])
 
   useEffect(() => {
     if (playSong) {
