@@ -5,7 +5,8 @@ query ProcessEducation($id: ID!){
   generalFragment(id:$id) {
         learningProcess {
           title
-          content{title
+          content{
+            title
             text
             picture {
               alt

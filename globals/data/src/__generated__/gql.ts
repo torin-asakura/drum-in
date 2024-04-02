@@ -30,8 +30,10 @@ const documents = {
     types.MainPageDocument,
   '\nquery PrivacyPolicy($id: ID!){\n generalFragment(id:$id ) {\n        privacyPolicy {\n          title\n          content {\n            title\n            description\n      }\n    }\n  }\n}\n':
     types.PrivacyPolicyDocument,
-  '\nquery ProcessEducation($id: ID!){\n  generalFragment(id:$id) {\n        learningProcess {\n          title\n          content{title\n            text\n            picture {\n              alt\n              image {\n                node {\n                  sourceUrl\n              }\n            }\n         }\n      }\n    }\n  }\n}\n':
+  '\nquery ProcessEducation($id: ID!){\n  generalFragment(id:$id) {\n        learningProcess {\n          title\n          content{\n            title\n            text\n            picture {\n              alt\n              image {\n                node {\n                  sourceUrl\n              }\n            }\n         }\n      }\n    }\n  }\n}\n':
     types.ProcessEducationDocument,
+  '\nquery Students($id:ID!){\n  generalFragment(id: $id) {\n    students {\n      title\n      description\n      list {\n        title\n        firstBadge\n        secondBadge\n      }\n    }\n  }\n}\n':
+    types.StudentsDocument,
   '\nquery Teacher($id: ID!){\n    generalFragment(id:$id ) {\n    teacher {\n      title\n      description\n      subtitle\n      gallery {\n        alt\n        image {\n          node {\n            sourceUrl\n          }\n        }\n      }\n      experience {\n        text\n        number\n      }\n      education {\n        title\n        list {\n          element\n        }\n      }\n      \n    }\n  }\n}\n':
     types.TeacherDocument,
   '\nquery IndividualCourse($id: ID!) {\nindividualCourse(id: $id) {\ncontent\ntitle\nindividualCourseData {\n\nprocess {\nstep {\ndescription\ntitle\n}\n}\n\nbackground {\ncourseProgram{node{sourceUrl}}\ndesktop {\nfooter {\nnode {\nsourceUrl\n}\n}\nhero {\nnode {\nsourceUrl\n}\n}\nteacher {\nnode {\nsourceUrl\n}\n}\n}\nmobile {\nfooter {\nnode {\nsourceUrl\n}\n}\nhero {\nnode {\nsourceUrl\n}\n}\nteacher {\nnode {\nsourceUrl\n}\n}\n}\n}\n\nprice {\nbonuses\ncta\ncourseLengthInMonths\ndiscount\nfullPrice\nliveTrainingsNumber\nmonthlyPrice\noldPrice\ntitle\nvideoTrainingsNumber\n}\nhero {\nbenefits {\ncontent\n}\nrunningLine\ncourseConditions {\ndescription\nnumber\n}\ncta\n}\n}\n}\n}\n':
@@ -108,8 +110,14 @@ export function gql(
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: '\nquery ProcessEducation($id: ID!){\n  generalFragment(id:$id) {\n        learningProcess {\n          title\n          content{title\n            text\n            picture {\n              alt\n              image {\n                node {\n                  sourceUrl\n              }\n            }\n         }\n      }\n    }\n  }\n}\n'
-): typeof documents['\nquery ProcessEducation($id: ID!){\n  generalFragment(id:$id) {\n        learningProcess {\n          title\n          content{title\n            text\n            picture {\n              alt\n              image {\n                node {\n                  sourceUrl\n              }\n            }\n         }\n      }\n    }\n  }\n}\n']
+  source: '\nquery ProcessEducation($id: ID!){\n  generalFragment(id:$id) {\n        learningProcess {\n          title\n          content{\n            title\n            text\n            picture {\n              alt\n              image {\n                node {\n                  sourceUrl\n              }\n            }\n         }\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery ProcessEducation($id: ID!){\n  generalFragment(id:$id) {\n        learningProcess {\n          title\n          content{\n            title\n            text\n            picture {\n              alt\n              image {\n                node {\n                  sourceUrl\n              }\n            }\n         }\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Students($id:ID!){\n  generalFragment(id: $id) {\n    students {\n      title\n      description\n      list {\n        title\n        firstBadge\n        secondBadge\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Students($id:ID!){\n  generalFragment(id: $id) {\n    students {\n      title\n      description\n      list {\n        title\n        firstBadge\n        secondBadge\n      }\n    }\n  }\n}\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

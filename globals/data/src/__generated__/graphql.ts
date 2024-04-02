@@ -1027,52 +1027,6 @@ export enum CommentsConnectionOrderbyEnum {
   UserId = 'USER_ID',
 }
 
-/** The &quot;CommonFragments&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragments = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragments_Fields & {
-    __typename?: 'CommonFragments'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-    main?: Maybe<CommonFragmentsMain>
-  }
-
-/** The &quot;CommonFragmentsMain&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsMain = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsMain_Fields & {
-    __typename?: 'CommonFragmentsMain'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsMain&quot; Field Group */
-export type CommonFragmentsMain_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-}
-
-/** Interface representing fields of the ACF &quot;CommonFragments&quot; Field Group */
-export type CommonFragments_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-  main?: Maybe<CommonFragmentsMain>
-}
-
 /** A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;. */
 export type Connection = {
   /** A list of edges (relational context) between connected nodes */
@@ -3733,7 +3687,6 @@ export type GeneralFragment = ContentNode &
   NodeWithTitle &
   Previewable &
   UniformResourceIdentifiable &
-  WithAcfCommonFragments &
   WithAcfConsultation &
   WithAcfContacts &
   WithAcfContractOffer &
@@ -3743,10 +3696,9 @@ export type GeneralFragment = ContentNode &
   WithAcfLearningProcess &
   WithAcfMain &
   WithAcfPrivacyPolicy &
+  WithAcfStudents &
   WithAcfTeacher & {
     __typename?: 'GeneralFragment'
-    /** Fields of the CommonFragments ACF Field Group */
-    commonFragments?: Maybe<CommonFragments>
     /** Fields of the Consultation ACF Field Group */
     consultation?: Maybe<Consultation>
     /** Fields of the Contacts ACF Field Group */
@@ -3830,6 +3782,8 @@ export type GeneralFragment = ContentNode &
     slug?: Maybe<Scalars['String']['output']>
     /** The current status of the object */
     status?: Maybe<Scalars['String']['output']>
+    /** Fields of the Students ACF Field Group */
+    students?: Maybe<Students>
     /** Fields of the Teacher ACF Field Group */
     teacher?: Maybe<Teacher>
     /** The template assigned to the node */
@@ -6496,6 +6450,8 @@ export enum MimeTypeEnum {
   AudioXMsWma = 'AUDIO_X_MS_WMA',
   /** audio/x-realaudio mime type. */
   AudioXRealaudio = 'AUDIO_X_REALAUDIO',
+  /** image/avif mime type. */
+  ImageAvif = 'IMAGE_AVIF',
   /** image/bmp mime type. */
   ImageBmp = 'IMAGE_BMP',
   /** image/gif mime type. */
@@ -11515,6 +11471,72 @@ export type Settings = {
   writingSettingsUseSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
+/** The &quot;Students&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type Students = AcfFieldGroup &
+  AcfFieldGroupFields &
+  Students_Fields & {
+    __typename?: 'Students'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
+    list?: Maybe<Array<Maybe<StudentsList>>>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** The &quot;StudentsList&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type StudentsList = AcfFieldGroup &
+  AcfFieldGroupFields &
+  StudentsList_Fields & {
+    __typename?: 'StudentsList'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
+    firstBadge?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
+    secondBadge?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;StudentsList&quot; Field Group */
+export type StudentsList_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
+  firstBadge?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
+  secondBadge?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;StudentsList&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;Students&quot; Field Group */
+export type Students_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
+  list?: Maybe<Array<Maybe<StudentsList>>>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
+
 /** The tag type */
 export type Tag = DatabaseIdentifier &
   MenuItemLinkable &
@@ -13839,12 +13861,6 @@ export type WpPageInfo = {
   startCursor?: Maybe<Scalars['String']['output']>
 }
 
-/** Provides access to fields of the &quot;CommonFragments&quot; ACF Field Group via the &quot;commonFragments&quot; field */
-export type WithAcfCommonFragments = {
-  /** Fields of the CommonFragments ACF Field Group */
-  commonFragments?: Maybe<CommonFragments>
-}
-
 /** Provides access to fields of the &quot;Consultation&quot; ACF Field Group via the &quot;consultation&quot; field */
 export type WithAcfConsultation = {
   /** Fields of the Consultation ACF Field Group */
@@ -13909,6 +13925,12 @@ export type WithAcfMain = {
 export type WithAcfPrivacyPolicy = {
   /** Fields of the PrivacyPolicy ACF Field Group */
   privacyPolicy?: Maybe<PrivacyPolicy>
+}
+
+/** Provides access to fields of the &quot;Students&quot; ACF Field Group via the &quot;students&quot; field */
+export type WithAcfStudents = {
+  /** Fields of the Students ACF Field Group */
+  students?: Maybe<Students>
 }
 
 /** Provides access to fields of the &quot;Teacher&quot; ACF Field Group via the &quot;teacher&quot; field */
@@ -14376,6 +14398,28 @@ export type ProcessEducationQuery = {
             node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
           } | null
         } | null
+      } | null> | null
+    } | null
+  } | null
+}
+
+export type StudentsQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type StudentsQuery = {
+  __typename?: 'RootQuery'
+  generalFragment?: {
+    __typename?: 'GeneralFragment'
+    students?: {
+      __typename?: 'Students'
+      title?: string | null
+      description?: string | null
+      list?: Array<{
+        __typename?: 'StudentsList'
+        title?: string | null
+        firstBadge?: string | null
+        secondBadge?: string | null
       } | null> | null
     } | null
   } | null
@@ -16137,6 +16181,70 @@ export const ProcessEducationDocument = {
     },
   ],
 } as unknown as DocumentNode<ProcessEducationQuery, ProcessEducationQueryVariables>
+export const StudentsDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Students' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragment' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'students' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'list' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'firstBadge' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'secondBadge' } },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<StudentsQuery, StudentsQueryVariables>
 export const TeacherDocument = {
   kind: 'Document',
   definitions: [
