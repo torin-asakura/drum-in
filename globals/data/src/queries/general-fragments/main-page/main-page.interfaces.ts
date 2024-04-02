@@ -1,5 +1,5 @@
-import { MainCourseDataProps }       from '../general-fragments'
-import { IndividualCourseDataProps } from '../general-fragments'
+import { MainCourseDataProps }       from '../header'
+import { IndividualCourseDataProps } from '../header'
 
 export type HeroDataProps = {
   title?: string | null

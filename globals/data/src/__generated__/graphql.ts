@@ -1035,10 +1035,6 @@ export type CommonFragments = AcfFieldGroup &
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     consultation?: Maybe<CommonFragmentsConsultation>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-    contacts?: Maybe<CommonFragmentsContacts>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-    contractOffer?: Maybe<CommonFragmentsContractOffer>
-    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
     cta?: Maybe<CommonFragmentsCta>
     /**
      * The name of the field group
@@ -1084,48 +1080,6 @@ export type CommonFragmentsConsultation_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CommonFragmentsConsultation&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;CommonFragmentsContacts&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsContacts = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsContacts_Fields & {
-    __typename?: 'CommonFragmentsContacts'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsContacts&quot; Field Group */
-export type CommonFragmentsContacts_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
-}
-
-/** The &quot;CommonFragmentsContractOffer&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type CommonFragmentsContractOffer = AcfFieldGroup &
-  AcfFieldGroupFields &
-  CommonFragmentsContractOffer_Fields & {
-    __typename?: 'CommonFragmentsContractOffer'
-    /**
-     * The name of the field group
-     * @deprecated Use __typename instead
-     */
-    fieldGroupName?: Maybe<Scalars['String']['output']>
-  }
-
-/** Interface representing fields of the ACF &quot;CommonFragmentsContractOffer&quot; Field Group */
-export type CommonFragmentsContractOffer_Fields = {
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>
 }
 
 /** The &quot;CommonFragmentsCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -2101,10 +2055,6 @@ export type CommonFragmentsPrivacyPolicy_Fields = {
 export type CommonFragments_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   consultation?: Maybe<CommonFragmentsConsultation>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-  contacts?: Maybe<CommonFragmentsContacts>
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
-  contractOffer?: Maybe<CommonFragmentsContractOffer>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CommonFragments&quot; Field Group */
   cta?: Maybe<CommonFragmentsCta>
   /**
@@ -8842,24 +8792,57 @@ export type PrivacyPolicy = AcfFieldGroup &
   AcfFieldGroupFields &
   PrivacyPolicy_Fields & {
     __typename?: 'PrivacyPolicy'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
+    content?: Maybe<Array<Maybe<PrivacyPolicyContent>>>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
-    test5?: Maybe<Scalars['String']['output']>
+    title?: Maybe<Scalars['String']['output']>
   }
+
+/** The &quot;PrivacyPolicyContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type PrivacyPolicyContent = AcfFieldGroup &
+  AcfFieldGroupFields &
+  PrivacyPolicyContent_Fields & {
+    __typename?: 'PrivacyPolicyContent'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
+    description?: Maybe<Scalars['String']['output']>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
+    title?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;PrivacyPolicyContent&quot; Field Group */
+export type PrivacyPolicyContent_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicyContent&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>
+}
 
 /** Interface representing fields of the ACF &quot;PrivacyPolicy&quot; Field Group */
 export type PrivacyPolicy_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
+  content?: Maybe<Array<Maybe<PrivacyPolicyContent>>>
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;PrivacyPolicy&quot; Field Group */
-  test5?: Maybe<Scalars['String']['output']>
+  title?: Maybe<Scalars['String']['output']>
 }
 
 /** The reading setting type */
@@ -14356,181 +14339,6 @@ export type HeaderQuery = {
   } | null
 }
 
-export type PrivacyPolicyQueryVariables = Exact<{ [key: string]: never }>
-
-export type PrivacyPolicyQuery = {
-  __typename?: 'RootQuery'
-  generalFragments?: {
-    __typename?: 'RootQueryToGeneralFragmentConnection'
-    nodes: Array<{
-      __typename?: 'GeneralFragment'
-      commonFragments?: {
-        __typename?: 'CommonFragments'
-        privacyPolicy?: {
-          __typename?: 'CommonFragmentsPrivacyPolicy'
-          title?: string | null
-          content?: Array<{
-            __typename?: 'CommonFragmentsPrivacyPolicyContent'
-            title?: string | null
-            description?: string | null
-          } | null> | null
-        } | null
-      } | null
-    }>
-  } | null
-}
-
-export type ProcessEducationQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type ProcessEducationQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    learningProcess?: {
-      __typename?: 'LearningProcess'
-      title?: string | null
-      content?: Array<{
-        __typename?: 'LearningProcessContent'
-        title?: string | null
-        text?: string | null
-        picture?: {
-          __typename?: 'LearningProcessContentPicture'
-          alt?: string | null
-          image?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null
-      } | null> | null
-    } | null
-  } | null
-}
-
-export type TeacherQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type TeacherQuery = {
-  __typename?: 'RootQuery'
-  generalFragment?: {
-    __typename?: 'GeneralFragment'
-    teacher?: {
-      __typename?: 'Teacher'
-      title?: string | null
-      description?: string | null
-      subtitle?: string | null
-      gallery?: Array<{
-        __typename?: 'TeacherGallery'
-        alt?: string | null
-        image?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-        } | null
-      } | null> | null
-      experience?: Array<{
-        __typename?: 'TeacherExperience'
-        text?: string | null
-        number?: number | null
-      } | null> | null
-      education?: {
-        __typename?: 'TeacherEducation'
-        title?: string | null
-        list?: Array<{ __typename?: 'TeacherEducationList'; element?: string | null } | null> | null
-      } | null
-    } | null
-  } | null
-}
-
-export type IndividualCourseQueryVariables = Exact<{
-  id: Scalars['ID']['input']
-}>
-
-export type IndividualCourseQuery = {
-  __typename?: 'RootQuery'
-  individualCourse?: {
-    __typename?: 'IndividualCourse'
-    content?: string | null
-    title?: string | null
-    individualCourseData?: {
-      __typename?: 'IndividualCourseData'
-      process?: {
-        __typename?: 'IndividualCourseDataProcess'
-        step?: Array<{
-          __typename?: 'IndividualCourseDataProcessStep'
-          description?: string | null
-          title?: string | null
-        } | null> | null
-      } | null
-      background?: {
-        __typename?: 'IndividualCourseDataBackground'
-        courseProgram?: {
-          __typename?: 'AcfMediaItemConnectionEdge'
-          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-        } | null
-        desktop?: {
-          __typename?: 'IndividualCourseDataBackgroundDesktop'
-          footer?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          hero?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          teacher?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null
-        mobile?: {
-          __typename?: 'IndividualCourseDataBackgroundMobile'
-          footer?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          hero?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-          teacher?: {
-            __typename?: 'AcfMediaItemConnectionEdge'
-            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
-          } | null
-        } | null
-      } | null
-      price?: {
-        __typename?: 'IndividualCourseDataPrice'
-        bonuses?: string | null
-        cta?: string | null
-        courseLengthInMonths?: number | null
-        discount?: number | null
-        fullPrice?: number | null
-        liveTrainingsNumber?: string | null
-        monthlyPrice?: number | null
-        oldPrice?: string | null
-        title?: string | null
-        videoTrainingsNumber?: number | null
-      } | null
-      hero?: {
-        __typename?: 'IndividualCourseDataHero'
-        runningLine?: string | null
-        cta?: string | null
-        benefits?: Array<{
-          __typename?: 'IndividualCourseDataHeroBenefits'
-          content?: string | null
-        } | null> | null
-        courseConditions?: Array<{
-          __typename?: 'IndividualCourseDataHeroCourseConditions'
-          description?: string | null
-          number?: number | null
-        } | null> | null
-      } | null
-    } | null
-  } | null
-}
-
 export type MainPageQueryVariables = Exact<{ [key: string]: never }>
 
 export type MainPageQuery = {
@@ -14705,6 +14513,177 @@ export type MainPageQuery = {
         } | null
       } | null
     }>
+  } | null
+}
+
+export type PrivacyPolicyQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type PrivacyPolicyQuery = {
+  __typename?: 'RootQuery'
+  generalFragment?: {
+    __typename?: 'GeneralFragment'
+    privacyPolicy?: {
+      __typename?: 'PrivacyPolicy'
+      title?: string | null
+      content?: Array<{
+        __typename?: 'PrivacyPolicyContent'
+        title?: string | null
+        description?: string | null
+      } | null> | null
+    } | null
+  } | null
+}
+
+export type ProcessEducationQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type ProcessEducationQuery = {
+  __typename?: 'RootQuery'
+  generalFragment?: {
+    __typename?: 'GeneralFragment'
+    learningProcess?: {
+      __typename?: 'LearningProcess'
+      title?: string | null
+      content?: Array<{
+        __typename?: 'LearningProcessContent'
+        title?: string | null
+        text?: string | null
+        picture?: {
+          __typename?: 'LearningProcessContentPicture'
+          alt?: string | null
+          image?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+        } | null
+      } | null> | null
+    } | null
+  } | null
+}
+
+export type TeacherQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type TeacherQuery = {
+  __typename?: 'RootQuery'
+  generalFragment?: {
+    __typename?: 'GeneralFragment'
+    teacher?: {
+      __typename?: 'Teacher'
+      title?: string | null
+      description?: string | null
+      subtitle?: string | null
+      gallery?: Array<{
+        __typename?: 'TeacherGallery'
+        alt?: string | null
+        image?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
+      } | null> | null
+      experience?: Array<{
+        __typename?: 'TeacherExperience'
+        text?: string | null
+        number?: number | null
+      } | null> | null
+      education?: {
+        __typename?: 'TeacherEducation'
+        title?: string | null
+        list?: Array<{ __typename?: 'TeacherEducationList'; element?: string | null } | null> | null
+      } | null
+    } | null
+  } | null
+}
+
+export type IndividualCourseQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type IndividualCourseQuery = {
+  __typename?: 'RootQuery'
+  individualCourse?: {
+    __typename?: 'IndividualCourse'
+    content?: string | null
+    title?: string | null
+    individualCourseData?: {
+      __typename?: 'IndividualCourseData'
+      process?: {
+        __typename?: 'IndividualCourseDataProcess'
+        step?: Array<{
+          __typename?: 'IndividualCourseDataProcessStep'
+          description?: string | null
+          title?: string | null
+        } | null> | null
+      } | null
+      background?: {
+        __typename?: 'IndividualCourseDataBackground'
+        courseProgram?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
+        desktop?: {
+          __typename?: 'IndividualCourseDataBackgroundDesktop'
+          footer?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          hero?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          teacher?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+        } | null
+        mobile?: {
+          __typename?: 'IndividualCourseDataBackgroundMobile'
+          footer?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          hero?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          teacher?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+        } | null
+      } | null
+      price?: {
+        __typename?: 'IndividualCourseDataPrice'
+        bonuses?: string | null
+        cta?: string | null
+        courseLengthInMonths?: number | null
+        discount?: number | null
+        fullPrice?: number | null
+        liveTrainingsNumber?: string | null
+        monthlyPrice?: number | null
+        oldPrice?: string | null
+        title?: string | null
+        videoTrainingsNumber?: number | null
+      } | null
+      hero?: {
+        __typename?: 'IndividualCourseDataHero'
+        runningLine?: string | null
+        cta?: string | null
+        benefits?: Array<{
+          __typename?: 'IndividualCourseDataHeroBenefits'
+          content?: string | null
+        } | null> | null
+        courseConditions?: Array<{
+          __typename?: 'IndividualCourseDataHeroCourseConditions'
+          description?: string | null
+          number?: number | null
+        } | null> | null
+      } | null
+    } | null
   } | null
 }
 
@@ -15579,592 +15558,6 @@ export const HeaderDocument = {
     },
   ],
 } as unknown as DocumentNode<HeaderQuery, HeaderQueryVariables>
-export const PrivacyPolicyDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'PrivacyPolicy' },
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragments' },
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'nodes' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'commonFragments' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'privacyPolicy' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'content' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'description' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<PrivacyPolicyQuery, PrivacyPolicyQueryVariables>
-export const ProcessEducationDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'ProcessEducation' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'learningProcess' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'content' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'text' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'picture' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'image' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<ProcessEducationQuery, ProcessEducationQueryVariables>
-export const TeacherDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'Teacher' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'generalFragment' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'teacher' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'gallery' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'image' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'experience' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'text' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'number' } },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'education' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'list' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'element' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<TeacherQuery, TeacherQueryVariables>
-export const IndividualCourseDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'IndividualCourse' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-          type: {
-            kind: 'NonNullType',
-            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'individualCourse' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'id' },
-                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                { kind: 'Field', name: { kind: 'Name', value: 'content' } },
-                { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'individualCourseData' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'process' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'step' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'background' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'courseProgram' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'node' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'desktop' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'footer' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'hero' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'teacher' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'mobile' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'footer' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'hero' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'teacher' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'node' },
-                                          selectionSet: {
-                                            kind: 'SelectionSet',
-                                            selections: [
-                                              {
-                                                kind: 'Field',
-                                                name: { kind: 'Name', value: 'sourceUrl' },
-                                              },
-                                            ],
-                                          },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'price' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'bonuses' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'courseLengthInMonths' },
-                            },
-                            { kind: 'Field', name: { kind: 'Name', value: 'discount' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'fullPrice' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'liveTrainingsNumber' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'monthlyPrice' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'oldPrice' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'videoTrainingsNumber' },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'hero' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'benefits' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'content' } },
-                                ],
-                              },
-                            },
-                            { kind: 'Field', name: { kind: 'Name', value: 'runningLine' } },
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'courseConditions' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
-                                  { kind: 'Field', name: { kind: 'Name', value: 'number' } },
-                                ],
-                              },
-                            },
-                            { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<IndividualCourseQuery, IndividualCourseQueryVariables>
 export const MainPageDocument = {
   kind: 'Document',
   definitions: [
@@ -16914,6 +16307,588 @@ export const MainPageDocument = {
     },
   ],
 } as unknown as DocumentNode<MainPageQuery, MainPageQueryVariables>
+export const PrivacyPolicyDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'PrivacyPolicy' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragment' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'privacyPolicy' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'content' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<PrivacyPolicyQuery, PrivacyPolicyQueryVariables>
+export const ProcessEducationDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'ProcessEducation' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragment' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'learningProcess' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'content' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'text' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'picture' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'image' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ProcessEducationQuery, ProcessEducationQueryVariables>
+export const TeacherDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Teacher' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragment' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'teacher' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'gallery' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'alt' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'image' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'experience' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'text' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'number' } },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'education' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'list' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'element' } },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<TeacherQuery, TeacherQueryVariables>
+export const IndividualCourseDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'IndividualCourse' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'individualCourse' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'content' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'individualCourseData' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'process' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'step' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'background' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'courseProgram' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'desktop' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'footer' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'hero' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'teacher' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'mobile' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'footer' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'hero' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'teacher' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'price' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'bonuses' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'courseLengthInMonths' },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'discount' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'fullPrice' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'liveTrainingsNumber' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'monthlyPrice' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'oldPrice' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'videoTrainingsNumber' },
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'hero' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'benefits' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'content' } },
+                                ],
+                              },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'runningLine' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'courseConditions' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'number' } },
+                                ],
+                              },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'cta' } },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<IndividualCourseQuery, IndividualCourseQueryVariables>
 export const GetPreviewDocument = {
   kind: 'Document',
   definitions: [
