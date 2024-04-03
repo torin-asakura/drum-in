@@ -25,7 +25,6 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price, re
     if (typeof price !== 'undefined' && typeof recalculate === 'function')
       recalculate(price, remove)
   }
-
   return (
     <Row>
       <Box

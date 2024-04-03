@@ -15,12 +15,10 @@ import { Text }                   from '@ui/text'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useModalForm }           from '../data'
 import { useContent }             from './content.hook'
 
-const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
-  const modalForm = useModalForm()
-  const { amount, recalculateAmount } = useContent(roleVar[0], modalForm)
+const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingTheRhythm }) => {
+  const { amount, recalculateAmount } = useContent(roleVar[0], openingTheRhythm)
 
   return (
     <Row height={540}>
@@ -68,15 +66,23 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole }) => {
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {modalForm?.title}
+            {openingTheRhythm?.payment?.title}
           </Text>
         </Box>
         <Layout flexBasis={16} flexShrink={0} />
         <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
-          <ContentInstallmentPlan />
+          <ContentInstallmentPlan
+            openingTheRhythm={openingTheRhythm}
+            amount={amount}
+            recalculate={recalculateAmount}
+          />
         </Condition>
         <Condition match={roleVar.includes(options[1].value)}>
-          <ContentOneTimePayment amount={amount} recalculate={recalculateAmount} />
+          <ContentOneTimePayment
+            openingTheRhythm={openingTheRhythm}
+            amount={amount}
+            recalculate={recalculateAmount}
+          />
         </Condition>
         <Condition match={!!amount}>
           <Form amount={amount} form='payment' key={amount} />

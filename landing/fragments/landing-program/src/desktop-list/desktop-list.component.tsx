@@ -1,58 +1,41 @@
-import React          from 'react'
-import uniqid         from 'uniqid'
+import React                from 'react'
+import uniqid               from 'uniqid'
+import { FC }               from 'react'
 
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
 
-import { Item }       from './item'
-import { useProgram } from '../data'
-import { getUi }      from '../helpers'
+import { DesktopListProps } from './desktop-list.interfaces'
+import { Item }             from './item'
+import { getUi }            from '../helpers'
 
-const DesktopList = () => {
-  const program = useProgram()?.programOpeningTheRhythm?.levelItem
-
-  return (
-    <Column display={['none', 'none', 'flex']} width='100%'>
-      {program?.map((
-        {
-          descriptionLevel,
-          forWhoThisLevel,
-          listNecessaryKnowledge,
-          nameLevel,
-          quantityLiveBroadcast,
-          quantityMonths,
-          quantityVideoLessons,
-          titleHoverBlock,
-          textMonths,
-        },
-        index
-      ) => (
-        <React.Fragment key={uniqid()}>
-          <Item
-            forWhom={forWhoThisLevel}
-            level={nameLevel}
-            desc={descriptionLevel}
-            titleHoverBlock={titleHoverBlock}
-            listNecessaryKnowledge={listNecessaryKnowledge}
-            squareRotate={getUi(index).squareRotate}
-            squarePositionX={getUi(index).squarePositionX}
-            squarePositionY={getUi(index).squarePositionY}
-            quantityVideoLessons={quantityVideoLessons}
-            circlePositionX={getUi(index).circlePositionX}
-            circlePositionY={getUi(index).circlePositionY}
-            quantityLiveBroadcast={quantityLiveBroadcast}
-            rectangleRotate={getUi(index).rectangleRotate}
-            rectanglePositionX={getUi(index).rectanglePositionX}
-            rectanglePositionY={getUi(index).rectanglePositionY}
-            quantityMonths={quantityMonths}
-            textMonths={textMonths}
-            rectangleColor={getUi(index).rectangleColor}
-          />
-          <Layout flexBasis={40} />
-        </React.Fragment>
-      ))}
-    </Column>
-  )
-}
+// TODO: tooltip for levels
+const DesktopList: FC<DesktopListProps> = ({ openingTheRhythm }) => (
+  <Column display={['none', 'none', 'flex']} width='100%'>
+    {openingTheRhythm?.details?.levels?.map((item, index) => (
+      <React.Fragment key={uniqid()}>
+        <Item
+          forWhom={item?.target}
+          level={item?.level}
+          desc={item?.content}
+          listNecessaryKnowledge={item?.tooltip}
+          squareRotate={getUi(index).squareRotate}
+          squarePositionX={getUi(index).squarePositionX}
+          squarePositionY={getUi(index).squarePositionY}
+          quantityVideoLessons={item?.videoTrainingsNumber}
+          circlePositionX={getUi(index).circlePositionX}
+          circlePositionY={getUi(index).circlePositionY}
+          quantityLiveBroadcast={item?.liveTrainingsNumber}
+          rectangleRotate={getUi(index).rectangleRotate}
+          rectanglePositionX={getUi(index).rectanglePositionX}
+          rectanglePositionY={getUi(index).rectanglePositionY}
+          quantityMonths={item?.lengthOfCourseInMonths}
+          rectangleColor={getUi(index).rectangleColor}
+        />
+        <Layout flexBasis={40} />
+      </React.Fragment>
+    ))}
+  </Column>
+)
 
 export { DesktopList }

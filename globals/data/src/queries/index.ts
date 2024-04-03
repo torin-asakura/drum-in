@@ -1,4 +1,5 @@
 export * from './preview.query'
 export * from './seo.query'
-export * from './individual-course'
+export * from './opening-the-rhythm'
 export * from './general-fragments'
+export * from './individual-course'

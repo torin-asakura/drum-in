@@ -1,5 +1,5 @@
 export interface NecessaryKnowledgeProps {
-  forWhom: string
+  forWhom?: string | null
   titleHoverBlock?: string
-  listNecessaryKnowledge?: string
+  listNecessaryKnowledge?: string | null
 }

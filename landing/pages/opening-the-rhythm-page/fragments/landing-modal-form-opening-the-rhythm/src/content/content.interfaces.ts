@@ -1,4 +1,7 @@
+import { OpeningTheRhythmDataProps } from '@globals/data/src'
+
 export interface ContentProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
   onClose?: () => any
   roleVar: Array<string>
   options: Array<{
@@ -12,23 +15,4 @@ export interface ContentProps {
 export interface Content {
   amount: number
   recalculateAmount: (price: number, operation: boolean) => void
-}
-
-interface Course {
-  description: string
-  name: string
-  price: number
-}
-
-export interface ModalForm {
-  benefit: string
-  finalPriceForInstallment: string
-  finalPriceForInstallmentNumber: number
-  finalPriceForOneTimePayment: string
-  finalPriceForOneTimePaymentNumber: number
-  installmentDuration: string
-  monthlyPayment: string
-  monthlyPaymentNumber: number
-  title: string
-  courses: Course[]
 }

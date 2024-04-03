@@ -1,5 +1,5 @@
 export interface TapeProps {
-  firstLine: string
+  firstLine?: string | null
   secondLine: string
-  thirdLine: string
+  thirdLine?: string | null
 }
