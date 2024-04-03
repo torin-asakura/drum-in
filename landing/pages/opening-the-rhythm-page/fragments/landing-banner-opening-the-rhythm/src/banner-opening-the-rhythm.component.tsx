@@ -20,7 +20,7 @@ const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingT
           <Layout flexBasis={[124, 142, 160]} />
           <Box position='relative'>
             <Column width='100%' alignItems={['start', 'start', 'end']}>
-              <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1790 }}>
+              <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: '100%' }}>
                 <Text
                   textAlign={['left', 'left', 'right']}
                   textTransform='uppercase'
@@ -39,7 +39,7 @@ const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingT
                 </Text>
               </Box>
               <Layout flexBasis={[16, 28, 40]} />
-              <Box width={['100%', '100%', 815]}>
+              <Box width={['100%', '100%', 'auto']}>
                 <Box width={[282, 428, 460]}>
                   <Text
                     fontWeight='medium'
@@ -54,9 +54,11 @@ const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingT
                     {openingTheRhythm?.hero?.description}
                   </Text>
                 </Box>
+                <Layout width={{laptop:160,wide:300}}/>
               </Box>
             </Column>
-            <Box display={['none', 'none', 'flex']} position='absolute' left={150} top={82}>
+
+            <Box display={['none', 'none', 'flex']} position='absolute' left={{laptop:20,wide:150}} top={82}>
               <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
             </Box>
             <Box
@@ -74,7 +76,7 @@ const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingT
         <Layout flexBasis={[20, 30, 40]} />
       </Box>
     </Row>
-    <Tape level='' />
+    <Tape level={`#${openingTheRhythm?.hero?.runningLine}`} />
   </Box>
 )
 
