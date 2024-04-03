@@ -107,13 +107,9 @@ const SelectedCourse: FC<SelectedCourseProps> = ({
           size='middlingPaddingSemiBigHeight'
           variant={remove ? 'veryTransparentSmokyWhiteBackground' : 'transparentWhiteBackground'}
           onClick={handlerToggleRemove}
+          iconSvg={remove?<ReturnIcon width={20} height={20}/>:<CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)'/> }
+          horizontalLocation='left'
         >
-          <Condition match={remove}>
-            <ReturnIcon width={20} height={20} />
-          </Condition>
-          <Condition match={!remove}>
-            <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
-          </Condition>
         </Button>
       </Box>
       <Box display={['flex', 'flex', 'none']}>
@@ -121,13 +117,9 @@ const SelectedCourse: FC<SelectedCourseProps> = ({
           size='semiLittlePaddingSemiMediumHeight'
           variant={remove ? 'veryTransparentSmokyWhiteBackground' : 'transparentWhiteBackground'}
           onClick={handlerToggleRemove}
+          iconSvg={remove?<ReturnIcon width={20} height={20}/>:<CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)'/> }
+          horizontalLocation='left'
         >
-          <Condition match={remove}>
-            <ReturnIcon width={20} height={20} />
-          </Condition>
-          <Condition match={!remove}>
-            <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
-          </Condition>
         </Button>
       </Box>
     </Row>
