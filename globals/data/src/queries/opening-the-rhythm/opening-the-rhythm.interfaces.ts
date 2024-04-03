@@ -20,7 +20,7 @@ export type OpeningTheRhythmDataProps = {
         title?: string | null
         id: string
         individualCourseData?: {
-          aboutCourse?:string|null
+          aboutCourse?: string | null
           price?: {
             fullPrice?: number | null
             courseLengthInMonths?: number | null

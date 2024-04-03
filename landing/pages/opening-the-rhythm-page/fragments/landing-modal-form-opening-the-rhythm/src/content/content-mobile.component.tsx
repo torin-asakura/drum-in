@@ -18,8 +18,10 @@ import { ContentProps }           from './content.interfaces'
 import { useContent }             from './content.hook'
 
 const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingTheRhythm }) => {
-  const { amount, recalculateAmount } = useContent(roleVar[0], openingTheRhythm)
-
+  const { amount, recalculateAmount, months, recalculateMonths } = useContent(
+    roleVar[0],
+    openingTheRhythm
+  )
   return (
     <Row height={540}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -72,9 +74,11 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingThe
         <Layout flexBasis={16} flexShrink={0} />
         <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
           <ContentInstallmentPlan
-            openingTheRhythm={openingTheRhythm}
-            amount={amount}
+            recalculateMonths={recalculateMonths}
             recalculateAmount={recalculateAmount}
+            amount={amount}
+            months={months}
+            openingTheRhythm={openingTheRhythm}
           />
         </Condition>
         <Condition match={roleVar.includes(options[1].value)}>
@@ -84,7 +88,7 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingThe
             recalculateAmount={recalculateAmount}
           />
         </Condition>
-        <Condition match={!!amount}>
+        <Condition match={!!amount && amount >0}>
           <Form amount={amount} form='payment' key={amount} />
         </Condition>
       </Column>

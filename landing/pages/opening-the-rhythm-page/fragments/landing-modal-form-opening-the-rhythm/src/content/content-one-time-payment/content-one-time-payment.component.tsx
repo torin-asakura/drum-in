@@ -11,7 +11,6 @@ import { Text }                       from '@ui/text'
 import { SelectedCourse }             from '../selected-course'
 import { ContentOneTimePaymentProps } from './content-one-time-payment.interfaces'
 
-
 const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({
   openingTheRhythm,
   amount,
