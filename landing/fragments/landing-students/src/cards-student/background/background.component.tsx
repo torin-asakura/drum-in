@@ -2,11 +2,13 @@ import React           from 'react'
 
 import { Background }  from '@ui/background'
 import { Box }         from '@ui/layout'
+import { Layout }      from '@ui/layout/src'
 import { Slider }      from '@ui/slider'
 import { SwiperSlide } from '@ui/slider'
 
 const BackgroundBlock = () => (
-  <Box position='relative' height={130} overflow='hidden'>
+  <Box display={['none', 'none', 'flex']} position='relative' height={130} overflow='hidden'>
+    <Layout flexBasis={40} flexShrink={0} />
     <Slider
       clName='students-slider-desktop'
       spaceBetween={40}

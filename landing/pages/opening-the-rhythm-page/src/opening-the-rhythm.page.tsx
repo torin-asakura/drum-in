@@ -1,4 +1,5 @@
 import React                               from 'react'
+import { FC }                              from 'react'
 import { useRef }                          from 'react'
 import { useEffect }                       from 'react'
 import { useState }                        from 'react'
@@ -20,20 +21,23 @@ import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
-import { useSong }                         from './data'
+import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
 
-export const OpeningTheRhythmPage = () => {
+export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
+  background,
+  openingTheRhythm,
+  songUrl,
+}) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const [playSong, setPlaySong] = useState<boolean>(false)
-  const urlSongData = useSong()?.songUrl?.mediaItemUrl
   const songElement = useRef<HTMLAudioElement | undefined>()
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && urlSongData !== undefined) {
-      songElement.current = new Audio(urlSongData)
+    if (typeof window !== 'undefined' && songUrl !== undefined) {
+      songElement.current = new Audio(songUrl || '')
     }
 
     return () => {
@@ -42,7 +46,7 @@ export const OpeningTheRhythmPage = () => {
         songElement.current = undefined
       }
     }
-  }, [urlSongData])
+  }, [songUrl])
 
   useEffect(() => {
     if (playSong) {
@@ -73,25 +77,25 @@ export const OpeningTheRhythmPage = () => {
         <HeaderBlock />
         <Seo id={PageID.OPENING_RHYTHM} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroOpeningTheRhythmBlock />
-          <ProgramBlock />
+          <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
+          <ProgramBlock openingTheRhythm={openingTheRhythm} />
           <CourseProcessBlock />
           <Box
             width='100%'
-            // backgroundImage={`url(${background?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
-          <PriceOpeningTheRhythmBlock />
+          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            // backgroundImage={`url(${background?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -101,7 +105,7 @@ export const OpeningTheRhythmPage = () => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            // backgroundImage={`url(${background?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
@@ -114,10 +118,12 @@ export const OpeningTheRhythmPage = () => {
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormOpeningTheRhythm
+          openingTheRhythm={openingTheRhythm}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
+          openingTheRhythm={openingTheRhythm}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

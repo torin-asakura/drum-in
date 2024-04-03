@@ -1,3 +1,4 @@
+import { GeneralFragmentID }  from '@globals/data'
 import { PageID }             from '@globals/data'
 import { GET_CONTRACT_OFFER } from '@globals/data'
 import { GET_SEO }            from '@globals/data'
@@ -9,9 +10,11 @@ export const getServerSideProps = async ({ res }) => {
 
   setCacheHeader(res, 3600, 300)
 
-  const { data } = await client.query({ query: GET_CONTRACT_OFFER })
-
-  const contractOfferData = data?.generalFragments?.nodes[0].commonFragments?.contractOffer
+  const { data } = await client.query({
+    query: GET_CONTRACT_OFFER,
+    variables: { id: GeneralFragmentID.CONTRACT_OFFER },
+  })
+  const contractOfferData = data?.generalFragment?.contractOffer
 
   /* TODO: change PageID to contract */
 

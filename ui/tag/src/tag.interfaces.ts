@@ -3,5 +3,5 @@ export interface TagProps {
   fontSize: object
   fontFamily: object | string
   stateElem: boolean
-  text: string
+  text?: string | null
 }

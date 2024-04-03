@@ -18,3 +18,18 @@ export enum CourseID {
   FEELING_OF_TIME = 'cG9zdDoyMjgz',
   OPENING_RHYTHM = 'cG9zdDoyMjgx',
 }
+
+export enum GeneralFragmentID {
+  TEACHER = 'cG9zdDoyNTQ2',
+  HEADER = 'cG9zdDoyNTUw',
+  FOOTER = 'cG9zdDoyNTUx',
+  FAQ = 'cG9zdDoyMjk5',
+  PROCESS = 'cG9zdDoyNTUz',
+  CONSULTATION = 'cG9zdDoyNTU0',
+  MAIN = 'cG9zdDoyNTQ5',
+  CONTACTS = 'cG9zdDoyNTM3',
+  CONTRACT_OFFER = 'cG9zdDoyNTUy',
+  PRIVACY_POLICY = 'cG9zdDoyNTU1',
+  STUDENTS = 'cG9zdDoyNjA2',
+  SONG = 'cG9zdDoyNjIz',
+}

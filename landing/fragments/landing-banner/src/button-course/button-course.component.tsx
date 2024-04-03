@@ -1,6 +1,7 @@
 import styled                  from '@emotion/styled'
 
 import React                   from 'react'
+import { FC }                  from 'react'
 
 import { Button }              from '@ui/button'
 import { ComputerMouseIcon }   from '@ui/icons'
@@ -10,12 +11,11 @@ import { Text }                from '@ui/text'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 import { useHover }            from '@ui/utils'
 
-import { useBanner }           from '../data'
+import { ButtonCourseProps }   from './button-course.intefaces'
 
-const ButtonCourse = () => {
+const ButtonCourse: FC<ButtonCourseProps> = ({ heroData }) => {
   const { scroll } = useLocomotiveScroll()
   const [hoverIcon, hoverIconProps] = useHover()
-  const banner = useBanner()
 
   const FirstIcon = styled(Box)({
     animationName: hoverIcon ? 'firstAnimationMouse' : 'firstRevertAnimationMouse',
@@ -55,7 +55,7 @@ const ButtonCourse = () => {
             fontSize='regular'
             lineHeight='primary'
           >
-            {banner?.titleButton}
+            {heroData?.scrollButton}
           </Text>
         </Row>
         <Box

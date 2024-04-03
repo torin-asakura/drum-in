@@ -1,4 +1,5 @@
 import React                        from 'react'
+import { FC }                       from 'react'
 import { useRef }                   from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
@@ -21,18 +22,9 @@ import { SpyScrollProvider }        from '@ui/spy-scroll'
 import { useIntersectionObserver }  from '@ui/intersection-observer'
 import { useSpyScroll }             from '@ui/spy-scroll'
 
-import { useBackgrounds }           from './data'
-import { useSong }                  from './data'
+import { IndexPageProps }           from './index-page.interfaces'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const HomePage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl }) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -51,12 +43,12 @@ export const HomePage = ({ SEO }: Props) => {
   })
 
   const [playSong, setPlaySong] = useState<boolean>(false)
-  const urlSongData = useSong()?.songUrl?.mediaItemUrl
+
   const songElement = useRef<HTMLAudioElement | undefined>()
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && urlSongData !== undefined) {
-      songElement.current = new Audio(urlSongData)
+    if (typeof window !== 'undefined' && songUrl !== undefined) {
+      songElement.current = new Audio(songUrl || '')
     }
 
     return () => {
@@ -65,7 +57,7 @@ export const HomePage = ({ SEO }: Props) => {
         songElement.current = undefined
       }
     }
-  }, [urlSongData])
+  }, [songUrl])
 
   useEffect(() => {
     if (playSong) {
@@ -95,11 +87,15 @@ export const HomePage = ({ SEO }: Props) => {
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo id={PageID.INDEX} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-            <Hero {...getObserverOptions('hero')} />
+            <Hero
+              mainPageData={mainPageData}
+              background={background}
+              {...getObserverOptions('hero')}
+            />
             <Box
               width='100%'
               flexWrap='wrap'
-              backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+              backgroundImage={`url(${background?.desktop?.teacher?.node?.sourceUrl})`}
               backgroundSize={['200%', '100% auto', '1800px']}
               backgroundRepeat='no-repeat'
               backgroundPosition={['center top', 'center center', 'center 75%']}
@@ -109,16 +105,25 @@ export const HomePage = ({ SEO }: Props) => {
                 setPlaySong={setPlaySong}
                 {...getObserverOptions('teacher')}
               />
-              <PrivateLessonBlock {...getObserverOptions('private-lesson')} />
-              <LearningProcessBlock {...getObserverOptions('learning-process')} />
+              <PrivateLessonBlock
+                privateLessonData={mainPageData.individualLesson}
+                {...getObserverOptions('private-lesson')}
+              />
+              <LearningProcessBlock
+                learningProcessData={mainPageData.slider}
+                {...getObserverOptions('learning-process')}
+              />
             </Box>
-            <StudentsBlock {...getObserverOptions('students')} />
+            <StudentsBlock
+              studentsData={mainPageData.students}
+              {...getObserverOptions('students')}
+            />
             <FaqBlock {...getObserverOptions('faq')} />
             <CtaBlock {...getObserverOptions('cta')} />
             <Box
               display={['none', 'none', 'flex']}
               width='100%'
-              backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+              backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
               backgroundSize='80% 100%'
               backgroundRepeat='no-repeat'
               backgroundPosition='left bottom'
@@ -128,7 +133,7 @@ export const HomePage = ({ SEO }: Props) => {
             <Box
               display={['flex', 'flex', 'none']}
               width='100%'
-              backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+              backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
               backgroundSize='100% 80%'
               backgroundRepeat='no-repeat'
               backgroundPosition='center bottom'

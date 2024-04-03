@@ -1,3 +1,5 @@
+import { GeneralFragmentID }     from '@globals/data'
+import { GET_SONG }              from '@globals/data'
 import { CourseID }              from '@globals/data'
 import { GET_INDIVIDUAL_COURSE } from '@globals/data'
 import { PageID }                from '@globals/data'
@@ -28,6 +30,12 @@ export const getServerSideProps = async ({ res }) => {
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
+  const { data: songData } = await client.query({
+    query: GET_SONG,
+    variables: { id: GeneralFragmentID.SONG },
+  })
 
-  return { props: { SEO, feelingOfTimeData, background } }
+  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
+
+  return { props: { SEO, feelingOfTimeData, background, songUrl } }
 }

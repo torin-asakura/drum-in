@@ -1,15 +1,17 @@
-import React                  from 'react'
+import React                           from 'react'
+import { FC }                          from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
+import { RightDownArrowIcon }          from '@ui/icons'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Text }                        from '@ui/text'
 
-import { Tape }               from './tape'
+import { BannerOpeningTheRhythmProps } from './banner-opening-the-rhythm.interfaces'
+import { Tape }                        from './tape'
 
-const BannerOpeningTheRhythmBlock = () => (
+const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingTheRhythm }) => (
   <Box flexDirection='column' width='100%'>
     <Row justifyContent='center'>
       <Box width={['100%', '100%', 1920]}>
@@ -33,7 +35,7 @@ const BannerOpeningTheRhythmBlock = () => (
                   lineHeight={['default', 'default', 'semiSmall']}
                   color='text.smokyWhite'
                 >
-                  {/* TODO */}
+                  {openingTheRhythm?.hero?.title}
                 </Text>
               </Box>
               <Layout flexBasis={[16, 28, 40]} />
@@ -49,7 +51,7 @@ const BannerOpeningTheRhythmBlock = () => (
                       'text.smokyWhite',
                     ]}
                   >
-                    {/* TODO */}
+                    {openingTheRhythm?.hero?.description}
                   </Text>
                 </Box>
               </Box>

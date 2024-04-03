@@ -1,19 +1,29 @@
-import { useCallback }   from 'react'
-import { useEffect }     from 'react'
-import { useState }      from 'react'
+import { useCallback }               from 'react'
+import { useEffect }                 from 'react'
+import { useState }                  from 'react'
 
-import { RoleModalForm } from '../modal-form-opening-the-rhythm.enum'
-import { Content }       from './content.interfaces'
-import { ModalForm }     from './content.interfaces'
+import { OpeningTheRhythmDataProps } from '@globals/data/src'
 
-export const useContent = (roleVar: string, modalForm: ModalForm): Content => {
+import { RoleModalForm }             from '../modal-form-opening-the-rhythm.enum'
+import { Content }                   from './content.interfaces'
+
+export const useContent = (
+  roleVar: string,
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
+): Content => {
   const getAmount = useCallback((): number => {
-    if (modalForm)
-      return roleVar === RoleModalForm.OneTimePayment
-        ? modalForm.courses.reduce((acc, course) => acc + course.price, 0)
-        : modalForm.monthlyPaymentNumber
+    if (openingTheRhythm) {
+      if (roleVar === RoleModalForm.OneTimePayment) {
+        return openingTheRhythm?.price?.priceFull || 0
+      }
+      const totalPrice = openingTheRhythm?.payment?.courses?.nodes.reduce(
+        (acc, course) => acc + (course?.individualCourseData?.price?.fullPrice || 0),
+        0
+      )
+      return totalPrice || 0
+    }
     return 0
-  }, [roleVar, modalForm])
+  }, [roleVar, openingTheRhythm])
 
   const [amount, setAmount] = useState<number>(getAmount())
 

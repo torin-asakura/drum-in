@@ -1,29 +1,28 @@
-import React                  from 'react'
-import uniqid                 from 'uniqid'
-import { useMemo }            from 'react'
+import React              from 'react'
+import uniqid             from 'uniqid'
+import { FC }             from 'react'
+import { useMemo }        from 'react'
 
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Repeater }           from '@ui/utils'
+import { Layout }         from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Repeater }       from '@ui/utils'
 
-import { SlideImage }         from '../slide-image'
-import { SlideText }          from '../slide-text'
-import { useLearningProcess } from '../data'
+import { SlideImage }     from '../slide-image'
+import { SlideText }      from '../slide-text'
+import { SliderTopProps } from './slider-top.interfaces'
 
-const SliderTop = () => {
-  const learningProcess = useLearningProcess()?.learningProcess?.firstLine
-
-  const learningProcessTopChildren = useMemo(() => {
-    let i = 0
-    return learningProcess?.map(({ image, text = '' }, index) => {
-      if (index % 2 === 0) {
-        i += 1
-        return <SlideText text={text} activeIcons={i % 2 === 0 ? 'target' : 'sheetMusic'} />
-      }
-
-      return <SlideImage pathImage={image?.sourceUrl} />
-    })
-  }, [learningProcess])
+const SliderTop: FC<SliderTopProps> = ({ upperSliderData }) => {
+  const learningProcessTopChildren = useMemo(
+    () =>
+      upperSliderData?.map((item, index) => (
+        <>
+          <SlideText text={item?.text} activeIcons={index % 2 === 0 ? 'target' : 'sheetMusic'} />
+          <Layout flexBasis={40} flexShrink={0} />
+          <SlideImage pathImage={item?.image?.node.sourceUrl} />
+        </>
+      )),
+    [upperSliderData]
+  )
 
   return (
     <Row

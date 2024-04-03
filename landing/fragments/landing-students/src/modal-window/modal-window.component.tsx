@@ -10,16 +10,16 @@ import { Layout }                from '@ui/layout'
 import { Row }                   from '@ui/layout'
 import { Box }                   from '@ui/layout'
 import { Text }                  from '@ui/text'
+import { useStudents }           from '@globals/data'
 
 import { Backdrop }              from './backdrop'
 import { Container }             from './container'
 import { ModalWindowProps }      from './modal-window.interfaces'
 import { Renderer }              from './renderer'
 import { StudentsList }          from './students-list'
-import { useStudents }           from '../data'
 
 const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => {
-  const students = useStudents()?.students
+  const { students } = useStudents()
 
   return (
     <Renderer active={active}>
@@ -58,7 +58,7 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => {
                       lineHeight='default'
                       color='text.smokyWhite'
                     >
-                      {students?.titleModal}
+                      {students?.title}
                     </Text>
                   </Box>
                   <Layout flexBasis={[6, 9, 12]} />
@@ -69,7 +69,7 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => {
                       lineHeight='medium'
                       color='text.transparentSmokyWhite'
                     >
-                      {students?.descriptionModal}
+                      {students?.description}
                     </Text>
                   </Box>
                 </Column>
@@ -92,7 +92,7 @@ const ModalWindow: FC<ModalWindowProps> = ({ active, onClose }) => {
                 <Layout flexBasis={0} flexGrow={1} />
               </Row>
               <Layout flexBasis={[30, 48, 48]} flexShrink={0} />
-              <StudentsList />
+              <StudentsList list={students?.list} />
               <Layout flexBasis={[20, 39, 58]} flexShrink={0} />
             </Column>
             <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

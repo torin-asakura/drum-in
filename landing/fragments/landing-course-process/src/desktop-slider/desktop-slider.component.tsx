@@ -1,19 +1,16 @@
-import React                         from 'react'
-import { FC }                        from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
 
-import { ProcessEducationDataProps } from '@globals/data'
-import { ImageBlock }                from '@ui/image'
-import { Box }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
-import { Layout }                    from '@ui/layout'
-import { Row }                       from '@ui/layout'
-import { Slider }                    from '@ui/slider'
-import { SwiperSlide }               from '@ui/slider'
-import { Text }                      from '@ui/text'
+import { ImageBlock }         from '@ui/image'
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Slider }             from '@ui/slider'
+import { SwiperSlide }        from '@ui/slider'
+import { Text }               from '@ui/text'
 
-export interface DesktopSliderProps {
-  processEducation?: ProcessEducationDataProps | null
-}
+import { DesktopSliderProps } from './desktop-slider.interfaces'
 
 const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
   <Column width='100%'>
@@ -45,14 +42,14 @@ const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
                   lineHeight={['small', 'small', 'default']}
                   color='text.smokyWhite'
                 >
-                  {processEducation?.[0]?.title}
+                  {processEducation?.content?.[0]?.title}
                 </Text>
               </Box>
               <Layout flexGrow={3} />
               <Box alignSelf='end' width={300} height={161}>
                 <ImageBlock
-                  alt={processEducation?.[0]?.picture?.alt || ''}
-                  src={processEducation?.[0]?.picture?.image?.node?.sourceUrl || ''}
+                  alt={processEducation?.content?.[0]?.picture?.alt || ''}
+                  src={processEducation?.content?.[0]?.picture?.image?.node?.sourceUrl || ''}
                 />
               </Box>
               <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
@@ -78,14 +75,14 @@ const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
                   lineHeight={['small', 'small', 'default']}
                   color='text.blackAmber'
                 >
-                  {processEducation?.[1]?.title}
+                  {processEducation?.content?.[1]?.title}
                 </Text>
               </Box>
               <Layout flexGrow={3} />
               <Box alignSelf='end' width={240} height={189}>
                 <ImageBlock
-                  alt={processEducation?.[1]?.picture?.alt || ''}
-                  src={processEducation?.[1]?.picture?.image?.node?.sourceUrl || ''}
+                  alt={processEducation?.content?.[1]?.picture?.alt || ''}
+                  src={processEducation?.content?.[1]?.picture?.image?.node?.sourceUrl || ''}
                 />
               </Box>
               <Layout flexBasis={[20, 26, 32]} flexShrink={0} />
@@ -112,7 +109,7 @@ const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
                       lineHeight={['small', 'small', 'default']}
                       color='text.smokyWhite'
                     >
-                      {processEducation?.[2]?.title}
+                      {processEducation?.content?.[2]?.title}
                     </Text>
                   </Box>
                   <Layout flexBasis={24} />
@@ -123,14 +120,14 @@ const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
                       lineHeight='medium'
                       color='text.transparentSmokyWhite'
                     >
-                      {processEducation?.[2]?.text}
+                      {processEducation?.content?.[2]?.text}
                     </Text>
                   </Box>
                 </Column>
                 <Box width={288} height={384} borderRadius='big'>
                   <ImageBlock
-                    alt={processEducation?.[2]?.picture?.alt || ''}
-                    src={processEducation?.[2]?.picture?.image?.node?.sourceUrl || ''}
+                    alt={processEducation?.content?.[2]?.picture?.alt || ''}
+                    src={processEducation?.content?.[2]?.picture?.image?.node?.sourceUrl || ''}
                   />
                 </Box>
               </Row>

@@ -1,4 +1,4 @@
 export interface SlideTextProps {
-  text: string
+  text?: string | null
   activeIcons: 'target' | 'sheetMusic'
 }

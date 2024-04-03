@@ -6,16 +6,17 @@ import { Box }             from '@ui/layout'
 
 import { SlideImageProps } from './slide-image.interfaces'
 
-const SlideImage: FC<SlideImageProps> = ({ pathImage }) => (
-  <Box
-    width={[246, 350, 480]}
-    height={[164, 240, 320]}
-    overflow='hidden'
-    borderRadius={['medium', 'extra', 'bigger']}
-    border={['none', 'none', 'mediumBoldBlackAmber']}
-  >
-    <ImageBlock src={pathImage} />
-  </Box>
-)
+const SlideImage: FC<SlideImageProps> = ({ pathImage }) =>
+  pathImage ? (
+    <Box
+      width={[246, 350, 480]}
+      height={[164, 240, 320]}
+      overflow='hidden'
+      borderRadius={['medium', 'extra', 'bigger']}
+      border={['none', 'none', 'mediumBoldBlackAmber']}
+    >
+      <ImageBlock src={pathImage} />
+    </Box>
+  ) : null
 
 export { SlideImage }
