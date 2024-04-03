@@ -60,7 +60,7 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingThe
           <Layout flexBasis={4} flexShrink={0} />
         </Box>
         <Layout flexBasis={16} flexShrink={0} />
-        <Box width={['100%', 450, 450]}>
+        <Box width={[300, 450, 450]}>
           <Text
             display='inline'
             fontWeight='medium'
@@ -88,7 +88,7 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingThe
             recalculateAmount={recalculateAmount}
           />
         </Condition>
-        <Condition match={!!amount && amount >0}>
+        <Condition match={!!amount && amount > 0}>
           <Form amount={amount} form='payment' key={amount} />
         </Condition>
       </Column>

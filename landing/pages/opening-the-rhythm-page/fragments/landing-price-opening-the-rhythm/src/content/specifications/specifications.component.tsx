@@ -15,55 +15,57 @@ const Specifications: FC<SpecificationsProps> = ({
   quantityVideoLessons,
   firstLineCircle,
   secondLineCircle,
-  wordMonth,
-}) => (
-  <Box display={['flex', 'flex', 'none']}>
-    <Column>
-      <Box>
-        <Text
-          fontWeight='medium'
-          fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
-          lineHeight='primary'
-          color='text.blackAmber'
-        >
-          <FormattedMessage id='landing_price.dot' />
-          <Space />
-          {quantityVideoLessons}
-          <Space />
-          <FormattedMessage id='landing_price.video_lessons' />
-        </Text>
-      </Box>
-      <Layout flexBasis={[4, 6, 0]} />
-      <Box>
-        <Text
-          fontWeight='medium'
-          fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
-          lineHeight='primary'
-          color='text.blackAmber'
-        >
-          <FormattedMessage id='landing_price.dot' />
-          <Space />
-          {quantityMonths}
-          <Space />
-          {wordMonth}
-        </Text>
-      </Box>
-      <Layout flexBasis={[4, 6, 0]} />
-      <Box>
-        <Text
-          fontWeight='medium'
-          fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
-          lineHeight='primary'
-          color='text.blackAmber'
-        >
-          <FormattedMessage id='landing_price.dot' />
-          <Space />
-          {firstLineCircle}
-          <Space />
-          {secondLineCircle}
-        </Text>
-      </Box>
-    </Column>
-  </Box>
-)
+}) => {
+  const monthCount = quantityMonths
+  return (
+    <Box display={['flex', 'flex', 'none']}>
+      <Column>
+        <Box>
+          <Text
+            fontWeight='medium'
+            fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
+            lineHeight='primary'
+            color='text.blackAmber'
+          >
+            <FormattedMessage id='landing_price.dot' />
+            <Space />
+            {quantityVideoLessons}
+            <Space />
+            <FormattedMessage id='landing_price.video_lessons' />
+          </Text>
+        </Box>
+        <Layout flexBasis={[4, 6, 0]} />
+        <Box>
+          <Text
+            fontWeight='medium'
+            fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
+            lineHeight='primary'
+            color='text.blackAmber'
+          >
+            <FormattedMessage id='landing_price.dot' />
+            <Space />
+            {quantityMonths}
+            <Space />
+            <FormattedMessage id='course.price.plural_format_months' values={{ monthCount }} />
+          </Text>
+        </Box>
+        <Layout flexBasis={[4, 6, 0]} />
+        <Box>
+          <Text
+            fontWeight='medium'
+            fontSize={['semiMedium', 'semiRegular', 'semiRegular']}
+            lineHeight='primary'
+            color='text.blackAmber'
+          >
+            <FormattedMessage id='landing_price.dot' />
+            <Space />
+            {firstLineCircle}
+            <Space />
+            {secondLineCircle}
+          </Text>
+        </Box>
+      </Column>
+    </Box>
+  )
+}
 export { Specifications }
