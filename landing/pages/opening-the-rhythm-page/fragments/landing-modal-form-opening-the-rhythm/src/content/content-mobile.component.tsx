@@ -74,14 +74,14 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingThe
           <ContentInstallmentPlan
             openingTheRhythm={openingTheRhythm}
             amount={amount}
-            recalculate={recalculateAmount}
+            recalculateAmount={recalculateAmount}
           />
         </Condition>
         <Condition match={roleVar.includes(options[1].value)}>
           <ContentOneTimePayment
             openingTheRhythm={openingTheRhythm}
             amount={amount}
-            recalculate={recalculateAmount}
+            recalculateAmount={recalculateAmount}
           />
         </Condition>
         <Condition match={!!amount}>

@@ -2,5 +2,7 @@ export interface SelectedCourseProps {
   title: string
   description: string
   price?: number
-  recalculate?: (price: number, operation: boolean) => void
+  recalculateAmount: (price: number, operation: boolean) => void
+  months?: number | null
+  recalculateMonths?: (months: number, operation: boolean) => void
 }

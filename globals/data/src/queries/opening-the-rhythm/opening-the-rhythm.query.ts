@@ -15,6 +15,7 @@ export const GET_OPENING_THE_RHYTHM = gql(`
               individualCourseData {
                 price {
                   fullPrice
+                  courseLengthInMonths
                 }
               }
             }

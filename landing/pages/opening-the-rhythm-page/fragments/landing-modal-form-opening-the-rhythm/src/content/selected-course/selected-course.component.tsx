@@ -18,12 +18,22 @@ import { Text }                from '@ui/text'
 import { Info }                from './info'
 import { SelectedCourseProps } from './selected-course.interfaces'
 
-const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price, recalculate }) => {
+const SelectedCourse: FC<SelectedCourseProps> = ({
+  title,
+  description,
+  price,
+  recalculateAmount,
+  recalculateMonths,
+  months,
+}) => {
   const [remove, setRemove] = useState<boolean>(false)
   const handlerToggleRemove = () => {
     remove ? setRemove(false) : setRemove(true) // eslint-disable-line
-    if (typeof price !== 'undefined' && typeof recalculate === 'function')
-      recalculate(price, remove)
+    if (typeof price !== 'undefined' && typeof recalculateAmount === 'function')
+      recalculateAmount(price, remove)
+    if (recalculateMonths && months) {
+      recalculateMonths(months, remove)
+    }
   }
   return (
     <Row>

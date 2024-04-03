@@ -14628,6 +14628,7 @@ export type GetOpeningTheRhythmQuery = {
                   price?: {
                     __typename?: 'IndividualCourseDataPrice'
                     fullPrice?: number | null
+                    courseLengthInMonths?: number | null
                   } | null
                 } | null
               }
@@ -17005,6 +17006,13 @@ export const GetOpeningTheRhythmDocument = {
                                                             name: {
                                                               kind: 'Name',
                                                               value: 'fullPrice',
+                                                            },
+                                                          },
+                                                          {
+                                                            kind: 'Field',
+                                                            name: {
+                                                              kind: 'Name',
+                                                              value: 'courseLengthInMonths',
                                                             },
                                                           },
                                                         ],

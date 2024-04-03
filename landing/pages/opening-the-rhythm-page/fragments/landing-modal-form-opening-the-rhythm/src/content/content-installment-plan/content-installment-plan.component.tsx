@@ -18,7 +18,9 @@ import { ContentInstallmentPlanProps } from './content-installment-plan.interfac
 const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
   openingTheRhythm,
   amount,
-  recalculate,
+  months,
+  recalculateAmount,
+  recalculateMonths,
 }) => {
   const monthCount = openingTheRhythm?.price?.details?.monthsNumber
   return (
@@ -26,10 +28,12 @@ const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
       {openingTheRhythm?.payment?.courses?.nodes.map((item) => (
         <>
           <SelectedCourse
+            months={item?.individualCourseData?.price?.courseLengthInMonths}
+            recalculateMonths={recalculateMonths}
             title={item?.title || ''}
             description='description'
             price={item?.individualCourseData?.price?.fullPrice || 0}
-            recalculate={recalculate}
+            recalculateAmount={recalculateAmount}
           />
           <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
         </>
@@ -55,7 +59,7 @@ const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={openingTheRhythm?.price?.priceMonthly || 0}
+                value={months ? openingTheRhythm?.price?.priceMonthly || 0 : 0}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}
@@ -82,7 +86,7 @@ const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {openingTheRhythm?.price?.details?.monthsNumber}
+              {months}
               <Space />
               <FormattedMessage id='course.price.plural_format_months' values={{ monthCount }} />
             </Text>

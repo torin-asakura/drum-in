@@ -22,6 +22,7 @@ export type OpeningTheRhythmDataProps = {
         individualCourseData?: {
           price?: {
             fullPrice?: number | null
+            courseLengthInMonths?: number | null
           } | null
         } | null
       }>

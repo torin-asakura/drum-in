@@ -54,11 +54,16 @@ const BannerOpeningTheRhythmBlock: FC<BannerOpeningTheRhythmProps> = ({ openingT
                     {openingTheRhythm?.hero?.description}
                   </Text>
                 </Box>
-                <Layout width={{laptop:160,wide:300}}/>
+                <Layout width={{ laptop: 160, wide: 300 }} />
               </Box>
             </Column>
 
-            <Box display={['none', 'none', 'flex']} position='absolute' left={{laptop:20,wide:150}} top={82}>
+            <Box
+              display={['none', 'none', 'flex']}
+              position='absolute'
+              left={{ laptop: 20, wide: 150 }}
+              top={82}
+            >
               <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
             </Box>
             <Box

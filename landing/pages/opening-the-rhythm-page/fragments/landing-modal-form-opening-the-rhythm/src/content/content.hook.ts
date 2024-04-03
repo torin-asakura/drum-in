@@ -29,14 +29,27 @@ export const useContent = (
 
   const recalculateAmount = useCallback(
     (price: number, operation: boolean) => {
-      setAmount((prevSatae) => (operation ? prevSatae + price : prevSatae - price))
+      setAmount((prevState) => (operation ? prevState + price : prevState - price))
     },
     [setAmount]
+  )
+
+  const totalMonths = openingTheRhythm?.payment?.courses?.nodes.reduce(
+    (acc, course) => acc + (course?.individualCourseData?.price?.courseLengthInMonths || 0),
+    0
+  )
+
+  const [months, setMonths] = useState<number>(totalMonths || 0)
+  const recalculateMonths = useCallback(
+    (number, operation) => {
+      setMonths((prevState) => (operation ? prevState + number : prevState - number))
+    },
+    [setMonths]
   )
 
   useEffect(() => {
     setAmount(getAmount())
   }, [getAmount])
 
-  return { amount, recalculateAmount }
+  return { amount, recalculateAmount, months, recalculateMonths }
 }
