@@ -11,7 +11,6 @@ import { Text }                       from '@ui/text'
 import { SelectedCourse }             from '../selected-course'
 import { ContentOneTimePaymentProps } from './content-one-time-payment.interfaces'
 
-// TODO: add description for courses
 
 const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({
   openingTheRhythm,
@@ -23,7 +22,7 @@ const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({
       <>
         <SelectedCourse
           title={item?.title || ''}
-          description='description'
+          description={item?.individualCourseData?.aboutCourse || ''}
           price={item?.individualCourseData?.price?.fullPrice || 0}
           recalculateAmount={recalculateAmount}
         />

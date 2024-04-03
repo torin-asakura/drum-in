@@ -13,6 +13,7 @@ export const GET_OPENING_THE_RHYTHM = gql(`
               title
               id
               individualCourseData {
+                aboutCourse
                 price {
                   fullPrice
                   courseLengthInMonths

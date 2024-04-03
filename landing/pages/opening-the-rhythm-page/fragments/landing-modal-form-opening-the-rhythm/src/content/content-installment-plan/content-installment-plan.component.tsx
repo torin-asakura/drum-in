@@ -13,8 +13,6 @@ import { Text }                        from '@ui/text'
 import { SelectedCourse }              from '../selected-course'
 import { ContentInstallmentPlanProps } from './content-installment-plan.interfaces'
 
-// TODO: add description for courses & displaying valid count months
-
 const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
   openingTheRhythm,
   amount,
@@ -31,7 +29,7 @@ const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
             months={item?.individualCourseData?.price?.courseLengthInMonths}
             recalculateMonths={recalculateMonths}
             title={item?.title || ''}
-            description='description'
+            description={item?.individualCourseData?.aboutCourse || ''}
             price={item?.individualCourseData?.price?.fullPrice || 0}
             recalculateAmount={recalculateAmount}
           />
