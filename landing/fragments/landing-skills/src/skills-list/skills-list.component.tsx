@@ -39,7 +39,7 @@ const SkillsList = () => (
       <Box
         position='absolute'
         bottom={{ _: 0, tablet: 0, laptop: 164, wide: 202 }}
-        left={{ _: 0, tablet: 0, laptop: 936, wide: 765 }}
+        left={{ _: 0, tablet: 0, laptop: 936, wide: 755 }}
       >
         <FlagCubaIcon width={116} height={116} />
       </Box>
