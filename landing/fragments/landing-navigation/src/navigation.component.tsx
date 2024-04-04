@@ -1,5 +1,6 @@
-import React               from 'react'
-import { FC }              from 'react'
+import { NextLink } from '@ui/link/src'
+import React        from 'react'
+import { FC }       from 'react'
 
 import { CtaButton }       from '@landing/header-fragment'
 import { DrawerButton }    from '@landing/header-fragment'
@@ -41,8 +42,9 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible 
             </Box>
             <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
             <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
-              <ImageBlock src={headerData?.logo?.node.sourceUrl || ''} alt='logo' />
-            </Box>
+              <NextLink path='/'>
+                <ImageBlock src={headerData?.logo?.node.sourceUrl || ''} alt='logo' />
+              </NextLink>            </Box>
             <Layout flexBasis={94} display={['none', 'none', 'flex']} />
             <DrawerButton
               title={headerData?.dropdownList?.title}
