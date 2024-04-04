@@ -4,6 +4,7 @@ import { useState }                      from 'react'
 
 import { ModalFormFifthDimension }       from '@landing/modal-form-fifth-dimension'
 import { ModalMobileFormFifthDimension } from '@landing/modal-form-fifth-dimension'
+import { RolePaymentForm }               from '@shared/constants/src'
 import { ArrowRightTailIcon }            from '@ui/icons'
 import { Layout }                        from '@ui/layout'
 import { Box }                           from '@ui/layout'
@@ -94,11 +95,13 @@ const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
         </Box>
       </Box>
       <ModalFormFifthDimension
+        paymentPlan={RolePaymentForm.OneTimePayment}
         fifthDimensionData={fifthDimensionData}
         activeRender={visibleModal}
         onClose={() => setVisibleModal(false)}
       />
       <ModalMobileFormFifthDimension
+        paymentPlan={RolePaymentForm.OneTimePayment}
         fifthDimensionData={fifthDimensionData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}

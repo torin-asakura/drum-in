@@ -13,12 +13,15 @@ import { ContentMobile }               from './content'
 import { ModalFormFeelingOfTimeProps } from './modal-form-feeling-of-time.interfaces'
 
 const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
+  paymentPlan,
   feelingOfTimeData,
   activeRender,
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<RolePaymentForm>>([RolePaymentForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
+    paymentPlan ? [paymentPlan] : [RolePaymentForm.InstallmentPlan]
+  )
   const { formatMessage } = useIntl()
   const options = [
     {

@@ -13,12 +13,15 @@ import { ContentMobile }                from './content'
 import { ModalFormFifthDimensionProps } from './modal-form-fifth-dimension.interfaces'
 
 const ModalMobileFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
+  paymentPlan,
   activeRender,
   onClose,
   scroll = true,
   fifthDimensionData,
 }) => {
-  const [roleVar, setRole] = useState<Array<RolePaymentForm>>([RolePaymentForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
+    paymentPlan ? [paymentPlan] : [RolePaymentForm.InstallmentPlan]
+  )
   const { formatMessage } = useIntl()
   const options = [
     {

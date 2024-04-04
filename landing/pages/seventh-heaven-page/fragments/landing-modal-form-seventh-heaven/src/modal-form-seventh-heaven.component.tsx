@@ -16,12 +16,15 @@ import { ContentDesktop }              from './content'
 import { ModalFormSeventhHeavenProps } from './modal-form-seventh-heaven.interfaces'
 
 const ModalFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
+  paymentPlan,
   seventhHeavenData,
   activeRender,
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<RolePaymentForm>>([RolePaymentForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
+    paymentPlan ? [paymentPlan] : [RolePaymentForm.InstallmentPlan]
+  )
   const { formatMessage } = useIntl()
   const options = [
     {

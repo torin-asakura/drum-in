@@ -4,6 +4,7 @@ import { useState }                     from 'react'
 
 import { ModalFormFeelingOfTime }       from '@landing/modal-form-feeling-of-time'
 import { ModalMobileFormFeelingOfTime } from '@landing/modal-form-feeling-of-time'
+import { RolePaymentForm }              from '@shared/constants/src'
 import { ArrowRightTailIcon }           from '@ui/icons'
 import { Layout }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
@@ -94,11 +95,13 @@ const FullPrice: FC<FullPriceProps> = ({ feelingOfTimeData, fullCost }) => {
         </Box>
       </Box>
       <ModalFormFeelingOfTime
+        paymentPlan={RolePaymentForm.OneTimePayment}
         feelingOfTimeData={feelingOfTimeData}
         activeRender={visibleModal}
         onClose={() => setVisibleModal(false)}
       />
       <ModalMobileFormFeelingOfTime
+        paymentPlan={RolePaymentForm.OneTimePayment}
         feelingOfTimeData={feelingOfTimeData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
