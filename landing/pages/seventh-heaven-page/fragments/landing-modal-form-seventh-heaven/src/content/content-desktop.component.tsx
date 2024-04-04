@@ -15,11 +15,11 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 import { Space }                  from '@ui/text/src'
+import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({
   seventhHeavenData,
@@ -28,9 +28,9 @@ const ContentDesktop: FC<ContentProps> = ({
   options,
   setRole,
 }) => {
-  const installmentPlan = seventhHeavenData?.individualCourseData?.price?.monthlyPrice
-  const oneTimePayment = seventhHeavenData?.individualCourseData?.price?.fullPrice
-  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
+  const installmentAmount = seventhHeavenData?.individualCourseData?.price?.monthlyPrice
+  const oneTimeAmount = seventhHeavenData?.individualCourseData?.price?.fullPrice
+  const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
   const { formatMessage } = useIntl()
   return (
     <>

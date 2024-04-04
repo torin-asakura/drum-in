@@ -2,7 +2,7 @@ import { SetStateAction }           from 'react'
 import { Dispatch }                 from 'react'
 
 import { IndividualCourseDataType } from '@globals/data/src'
-import { RolePaymentForm }          from '@shared/utils'
+import { RolePaymentForm }          from '@shared/constants'
 
 export interface ContentProps {
   feelingOfTimeData: IndividualCourseDataType

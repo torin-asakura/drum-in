@@ -15,16 +15,16 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Space }                  from '@ui/text'
 import { Text }                   from '@ui/text'
+import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, options, setRole }) => {
-  const installmentPlan = connacolData?.individualCourseData?.price?.monthlyPrice
-  const oneTimePayment = connacolData?.individualCourseData?.price?.fullPrice
-  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
+  const installmentAmount = connacolData?.individualCourseData?.price?.monthlyPrice
+  const oneTimeAmount = connacolData?.individualCourseData?.price?.fullPrice
+  const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
   const { formatMessage } = useIntl()
 
   return (
@@ -44,7 +44,8 @@ const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, opti
             display='inline'
           >
             {formatMessage({ id: 'course.payment.buy_course' })}
-            {` "${connacolData?.title}"`}
+            <Space />
+            {`"${connacolData?.title}"`}
           </Text>
         </Box>
         <Box width={['100%', 'auto', 'auto']} justifyContent='end'>

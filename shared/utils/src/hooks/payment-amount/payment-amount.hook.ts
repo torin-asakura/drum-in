@@ -2,7 +2,8 @@ import { useCallback }          from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
 
-import { RolePaymentForm }      from './payment-amount.constants'
+import { RolePaymentForm }      from '@shared/constants'
+
 import { UsePaymentAmountType } from './payment-amount.interfaces'
 
 export const usePaymentAmount: UsePaymentAmountType = (

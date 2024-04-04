@@ -3,8 +3,8 @@ import { useEffect }                 from 'react'
 import { useState }                  from 'react'
 
 import { OpeningTheRhythmDataProps } from '@globals/data/src'
+import { RolePaymentForm }           from '@shared/constants'
 
-import { RoleModalForm }             from '../modal-form-opening-the-rhythm.enum'
 import { Content }                   from './content.interfaces'
 
 export const useContent = (
@@ -13,7 +13,7 @@ export const useContent = (
 ): Content => {
   const getAmount = useCallback((): number => {
     if (openingTheRhythm) {
-      if (roleVar === RoleModalForm.OneTimePayment) {
+      if (roleVar === RolePaymentForm.OneTimePayment) {
         return openingTheRhythm?.price?.priceFull || 0
       }
       const totalPrice = openingTheRhythm?.payment?.courses?.nodes.reduce(

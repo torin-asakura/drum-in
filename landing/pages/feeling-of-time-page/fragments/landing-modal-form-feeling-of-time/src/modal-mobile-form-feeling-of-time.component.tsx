@@ -4,7 +4,7 @@ import { motion }                      from 'framer-motion'
 import { useState }                    from 'react'
 import { useIntl }                     from 'react-intl'
 
-import { RolePaymentForm }             from '@shared/utils/src'
+import { RolePaymentForm }             from '@shared/constants'
 import { ContainerMobile }             from '@ui/modal'
 import { Renderer }                    from '@ui/modal'
 import { Backdrop }                    from '@ui/modal'

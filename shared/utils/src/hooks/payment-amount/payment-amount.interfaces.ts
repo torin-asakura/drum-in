@@ -1,4 +1,4 @@
-import { RolePaymentForm } from './payment-amount.constants'
+import { RolePaymentForm } from '@shared/constants'
 
 export type UsePaymentAmountType = (
   roleVar: RolePaymentForm,

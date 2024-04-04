@@ -4,7 +4,7 @@ import { motion }                      from 'framer-motion'
 import { useState }                    from 'react'
 import { useIntl }                     from 'react-intl'
 
-import { RolePaymentForm }             from '@shared/utils/src/hooks/payment-amount/payment-amount.constants'
+import { RolePaymentForm }             from '@shared/constants'
 import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Box }                         from '@ui/layout'
