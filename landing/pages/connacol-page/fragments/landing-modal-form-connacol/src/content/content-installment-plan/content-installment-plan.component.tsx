@@ -23,10 +23,9 @@ const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({ connacolData 
 
   return (
     <>
-      {/* TODO: description course */}
       <SelectedCourse
         title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${connacolData?.title}"`}
-        description='description'
+        description={connacolData?.individualCourseData?.aboutCourse || ''}
       />
 
       <Layout flexBasis={[24, 26, 28]} flexShrink={0} />

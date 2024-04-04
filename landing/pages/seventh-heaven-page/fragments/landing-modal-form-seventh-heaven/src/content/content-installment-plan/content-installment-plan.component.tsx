@@ -24,13 +24,11 @@ const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({ seventhHeaven
 
   return (
     <>
-      {/* TODO: description course */}
-
       <SelectedCourse
         title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
           seventhHeavenData?.title
         }"`}
-        description='description'
+        description={seventhHeavenData?.individualCourseData?.aboutCourse || ''}
       />
       <Layout flexBasis={[24, 26, 28]} flexShrink={0} />
       <Row>
