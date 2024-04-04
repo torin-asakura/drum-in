@@ -43,12 +43,11 @@ const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
           </Text>
         </Box>
         <Layout flexBasis={12} flexShrink={0} />
-        {/* TODO: add description course */}
         <SelectedCourse
           title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
             polyrhythmicKeysData?.title
           }"`}
-          description='description'
+          description={polyrhythmicKeysData?.individualCourseData?.aboutCourse || ''}
         />
         <Layout flexBasis={18} flexShrink={0} />
         <Row justifyContent='end'>

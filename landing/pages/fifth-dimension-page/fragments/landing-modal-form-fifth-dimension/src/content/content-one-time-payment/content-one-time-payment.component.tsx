@@ -17,12 +17,11 @@ const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({ fifthDimensionD
 
   return (
     <>
-      {/* TODO: description course */}
       <SelectedCourse
         title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
           fifthDimensionData?.title
         }"`}
-        description='description'
+        description={fifthDimensionData?.individualCourseData?.aboutCourse || ''}
       />
       <Layout flexBasis={[8, 16, 24]} flexShrink={0} />
       <Row justifyContent='end'>

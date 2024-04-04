@@ -23,12 +23,11 @@ const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({ feelingOfTime
 
   return (
     <>
-      {/* TODO: description course */}
       <SelectedCourse
         title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
           feelingOfTimeData?.title
         }"`}
-        description='description'
+        description={feelingOfTimeData?.individualCourseData?.aboutCourse || ''}
       />
       <Layout flexBasis={[24, 26, 28]} flexShrink={0} />
       <Row>

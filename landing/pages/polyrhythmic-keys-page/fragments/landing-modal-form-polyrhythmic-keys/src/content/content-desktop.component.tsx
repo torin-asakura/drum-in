@@ -55,7 +55,7 @@ const ContentDesktop: FC<ContentProps> = ({ polyrhythmicKeysData, onClose }) => 
         title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
           polyrhythmicKeysData?.title
         }"`}
-        description='description'
+        description={polyrhythmicKeysData?.individualCourseData?.aboutCourse || ''}
       />
       <Layout flexBasis={24} flexShrink={0} />
       <Row justifyContent='end'>
