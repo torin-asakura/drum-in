@@ -17,7 +17,7 @@ const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelin
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
       backgroundSize='100%'
       backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
+      backgroundPosition='0px -300px'
     >
       <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
       <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
