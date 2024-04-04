@@ -12,17 +12,19 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useContent }             from './content.hook'
 
 const ContentMobile: FC<ContentProps> = ({ feelingOfTimeData, roleVar, options, setRole }) => {
-  const installmentPlan = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
-  const oneTimePayment = feelingOfTimeData?.individualCourseData?.price?.fullPrice
-  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
   const { formatMessage } = useIntl()
+
+  const installmentAmount = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
+  const oneTimeAmount = feelingOfTimeData?.individualCourseData?.price?.fullPrice
+
+  const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
 
   return (
     <Row height={540}>
@@ -81,7 +83,7 @@ const ContentMobile: FC<ContentProps> = ({ feelingOfTimeData, roleVar, options, 
         <Condition match={roleVar.includes(options[1].value)}>
           <ContentOneTimePayment feelingOfTimeData={feelingOfTimeData} />
         </Condition>
-        <Condition match={!!amount}>
+        <Condition match={!!amount && amount > 0}>
           <Form amount={amount} form='payment' key={amount} />
         </Condition>
       </Column>

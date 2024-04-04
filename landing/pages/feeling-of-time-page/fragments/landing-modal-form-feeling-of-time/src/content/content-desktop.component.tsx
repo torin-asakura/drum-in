@@ -15,11 +15,11 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Space }                  from '@ui/text'
 import { Text }                   from '@ui/text'
+import { usePaymentAmount }       from '@shared/utils/src/hooks/payment-amount/payment-amount.hook'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({
   feelingOfTimeData,
@@ -28,10 +28,12 @@ const ContentDesktop: FC<ContentProps> = ({
   options,
   setRole,
 }) => {
-  const installmentPlan = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
-  const oneTimePayment = feelingOfTimeData?.individualCourseData?.price?.fullPrice
-  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
   const { formatMessage } = useIntl()
+
+  const installmentAmount = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
+  const oneTimeAmount = feelingOfTimeData?.individualCourseData?.price?.fullPrice
+
+  const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
 
   return (
     <>
