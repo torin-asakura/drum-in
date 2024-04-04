@@ -4981,6 +4981,8 @@ __metadata:
 "@shared/utils@workspace:0.0.1, @shared/utils@workspace:shared/utils":
   version: 0.0.0-use.local
   resolution: "@shared/utils@workspace:shared/utils"
+  dependencies:
+    "@types/react": "npm:18.2.20"
   languageName: unknown
   linkType: soft
 

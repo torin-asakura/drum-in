@@ -14971,7 +14971,8 @@ const RAW_RUNTIME_STATE =
       ["workspace:shared/utils", {\
         "packageLocation": "./shared/utils/",\
         "packageDependencies": [\
-          ["@shared/utils", "workspace:shared/utils"]\
+          ["@shared/utils", "workspace:shared/utils"],\
+          ["@types/react", "npm:18.2.20"]\
         ],\
         "linkType": "SOFT"\
       }]\
