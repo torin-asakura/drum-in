@@ -79,7 +79,6 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
           <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
           <CourseProcessBlock />
           <Box
-
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}

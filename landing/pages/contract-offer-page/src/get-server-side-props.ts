@@ -16,11 +16,9 @@ export const getServerSideProps = async ({ res }) => {
   })
   const contractOfferData = data?.generalFragment?.contractOffer
 
-  /* TODO: change PageID to contract */
-
   const { data: seoData } = await client.query({
     query: GET_SEO,
-    variables: { id: PageID.CONTACT },
+    variables: { id: PageID.CONTRACT_OFFER },
   })
 
   const SEO = {
