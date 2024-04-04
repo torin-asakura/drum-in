@@ -1,17 +1,16 @@
 import { IndividualCourseDataType } from '@globals/data/src'
+import { RolePaymentForm }          from '@shared/utils/src'
+import { SetStateAction }           from 'react'
+import { Dispatch }                 from 'react'
 
 export interface ContentProps {
   fifthDimensionData: IndividualCourseDataType
   onClose?: () => any
-  roleVar: Array<string>
+  roleVar: Array<RolePaymentForm>
   options: Array<{
-    value: string
+    value: RolePaymentForm
     label: string
     mutuallyExclusive: boolean
   }>
-  setRole: (value: Array<string>) => any
-}
-
-export interface Content {
-  amount: number
+  setRole: Dispatch<SetStateAction<Array<RolePaymentForm>>>
 }
