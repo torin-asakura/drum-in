@@ -4,6 +4,7 @@ import { motion }                      from 'framer-motion'
 import { useState }                    from 'react'
 import { useIntl }                     from 'react-intl'
 
+import { RolePaymentForm }             from '@shared/utils/src/hooks/payment-amount/payment-amount.constants'
 import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Box }                         from '@ui/layout'
@@ -12,7 +13,6 @@ import { Renderer }                    from '@ui/modal'
 import { Backdrop }                    from '@ui/modal'
 
 import { ContentDesktop }              from './content'
-import { RoleModalForm }               from './modal-form-feeling-of-time.enum'
 import { ModalFormFeelingOfTimeProps } from './modal-form-feeling-of-time.interfaces'
 
 const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
@@ -21,18 +21,18 @@ const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>([RolePaymentForm.InstallmentPlan])
   const { formatMessage } = useIntl()
   const options = [
     {
-      value: RoleModalForm.InstallmentPlan,
+      value: RolePaymentForm.InstallmentPlan,
       label: formatMessage({
         id: 'landing_modal_forms.installment_plan',
       }),
       mutuallyExclusive: true,
     },
     {
-      value: RoleModalForm.OneTimePayment,
+      value: RolePaymentForm.OneTimePayment,
       label: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
       }),

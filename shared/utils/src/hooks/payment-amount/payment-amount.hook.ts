@@ -1,9 +1,15 @@
-import {useCallback,useEffect,useState} from 'react'
-import { UsePaymentAmountType }         from './payment-amount.interfaces'
-import { RolePaymentForm }              from './payment-amount.constants'
+import { useCallback }          from 'react'
+import { useEffect }            from 'react'
+import { useState }             from 'react'
 
-export const usePaymentAmount:UsePaymentAmountType = (roleVar, installmentAmount, oneTimeAmount) => {
+import { RolePaymentForm }      from './payment-amount.constants'
+import { UsePaymentAmountType } from './payment-amount.interfaces'
 
+export const usePaymentAmount: UsePaymentAmountType = (
+  roleVar,
+  installmentAmount,
+  oneTimeAmount
+) => {
   const getAmount = useCallback((): number => {
     if (installmentAmount && oneTimeAmount)
       return roleVar === RolePaymentForm.InstallmentPlan ? installmentAmount : oneTimeAmount
