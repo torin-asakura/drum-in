@@ -1,6 +1,7 @@
-import React                      from 'react'
-import { FC }                     from 'react'
-import { useIntl }                from 'react-intl'
+import { usePaymentAmount } from '@shared/utils/src'
+import React                from 'react'
+import { FC }               from 'react'
+import { useIntl }          from 'react-intl'
 
 import { Button }                 from '@ui/button'
 import { Condition }              from '@ui/condition'
@@ -19,7 +20,6 @@ import { Space }                  from '@ui/text/src'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({
   fifthDimensionData,
@@ -28,9 +28,9 @@ const ContentDesktop: FC<ContentProps> = ({
   options,
   setRole,
 }) => {
-  const installmentPlan = fifthDimensionData?.individualCourseData?.price?.monthlyPrice
-  const oneTimePayment = fifthDimensionData?.individualCourseData?.price?.fullPrice
-  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
+  const installmentAmount = fifthDimensionData?.individualCourseData?.price?.monthlyPrice
+  const oneTimeAmount = fifthDimensionData?.individualCourseData?.price?.fullPrice
+  const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
   const { formatMessage } = useIntl()
 
   return (

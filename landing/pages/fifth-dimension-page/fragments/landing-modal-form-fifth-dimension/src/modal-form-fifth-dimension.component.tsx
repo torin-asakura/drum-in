@@ -1,8 +1,9 @@
-import React                            from 'react'
-import { FC }                           from 'react'
-import { motion }                       from 'framer-motion'
-import { useState }                     from 'react'
-import { useIntl }                      from 'react-intl'
+import { RolePaymentForm } from '@shared/utils/src'
+import React               from 'react'
+import { FC }              from 'react'
+import { motion }          from 'framer-motion'
+import { useState }        from 'react'
+import { useIntl }         from 'react-intl'
 
 import { Column }                       from '@ui/layout'
 import { Layout }                       from '@ui/layout'
@@ -12,7 +13,6 @@ import { Renderer }                     from '@ui/modal'
 import { Backdrop }                     from '@ui/modal'
 
 import { ContentDesktop }               from './content'
-import { RoleModalForm }                from './modal-form-fifth-dimension.enum'
 import { ModalFormFifthDimensionProps } from './modal-form-fifth-dimension.interfaces'
 
 const ModalFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
@@ -21,18 +21,18 @@ const ModalFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
   scroll = true,
   fifthDimensionData,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>([RolePaymentForm.InstallmentPlan])
   const { formatMessage } = useIntl()
   const options = [
     {
-      value: RoleModalForm.InstallmentPlan,
+      value: RolePaymentForm.InstallmentPlan,
       label: formatMessage({
         id: 'landing_modal_forms.installment_plan',
       }),
       mutuallyExclusive: true,
     },
     {
-      value: RoleModalForm.OneTimePayment,
+      value: RolePaymentForm.OneTimePayment,
       label: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
       }),
