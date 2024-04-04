@@ -86,7 +86,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
-            backgroundPosition='center top'
+            backgroundPosition='-100px -50px'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
           </Box>
