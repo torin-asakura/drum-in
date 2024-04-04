@@ -85,7 +85,7 @@ const SliderBlock: FC<SliderBlockProps> = ({ gallery }) => {
           <Slider
             slidesPerView='auto'
             clName='teacher-slider'
-            spaceBetween={40}
+            spaceBetween={20}
             allowTouchMove
             loop
           >
