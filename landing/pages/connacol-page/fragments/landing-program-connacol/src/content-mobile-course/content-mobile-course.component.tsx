@@ -40,7 +40,7 @@ const ContentMobileCourse: FC<ContentMobileCourseProps> = ({
                 textTransform='uppercase'
                 fontFamily='secondary'
                 fontWeight='bold'
-                fontSize={['micro', 'medium', 'medium']}
+                fontSize={['medium', 'medium', 'medium']}
                 lineHeight='default'
                 color='text.smokyWhite'
               >
