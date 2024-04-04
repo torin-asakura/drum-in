@@ -14,7 +14,7 @@ const CourseProcessBlock = () => {
   const { processEducation } = useProcessEducation()
   return (
     <Row justifyContent='center' flexWrap='wrap'>
-      <Box width={['100%', '100%', 1920]}>
+      <Box width={['100%', '100%', 1920]} >
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column>
           <Layout flexBasis={[48, 68, 90]} />
