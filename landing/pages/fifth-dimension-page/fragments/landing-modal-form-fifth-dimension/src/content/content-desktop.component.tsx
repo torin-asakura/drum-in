@@ -1,7 +1,6 @@
-import { usePaymentAmount } from '@shared/utils/src'
-import React                from 'react'
-import { FC }               from 'react'
-import { useIntl }          from 'react-intl'
+import React                      from 'react'
+import { FC }                     from 'react'
+import { useIntl }                from 'react-intl'
 
 import { Button }                 from '@ui/button'
 import { Condition }              from '@ui/condition'
@@ -16,6 +15,7 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 import { Space }                  from '@ui/text/src'
+import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'

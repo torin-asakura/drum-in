@@ -1,15 +1,19 @@
+import { SetStateAction }            from 'react'
+import { Dispatch }                  from 'react'
+
 import { OpeningTheRhythmDataProps } from '@globals/data/src'
+import { RolePaymentForm }           from '@shared/constants'
 
 export interface ContentProps {
   openingTheRhythm?: OpeningTheRhythmDataProps | null
   onClose?: () => any
-  roleVar: Array<string>
+  roleVar: Array<RolePaymentForm>
   options: Array<{
-    value: string
+    value: RolePaymentForm
     label: string
     mutuallyExclusive: boolean
   }>
-  setRole: (value: Array<string>) => any
+  setRole: Dispatch<SetStateAction<Array<RolePaymentForm>>>
 }
 
 export interface Content {

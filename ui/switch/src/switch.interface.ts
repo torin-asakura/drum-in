@@ -1,6 +1,7 @@
-import React from 'react'
+import { PropsWithChildren } from 'react'
 
-export interface SwitchProps {
-  active: Array<string>
-  children: React.ReactNode
+import { RolePaymentForm }   from '@shared/constants'
+
+export interface SwitchProps extends PropsWithChildren {
+  active: Array<RolePaymentForm>
 }

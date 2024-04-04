@@ -1,5 +1,6 @@
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useIntl }                from 'react-intl'
 
 import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
@@ -11,18 +12,18 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { Space }                  from '@ui/text/src'
+import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useModalForm }           from '../data'
-import { useContent }             from './content.hook'
 
 const ContentMobile: FC<ContentProps> = ({ connacolData, roleVar, options, setRole }) => {
-  const modalForm = useModalForm()
-  const installmentPlan = connacolData?.individualCourseData?.price?.monthlyPrice
-  const oneTimePayment = connacolData?.individualCourseData?.price?.fullPrice
-  const { amount } = useContent(roleVar[0], installmentPlan, oneTimePayment)
+  const installmentAmount = connacolData?.individualCourseData?.price?.monthlyPrice
+  const oneTimeAmount = connacolData?.individualCourseData?.price?.fullPrice
+  const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
+  const { formatMessage } = useIntl()
 
   return (
     <Row height={540}>
@@ -70,7 +71,9 @@ const ContentMobile: FC<ContentProps> = ({ connacolData, roleVar, options, setRo
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {modalForm?.title}
+            {formatMessage({ id: 'course.payment.buy_course' })}
+            <Space />
+            {`"${connacolData?.title}"`}
           </Text>
         </Box>
         <Layout flexBasis={16} flexShrink={0} />
