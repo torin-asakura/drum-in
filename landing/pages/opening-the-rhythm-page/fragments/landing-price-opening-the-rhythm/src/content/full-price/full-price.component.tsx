@@ -94,11 +94,13 @@ const FullPrice: FC<FullPriceProps> = ({ openingTheRhythm, fullCost }) => {
         </Box>
       </Box>
       <ModalFormOpeningTheRhythm
+        isOneTimePaymentPlan
         openingTheRhythm={openingTheRhythm}
         activeRender={visibleModal}
         onClose={() => setVisibleModal(false)}
       />
       <ModalMobileFormOpeningTheRhythm
+        isOneTimePaymentPlan
         openingTheRhythm={openingTheRhythm}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}

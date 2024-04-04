@@ -13,12 +13,13 @@ import { RoleModalForm }                  from './modal-form-opening-the-rhythm.
 import { ModalFormOpeningTheRhythmProps } from './modal-form-opening-the-rhythm.interfaces'
 
 const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
+  isOneTimePaymentPlan,
   activeRender,
   onClose,
   scroll = true,
   openingTheRhythm,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<string>>(isOneTimePaymentPlan?[RoleModalForm.OneTimePayment]:[RoleModalForm.InstallmentPlan])
   const { formatMessage } = useIntl()
   const options = [
     {
