@@ -13,8 +13,6 @@ import { MobileListProps } from './mobile-list.interfaces'
 import { Slide }           from './slide'
 import { getUi }           from '../helpers'
 
-// TODO: tooltip for levels
-
 const MobileList: FC<MobileListProps> = ({ openingTheRhythm }) => {
   const programOpeningTheRhythmChildren = useMemo(
     () =>
