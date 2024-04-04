@@ -85,7 +85,7 @@ const ProgramFifthDimensionBlock: FC<ProgramFifthDimensionProps> = ({
           zIndex={1}
         >
           <Column>
-            <Layout flexBasis={10} flexShrink={0}/>
+            <Layout flexBasis={10} flexShrink={0} />
             <Box
               data-scroll-speed='9'
               height='100vh'
