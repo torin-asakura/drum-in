@@ -49,7 +49,8 @@ export const useContent = (
 
   useEffect(() => {
     setAmount(getAmount())
-  }, [getAmount])
+    setMonths(totalMonths || 0)
+  }, [getAmount, totalMonths])
 
   return { amount, recalculateAmount, months, recalculateMonths }
 }
