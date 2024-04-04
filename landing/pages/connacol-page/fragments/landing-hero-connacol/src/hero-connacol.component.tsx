@@ -17,7 +17,7 @@ const HeroConnacolBlock: FC<HeroConnacolProps> = ({ background, connacolData }) 
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
       backgroundSize='100%'
       backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
+      backgroundPosition='0px -100px'
     >
       <BannerConnacolBlock connacolData={connacolData} />
       <AdvantagesBlock connacolData={connacolData} />

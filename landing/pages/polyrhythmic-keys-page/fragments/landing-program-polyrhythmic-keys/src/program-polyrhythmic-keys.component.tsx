@@ -88,7 +88,6 @@ const ProgramPolyrhythmicKeyslBlock: FC<ProgramPolyrhythmicKeysProps> = ({
             height='100vh'
             width={{ _: 0, tablet: 0, laptop: '55vw', wide: '32vw' }}
             flexShrink={0}
-            backgroundColor='background.smokyWhite'
           />
         </Box>
       </Box>

@@ -20,7 +20,7 @@ const HeroFifthDimensionBlock: FC<HeroFifthDimensionProps> = ({
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
       backgroundSize='100%'
       backgroundRepeat='no-repeat'
-      backgroundPosition='center top'
+      backgroundPosition='0px -280px'
     >
       <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
       <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />

@@ -17,7 +17,7 @@ const HeroPolyrhythmicKeysBlock: FC<HeroPolyrhythmicKeysProps> = ({
       flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
-      backgroundSize='100%'
+      backgroundSize='100% 1010px'
       backgroundRepeat='no-repeat'
       backgroundPosition='center top'
     >
