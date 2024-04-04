@@ -13,12 +13,15 @@ import { ContentMobile }          from './content'
 import { ModalFormConnacolProps } from './modal-form-connacol.interfaces'
 
 const ModalMobileFormConnacol: FC<ModalFormConnacolProps> = ({
+  paymentPlan,
   connacolData,
   activeRender,
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<RolePaymentForm>>([RolePaymentForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
+    paymentPlan ? [paymentPlan] : [RolePaymentForm.InstallmentPlan]
+  )
   const { formatMessage } = useIntl()
   const options = [
     {

@@ -4,6 +4,7 @@ import { useState }                     from 'react'
 
 import { ModalFormSeventhHeaven }       from '@landing/modal-form-seventh-heaven'
 import { ModalMobileFormSeventhHeaven } from '@landing/modal-form-seventh-heaven'
+import { RolePaymentForm }              from '@shared/constants/src'
 import { ArrowRightTailIcon }           from '@ui/icons'
 import { Layout }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
@@ -94,11 +95,13 @@ const FullPrice: FC<FullPriceProps> = ({ seventhHeavenData, fullCost }) => {
         </Box>
       </Box>
       <ModalFormSeventhHeaven
+        paymentPlan={RolePaymentForm.OneTimePayment}
         seventhHeavenData={seventhHeavenData}
         activeRender={visibleModal}
         onClose={() => setVisibleModal(false)}
       />
       <ModalMobileFormSeventhHeaven
+        paymentPlan={RolePaymentForm.OneTimePayment}
         seventhHeavenData={seventhHeavenData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
