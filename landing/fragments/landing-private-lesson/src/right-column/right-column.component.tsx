@@ -23,7 +23,7 @@ const RightColumn: FC<RightColumnProps> = ({ privateLessonData }) => {
         </Text>
       </Box>
       <Layout order={[2, 2, 0]} flexBasis={[20, 30, 12]} flexShrink={0} />
-      <Box order={[3, 3, 0]} width={['100%', 525, 'auto']}>
+      <Box order={[3, 3, 0]} width={[300, 525, 'auto']}>
         <Text
           fontWeight='medium'
           fontSize={['semiMedium', 'semiRegular', 'regular']}
