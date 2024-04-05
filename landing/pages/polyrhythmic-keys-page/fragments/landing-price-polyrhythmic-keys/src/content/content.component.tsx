@@ -25,7 +25,7 @@ const Content: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
     <Box
       backgroundColor='background.smokyWhite'
       borderRadius='bigger'
-      width={['100%', 520, '100%']}
+      width={['100%', '100%', '100%']}
       position='relative'
     >
       <Layout flexBasis={24} flexShrink={0} />
