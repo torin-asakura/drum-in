@@ -4,7 +4,7 @@ import { useState }                from 'react'
 
 import { ModalFormConnacol }       from '@landing/modal-form-connacol'
 import { ModalMobileFormConnacol } from '@landing/modal-form-connacol'
-import { RolePaymentForm }          from '@shared/constants'
+import { RolePaymentForm }         from '@shared/constants'
 import { ArrowRightTailIcon }      from '@ui/icons'
 import { Layout }                  from '@ui/layout'
 import { Box }                     from '@ui/layout'

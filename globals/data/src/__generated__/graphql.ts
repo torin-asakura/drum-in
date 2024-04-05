@@ -5015,8 +5015,8 @@ export type Main = AcfFieldGroup &
     hero?: Maybe<MainHero>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
     individualLesson?: Maybe<MainIndividualLesson>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    runningline?: Maybe<Array<Maybe<MainRunningline>>>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
+    runningLine?: Maybe<MainRunningLine>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
     slider?: Maybe<MainSlider>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
@@ -5357,29 +5357,58 @@ export type MainIndividualLesson_Fields = {
   title?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;MainRunningline&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainRunningline = AcfFieldGroup &
+/** The &quot;MainRunningLine&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type MainRunningLine = AcfFieldGroup &
   AcfFieldGroupFields &
-  MainRunningline_Fields & {
-    __typename?: 'MainRunningline'
+  MainRunningLine_Fields & {
+    __typename?: 'MainRunningLine'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+    content?: Maybe<Array<Maybe<MainRunningLineContent>>>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningline&quot; Field Group */
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+    icon?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** The &quot;MainRunningLineContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type MainRunningLineContent = AcfFieldGroup &
+  AcfFieldGroupFields &
+  MainRunningLineContent_Fields & {
+    __typename?: 'MainRunningLineContent'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningLineContent&quot; Field Group */
     text?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;MainRunningline&quot; Field Group */
-export type MainRunningline_Fields = {
+/** Interface representing fields of the ACF &quot;MainRunningLineContent&quot; Field Group */
+export type MainRunningLineContent_Fields = {
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningline&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningLineContent&quot; Field Group */
   text?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;MainRunningLine&quot; Field Group */
+export type MainRunningLine_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+  content?: Maybe<Array<Maybe<MainRunningLineContent>>>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+  icon?: Maybe<AcfMediaItemConnectionEdge>
 }
 
 /** The &quot;MainSlider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -5570,8 +5599,8 @@ export type Main_Fields = {
   hero?: Maybe<MainHero>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
   individualLesson?: Maybe<MainIndividualLesson>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  runningline?: Maybe<Array<Maybe<MainRunningline>>>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
+  runningLine?: Maybe<MainRunningLine>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
   slider?: Maybe<MainSlider>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
@@ -14248,7 +14277,17 @@ export type MainPageQuery = {
         about?: string | null
         benefits?: Array<{ __typename?: 'MainHeroBenefits'; benefit?: string | null } | null> | null
       } | null
-      runningline?: Array<{ __typename?: 'MainRunningline'; text?: string | null } | null> | null
+      runningLine?: {
+        __typename?: 'MainRunningLine'
+        content?: Array<{
+          __typename?: 'MainRunningLineContent'
+          text?: string | null
+        } | null> | null
+        icon?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
+      } | null
       chooseCourse?: {
         __typename?: 'MainChooseCourse'
         title?: string | null
@@ -15644,10 +15683,43 @@ export const MainPageDocument = {
                       },
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'runningline' },
+                        name: { kind: 'Name', value: 'runningLine' },
                         selectionSet: {
                           kind: 'SelectionSet',
-                          selections: [{ kind: 'Field', name: { kind: 'Name', value: 'text' } }],
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'content' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'text' } },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'icon' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
                         },
                       },
                       {
