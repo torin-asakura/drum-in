@@ -102,7 +102,7 @@ const Slide: FC<SlideProps> = ({
               <Box>
                 <Text
                   fontWeight='medium'
-                  fontSize={['micro', 'medium', 'medium']}
+                  fontSize={['micro', 'middling', 'medium']}
                   lineHeight='primary'
                   color='text.gray'
                 >

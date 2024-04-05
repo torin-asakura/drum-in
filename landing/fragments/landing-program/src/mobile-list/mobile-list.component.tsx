@@ -50,7 +50,6 @@ const MobileList: FC<MobileListProps> = ({ openingTheRhythm }) => {
           clName='program-slider'
           spaceBetween={16}
           slidesPerView='auto'
-          progressbar
           autoHeight
           slidesOffsetAfter={20}
         >
