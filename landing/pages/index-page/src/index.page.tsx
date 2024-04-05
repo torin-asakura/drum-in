@@ -114,7 +114,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
                 {...getObserverOptions('private-lesson')}
               />
               </Box>
-              <Box order={{_:0,laptop:2,wide:2}}>
+              <Box width='100%' order={{_:0,laptop:2,wide:2}}>
               <LearningProcessBlock
                 learningProcessData={mainPageData.slider}
                 {...getObserverOptions('learning-process')}
