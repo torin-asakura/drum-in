@@ -17,17 +17,17 @@ import { TeacherBlockProps } from './teacher.interfaces'
 const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
   const { teacherData } = useTeacher()
   return (
-    <Row flexWrap='wrap' justifyContent='center' ref={ref}>
-      <Box width={['100%', '100%', 1920]}>
+    <Row flexWrap='wrap' justifyContent={['center','center','start','center']} ref={ref}>
+      <Box width={['100%', '100%',1440, 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%' alignItems={['start', 'start', 'center']}>
-          <Layout flexBasis={[32, 65, 122]} />
+          <Layout flexBasis={[32, 65,65, 122]} />
           <Row justifyContent={['start', 'start', 'center']}>
             <Text
               textTransform='uppercase'
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={['medium', 'moderate', 'big']}
+              fontSize={['medium', 'moderate','moderate', 'big']}
               lineHeight='default'
               color={[
                 'text.transparentSmokyWhite',
@@ -45,7 +45,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
               textTransform='uppercase'
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={['moderate', 'massive', 'giant']}
+              fontSize={['moderate', 'massive', 'massive','giant']}
               lineHeight='default'
               color='text.smokyWhite'
             >
@@ -57,23 +57,23 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
             <Text
               textAlign={['start', 'start', 'center']}
               fontWeight='medium'
-              fontSize={['semiMedium', 'semiRegular', 'large']}
+              fontSize={['semiMedium', 'semiRegular','semiRegular', 'large']}
               lineHeight='primary'
               color='text.transparentSmokyWhite'
             >
               {teacherData.description}
             </Text>
           </Box>
-          <Layout display={['flex', 'flex', 'none']} flexBasis={[12, 30, 0]} />
+          <Layout display={['flex', 'flex', 'none']} flexBasis={[12, 30,30, 0]} />
           <EducationMobile teacherData={teacherData} />
         </Column>
-        <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
+        <Layout flexBasis={[20, 30,30, 40]} flexShrink={0} />
       </Box>
       <Box>
         <Column width='100%'>
-          <Layout flexBasis={[24, 70, 130]} />
+          <Layout flexBasis={[24, 70,70, 130]} />
           <SliderBlock gallery={teacherData.gallery} />
-          <Layout flexBasis={[24, 70, 155]} />
+          <Layout flexBasis={[24, 70,70, 155]} />
         </Column>
       </Box>
       <Info teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />

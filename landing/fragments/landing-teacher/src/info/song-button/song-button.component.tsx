@@ -26,12 +26,14 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
         borderRadius='larger'
         position='relative'
         flexShrink={0}
-        width={275}
+        width={[300,300,380,275]}
       >
-        <Box position='absolute' top={-100} right={-127} style={{ transform: 'rotate(-30deg)' }}>
+        <Layout flexBasis={[0,0,90,0]}/>
+        <Box position='absolute' display={['none','none','none','flex']} top={-100} right={-127} style={{ transform: 'rotate(-30deg)' }}>
           <TwistedArrowBottomIcon width={238} height={53} />
         </Box>
-        <Box {...hoverIconProps}>
+        <Box {...hoverIconProps} >
+
           <Button
             size='mediumPaddingBigHeight'
             variant='whiteBackground'

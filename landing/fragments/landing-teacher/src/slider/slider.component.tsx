@@ -60,14 +60,14 @@ const SliderBlock: FC<SliderBlockProps> = ({ gallery }) => {
           }
         >
           <Slider
-            slidesPerView='auto'
-            clName='teacher-slider'
+            slidesPerView={2}
             allowTouchMove
-            mousewheel
-            grabCursor
-            forceToAxis
+            clName='teacher-slider'
             spaceBetween={120}
             centeredSlides
+            mousewheel
+            forceToAxis
+            grabCursor
             loop
           >
             {Children.map(teacherChildren, (child) => (

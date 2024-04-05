@@ -14,7 +14,7 @@ const OneCharacteristic: FC<OneCharacteristicProps> = ({ indentLeft, numeric, ti
     <Box>
       <Text
         fontWeight='medium'
-        fontSize={['large', 'big', 'huge']}
+        fontSize={['large', 'big','big', 'huge']}
         lineHeight={['extra', 'extra', 'medium']}
         color='text.purple'
       >
@@ -26,7 +26,7 @@ const OneCharacteristic: FC<OneCharacteristicProps> = ({ indentLeft, numeric, ti
       <Text
         whiteSpace='nowrap'
         fontWeight='medium'
-        fontSize={['large', 'big', 'huge']}
+        fontSize={['large', 'big','big', 'huge']}
         lineHeight={['extra', 'extra', 'medium']}
         color='text.smokyWhite'
       >

@@ -15,17 +15,17 @@ import { getIndent }         from '../helpers'
 const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => (
   <Box width={['100%', '100%', 1920]}>
     <Column width='100%'>
-      <Box height={['auto', 'auto', 543]}>
+      <Box height={['auto', 'auto','auto', 543]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} order={[1, 1, 0]} />
-        <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={1} />
+        <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={[0,0,0,1]} />
         <SongButton playSong={playSong} setPlaySong={setPlaySong} />
         <Layout display={['none', 'none', 'flex']} flexBasis={60} flexShrink={14} />
-        <Box position='relative' order={[2, 2, 0]} width={['100%', '100%', 822]}>
+        <Box position='relative' order={[2, 2, 0]} width={['100%', '100%',500, 822]}>
           <Box
             display={['none', 'none', 'flex']}
             position='absolute'
-            top={-83}
-            left={-100}
+            top={[-50,-50,-20,-83]}
+            left={[-30,-30,-180,-100]}
             style={{ transform: 'rotate(-15deg)' }}
           >
             <ExperianceIcon width={160} height={160} />
@@ -41,7 +41,7 @@ const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => 
             ))}
           </Column>
         </Box>
-        <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={1} />
+        <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={[0,0,0,1]} />
         <EducationList teacherData={teacherData} />
         <Layout flexBasis={0} flexGrow={3} order={[3, 3, 0]} />
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} order={[5, 5, 0]} />

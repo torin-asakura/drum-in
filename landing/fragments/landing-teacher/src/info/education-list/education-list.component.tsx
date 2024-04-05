@@ -15,10 +15,10 @@ export interface EducationListProps {
 
 const EducationList: FC<EducationListProps> = ({ teacherData }) => (
   <Box position='relative' display={['none', 'none', 'flex']}>
-    <Box position='absolute' top={80} left={-60} style={{ transform: 'rotate(-15deg)' }}>
+    <Box position='absolute' top={80} left={-60} display={['none','none','none','flex']} style={{ transform: 'rotate(-15deg)' }}>
       <ArrowBottomTailIcon width={100} height={83} />
     </Box>
-    <Column justifyContent='end' width={300}>
+    <Column justifyContent={['end']} width={300}>
       <Box>
         <Box>
           <EducationIcon width={44} height={44} />
