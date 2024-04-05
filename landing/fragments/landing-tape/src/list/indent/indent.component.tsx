@@ -1,6 +1,6 @@
-import { memo } from 'react'
-import React    from 'react'
-import { FC }   from 'react'
+import React           from 'react'
+import { FC }          from 'react'
+import { memo }        from 'react'
 
 import { ImageBlock }  from '@ui/image'
 import { Box }         from '@ui/layout'

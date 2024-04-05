@@ -17,7 +17,7 @@ const SliderTop: FC<SliderTopProps> = ({ upperSliderData }) => {
       upperSliderData?.map((item, index) => (
         <>
           <SlideText text={item?.text} activeIcons={index % 2 === 0 ? 'target' : 'sheetMusic'} />
-          <Layout flexBasis={[20,40,40]} flexShrink={0} />
+          <Layout flexBasis={[20, 40, 40]} flexShrink={0} />
           <SlideImage pathImage={item?.image?.node.sourceUrl} />
         </>
       )),
@@ -37,7 +37,7 @@ const SliderTop: FC<SliderTopProps> = ({ upperSliderData }) => {
           learningProcessTopChildren?.map((item) => (
             <React.Fragment key={uniqid()}>
               {item}
-              <Layout flexBasis={[20,40,40]} flexShrink={0} />
+              <Layout flexBasis={[20, 40, 40]} flexShrink={0} />
             </React.Fragment>
           ))
         }
