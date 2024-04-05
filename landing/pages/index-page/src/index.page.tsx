@@ -98,21 +98,28 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               backgroundImage={`url(${background?.desktop?.teacher?.node?.sourceUrl})`}
               backgroundSize={['200%', '100% auto', '1800px']}
               backgroundRepeat='no-repeat'
-              backgroundPosition={['center top', 'center center', 'center 75%']}
+              backgroundPosition={['center 500px', 'center center', 'center 75%']}
             >
+              <Box order={{_:1,laptop:0,wide:0}}>
               <TeacherBlock
                 playSong={playSong}
                 setPlaySong={setPlaySong}
                 {...getObserverOptions('teacher')}
               />
+              </Box>
+              <Box order={{_:2,laptop:1,wide:1}}>
+
               <PrivateLessonBlock
                 privateLessonData={mainPageData.individualLesson}
                 {...getObserverOptions('private-lesson')}
               />
+              </Box>
+              <Box order={{_:0,laptop:2,wide:2}}>
               <LearningProcessBlock
                 learningProcessData={mainPageData.slider}
                 {...getObserverOptions('learning-process')}
               />
+              </Box>
             </Box>
             <StudentsBlock
               studentsData={mainPageData.students}
