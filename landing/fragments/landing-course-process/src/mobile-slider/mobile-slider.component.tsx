@@ -14,14 +14,12 @@ import { MobileSliderProps } from './mobile-slider.interfaces'
 const MobileSlider: FC<MobileSliderProps> = ({ processEducation }) => (
   <Column>
     <Box display={['flex', 'flex', 'none']}>
-      {/*<Layout flexBasis={[20, 30, 40]} flexShrink={0} />*/}
       <Slider
         clName='course-process-slider'
         spaceBetween={16}
         slidesPerView='auto'
         slidesOffsetAfter={20}
         slidesOffsetBefore={20}
-
       >
         <SwiperSlide>
           <Box

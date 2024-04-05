@@ -1,21 +1,19 @@
-import styled            from '@emotion/styled'
-import { keyframes }     from '@emotion/react'
+import styled             from '@emotion/styled'
+import { keyframes }      from '@emotion/react'
 
-import React             from 'react'
-import { useMemo }       from 'react'
+import React              from 'react'
+import { FC }             from 'react'
+import { memo }           from 'react'
+import { useMemo }        from 'react'
 
-import { ComposerIcon }  from '@ui/icons'
-import { DjsIcon }       from '@ui/icons'
-import { MusiciansIcon } from '@ui/icons'
-import { TeachersIcon }  from '@ui/icons'
-import { VocalistsIcon } from '@ui/icons'
-import { Box }           from '@ui/layout'
-import { Layout }        from '@ui/layout'
-import { Repeater }      from '@ui/utils'
+import { Box }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Repeater }       from '@ui/utils'
 
-import { Indent }        from './indent'
+import { TapeList }       from './list'
+import { TapeBlockProps } from './tape.interfaces'
 
-const TapeBlock = () => {
+const TapeBlock: FC<TapeBlockProps> = memo(({ runningLineData }) => {
   const infinityLine = useMemo(
     () => keyframes`0% { transform: translateX(0) } 100% { transform: translate(-50%) }`,
     []
@@ -36,37 +34,12 @@ const TapeBlock = () => {
         style={{ transform: 'rotate(-3deg)' }}
       >
         <AnimationBox alignItems='center'>
-          <Repeater quantity={50}>
-            {() => (
-              <>
-                <Indent />
-                <Box width={[171, 264, 358]}>
-                  <MusiciansIcon width='100%' height='100%' />
-                </Box>
-                <Indent />
-                <Box width={[165, 255, 346]}>
-                  <VocalistsIcon width='100%' height='100%' />
-                </Box>
-                <Indent />
-                <Box width={[201, 310, 419]}>
-                  <ComposerIcon width='100%' height='100%' />
-                </Box>
-                <Indent />
-                <Box width={[143, 218, 298]}>
-                  <TeachersIcon width='100%' height='100%' />
-                </Box>
-                <Indent />
-                <Box width={[133, 197, 273]}>
-                  <DjsIcon width='100%' height='100%' />
-                </Box>
-              </>
-            )}
-          </Repeater>
+          <Repeater quantity={50}>{() => <TapeList runningLineData={runningLineData} />}</Repeater>
         </AnimationBox>
       </Box>
       <Layout flexBasis={80} />
     </Box>
   )
-}
+})
 
 export { TapeBlock }

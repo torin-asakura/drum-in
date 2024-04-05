@@ -21,7 +21,7 @@ const Hero: FC<HeroProps> = forwardRef(({ mainPageData, background }, ref: any) 
       backgroundPosition='center top'
     >
       <BannerBlock heroData={mainPageData.hero} />
-      <TapeBlock />
+      <TapeBlock runningLineData={mainPageData?.runningLine} />
       <ChooseCourseBlock mainPageData={mainPageData} />
     </Box>
     <Box
@@ -34,7 +34,7 @@ const Hero: FC<HeroProps> = forwardRef(({ mainPageData, background }, ref: any) 
       backgroundPosition='right center'
     >
       <BannerBlock heroData={mainPageData.hero} />
-      <TapeBlock />
+      <TapeBlock runningLineData={mainPageData?.runningLine} />
       <ChooseCourseBlock mainPageData={mainPageData} />
     </Box>
   </Box>
