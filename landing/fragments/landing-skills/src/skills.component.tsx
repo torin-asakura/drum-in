@@ -16,7 +16,7 @@ const SkillsBlock: FC<SkillsBlockProps> = ({ openingTheRhythm }) => (
       <Layout flexBasis={[20, 30, 40]} />
       <Column width='100%'>
         <Layout flexBasis={[24, 60, 89]} />
-        <Box width={[250, 250, '100%']} display={['flex', 'flex', 'none']}>
+        <Box width={[250,'100%', '100%']} display={['flex', 'flex', 'none']}>
           <Text
             textTransform='uppercase'
             fontFamily='secondary'
@@ -29,7 +29,7 @@ const SkillsBlock: FC<SkillsBlockProps> = ({ openingTheRhythm }) => (
           </Text>
         </Box>
         <Layout flexBasis={[8, 12, 0]} display={['flex', 'flex', 'none']} />
-        <Box width={[235, 340, 0]} display={['flex', 'flex', 'none']}>
+        <Box width={[235, '100%', 0]} display={['flex', 'flex', 'none']}>
           <Text
             fontWeight='medium'
             fontSize={['semiMedium', 'regular', 'regular']}
