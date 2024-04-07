@@ -4,7 +4,7 @@ type BreakpointsProp = Array<string> & {
   wide?: string | number
 }
 
-export const breakpoints: BreakpointsProp = ['40em', '52em', '95em']
+export const breakpoints: BreakpointsProp = ['40em', '65em', '105em']
 
 breakpoints.tablet = breakpoints[0] // eslint-disable-line
 breakpoints.laptop = breakpoints[1] // eslint-disable-line
