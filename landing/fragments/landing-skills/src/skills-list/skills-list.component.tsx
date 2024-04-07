@@ -1,19 +1,23 @@
-import React         from 'react'
-import { Box,Layout,Column }           from '@ui/layout'
-import {ImageBlock} from '@ui/image'
+import React               from 'react'
+import { FC }              from 'react'
 
-const SkillsList = () => (
-  <>
-      <Column fill >
-      <Layout flexGrow={1}/>
-        <Box  display={['none','none','flex','flex']}>
-          <ImageBlock src='https://wp.drumin.pro/wp-content/uploads/2024/04/wide_flags_and_genres.svg'/>
-        </Box>
-        <Box  display={['flex','flex','none','none']}>
-          <ImageBlock src='https://wp.drumin.pro/wp-content/uploads/2024/04/compact_flags_and_genres.svg'/>
-        </Box>
-      </Column>
-  </>
+import { ImageBlock }      from '@ui/image'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+
+import { SkillsListProps } from './skills-list.interfaces'
+
+const SkillsList: FC<SkillsListProps> = ({ images }) => (
+    <Column fill>
+      <Layout flexGrow={1} />
+      <Box display={['none', 'none', 'flex', 'flex']}>
+        <ImageBlock src={images?.wideComposition?.node.sourceUrl || ''} />
+      </Box>
+      <Box display={['flex', 'flex', 'none', 'none']}>
+        <ImageBlock src={images?.compactComposition?.node.sourceUrl || ''} />
+      </Box>
+    </Column>
 )
 
 export { SkillsList }

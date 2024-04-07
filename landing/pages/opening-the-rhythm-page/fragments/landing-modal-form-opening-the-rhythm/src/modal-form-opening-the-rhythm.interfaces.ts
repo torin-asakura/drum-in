@@ -1,7 +1,7 @@
 import { OpeningTheRhythmDataProps } from '@globals/data/src'
 
 export interface ModalFormOpeningTheRhythmProps {
-  isOneTimePaymentPlan?:boolean
+  isOneTimePaymentPlan?: boolean
   activeRender: boolean
   onClose: () => any
   scroll?: boolean

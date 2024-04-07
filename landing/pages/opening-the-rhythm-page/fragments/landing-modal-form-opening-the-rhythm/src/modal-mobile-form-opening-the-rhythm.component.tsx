@@ -19,7 +19,9 @@ const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
   scroll = true,
   openingTheRhythm,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>(isOneTimePaymentPlan?[RoleModalForm.OneTimePayment]:[RoleModalForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<string>>(
+    isOneTimePaymentPlan ? [RoleModalForm.OneTimePayment] : [RoleModalForm.InstallmentPlan]
+  )
   const { formatMessage } = useIntl()
   const options = [
     {
