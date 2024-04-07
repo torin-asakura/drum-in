@@ -4597,6 +4597,7 @@ __metadata:
     "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: "npm:18.2.0"

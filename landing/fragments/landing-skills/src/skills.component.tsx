@@ -41,8 +41,8 @@ const SkillsBlock: FC<SkillsBlockProps> = ({ openingTheRhythm }) => (
         </Box>
         <Layout flexBasis={[16, 22, 0]} display={['flex', 'flex', 'none']} />
         <Box
-          width={{ _: '100%', tablet: 360, laptop: 1204, wide: '100%' }}
-          height={[200, 250, 750]}
+          width={{ _: '100%', tablet: '100%', laptop: '100%', wide: '100%' }}
+          height={[200, 360,500, 750]}
           backgroundColor='background.blackAmber'
           border={['normalSmokyWhite', 'mediumBoldSmokyWhite', 'veryBoldSmokyWhite']}
           borderRadius={['medium', 'larger', 'huge']}
@@ -51,8 +51,9 @@ const SkillsBlock: FC<SkillsBlockProps> = ({ openingTheRhythm }) => (
         >
           <Column width='100%'>
             <Layout flexBasis={92} display={['none', 'none', 'flex']} />
-            <Row display={['none', 'none', 'flex']} justifyContent='center'>
+            <Box display={['none', 'none', 'flex']} justifyContent='center'>
               <Text
+                textAlign='center'
                 textTransform='uppercase'
                 fontFamily='secondary'
                 fontWeight='bold'
@@ -62,7 +63,7 @@ const SkillsBlock: FC<SkillsBlockProps> = ({ openingTheRhythm }) => (
               >
                 {openingTheRhythm?.cta?.title}
               </Text>
-            </Row>
+            </Box>
             <Layout flexBasis={24} display={['none', 'none', 'flex']} />
             <Box alignSelf='center' width={400} display={['none', 'none', 'flex']}>
               <Text
