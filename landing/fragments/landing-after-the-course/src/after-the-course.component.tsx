@@ -13,17 +13,17 @@ import { Tape }                     from './tape'
 
 const AfterTheCourseBlock: FC<AfterTheCourseBlockProps> = ({ openingTheRhythm }) => (
   <Box width='100%' justifyContent='center' position='relative'>
-    <Box width={['100%', '100%', 1920]}>
+    <Box width={['100%', '100%','100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0}/>
       <Column width='100%'>
         <Layout flexBasis={[40, 65, 91]} />
         <Row>
-          <Box width={['100%', 440, 520]} >
+          <Box width={['100%', 420,420, 520]} >
             <Text
               textTransform='uppercase'
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={['regular', 'moderate', 'big']}
+              fontSize={['regular', 'moderate','moderate', 'big']}
               lineHeight='default'
               color='text.smokyWhite'
             >
