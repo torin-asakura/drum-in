@@ -25,7 +25,7 @@ const BannerFeelingOfTimeBlock: FC<BannerFeelingOfTimeProps> = ({ feelingOfTimeD
             <Layout flexBasis={[124, 142, 160]} />
             <Box position='relative'>
               <Column width='100%' alignItems={['start', 'start', 'end']}>
-                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1790 }}>
+                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: '100%' }}>
                   <Text
                     textAlign={['left', 'left', 'right']}
                     textTransform='uppercase'
