@@ -1,11 +1,13 @@
-import React          from 'react'
-import { FC }         from 'react'
-
-import { Box }              from '@ui/layout'
-import { Text ,Space}       from '@ui/text'
+import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { TitleProps } from './title.interfaces'
+import { Box }              from '@ui/layout'
+import { Space }            from '@ui/text'
+
+import { Text }      from '@ui/text'
+
+import { TitleProps }       from './title.interfaces'
 
 const Title: FC<TitleProps> = ({ price }) => (
   <Box>
@@ -19,7 +21,7 @@ const Title: FC<TitleProps> = ({ price }) => (
     >
       {price}
       <Space />
-      <FormattedMessage id='currency.ruble'/>
+      <FormattedMessage id='currency.ruble' />
     </Text>
   </Box>
 )

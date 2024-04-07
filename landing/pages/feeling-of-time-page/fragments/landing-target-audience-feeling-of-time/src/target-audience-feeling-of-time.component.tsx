@@ -33,7 +33,7 @@ const TargetAudienceFeelingOfTimeBlock: FC<TargetAudienceFeelingOfTimeProps> = (
 
   return (
     <Row justifyContent='center'>
-      <Box width={['100%', '100%', 1920]}>
+      <Box width={['100%', '100%','100%', '100%']}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[32, 46, 60]} />
@@ -53,29 +53,27 @@ const TargetAudienceFeelingOfTimeBlock: FC<TargetAudienceFeelingOfTimeProps> = (
           <Box
             width='100%'
             position='relative'
-            height={{ _: 309, tablet: 550, laptop: 912, wide: 694 }}
+            height={{ _: 310, tablet: 650, laptop: 960, wide: 694 }}
           >
-            <ItemCard
-              number={firstCardData.number}
-              text={firstCardData.description}
-              positionHorizontal={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
-              positionVertical={{ _: 0, tablet: 0, laptop: 0, wide: 0 }}
-              zIndex={3}
-            />
-            <ItemCard
-              number={secondCardData.number}
-              text={secondCardData.description}
-              positionHorizontal={{ _: 45, tablet: 100, laptop: 0, wide: 313 }}
-              positionVertical={{ _: 100, tablet: 175, laptop: 309, wide: 196 }}
-              zIndex={2}
-            />
-            <ItemCard
-              number={thirdCardData.number}
-              text={thirdCardData.description}
-              positionHorizontal={{ _: 89, tablet: 225, laptop: 0, wide: 626 }}
-              positionVertical={{ _: 200, tablet: 350, laptop: 618, wide: 400 }}
-              zIndex={1}
-            />
+            <Box fill zIndex={3} position='absolute'>
+              <ItemCard number={firstCardData.number} text={firstCardData.description} />
+            </Box>
+
+            <Box fill zIndex={2}>
+              <Layout flexBasis={[45,0,0,360]} />
+              <Column fill>
+                <Layout flexBasis={[100,220,320,200]} />
+                <ItemCard number={secondCardData.number} text={secondCardData.description} />
+              </Column>
+            </Box>
+
+            <Box fill zIndex={1} position='absolute'>
+              <Layout flexBasis={[110,0,0,900]} />
+              <Column fill>
+                <Layout flexBasis={[200,440,640,400]} />
+                <ItemCard number={thirdCardData.number} text={thirdCardData.description} />
+              </Column>
+            </Box>
           </Box>
           <Layout flexBasis={[32, 77, 120]} />
         </Column>
