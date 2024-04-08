@@ -18,7 +18,7 @@ const Card: FC<CardProps> = ({ title, link, content, domainName }) => {
   return (
     <Link href={href} target='_blank'>
       <Box
-        width={['100%', 450, 368]}
+        width={['100%', '100%', 368]}
         height={[127, 160, 300]}
         border={['normalSmokyWhite', 'normalSmokyWhite', 'mediumBoldSmokyWhite']}
         borderRadius={['medium', 'big', 'bigger']}
