@@ -142,6 +142,7 @@ const Content: FC<ContentProps> = ({ fifthDimensionData }) => {
           rectanglePositionY={54}
           backgroundRectangle='transparentGreenGradient'
         />
+        <Layout flexBasis={[0,0,110,50]}/>
       </Column>
       <Layout flexBasis={24} flexShrink={0} />
     </Box>
