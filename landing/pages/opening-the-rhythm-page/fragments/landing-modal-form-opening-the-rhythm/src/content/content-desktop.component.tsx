@@ -27,7 +27,10 @@ const ContentDesktop: FC<ContentProps> = ({
   setRole,
   openingTheRhythm,
 }) => {
-  const { amount, recalculateAmount } = useContent(roleVar[0], openingTheRhythm)
+  const { amount, recalculateAmount, months, recalculateMonths } = useContent(
+    roleVar[0],
+    openingTheRhythm
+  )
   return (
     <>
       <Box
@@ -101,8 +104,10 @@ const ContentDesktop: FC<ContentProps> = ({
       <Layout flexBasis={28} flexShrink={0} />
       <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
         <ContentInstallmentPlan
-          recalculate={recalculateAmount}
+          recalculateMonths={recalculateMonths}
+          recalculateAmount={recalculateAmount}
           amount={amount}
+          months={months}
           openingTheRhythm={openingTheRhythm}
         />
       </Condition>
@@ -110,10 +115,10 @@ const ContentDesktop: FC<ContentProps> = ({
         <ContentOneTimePayment
           openingTheRhythm={openingTheRhythm}
           amount={amount}
-          recalculate={recalculateAmount}
+          recalculateAmount={recalculateAmount}
         />
       </Condition>
-      <Condition match={!!amount}>
+      <Condition match={!!amount && amount > 0}>
         <Form
           amount={
             roleVar[0] === RoleModalForm.InstallmentPlan

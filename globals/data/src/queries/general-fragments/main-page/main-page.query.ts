@@ -13,8 +13,9 @@ generalFragment(id:$id) {
               benefit
             }
           }
-          runningline {
-            text
+          runningLine {
+            content{text}
+            icon{node{sourceUrl}}
           }
           chooseCourse {
             title

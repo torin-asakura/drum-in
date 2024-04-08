@@ -15,7 +15,7 @@ import { MotionBox }                   from '../styles'
 import { InfoProps }                   from './info.interfaces'
 
 const Info: FC<InfoProps> = ({ description }) => {
-  const { triggerProps, layerProps, isOpen, render } = usePopover('bottom-center', 9, 'hover')
+  const { triggerProps, layerProps, isOpen, render } = usePopover('bottom-center', 20, 'hover')
   const [visible, setVisible] = useState<boolean>(false)
 
   return (
@@ -24,6 +24,7 @@ const Info: FC<InfoProps> = ({ description }) => {
         {...triggerProps}
         display={['none', 'none', 'flex']}
         flexShrink={0}
+        zIndex={100}
         width={20}
         height={20}
         alignItems='center'

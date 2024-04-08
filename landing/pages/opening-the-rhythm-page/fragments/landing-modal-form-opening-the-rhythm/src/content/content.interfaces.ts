@@ -15,4 +15,6 @@ export interface ContentProps {
 export interface Content {
   amount: number
   recalculateAmount: (price: number, operation: boolean) => void
+  months: number
+  recalculateMonths: (months: number, operation: boolean) => void
 }

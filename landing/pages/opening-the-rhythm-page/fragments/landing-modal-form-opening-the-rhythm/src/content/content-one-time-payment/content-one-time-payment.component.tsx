@@ -11,21 +11,19 @@ import { Text }                       from '@ui/text'
 import { SelectedCourse }             from '../selected-course'
 import { ContentOneTimePaymentProps } from './content-one-time-payment.interfaces'
 
-// TODO: add description for courses
-
 const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({
   openingTheRhythm,
   amount,
-  recalculate,
+  recalculateAmount,
 }) => (
   <>
     {openingTheRhythm?.payment?.courses?.nodes.map((item) => (
       <>
         <SelectedCourse
           title={item?.title || ''}
-          description='description'
+          description={item?.individualCourseData?.aboutCourse || ''}
           price={item?.individualCourseData?.price?.fullPrice || 0}
-          recalculate={recalculate}
+          recalculateAmount={recalculateAmount}
         />
         <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
       </>
@@ -41,7 +39,7 @@ const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({
         <FormattedMessage id='landing_modal_forms.amount' />
         <Space />
         <FormattedNumber
-          value={amount}
+          value={amount > 0 ? amount : 0}
           style='currency' // eslint-disable-line
           currency='RUB'
           maximumFractionDigits={0}

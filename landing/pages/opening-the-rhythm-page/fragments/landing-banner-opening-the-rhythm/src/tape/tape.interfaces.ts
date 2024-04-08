@@ -1,3 +1,3 @@
 export interface TapeProps {
-  level: string
+  level?: string | null
 }

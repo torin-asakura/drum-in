@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@ui/icons": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1"
   },

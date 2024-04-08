@@ -33,7 +33,7 @@ const ProgramBlock: FC<ProgramProps> = ({ openingTheRhythm }) => (
         <Layout flexBasis={[8, 16, 24]} />
         <Box>
           <Text
-            width={['100%', 450, 595]}
+            width={[340, 450, 605]}
             textAlign={['left', 'left', 'center']}
             fontWeight='medium'
             fontSize={['semiMedium', 'regular', 'large']}

@@ -1286,6 +1286,8 @@ export type Content = AcfFieldGroup &
   AcfFieldGroupFields &
   Content_Fields & {
     __typename?: 'Content'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
+    aboutCourse?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
     background?: Maybe<ContentBackground>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
@@ -1412,11 +1414,42 @@ export type ContentCta = AcfFieldGroup &
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+    skillsImage?: Maybe<ContentCtaSkillsImage>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
     subtitle?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
     title?: Maybe<Scalars['String']['output']>
   }
+
+/** The &quot;ContentCtaSkillsImage&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ContentCtaSkillsImage = AcfFieldGroup &
+  AcfFieldGroupFields &
+  ContentCtaSkillsImage_Fields & {
+    __typename?: 'ContentCtaSkillsImage'
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+    compactComposition?: Maybe<AcfMediaItemConnectionEdge>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+    wideComposition?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;ContentCtaSkillsImage&quot; Field Group */
+export type ContentCtaSkillsImage_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+  compactComposition?: Maybe<AcfMediaItemConnectionEdge>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+  wideComposition?: Maybe<AcfMediaItemConnectionEdge>
+}
 
 /** Interface representing fields of the ACF &quot;ContentCta&quot; Field Group */
 export type ContentCta_Fields = {
@@ -1425,6 +1458,8 @@ export type ContentCta_Fields = {
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+  skillsImage?: Maybe<ContentCtaSkillsImage>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
   subtitle?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
@@ -2244,6 +2279,8 @@ export enum ContentTypesOfTagEnum {
 
 /** Interface representing fields of the ACF &quot;Content&quot; Field Group */
 export type Content_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
+  aboutCourse?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
   background?: Maybe<ContentBackground>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Content&quot; Field Group */
@@ -4530,6 +4567,8 @@ export type IndividualCourseData = AcfFieldGroup &
   AcfFieldGroupFields &
   IndividualCourseData_Fields & {
     __typename?: 'IndividualCourseData'
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
+    aboutCourse?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
     background?: Maybe<IndividualCourseDataBackground>
     /**
@@ -4858,6 +4897,8 @@ export type IndividualCourseDataProcess_Fields = {
 
 /** Interface representing fields of the ACF &quot;IndividualCourseData&quot; Field Group */
 export type IndividualCourseData_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
+  aboutCourse?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseData&quot; Field Group */
   background?: Maybe<IndividualCourseDataBackground>
   /**
@@ -5007,8 +5048,8 @@ export type Main = AcfFieldGroup &
     hero?: Maybe<MainHero>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
     individualLesson?: Maybe<MainIndividualLesson>
-    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-    runningline?: Maybe<Array<Maybe<MainRunningline>>>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
+    runningLine?: Maybe<MainRunningLine>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
     slider?: Maybe<MainSlider>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
@@ -5349,29 +5390,58 @@ export type MainIndividualLesson_Fields = {
   title?: Maybe<Scalars['String']['output']>
 }
 
-/** The &quot;MainRunningline&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type MainRunningline = AcfFieldGroup &
+/** The &quot;MainRunningLine&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type MainRunningLine = AcfFieldGroup &
   AcfFieldGroupFields &
-  MainRunningline_Fields & {
-    __typename?: 'MainRunningline'
+  MainRunningLine_Fields & {
+    __typename?: 'MainRunningLine'
+    /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+    content?: Maybe<Array<Maybe<MainRunningLineContent>>>
     /**
      * The name of the field group
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
-    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningline&quot; Field Group */
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+    icon?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** The &quot;MainRunningLineContent&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type MainRunningLineContent = AcfFieldGroup &
+  AcfFieldGroupFields &
+  MainRunningLineContent_Fields & {
+    __typename?: 'MainRunningLineContent'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningLineContent&quot; Field Group */
     text?: Maybe<Scalars['String']['output']>
   }
 
-/** Interface representing fields of the ACF &quot;MainRunningline&quot; Field Group */
-export type MainRunningline_Fields = {
+/** Interface representing fields of the ACF &quot;MainRunningLineContent&quot; Field Group */
+export type MainRunningLineContent_Fields = {
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningline&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;MainRunningLineContent&quot; Field Group */
   text?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;MainRunningLine&quot; Field Group */
+export type MainRunningLine_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+  content?: Maybe<Array<Maybe<MainRunningLineContent>>>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainRunningLine&quot; Field Group */
+  icon?: Maybe<AcfMediaItemConnectionEdge>
 }
 
 /** The &quot;MainSlider&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -5562,8 +5632,8 @@ export type Main_Fields = {
   hero?: Maybe<MainHero>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
   individualLesson?: Maybe<MainIndividualLesson>
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
-  runningline?: Maybe<Array<Maybe<MainRunningline>>>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
+  runningLine?: Maybe<MainRunningLine>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
   slider?: Maybe<MainSlider>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;Main&quot; Field Group */
@@ -14240,7 +14310,17 @@ export type MainPageQuery = {
         about?: string | null
         benefits?: Array<{ __typename?: 'MainHeroBenefits'; benefit?: string | null } | null> | null
       } | null
-      runningline?: Array<{ __typename?: 'MainRunningline'; text?: string | null } | null> | null
+      runningLine?: {
+        __typename?: 'MainRunningLine'
+        content?: Array<{
+          __typename?: 'MainRunningLineContent'
+          text?: string | null
+        } | null> | null
+        icon?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
+      } | null
       chooseCourse?: {
         __typename?: 'MainChooseCourse'
         title?: string | null
@@ -14625,9 +14705,11 @@ export type GetOpeningTheRhythmQuery = {
                 id: string
                 individualCourseData?: {
                   __typename?: 'IndividualCourseData'
+                  aboutCourse?: string | null
                   price?: {
                     __typename?: 'IndividualCourseDataPrice'
                     fullPrice?: number | null
+                    courseLengthInMonths?: number | null
                   } | null
                 } | null
               }
@@ -14651,7 +14733,22 @@ export type GetOpeningTheRhythmQuery = {
           } | null> | null
         } | null
       } | null
-      cta?: { __typename?: 'ContentCta'; title?: string | null; subtitle?: string | null } | null
+      cta?: {
+        __typename?: 'ContentCta'
+        title?: string | null
+        subtitle?: string | null
+        skillsImage?: {
+          __typename?: 'ContentCtaSkillsImage'
+          wideComposition?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          compactComposition?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+        } | null
+      } | null
       details?: {
         __typename?: 'ContentDetails'
         title?: string | null
@@ -15633,10 +15730,43 @@ export const MainPageDocument = {
                       },
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'runningline' },
+                        name: { kind: 'Name', value: 'runningLine' },
                         selectionSet: {
                           kind: 'SelectionSet',
-                          selections: [{ kind: 'Field', name: { kind: 'Name', value: 'text' } }],
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'content' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'text' } },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'icon' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
                         },
                       },
                       {
@@ -16996,6 +17126,10 @@ export const GetOpeningTheRhythmDocument = {
                                                   selections: [
                                                     {
                                                       kind: 'Field',
+                                                      name: { kind: 'Name', value: 'aboutCourse' },
+                                                    },
+                                                    {
+                                                      kind: 'Field',
                                                       name: { kind: 'Name', value: 'price' },
                                                       selectionSet: {
                                                         kind: 'SelectionSet',
@@ -17005,6 +17139,13 @@ export const GetOpeningTheRhythmDocument = {
                                                             name: {
                                                               kind: 'Name',
                                                               value: 'fullPrice',
+                                                            },
+                                                          },
+                                                          {
+                                                            kind: 'Field',
+                                                            name: {
+                                                              kind: 'Name',
+                                                              value: 'courseLengthInMonths',
                                                             },
                                                           },
                                                         ],
@@ -17065,6 +17206,59 @@ export const GetOpeningTheRhythmDocument = {
                           selections: [
                             { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                             { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'skillsImage' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'wideComposition' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'compactComposition' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
                           ],
                         },
                       },

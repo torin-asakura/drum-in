@@ -18,12 +18,22 @@ import { Text }                from '@ui/text'
 import { Info }                from './info'
 import { SelectedCourseProps } from './selected-course.interfaces'
 
-const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price, recalculate }) => {
+const SelectedCourse: FC<SelectedCourseProps> = ({
+  title,
+  description,
+  price,
+  recalculateAmount,
+  recalculateMonths,
+  months,
+}) => {
   const [remove, setRemove] = useState<boolean>(false)
   const handlerToggleRemove = () => {
     remove ? setRemove(false) : setRemove(true) // eslint-disable-line
-    if (typeof price !== 'undefined' && typeof recalculate === 'function')
-      recalculate(price, remove)
+    if (typeof price !== 'undefined' && typeof recalculateAmount === 'function')
+      recalculateAmount(price, remove)
+    if (recalculateMonths && months) {
+      recalculateMonths(months, remove)
+    }
   }
   return (
     <Row>
@@ -97,28 +107,30 @@ const SelectedCourse: FC<SelectedCourseProps> = ({ title, description, price, re
           size='middlingPaddingSemiBigHeight'
           variant={remove ? 'veryTransparentSmokyWhiteBackground' : 'transparentWhiteBackground'}
           onClick={handlerToggleRemove}
-        >
-          <Condition match={remove}>
-            <ReturnIcon width={20} height={20} />
-          </Condition>
-          <Condition match={!remove}>
-            <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
-          </Condition>
-        </Button>
+          iconSvg={
+            remove ? (
+              <ReturnIcon width={20} height={20} />
+            ) : (
+              <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
+            )
+          }
+          horizontalLocation='left'
+        />{' '}
       </Box>
       <Box display={['flex', 'flex', 'none']}>
         <Button
           size='semiLittlePaddingSemiMediumHeight'
           variant={remove ? 'veryTransparentSmokyWhiteBackground' : 'transparentWhiteBackground'}
           onClick={handlerToggleRemove}
-        >
-          <Condition match={remove}>
-            <ReturnIcon width={20} height={20} />
-          </Condition>
-          <Condition match={!remove}>
-            <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
-          </Condition>
-        </Button>
+          iconSvg={
+            remove ? (
+              <ReturnIcon width={20} height={20} />
+            ) : (
+              <CrossMenuIcon width={20} height={20} color='rgb(128, 127, 127)' />
+            )
+          }
+          horizontalLocation='left'
+        />
       </Box>
     </Row>
   )
