@@ -16,9 +16,9 @@ import { RightColumnProps } from './right-column.interfaces'
 const RightColumn: FC<RightColumnProps> = ({ privateLessonData }) => {
   const { formatMessage } = useIntl()
   return (
-    <Column width={['100%', '100%', 598]}>
-      <Box display={['none', 'none', 'flex']}>
-        <Text fontWeight='medium' fontSize='mild' lineHeight='medium' color='text.purple'>
+    <Column   flexBasis='100%'>
+      <Box display={['none', 'none', 'flex']} >
+        <Text fontWeight='medium' fontSize={['mild','mild','small','mild']} lineHeight='medium' color='text.purple'>
           {privateLessonData?.cta?.title}
         </Text>
       </Box>
@@ -65,7 +65,7 @@ const RightColumn: FC<RightColumnProps> = ({ privateLessonData }) => {
           </Row>
         ))}
       </Column>
-      <Box order={[1, 1, 0]}>
+      <Box  order={[1, 1, 0]}>
         <Text
           fontFamily='secondary'
           fontWeight='bold'

@@ -12,21 +12,21 @@ import { Text }             from '@ui/text'
 import { LeftColumnProps }  from './left-column.interfaces'
 
 const LeftColumn: FC<LeftColumnProps> = ({ privateLessonData }) => (
-  <Column display={['none', 'none', 'flex']}>
-    <Box>
+  <Column display={['none', 'none', 'flex']} flexBasis='100%'>
+    <Box >
       <Text
-        wordBreak='break-word'
+        textWrap='nowrap'
         textTransform='uppercase'
         fontFamily='secondary'
         fontWeight='bold'
-        fontSize={['increased', 'increased', 'increased', 'big']}
+        fontSize={['increased', 'increased', 'semiModerate', 'big']}
         lineHeight='default'
         color='text.blackAmber'
       >
         {privateLessonData?.title}
       </Text>
     </Box>
-    <Layout flexBasis={0} flexGrow={3} />
+    <Layout flexBasis='100%' flexGrow={3} />
     {privateLessonData?.details?.map((item) => (
       <Row>
         <Box>

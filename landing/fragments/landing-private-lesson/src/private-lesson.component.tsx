@@ -47,14 +47,13 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
               <Layout flexBasis={[24, 38, 52]} flexShrink={0} />
               <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
                 <LeftColumn privateLessonData={privateLessonData} />
-                <Layout flexBasis={0} flexGrow={3} display={['none', 'none', 'flex']} />
                 <Box display={['none', 'none', 'flex']} alignItems='center' height='100%'>
                   <RightDownArrowIcon width={105} height={130} />
                 </Box>
-                <Layout display={['none', 'none', 'flex']} flexBasis={20} flexShrink={2} />
                 <RightColumn privateLessonData={privateLessonData} />
+
               </Row>
-              <Layout flexBasis={[24, 38, 52]} flexShrink={0} />
+              <Layout flexBasis={[24, 38, 52]} flexShrink={0} flexGrow={3}/>
             </Row>
             <Layout flexBasis={[23, 40, 52]} />
           </Column>
