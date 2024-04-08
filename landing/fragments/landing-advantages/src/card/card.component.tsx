@@ -10,7 +10,8 @@ import { CardProps } from './card.interfaces'
 
 const Card: FC<CardProps> = ({ counter, text }) => (
   <Box
-    width={[300, 370, 430]}
+    flexShrink={0}
+    width={[300, 360,'100%', 430]}
     height={[180, 240, 300]}
     borderRadius={['medium', 'big', 'bigger']}
     border={['normalBoldDark', 'mediumBoldBlackAmber', 'semiBoldDark']}

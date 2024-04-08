@@ -33,10 +33,10 @@ const AdvantagesBlock: FC<AdvantagesProps> = ({ connacolData }) => (
             <OpenOvalIcon width={421} height={150} />
           </Box>
         </Box>
-        <Layout flexBasis={{ _: 24, tablet: 40, laptop: 85, wide: 179 }} flexShrink={0} />
+        <Layout flexBasis={{ _: 24, tablet: 40, laptop: 190, wide: 190 }} flexShrink={0} />
         <DesktopCards connacolData={connacolData} />
         <MobileCards connacolData={connacolData} />
-        <Layout flexBasis={[32, 60, 190]} flexShrink={0} />
+        <Layout flexBasis={[32, 60,190, 190]} flexShrink={0} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Box>
