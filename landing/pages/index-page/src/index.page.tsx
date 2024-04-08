@@ -16,7 +16,7 @@ import { StudentsBlock }            from '@landing/learning-students'
 import { PrivateLessonBlock }       from '@landing/private-lesson-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
 import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import { Box,Layout }                      from '@ui/layout'
 import { SpyScroll }                from '@ui/spy-scroll'
 import { SpyScrollProvider }        from '@ui/spy-scroll'
 import { useIntersectionObserver }  from '@ui/intersection-observer'
@@ -120,6 +120,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
                 />
               </Box>
             </Box>
+            <Layout height={[40,0,0,0]} />
             <StudentsBlock
               studentsData={mainPageData.students}
               {...getObserverOptions('students')}

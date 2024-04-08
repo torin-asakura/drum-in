@@ -21,7 +21,7 @@ const TagBlock: FC<TagProps> = ({ text }) => (
     <Text
       textTransform='uppercase'
       fontWeight='semiBold'
-      fontSize={['micro', 'semiMedium', 'medium']}
+      fontSize={['micro', 'semiMedium','semiMedium', 'medium']}
       lineHeight='default'
       color='text.smokyWhite'
     >

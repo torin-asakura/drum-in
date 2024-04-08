@@ -138,7 +138,7 @@ const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
         </SwiperSlide>
       </Slider>
     </Box>
-    <Layout flexBasis={[24, 84, 163]} />
+    <Layout flexBasis={[0, 0, 163]} />
   </Column>
 )
 

@@ -51,7 +51,6 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
                   <RightDownArrowIcon width={105} height={130} />
                 </Box>
                 <RightColumn privateLessonData={privateLessonData} />
-
               </Row>
               <Layout flexBasis={[24, 38, 52]} flexShrink={0} flexGrow={3}/>
             </Row>
