@@ -89,7 +89,7 @@ const ProgramSeventhHeavenBlock: FC<ProgramSeventhHeavenProps> = ({
             <Box
               data-scroll-speed='9'
               height='100vh'
-              width={{ _: 0, tablet: 0, laptop: '55vw', wide: '32vw' }}
+              width={{ _: 0, tablet: 0, laptop: '68vw', wide: '52vw' }}
               flexShrink={0}
               backgroundColor='background.smokyWhite'
             />

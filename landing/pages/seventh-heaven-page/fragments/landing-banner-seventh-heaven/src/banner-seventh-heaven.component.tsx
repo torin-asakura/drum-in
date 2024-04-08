@@ -24,7 +24,7 @@ const BannerSeventhHeavenBlock: FC<BannerSeventhHeavenProps> = ({ seventhHeavenD
             <Layout flexBasis={[124, 142, 160]} />
             <Box position='relative'>
               <Column width='100%' alignItems={['start', 'start', 'end']}>
-                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1400 }}>
+                <Box width={{ _: '100%', tablet: '100%', laptop: 1000, wide: 1400 }}>
                   <Text
                     textAlign={['left', 'left', 'right']}
                     textTransform='uppercase'
@@ -60,7 +60,12 @@ const BannerSeventhHeavenBlock: FC<BannerSeventhHeavenProps> = ({ seventhHeavenD
                   </Box>
                 </Box>
               </Column>
-              <Box display={['none', 'none', 'flex']} position='absolute' left={450} top={82}>
+              <Box
+                display={['none', 'none', 'none', 'flex']}
+                position='absolute'
+                left={450}
+                top={82}
+              >
                 <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
               </Box>
               <Box

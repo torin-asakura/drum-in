@@ -11,6 +11,18 @@ export type OpeningTheRhythmBackgroundProps = {
   } | null
 }
 
+export type SkillsImageType = {
+  __typename?: 'ContentCtaSkillsImage'
+  wideComposition?: {
+    __typename?: 'AcfMediaItemConnectionEdge'
+    node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+  } | null
+  compactComposition?: {
+    __typename?: 'AcfMediaItemConnectionEdge'
+    node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+  } | null
+}
+
 export type OpeningTheRhythmDataProps = {
   payment?: {
     title?: string | null
@@ -38,7 +50,12 @@ export type OpeningTheRhythmDataProps = {
       tagsCloud?: Array<{ tag?: string | null } | null> | null
     } | null
   } | null
-  cta?: { title?: string | null; subtitle?: string | null } | null
+  cta?: {
+    __typename?: 'ContentCta'
+    title?: string | null
+    subtitle?: string | null
+    skillsImage?: SkillsImageType | null
+  } | null
   details?: {
     title?: string | null
     description?: string | null
