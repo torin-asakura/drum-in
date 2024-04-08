@@ -84,7 +84,7 @@ const ProgramConnacolBlock: FC<ProgramConnacolProps> = ({ background, connacolDa
             <Box
               data-scroll-speed='9'
               height='100vh'
-              width={{ _: 0, tablet: 0, laptop: '55vw', wide: '40vw' }}
+              width={{ _: 0, tablet: 0, laptop: '68vw', wide: '52vw' }}
               flexShrink={0}
               backgroundColor='background.smokyWhite'
             />
