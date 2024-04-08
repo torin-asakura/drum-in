@@ -15,17 +15,17 @@ const BannerPolyrhythmicKeysBlock: FC<BannerPolyrhythmicKeysProps> = ({ polyrhyt
   const description = formatContent(polyrhythmicKeysData?.content)
   return (
     <Row justifyContent='center'>
-      <Box width={['100%', '100%', 1920]}>
+      <Box width={['100%',900,1400, 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%' alignItems={['start', 'start', 'center']}>
           <Layout flexBasis={[124, 130, 160]} flexShrink={0} />
-          <Box>
+          <Box width={[400,'100%','100%','100%']}>
             <Text
               textAlign={['left', 'left', 'center']}
               textTransform='uppercase'
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={{ _: 'small', tablet: 'extra', laptop: 'giant', wide: 'biggest' }}
+              fontSize={{ _: 'moderate', tablet: 'extra', laptop: 'semiGiant', wide: 'biggest' }}
               lineHeight={['default', 'default', 'semiSmall']}
               color='text.smokyWhite'
             >
