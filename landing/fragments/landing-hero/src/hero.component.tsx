@@ -29,7 +29,7 @@ const Hero: FC<HeroProps> = forwardRef(({ mainPageData, background }, ref: any) 
       flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.mobile?.hero?.node.sourceUrl})`}
-      backgroundSize='contain'
+      backgroundSize='100% 100%'
       backgroundRepeat='no-repeat'
       backgroundPosition='right center'
     >

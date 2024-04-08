@@ -34,6 +34,7 @@ const SliderBlock: FC<SliderBlockProps> = ({ gallery }) => {
         <Condition
           match={isWideViewport && teacherChildren !== [] && teacherChildren !== undefined}
         >
+          <Box>
           <Slider
             slidesPerView={2}
             allowTouchMove
@@ -49,32 +50,57 @@ const SliderBlock: FC<SliderBlockProps> = ({ gallery }) => {
               <SwiperSlide>{child}</SwiperSlide>
             ))}
           </Slider>
+          </Box>
         </Condition>
 
         <Condition
-          match={
-            !isWideViewport &&
-            !isMobileViewport &&
-            teacherChildren !== [] &&
-            teacherChildren !== undefined
-          }
+          match={!isWideViewport && !isMobileViewport && teacherChildren !== [] && teacherChildren !== undefined}
         >
-          <Slider
-            slidesPerView={2}
-            allowTouchMove
-            clName='teacher-slider'
-            spaceBetween={120}
-            centeredSlides
-            mousewheel
-            forceToAxis
-            grabCursor
-            loop
-          >
-            {Children.map(teacherChildren, (child) => (
-              <SwiperSlide>{child}</SwiperSlide>
-            ))}
-          </Slider>
+          <Box>
+            <Slider
+              slidesPerView={2}
+              allowTouchMove
+              clName='teacher-slider'
+              spaceBetween={60}
+              centeredSlides
+              mousewheel
+              forceToAxis
+              grabCursor
+              loop
+            >
+              {Children.map(teacherChildren, (child) => (
+                <SwiperSlide>{child}</SwiperSlide>
+              ))}
+            </Slider>
+          </Box>
         </Condition>
+
+        {/*<Condition*/}
+        {/*  match={*/}
+        {/*    !isWideViewport &&*/}
+        {/*    !isMobileViewport &&*/}
+        {/*    teacherChildren !== [] &&*/}
+        {/*    teacherChildren !== undefined*/}
+        {/*  }*/}
+        {/*>*/}
+        {/*  <Box position='relative' fill>*/}
+        {/*  <Slider*/}
+        {/*    slidesPerView='auto'*/}
+        {/*    allowTouchMove*/}
+        {/*    clName='teacher-slider'*/}
+        {/*    spaceBetween={0}*/}
+        {/*    centeredSlides*/}
+        {/*    mousewheel*/}
+        {/*    forceToAxis*/}
+        {/*    grabCursor*/}
+        {/*    loop*/}
+        {/*  >*/}
+        {/*    {Children.map(teacherChildren, (child) => (*/}
+        {/*      <SwiperSlide>{child}</SwiperSlide>*/}
+        {/*    ))}*/}
+        {/*  </Slider>*/}
+        {/*  </Box>*/}
+        {/*</Condition>*/}
       </Box>
 
       <Box>

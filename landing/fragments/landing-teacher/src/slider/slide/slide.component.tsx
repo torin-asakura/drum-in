@@ -8,8 +8,8 @@ import { SlideProps } from './slide.interfaces'
 
 const Slide: FC<SlideProps> = ({ pathImage, alt }) => (
   <Box
-    width={[300, 600, 660, 900]}
-    height={[215, 425, 450, 645]}
+    width={[300, 400, 600, 900]}
+    height={[200, 320, 390, 645]}
     borderRadius='bigger'
     border='mediumBoldSmokyWhite'
     overflow='hidden'

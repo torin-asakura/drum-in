@@ -427,16 +427,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/swiper@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@atls-ui-parts/swiper@npm:0.0.3"
+"@atls-ui-parts/swiper@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/swiper@npm:0.1.1"
   dependencies:
-    nanoid: "npm:^4.0.0"
+    nanoid: "npm:4.0.2"
   peerDependencies:
-    "@emotion/css": "*"
-    react: ^17.0.1
-    swiper: ^8.3.1
-  checksum: 6b4309d067dfbf1a88830865a6d9d61b0cc9a1073c67cc6f2241b4acac8a2660ea602d6e36231ba6f5228fae1eff479b0cf7bca1d24aaeb0a11be58d650ed0c4
+    "@emotion/css": 11.11.2
+    react: 18.2.0
+    swiper: 9.4.1
+  checksum: 2913f84d2969040b588499581eacb71635a5f7cb8ee97a1988e6466bf55712c19324a0d046e3a39bef520b3258dc23528de65f0c6bd6b30ba91bb516a442bbd9
   languageName: node
   linkType: hard
 
@@ -6117,7 +6117,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
-    "@atls-ui-parts/swiper": "npm:0.0.3"
+    "@atls-ui-parts/swiper": "npm:0.1.1"
     "@emotion/css": "npm:11.11.0"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
@@ -13072,21 +13072,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:4.0.2":
+  version: 4.0.2
+  resolution: "nanoid@npm:4.0.2"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 0e28bade6b10396bc0936980c7569e9710341b3dd8775bcd0645b7d23f59ff64e59c4413f48836bc336711ef1cc4f61f6453946a3bf69c4c235fab9d221f9216
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.4":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:
     nanoid: bin/nanoid.cjs
   checksum: a8844cf563f0e91174e12b960d602847c5557bd44e880fec501f747e2ab2da1653a9b6acb514aa524c942fe3a19b18f47f3acf58a3ee6fd22fd17e47608da3aa
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^4.0.0":
-  version: 4.0.2
-  resolution: "nanoid@npm:4.0.2"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 0e28bade6b10396bc0936980c7569e9710341b3dd8775bcd0645b7d23f59ff64e59c4413f48836bc336711ef1cc4f61f6453946a3bf69c4c235fab9d221f9216
   languageName: node
   linkType: hard
 
