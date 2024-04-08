@@ -52,7 +52,7 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
                 </Box>
                 <RightColumn privateLessonData={privateLessonData} />
               </Row>
-              <Layout flexBasis={[24, 38, 52]} flexShrink={0} flexGrow={3}/>
+              <Layout flexBasis={[24, 38, 52]} flexShrink={0} flexGrow={3} />
             </Row>
             <Layout flexBasis={[23, 40, 52]} />
           </Column>

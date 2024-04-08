@@ -53,7 +53,7 @@ const ContactBlock: FC<ContactBlockProps> = ({ contactsData }) => (
                 link={item?.link || ''}
                 content={item?.content || ''}
               />
-              <Layout flexBasis={[12, 24,40, 118]} />
+              <Layout flexBasis={[12, 24, 40, 118]} />
             </React.Fragment>
           ))}
         </Box>

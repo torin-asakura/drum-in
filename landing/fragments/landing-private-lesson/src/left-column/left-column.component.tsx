@@ -13,7 +13,7 @@ import { LeftColumnProps }  from './left-column.interfaces'
 
 const LeftColumn: FC<LeftColumnProps> = ({ privateLessonData }) => (
   <Column display={['none', 'none', 'flex']} flexBasis='100%'>
-    <Box >
+    <Box>
       <Text
         textWrap='nowrap'
         textTransform='uppercase'

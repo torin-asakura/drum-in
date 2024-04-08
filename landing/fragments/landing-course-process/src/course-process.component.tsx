@@ -30,7 +30,7 @@ const CourseProcessBlock = () => {
               {processEducation?.title}
             </Text>
           </Box>
-          <Layout flexBasis={[24, 40,80, 101]} />
+          <Layout flexBasis={[24, 40, 80, 101]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       </Box>

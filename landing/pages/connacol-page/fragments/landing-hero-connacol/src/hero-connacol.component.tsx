@@ -15,7 +15,7 @@ const HeroConnacolBlock: FC<HeroConnacolProps> = ({ background, connacolData }) 
       flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
-      backgroundSize='100%'
+      backgroundSize={[0, '100% 42%', '100% 24%', '100% 24%']}
       backgroundRepeat='no-repeat'
       backgroundPosition='0px -100px'
     >

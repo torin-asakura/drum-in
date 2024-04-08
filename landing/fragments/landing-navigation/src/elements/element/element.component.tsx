@@ -94,8 +94,9 @@ const Element: FC<ElementProps> = ({
               <NextLink path={path}>
                 <Text
                   fontFamily='secondary'
-                  fontWeight='bold' g
-                  fontSize={['medium', 'semiModerate','moderate', 'big']}
+                  fontWeight='bold'
+                  g
+                  fontSize={['medium', 'semiModerate', 'moderate', 'big']}
                 >
                   {title}
                 </Text>
@@ -107,7 +108,7 @@ const Element: FC<ElementProps> = ({
             <Text
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={['medium', 'semiModerate','moderate', 'big']}
+              fontSize={['medium', 'semiModerate', 'moderate', 'big']}
             >
               {title}
             </Text>

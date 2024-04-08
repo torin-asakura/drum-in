@@ -15,7 +15,7 @@ const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelin
       flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
-      backgroundSize='100%'
+      backgroundSize={[0, '100% 42%', '100% 32%', '100% 26%']}
       backgroundRepeat='no-repeat'
       backgroundPosition='0px -300px'
     >
