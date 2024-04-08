@@ -44,7 +44,7 @@ const CardsStudent: FC<CardsStudentProps> = ({ studentCardsData }) => {
             clName='students-slider-desktop'
             spaceBetween={40}
             slidesPerView='auto'
-            slidesOffsetAfter={-40}
+            slidesOffsetAfter={40}
             slidesOffsetBefore={40}
             mousewheel
             grabCursor

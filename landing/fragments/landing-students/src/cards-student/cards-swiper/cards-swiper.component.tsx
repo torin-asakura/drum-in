@@ -26,7 +26,7 @@ const CardsSwiper: FC<CardsSwiperProps> = ({ studentCardsData }) => {
   )
 
   return (
-    <Box display={['flex', 'flex', 'none']}>
+    <Box display={['flex', 'none', 'none']}>
       <Condition match={studentsSliderChildren !== [] && studentsSliderChildren !== undefined}>
         <Slider
           clName='students-slider'

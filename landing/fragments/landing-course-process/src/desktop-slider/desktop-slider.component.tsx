@@ -19,8 +19,8 @@ const DesktopSlider: FC<DesktopSliderProps> = ({ processEducation }) => (
         clName='course-process-slider'
         spaceBetween={40}
         slidesPerView='auto'
-        slidesOffsetAfter={40}
-        slidesOffsetBefore={40}
+        slidesOffsetAfter={20}
+        slidesOffsetBefore={20}
         mousewheel
         grabCursor
         forceToAxis

@@ -22,9 +22,9 @@ const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref:
     <>
       <ModalWindow active={visibleModal} onClose={() => setVisibleModal(false)} />
       <Row justifyContent='center' ref={ref}>
-        <Box width={['100%', '100%', 1920]}>
+        <Box width={['100%', '100%', '100%']}>
           <Column width='100%'>
-            <Layout flexBasis={[32, 77, 120]} />
+            <Layout flexBasis={[0, 77, 120]} />
             <Box
               width='100%'
               flexWrap={['nowrap', 'nowrap', 'wrap']}

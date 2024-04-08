@@ -13,23 +13,24 @@ import { SongButton }        from './song-button'
 import { getIndent }         from '../helpers'
 
 const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => (
-  <Box width={['100%', '100%', 1920]}>
-    <Column width='100%'>
-      <Box height={['auto', 'auto', 543]}>
-        <Layout flexBasis={[20, 30, 40]} flexShrink={0} order={[1, 1, 0]} />
-        <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={1} />
+  <Box width={['100%', '100%', '100%', 1920]}>
+    <Column width='100%' alignItems='center'>
+      <Box fill justifyContent={['start', 'start', 'center']}>
+        <Layout flexBasis={[20, 30, 20, 160]} />
+
         <SongButton playSong={playSong} setPlaySong={setPlaySong} />
-        <Layout display={['none', 'none', 'flex']} flexBasis={60} flexShrink={14} />
-        <Box position='relative' order={[2, 2, 0]} width={['100%', '100%', 822]}>
+        <Layout flexBasis={[0, 0, 100]} />
+        <Box position='relative'>
           <Box
             display={['none', 'none', 'flex']}
             position='absolute'
-            top={-83}
-            left={-100}
+            top={-60}
+            left={-150}
             style={{ transform: 'rotate(-15deg)' }}
           >
             <ExperianceIcon width={160} height={160} />
           </Box>
+
           <Column>
             {teacherData?.statistics?.map((item, index) => (
               <OneCharacteristic
@@ -41,10 +42,10 @@ const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => 
             ))}
           </Column>
         </Box>
-        <Layout display={['none', 'none', 'flex']} flexBasis={0} flexGrow={1} />
+        <Layout flexBasis={[0, 0, 160]} />
         <EducationList teacherData={teacherData} />
-        <Layout flexBasis={0} flexGrow={3} order={[3, 3, 0]} />
-        <Layout flexBasis={[20, 30, 40]} flexShrink={0} order={[5, 5, 0]} />
+
+        <Layout flexBasis={[20, 20, 160]} />
       </Box>
       <Layout flexBasis={[32, 65, 122]} />
     </Column>

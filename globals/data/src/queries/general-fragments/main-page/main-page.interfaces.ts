@@ -9,7 +9,17 @@ export type HeroDataProps = {
   benefits?: Array<{ benefit?: string | null } | null> | null
 }
 
-export type RunningLineDataProps = Array<{ text?: string | null } | null> | null
+export type RunningLineDataProps = {
+  __typename?: 'MainRunningline'
+  content?: Array<{
+    __typename?: 'MainRunninglineContent'
+    text?: string | null
+  } | null> | null
+  icon?: {
+    __typename?: 'AcfMediaItemConnectionEdge'
+    node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+  } | null
+} | null
 
 export type ChooseCourseDataProps = {
   title?: string | null
@@ -69,7 +79,7 @@ export type StudentsDataProps = {
 
 export interface MainPageDataProps {
   hero?: HeroDataProps | null
-  runningline?: RunningLineDataProps
+  runningLine?: RunningLineDataProps
   chooseCourse?: ChooseCourseDataProps | null
   individualLesson?: IndividualLessonDataProps | null
   slider?: SliderDataProps | null
