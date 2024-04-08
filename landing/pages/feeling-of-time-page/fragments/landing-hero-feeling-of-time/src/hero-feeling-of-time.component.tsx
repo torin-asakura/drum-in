@@ -35,13 +35,18 @@ const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelin
     </Box>
     <Box
       display={['flex', 'none', 'none']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.mobile?.hero?.node.sourceUrl})`}
       backgroundSize='100%'
       backgroundRepeat='no-repeat'
       backgroundPosition='center top'
     >
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
       <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
       <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
       <ProgramFeelingOfTimeBlock
@@ -49,6 +54,7 @@ const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelin
         feelingOfTimeData={feelingOfTimeData}
         scrollId='mobile-scroll'
       />
+      </Box>
     </Box>
   </>
 )

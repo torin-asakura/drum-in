@@ -34,16 +34,22 @@ const HeroOpeningTheRhythmBlock: FC<HeroOpeningTheRhythmProps> = ({
     </Box>
     <Box
       display={['flex', 'none', 'none']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.mobile?.hero?.node.sourceUrl})`}
       backgroundSize='100%'
       backgroundRepeat='no-repeat'
       backgroundPosition='right center'
     >
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
       <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
       <AfterTheCourseBlock openingTheRhythm={openingTheRhythm} />
       <SkillsBlock openingTheRhythm={openingTheRhythm} />
+    </Box>
     </Box>
   </>
 )

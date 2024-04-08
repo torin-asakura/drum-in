@@ -36,19 +36,25 @@ const HeroPolyrhythmicKeysBlock: FC<HeroPolyrhythmicKeysProps> = ({
     </Box>
     <Box
       display={['flex', 'none', 'none']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.mobile?.hero?.node.sourceUrl})`}
       backgroundSize='100%'
       backgroundRepeat='no-repeat'
       backgroundPosition='center -60%'
     >
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
       <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData} />
       <ProgramPolyrhythmicKeyslBlock
         background={background}
         polyrhythmicKeysData={polyrhythmicKeysData}
         scrollId='mobile-scroll'
       />
+      </Box>
     </Box>
   </>
 )
