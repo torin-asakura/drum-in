@@ -16,7 +16,7 @@ const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => 
   <Box width={['100%', '100%','100%', 1920]} >
     <Column width='100%' alignItems='center'>
       <Box fill justifyContent={['start','start','center']}>
-        <Layout flexBasis={[20,20,160]}/>
+        <Layout flexBasis={[20,30,20,160]}/>
 
         <SongButton playSong={playSong} setPlaySong={setPlaySong} />
         <Layout flexBasis={[0,0,100]}/>

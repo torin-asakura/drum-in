@@ -18,7 +18,7 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
   ref: any
 ) => (
   <Row justifyContent='center' ref={ref}>
-    <Box width={['100%', '100%', '100%', '100%']}>
+    <Box fill>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[24, 60, 90]} />
@@ -36,7 +36,7 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
           </Text>
         </Box>
         <Layout flexBasis={[24, 34, 0]} display={['flex', 'flex', 'none']} />
-        <Box backgroundColor='background.smokyWhite' borderRadius={['extra', 'extra', 'bigger']}>
+        <Box width='100%' backgroundColor='background.smokyWhite' borderRadius={['extra', 'extra', 'bigger']}>
           <Column width='100%'>
             <Layout flexBasis={[40, 46, 52]} />
             <Row>
