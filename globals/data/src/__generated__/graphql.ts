@@ -1414,11 +1414,42 @@ export type ContentCta = AcfFieldGroup &
      * @deprecated Use __typename instead
      */
     fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+    skillsImage?: Maybe<ContentCtaSkillsImage>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
     subtitle?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
     title?: Maybe<Scalars['String']['output']>
   }
+
+/** The &quot;ContentCtaSkillsImage&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ContentCtaSkillsImage = AcfFieldGroup &
+  AcfFieldGroupFields &
+  ContentCtaSkillsImage_Fields & {
+    __typename?: 'ContentCtaSkillsImage'
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+    compactComposition?: Maybe<AcfMediaItemConnectionEdge>
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+    wideComposition?: Maybe<AcfMediaItemConnectionEdge>
+  }
+
+/** Interface representing fields of the ACF &quot;ContentCtaSkillsImage&quot; Field Group */
+export type ContentCtaSkillsImage_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+  compactComposition?: Maybe<AcfMediaItemConnectionEdge>
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentCtaSkillsImage&quot; Field Group */
+  wideComposition?: Maybe<AcfMediaItemConnectionEdge>
+}
 
 /** Interface representing fields of the ACF &quot;ContentCta&quot; Field Group */
 export type ContentCta_Fields = {
@@ -1427,6 +1458,8 @@ export type ContentCta_Fields = {
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
+  skillsImage?: Maybe<ContentCtaSkillsImage>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
   subtitle?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ContentCta&quot; Field Group */
@@ -14701,7 +14734,22 @@ export type GetOpeningTheRhythmQuery = {
           } | null> | null
         } | null
       } | null
-      cta?: { __typename?: 'ContentCta'; title?: string | null; subtitle?: string | null } | null
+      cta?: {
+        __typename?: 'ContentCta'
+        title?: string | null
+        subtitle?: string | null
+        skillsImage?: {
+          __typename?: 'ContentCtaSkillsImage'
+          wideComposition?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+          compactComposition?: {
+            __typename?: 'AcfMediaItemConnectionEdge'
+            node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+          } | null
+        } | null
+      } | null
       details?: {
         __typename?: 'ContentDetails'
         title?: string | null
@@ -17160,6 +17208,59 @@ export const GetOpeningTheRhythmDocument = {
                           selections: [
                             { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                             { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'skillsImage' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'wideComposition' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'compactComposition' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: { kind: 'Name', value: 'sourceUrl' },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
                           ],
                         },
                       },

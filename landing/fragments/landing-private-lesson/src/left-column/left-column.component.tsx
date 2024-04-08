@@ -19,7 +19,7 @@ const LeftColumn: FC<LeftColumnProps> = ({ privateLessonData }) => (
         textTransform='uppercase'
         fontFamily='secondary'
         fontWeight='bold'
-        fontSize={['increased','increased','increased','big']}
+        fontSize={['increased', 'increased', 'increased', 'big']}
         lineHeight='default'
         color='text.blackAmber'
       >
