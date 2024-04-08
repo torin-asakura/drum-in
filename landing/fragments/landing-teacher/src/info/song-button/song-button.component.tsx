@@ -26,9 +26,8 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
         borderRadius='larger'
         position='relative'
         flexShrink={0}
-        width={[300, 300, 380, 275]}
+        width={[300, 300, 250, 275]}
       >
-        <Layout flexBasis={[0, 0, 90, 0]} />
         <Box
           position='absolute'
           display={['none', 'none', 'none', 'flex']}
@@ -36,7 +35,18 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
           right={-127}
           style={{ transform: 'rotate(-30deg)' }}
         >
+
           <TwistedArrowBottomIcon width={238} height={53} />
+        </Box>
+        <Box
+          position='absolute'
+          display={['none', 'none', 'flex', 'none']}
+          bottom={110}
+          left={100}
+          style={{ transform: 'rotate(-30deg)' }}
+        >
+
+          <TwistedArrowBottomIcon width={160} height={40} />
         </Box>
         <Box {...hoverIconProps}>
           <Button
@@ -58,7 +68,7 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
               <Text
                 textTransform='uppercase'
                 fontWeight='semiBold'
-                fontSize='large'
+                fontSize={['semiRegular','semiRegular','semiRegular','large']}
                 lineHeight='default'
               >
                 {playSong ? (
@@ -82,7 +92,7 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
         <Box
           position='absolute'
           top={[12, 17, 0]}
-          left={[-128, -220, 0]}
+          left={[-115, -210, 0]}
           width={[100, 160, 0]}
           height={[24, 35, 0]}
           style={{ transform: 'rotate(-180deg) scaleY(-1)' }}

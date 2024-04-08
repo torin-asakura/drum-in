@@ -100,7 +100,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               backgroundRepeat='no-repeat'
               backgroundPosition={['center 500px', 'center center', 'center 75%']}
             >
-              <Box order={{ _: 1, laptop: 0, wide: 0 }}>
+              <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
                 <TeacherBlock
                   playSong={playSong}
                   setPlaySong={setPlaySong}
@@ -134,7 +134,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               backgroundRepeat='no-repeat'
               backgroundPosition='left bottom'
             >
-              <FooterBlock {...getObserverOptions('footer')} />
+              {/*<FooterBlock {...getObserverOptions('footer')} />*/}
             </Box>
             <Box
               display={['flex', 'flex', 'none']}

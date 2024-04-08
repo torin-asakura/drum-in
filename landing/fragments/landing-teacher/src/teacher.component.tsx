@@ -17,8 +17,8 @@ import { TeacherBlockProps } from './teacher.interfaces'
 const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
   const { teacherData } = useTeacher()
   return (
-    <Row flexWrap='wrap' justifyContent={['center', 'center', 'start', 'center']} ref={ref}>
-      <Box width={['100%', '100%', 1440, 1920]}>
+    <Row flexWrap='wrap' justifyContent={['center', 'center', 'center', 'center']} ref={ref}>
+      <Box width={['100%', '100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%' alignItems={['start', 'start', 'center']}>
           <Layout flexBasis={[32, 65, 65, 122]} />
