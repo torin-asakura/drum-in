@@ -19,13 +19,13 @@ const BannerFifthDimensionBlock: FC<BannerFifthDimensionProps> = ({ fifthDimensi
   return (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>
-        <Box width={['100%', '100%', 1920]}>
+        <Box width={['100%', '100%', '100%',1920]}>
           <Layout flexBasis={[20, 30, 40]} />
           <Column width='100%'>
             <Layout flexBasis={[124, 142, 160]} />
             <Box position='relative'>
               <Column width='100%' alignItems={['start', 'start', 'end']}>
-                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1790 }}>
+                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: '100%' }}>
                   <Text
                     textAlign={['left', 'left', 'right']}
                     textTransform='uppercase'
@@ -61,8 +61,14 @@ const BannerFifthDimensionBlock: FC<BannerFifthDimensionProps> = ({ fifthDimensi
                   </Box>
                 </Box>
               </Column>
-              <Box display={['none', 'none', 'none','flex']} position='absolute' left={150} top={82}>
+              <Box fill display={['none', 'none', 'none','flex']} position='absolute' >
+                <Layout flexBasis={170}/>
+                <Column>
+                <Layout flexBasis={90}/>
                 <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
+                </Column>
+                <Layout flexBasis={1300} flexShrink={0}/>
+
               </Box>
               <Box
                 display={['flex', 'flex', 'none']}

@@ -19,7 +19,7 @@ const BannerFeelingOfTimeBlock: FC<BannerFeelingOfTimeProps> = ({ feelingOfTimeD
   return (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>
-        <Box width={['100%', '100%', 1920]}>
+        <Box width={['100%', '100%','100%', 1920]}>
           <Layout flexBasis={[20, 30, 40]} />
           <Column width='100%'>
             <Layout flexBasis={[124, 142, 160]} />
