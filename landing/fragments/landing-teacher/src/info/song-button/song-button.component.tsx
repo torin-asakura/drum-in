@@ -35,7 +35,6 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
           right={-127}
           style={{ transform: 'rotate(-30deg)' }}
         >
-
           <TwistedArrowBottomIcon width={238} height={53} />
         </Box>
         <Box
@@ -45,7 +44,6 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
           left={100}
           style={{ transform: 'rotate(-30deg)' }}
         >
-
           <TwistedArrowBottomIcon width={160} height={40} />
         </Box>
         <Box {...hoverIconProps}>
@@ -68,7 +66,7 @@ const SongButton: FC<TeacherBlockProps> = ({ playSong, setPlaySong }) => {
               <Text
                 textTransform='uppercase'
                 fontWeight='semiBold'
-                fontSize={['semiRegular','semiRegular','semiRegular','large']}
+                fontSize={['semiRegular', 'semiRegular', 'semiRegular', 'large']}
                 lineHeight='default'
               >
                 {playSong ? (

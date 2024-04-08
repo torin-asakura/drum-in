@@ -36,7 +36,11 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
           </Text>
         </Box>
         <Layout flexBasis={[24, 34, 0]} display={['flex', 'flex', 'none']} />
-        <Box width='100%' backgroundColor='background.smokyWhite' borderRadius={['extra', 'extra', 'bigger']}>
+        <Box
+          width='100%'
+          backgroundColor='background.smokyWhite'
+          borderRadius={['extra', 'extra', 'bigger']}
+        >
           <Column width='100%'>
             <Layout flexBasis={[40, 46, 52]} />
             <Row>

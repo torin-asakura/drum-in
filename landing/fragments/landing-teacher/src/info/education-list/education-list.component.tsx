@@ -14,7 +14,7 @@ export interface EducationListProps {
 }
 
 const EducationList: FC<EducationListProps> = ({ teacherData }) => (
-  <Box position='relative' display={['none', 'none', 'flex']} >
+  <Box position='relative' display={['none', 'none', 'flex']}>
     <Box
       position='absolute'
       top={80}
@@ -34,7 +34,7 @@ const EducationList: FC<EducationListProps> = ({ teacherData }) => (
       <ArrowBottomTailIcon width={70} height={70} />
     </Box>
     <Column justifyContent={['end']} width={300}>
-      <Layout flexBasis={100}/>
+      <Layout flexBasis={100} />
       <Box>
         <Box display={['none', 'none', 'none', 'flex']}>
           <EducationIcon width={44} height={44} />
@@ -44,25 +44,30 @@ const EducationList: FC<EducationListProps> = ({ teacherData }) => (
         </Box>
         <Layout flexBasis={8} flexShrink={0} />
         <Box>
-          <Text fontWeight='medium' fontSize={['large','large','large','mild']} lineHeight='medium' color='text.smokyWhite'>
+          <Text
+            fontWeight='medium'
+            fontSize={['large', 'large', 'large', 'mild']}
+            lineHeight='medium'
+            color='text.smokyWhite'
+          >
             {teacherData?.education?.title}
           </Text>
         </Box>
       </Box>
-      <Layout flexBasis={[12,12,12,20]} />
+      <Layout flexBasis={[12, 12, 12, 20]} />
       {teacherData?.education?.list?.map((item) => (
         <React.Fragment key={item?.element?.substring(0, 3)}>
           <Box>
             <Text
               fontWeight='medium'
-              fontSize={['semiMedium','semiMedium','semiMedium','regular']}
+              fontSize={['semiMedium', 'semiMedium', 'semiMedium', 'regular']}
               lineHeight='medium'
               color='text.transparentSmokyWhite'
             >
               {item?.element}
             </Text>
           </Box>
-          <Layout flexBasis={[6,6,6,12]} />
+          <Layout flexBasis={[6, 6, 6, 12]} />
         </React.Fragment>
       ))}
       <Layout flexBasis={40} />

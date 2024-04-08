@@ -134,7 +134,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               backgroundRepeat='no-repeat'
               backgroundPosition='left bottom'
             >
-              {/*<FooterBlock {...getObserverOptions('footer')} />*/}
+              <FooterBlock {...getObserverOptions('footer')} />
             </Box>
             <Box
               display={['flex', 'flex', 'none']}

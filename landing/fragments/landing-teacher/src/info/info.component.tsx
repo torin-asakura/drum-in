@@ -13,14 +13,14 @@ import { SongButton }        from './song-button'
 import { getIndent }         from '../helpers'
 
 const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => (
-  <Box width={['100%', '100%','100%', 1920]} >
+  <Box width={['100%', '100%', '100%', 1920]}>
     <Column width='100%' alignItems='center'>
-      <Box fill justifyContent={['start','start','center']}>
-        <Layout flexBasis={[20,30,20,160]}/>
+      <Box fill justifyContent={['start', 'start', 'center']}>
+        <Layout flexBasis={[20, 30, 20, 160]} />
 
         <SongButton playSong={playSong} setPlaySong={setPlaySong} />
-        <Layout flexBasis={[0,0,100]}/>
-        <Box  position='relative' >
+        <Layout flexBasis={[0, 0, 100]} />
+        <Box position='relative'>
           <Box
             display={['none', 'none', 'flex']}
             position='absolute'
@@ -31,7 +31,7 @@ const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => 
             <ExperianceIcon width={160} height={160} />
           </Box>
 
-            <Column>
+          <Column>
             {teacherData?.statistics?.map((item, index) => (
               <OneCharacteristic
                 indentLeft={getIndent(index)}
@@ -40,12 +40,12 @@ const Info: FC<TeacherBlockProps> = ({ teacherData, playSong, setPlaySong }) => 
                 key={item?.number}
               />
             ))}
-            </Column>
+          </Column>
         </Box>
-        <Layout flexBasis={[0,0,160]}/>
+        <Layout flexBasis={[0, 0, 160]} />
         <EducationList teacherData={teacherData} />
 
-        <Layout flexBasis={[20,20,160]}/>
+        <Layout flexBasis={[20, 20, 160]} />
       </Box>
       <Layout flexBasis={[32, 65, 122]} />
     </Column>
