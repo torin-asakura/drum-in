@@ -133,6 +133,7 @@ const Content: FC<ContentProps> = ({ connacolData }) => {
           rectanglePositionY={54}
           backgroundRectangle='transparentPurpleGradient'
         />
+        <Layout flexBasis={[0,0,110,50]}/>
       </Column>
       <Layout flexBasis={24} flexShrink={0} />
     </Box>
