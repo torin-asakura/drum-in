@@ -33,8 +33,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({ contractOfferData })
         watch={[]}
       >
         <HeaderBlock />
-        {/* TODO: change to contract */}
-        <Seo id={PageID.CONTACT} />
+        <Seo id={PageID.CONTRACT_OFFER} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <ContractOfferBlock contractOfferData={contractOfferData} />
           <Box

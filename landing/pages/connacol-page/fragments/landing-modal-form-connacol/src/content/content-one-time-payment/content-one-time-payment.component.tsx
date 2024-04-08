@@ -17,10 +17,9 @@ const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({ connacolData })
 
   return (
     <>
-      {/* TODO: description course */}
       <SelectedCourse
         title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${connacolData?.title}"`}
-        description='description'
+        description={connacolData?.individualCourseData?.aboutCourse || ''}
       />
       <Layout flexBasis={[8, 16, 24]} flexShrink={0} />
       <Row justifyContent='end'>

@@ -80,7 +80,7 @@ const Item: FC<ItemProps> = ({
         </Column>
         <Layout flexBasis={40} flexShrink={0} />
       </Row>
-      <Layout flexBasis={[20,20,20,215]} />
+      <Layout flexBasis={[20, 20, 20, 215]} />
       <Box
         width={586}
         height={400}

@@ -3799,6 +3799,8 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@globals/data": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -3833,6 +3835,8 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@globals/data": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -3867,6 +3871,8 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@globals/data": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -3901,6 +3907,8 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@globals/data": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -3970,6 +3978,8 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@globals/data": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -4120,6 +4130,7 @@ __metadata:
     "@globals/data": "workspace:0.0.1"
     "@landing/modal-form-connacol": "workspace:0.0.1"
     "@shared/bulleted-list-fragment": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@ui/button": "workspace:0.0.1"
     "@ui/figures": "workspace:0.0.1"
@@ -4147,6 +4158,7 @@ __metadata:
     "@globals/data": "workspace:0.0.1"
     "@landing/modal-form-feeling-of-time": "workspace:0.0.1"
     "@shared/bulleted-list-fragment": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -4179,6 +4191,7 @@ __metadata:
     "@globals/data": "workspace:0.0.1"
     "@landing/modal-form-fifth-dimension": "workspace:0.0.1"
     "@shared/bulleted-list-fragment": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -4271,6 +4284,7 @@ __metadata:
     "@globals/data": "workspace:0.0.1"
     "@landing/modal-form-seventh-heaven": "workspace:0.0.1"
     "@shared/bulleted-list-fragment": "workspace:0.0.1"
+    "@shared/constants": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
@@ -4954,6 +4968,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@shared/constants@workspace:0.0.1, @shared/constants@workspace:shared/constants":
+  version: 0.0.0-use.local
+  resolution: "@shared/constants@workspace:shared/constants"
+  dependencies:
+    "@types/react": "npm:18.2.20"
+  languageName: unknown
+  linkType: soft
+
 "@shared/data@workspace:0.0.1, @shared/data@workspace:shared/data":
   version: 0.0.0-use.local
   resolution: "@shared/data@workspace:shared/data"
@@ -4982,6 +5004,9 @@ __metadata:
 "@shared/utils@workspace:0.0.1, @shared/utils@workspace:shared/utils":
   version: 0.0.0-use.local
   resolution: "@shared/utils@workspace:shared/utils"
+  dependencies:
+    "@shared/constants": "workspace:0.0.1"
+    "@types/react": "npm:18.2.20"
   languageName: unknown
   linkType: soft
 
@@ -6142,6 +6167,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@shared/constants": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"

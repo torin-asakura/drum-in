@@ -5,6 +5,7 @@
   "dependencies": {
     "@landing/modal-form-feeling-of-time": "workspace:0.0.1",
     "@shared/bulleted-list-fragment": "workspace:0.0.1",
+    "@shared/constants": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/figures": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",

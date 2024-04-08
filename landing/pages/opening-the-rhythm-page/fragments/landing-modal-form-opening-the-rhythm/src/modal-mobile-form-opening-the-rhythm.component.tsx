@@ -4,12 +4,12 @@ import { motion }                         from 'framer-motion'
 import { useState }                       from 'react'
 import { useIntl }                        from 'react-intl'
 
+import { RolePaymentForm }                from '@shared/constants/src'
 import { ContainerMobile }                from '@ui/modal'
 import { Renderer }                       from '@ui/modal'
 import { Backdrop }                       from '@ui/modal'
 
 import { ContentMobile }                  from './content'
-import { RoleModalForm }                  from './modal-form-opening-the-rhythm.enum'
 import { ModalFormOpeningTheRhythmProps } from './modal-form-opening-the-rhythm.interfaces'
 
 const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
@@ -19,20 +19,20 @@ const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
   scroll = true,
   openingTheRhythm,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>(
-    isOneTimePaymentPlan ? [RoleModalForm.OneTimePayment] : [RoleModalForm.InstallmentPlan]
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
+    isOneTimePaymentPlan ? [RolePaymentForm.OneTimePayment] : [RolePaymentForm.InstallmentPlan]
   )
   const { formatMessage } = useIntl()
   const options = [
     {
-      value: RoleModalForm.InstallmentPlan,
+      value: RolePaymentForm.InstallmentPlan,
       label: formatMessage({
         id: 'landing_modal_forms.installment_plan',
       }),
       mutuallyExclusive: true,
     },
     {
-      value: RoleModalForm.OneTimePayment,
+      value: RolePaymentForm.OneTimePayment,
       label: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
       }),

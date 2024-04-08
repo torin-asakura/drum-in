@@ -14604,6 +14604,7 @@ export type IndividualCourseQuery = {
     title?: string | null
     individualCourseData?: {
       __typename?: 'IndividualCourseData'
+      aboutCourse?: string | null
       process?: {
         __typename?: 'IndividualCourseDataProcess'
         step?: Array<{
@@ -16770,6 +16771,7 @@ export const IndividualCourseDocument = {
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'aboutCourse' } },
                       {
                         kind: 'Field',
                         name: { kind: 'Name', value: 'process' },

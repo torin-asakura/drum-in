@@ -4,6 +4,7 @@ import { useState }                from 'react'
 
 import { ModalFormConnacol }       from '@landing/modal-form-connacol'
 import { ModalMobileFormConnacol } from '@landing/modal-form-connacol'
+import { RolePaymentForm }         from '@shared/constants'
 import { ArrowRightTailIcon }      from '@ui/icons'
 import { Layout }                  from '@ui/layout'
 import { Box }                     from '@ui/layout'
@@ -94,11 +95,13 @@ const FullPrice: FC<FullPriceProps> = ({ connacolData, fullCost }) => {
         </Box>
       </Box>
       <ModalFormConnacol
+        paymentPlan={RolePaymentForm.OneTimePayment}
         connacolData={connacolData}
         activeRender={visibleModal}
         onClose={() => setVisibleModal(false)}
       />
       <ModalMobileFormConnacol
+        paymentPlan={RolePaymentForm.OneTimePayment}
         connacolData={connacolData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}

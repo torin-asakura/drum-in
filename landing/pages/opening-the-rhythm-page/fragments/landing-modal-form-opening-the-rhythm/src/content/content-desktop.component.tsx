@@ -1,6 +1,7 @@
 import React                      from 'react'
 import { FC }                     from 'react'
 
+import { RolePaymentForm }        from '@shared/constants'
 import { Button }                 from '@ui/button'
 import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
@@ -14,7 +15,6 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 
-import { RoleModalForm }          from '../modal-form-opening-the-rhythm.enum'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
@@ -121,7 +121,7 @@ const ContentDesktop: FC<ContentProps> = ({
       <Condition match={!!amount && amount > 0}>
         <Form
           amount={
-            roleVar[0] === RoleModalForm.InstallmentPlan
+            roleVar[0] === RolePaymentForm.InstallmentPlan
               ? openingTheRhythm?.price?.priceMonthly || 0
               : amount
           }

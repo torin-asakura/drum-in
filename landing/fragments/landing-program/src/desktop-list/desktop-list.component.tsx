@@ -10,7 +10,7 @@ import { Item }             from './item'
 import { getUi }            from '../helpers'
 
 const DesktopList: FC<DesktopListProps> = ({ openingTheRhythm }) => (
-  <Column display={['none', 'none','flex', 'flex']} width='100%'>
+  <Column display={['none', 'none', 'flex', 'flex']} width='100%'>
     {openingTheRhythm?.details?.levels?.map((item, index) => (
       <React.Fragment key={uniqid()}>
         <Item

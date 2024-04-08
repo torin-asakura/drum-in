@@ -4,31 +4,46 @@ import { FC }                from 'react'
 
 import { Box }               from '@ui/layout'
 import { Layout }            from '@ui/layout'
+import { Column }            from '@ui/layout'
 import { Row }               from '@ui/layout'
 
 import { Card }              from '../card'
 import { DesktopCardsProps } from './desktop-cards.interfaces'
 import { getUi }             from '../helpers'
 
+export const getLayout = (index) => {
+  if (index % 2 === 1 && index !== 3) {
+    return 80
+  }
+  if (index === 3) {
+    return 180
+  }
+  return 0
+}
+
 const DesktopCards: FC<DesktopCardsProps> = ({ connacolData }) => {
   const getCount = (number?: number | null): string => `0${number}`
   return (
     <Row
-      display={['none', 'none', 'flex']}
       justifyContent='space-between'
-      flexWrap={{ _: 'nowrap', tablet: 'nowrap', laptop: 'wrap', wide: 'nowrap' }}
+      display={['none', 'none', 'flex']}
+      flexWrap={{ _: 'nowrap', tablet: 'nowrap', laptop: 'nowrap', wide: 'nowrap' }}
+      height={[300, 300, 300, 500]}
     >
-      {connacolData?.individualCourseData?.hero?.courseConditions?.map((element) => (
+      <Layout flexBasis={[0, 0, 0, 80]} />
+      {connacolData?.individualCourseData?.hero?.courseConditions?.map((element, index) => (
         <Box
+          fill
+          position='relative'
           key={uniqid()}
-          flexDirection='column'
           style={{ transform: `rotate(${getUi(getCount(element?.number)).rotate}deg)` }}
         >
-          <Layout
-            flexBasis={getUi(getCount(element?.number)).valueTopIndentation}
-            display={['none', 'none', 'flex']}
-          />
-          <Card counter={getCount(element?.number)} text={element?.description} />
+          <Box position='absolute' fill zIndex={index}>
+            <Column height={500}>
+              <Layout flexBasis={getLayout(index)} />
+              <Card counter={getCount(element?.number)} text={element?.description} />
+            </Column>
+          </Box>
         </Box>
       ))}
     </Row>
