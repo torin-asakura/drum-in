@@ -141,7 +141,7 @@ const Content: FC<ContentProps> = ({ seventhHeavenData }) => {
           rectanglePositionY={54}
           backgroundRectangle='transparentPinkGradient'
         />
-        <Layout flexBasis={[0,0,110,50]}/>
+        <Layout flexBasis={[0, 0, 110, 50]} />
       </Column>
       <Layout flexBasis={24} flexShrink={0} />
     </Box>

@@ -143,8 +143,7 @@ const Content: FC<ContentProps> = ({ feelingOfTimeData }) => {
           rectanglePositionY={54}
           backgroundRectangle='transparentBlueGradient'
         />
-        <Layout flexBasis={[0,0,110,50]}/>
-
+        <Layout flexBasis={[0, 0, 110, 50]} />
       </Column>
       <Layout flexBasis={24} flexShrink={0} />
     </Box>

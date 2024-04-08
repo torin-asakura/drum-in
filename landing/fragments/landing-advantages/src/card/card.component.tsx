@@ -11,7 +11,7 @@ import { CardProps } from './card.interfaces'
 const Card: FC<CardProps> = ({ counter, text }) => (
   <Box
     flexShrink={0}
-    width={[300, 360,'100%', 430]}
+    width={[300, 360, '100%', 430]}
     height={[180, 240, 300]}
     borderRadius={['medium', 'big', 'bigger']}
     border={['normalBoldDark', 'mediumBoldBlackAmber', 'semiBoldDark']}

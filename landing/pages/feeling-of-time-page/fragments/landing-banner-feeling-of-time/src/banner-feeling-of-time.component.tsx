@@ -19,7 +19,7 @@ const BannerFeelingOfTimeBlock: FC<BannerFeelingOfTimeProps> = ({ feelingOfTimeD
   return (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>
-        <Box width={['100%', '100%','100%', 1920]}>
+        <Box width={['100%', '100%', '100%', 1920]}>
           <Layout flexBasis={[20, 30, 40]} />
           <Column width='100%'>
             <Layout flexBasis={[124, 142, 160]} />
@@ -61,7 +61,12 @@ const BannerFeelingOfTimeBlock: FC<BannerFeelingOfTimeProps> = ({ feelingOfTimeD
                   </Box>
                 </Box>
               </Column>
-              <Box display={['none', 'none','none', 'flex']} position='absolute' left={150} top={82}>
+              <Box
+                display={['none', 'none', 'none', 'flex']}
+                position='absolute'
+                left={150}
+                top={82}
+              >
                 <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
               </Box>
               <Box

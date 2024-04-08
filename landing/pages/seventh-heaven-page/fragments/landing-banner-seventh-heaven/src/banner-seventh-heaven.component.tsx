@@ -60,7 +60,12 @@ const BannerSeventhHeavenBlock: FC<BannerSeventhHeavenProps> = ({ seventhHeavenD
                   </Box>
                 </Box>
               </Column>
-              <Box display={['none', 'none','none', 'flex']} position='absolute' left={450} top={82}>
+              <Box
+                display={['none', 'none', 'none', 'flex']}
+                position='absolute'
+                left={450}
+                top={82}
+              >
                 <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
               </Box>
               <Box

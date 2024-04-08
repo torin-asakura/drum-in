@@ -4,8 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import { Box }              from '@ui/layout'
 import { Space }            from '@ui/text'
-
-import { Text }      from '@ui/text'
+import { Text }             from '@ui/text'
 
 import { TitleProps }       from './title.interfaces'
 

@@ -19,7 +19,7 @@ const ItemCard: FC<ItemProps> = ({
   <Box
     left={positionHorizontal}
     top={positionVertical}
-    width={[246, '100%', '100%',1213]}
+    width={[246, '100%', '100%', 1213]}
     height={[109, 200, 294]}
     border={['normalBoldDark', 'mediumBoldBlackAmber', 'veryBoldDark']}
     borderRadius={['medium', 'big', 'bigger']}

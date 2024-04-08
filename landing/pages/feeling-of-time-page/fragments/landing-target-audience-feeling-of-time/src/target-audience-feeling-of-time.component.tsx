@@ -33,7 +33,7 @@ const TargetAudienceFeelingOfTimeBlock: FC<TargetAudienceFeelingOfTimeProps> = (
 
   return (
     <Row justifyContent='center'>
-      <Box width={['100%', '100%','100%', '100%']}>
+      <Box width={['100%', '100%', '100%', '100%']}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[32, 46, 60]} />
@@ -60,17 +60,17 @@ const TargetAudienceFeelingOfTimeBlock: FC<TargetAudienceFeelingOfTimeProps> = (
             </Box>
 
             <Box fill zIndex={2}>
-              <Layout flexBasis={[45,0,0,360]} />
+              <Layout flexBasis={[45, 0, 0, 360]} />
               <Column fill>
-                <Layout flexBasis={[100,220,320,200]} />
+                <Layout flexBasis={[100, 220, 320, 200]} />
                 <ItemCard number={secondCardData.number} text={secondCardData.description} />
               </Column>
             </Box>
 
             <Box fill zIndex={1} position='absolute'>
-              <Layout flexBasis={[110,0,0,900]} />
+              <Layout flexBasis={[110, 0, 0, 900]} />
               <Column fill>
-                <Layout flexBasis={[200,440,640,400]} />
+                <Layout flexBasis={[200, 440, 640, 400]} />
                 <ItemCard number={thirdCardData.number} text={thirdCardData.description} />
               </Column>
             </Box>
