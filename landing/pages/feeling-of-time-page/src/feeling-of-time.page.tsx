@@ -84,8 +84,13 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='-100px -50px'
+          > <Box
+            width='100%'
+            backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+            backgroundSize='contain'
           >
             <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+          </Box>
           </Box>
           <PriceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
           <FaqBlock />
@@ -98,8 +103,14 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+
             <FooterBlock />
-          </Box>
+            </Box>          </Box>
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
@@ -107,9 +118,13 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
+          > <Box
+            width='100%'
+            backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+            backgroundSize='contain'
           >
             <FooterBlock />
-          </Box>
+          </Box></Box>
         </main>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
