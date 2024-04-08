@@ -17,7 +17,6 @@ const ItemCard: FC<ItemProps> = ({
   zIndex,
 }) => (
   <Box
-    // position='absolute'
     left={positionHorizontal}
     top={positionVertical}
     width={[246, '100%', '100%',1213]}
