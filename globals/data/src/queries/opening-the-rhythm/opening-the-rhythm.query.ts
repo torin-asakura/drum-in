@@ -64,6 +64,7 @@ export const GET_OPENING_THE_RHYTHM = gql(`
           }
         }
         background {
+        noise{node{sourceUrl}}
           desktop {
             hero {
               node {

@@ -15,6 +15,7 @@ title
 }
 
 background {
+noise{node{sourceUrl}}
 courseProgram{node{sourceUrl}}
 desktop {
 footer {

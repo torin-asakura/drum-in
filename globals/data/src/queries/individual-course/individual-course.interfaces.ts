@@ -3,6 +3,8 @@ import { IndividualCourseQuery } from '../../__generated__/graphql'
 export type IndividualCourseDataType = IndividualCourseQuery['individualCourse']
 export type IndividualCourseBackgroundType =
   | {
+      noise?: {node: { sourceUrl?: string | null }} | null
+
       desktop?: {
         footer?: {
           node: { sourceUrl?: string | null }

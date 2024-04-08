@@ -11,6 +11,7 @@ query Contacts($id: ID!){
             content
           }
            background{
+           noise{node{sourceUrl}}
             mobile{node{sourceUrl}}
             desktop{node{sourceUrl}}
           }

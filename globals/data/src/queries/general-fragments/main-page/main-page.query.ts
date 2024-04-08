@@ -102,6 +102,7 @@ generalFragment(id:$id) {
             }
           }
             background {
+            noise{node{sourceUrl}}
             desktop {
               footer {
                 node {
