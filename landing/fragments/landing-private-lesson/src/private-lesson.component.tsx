@@ -18,7 +18,7 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
   ref: any
 ) => (
   <Row justifyContent='center' ref={ref}>
-    <Box width={['100%', '100%', '100%', 1920]}>
+    <Box width={['100%', '100%', '100%', '100%']}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[24, 60, 90]} />
