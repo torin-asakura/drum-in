@@ -15,13 +15,18 @@ const HeroFifthDimensionBlock: FC<HeroFifthDimensionProps> = ({
   <>
     <Box
       display={['none', 'flex', 'flex']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
       backgroundSize={[0, '100% 42%', '100% 32%', '100% 25%']}
       backgroundRepeat='no-repeat'
       backgroundPosition='0px -280px'
     >
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
       <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
       <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
       <ProgramFifthDimensionBlock
@@ -29,6 +34,7 @@ const HeroFifthDimensionBlock: FC<HeroFifthDimensionProps> = ({
         fifthDimensionData={fifthDimensionData}
         scrollId='desktop-scroll'
       />
+    </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}

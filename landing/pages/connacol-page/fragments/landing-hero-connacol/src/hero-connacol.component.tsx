@@ -12,13 +12,18 @@ const HeroConnacolBlock: FC<HeroConnacolProps> = ({ background, connacolData }) 
   <>
     <Box
       display={['none', 'flex', 'flex']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
       backgroundSize={[0, '100% 42%', '100% 24%', '100% 24%']}
       backgroundRepeat='no-repeat'
       backgroundPosition='0px -100px'
     >
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
       <BannerConnacolBlock connacolData={connacolData} />
       <AdvantagesBlock connacolData={connacolData} />
       <ProgramConnacolBlock
@@ -26,6 +31,7 @@ const HeroConnacolBlock: FC<HeroConnacolProps> = ({ background, connacolData }) 
         connacolData={connacolData}
         scrollId='desktop-scroll'
       />
+    </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}

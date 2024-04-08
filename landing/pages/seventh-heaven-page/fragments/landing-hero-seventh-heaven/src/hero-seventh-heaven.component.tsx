@@ -12,13 +12,18 @@ const HeroSeventhHeavenBlock: FC<HeroSeventhHeavenProps> = ({ background, sevent
   <>
     <Box
       display={['none', 'flex', 'flex']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
       backgroundSize={[0, '100% 42%', '100% 32%', '100% 26%']}
       backgroundRepeat='no-repeat'
       backgroundPosition='0px -280px'
     >
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
       <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
       <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
       <ProgramSeventhHeavenBlock
@@ -26,6 +31,7 @@ const HeroSeventhHeavenBlock: FC<HeroSeventhHeavenProps> = ({ background, sevent
         seventhHeavenData={seventhHeavenData}
         scrollId='desktop-scroll'
       />
+    </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
