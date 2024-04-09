@@ -53,7 +53,7 @@ const HeaderBlock = () => {
         backgroundColor={isNavBackground ? 'background.blackAmber' : 'transparent'}
         style={{ transition: '0.3s' }}
       >
-        <Column width={['100%', '100%', 1920]} alignItems='center'>
+        <Column width={['100%', '100%', '100%']} alignItems='center'>
           <Layout flexBasis={[24, 28, 32]} />
           <Box width='100%'>
             <Layout flexBasis={[26, 33, 40]} />
