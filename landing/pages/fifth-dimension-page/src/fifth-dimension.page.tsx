@@ -87,13 +87,16 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
             backgroundPosition='-100px -50px'
-          > <Box
-            width='100%'
-            backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-            backgroundSize='contain'
           >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
-          </Box></Box>
+            {' '}
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
+          </Box>
           <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
           <FaqBlock />
           <CtaBlock />
@@ -104,13 +107,16 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
-          > <Box
-            width='100%'
-            backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-            backgroundSize='contain'
           >
-            <FooterBlock />
-          </Box></Box>
+            {' '}
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
+          </Box>
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
@@ -118,13 +124,16 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
-          > <Box
-            width='100%'
-            backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-            backgroundSize='contain'
           >
-            <FooterBlock />
-          </Box></Box>
+            {' '}
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
+          </Box>
         </main>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}

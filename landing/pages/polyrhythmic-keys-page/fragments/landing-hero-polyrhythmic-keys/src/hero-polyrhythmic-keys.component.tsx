@@ -26,12 +26,12 @@ const HeroPolyrhythmicKeysBlock: FC<HeroPolyrhythmicKeysProps> = ({
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData} />
-      <ProgramPolyrhythmicKeyslBlock
-        background={background}
-        polyrhythmicKeysData={polyrhythmicKeysData}
-        scrollId='desktop-scroll'
-      />
+        <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData} />
+        <ProgramPolyrhythmicKeyslBlock
+          background={background}
+          polyrhythmicKeysData={polyrhythmicKeysData}
+          scrollId='desktop-scroll'
+        />
       </Box>
     </Box>
     <Box
@@ -48,12 +48,12 @@ const HeroPolyrhythmicKeysBlock: FC<HeroPolyrhythmicKeysProps> = ({
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData} />
-      <ProgramPolyrhythmicKeyslBlock
-        background={background}
-        polyrhythmicKeysData={polyrhythmicKeysData}
-        scrollId='mobile-scroll'
-      />
+        <BannerPolyrhythmicKeysBlock polyrhythmicKeysData={polyrhythmicKeysData} />
+        <ProgramPolyrhythmicKeyslBlock
+          background={background}
+          polyrhythmicKeysData={polyrhythmicKeysData}
+          scrollId='mobile-scroll'
+        />
       </Box>
     </Box>
   </>

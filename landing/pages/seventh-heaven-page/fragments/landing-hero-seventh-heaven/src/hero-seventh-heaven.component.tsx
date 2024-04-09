@@ -24,14 +24,14 @@ const HeroSeventhHeavenBlock: FC<HeroSeventhHeavenProps> = ({ background, sevent
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <ProgramSeventhHeavenBlock
-        background={background}
-        seventhHeavenData={seventhHeavenData}
-        scrollId='desktop-scroll'
-      />
-    </Box>
+        <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
+        <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
+        <ProgramSeventhHeavenBlock
+          background={background}
+          seventhHeavenData={seventhHeavenData}
+          scrollId='desktop-scroll'
+        />
+      </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -47,13 +47,13 @@ const HeroSeventhHeavenBlock: FC<HeroSeventhHeavenProps> = ({ background, sevent
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-      <ProgramSeventhHeavenBlock
-        background={background}
-        seventhHeavenData={seventhHeavenData}
-        scrollId='mobile-scroll'
-      />
+        <BannerSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
+        <TargetAudienceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
+        <ProgramSeventhHeavenBlock
+          background={background}
+          seventhHeavenData={seventhHeavenData}
+          scrollId='mobile-scroll'
+        />
       </Box>
     </Box>
   </>

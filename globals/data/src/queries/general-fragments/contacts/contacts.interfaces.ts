@@ -6,7 +6,7 @@ export type ContactsDataProps = {
     content?: string | null
   } | null> | null
   background?: {
-                 noise?: {node: { sourceUrl?: string | null }} | null
+    noise?: { node: { sourceUrl?: string | null } } | null
     mobile?: {
       node: { sourceUrl?: string | null }
     } | null

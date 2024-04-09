@@ -93,8 +93,8 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
-          </Box>
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
           </Box>
           <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
           <FaqBlock />
@@ -112,9 +112,9 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
+              <FooterBlock />
             </Box>
-            </Box>
+          </Box>
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
@@ -128,7 +128,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
+              <FooterBlock />
             </Box>
           </Box>
         </main>

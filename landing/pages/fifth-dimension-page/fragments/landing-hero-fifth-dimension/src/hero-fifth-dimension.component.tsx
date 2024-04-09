@@ -27,14 +27,14 @@ const HeroFifthDimensionBlock: FC<HeroFifthDimensionProps> = ({
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
-      <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
-      <ProgramFifthDimensionBlock
-        background={background}
-        fifthDimensionData={fifthDimensionData}
-        scrollId='desktop-scroll'
-      />
-    </Box>
+        <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
+        <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
+        <ProgramFifthDimensionBlock
+          background={background}
+          fifthDimensionData={fifthDimensionData}
+          scrollId='desktop-scroll'
+        />
+      </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -50,13 +50,13 @@ const HeroFifthDimensionBlock: FC<HeroFifthDimensionProps> = ({
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
-      <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
-      <ProgramFifthDimensionBlock
-        background={background}
-        fifthDimensionData={fifthDimensionData}
-        scrollId='mobile-scroll'
-      />
+        <BannerFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
+        <TargetAudienceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
+        <ProgramFifthDimensionBlock
+          background={background}
+          fifthDimensionData={fifthDimensionData}
+          scrollId='mobile-scroll'
+        />
       </Box>
     </Box>
   </>

@@ -27,10 +27,10 @@ const HeroOpeningTheRhythmBlock: FC<HeroOpeningTheRhythmProps> = ({
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
-      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm} />
-      <SkillsBlock openingTheRhythm={openingTheRhythm} />
-    </Box>
+        <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
+        <AfterTheCourseBlock openingTheRhythm={openingTheRhythm} />
+        <SkillsBlock openingTheRhythm={openingTheRhythm} />
+      </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -46,10 +46,10 @@ const HeroOpeningTheRhythmBlock: FC<HeroOpeningTheRhythmProps> = ({
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
-      <AfterTheCourseBlock openingTheRhythm={openingTheRhythm} />
-      <SkillsBlock openingTheRhythm={openingTheRhythm} />
-    </Box>
+        <BannerOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
+        <AfterTheCourseBlock openingTheRhythm={openingTheRhythm} />
+        <SkillsBlock openingTheRhythm={openingTheRhythm} />
+      </Box>
     </Box>
   </>
 )

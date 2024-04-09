@@ -92,8 +92,8 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
-          </Box>
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
           </Box>
           <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
           <FaqBlock />
@@ -111,7 +111,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -127,7 +127,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
+              <FooterBlock />
             </Box>
           </Box>
         </main>

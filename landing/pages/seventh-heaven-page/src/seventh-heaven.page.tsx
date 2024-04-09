@@ -90,8 +90,8 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
-          </Box>
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
           </Box>
           <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
           <FaqBlock />
@@ -109,8 +109,8 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
-          </Box>
+              <FooterBlock />
+            </Box>
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -125,7 +125,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
+              <FooterBlock />
             </Box>
           </Box>
         </main>

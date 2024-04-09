@@ -86,8 +86,8 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, 
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
-          </Box>
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
           </Box>
           <PriceConnacolBlock connacolData={connacolData} />
           <FaqBlock />
@@ -105,7 +105,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, 
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -121,8 +121,9 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, 
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-            <FooterBlock />
-            </Box></Box>
+              <FooterBlock />
+            </Box>
+          </Box>
         </main>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}

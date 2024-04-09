@@ -1,5 +1,5 @@
 export type OpeningTheRhythmBackgroundProps = {
-  noise?: {node: { sourceUrl?: string | null }} | null
+  noise?: { node: { sourceUrl?: string | null } } | null
 
   desktop?: {
     hero?: { node: { sourceUrl?: string | null } } | null

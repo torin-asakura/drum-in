@@ -24,14 +24,14 @@ const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelin
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock
-        background={background}
-        feelingOfTimeData={feelingOfTimeData}
-        scrollId='desktop-scroll'
-      />
-    </Box>
+        <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <ProgramFeelingOfTimeBlock
+          background={background}
+          feelingOfTimeData={feelingOfTimeData}
+          scrollId='desktop-scroll'
+        />
+      </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -47,13 +47,13 @@ const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelin
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock
-        background={background}
-        feelingOfTimeData={feelingOfTimeData}
-        scrollId='mobile-scroll'
-      />
+        <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <ProgramFeelingOfTimeBlock
+          background={background}
+          feelingOfTimeData={feelingOfTimeData}
+          scrollId='mobile-scroll'
+        />
       </Box>
     </Box>
   </>

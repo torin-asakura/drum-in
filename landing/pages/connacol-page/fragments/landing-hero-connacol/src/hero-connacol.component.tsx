@@ -24,14 +24,14 @@ const HeroConnacolBlock: FC<HeroConnacolProps> = ({ background, connacolData }) 
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerConnacolBlock connacolData={connacolData} />
-      <AdvantagesBlock connacolData={connacolData} />
-      <ProgramConnacolBlock
-        background={background}
-        connacolData={connacolData}
-        scrollId='desktop-scroll'
-      />
-    </Box>
+        <BannerConnacolBlock connacolData={connacolData} />
+        <AdvantagesBlock connacolData={connacolData} />
+        <ProgramConnacolBlock
+          background={background}
+          connacolData={connacolData}
+          scrollId='desktop-scroll'
+        />
+      </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
@@ -47,13 +47,13 @@ const HeroConnacolBlock: FC<HeroConnacolProps> = ({ background, connacolData }) 
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-      <BannerConnacolBlock connacolData={connacolData} />
-      <AdvantagesBlock connacolData={connacolData} />
-      <ProgramConnacolBlock
-        background={background}
-        connacolData={connacolData}
-        scrollId='mobile-scroll'
-      />
+        <BannerConnacolBlock connacolData={connacolData} />
+        <AdvantagesBlock connacolData={connacolData} />
+        <ProgramConnacolBlock
+          background={background}
+          connacolData={connacolData}
+          scrollId='mobile-scroll'
+        />
       </Box>
     </Box>
   </>
