@@ -26,6 +26,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
   seventhHeavenData,
   background,
   songUrl,
+  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -73,7 +74,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.SEVENTH_HEAVEN} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />

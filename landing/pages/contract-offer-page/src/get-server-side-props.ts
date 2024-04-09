@@ -1,3 +1,4 @@
+import { GET_HEADER }         from '@globals/data'
 import { GeneralFragmentID }  from '@globals/data'
 import { PageID }             from '@globals/data'
 import { GET_CONTRACT_OFFER } from '@globals/data'
@@ -27,5 +28,12 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return { props: { SEO, contractOfferData } }
+  const { data: header } = await client.query({
+    query: GET_HEADER,
+    variables: { id: GeneralFragmentID.HEADER },
+  })
+
+  const headerData = header?.generalFragment?.header
+
+  return { props: { SEO, contractOfferData, headerData } }
 }

@@ -1,3 +1,4 @@
+import { GET_HEADER }         from '@globals/data'
 import { GeneralFragmentID }  from '@globals/data'
 import { GET_PRIVACY_POLICY } from '@globals/data'
 import { PageID }             from '@globals/data'
@@ -25,6 +26,12 @@ export const getServerSideProps = async ({ res }) => {
     ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
   }
+  const { data: header } = await client.query({
+    query: GET_HEADER,
+    variables: { id: GeneralFragmentID.HEADER },
+  })
 
-  return { props: { SEO, privacyPolicy } }
+  const headerData = header?.generalFragment?.header
+
+  return { props: { SEO, privacyPolicy, headerData } }
 }

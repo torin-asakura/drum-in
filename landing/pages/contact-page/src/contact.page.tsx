@@ -12,7 +12,7 @@ import { Box }                      from '@ui/layout'
 
 import { ContactPageProps }         from './contact-page.interfaces'
 
-export const ContactPage: FC<ContactPageProps> = ({ contactsData }) => {
+export const ContactPage: FC<ContactPageProps> = ({ contactsData, headerData }) => {
   const containerRef = useRef(null)
 
   return (
@@ -33,7 +33,7 @@ export const ContactPage: FC<ContactPageProps> = ({ contactsData }) => {
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.CONTACT} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Box

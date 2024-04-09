@@ -25,7 +25,7 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 
 import { IndexPageProps }           from './index-page.interfaces'
 
-export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl }) => {
+export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl, headerData }) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -84,7 +84,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
         watch={[]}
       >
         <SpyScrollProvider>
-          <HeaderBlock />
+          <HeaderBlock headerData={headerData} />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo id={PageID.INDEX} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>

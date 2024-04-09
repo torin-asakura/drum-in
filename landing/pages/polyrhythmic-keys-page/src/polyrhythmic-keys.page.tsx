@@ -26,6 +26,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
   polyrhythmicKeysData,
   background,
   songUrl,
+  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -73,7 +74,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.POLYRYTHMIC_KEYS} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroPolyrhythmicKeysBlock

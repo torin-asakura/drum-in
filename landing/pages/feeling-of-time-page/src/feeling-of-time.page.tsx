@@ -26,6 +26,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
   feelingOfTimeData,
   background,
   songUrl,
+  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -73,7 +74,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.FEELING_OF_TIME} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} />
@@ -85,7 +86,6 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='-100px -50px'
           >
-            {' '}
             <Box
               width='100%'
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
