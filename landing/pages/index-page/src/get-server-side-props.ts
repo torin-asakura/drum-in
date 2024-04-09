@@ -45,5 +45,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
-  return { props: { SEO, mainPageData, background,headerData, songUrl } }
+  return { props: { SEO, mainPageData, background, headerData, songUrl } }
 }

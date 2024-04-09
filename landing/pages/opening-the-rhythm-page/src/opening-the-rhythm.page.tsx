@@ -27,6 +27,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   background,
   openingTheRhythm,
   songUrl,
+  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -74,7 +75,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.OPENING_RHYTHM} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />

@@ -1,8 +1,7 @@
-import { HeaderDataProps } from '@globals/data/src'
-import { FC }              from 'react'
-import React               from 'react'
-import { useState }        from 'react'
-import { useEffect }       from 'react'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { useState }            from 'react'
+import { useEffect }           from 'react'
 
 import { NavigationBlock }     from '@landing/navigation-fragment'
 import { Button }              from '@ui/button'
@@ -17,13 +16,13 @@ import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 
 import { CtaButton }           from './cta-button'
 import { DrawerButton }        from './drawer-button'
+import { HeaderProps }         from './header.interfaces'
 import { ItemLink }            from './item-link'
 
-const HeaderBlock:FC<{headerData?:HeaderDataProps| null}> = ({headerData}) => {
+const HeaderBlock: FC<HeaderProps> = ({ headerData }) => {
   const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
-
 
   useEffect(() => {
     if (scroll) {
@@ -43,7 +42,11 @@ const HeaderBlock:FC<{headerData?:HeaderDataProps| null}> = ({headerData}) => {
 
   return (
     <>
-      <NavigationBlock headerData={headerData} visible={visibleDrawer} setVisible={setVisibleDrawer} />
+      <NavigationBlock
+        headerData={headerData}
+        visible={visibleDrawer}
+        setVisible={setVisibleDrawer}
+      />
       <Box
         width='100%'
         zIndex={100}
