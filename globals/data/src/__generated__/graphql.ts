@@ -1218,6 +1218,8 @@ export type ContactsBackground = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
     mobile?: Maybe<AcfMediaItemConnectionEdge>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
+    noise?: Maybe<AcfMediaItemConnectionEdge>
   }
 
 /** Interface representing fields of the ACF &quot;ContactsBackground&quot; Field Group */
@@ -1231,6 +1233,8 @@ export type ContactsBackground_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
   mobile?: Maybe<AcfMediaItemConnectionEdge>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContactsBackground&quot; Field Group */
+  noise?: Maybe<AcfMediaItemConnectionEdge>
 }
 
 /** The &quot;ContactsSocials&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1323,6 +1327,8 @@ export type ContentBackground = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
     mobile?: Maybe<ContentBackgroundMobile>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
+    noise?: Maybe<AcfMediaItemConnectionEdge>
   }
 
 /** The &quot;ContentBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -1402,6 +1408,8 @@ export type ContentBackground_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
   mobile?: Maybe<ContentBackgroundMobile>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ContentBackground&quot; Field Group */
+  noise?: Maybe<AcfMediaItemConnectionEdge>
 }
 
 /** The &quot;ContentCta&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -4602,6 +4610,8 @@ export type IndividualCourseDataBackground = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
     mobile?: Maybe<IndividualCourseDataBackgroundMobile>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
+    noise?: Maybe<AcfMediaItemConnectionEdge>
   }
 
 /** The &quot;IndividualCourseDataBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -4683,6 +4693,8 @@ export type IndividualCourseDataBackground_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
   mobile?: Maybe<IndividualCourseDataBackgroundMobile>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;IndividualCourseDataBackground&quot; Field Group */
+  noise?: Maybe<AcfMediaItemConnectionEdge>
 }
 
 /** The &quot;IndividualCourseDataHero&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -5070,6 +5082,8 @@ export type MainBackground = AcfFieldGroup &
     fieldGroupName?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
     mobile?: Maybe<MainBackgroundMobile>
+    /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
+    noise?: Maybe<AcfMediaItemConnectionEdge>
   }
 
 /** The &quot;MainBackgroundDesktop&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -5149,6 +5163,8 @@ export type MainBackground_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
   mobile?: Maybe<MainBackgroundMobile>
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;MainBackground&quot; Field Group */
+  noise?: Maybe<AcfMediaItemConnectionEdge>
 }
 
 /** The &quot;MainChooseCourse&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -14103,6 +14119,10 @@ export type ContactsQuery = {
       } | null> | null
       background?: {
         __typename?: 'ContactsBackground'
+        noise?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
         mobile?: {
           __typename?: 'AcfMediaItemConnectionEdge'
           node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
@@ -14434,6 +14454,10 @@ export type MainPageQuery = {
       } | null
       background?: {
         __typename?: 'MainBackground'
+        noise?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
         desktop?: {
           __typename?: 'MainBackgroundDesktop'
           footer?: {
@@ -14615,6 +14639,10 @@ export type IndividualCourseQuery = {
       } | null
       background?: {
         __typename?: 'IndividualCourseDataBackground'
+        noise?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
         courseProgram?: {
           __typename?: 'AcfMediaItemConnectionEdge'
           node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
@@ -14780,6 +14808,10 @@ export type GetOpeningTheRhythmQuery = {
       } | null
       background?: {
         __typename?: 'ContentBackground'
+        noise?: {
+          __typename?: 'AcfMediaItemConnectionEdge'
+          node: { __typename?: 'MediaItem'; sourceUrl?: string | null }
+        } | null
         desktop?: {
           __typename?: 'ContentBackgroundDesktop'
           hero?: {
@@ -15010,6 +15042,28 @@ export const ContactsDocument = {
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'noise' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
                             {
                               kind: 'Field',
                               name: { kind: 'Name', value: 'mobile' },
@@ -16163,6 +16217,28 @@ export const MainPageDocument = {
                           selections: [
                             {
                               kind: 'Field',
+                              name: { kind: 'Name', value: 'noise' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
                               name: { kind: 'Name', value: 'desktop' },
                               selectionSet: {
                                 kind: 'SelectionSet',
@@ -16800,6 +16876,28 @@ export const IndividualCourseDocument = {
                           selections: [
                             {
                               kind: 'Field',
+                              name: { kind: 'Name', value: 'noise' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
                               name: { kind: 'Name', value: 'courseProgram' },
                               selectionSet: {
                                 kind: 'SelectionSet',
@@ -17334,6 +17432,28 @@ export const GetOpeningTheRhythmDocument = {
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'noise' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'node' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'sourceUrl' },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
                             {
                               kind: 'Field',
                               name: { kind: 'Name', value: 'desktop' },

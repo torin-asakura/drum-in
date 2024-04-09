@@ -16,9 +16,14 @@ import { RightColumnProps } from './right-column.interfaces'
 const RightColumn: FC<RightColumnProps> = ({ privateLessonData }) => {
   const { formatMessage } = useIntl()
   return (
-    <Column width={['100%', '100%', 598]}>
+    <Column flexBasis='100%'>
       <Box display={['none', 'none', 'flex']}>
-        <Text fontWeight='medium' fontSize='mild' lineHeight='medium' color='text.purple'>
+        <Text
+          fontWeight='medium'
+          fontSize={['mild', 'mild', 'small', 'mild']}
+          lineHeight='medium'
+          color='text.purple'
+        >
           {privateLessonData?.cta?.title}
         </Text>
       </Box>

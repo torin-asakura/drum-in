@@ -8,7 +8,7 @@ import { Button }          from '@ui/button'
 import { ArrowTopIcon }    from '@ui/icons'
 import { ArrowBottomIcon } from '@ui/icons'
 import { Box }             from '@ui/layout'
-import { Row }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
 import { useHover }        from '@ui/utils'
 
@@ -26,7 +26,7 @@ export const DrawerButton: FC<{
   )
 
   return (
-    <Box display={['none', 'none', 'flex']} flexShrink={0} width={83} {...hoverProps}>
+    <Box display={['none', 'none', 'flex']} flexShrink={0} width={84} {...hoverProps}>
       <Button
         size='withoutPaddingMicroHeight'
         variant='transparentBackground'
@@ -35,8 +35,10 @@ export const DrawerButton: FC<{
         onClick={() => setVisibleDrawer(!visibleDrawer)}
         fill
       >
-        <Row justifyContent='end'>
+        <Layout flexGrow={1} flexBasis={6} />
+        <Box fill width={65} justifyContent='end' flexShrink={0}>
           <Text
+            whiteSpace='nowrap'
             textTransform='uppercase'
             fontWeight='semiBold'
             fontSize='medium'
@@ -45,7 +47,7 @@ export const DrawerButton: FC<{
           >
             {title}
           </Text>
-        </Row>
+        </Box>
       </Button>
     </Box>
   )

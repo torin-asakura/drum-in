@@ -87,7 +87,13 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='center top'
           >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
           </Box>
           <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
           <FaqBlock />
@@ -100,7 +106,13 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -110,7 +122,13 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
           </Box>
         </main>
         <StartLearningBlock

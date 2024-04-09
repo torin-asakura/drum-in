@@ -81,7 +81,13 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, 
             backgroundRepeat='no-repeat'
             backgroundPosition='-100px -50px'
           >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
           </Box>
           <PriceConnacolBlock connacolData={connacolData} />
           <FaqBlock />
@@ -94,7 +100,13 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, 
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -104,7 +116,13 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, 
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
           </Box>
         </main>
         <StartLearningBlock

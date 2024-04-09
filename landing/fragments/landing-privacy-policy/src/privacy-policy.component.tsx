@@ -21,7 +21,7 @@ const PrivacyPolicyBlock: FC<PrivacyPolicyProps> = ({ privacyPolicy }) => (
             textTransform='uppercase'
             fontFamily='secondary'
             fontWeight='bold'
-            fontSize={['semiRegular', 'mild', 'big']}
+            fontSize={['medium', 'semiRegular', 'mild', 'big']}
             lineHeight='default'
             color='text.smokyWhite'
           >

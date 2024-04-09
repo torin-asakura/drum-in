@@ -45,8 +45,15 @@ export const ContactPage: FC<ContactPageProps> = ({ contactsData }) => {
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <ContactBlock contactsData={contactsData} />
-            <FooterBlock buttonUp={false} />
+            <Box
+              flexDirection='column'
+              width='100%'
+              backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <ContactBlock contactsData={contactsData} />
+              <FooterBlock buttonUp={false} />
+            </Box>
           </Box>
           <Box
             width='100%'
@@ -57,8 +64,15 @@ export const ContactPage: FC<ContactPageProps> = ({ contactsData }) => {
             backgroundRepeat='no-repeat'
             backgroundPosition={['center top', 'center top', 'center']}
           >
-            <ContactBlock contactsData={contactsData} />
-            <FooterBlock buttonUp={false} />
+            <Box
+              flexDirection='column'
+              width='100%'
+              backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <ContactBlock contactsData={contactsData} />
+              <FooterBlock buttonUp={false} />
+            </Box>
           </Box>
         </main>
       </LocomotiveScrollProvider>

@@ -47,7 +47,7 @@ const Elements: FC<ElementsProps> = ({ list, stateHover }) => {
           individualCoursesData={individualCoursesData}
           stateHover={stateHover}
         />
-        <Layout display={['flex', 'flex', 'none']} flexBasis={[60, 50, 0]} />
+        <Layout flexBasis={[60, 50, 0, 0]} />
         <Box display={['flex', 'flex', 'none']}>
           <NextLink path='/contact'>
             <Text

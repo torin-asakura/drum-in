@@ -16,7 +16,7 @@ import { ContactBlockProps }   from './contact.interfaces'
 const ContactBlock: FC<ContactBlockProps> = ({ contactsData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
-      <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
+      <Layout flexBasis={[20, 30, 40]} />
       <Column width='100%'>
         <Layout flexBasis={[124, 140, 240]} />
         <Box>
@@ -53,7 +53,7 @@ const ContactBlock: FC<ContactBlockProps> = ({ contactsData }) => (
                 link={item?.link || ''}
                 content={item?.content || ''}
               />
-              <Layout flexBasis={[12, 24, 118]} />
+              <Layout flexBasis={[12, 24, 40, 118]} />
             </React.Fragment>
           ))}
         </Box>

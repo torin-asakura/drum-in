@@ -44,7 +44,7 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible 
             <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
               <NextLink path='/'>
                 <ImageBlock src={headerData?.logo?.node.sourceUrl || ''} alt='logo' />
-              </NextLink>{' '}
+              </NextLink>
             </Box>
             <Layout flexBasis={94} display={['none', 'none', 'flex']} />
             <DrawerButton
@@ -61,7 +61,7 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible 
             <CtaButton title={headerData?.ctaButton} />
           </Row>
           <Layout flexBasis={[60, 70, 125]} flexGrow={2} />
-          <Elements list={headerData?.dropdownList} stateHover={stateHover} />
+          <Elements list={headerData?.dropdownList} stateHover={stateHover} />s
           <Layout flexBasis={[55, 50, 40]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

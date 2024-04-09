@@ -17,7 +17,12 @@ const Buttons: FC<ButtonsProps> = ({ privateLessonData }) => {
 
   return (
     <>
-      <Box display={['none', 'flex', 'flex']} order={[7, 7, 0]} width={['100%', '100%', 514]}>
+      <Box
+        display={['none', 'flex', 'flex', 'flex']}
+        order={[7, 7, 0]}
+        maxWidth={[514]}
+        width={['100%', '100%', '100%']}
+      >
         <Button
           size='withoutPaddingBigHeight'
           variant='purpleBackground'

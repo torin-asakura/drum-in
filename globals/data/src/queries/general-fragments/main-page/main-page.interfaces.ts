@@ -87,6 +87,8 @@ export interface MainPageDataProps {
 }
 
 export interface MainPageBackgroundProps {
+  noise?: { node: { sourceUrl?: string | null } } | null
+
   desktop?: {
     footer?: { node: { sourceUrl?: string | null } } | null
     hero?: { node: { sourceUrl?: string | null } } | null

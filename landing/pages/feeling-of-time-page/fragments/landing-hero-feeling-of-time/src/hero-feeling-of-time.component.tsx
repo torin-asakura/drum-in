@@ -12,37 +12,49 @@ const HeroFeelingOfTimeBlock: FC<HeroFeelingOfTimeProps> = ({ background, feelin
   <>
     <Box
       display={['none', 'flex', 'flex']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.desktop?.hero?.node.sourceUrl})`}
-      backgroundSize='100%'
+      backgroundSize={[0, '100% 42%', '100% 32%', '100% 26%']}
       backgroundRepeat='no-repeat'
       backgroundPosition='0px -300px'
     >
-      <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock
-        background={background}
-        feelingOfTimeData={feelingOfTimeData}
-        scrollId='desktop-scroll'
-      />
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
+        <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <ProgramFeelingOfTimeBlock
+          background={background}
+          feelingOfTimeData={feelingOfTimeData}
+          scrollId='desktop-scroll'
+        />
+      </Box>
     </Box>
     <Box
       display={['flex', 'none', 'none']}
-      flexDirection='column'
       width='100%'
       backgroundImage={`url(${background?.mobile?.hero?.node.sourceUrl})`}
       backgroundSize='100%'
       backgroundRepeat='no-repeat'
       backgroundPosition='center top'
     >
-      <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-      <ProgramFeelingOfTimeBlock
-        background={background}
-        feelingOfTimeData={feelingOfTimeData}
-        scrollId='mobile-scroll'
-      />
+      <Box
+        flexDirection='column'
+        width='100%'
+        backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+        backgroundSize='contain'
+      >
+        <BannerFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <TargetAudienceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
+        <ProgramFeelingOfTimeBlock
+          background={background}
+          feelingOfTimeData={feelingOfTimeData}
+          scrollId='mobile-scroll'
+        />
+      </Box>
     </Box>
   </>
 )
