@@ -95,30 +95,36 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
             />
             <Box
               width='100%'
-              flexWrap='wrap'
               backgroundImage={`url(${background?.desktop?.teacher?.node?.sourceUrl})`}
               backgroundSize={['200%', '100% auto', '1800px']}
               backgroundRepeat='no-repeat'
               backgroundPosition={['center 500px', 'center center', 'center 75%']}
             >
-              <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
-                <TeacherBlock
-                  playSong={playSong}
-                  setPlaySong={setPlaySong}
-                  {...getObserverOptions('teacher')}
-                />
-              </Box>
-              <Box order={{ _: 2, laptop: 1, wide: 1 }}>
-                <PrivateLessonBlock
-                  privateLessonData={mainPageData.individualLesson}
-                  {...getObserverOptions('private-lesson')}
-                />
-              </Box>
-              <Box width='100%' order={{ _: 0, laptop: 2, wide: 2 }}>
-                <LearningProcessBlock
-                  learningProcessData={mainPageData.slider}
-                  {...getObserverOptions('learning-process')}
-                />
+              <Box
+                fill
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+                flexWrap='wrap'
+              >
+                <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
+                  <TeacherBlock
+                    playSong={playSong}
+                    setPlaySong={setPlaySong}
+                    {...getObserverOptions('teacher')}
+                  />
+                </Box>
+                <Box order={{ _: 2, laptop: 1, wide: 1 }}>
+                  <PrivateLessonBlock
+                    privateLessonData={mainPageData.individualLesson}
+                    {...getObserverOptions('private-lesson')}
+                  />
+                </Box>
+                <Box width='100%' order={{ _: 0, laptop: 2, wide: 2 }}>
+                  <LearningProcessBlock
+                    learningProcessData={mainPageData.slider}
+                    {...getObserverOptions('learning-process')}
+                  />
+                </Box>
               </Box>
             </Box>
             <Layout height={[40, 0, 0, 0]} />
@@ -136,7 +142,13 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               backgroundRepeat='no-repeat'
               backgroundPosition='left bottom'
             >
-              <FooterBlock {...getObserverOptions('footer')} />
+              <Box
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+                width='100%'
+              >
+                <FooterBlock {...getObserverOptions('footer')} />
+              </Box>
             </Box>
             <Box
               display={['flex', 'flex', 'none']}
@@ -146,7 +158,13 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               backgroundRepeat='no-repeat'
               backgroundPosition='center bottom'
             >
-              <FooterBlock {...getObserverOptions('footer')} />
+              <Box
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+                width='100%'
+              >
+                <FooterBlock {...getObserverOptions('footer')} />
+              </Box>
             </Box>
           </main>
         </SpyScrollProvider>
