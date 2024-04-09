@@ -12,7 +12,7 @@ import { Box }                      from '@ui/layout'
 
 import { ContractOfferProps }       from './contract-offer.interfaces'
 
-export const ContractOfferPage: FC<ContractOfferProps> = ({ contractOfferData }) => {
+export const ContractOfferPage: FC<ContractOfferProps> = ({ contractOfferData,headerData }) => {
   const containerRef = useRef(null)
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
@@ -32,7 +32,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({ contractOfferData })
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData}/>
         <Seo id={PageID.CONTRACT_OFFER} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <ContractOfferBlock contractOfferData={contractOfferData} />
