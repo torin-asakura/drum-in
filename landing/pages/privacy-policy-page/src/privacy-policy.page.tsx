@@ -33,7 +33,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ privacyPolicy, h
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock headerData={headerData}/>
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.INDEX} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />

@@ -37,5 +37,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  return addApolloState(client, { props: { SEO, contactsData,headerData } })
+  return addApolloState(client, { props: { SEO, contactsData, headerData } })
 }

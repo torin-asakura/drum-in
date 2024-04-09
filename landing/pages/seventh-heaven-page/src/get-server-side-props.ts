@@ -1,3 +1,4 @@
+import { GET_HEADER }            from '@globals/data'
 import { GeneralFragmentID }     from '@globals/data'
 import { GET_SONG }              from '@globals/data'
 import { CourseID }              from '@globals/data'
@@ -35,6 +36,13 @@ export const getServerSideProps = async ({ res }) => {
     variables: { id: GeneralFragmentID.SONG },
   })
 
+  const { data: header } = await client.query({
+    query: GET_HEADER,
+    variables: { id: GeneralFragmentID.HEADER },
+  })
+
+  const headerData = header?.generalFragment?.header
+
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
-  return { props: { SEO, seventhHeavenData, background, songUrl } }
+  return { props: { SEO, seventhHeavenData, background, songUrl, headerData } }
 }

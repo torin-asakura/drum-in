@@ -22,7 +22,12 @@ import { Box }                      from '@ui/layout'
 
 import { ConnacolPageProps }        from './connacol.interfaces'
 
-export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, songUrl }) => {
+export const ConnacolPage: FC<ConnacolPageProps> = ({
+  connacolData,
+  background,
+  songUrl,
+  headerData,
+}) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -69,7 +74,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, 
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.CONNACOL} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroConnacolBlock background={background} connacolData={connacolData} />

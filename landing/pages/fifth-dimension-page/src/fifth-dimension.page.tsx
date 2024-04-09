@@ -26,6 +26,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
   fifthDimensionData,
   background,
   songUrl,
+  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -73,7 +74,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData} />
         <Seo id={PageID.FIFTH_DIMENSION} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFifthDimensionBlock

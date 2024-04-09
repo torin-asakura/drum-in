@@ -35,5 +35,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  return { props: { SEO, contractOfferData,headerData } }
+  return { props: { SEO, contractOfferData, headerData } }
 }
