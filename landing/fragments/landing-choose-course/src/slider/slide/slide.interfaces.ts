@@ -1,21 +1,21 @@
 export interface SlideProps {
-  title: string
+  title?: string | null
   level?: string
-  desc: string
+  desc?: string | null
   price: string
   squareRotate: number
   squarePositionX: number
   squarePositionY: number
-  quantityVideoLessons: string
+  quantityVideoLessons?: number | null
   circlePositionX?: number
   circlePositionY?: number
-  circleFirstLine?: string
-  circleSecondLine?: string
+  circleFirstLine?: number | null | string
+  circleSecondLine?: string | JSX.Element | null
   rectangleRotate: number
   rectanglePositionX: number
   rectanglePositionY: number
-  quantityMonths: string
-  textMonths: string
+  quantityMonths?: number | null
+  textMonths?: string
   rectangleColor: string
-  link: string
+  link?: string | null
 }

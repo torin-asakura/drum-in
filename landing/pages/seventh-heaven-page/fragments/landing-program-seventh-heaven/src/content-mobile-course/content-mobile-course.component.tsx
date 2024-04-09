@@ -1,20 +1,25 @@
-import React                from 'react'
-import uniqid               from 'uniqid'
-import { FormattedMessage } from 'react-intl'
+import React                        from 'react'
+import uniqid                       from 'uniqid'
+import { FC }                       from 'react'
+import { FormattedMessage }         from 'react-intl'
 
-import { LightningIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { ProgressBar }      from '@ui/progress-bar'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { LightningIcon }            from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { ProgressBar }              from '@ui/progress-bar'
+import { Space }                    from '@ui/text'
+import { Text }                     from '@ui/text'
+import { splitAndSliceFirstItem }   from '@shared/utils/src'
 
-import { useProgram }       from '../data'
+import { ContentMobileCourseProps } from './content-mobile-course.interfaces'
 
-const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
-  const program = useProgram()
+const ContentMobileCourse: FC<ContentMobileCourseProps> = ({
+  seventhHeavenData,
+  scrollId = 'scroll-mobile',
+}) => {
+  const stepsArray = seventhHeavenData?.individualCourseData?.process?.step
 
   return (
     <Box
@@ -36,11 +41,11 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                 textTransform='uppercase'
                 fontFamily='secondary'
                 fontWeight='bold'
-                fontSize={['micro', 'medium', 'medium']}
+                fontSize={['medium', 'medium', 'medium']}
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {program?.numberVideoTutorials}
+                {stepsArray?.[0]?.title}
               </Text>
             </Box>
             <Layout flexBasis={[8, 12, 12]} flexShrink={0} />
@@ -51,7 +56,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                 lineHeight='primary'
                 color='text.smokyWhite'
               >
-                {program?.numberOfMonths}
+                {stepsArray?.[0]?.description}
               </Text>
             </Box>
           </Column>
@@ -60,7 +65,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[90, 125, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {program?.secondListOfTopics?.split(';').map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[1]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -80,7 +85,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[60, 73, 0]} />
           <Box flexDirection='column' height={[68, 100, 0]}>
-            {program?.firstListOfTopics?.split(';').map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[2]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'
@@ -113,7 +118,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
                 lineHeight='default'
                 color='text.smokyWhite'
               >
-                {program?.benefit}
+                {stepsArray?.[3]?.title}
               </Text>
             </Box>
           </Box>
@@ -122,7 +127,7 @@ const ContentMobileCourse = ({ scrollId = 'scroll-mobile' }) => {
         <Row>
           <Layout flexBasis={[60, 100, 0]} />
           <Box flexDirection='column' height={[85, 110, 0]}>
-            {program?.thirdListOfTopics?.split(';').map((element) => (
+            {splitAndSliceFirstItem(stepsArray?.[4]?.description)?.map((element) => (
               <Box key={uniqid()}>
                 <Text
                   fontWeight='medium'

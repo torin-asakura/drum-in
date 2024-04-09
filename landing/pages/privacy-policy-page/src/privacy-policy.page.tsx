@@ -1,24 +1,18 @@
 import React                        from 'react'
+import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { Seo }                      from './seo.component'
-import { useBackgrounds }           from './data'
+import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const OpeningTheRhythmPage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ privacyPolicy }) => {
   const containerRef = useRef(null)
 
   return (
@@ -40,13 +34,13 @@ export const OpeningTheRhythmPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo id={PageID.INDEX} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <PrivacyPolicyBlock />
+          <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${''})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
@@ -56,7 +50,7 @@ export const OpeningTheRhythmPage = ({ SEO }: Props) => {
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${''})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
@@ -69,4 +63,4 @@ export const OpeningTheRhythmPage = ({ SEO }: Props) => {
   )
 }
 
-export default OpeningTheRhythmPage
+export default PrivacyPolicyPage

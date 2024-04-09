@@ -1,5 +1,5 @@
 export interface OneCharacteristicProps {
   indentLeft: number
-  numeric: string
-  title: string
+  numeric?: number | null
+  title?: string | null
 }

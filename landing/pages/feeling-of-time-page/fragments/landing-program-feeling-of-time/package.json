@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@shared/utils": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/progress-bar": "workspace:0.0.1",
@@ -12,6 +13,7 @@
   },
   "devDependencies": {
     "@apollo/client": "3.6.9",
+    "@globals/data": "workspace:0.0.1",
     "@types/react": "18.2.20",
     "@types/uniqid": "5.3.2",
     "next": "12.1.1",

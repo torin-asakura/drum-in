@@ -1,10 +1,10 @@
 export interface Navigation {
   title: string
   level: string
-  quantityVideoLessons: string
+  quantityVideoLessons: number
   circleFirstLine: string
   circleSecondLine: string
-  quantityMonths: string
+  quantityMonths: number
   textMonths: string
   itemId: string
   path: string

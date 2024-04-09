@@ -1,34 +1,35 @@
-import React             from 'react'
+import React                           from 'react'
+import { FC }                          from 'react'
 
-import { ArrowDownIcon } from '@ui/icons'
-import { Box }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Layout }        from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Text }          from '@ui/text'
+import { ArrowDownIcon }               from '@ui/icons'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Text }                        from '@ui/text'
+import { formatContent }               from '@shared/utils'
 
-import { useBanner }     from './data'
+import { BannerPolyrhythmicKeysProps } from './banner-polyrhythmic-keys.interfaces'
 
-const BannerPolyrhythmicKeysBlock = () => {
-  const banner = useBanner()
-
+const BannerPolyrhythmicKeysBlock: FC<BannerPolyrhythmicKeysProps> = ({ polyrhythmicKeysData }) => {
+  const description = formatContent(polyrhythmicKeysData?.content)
   return (
     <Row justifyContent='center'>
-      <Box width={['100%', '100%', 1920]}>
+      <Box width={['100%', 900, 1400, 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%' alignItems={['start', 'start', 'center']}>
           <Layout flexBasis={[124, 130, 160]} flexShrink={0} />
-          <Box>
+          <Box width={[400, '100%', '100%', '100%']}>
             <Text
               textAlign={['left', 'left', 'center']}
               textTransform='uppercase'
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={{ _: 'small', tablet: 'extra', laptop: 'giant', wide: 'biggest' }}
+              fontSize={{ _: 'moderate', tablet: 'extra', laptop: 'semiGiant', wide: 'biggest' }}
               lineHeight={['default', 'default', 'semiSmall']}
               color='text.smokyWhite'
             >
-              {banner?.title}
+              {polyrhythmicKeysData?.title}
             </Text>
           </Box>
           <Layout flexBasis={[16, 24, 32]} flexShrink={0} />
@@ -44,7 +45,7 @@ const BannerPolyrhythmicKeysBlock = () => {
                 'text.smokyWhite',
               ]}
             >
-              {banner?.description}
+              {description}
             </Text>
           </Box>
           <Layout flexBasis={72} flexShrink={0} display={['none', 'none', 'flex']} />

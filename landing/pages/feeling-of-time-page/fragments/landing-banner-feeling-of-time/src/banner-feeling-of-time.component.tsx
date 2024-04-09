@@ -1,28 +1,31 @@
-import React                  from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
 
-import { RightDownArrowIcon } from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
+import { RightDownArrowIcon }       from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { Text }                     from '@ui/text'
+import { formatContent }            from '@shared/utils'
 
-import { Tape }               from './tape'
-import { useBanner }          from './data'
+import { BannerFeelingOfTimeProps } from './banner-feeling-of-time.interfaces'
+import { Tape }                     from './tape'
 
-const BannerFeelingOfTimeBlock = () => {
-  const banner = useBanner()
+const BannerFeelingOfTimeBlock: FC<BannerFeelingOfTimeProps> = ({ feelingOfTimeData }) => {
+  const description = formatContent(feelingOfTimeData?.content)
+  const runningLine = `#${feelingOfTimeData?.individualCourseData?.hero?.runningLine}`
 
   return (
     <Box flexDirection='column' width='100%'>
       <Row justifyContent='center'>
-        <Box width={['100%', '100%', 1920]}>
+        <Box width={['100%', '100%', '100%', 1920]}>
           <Layout flexBasis={[20, 30, 40]} />
           <Column width='100%'>
             <Layout flexBasis={[124, 142, 160]} />
             <Box position='relative'>
               <Column width='100%' alignItems={['start', 'start', 'end']}>
-                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: 1790 }}>
+                <Box width={{ _: '100%', tablet: '100%', laptop: '100%', wide: '100%' }}>
                   <Text
                     textAlign={['left', 'left', 'right']}
                     textTransform='uppercase'
@@ -37,7 +40,7 @@ const BannerFeelingOfTimeBlock = () => {
                     lineHeight={['default', 'default', 'semiSmall']}
                     color='text.smokyWhite'
                   >
-                    {banner?.titleInHero}
+                    {feelingOfTimeData?.title}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 28, 40]} />
@@ -53,12 +56,17 @@ const BannerFeelingOfTimeBlock = () => {
                         'text.smokyWhite',
                       ]}
                     >
-                      {banner?.descriptionCourseInHero}
+                      {description}
                     </Text>
                   </Box>
                 </Box>
               </Column>
-              <Box display={['none', 'none', 'flex']} position='absolute' left={150} top={82}>
+              <Box
+                display={['none', 'none', 'none', 'flex']}
+                position='absolute'
+                left={150}
+                top={82}
+              >
                 <RightDownArrowIcon color='rgb(242, 242, 242)' width={300} height={200} />
               </Box>
               <Box
@@ -76,7 +84,7 @@ const BannerFeelingOfTimeBlock = () => {
           <Layout flexBasis={[20, 30, 40]} />
         </Box>
       </Row>
-      <Tape level={banner?.levelCourseInHero} />
+      <Tape level={runningLine} />
     </Box>
   )
 }

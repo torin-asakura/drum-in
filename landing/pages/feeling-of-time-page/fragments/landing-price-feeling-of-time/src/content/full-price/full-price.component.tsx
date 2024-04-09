@@ -4,6 +4,7 @@ import { useState }                     from 'react'
 
 import { ModalFormFeelingOfTime }       from '@landing/modal-form-feeling-of-time'
 import { ModalMobileFormFeelingOfTime } from '@landing/modal-form-feeling-of-time'
+import { RolePaymentForm }              from '@shared/constants/src'
 import { ArrowRightTailIcon }           from '@ui/icons'
 import { Layout }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
@@ -12,7 +13,7 @@ import { useHover }                     from '@ui/utils'
 
 import { FullPriceProps }               from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({ feelingOfTimeData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -93,8 +94,15 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormFeelingOfTime activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalFormFeelingOfTime
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        feelingOfTimeData={feelingOfTimeData}
+        activeRender={visibleModal}
+        onClose={() => setVisibleModal(false)}
+      />
       <ModalMobileFormFeelingOfTime
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        feelingOfTimeData={feelingOfTimeData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />

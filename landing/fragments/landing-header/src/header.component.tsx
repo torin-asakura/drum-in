@@ -1,36 +1,29 @@
 import React                   from 'react'
-import { FormattedMessage }    from 'react-intl'
 import { useState }            from 'react'
 import { useEffect }           from 'react'
 
-import { Consultation }        from '@landing/consultation'
-import { MobileConsultation }  from '@landing/consultation'
 import { NavigationBlock }     from '@landing/navigation-fragment'
 import { Button }              from '@ui/button'
-import { ArrowBottomIcon }     from '@ui/icons'
 import { MenuIcon }            from '@ui/icons'
+import { ImageBlock }          from '@ui/image'
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { NextLink }            from '@ui/link'
-import { Logo }                from '@ui/logo'
-import { Text }                from '@ui/text'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
-import { useHover }            from '@ui/utils'
+import { useHeader }           from '@globals/data'
 
-import { useHeader }           from './data'
+import { CtaButton }           from './cta-button'
+import { DrawerButton }        from './drawer-button'
+import { ItemLink }            from './item-link'
 
 const HeaderBlock = () => {
-  const [visibleNav, setVisibleNav] = useState<boolean>(false)
-  const [hoverArrow, hoverArrowProps] = useHover()
-  const [hoverLink, hoverLinkProps] = useHover()
-  const [visibleModal, setVisibleModal] = useState<boolean>(false)
-  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const header = useHeader()
-
-  const { scroll } = useLocomotiveScroll()
+  const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
+  const { scroll } = useLocomotiveScroll()
+
+  const { header } = useHeader()
 
   useEffect(() => {
     if (scroll) {
@@ -50,7 +43,7 @@ const HeaderBlock = () => {
 
   return (
     <>
-      <NavigationBlock visible={visibleNav} setVisible={setVisibleNav} />
+      <NavigationBlock headerData={header} visible={visibleDrawer} setVisible={setVisibleDrawer} />
       <Box
         width='100%'
         zIndex={100}
@@ -60,7 +53,7 @@ const HeaderBlock = () => {
         backgroundColor={isNavBackground ? 'background.blackAmber' : 'transparent'}
         style={{ transition: '0.3s' }}
       >
-        <Column width={['100%', '100%', 1920]} alignItems='center'>
+        <Column width={['100%', '100%', '100%']} alignItems='center'>
           <Layout flexBasis={[24, 28, 32]} />
           <Box width='100%'>
             <Layout flexBasis={[26, 33, 40]} />
@@ -69,96 +62,28 @@ const HeaderBlock = () => {
                 <Button
                   size='withoutPaddingMicroHeight'
                   variant='transparentBackground'
-                  onClick={() => setVisibleNav(true)}
+                  onClick={() => setVisibleDrawer(true)}
                 >
                   <MenuIcon width={40} height={40} />
                 </Button>
               </Box>
               <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
               <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
-                <Logo />
-              </Box>
-              <Layout flexBasis={94} display={['none', 'none', 'flex']} />
-              <Box
-                display={['none', 'none', 'flex']}
-                flexShrink={0}
-                width={83}
-                {...hoverArrowProps}
-              >
-                <Button
-                  size='withoutPaddingMicroHeight'
-                  variant='transparentBackground'
-                  iconSvg={
-                    <ArrowBottomIcon
-                      width={16}
-                      height={16}
-                      color={hoverArrow ? 'rgb(154,101,242)' : ''}
-                    />
-                  }
-                  horizontalLocation='left'
-                  onClick={() => setVisibleNav(true)}
-                  fill
-                >
-                  <Row justifyContent='end'>
-                    <Text
-                      textTransform='uppercase'
-                      fontWeight='semiBold'
-                      fontSize='medium'
-                      lineHeight='default'
-                    >
-                      <FormattedMessage id='landing_header.courses' />
-                    </Text>
-                  </Row>
-                </Button>
-              </Box>
-              <Layout flexBasis={70} display={['none', 'none', 'flex']} />
-              <Box display={['none', 'none', 'flex']} {...hoverLinkProps}>
-                <NextLink path={header?.urlLink}>
-                  <Text
-                    color={hoverLink ? 'text.purple' : 'text.smokyWhite'}
-                    style={{ transition: '0.3s' }}
-                  >
-                    {header?.titleLink}
-                  </Text>
+                <NextLink path='/'>
+                  <ImageBlock src={header?.logo?.node.sourceUrl || ''} alt='logo' />
                 </NextLink>
               </Box>
-              <Row justifyContent='end' display={['none', 'flex', 'flex']}>
-                <Button
-                  size='withoutPaddingMicroHeight'
-                  variant='transparentBackground'
-                  onClick={() => setVisibleModal(true)}
-                >
-                  <Text
-                    textTransform='uppercase'
-                    fontWeight='semiBold'
-                    fontSize={['semiMedium', 'medium', 'medium']}
-                    lineHeight='default'
-                  >
-                    {header?.nameButton}
-                  </Text>
-                </Button>
-              </Row>
-              <Row justifyContent='end' display={['flex', 'none', 'none']}>
-                <Button
-                  size='withoutPaddingMicroHeight'
-                  variant='transparentBackground'
-                  onClick={() => setVisibleModalMobile(true)}
-                >
-                  <Text
-                    textTransform='uppercase'
-                    fontWeight='semiBold'
-                    fontSize={['semiMedium', 'medium', 'medium']}
-                    lineHeight='default'
-                  >
-                    {header?.nameButton}
-                  </Text>
-                </Button>
-              </Row>
-              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-              <MobileConsultation
-                activeRender={visibleModalMobile}
-                onClose={() => setVisibleModalMobile(false)}
+              <Layout flexBasis={94} display={['none', 'none', 'flex']} />
+              <DrawerButton
+                title={header?.dropdownList?.title}
+                visibleDrawer={visibleDrawer}
+                setVisibleDrawer={setVisibleDrawer}
               />
+              <Layout flexBasis={70} display={['none', 'none', 'flex']} />
+              {header?.navigationElements?.map((item) => (
+                <ItemLink item={item} />
+              ))}
+              <CtaButton title={header?.ctaButton} />
             </Row>
             <Layout flexBasis={[26, 33, 40]} />
           </Box>

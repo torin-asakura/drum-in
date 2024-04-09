@@ -4,6 +4,7 @@ import { motion }                         from 'framer-motion'
 import { useState }                       from 'react'
 import { useIntl }                        from 'react-intl'
 
+import { RolePaymentForm }                from '@shared/constants/src'
 import { Column }                         from '@ui/layout'
 import { Layout }                         from '@ui/layout'
 import { Box }                            from '@ui/layout'
@@ -12,26 +13,29 @@ import { Renderer }                       from '@ui/modal'
 import { Backdrop }                       from '@ui/modal'
 
 import { ContentDesktop }                 from './content'
-import { RoleModalForm }                  from './modal-form-opening-the-rhythm.enum'
 import { ModalFormOpeningTheRhythmProps } from './modal-form-opening-the-rhythm.interfaces'
 
 const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
+  isOneTimePaymentPlan,
   activeRender,
   onClose,
   scroll = true,
+  openingTheRhythm,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
+    isOneTimePaymentPlan ? [RolePaymentForm.OneTimePayment] : [RolePaymentForm.InstallmentPlan]
+  )
   const { formatMessage } = useIntl()
   const options = [
     {
-      value: RoleModalForm.InstallmentPlan,
+      value: RolePaymentForm.InstallmentPlan,
       label: formatMessage({
         id: 'landing_modal_forms.installment_plan',
       }),
       mutuallyExclusive: true,
     },
     {
-      value: RoleModalForm.OneTimePayment,
+      value: RolePaymentForm.OneTimePayment,
       label: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
       }),
@@ -76,6 +80,7 @@ const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                openingTheRhythm={openingTheRhythm}
                 onClose={onClose}
                 roleVar={roleVar}
                 options={options}

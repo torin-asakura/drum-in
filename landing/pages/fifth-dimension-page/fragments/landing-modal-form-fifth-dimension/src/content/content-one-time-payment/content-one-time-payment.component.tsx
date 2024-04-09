@@ -1,23 +1,28 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { FormattedMessage }           from 'react-intl'
+import { FormattedNumber }            from 'react-intl'
+import { useIntl }                    from 'react-intl'
 
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Layout }                     from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Space }                      from '@ui/text'
+import { Text }                       from '@ui/text'
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse }             from '../selected-course'
+import { ContentOneTimePaymentProps } from './content-one-time-payment.interfaces'
 
-const ContentOneTimePayment = () => {
-  const modalForm = useModalForm()
+const ContentOneTimePayment: FC<ContentOneTimePaymentProps> = ({ fifthDimensionData }) => {
+  const { formatMessage } = useIntl()
 
   return (
     <>
-      {modalForm?.courses?.map(({ name, description }) => (
-        <SelectedCourse title={name} description={description} />
-      ))}
+      <SelectedCourse
+        title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
+          fifthDimensionData?.title
+        }"`}
+        description={fifthDimensionData?.individualCourseData?.aboutCourse || ''}
+      />
       <Layout flexBasis={[8, 16, 24]} flexShrink={0} />
       <Row justifyContent='end'>
         <Text
@@ -29,7 +34,7 @@ const ContentOneTimePayment = () => {
           <FormattedMessage id='landing_modal_forms.amount' />
           <Space />
           <FormattedNumber
-            value={modalForm?.finalPriceForOneTimePaymentNumber || 0}
+            value={fifthDimensionData?.individualCourseData?.price?.fullPrice || 0}
             style='currency' // eslint-disable-line
             currency='RUB'
             maximumFractionDigits={0}

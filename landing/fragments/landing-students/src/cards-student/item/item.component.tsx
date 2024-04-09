@@ -96,6 +96,7 @@ const Item: FC<ItemProps> = ({
           <Layout flexBasis={[16, 22, 23]} flexShrink={0} />
         </Box>
         <Box
+          display={['none', 'none', 'flex']}
           position='absolute'
           style={{ transition: '0.3s' }}
           top={elemHover ? verticalPositionFirstIcon : 10}
@@ -103,9 +104,10 @@ const Item: FC<ItemProps> = ({
           width={110}
           height={110}
         >
-          <ImageBlock src={urlFirstIcon} />
+          <ImageBlock src={urlFirstIcon || ''} />
         </Box>
         <Box
+          display={['none', 'none', 'flex']}
           position='absolute'
           style={{ transition: '0.3s' }}
           top={elemHover ? verticalPositionSecondIcon : 10}
@@ -113,7 +115,7 @@ const Item: FC<ItemProps> = ({
           width={110}
           height={110}
         >
-          <ImageBlock src={urlSecondIcon} />
+          <ImageBlock src={urlSecondIcon || ''} />
         </Box>
       </Box>
       <Layout display={['flex', 'flex', 'none']} flexBasis={24} flexShrink={0} />

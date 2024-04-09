@@ -1,23 +1,21 @@
-import React         from 'react'
+import React               from 'react'
+import { FC }              from 'react'
 
-import { Accordion } from '@ui/accordion'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
+import { Accordion }       from '@ui/accordion'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
 
-import { useFaq }    from '../data'
+import { ListMobileProps } from './list-mobile.interfaces'
 
-const ListMobile = () => {
-  const faqArray = useFaq()
+const ListMobile: FC<ListMobileProps> = ({ faq }) => (
+  <Column display={['flex', 'flex', 'none']}>
+    {faq?.map((item) => (
+      <React.Fragment key={item?.question}>
+        <Accordion title={item?.question || ''} content={item?.answer || ''} />
+        <Layout flexBasis={[16, 21, 0]} />
+      </React.Fragment>
+    ))}
+  </Column>
+)
 
-  return (
-    <Column display={['flex', 'flex', 'none']}>
-      {faqArray.map(({ title, faq }) => (
-        <React.Fragment key={title.replace(' ', '')}>
-          <Accordion title={title} content={faq.answerForFaq} />
-          <Layout flexBasis={[16, 21, 0]} />
-        </React.Fragment>
-      ))}
-    </Column>
-  )
-}
 export { ListMobile }

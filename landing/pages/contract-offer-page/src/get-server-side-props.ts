@@ -1,22 +1,31 @@
-import { getClient }      from '@globals/data'
-import { setCacheHeader } from '@globals/data'
-
-import { GET_OFERTA_SEO } from './data'
+import { GeneralFragmentID }  from '@globals/data'
+import { PageID }             from '@globals/data'
+import { GET_CONTRACT_OFFER } from '@globals/data'
+import { GET_SEO }            from '@globals/data'
+import { initializeApollo }   from '@globals/data'
+import { setCacheHeader }     from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
-  const client = getClient()
+  const client = initializeApollo({})
 
   setCacheHeader(res, 3600, 300)
 
+  const { data } = await client.query({
+    query: GET_CONTRACT_OFFER,
+    variables: { id: GeneralFragmentID.CONTRACT_OFFER },
+  })
+  const contractOfferData = data?.generalFragment?.contractOffer
+
   const { data: seoData } = await client.query({
-    query: GET_OFERTA_SEO,
+    query: GET_SEO,
+    variables: { id: PageID.CONTRACT_OFFER },
   })
 
   const SEO = {
-    ...seoData?.pageContentBy.seo,
+    ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
 
-  return { props: { SEO } }
+  return { props: { SEO, contractOfferData } }
 }

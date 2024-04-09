@@ -1,5 +1,7 @@
-import { createContext } from 'react'
+import { createContext }   from 'react'
 
-const Context = createContext<Array<string>>([''])
+import { RolePaymentForm } from '@shared/constants'
+
+const Context = createContext<Array<RolePaymentForm>>([RolePaymentForm.InstallmentPlan])
 
 export { Context }

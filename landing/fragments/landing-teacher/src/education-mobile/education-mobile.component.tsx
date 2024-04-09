@@ -1,4 +1,5 @@
 import React                           from 'react'
+import { FC }                          from 'react'
 import { FormattedMessage }            from 'react-intl'
 import { useState }                    from 'react'
 
@@ -8,11 +9,10 @@ import { Column }                      from '@ui/layout'
 import { Layout }                      from '@ui/layout'
 import { Text }                        from '@ui/text'
 
-import { useTeacher }                  from '../data'
+import { EducationMobileProps }        from './education-mobile.interfaces'
 
-const EducationMobile = () => {
+const EducationMobile: FC<EducationMobileProps> = ({ teacherData }) => {
   const [visibleEducation, setVisibleEducation] = useState<boolean>(false)
-  const education = useTeacher()?.teacher.education
 
   return (
     <Box
@@ -56,8 +56,8 @@ const EducationMobile = () => {
         <Layout flexBasis={[12, 20, 0]} flexShrink={0} />
         <Column>
           <Layout flexBasis={[12, 20, 0]} />
-          {education?.map(({ item }) => (
-            <React.Fragment key={item.substring(0, 3)}>
+          {teacherData?.education?.list?.map((item) => (
+            <React.Fragment key={item?.element?.substring(0, 3)}>
               <Box>
                 <Text
                   fontWeight='medium'
@@ -65,7 +65,7 @@ const EducationMobile = () => {
                   lineHeight='primary'
                   color='text.blackAmber'
                 >
-                  {item}
+                  {item?.element}
                 </Text>
               </Box>
               <Layout flexBasis={[6, 10, 0]} />

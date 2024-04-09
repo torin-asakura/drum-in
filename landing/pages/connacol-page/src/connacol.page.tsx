@@ -1,9 +1,11 @@
 import React                        from 'react'
+import { FC }                       from 'react'
 import { useRef }                   from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { CourseProcessBlock }       from '@landing/course-process-fragment'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
@@ -15,32 +17,22 @@ import { ModalMobileFormConnacol }  from '@landing/modal-form-connacol'
 import { PriceConnacolBlock }       from '@landing/price-connacol-fragment'
 import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { Seo }                      from './seo.component'
-import { useBackgrounds }           from './data'
-import { useSong }                  from './data'
+import { ConnacolPageProps }        from './connacol.interfaces'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const ConnacolPage = ({ SEO }: Props) => {
-  const backgrounds = useBackgrounds()
+export const ConnacolPage: FC<ConnacolPageProps> = ({ connacolData, background, songUrl }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const [playSong, setPlaySong] = useState<boolean>(false)
-  const urlSongData = useSong()?.songUrl?.mediaItemUrl
   const songElement = useRef<HTMLAudioElement | undefined>()
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && urlSongData !== undefined) {
-      songElement.current = new Audio(urlSongData)
+    if (typeof window !== 'undefined' && songUrl !== undefined) {
+      songElement.current = new Audio(songUrl || '')
     }
 
     return () => {
@@ -49,7 +41,7 @@ export const ConnacolPage = ({ SEO }: Props) => {
         songElement.current = undefined
       }
     }
-  }, [urlSongData])
+  }, [songUrl])
 
   useEffect(() => {
     if (playSong) {
@@ -78,49 +70,72 @@ export const ConnacolPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo id={PageID.CONNACOL} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroConnacolBlock />
+          <HeroConnacolBlock background={background} connacolData={connacolData} />
           <CourseProcessBlock />
           <Box
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForTeacherBlock?.backgroundForTeacher?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
             backgroundSize={['200%', '200% 100%', '1800px']}
             backgroundRepeat='no-repeat'
-            backgroundPosition='center top'
+            backgroundPosition='-100px -50px'
           >
-            <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+            </Box>
           </Box>
-          <PriceConnacolBlock />
+          <PriceConnacolBlock connacolData={connacolData} />
           <FaqBlock />
           <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
             backgroundSize='80% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
             width='100%'
-            backgroundImage={`url(${backgrounds?.backgroundForFooter?.backgroundMobileForFooter?.sourceUrl})`}
+            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
             backgroundSize='100% 80%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <FooterBlock />
+            </Box>
           </Box>
         </main>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}
         />
-        <ModalFormConnacol activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+        <ModalFormConnacol
+          connacolData={connacolData}
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+        />
         <ModalMobileFormConnacol
+          connacolData={connacolData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

@@ -30,7 +30,6 @@ const Item: FC<ItemProps> = ({
   rectangleColor,
   quantityVideoLessons,
   quantityMonths,
-  textMonths,
   titleHoverBlock,
   listNecessaryKnowledge,
 }) => {
@@ -81,7 +80,7 @@ const Item: FC<ItemProps> = ({
         </Column>
         <Layout flexBasis={40} flexShrink={0} />
       </Row>
-      <Layout flexBasis={215} />
+      <Layout flexBasis={[20, 20, 20, 215]} />
       <Box
         width={586}
         height={400}
@@ -93,13 +92,7 @@ const Item: FC<ItemProps> = ({
         position='relative'
       >
         <Box position='absolute' right={squarePositionX} bottom={squarePositionY}>
-          <Square
-            firstLine={quantityVideoLessons}
-            secondLine={formatMessage({
-              id: 'landing_program.video_lessons',
-            })}
-            rotate={squareRotate}
-          />
+          <Square firstLine={quantityVideoLessons} rotate={squareRotate} />
         </Box>
         <Box position='absolute' right={circlePositionX} bottom={circlePositionY}>
           <Circle
@@ -111,12 +104,7 @@ const Item: FC<ItemProps> = ({
           />
         </Box>
         <Box position='absolute' right={rectanglePositionX} bottom={rectanglePositionY}>
-          <Rectangle
-            color={rectangleColor}
-            firstLine={quantityMonths}
-            secondLine={textMonths}
-            rotate={rectangleRotate}
-          />
+          <Rectangle color={rectangleColor} firstLine={quantityMonths} rotate={rectangleRotate} />
         </Box>
       </Box>
     </Box>

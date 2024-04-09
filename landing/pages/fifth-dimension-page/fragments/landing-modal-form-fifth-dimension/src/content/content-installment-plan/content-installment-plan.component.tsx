@@ -1,24 +1,34 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { FormattedMessage }            from 'react-intl'
+import { FormattedNumber }             from 'react-intl'
+import { useIntl }                     from 'react-intl'
 
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Box }                         from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Text }                        from '@ui/text'
+import { Space }                       from '@ui/text/src'
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse }              from '../selected-course'
+import { ContentInstallmentPlanProps } from './content-installment-plan.interfaces'
 
-const ContentInstallmentPlan = () => {
-  const modalForm = useModalForm()
+const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({ fifthDimensionData }) => {
+  const { formatMessage } = useIntl()
+  const monthCount = fifthDimensionData?.individualCourseData?.price?.courseLengthInMonths
+  const monthlyPrice = fifthDimensionData?.individualCourseData?.price?.monthlyPrice
+  const courseLengthInMonths = fifthDimensionData?.individualCourseData?.price?.courseLengthInMonths
+  const totalAmountIfMonthly = (courseLengthInMonths || 0) * (monthlyPrice || 0)
 
   return (
     <>
-      {modalForm?.courses?.map(({ name, description }) => (
-        <SelectedCourse title={name} description={description} />
-      ))}
+      <SelectedCourse
+        title={`${formatMessage({ id: 'landing_modal_forms.course' })} "${
+          fifthDimensionData?.title
+        }"`}
+        description={fifthDimensionData?.individualCourseData?.aboutCourse || ''}
+      />
       <Layout flexBasis={[24, 26, 28]} flexShrink={0} />
       <Row>
         <Column>
@@ -40,7 +50,7 @@ const ContentInstallmentPlan = () => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={modalForm?.monthlyPaymentNumber || 0}
+                value={monthlyPrice || 0}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}
@@ -68,7 +78,9 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {modalForm?.installmentDuration}
+              {courseLengthInMonths}
+              <Space />
+              <FormattedMessage id='course.price.plural_format_months' values={{ monthCount }} />
             </Text>
           </Box>
         </Column>
@@ -92,7 +104,7 @@ const ContentInstallmentPlan = () => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={modalForm?.finalPriceForInstallmentNumber || 0}
+                value={totalAmountIfMonthly}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}

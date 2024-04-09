@@ -28,10 +28,8 @@ const Slide: FC<SlideProps> = ({
   rectangleColor,
   quantityVideoLessons,
   quantityMonths,
-  textMonths,
 }) => {
   const { formatMessage } = useIntl()
-
   return (
     <Column>
       <Box
@@ -49,13 +47,7 @@ const Slide: FC<SlideProps> = ({
             height={[194, 300, 0]}
           >
             <Box position='absolute' right={squarePositionX} bottom={squarePositionY}>
-              <Square
-                firstLine={quantityVideoLessons}
-                secondLine={formatMessage({
-                  id: 'landing_program.video_lessons',
-                })}
-                rotate={squareRotate}
-              />
+              <Square firstLine={quantityVideoLessons} rotate={squareRotate} />
             </Box>
             <Box position='absolute' right={circlePositionX} bottom={circlePositionY}>
               <Circle
@@ -69,7 +61,6 @@ const Slide: FC<SlideProps> = ({
               <Rectangle
                 color={rectangleColor}
                 firstLine={quantityMonths}
-                secondLine={textMonths}
                 rotate={rectangleRotate}
               />
             </Box>
@@ -111,7 +102,7 @@ const Slide: FC<SlideProps> = ({
               <Box>
                 <Text
                   fontWeight='medium'
-                  fontSize={['micro', 'medium', 'medium']}
+                  fontSize={['micro', 'middling', 'medium']}
                   lineHeight='primary'
                   color='text.gray'
                 >

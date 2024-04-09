@@ -1,25 +1,19 @@
 import React                        from 'react'
+import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { PageID }                   from '@globals/data'
 import { ContactBlock }             from '@landing/contact-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
+import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { Seo }                      from './seo.component'
-import { useBackground }            from './data'
+import { ContactPageProps }         from './contact-page.interfaces'
 
-interface SEOProp {
-  [key: string]: string
-}
-interface Props {
-  SEO: SEOProp
-}
-
-export const ContactPage = ({ SEO }: Props) => {
+export const ContactPage: FC<ContactPageProps> = ({ contactsData }) => {
   const containerRef = useRef(null)
-  const background = useBackground()
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
@@ -40,31 +34,45 @@ export const ContactPage = ({ SEO }: Props) => {
         watch={[]}
       >
         <HeaderBlock />
-        <Seo SEO={SEO} />
+        <Seo id={PageID.CONTACT} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Box
             width='100%'
             display={['none', 'none', 'flex']}
             flexWrap='wrap'
-            backgroundImage={`url(${background?.backgroundForHero?.sourceUrl})`}
+            backgroundImage={`url(${contactsData?.background?.desktop?.node.sourceUrl})`}
             backgroundSize='100% 100%'
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <ContactBlock />
-            <FooterBlock buttonUp={false} />
+            <Box
+              flexDirection='column'
+              width='100%'
+              backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <ContactBlock contactsData={contactsData} />
+              <FooterBlock buttonUp={false} />
+            </Box>
           </Box>
           <Box
             width='100%'
             display={['flex', 'flex', 'none']}
             flexWrap='wrap'
-            backgroundImage={`url(${background?.backgroundMobileForHero?.sourceUrl})`}
+            backgroundImage={`url(${contactsData?.background?.mobile?.node.sourceUrl})`}
             backgroundSize={['100%', '100%', '0']}
             backgroundRepeat='no-repeat'
             backgroundPosition={['center top', 'center top', 'center']}
           >
-            <ContactBlock />
-            <FooterBlock buttonUp={false} />
+            <Box
+              flexDirection='column'
+              width='100%'
+              backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
+            >
+              <ContactBlock contactsData={contactsData} />
+              <FooterBlock buttonUp={false} />
+            </Box>
           </Box>
         </main>
       </LocomotiveScrollProvider>

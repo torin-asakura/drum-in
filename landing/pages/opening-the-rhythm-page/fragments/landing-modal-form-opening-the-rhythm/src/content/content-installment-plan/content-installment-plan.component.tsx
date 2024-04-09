@@ -1,24 +1,38 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { FormattedMessage }            from 'react-intl'
+import { FormattedNumber }             from 'react-intl'
 
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Box }                         from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Space }                       from '@ui/text'
+import { Text }                        from '@ui/text'
 
-import { SelectedCourse }   from '../selected-course'
-import { useModalForm }     from '../../data'
+import { SelectedCourse }              from '../selected-course'
+import { ContentInstallmentPlanProps } from './content-installment-plan.interfaces'
 
-const ContentInstallmentPlan = () => {
-  const modalForm = useModalForm()
-
+const ContentInstallmentPlan: FC<ContentInstallmentPlanProps> = ({
+  openingTheRhythm,
+  amount,
+  months,
+  recalculateAmount,
+  recalculateMonths,
+}) => {
+  const monthCount = openingTheRhythm?.price?.details?.monthsNumber
   return (
     <>
-      {modalForm?.courses?.map(({ description, name }) => (
+      {openingTheRhythm?.payment?.courses?.nodes.map((item) => (
         <>
-          <SelectedCourse title={name} description={description} />
+          <SelectedCourse
+            months={item?.individualCourseData?.price?.courseLengthInMonths}
+            recalculateMonths={recalculateMonths}
+            title={item?.title || ''}
+            description={item?.individualCourseData?.aboutCourse || ''}
+            price={item?.individualCourseData?.price?.fullPrice || 0}
+            recalculateAmount={recalculateAmount}
+          />
           <Layout flexBasis={[8, 10, 12]} flexShrink={0} />
         </>
       ))}
@@ -43,7 +57,7 @@ const ContentInstallmentPlan = () => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={modalForm?.monthlyPaymentNumber || 0}
+                value={months ? openingTheRhythm?.price?.priceMonthly || 0 : 0}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}
@@ -70,7 +84,9 @@ const ContentInstallmentPlan = () => {
               lineHeight='medium'
               color='text.smokyWhite'
             >
-              {modalForm?.installmentDuration}
+              {months}
+              <Space />
+              <FormattedMessage id='course.price.plural_format_months' values={{ monthCount }} />
             </Text>
           </Box>
         </Column>
@@ -93,7 +109,7 @@ const ContentInstallmentPlan = () => {
               color='text.smokyWhite'
             >
               <FormattedNumber
-                value={modalForm?.finalPriceForInstallmentNumber || 0}
+                value={amount}
                 style='currency' // eslint-disable-line
                 currency='RUB'
                 maximumFractionDigits={0}

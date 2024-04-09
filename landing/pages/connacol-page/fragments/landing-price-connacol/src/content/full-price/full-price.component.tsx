@@ -4,6 +4,7 @@ import { useState }                from 'react'
 
 import { ModalFormConnacol }       from '@landing/modal-form-connacol'
 import { ModalMobileFormConnacol } from '@landing/modal-form-connacol'
+import { RolePaymentForm }         from '@shared/constants'
 import { ArrowRightTailIcon }      from '@ui/icons'
 import { Layout }                  from '@ui/layout'
 import { Box }                     from '@ui/layout'
@@ -12,7 +13,7 @@ import { useHover }                from '@ui/utils'
 
 import { FullPriceProps }          from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({ connacolData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -93,8 +94,15 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormConnacol activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalFormConnacol
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        connacolData={connacolData}
+        activeRender={visibleModal}
+        onClose={() => setVisibleModal(false)}
+      />
       <ModalMobileFormConnacol
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        connacolData={connacolData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />

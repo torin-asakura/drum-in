@@ -1,0 +1,8 @@
+{
+  "name": "@shared/constants",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/react": "18.2.20"
+  }
+}

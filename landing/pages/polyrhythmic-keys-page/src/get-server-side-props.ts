@@ -1,22 +1,40 @@
-import { getClient }               from '@globals/data'
-import { setCacheHeader }          from '@globals/data'
-
-import { GET_POLYRHYTMIC_KEY_SEO } from './data'
+import { GeneralFragmentID }     from '@globals/data'
+import { GET_SONG }              from '@globals/data'
+import { CourseID }              from '@globals/data'
+import { GET_INDIVIDUAL_COURSE } from '@globals/data'
+import { PageID }                from '@globals/data'
+import { GET_SEO }               from '@globals/data'
+import { initializeApollo }      from '@globals/data'
+import { setCacheHeader }        from '@globals/data'
 
 export const getServerSideProps = async ({ res }) => {
-  const client = getClient()
+  const client = initializeApollo({})
 
   setCacheHeader(res, 3600, 300)
 
+  const { data: course } = await client.query({
+    query: GET_INDIVIDUAL_COURSE,
+    variables: { id: CourseID.POLYRYTHMIC_KEYS },
+  })
+
+  const polyrhythmicKeysData = course?.individualCourse
+  const background = course?.individualCourse?.individualCourseData?.background
+
   const { data: seoData } = await client.query({
-    query: GET_POLYRHYTMIC_KEY_SEO,
+    query: GET_SEO,
+    variables: { id: PageID.POLYRYTHMIC_KEYS },
   })
 
   const SEO = {
-    ...seoData?.pageContentBy.seo,
+    ...seoData?.page?.seo,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
+  const { data: songData } = await client.query({
+    query: GET_SONG,
+    variables: { id: GeneralFragmentID.SONG },
+  })
 
-  return { props: { SEO } }
+  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
+  return { props: { SEO, polyrhythmicKeysData, background, songUrl } }
 }

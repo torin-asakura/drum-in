@@ -1,1 +1,1 @@
-export * from './price-polyrhythmic-keysl.component'
+export * from './price-polyrhythmic-keys.component'

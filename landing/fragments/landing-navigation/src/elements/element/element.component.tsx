@@ -1,6 +1,5 @@
 import React            from 'react'
 import { FC }           from 'react'
-import { useIntl }      from 'react-intl'
 
 import { Background }   from '@ui/background'
 import { Condition }    from '@ui/condition'
@@ -32,12 +31,10 @@ const Element: FC<ElementProps> = ({
   rectanglePositionX,
   rectanglePositionY,
   quantityMonths,
-  textMonths,
   path,
   rectangleColor,
 }) => {
   const [elemHover, elemHoverProps] = useHover()
-  const { formatMessage } = useIntl()
 
   return (
     <Box width='max-content' {...(stateHover ? elemHoverProps : null)}>
@@ -48,13 +45,7 @@ const Element: FC<ElementProps> = ({
           right={squarePositionX}
           bottom={squarePositionY}
         >
-          <Square
-            firstLine={quantityVideoLessons}
-            secondLine={formatMessage({
-              id: 'landing_choose_course.video_lessons',
-            })}
-            rotate={squareRotate}
-          />
+          <Square firstLine={quantityVideoLessons} rotate={squareRotate} />
         </Box>
         {circleSecondLine ? (
           <Box
@@ -72,12 +63,7 @@ const Element: FC<ElementProps> = ({
           right={rectanglePositionX}
           bottom={rectanglePositionY}
         >
-          <Rectangle
-            color={rectangleColor}
-            firstLine={quantityMonths}
-            secondLine={textMonths}
-            rotate={rectangleRotate}
-          />
+          <Rectangle color={rectangleColor} firstLine={quantityMonths} rotate={rectangleRotate} />
         </Box>
       </Condition>
       <Box opacity={[1, 1, elemHover || window.location.pathname === path ? 1 : 0.3]}>
@@ -109,7 +95,8 @@ const Element: FC<ElementProps> = ({
                 <Text
                   fontFamily='secondary'
                   fontWeight='bold'
-                  fontSize={['medium', 'semiModerate', 'big']}
+                  g
+                  fontSize={['medium', 'semiModerate', 'moderate', 'big']}
                 >
                   {title}
                 </Text>
@@ -121,10 +108,9 @@ const Element: FC<ElementProps> = ({
             <Text
               fontFamily='secondary'
               fontWeight='bold'
-              fontSize={['medium', 'semiModerate', 'big']}
+              fontSize={['medium', 'semiModerate', 'moderate', 'big']}
             >
-              {' '}
-              {title}{' '}
+              {title}
             </Text>
           </NextLink>
         )}

@@ -1,34 +1,24 @@
+import { SetStateAction }            from 'react'
+import { Dispatch }                  from 'react'
+
+import { OpeningTheRhythmDataProps } from '@globals/data/src'
+import { RolePaymentForm }           from '@shared/constants'
+
 export interface ContentProps {
+  openingTheRhythm?: OpeningTheRhythmDataProps | null
   onClose?: () => any
-  roleVar: Array<string>
+  roleVar: Array<RolePaymentForm>
   options: Array<{
-    value: string
+    value: RolePaymentForm
     label: string
     mutuallyExclusive: boolean
   }>
-  setRole: (value: Array<string>) => any
+  setRole: Dispatch<SetStateAction<Array<RolePaymentForm>>>
 }
 
 export interface Content {
   amount: number
   recalculateAmount: (price: number, operation: boolean) => void
-}
-
-interface Course {
-  description: string
-  name: string
-  price: number
-}
-
-export interface ModalForm {
-  benefit: string
-  finalPriceForInstallment: string
-  finalPriceForInstallmentNumber: number
-  finalPriceForOneTimePayment: string
-  finalPriceForOneTimePaymentNumber: number
-  installmentDuration: string
-  monthlyPayment: string
-  monthlyPaymentNumber: number
-  title: string
-  courses: Course[]
+  months: number
+  recalculateMonths: (months: number, operation: boolean) => void
 }

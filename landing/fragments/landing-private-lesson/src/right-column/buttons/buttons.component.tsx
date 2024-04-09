@@ -1,4 +1,5 @@
 import React                  from 'react'
+import { FC }                 from 'react'
 import { useState }           from 'react'
 
 import { Consultation }       from '@landing/consultation'
@@ -8,16 +9,20 @@ import { Row }                from '@ui/layout'
 import { Box }                from '@ui/layout'
 import { Text }               from '@ui/text'
 
-import { usePrivateLesson }   from '../../data'
+import { ButtonsProps }       from './buttons.interfaces'
 
-const Buttons = () => {
+const Buttons: FC<ButtonsProps> = ({ privateLessonData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const privateLesson = usePrivateLesson()?.privateLesson
 
   return (
     <>
-      <Box display={['none', 'flex', 'flex']} order={[7, 7, 0]} width={['100%', '100%', 514]}>
+      <Box
+        display={['none', 'flex', 'flex', 'flex']}
+        order={[7, 7, 0]}
+        maxWidth={[514]}
+        width={['100%', '100%', '100%']}
+      >
         <Button
           size='withoutPaddingBigHeight'
           variant='purpleBackground'
@@ -29,7 +34,7 @@ const Buttons = () => {
             fontSize={['micro', 'semiRegular', 'large']}
             textTransform='uppercase'
           >
-            {privateLesson?.textButton}
+            {privateLessonData?.cta?.button}
           </Text>
         </Button>
       </Box>
@@ -41,7 +46,7 @@ const Buttons = () => {
           onClick={() => setVisibleModalMobile(true)}
         >
           <Text fontWeight='semiBold' fontSize='micro' textTransform='uppercase'>
-            {privateLesson?.textButton}
+            {privateLessonData?.cta?.button}
           </Text>
         </Button>
       </Row>

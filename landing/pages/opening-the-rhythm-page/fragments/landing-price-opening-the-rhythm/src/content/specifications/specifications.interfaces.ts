@@ -1,7 +1,7 @@
 export interface SpecificationsProps {
-  quantityVideoLessons: string
-  firstLineCircle: string
-  secondLineCircle: string
-  quantityMonths: string
-  wordMonth: string
+  quantityVideoLessons?: number | null
+  firstLineCircle?: number | null
+  secondLineCircle: string | JSX.Element
+  quantityMonths?: number | null
+  wordMonth?: string
 }

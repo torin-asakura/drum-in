@@ -1,6 +1,7 @@
 import React                      from 'react'
 import { FC }                     from 'react'
 
+import { RolePaymentForm }        from '@shared/constants'
 import { Button }                 from '@ui/button'
 import { Condition }              from '@ui/condition'
 import { Form }                   from '@ui/form'
@@ -17,13 +18,19 @@ import { Text }                   from '@ui/text'
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
-import { useModalForm }           from '../data'
 import { useContent }             from './content.hook'
 
-const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }) => {
-  const modalForm = useModalForm()
-  const { amount, recalculateAmount } = useContent(roleVar[0], modalForm)
-
+const ContentDesktop: FC<ContentProps> = ({
+  onClose,
+  roleVar,
+  options,
+  setRole,
+  openingTheRhythm,
+}) => {
+  const { amount, recalculateAmount, months, recalculateMonths } = useContent(
+    roleVar[0],
+    openingTheRhythm
+  )
   return (
     <>
       <Box
@@ -40,7 +47,7 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
             lineHeight='default'
             color='text.smokyWhite'
           >
-            {modalForm?.title}
+            {openingTheRhythm?.payment?.title}
           </Text>
         </Box>
         <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
@@ -90,19 +97,37 @@ const ContentDesktop: FC<ContentProps> = ({ onClose, roleVar, options, setRole }
           style={{ transform: 'rotate(15deg)' }}
         >
           <Text fontWeight='medium' fontSize='medium' lineHeight='medium' color='text.smokyWhite'>
-            {modalForm?.benefit}
+            {openingTheRhythm?.payment?.benefit}
           </Text>
         </Box>
       </Row>
       <Layout flexBasis={28} flexShrink={0} />
       <Condition match={roleVar.includes(options[0].value) || roleVar.length === 0}>
-        <ContentInstallmentPlan />
+        <ContentInstallmentPlan
+          recalculateMonths={recalculateMonths}
+          recalculateAmount={recalculateAmount}
+          amount={amount}
+          months={months}
+          openingTheRhythm={openingTheRhythm}
+        />
       </Condition>
       <Condition match={roleVar.includes(options[1].value)}>
-        <ContentOneTimePayment amount={amount} recalculate={recalculateAmount} />
+        <ContentOneTimePayment
+          openingTheRhythm={openingTheRhythm}
+          amount={amount}
+          recalculateAmount={recalculateAmount}
+        />
       </Condition>
-      <Condition match={!!amount}>
-        <Form amount={amount} form='payment' key={amount} />
+      <Condition match={!!amount && amount > 0}>
+        <Form
+          amount={
+            roleVar[0] === RolePaymentForm.InstallmentPlan
+              ? openingTheRhythm?.price?.priceMonthly || 0
+              : amount
+          }
+          form='payment'
+          key={amount}
+        />
       </Condition>
     </>
   )

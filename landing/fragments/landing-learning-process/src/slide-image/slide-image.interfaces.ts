@@ -1,3 +1,3 @@
 export interface SlideImageProps {
-  pathImage: string
+  pathImage?: string | null
 }

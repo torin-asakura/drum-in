@@ -4,31 +4,35 @@ import { motion }                      from 'framer-motion'
 import { useState }                    from 'react'
 import { useIntl }                     from 'react-intl'
 
+import { RolePaymentForm }             from '@shared/constants'
 import { ContainerMobile }             from '@ui/modal'
 import { Renderer }                    from '@ui/modal'
 import { Backdrop }                    from '@ui/modal'
 
 import { ContentMobile }               from './content'
-import { RoleModalForm }               from './modal-form-seventh-heaven.enum'
 import { ModalFormSeventhHeavenProps } from './modal-form-seventh-heaven.interfaces'
 
 const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
+  paymentPlan,
+  seventhHeavenData,
   activeRender,
   onClose,
   scroll = true,
 }) => {
-  const [roleVar, setRole] = useState<Array<string>>([RoleModalForm.InstallmentPlan])
+  const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
+    paymentPlan ? [paymentPlan] : [RolePaymentForm.InstallmentPlan]
+  )
   const { formatMessage } = useIntl()
   const options = [
     {
-      value: RoleModalForm.InstallmentPlan,
+      value: RolePaymentForm.InstallmentPlan,
       label: formatMessage({
         id: 'landing_modal_forms.installment_plan',
       }),
       mutuallyExclusive: true,
     },
     {
-      value: RoleModalForm.OneTimePayment,
+      value: RolePaymentForm.OneTimePayment,
       label: formatMessage({
         id: 'landing_modal_forms.one_time_payment',
       }),
@@ -68,7 +72,12 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
         id='modal-form-mobile'
       >
         <ContainerMobile scroll={scroll}>
-          <ContentMobile roleVar={roleVar} options={options} setRole={setRole} />
+          <ContentMobile
+            seventhHeavenData={seventhHeavenData}
+            roleVar={roleVar}
+            options={options}
+            setRole={setRole}
+          />
         </ContainerMobile>
       </motion.div>
     </Renderer>

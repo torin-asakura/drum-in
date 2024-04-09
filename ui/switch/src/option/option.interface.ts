@@ -1,9 +1,14 @@
+import { SetStateAction }  from 'react'
+import { Dispatch }        from 'react'
+
+import { RolePaymentForm } from '@shared/constants'
+
 type Cb = () => any
 
 export interface OptionProps {
-  onSelect: (value: Array<string>) => any
-  value: string
+  onSelect: Dispatch<SetStateAction<Array<RolePaymentForm>>>
+  value: RolePaymentForm
   label?: string
   mutuallyExclusive?: boolean
-  onUpdate?: (active: Array<string>, push: Cb, remove: Cb) => any
+  onUpdate?: (active: Array<RolePaymentForm>, push: Cb, remove: Cb) => any
 }

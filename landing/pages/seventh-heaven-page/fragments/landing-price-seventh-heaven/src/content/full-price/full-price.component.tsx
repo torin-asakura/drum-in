@@ -4,6 +4,7 @@ import { useState }                     from 'react'
 
 import { ModalFormSeventhHeaven }       from '@landing/modal-form-seventh-heaven'
 import { ModalMobileFormSeventhHeaven } from '@landing/modal-form-seventh-heaven'
+import { RolePaymentForm }              from '@shared/constants/src'
 import { ArrowRightTailIcon }           from '@ui/icons'
 import { Layout }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
@@ -12,7 +13,7 @@ import { useHover }                     from '@ui/utils'
 
 import { FullPriceProps }               from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({ seventhHeavenData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -93,8 +94,15 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormSeventhHeaven activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalFormSeventhHeaven
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        seventhHeavenData={seventhHeavenData}
+        activeRender={visibleModal}
+        onClose={() => setVisibleModal(false)}
+      />
       <ModalMobileFormSeventhHeaven
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        seventhHeavenData={seventhHeavenData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />

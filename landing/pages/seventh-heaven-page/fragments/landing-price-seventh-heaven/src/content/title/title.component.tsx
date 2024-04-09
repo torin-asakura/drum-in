@@ -42,7 +42,7 @@ const Title: FC<TitleProps> = ({ costPerMonth, currency }) => (
           textTransform='uppercase'
           fontFamily='secondary'
           fontWeight='bold'
-          fontSize={['semiRegular', 'semiModerate', 'semiModerate']}
+          fontSize={['regular', 'semiModerate', 'semiModerate']}
           lineHeight='default'
           color='text.blackAmber'
         >

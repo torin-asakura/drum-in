@@ -4,6 +4,7 @@ import { useState }                      from 'react'
 
 import { ModalFormFifthDimension }       from '@landing/modal-form-fifth-dimension'
 import { ModalMobileFormFifthDimension } from '@landing/modal-form-fifth-dimension'
+import { RolePaymentForm }               from '@shared/constants/src'
 import { ArrowRightTailIcon }            from '@ui/icons'
 import { Layout }                        from '@ui/layout'
 import { Box }                           from '@ui/layout'
@@ -12,7 +13,7 @@ import { useHover }                      from '@ui/utils'
 
 import { FullPriceProps }                from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
+const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
   const [hoverElement, hoverElementProps] = useHover()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -93,8 +94,15 @@ const FullPrice: FC<FullPriceProps> = ({ fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormFifthDimension activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalFormFifthDimension
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        fifthDimensionData={fifthDimensionData}
+        activeRender={visibleModal}
+        onClose={() => setVisibleModal(false)}
+      />
       <ModalMobileFormFifthDimension
+        paymentPlan={RolePaymentForm.OneTimePayment}
+        fifthDimensionData={fifthDimensionData}
         activeRender={visibleModalMobile}
         onClose={() => setVisibleModalMobile(false)}
       />
