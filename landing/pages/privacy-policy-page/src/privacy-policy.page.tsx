@@ -12,7 +12,7 @@ import { Box }                      from '@ui/layout'
 
 import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
 
-export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ privacyPolicy }) => {
+export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ privacyPolicy, headerData }) => {
   const containerRef = useRef(null)
 
   return (
@@ -33,7 +33,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ privacyPolicy })
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock />
+        <HeaderBlock headerData={headerData}/>
         <Seo id={PageID.INDEX} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />
