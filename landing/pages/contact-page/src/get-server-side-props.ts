@@ -1,3 +1,4 @@
+import { GET_HEADER }        from '@globals/data'
 import { GeneralFragmentID } from '@globals/data'
 import { GET_CONTACTS }      from '@globals/data'
 import { PageID }            from '@globals/data'
@@ -29,5 +30,12 @@ export const getServerSideProps = async ({ res }) => {
     twitterCard: 'summary_large_image',
   }
 
-  return addApolloState(client, { props: { SEO, contactsData } })
+  const { data: header } = await client.query({
+    query: GET_HEADER,
+    variables: { id: GeneralFragmentID.HEADER },
+  })
+
+  const headerData = header?.generalFragment?.header
+
+  return addApolloState(client, { props: { SEO, contactsData,headerData } })
 }
