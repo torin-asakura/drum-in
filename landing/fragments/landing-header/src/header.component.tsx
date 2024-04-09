@@ -1,6 +1,8 @@
-import React                   from 'react'
-import { useState }            from 'react'
-import { useEffect }           from 'react'
+import { HeaderDataProps } from '@globals/data/src'
+import { FC }              from 'react'
+import React               from 'react'
+import { useState }        from 'react'
+import { useEffect }       from 'react'
 
 import { NavigationBlock }     from '@landing/navigation-fragment'
 import { Button }              from '@ui/button'
@@ -12,18 +14,16 @@ import { Layout }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { NextLink }            from '@ui/link'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
-import { useHeader }           from '@globals/data'
 
 import { CtaButton }           from './cta-button'
 import { DrawerButton }        from './drawer-button'
 import { ItemLink }            from './item-link'
 
-const HeaderBlock = () => {
+const HeaderBlock:FC<{headerData?:HeaderDataProps| null}> = ({headerData}) => {
   const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
   const [isNavBackground, setNavBackground] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
 
-  const { header } = useHeader()
 
   useEffect(() => {
     if (scroll) {
@@ -43,7 +43,7 @@ const HeaderBlock = () => {
 
   return (
     <>
-      <NavigationBlock headerData={header} visible={visibleDrawer} setVisible={setVisibleDrawer} />
+      <NavigationBlock headerData={headerData} visible={visibleDrawer} setVisible={setVisibleDrawer} />
       <Box
         width='100%'
         zIndex={100}
@@ -70,20 +70,20 @@ const HeaderBlock = () => {
               <Layout flexBasis={[16, 26, 0]} display={['flex', 'flex', 'none']} />
               <Box width={[120, 170, 220]} height={[24, 34, 44]} flexShrink={0}>
                 <NextLink path='/'>
-                  <ImageBlock src={header?.logo?.node.sourceUrl || ''} alt='logo' />
+                  <ImageBlock src={headerData?.logo?.node.sourceUrl || ''} alt='logo' />
                 </NextLink>
               </Box>
               <Layout flexBasis={94} display={['none', 'none', 'flex']} />
               <DrawerButton
-                title={header?.dropdownList?.title}
+                title={headerData?.dropdownList?.title}
                 visibleDrawer={visibleDrawer}
                 setVisibleDrawer={setVisibleDrawer}
               />
               <Layout flexBasis={70} display={['none', 'none', 'flex']} />
-              {header?.navigationElements?.map((item) => (
+              {headerData?.navigationElements?.map((item) => (
                 <ItemLink item={item} />
               ))}
-              <CtaButton title={header?.ctaButton} />
+              <CtaButton title={headerData?.ctaButton} />
             </Row>
             <Layout flexBasis={[26, 33, 40]} />
           </Box>
