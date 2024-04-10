@@ -1,35 +1,37 @@
-/* eslint-disable */
 
-import { useConsultationFormMutation } from '@globals/data/src/hooks/forms'
-import React                           from 'react'
-import { useState }                    from 'react'
-import {Condition} from '@ui/condition'
-import { Button }                from '@ui/button'
-import { Checkbox }              from '@ui/checkbox'
-import { CheckboxMobile }        from '@ui/checkbox'
-import { ArrowLeftDownTailIcon } from '@ui/icons'
-import { Input }                 from '@ui/input'
-import { Box }                   from '@ui/layout'
-import { Row }                   from '@ui/layout'
-import { Layout }                from '@ui/layout'
-import { Text }                  from '@ui/text'
+import { useGetConsultationFormData } from '@globals/data/src/hooks/forms'
+import { FC }                         from 'react'
+import React                          from 'react'
+import { useState }                   from 'react'
+import { ArrowLeftDownTailIcon }      from '@ui/icons'
+import { Input }                      from '@ui/input'
+import { Box }                        from '@ui/layout'
+import { Row,Column }                 from '@ui/layout'
+import { Layout }                     from '@ui/layout'
+import { useIntl }                    from 'react-intl'
+import {Action}                       from './action'
+import { ConsultationFormProps }      from './consultation-form.interfaces'
 
 
-export const ConsultationForm = () => {
-  const [checkbox,setCheckbox] = useState<boolean>(false)
+export const ConsultationForm:FC<ConsultationFormProps> = ({textForCheckbox}) => {
+
+  const {formatMessage} = useIntl()
+  const {formData} = useGetConsultationFormData()
 
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
 
-  const {submitConsultationForm} = useConsultationFormMutation()
+  const namePlaceholder = formData?.fields?.nodes?.[0]?.label
+  const phonePlaceholder = `${formatMessage({id:'symbol.plus'})}${formData?.fields?.nodes?.[1]?.label}`
+  const telegramPlaceholder = formData?.fields?.nodes?.[2]?.label
+  const submitButtonText = formData?.fields?.nodes?.[3]?.label
 
-  const handleSubmitForm = () => submitConsultationForm({name:name,phone:phone,telegram:telegram})
+  const fields = {name:name,phone:phone,telegram:telegram}
 
   {
     /*
     *  TODO:
-    *   - placeholders
     *   - validation
     *   - error messages
     *   - action after successful submit
@@ -38,102 +40,70 @@ export const ConsultationForm = () => {
 
   return (
     <>
-      <Box display={['none', 'flex', 'flex']}>
-        <Input
-          value={name}
-          onChange={(value) => setName(value)}
-          placeholder='name'
-
-        />
-      </Box>
-      <Box display={['flex', 'none', 'none']}>
-        <Input
-          value={name}
-          onChange={(value) => setName(value)}
-          placeholder='name'
-          size='small'
-        />
-      </Box>
-      <Layout flexBasis={[16, 28, 28]} flexShrink={0} />
-      <Box display={['none', 'flex', 'flex']}>
-        <Input
-          value={phone}
-          onChange={(value) => setPhone(value)}
-          placeholder='phone'
-        />
-      </Box>
-      <Box display={['flex', 'none', 'none']}>
-        <Input
-          value={phone}
-          onChange={(value) => setPhone(value)}
-          placeholder='phone'
-          size='small'
-        />
-      </Box>
-      <Layout flexBasis={[16, 28, 28]} flexShrink={0} />
-      <Box display={['none', 'flex', 'flex']}>
-        <Input
-          value={telegram}
-          onChange={(value) => setTelegram(value)}
-          placeholder='telegram'
-        />
-      </Box>
-      <Box display={['flex', 'none', 'none']}>
-        <Input
-          value={telegram}
-          onChange={(value) => setTelegram(value)}
-          placeholder='telegram'
-          size='small'
-        />
-      </Box>
+      <Column height='auto' display={['none','flex','flex']}>
+        <Box>
+          <Input
+            value={name}
+            onChange={(value) => setName(value)}
+            placeholder={namePlaceholder}
+          />
+        </Box>
+        <Layout flexBasis={28}/>
+        <Box>
+          <Input
+            value={phone}
+            onChange={(value) => setPhone(value)}
+            placeholder={phonePlaceholder}
+          />
+        </Box>
+        <Layout flexBasis={28}/>
+        <Box>
+          <Input
+            value={telegram}
+            onChange={(value) => setTelegram(value)}
+            placeholder={telegramPlaceholder}
+          />
+        </Box>
+      </Column>
+      <Column height='auto' display={['flex','none','none']}>
+        <Box>
+          <Input
+            value={name}
+            onChange={(value) => setName(value)}
+            placeholder={namePlaceholder}
+            size='small'
+          />
+        </Box>
+        <Layout flexBasis={16}/>
+        <Box>
+          <Input
+            value={phone}
+            onChange={(value) => setPhone(value)}
+            placeholder={phonePlaceholder}
+            size='small'
+          />
+        </Box>
+        <Layout flexBasis={16}/>
+        <Box>
+          <Input
+            value={telegram}
+            onChange={(value) => setTelegram(value)}
+            placeholder={telegramPlaceholder}
+            size='small'
+          />
+        </Box>
+      </Column>
       <Layout flexBasis={[32, 36, 36]} flexShrink={0} />
-        <Layout flexBasis={34} flexShrink={0} />
-        <Row justifyContent='end'>
-          <Box style={{ transform: 'rotate(45deg)' }} width={102} height={103}>
-            <ArrowLeftDownTailIcon width={102} height={103} />
+          <Box fill display={['none','flex','flex']}>
+            <Layout flexBasis={20} flexGrow={1}/>
+            <Box style={{ transform: 'rotate(45deg)' }} >
+              <ArrowLeftDownTailIcon width={102} height={103} />
+            </Box>
+            <Layout flexBasis={110} />
           </Box>
-          <Layout flexBasis={13} flexShrink={0} />
-        </Row>
-        <Layout flexBasis={40} flexShrink={0} />
-        <Layout flexGrow={3} />
-      <Box display={['none', 'flex', 'flex']}>
-        <Button
-          disabled={!checkbox}
-          size='withoutPaddingSemiBigHeight'
-          variant='purpleBackground'
-          fill
-          onClick={handleSubmitForm}
-        >
-          <Text fontWeight='semiBold' fontSize='medium' textTransform='uppercase'>
-            send
-          </Text>
-        </Button>
-      </Box>
-      <Box display={['flex', 'none', 'none']}>
-        <Button
-          disabled={!checkbox}
-          size='withoutPaddingSemiRegularHeight'
-          variant='purpleBackground'
-          fill
-          onClick={handleSubmitForm}
-        >
-          <Text fontWeight='semiBold' fontSize='semiMedium' textTransform='uppercase'>
-            send
-          </Text>
-        </Button>
-      </Box>
-      <Layout flexBasis={[16, 20, 20]} flexShrink={0} />
-      <Row display={['none', 'flex', 'flex']}>
-        <Checkbox checked={checkbox} onCheck={setCheckbox}>
-          privacyPolicy
-        </Checkbox>
-      </Row>
-      <Row display={['flex', 'none', 'none']}>
-        <CheckboxMobile checked={checkbox} onCheck={setCheckbox}>
-          privacyPolicy
-        </CheckboxMobile>
-      </Row>
-      <Layout flexBasis={[20,60,60,60]}/>
+        <Layout flexBasis={50} flexGrow={1} />
+        <Action checkboxText={textForCheckbox} submitText={submitButtonText} fields={fields}/>
+      <Layout flexBasis={[20,60,60,60]} flexShrink={0}/>
     </>
   )
 }

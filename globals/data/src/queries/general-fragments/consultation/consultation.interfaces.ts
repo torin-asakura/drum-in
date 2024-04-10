@@ -19,6 +19,7 @@ export type ConsultationDataProps = {
         __typename?: 'ConsultationModal'
         title?: string | null
         subtitle?: string | null
+        textForCheckbox?: string | null
       } | null
     } | null
   } | null

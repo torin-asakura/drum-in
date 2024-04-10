@@ -2,7 +2,6 @@ import React                        from 'react'
 import { FC }                       from 'react'
 
 import { Button }                   from '@ui/button'
-import { Form }                     from '@ui/form'
 import { CrossMenuIcon }            from '@ui/icons'
 import { Column }                   from '@ui/layout'
 import { Layout }                   from '@ui/layout'
@@ -15,8 +14,6 @@ import { ConsultationForm }         from './form'
 
 const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
   const { consultation } = useConsultation()
-
-  // TODO: mutation for send form
 
   return (
     <>
@@ -60,7 +57,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
         </Box>
       </Box>
       <Layout flexBasis={52} flexShrink={0} />
-      <ConsultationForm/>
+      <ConsultationForm textForCheckbox={consultation?.modal?.textForCheckbox}/>
     </>
   )
 }

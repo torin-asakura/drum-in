@@ -16,6 +16,7 @@ query Consultation($id:ID!){
       modal {
         title
         subtitle
+        textForCheckbox
       }
     }
   }
