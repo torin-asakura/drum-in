@@ -11,6 +11,7 @@ import { Text }                     from '@ui/text'
 import { useConsultation }          from '@globals/data'
 
 import { ConsultationContentProps } from './consultation-content.interfaces'
+import { ConsultationForm }         from './form'
 
 const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
   const { consultation } = useConsultation()
@@ -59,7 +60,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
         </Box>
       </Box>
       <Layout flexBasis={52} flexShrink={0} />
-      <Form arrow />
+      <ConsultationForm/>
     </>
   )
 }

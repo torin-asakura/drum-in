@@ -1,13 +1,12 @@
 /* eslint-disable */
 
-import React                     from 'react'
-import { FC }                    from 'react'
-import { useState }              from 'react'
-
+import { useConsultationFormMutation } from '@globals/data/src/hooks/forms'
+import React                           from 'react'
+import { useState }                    from 'react'
+import {Condition} from '@ui/condition'
 import { Button }                from '@ui/button'
 import { Checkbox }              from '@ui/checkbox'
 import { CheckboxMobile }        from '@ui/checkbox'
-import { Condition }             from '@ui/condition'
 import { ArrowLeftDownTailIcon } from '@ui/icons'
 import { Input }                 from '@ui/input'
 import { Box }                   from '@ui/layout'
@@ -15,21 +14,26 @@ import { Row }                   from '@ui/layout'
 import { Layout }                from '@ui/layout'
 import { Text }                  from '@ui/text'
 
-import { ConsultationProps }     from './consultation.interface'
-import { messages }              from '../../messages'
 
-export const Consultation: FC<ConsultationProps> = ({
+export const ConsultationForm = () => {
+  const [checkbox,setCheckbox] = useState<boolean>(false)
 
-  privacyPolicy,
-  setPrivacyPolicy,
-  arrow,
-}) => {
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
 
+  const {submitConsultationForm} = useConsultationFormMutation()
+
+  const handleSubmitForm = () => submitConsultationForm({name:name,phone:phone,telegram:telegram})
+
   {
-    /* TODO: add mutation request by specifying state: name, phone, telegram */
+    /*
+    *  TODO:
+    *   - placeholders
+    *   - validation
+    *   - error messages
+    *   - action after successful submit
+    */
   }
 
   return (
@@ -38,7 +42,7 @@ export const Consultation: FC<ConsultationProps> = ({
         <Input
           value={name}
           onChange={(value) => setName(value)}
-          placeholder={messages.name}
+          placeholder='name'
 
         />
       </Box>
@@ -46,7 +50,7 @@ export const Consultation: FC<ConsultationProps> = ({
         <Input
           value={name}
           onChange={(value) => setName(value)}
-          placeholder={messages.name}
+          placeholder='name'
           size='small'
         />
       </Box>
@@ -55,14 +59,14 @@ export const Consultation: FC<ConsultationProps> = ({
         <Input
           value={phone}
           onChange={(value) => setPhone(value)}
-          placeholder={messages.phone}
+          placeholder='phone'
         />
       </Box>
       <Box display={['flex', 'none', 'none']}>
         <Input
           value={phone}
           onChange={(value) => setPhone(value)}
-          placeholder={messages.phone}
+          placeholder='phone'
           size='small'
         />
       </Box>
@@ -71,19 +75,18 @@ export const Consultation: FC<ConsultationProps> = ({
         <Input
           value={telegram}
           onChange={(value) => setTelegram(value)}
-          placeholder={messages.telegram}
+          placeholder='telegram'
         />
       </Box>
       <Box display={['flex', 'none', 'none']}>
         <Input
           value={telegram}
           onChange={(value) => setTelegram(value)}
-          placeholder={messages.telegram}
+          placeholder='telegram'
           size='small'
         />
       </Box>
       <Layout flexBasis={[32, 36, 36]} flexShrink={0} />
-      <Condition match={arrow}>
         <Layout flexBasis={34} flexShrink={0} />
         <Row justifyContent='end'>
           <Box style={{ transform: 'rotate(45deg)' }} width={102} height={103}>
@@ -93,42 +96,44 @@ export const Consultation: FC<ConsultationProps> = ({
         </Row>
         <Layout flexBasis={40} flexShrink={0} />
         <Layout flexGrow={3} />
-      </Condition>
       <Box display={['none', 'flex', 'flex']}>
         <Button
+          disabled={!checkbox}
           size='withoutPaddingSemiBigHeight'
           variant='purpleBackground'
           fill
-          // onClick={sendForm}
+          onClick={handleSubmitForm}
         >
           <Text fontWeight='semiBold' fontSize='medium' textTransform='uppercase'>
-            {messages.send}
+            send
           </Text>
         </Button>
       </Box>
       <Box display={['flex', 'none', 'none']}>
         <Button
+          disabled={!checkbox}
           size='withoutPaddingSemiRegularHeight'
           variant='purpleBackground'
           fill
-          // onClick={sendForm}
+          onClick={handleSubmitForm}
         >
           <Text fontWeight='semiBold' fontSize='semiMedium' textTransform='uppercase'>
-            {messages.send}
+            send
           </Text>
         </Button>
       </Box>
       <Layout flexBasis={[16, 20, 20]} flexShrink={0} />
       <Row display={['none', 'flex', 'flex']}>
-        <Checkbox checked={privacyPolicy} onCheck={setPrivacyPolicy}>
-          {messages.formLetter}
+        <Checkbox checked={checkbox} onCheck={setCheckbox}>
+          privacyPolicy
         </Checkbox>
       </Row>
       <Row display={['flex', 'none', 'none']}>
-        <CheckboxMobile checked={privacyPolicy} onCheck={setPrivacyPolicy}>
-          {messages.formLetter}
+        <CheckboxMobile checked={checkbox} onCheck={setCheckbox}>
+          privacyPolicy
         </CheckboxMobile>
       </Row>
+      <Layout flexBasis={[20,60,60,60]}/>
     </>
   )
 }

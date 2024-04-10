@@ -4,8 +4,11 @@
   "main": "src/index.ts",
   "dependencies": {
     "@ui/button": "workspace:0.0.1",
+    "@ui/checkbox": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
     "@ui/form": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
+    "@ui/input": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/modal": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
