@@ -1,24 +1,26 @@
 import { useMutation }                from '@apollo/client'
+
 import { CONSULTATION_FORM_MUTATION } from '../../../mutation'
 import { FormID }                     from '../../../query.constants'
+import { FieldID }                    from './consultation-form.constants'
+import { SubmitConsultationFormType } from './consultation-form.interfaces'
 
 export const useConsultationFormMutation = () => {
-  const [consultationFormMutation, { data }]  = useMutation(CONSULTATION_FORM_MUTATION);
+  const [consultationFormMutation, { data }] = useMutation(CONSULTATION_FORM_MUTATION)
 
-  const submitConsultationForm = ({name, phone, telegram}) => {
+  const submitConsultationForm: SubmitConsultationFormType = ({ name, phone, telegram }) => {
     consultationFormMutation({
       variables: {
         formId: FormID.consultation.number,
-        nameId: 12,
-        phoneId: 13,
-        telegramId: 14,
-        nameValue:name,
-        phoneValue:phone,
-        telegramValue:telegram,
+        nameId: FieldID.NAME,
+        phoneId: FieldID.PHONE,
+        telegramId: FieldID.TELEGRAM,
+        nameValue: name,
+        phoneValue: phone,
+        telegramValue: telegram,
       },
-    });
-  };
+    })
+  }
 
   return { data, submitConsultationForm }
-
 }

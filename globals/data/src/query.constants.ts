@@ -38,5 +38,5 @@ export enum GeneralFragmentID {
 }
 
 export const FormID = {
-  consultation: {number:3,id:'TmluamFGb3JtOjM=' }
+  consultation: { number: 3, id: 'TmluamFGb3JtOjM=' },
 }
