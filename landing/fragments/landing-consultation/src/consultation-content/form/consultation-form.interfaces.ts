@@ -1,3 +1,3 @@
-export interface ConsultationFormProps{
-  textForCheckbox?:string | null
+export interface ConsultationFormProps {
+  textForCheckbox?: string | null
 }

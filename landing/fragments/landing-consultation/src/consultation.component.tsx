@@ -31,9 +31,9 @@ const Consultation: FC<ConsultationProps> = ({ activeRender, onClose, scroll = f
       id='modal-form'
     >
       <Container scroll={scroll}>
-        <Box width={[370, 630, 666]} >
+        <Box width={[370, 630, 666]}>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-          <Column width='100%' >
+          <Column width='100%'>
             <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
             <ConsultationContent onClose={onClose} />
           </Column>

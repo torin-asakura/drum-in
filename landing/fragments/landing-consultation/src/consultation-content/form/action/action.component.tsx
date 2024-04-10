@@ -1,4 +1,7 @@
-import { useConsultationFormMutation } from '@globals/data/src/hooks/forms'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { useState }                    from 'react'
+
 import { Button }                      from '@ui/button/src'
 import { CheckboxMobile }              from '@ui/checkbox/src'
 import { Checkbox }                    from '@ui/checkbox/src'
@@ -6,23 +9,21 @@ import { Row }                         from '@ui/layout/src'
 import { Layout }                      from '@ui/layout/src'
 import { Box }                         from '@ui/layout/src'
 import { Text }                        from '@ui/text/src'
-import { FC }                          from 'react'
-import { useState }                    from 'react'
-import React                           from 'react'
-import { ActionProps }            from './action.interfaces'
-import {fieldsValidator} from './validators'
+import { useConsultationFormMutation } from '@globals/data/src/hooks/forms'
 
-export const Action:FC<ActionProps> = ({fields,submitText,checkboxText}) => {
+import { ActionProps }                 from './action.interfaces'
+import { fieldsValidator }             from './validators'
 
-  const [checkbox,setCheckbox] = useState<boolean>(false)
+export const Action: FC<ActionProps> = ({ fields, submitText, checkboxText }) => {
+  const [checkbox, setCheckbox] = useState<boolean>(false)
 
-  const {submitConsultationForm} = useConsultationFormMutation()
+  const { submitConsultationForm } = useConsultationFormMutation()
 
   const handleSubmitForm = () => submitConsultationForm(fields)
 
   const isValidFields = fieldsValidator(fields)
 
-  return(
+  return (
     <>
       <Box display={['none', 'flex', 'flex']}>
         <Button

@@ -1,4 +1,3 @@
-import { useConsultation }  from '@globals/data/src'
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
@@ -9,13 +8,14 @@ import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
+import { useConsultation }  from '@globals/data/src'
+
 import { ConsultationForm } from './form'
 
 const MobileConsultationContent = () => {
-
   const { consultation } = useConsultation()
 
-  return(
+  return (
     <Row height={472}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
@@ -41,7 +41,7 @@ const MobileConsultationContent = () => {
           </Text>
         </Box>
         <Layout flexBasis={32} flexShrink={0} />
-        <ConsultationForm textForCheckbox={consultation?.modal?.textForCheckbox}/>
+        <ConsultationForm textForCheckbox={consultation?.modal?.textForCheckbox} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Row>

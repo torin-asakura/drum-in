@@ -5,5 +5,3 @@ export type SubmitConsultationFormProps = {
 }
 
 export type SubmitConsultationFormType = (fields: SubmitConsultationFormProps) => void
-
-export type ConsultationFormData = {}

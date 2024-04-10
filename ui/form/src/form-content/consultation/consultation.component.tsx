@@ -18,12 +18,7 @@ import { Text }                  from '@ui/text'
 import { ConsultationProps }     from './consultation.interface'
 import { messages }              from '../../messages'
 
-export const Consultation: FC<ConsultationProps> = ({
-
-  privacyPolicy,
-  setPrivacyPolicy,
-  arrow,
-}) => {
+export const Consultation: FC<ConsultationProps> = ({ privacyPolicy, setPrivacyPolicy, arrow }) => {
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
@@ -35,12 +30,7 @@ export const Consultation: FC<ConsultationProps> = ({
   return (
     <>
       <Box display={['none', 'flex', 'flex']}>
-        <Input
-          value={name}
-          onChange={(value) => setName(value)}
-          placeholder={messages.name}
-
-        />
+        <Input value={name} onChange={(value) => setName(value)} placeholder={messages.name} />
       </Box>
       <Box display={['flex', 'none', 'none']}>
         <Input
@@ -52,11 +42,7 @@ export const Consultation: FC<ConsultationProps> = ({
       </Box>
       <Layout flexBasis={[16, 28, 28]} flexShrink={0} />
       <Box display={['none', 'flex', 'flex']}>
-        <Input
-          value={phone}
-          onChange={(value) => setPhone(value)}
-          placeholder={messages.phone}
-        />
+        <Input value={phone} onChange={(value) => setPhone(value)} placeholder={messages.phone} />
       </Box>
       <Box display={['flex', 'none', 'none']}>
         <Input

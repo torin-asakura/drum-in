@@ -57,7 +57,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
         </Box>
       </Box>
       <Layout flexBasis={52} flexShrink={0} />
-      <ConsultationForm textForCheckbox={consultation?.modal?.textForCheckbox}/>
+      <ConsultationForm textForCheckbox={consultation?.modal?.textForCheckbox} />
     </>
   )
 }
