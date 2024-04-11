@@ -1,7 +1,5 @@
 import React                from 'react'
-import { FormattedMessage } from 'react-intl'
 
-import { Form }             from '@ui/form'
 import { RoundedLineIcon }  from '@ui/icons'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'

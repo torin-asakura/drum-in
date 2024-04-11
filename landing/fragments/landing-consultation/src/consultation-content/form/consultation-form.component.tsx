@@ -7,7 +7,6 @@ import { ArrowLeftDownTailIcon }      from '@ui/icons'
 import { Input }                      from '@ui/input'
 import { Box }                        from '@ui/layout'
 import { Column }                     from '@ui/layout'
-import { Row }                        from '@ui/layout'
 import { Layout }                     from '@ui/layout'
 import { useGetConsultationFormData } from '@globals/data/src/hooks/forms'
 
@@ -22,25 +21,18 @@ export const ConsultationForm: FC<ConsultationFormProps> = ({ textForCheckbox })
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
 
-  // TODO: why nodes defined as type never
-
-  const namePlaceholder = formData?.fields?.nodes?.[0]?.label
+  // @ts-ignore: Unreachable code error
+  const namePlaceholder = formData?.fields?.nodes[0].label
   const phonePlaceholder = `${formatMessage({ id: 'symbol.plus' })}${
-    formData?.fields?.nodes?.[1]?.label
+    // @ts-ignore: Unreachable code error
+    formData?.fields?.nodes[1].label
   }`
-  const telegramPlaceholder = formData?.fields?.nodes?.[2]?.label
-  const submitButtonText = formData?.fields?.nodes?.[3]?.label
+  // @ts-ignore: Unreachable code error
+  const telegramPlaceholder = formData?.fields?.nodes[2].label
+  // @ts-ignore: Unreachable code error
+  const submitButtonText = formData?.fields?.nodes[3].label
 
-  const fields = { name: name, phone: phone, telegram: telegram }
-
-  {
-    /*
-     *  TODO:
-     *   - validation
-     *   - error messages
-     *   - action after successful submit
-     */
-  }
+  const fields = { name, phone, telegram }
 
   return (
     <>
