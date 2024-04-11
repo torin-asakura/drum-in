@@ -1,1 +1,1 @@
-export const namePattern = /^[a-zA-Z]+( [a-zA-Z]+){0,2}$/
+export const namePattern = /^\s*[a-zA-Zа-яА-Я]+( [a-zA-Zа-яА-Я]+){0,2}\s*$/

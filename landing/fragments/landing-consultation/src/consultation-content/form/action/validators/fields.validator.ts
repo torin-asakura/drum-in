@@ -1,9 +1,6 @@
-import { SubmitConsultationFormProps }                     from '@globals/data'
-import { nameValidator }                                    from '@shared/validators'
-
-import { phoneValidator }                    from '@shared/validators'
-
-import { telegramValidator } from '@shared/validators'
+import { SubmitConsultationFormProps } from '@globals/data'
+import { nameValidator }               from '@shared/validators'
+import { phoneValidator }              from '@shared/validators'
 
 export const fieldsValidator = (fields: SubmitConsultationFormProps): boolean =>
-  nameValidator(fields.name) && phoneValidator(fields.phone) && telegramValidator(fields.telegram)
+  nameValidator(fields.name) && phoneValidator(fields.phone)
