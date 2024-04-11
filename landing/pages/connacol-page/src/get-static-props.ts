@@ -5,25 +5,22 @@ import { CourseID }              from '@globals/data'
 import { GET_INDIVIDUAL_COURSE } from '@globals/data'
 import { PageID }                from '@globals/data'
 import { GET_SEO }               from '@globals/data'
-import { initializeApollo }      from '@globals/data'
-import { setCacheHeader }        from '@globals/data'
+import { getClient }             from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
-  const client = initializeApollo({})
+export const getStaticProps = async () => {
+  const client = getClient()
 
-  setCacheHeader(res, 3600, 300)
-
-  const { data: course } = await client.query({
+  const { data } = await client.query({
     query: GET_INDIVIDUAL_COURSE,
-    variables: { id: CourseID.FEELING_OF_TIME },
+    variables: { id: CourseID.CONNACOL },
   })
 
-  const feelingOfTimeData = course?.individualCourse
-  const background = course?.individualCourse?.individualCourseData?.background
+  const connacolData = data?.individualCourse
+  const background = data?.individualCourse?.individualCourseData?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
-    variables: { id: PageID.FEELING_OF_TIME },
+    variables: { id: PageID.CONNACOL },
   })
 
   const SEO = {
@@ -31,6 +28,7 @@ export const getServerSideProps = async ({ res }) => {
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
+
   const { data: songData } = await client.query({
     query: GET_SONG,
     variables: { id: GeneralFragmentID.SONG },
@@ -45,5 +43,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  return { props: { SEO, feelingOfTimeData, background, songUrl, headerData } }
+  return { props: { SEO, connacolData, background, songUrl, headerData }, revalidate: 3600 }
 }

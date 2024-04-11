@@ -3,13 +3,10 @@ import { GeneralFragmentID }  from '@globals/data'
 import { PageID }             from '@globals/data'
 import { GET_CONTRACT_OFFER } from '@globals/data'
 import { GET_SEO }            from '@globals/data'
-import { initializeApollo }   from '@globals/data'
-import { setCacheHeader }     from '@globals/data'
+import { getClient }          from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
-  const client = initializeApollo({})
-
-  setCacheHeader(res, 3600, 300)
+export const getStaticProps = async () => {
+  const client = getClient()
 
   const { data } = await client.query({
     query: GET_CONTRACT_OFFER,
@@ -35,5 +32,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  return { props: { SEO, contractOfferData, headerData } }
+  return { props: { SEO, contractOfferData, headerData }, revalidate: 3600 }
 }

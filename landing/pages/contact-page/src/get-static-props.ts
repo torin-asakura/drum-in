@@ -3,14 +3,10 @@ import { GeneralFragmentID } from '@globals/data'
 import { GET_CONTACTS }      from '@globals/data'
 import { PageID }            from '@globals/data'
 import { GET_SEO }           from '@globals/data'
-import { addApolloState }    from '@globals/data'
-import { initializeApollo }  from '@globals/data'
-import { setCacheHeader }    from '@globals/data'
+import { getClient }         from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
-  const client = initializeApollo({})
-
-  setCacheHeader(res, 3600, 300)
+export const getStaticProps = async () => {
+  const client = getClient()
 
   const { data } = await client.query({
     query: GET_CONTACTS,
@@ -37,5 +33,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  return addApolloState(client, { props: { SEO, contactsData, headerData } })
+  return { props: { SEO, contactsData, headerData }, revalidate: 3600 }
 }

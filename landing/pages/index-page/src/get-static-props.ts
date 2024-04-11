@@ -42,5 +42,5 @@ export const getStaticProps = async () => {
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
-  return { props: { SEO, mainPageData, background, headerData, songUrl } }
+  return { props: { SEO, mainPageData, background, headerData, songUrl }, revalidate: 3600 }
 }

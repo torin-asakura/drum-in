@@ -4,14 +4,10 @@ import { GET_SONG }               from '@globals/data'
 import { GET_OPENING_THE_RHYTHM } from '@globals/data'
 import { CourseID }               from '@globals/data'
 import { GET_SEO }                from '@globals/data'
-import { initializeApollo }       from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
-import { addApolloState }         from '@globals/data'
+import { getClient }              from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
-  const client = initializeApollo({})
-
-  setCacheHeader(res, 3600, 300)
+export const getStaticProps = async () => {
+  const client = getClient()
 
   const { data } = await client.query({
     query: GET_OPENING_THE_RHYTHM,
@@ -46,7 +42,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
-  return addApolloState(client, {
-    props: { SEO, background, openingTheRhythm, headerData, songUrl },
-  })
+  return { props: { SEO, background, openingTheRhythm, headerData, songUrl }, revalidate: 3600 }
 }

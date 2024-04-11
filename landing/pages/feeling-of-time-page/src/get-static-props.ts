@@ -5,25 +5,22 @@ import { CourseID }              from '@globals/data'
 import { GET_INDIVIDUAL_COURSE } from '@globals/data'
 import { PageID }                from '@globals/data'
 import { GET_SEO }               from '@globals/data'
-import { initializeApollo }      from '@globals/data'
-import { setCacheHeader }        from '@globals/data'
+import { getClient }             from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
-  const client = initializeApollo({})
-
-  setCacheHeader(res, 3600, 300)
+export const getStaticProps = async () => {
+  const client = getClient()
 
   const { data: course } = await client.query({
     query: GET_INDIVIDUAL_COURSE,
-    variables: { id: CourseID.FIFTH_DIMENSION },
+    variables: { id: CourseID.FEELING_OF_TIME },
   })
 
-  const fifthDimensionData = course?.individualCourse
+  const feelingOfTimeData = course?.individualCourse
   const background = course?.individualCourse?.individualCourseData?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
-    variables: { id: PageID.FIFTH_DIMENSION },
+    variables: { id: PageID.FEELING_OF_TIME },
   })
 
   const SEO = {
@@ -36,6 +33,8 @@ export const getServerSideProps = async ({ res }) => {
     variables: { id: GeneralFragmentID.SONG },
   })
 
+  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
+
   const { data: header } = await client.query({
     query: GET_HEADER,
     variables: { id: GeneralFragmentID.HEADER },
@@ -43,6 +42,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
-  return { props: { SEO, fifthDimensionData, background, songUrl, headerData } }
+  return { props: { SEO, feelingOfTimeData, background, songUrl, headerData }, revalidate: 3600 }
 }

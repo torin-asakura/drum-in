@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '@landing/fifth-dimension-page'
+export { default, getStaticProps } from '@landing/fifth-dimension-page'
