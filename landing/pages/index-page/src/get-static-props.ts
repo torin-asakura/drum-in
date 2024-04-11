@@ -6,7 +6,7 @@ import { PageID }            from '@globals/data'
 import { GET_SEO }           from '@globals/data'
 import { getClient }         from '@globals/data'
 
-export const getStaticProps = async ( ) => {
+export const getStaticProps = async () => {
   const client = getClient()
 
   const { data } = await client.query({
@@ -42,5 +42,5 @@ export const getStaticProps = async ( ) => {
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
-  return { props: { SEO, mainPageData, background, headerData, songUrl },revalidate:5 }
+  return { props: { SEO, mainPageData, background, headerData, songUrl } }
 }
