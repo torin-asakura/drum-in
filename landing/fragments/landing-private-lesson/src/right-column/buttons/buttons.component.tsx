@@ -50,10 +50,10 @@ const Buttons: FC<ButtonsProps> = ({ privateLessonData }) => {
           </Text>
         </Button>
       </Row>
-      <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
       <MobileConsultation
         activeRender={visibleModalMobile}
-        onClose={() => setVisibleModalMobile(false)}
+        setVisibleModal={setVisibleModalMobile}
       />
     </>
   )

@@ -14,12 +14,15 @@ import { useConsultationFormMutation } from '@globals/data'
 import { ActionProps }                 from './action.interfaces'
 import { fieldsValidator }             from './validators'
 
-export const Action: FC<ActionProps> = ({ fields, submitText, checkboxText }) => {
+export const Action: FC<ActionProps> = ({ fields, submitText, checkboxText, setVisibleModal }) => {
   const [checkbox, setCheckbox] = useState<boolean>(false)
 
   const { submitConsultationForm } = useConsultationFormMutation()
 
-  const handleSubmitForm = () => submitConsultationForm(fields)
+  const handleSubmitForm = () => {
+    submitConsultationForm(fields)
+    setVisibleModal(false)
+  }
 
   const isValidFields = fieldsValidator(fields)
 

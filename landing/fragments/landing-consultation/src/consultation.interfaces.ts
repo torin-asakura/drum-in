@@ -1,5 +1,8 @@
+import { SetStateAction } from 'react'
+import { Dispatch }       from 'react'
+
 export interface ConsultationProps {
   activeRender: boolean
-  onClose: () => any
+  setVisibleModal: Dispatch<SetStateAction<boolean>>
   scroll?: boolean
 }

@@ -12,7 +12,7 @@ import { useConsultation }          from '@globals/data'
 import { ConsultationContentProps } from './consultation-content.interfaces'
 import { ConsultationForm }         from './form'
 
-const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
+const ConsultationContent: FC<ConsultationContentProps> = ({ setVisibleModal }) => {
   const { consultation } = useConsultation()
 
   return (
@@ -50,14 +50,17 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
           <Button
             size='littlePaddingMediumHeight'
             variant='transparentWhiteToGrayBackground'
-            onClick={onClose}
+            onClick={() => setVisibleModal(false)}
           >
             <CrossMenuIcon width={24} height={24} />
           </Button>
         </Box>
       </Box>
       <Layout flexBasis={52} flexShrink={0} />
-      <ConsultationForm textForCheckbox={consultation?.modal?.textForCheckbox} />
+      <ConsultationForm
+        setVisibleModal={setVisibleModal}
+        textForCheckbox={consultation?.modal?.textForCheckbox}
+      />
     </>
   )
 }

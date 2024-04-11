@@ -1,16 +1,18 @@
-import React                from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
 
-import { RoundedLineIcon }  from '@ui/icons'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
-import { useConsultation }  from '@globals/data'
+import { RoundedLineIcon }          from '@ui/icons'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Box }                      from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { Text }                     from '@ui/text'
+import { useConsultation }          from '@globals/data'
 
-import { ConsultationForm } from './form'
+import { ConsultationContentProps } from './consultation-content.interfaces'
+import { ConsultationForm }         from './form'
 
-const MobileConsultationContent = () => {
+const MobileConsultationContent: FC<ConsultationContentProps> = ({ setVisibleModal }) => {
   const { consultation } = useConsultation()
 
   return (
@@ -39,7 +41,10 @@ const MobileConsultationContent = () => {
           </Text>
         </Box>
         <Layout flexBasis={32} flexShrink={0} />
-        <ConsultationForm textForCheckbox={consultation?.modal?.textForCheckbox} />
+        <ConsultationForm
+          setVisibleModal={setVisibleModal}
+          textForCheckbox={consultation?.modal?.textForCheckbox}
+        />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Row>

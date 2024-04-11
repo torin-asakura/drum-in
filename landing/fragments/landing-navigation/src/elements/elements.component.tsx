@@ -94,11 +94,8 @@ const Elements: FC<ElementsProps> = ({ list, stateHover }) => {
             </Text>
           </Button>
         </Box>
-        <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
-        <MobileConsultation
-          activeRender={visibleModalMobile}
-          onClose={() => setVisibleModalMobile(false)}
-        />
+        <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
+        <MobileConsultation activeRender={visibleModalMobile} setVisibleModal={setVisibleModal} />
       </Column>
     </Row>
   )

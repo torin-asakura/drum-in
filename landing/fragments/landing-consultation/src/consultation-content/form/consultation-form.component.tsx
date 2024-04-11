@@ -13,7 +13,10 @@ import { useGetConsultationFormData } from '@globals/data'
 import { Action }                     from './action'
 import { ConsultationFormProps }      from './consultation-form.interfaces'
 
-export const ConsultationForm: FC<ConsultationFormProps> = ({ textForCheckbox }) => {
+export const ConsultationForm: FC<ConsultationFormProps> = ({
+  textForCheckbox,
+  setVisibleModal,
+}) => {
   const { formatMessage } = useIntl()
   const { formData } = useGetConsultationFormData()
 
@@ -94,7 +97,12 @@ export const ConsultationForm: FC<ConsultationFormProps> = ({ textForCheckbox })
         <Layout flexBasis={110} />
       </Box>
       <Layout flexBasis={50} flexGrow={1} />
-      <Action checkboxText={textForCheckbox} submitText={submitButtonText} fields={fields} />
+      <Action
+        setVisibleModal={setVisibleModal}
+        checkboxText={textForCheckbox}
+        submitText={submitButtonText}
+        fields={fields}
+      />
       <Layout flexBasis={[20, 60, 60, 60]} flexShrink={0} />
     </>
   )

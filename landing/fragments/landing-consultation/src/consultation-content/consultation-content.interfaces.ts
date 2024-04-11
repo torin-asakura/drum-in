@@ -1,3 +1,6 @@
+import { SetStateAction } from 'react'
+import { Dispatch }       from 'react'
+
 export interface ConsultationContentProps {
-  onClose: () => any
+  setVisibleModal: Dispatch<SetStateAction<boolean>>
 }

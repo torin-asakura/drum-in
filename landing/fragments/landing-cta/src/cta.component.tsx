@@ -110,10 +110,10 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   </Text>
                 </Button>
               </Box>
-              <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+              <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
               <MobileConsultation
                 activeRender={visibleModalMobile}
-                onClose={() => setVisibleModalMobile(false)}
+                setVisibleModal={setVisibleModalMobile}
               />
             </Column>
           </Row>
