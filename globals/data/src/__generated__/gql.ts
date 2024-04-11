@@ -14,7 +14,11 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-  '\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n      }\n    }\n  }\n}\n':
+  '\nmutation MyMutation (\n  $formId:Int,\n  $nameId:Int, $nameValue: String,\n  $phoneId:Int, $phoneValue: String,\n  $telegramId:Int, $telegramValue: String,\n  ){\n  submitForm(\n  input: {\n    formId: $formId, \n    data: [\n      {id: $nameId, value: $nameValue}, \n      {id: $phoneId, value: $phoneValue}, \n      {id: $telegramId, value: $telegramValue}\n    ] \n  }\n  ) {\n    errors {\n      fieldId\n      message\n      slug\n    }\n    message\n    success\n  }\n}\n':
+    types.MyMutationDocument,
+  '\nquery ConsultationForm($id:ID!) {\n  form(id: $id) {\n    id\n    title\n    formId\n    fields {\n      nodes {\n        label\n        id\n        fieldId\n      }\n    }\n  }\n}\n':
+    types.ConsultationFormDocument,
+  '\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n        textForCheckbox\n      }\n    }\n  }\n}\n':
     types.ConsultationDocument,
   '\nquery Contacts($id: ID!){\n    generalFragment(id:$id ) {\n        contacts {\n          title\n          socials {\n              title\n            link\n            content\n          }\n           background{\n           noise{node{sourceUrl}}\n            mobile{node{sourceUrl}}\n            desktop{node{sourceUrl}}\n          }\n        }\n    }\n  }\n':
     types.ContactsDocument,
@@ -66,8 +70,20 @@ export function gql(source: string): unknown
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: '\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n      }\n    }\n  }\n}\n'
-): typeof documents['\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n      }\n    }\n  }\n}\n']
+  source: '\nmutation MyMutation (\n  $formId:Int,\n  $nameId:Int, $nameValue: String,\n  $phoneId:Int, $phoneValue: String,\n  $telegramId:Int, $telegramValue: String,\n  ){\n  submitForm(\n  input: {\n    formId: $formId, \n    data: [\n      {id: $nameId, value: $nameValue}, \n      {id: $phoneId, value: $phoneValue}, \n      {id: $telegramId, value: $telegramValue}\n    ] \n  }\n  ) {\n    errors {\n      fieldId\n      message\n      slug\n    }\n    message\n    success\n  }\n}\n'
+): typeof documents['\nmutation MyMutation (\n  $formId:Int,\n  $nameId:Int, $nameValue: String,\n  $phoneId:Int, $phoneValue: String,\n  $telegramId:Int, $telegramValue: String,\n  ){\n  submitForm(\n  input: {\n    formId: $formId, \n    data: [\n      {id: $nameId, value: $nameValue}, \n      {id: $phoneId, value: $phoneValue}, \n      {id: $telegramId, value: $telegramValue}\n    ] \n  }\n  ) {\n    errors {\n      fieldId\n      message\n      slug\n    }\n    message\n    success\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery ConsultationForm($id:ID!) {\n  form(id: $id) {\n    id\n    title\n    formId\n    fields {\n      nodes {\n        label\n        id\n        fieldId\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery ConsultationForm($id:ID!) {\n  form(id: $id) {\n    id\n    title\n    formId\n    fields {\n      nodes {\n        label\n        id\n        fieldId\n      }\n    }\n  }\n}\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n        textForCheckbox\n      }\n    }\n  }\n}\n'
+): typeof documents['\nquery Consultation($id:ID!){\n  generalFragment(id: $id) {\n    consultation {\n      cta {\n        title\n        button\n        text {\n          beforeAccent\n          accent\n          afterAccent\n        }\n      }\n      modal {\n        title\n        subtitle\n        textForCheckbox\n      }\n    }\n  }\n}\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

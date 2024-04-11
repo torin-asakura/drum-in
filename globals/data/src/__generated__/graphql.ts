@@ -1157,6 +1157,8 @@ export type ConsultationModal = AcfFieldGroup &
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
     subtitle?: Maybe<Scalars['String']['output']>
     /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
+    textForCheckbox?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
     title?: Maybe<Scalars['String']['output']>
   }
 
@@ -1169,6 +1171,8 @@ export type ConsultationModal_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
   subtitle?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
+  textForCheckbox?: Maybe<Scalars['String']['output']>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ConsultationModal&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
 }
@@ -3631,6 +3635,17 @@ export type Faq_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>
 }
 
+/** Type of ID being used identify the form */
+export type FieldError = {
+  __typename?: 'FieldError'
+  /** Field Id */
+  fieldId: Scalars['Int']['output']
+  /** Localized error message */
+  message?: Maybe<Scalars['String']['output']>
+  /** Slug error identifier */
+  slug?: Maybe<Scalars['String']['output']>
+}
+
 /** The &quot;Footer&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type Footer = AcfFieldGroup &
   AcfFieldGroupFields &
@@ -3744,6 +3759,270 @@ export type Footer_FieldsCoursesArgs = {
   before?: InputMaybe<Scalars['String']['input']>
   first?: InputMaybe<Scalars['Int']['input']>
   last?: InputMaybe<Scalars['Int']['input']>
+}
+
+/** The form object */
+export type Form = DatabaseIdentifier &
+  Node & {
+    __typename?: 'Form'
+    /** Добавить кнопку «Отправить» */
+    addSubmit?: Maybe<Scalars['Boolean']['output']>
+    /** Разрешить открытую ссылку? */
+    allowPublicLink?: Maybe<Scalars['Boolean']['output']>
+    /** Пользовательские имена классов */
+    classes?: Maybe<FormClasses>
+    /** Очистить успешно заполненную форму? */
+    clearComplete?: Maybe<Scalars['Boolean']['output']>
+    /** Валюта */
+    currency?: Maybe<Scalars['String']['output']>
+    /** Настраиваемая этикетка */
+    customMessages?: Maybe<FormCustomMessages>
+    /** The Id of the form */
+    databaseId: Scalars['Int']['output']
+    /** Позиция метки по умолчанию */
+    defaultLabelPos?: Maybe<Scalars['String']['output']>
+    /** Встройте свою форму */
+    embedForm?: Maybe<Scalars['String']['output']>
+    /** Connection between the Form type and the FormField type */
+    fields?: Maybe<FormToFormFieldConnection>
+    /** The Id of the form */
+    formId?: Maybe<Scalars['Int']['output']>
+    /** Form Title Heading Level */
+    formTitleHeadingLevel?: Maybe<Scalars['String']['output']>
+    /** Скрыть успешно заполненную форму? */
+    hideComplete?: Maybe<Scalars['Boolean']['output']>
+    /** The globally unique identifier of the form */
+    id: Scalars['ID']['output']
+    /** Ключ формы */
+    key?: Maybe<Scalars['String']['output']>
+    /** Ограничение заявок */
+    limitSubmissionsSet?: Maybe<FormLimitSubmissionsSet>
+    /** Зарегистрированы */
+    loggedInSet?: Maybe<FormLoggedInSet>
+    /** Ссылка на вашу форму */
+    publicLink?: Maybe<Scalars['String']['output']>
+    /** The Locale of the form */
+    seqNum?: Maybe<Scalars['Int']['output']>
+    /** Отобразить название формы */
+    showTitle?: Maybe<Scalars['Boolean']['output']>
+    /** Название формы */
+    title?: Maybe<Scalars['String']['output']>
+    /** Уникальное поле */
+    uniqueFieldSet?: Maybe<FormUniqueFieldSet>
+  }
+
+/** The form object */
+export type FormFieldsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>
+  before?: InputMaybe<Scalars['String']['input']>
+  first?: InputMaybe<Scalars['Int']['input']>
+  last?: InputMaybe<Scalars['Int']['input']>
+}
+
+/** Пользовательские имена классов */
+export type FormClasses = {
+  __typename?: 'FormClasses'
+  /** Элемент */
+  elementClass?: Maybe<Scalars['String']['output']>
+  /** Оболочка */
+  wrapperClass?: Maybe<Scalars['String']['output']>
+}
+
+/** Connection to Form Nodes */
+export type FormConnection = {
+  /** A list of edges (relational context) between RootQuery and connected Form Nodes */
+  edges: Array<FormConnectionEdge>
+  /** A list of connected Form Nodes */
+  nodes: Array<Form>
+  /** Information about pagination in a connection. */
+  pageInfo: FormConnectionPageInfo
+}
+
+/** Edge between a Node and a connected Form */
+export type FormConnectionEdge = {
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>
+  /** The connected Form Node */
+  node: Form
+}
+
+/** Page Info on the connected FormConnectionEdge */
+export type FormConnectionPageInfo = {
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output']
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output']
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>
+}
+
+/** Настраиваемая этикетка */
+export type FormCustomMessages = {
+  __typename?: 'FormCustomMessages'
+  /** Введите действительную дату! */
+  changeDateErrorMsg?: Maybe<Scalars['String']['output']>
+  /** Укажите действительный адрес электронной почты! */
+  changeEmailErrorMsg?: Maybe<Scalars['String']['output']>
+  /** Содержание этих полей должно совпадать! */
+  confirmFieldErrorMsg?: Maybe<Scalars['String']['output']>
+  /** Увеличивайте с шагом  */
+  fieldNumberIncrementBy?: Maybe<Scalars['String']['output']>
+  /** Макс. номер ошибки */
+  fieldNumberNumMaxError?: Maybe<Scalars['String']['output']>
+  /** Мин. номер ошибки */
+  fieldNumberNumMinError?: Maybe<Scalars['String']['output']>
+  /** Поля, помеченные символом &lt;span class=&quot;ninja-forms-req-symbol&quot;&gt;*&lt;/span&gt;, обязательны к заполнению */
+  fieldsMarkedRequired?: Maybe<Scalars['String']['output']>
+  /** Исправьте ошибки перед отправкой этой формы. */
+  formErrorsCorrectErrors?: Maybe<Scalars['String']['output']>
+  /** Ошибка Honeypot */
+  honeypotHoneypotError?: Maybe<Scalars['String']['output']>
+  /** Это обязательное поле. */
+  validateRequiredField?: Maybe<Scalars['String']['output']>
+}
+
+/** Action object */
+export type FormField = {
+  /** Creation date */
+  createdAt?: Maybe<Scalars['Int']['output']>
+  /** The Id of the field */
+  databaseId?: Maybe<Scalars['Int']['output']>
+  /** The Id of the field */
+  fieldId?: Maybe<Scalars['Int']['output']>
+  /** Key of the field */
+  fieldKey?: Maybe<Scalars['String']['output']>
+  /** Label of the field */
+  fieldLabel?: Maybe<Scalars['String']['output']>
+  /** The globally unique identifier of the field */
+  id: Scalars['ID']['output']
+  /** Key of the field */
+  key?: Maybe<Scalars['String']['output']>
+  /** Label of the field */
+  label?: Maybe<Scalars['String']['output']>
+  /** Position of the label */
+  labelPos?: Maybe<Scalars['String']['output']>
+  /** Position order of the field */
+  order?: Maybe<Scalars['Int']['output']>
+  /** Parent form id */
+  parentId?: Maybe<Scalars['Int']['output']>
+  /** Identifiable? */
+  personallyIdentifiable?: Maybe<Scalars['Boolean']['output']>
+  /** The field is required? */
+  required?: Maybe<Scalars['Boolean']['output']>
+  /** type of the field */
+  type?: Maybe<Scalars['String']['output']>
+  /** Update date */
+  updatedAt?: Maybe<Scalars['Int']['output']>
+}
+
+/** Connection to FormField Nodes */
+export type FormFieldConnection = {
+  /** A list of edges (relational context) between Form and connected FormField Nodes */
+  edges: Array<FormFieldConnectionEdge>
+  /** A list of connected FormField Nodes */
+  nodes: Array<FormField>
+  /** Information about pagination in a connection. */
+  pageInfo: FormFieldConnectionPageInfo
+}
+
+/** Edge between a Node and a connected FormField */
+export type FormFieldConnectionEdge = {
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>
+  /** The connected FormField Node */
+  node: FormField
+}
+
+/** Page Info on the connected FormFieldConnectionEdge */
+export type FormFieldConnectionPageInfo = {
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output']
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output']
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>
+}
+
+/** The Type of Identifier used to fetch a single Form. Default is ID. */
+export enum FormIdTypeEnum {
+  /** Identify a resource by the Database ID. */
+  DatabaseId = 'DATABASE_ID',
+  /** Identify a resource by the (hashed) Global ID. */
+  Id = 'ID',
+}
+
+/** Ограничение заявок */
+export type FormLimitSubmissionsSet = {
+  __typename?: 'FormLimitSubmissionsSet'
+  /** Сообщение о достижении предела */
+  subLimitMsg?: Maybe<Scalars['String']['output']>
+  /** Ограничение кол-ва отправок формы */
+  subLimitNumber?: Maybe<Scalars['Int']['output']>
+}
+
+/** Зарегистрированы */
+export type FormLoggedInSet = {
+  __typename?: 'FormLoggedInSet'
+  /** Должен ли пользователь авторизоваться для просмотра формы? */
+  loggedIn?: Maybe<Scalars['Boolean']['output']>
+  /** Сообщение о необходимости авторизации */
+  notLoggedInMsg?: Maybe<Scalars['String']['output']>
+}
+
+/** Connection between the Form type and the FormField type */
+export type FormToFormFieldConnection = Connection &
+  FormFieldConnection & {
+    __typename?: 'FormToFormFieldConnection'
+    /** Edges for the FormToFormFieldConnection connection */
+    edges: Array<FormToFormFieldConnectionEdge>
+    /** The nodes of the connection, without the edges */
+    nodes: Array<FormField>
+    /** Information about pagination in a connection. */
+    pageInfo: FormToFormFieldConnectionPageInfo
+  }
+
+/** An edge in a connection */
+export type FormToFormFieldConnectionEdge = Edge &
+  FormFieldConnectionEdge & {
+    __typename?: 'FormToFormFieldConnectionEdge'
+    /** A cursor for use in pagination */
+    cursor?: Maybe<Scalars['String']['output']>
+    /** The item at the end of the edge */
+    node: FormField
+  }
+
+/** Page Info on the &quot;FormToFormFieldConnection&quot; */
+export type FormToFormFieldConnectionPageInfo = FormFieldConnectionPageInfo &
+  PageInfo &
+  WpPageInfo & {
+    __typename?: 'FormToFormFieldConnectionPageInfo'
+    /** When paginating forwards, the cursor to continue. */
+    endCursor?: Maybe<Scalars['String']['output']>
+    /** When paginating forwards, are there more items? */
+    hasNextPage: Scalars['Boolean']['output']
+    /** When paginating backwards, are there more items? */
+    hasPreviousPage: Scalars['Boolean']['output']
+    /** Raw schema for page */
+    seo?: Maybe<SeoPostTypePageInfo>
+    /** When paginating backwards, the cursor to continue. */
+    startCursor?: Maybe<Scalars['String']['output']>
+  }
+
+/** Уникальное поле */
+export type FormUniqueFieldSet = {
+  __typename?: 'FormUniqueFieldSet'
+  /** unique_field */
+  uniqueField?: Maybe<Scalars['String']['output']>
+  /** Уникальное сообщение об ошибке поля */
+  uniqueFieldError?: Maybe<Scalars['String']['output']>
 }
 
 /** The generalFragment type */
@@ -4950,6 +5229,14 @@ export type IndividualCourseToPreviewConnectionEdge = Edge &
     /** The node of the connection, without the edges */
     node: IndividualCourse
   }
+
+/** Submitted field data */
+export type InputField = {
+  /** Field Id */
+  id?: InputMaybe<Scalars['Int']['input']>
+  /** Field value */
+  value?: InputMaybe<Scalars['String']['input']>
+}
 
 /** The &quot;LearningProcess&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type LearningProcess = AcfFieldGroup &
@@ -8914,6 +9201,8 @@ export type RootMutation = {
   restoreComment?: Maybe<RestoreCommentPayload>
   /** Send password reset email to user */
   sendPasswordResetEmail?: Maybe<SendPasswordResetEmailPayload>
+  /** The submitForm mutation */
+  submitForm?: Maybe<SubmitFormPayload>
   /** The updateCategory mutation */
   updateCategory?: Maybe<UpdateCategoryPayload>
   /** The updateComment mutation */
@@ -9076,6 +9365,11 @@ export type RootMutationSendPasswordResetEmailArgs = {
 }
 
 /** The root mutation */
+export type RootMutationSubmitFormArgs = {
+  input: SubmitFormInput
+}
+
+/** The root mutation */
 export type RootMutationUpdateCategoryArgs = {
   input: UpdateCategoryInput
 }
@@ -9167,6 +9461,11 @@ export type RootQuery = {
   courses?: Maybe<RootQueryToCourseConnection>
   /** Fields of the &#039;DiscussionSettings&#039; settings group */
   discussionSettings?: Maybe<DiscussionSettings>
+  /** Ninja form object data. */
+  form?: Maybe<Form>
+  formField?: Maybe<FormField>
+  /** Connection between the RootQuery type and the Form type */
+  forms?: Maybe<RootQueryToFormConnection>
   /** An object of the generalFragment Type.  */
   generalFragment?: Maybe<GeneralFragment>
   /**
@@ -9356,6 +9655,26 @@ export type RootQueryCoursesArgs = {
   first?: InputMaybe<Scalars['Int']['input']>
   last?: InputMaybe<Scalars['Int']['input']>
   where?: InputMaybe<RootQueryToCourseConnectionWhereArgs>
+}
+
+/** The root entry point into the Graph */
+export type RootQueryFormArgs = {
+  id: Scalars['ID']['input']
+  idType?: InputMaybe<FormIdTypeEnum>
+}
+
+/** The root entry point into the Graph */
+export type RootQueryFormFieldArgs = {
+  id: Scalars['ID']['input']
+  idType?: InputMaybe<FormIdTypeEnum>
+}
+
+/** The root entry point into the Graph */
+export type RootQueryFormsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>
+  before?: InputMaybe<Scalars['String']['input']>
+  first?: InputMaybe<Scalars['Int']['input']>
+  last?: InputMaybe<Scalars['Int']['input']>
 }
 
 /** The root entry point into the Graph */
@@ -10104,6 +10423,45 @@ export type RootQueryToEnqueuedStylesheetConnectionPageInfo = EnqueuedStylesheet
   PageInfo &
   WpPageInfo & {
     __typename?: 'RootQueryToEnqueuedStylesheetConnectionPageInfo'
+    /** When paginating forwards, the cursor to continue. */
+    endCursor?: Maybe<Scalars['String']['output']>
+    /** When paginating forwards, are there more items? */
+    hasNextPage: Scalars['Boolean']['output']
+    /** When paginating backwards, are there more items? */
+    hasPreviousPage: Scalars['Boolean']['output']
+    /** Raw schema for page */
+    seo?: Maybe<SeoPostTypePageInfo>
+    /** When paginating backwards, the cursor to continue. */
+    startCursor?: Maybe<Scalars['String']['output']>
+  }
+
+/** Connection between the RootQuery type and the Form type */
+export type RootQueryToFormConnection = Connection &
+  FormConnection & {
+    __typename?: 'RootQueryToFormConnection'
+    /** Edges for the RootQueryToFormConnection connection */
+    edges: Array<RootQueryToFormConnectionEdge>
+    /** The nodes of the connection, without the edges */
+    nodes: Array<Form>
+    /** Information about pagination in a connection. */
+    pageInfo: RootQueryToFormConnectionPageInfo
+  }
+
+/** An edge in a connection */
+export type RootQueryToFormConnectionEdge = Edge &
+  FormConnectionEdge & {
+    __typename?: 'RootQueryToFormConnectionEdge'
+    /** A cursor for use in pagination */
+    cursor?: Maybe<Scalars['String']['output']>
+    /** The item at the end of the edge */
+    node: Form
+  }
+
+/** Page Info on the &quot;RootQueryToFormConnection&quot; */
+export type RootQueryToFormConnectionPageInfo = FormConnectionPageInfo &
+  PageInfo &
+  WpPageInfo & {
+    __typename?: 'RootQueryToFormConnectionPageInfo'
     /** When paginating forwards, the cursor to continue. */
     endCursor?: Maybe<Scalars['String']['output']>
     /** When paginating forwards, are there more items? */
@@ -11649,6 +12007,29 @@ export type Students_Fields = {
   list?: Maybe<Array<Maybe<StudentsList>>>
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;Students&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>
+}
+
+/** Input for the submitForm mutation. */
+export type SubmitFormInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>
+  /** Submited form data */
+  data?: InputMaybe<Array<InputMaybe<InputField>>>
+  /** Submited form Id */
+  formId?: InputMaybe<Scalars['Int']['input']>
+}
+
+/** The payload for the submitForm mutation. */
+export type SubmitFormPayload = {
+  __typename?: 'SubmitFormPayload'
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>
+  /** Field errors */
+  errors?: Maybe<Array<Maybe<FieldError>>>
+  /** Generic operation message */
+  message?: Maybe<Scalars['String']['output']>
+  /** Form submitted successfuly */
+  success?: Maybe<Scalars['Boolean']['output']>
 }
 
 /** The tag type */
@@ -14070,6 +14451,46 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
+export type MyMutationMutationVariables = Exact<{
+  formId?: InputMaybe<Scalars['Int']['input']>
+  nameId?: InputMaybe<Scalars['Int']['input']>
+  nameValue?: InputMaybe<Scalars['String']['input']>
+  phoneId?: InputMaybe<Scalars['Int']['input']>
+  phoneValue?: InputMaybe<Scalars['String']['input']>
+  telegramId?: InputMaybe<Scalars['Int']['input']>
+  telegramValue?: InputMaybe<Scalars['String']['input']>
+}>
+
+export type MyMutationMutation = {
+  __typename?: 'RootMutation'
+  submitForm?: {
+    __typename?: 'SubmitFormPayload'
+    message?: string | null
+    success?: boolean | null
+    errors?: Array<{
+      __typename?: 'FieldError'
+      fieldId: number
+      message?: string | null
+      slug?: string | null
+    } | null> | null
+  } | null
+}
+
+export type ConsultationFormQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type ConsultationFormQuery = {
+  __typename?: 'RootQuery'
+  form?: {
+    __typename?: 'Form'
+    id: string
+    title?: string | null
+    formId?: number | null
+    fields?: { __typename?: 'FormToFormFieldConnection'; nodes: Array<never> } | null
+  } | null
+}
+
 export type ConsultationQueryVariables = Exact<{
   id: Scalars['ID']['input']
 }>
@@ -14095,6 +14516,7 @@ export type ConsultationQuery = {
         __typename?: 'ConsultationModal'
         title?: string | null
         subtitle?: string | null
+        textForCheckbox?: string | null
       } | null
     } | null
   } | null
@@ -14900,6 +15322,234 @@ export type GetSeoQuery = {
   } | null
 }
 
+export const MyMutationDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'mutation',
+      name: { kind: 'Name', value: 'MyMutation' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'formId' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'nameId' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'nameValue' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'phoneId' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'phoneValue' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'telegramId' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'telegramValue' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'submitForm' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'input' },
+                value: {
+                  kind: 'ObjectValue',
+                  fields: [
+                    {
+                      kind: 'ObjectField',
+                      name: { kind: 'Name', value: 'formId' },
+                      value: { kind: 'Variable', name: { kind: 'Name', value: 'formId' } },
+                    },
+                    {
+                      kind: 'ObjectField',
+                      name: { kind: 'Name', value: 'data' },
+                      value: {
+                        kind: 'ListValue',
+                        values: [
+                          {
+                            kind: 'ObjectValue',
+                            fields: [
+                              {
+                                kind: 'ObjectField',
+                                name: { kind: 'Name', value: 'id' },
+                                value: {
+                                  kind: 'Variable',
+                                  name: { kind: 'Name', value: 'nameId' },
+                                },
+                              },
+                              {
+                                kind: 'ObjectField',
+                                name: { kind: 'Name', value: 'value' },
+                                value: {
+                                  kind: 'Variable',
+                                  name: { kind: 'Name', value: 'nameValue' },
+                                },
+                              },
+                            ],
+                          },
+                          {
+                            kind: 'ObjectValue',
+                            fields: [
+                              {
+                                kind: 'ObjectField',
+                                name: { kind: 'Name', value: 'id' },
+                                value: {
+                                  kind: 'Variable',
+                                  name: { kind: 'Name', value: 'phoneId' },
+                                },
+                              },
+                              {
+                                kind: 'ObjectField',
+                                name: { kind: 'Name', value: 'value' },
+                                value: {
+                                  kind: 'Variable',
+                                  name: { kind: 'Name', value: 'phoneValue' },
+                                },
+                              },
+                            ],
+                          },
+                          {
+                            kind: 'ObjectValue',
+                            fields: [
+                              {
+                                kind: 'ObjectField',
+                                name: { kind: 'Name', value: 'id' },
+                                value: {
+                                  kind: 'Variable',
+                                  name: { kind: 'Name', value: 'telegramId' },
+                                },
+                              },
+                              {
+                                kind: 'ObjectField',
+                                name: { kind: 'Name', value: 'value' },
+                                value: {
+                                  kind: 'Variable',
+                                  name: { kind: 'Name', value: 'telegramValue' },
+                                },
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'errors' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'fieldId' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'message' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'slug' } },
+                    ],
+                  },
+                },
+                { kind: 'Field', name: { kind: 'Name', value: 'message' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'success' } },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<MyMutationMutation, MyMutationMutationVariables>
+export const ConsultationFormDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'ConsultationForm' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'form' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'formId' } },
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'fields' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'nodes' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'label' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'fieldId' } },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<ConsultationFormQuery, ConsultationFormQueryVariables>
 export const ConsultationDocument = {
   kind: 'Document',
   definitions: [
@@ -14970,6 +15620,7 @@ export const ConsultationDocument = {
                           selections: [
                             { kind: 'Field', name: { kind: 'Name', value: 'title' } },
                             { kind: 'Field', name: { kind: 'Name', value: 'subtitle' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'textForCheckbox' } },
                           ],
                         },
                       },

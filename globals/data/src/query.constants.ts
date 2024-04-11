@@ -36,3 +36,7 @@ export enum GeneralFragmentID {
   STUDENTS = 'cG9zdDoyNjA2',
   SONG = 'cG9zdDoyNjIz',
 }
+
+export const FormID = {
+  consultation: { number: 3, id: 'TmluamFGb3JtOjM=' },
+}

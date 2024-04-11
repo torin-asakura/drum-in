@@ -3165,11 +3165,15 @@ __metadata:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@globals/data": "workspace:0.0.1"
+    "@shared/validators": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@ui/button": "workspace:0.0.1"
+    "@ui/checkbox": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/input": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/modal": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -5010,6 +5014,12 @@ __metadata:
   dependencies:
     "@shared/constants": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
+  languageName: unknown
+  linkType: soft
+
+"@shared/validators@workspace:0.0.1, @shared/validators@workspace:shared/validators":
+  version: 0.0.0-use.local
+  resolution: "@shared/validators@workspace:shared/validators"
   languageName: unknown
   linkType: soft
 

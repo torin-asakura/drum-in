@@ -2,7 +2,6 @@ import React                        from 'react'
 import { FC }                       from 'react'
 
 import { Button }                   from '@ui/button'
-import { Form }                     from '@ui/form'
 import { CrossMenuIcon }            from '@ui/icons'
 import { Column }                   from '@ui/layout'
 import { Layout }                   from '@ui/layout'
@@ -11,11 +10,10 @@ import { Text }                     from '@ui/text'
 import { useConsultation }          from '@globals/data'
 
 import { ConsultationContentProps } from './consultation-content.interfaces'
+import { ConsultationForm }         from './form'
 
-const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
+const ConsultationContent: FC<ConsultationContentProps> = ({ setVisibleModal }) => {
   const { consultation } = useConsultation()
-
-  // TODO: mutation for send form
 
   return (
     <>
@@ -52,14 +50,17 @@ const ConsultationContent: FC<ConsultationContentProps> = ({ onClose }) => {
           <Button
             size='littlePaddingMediumHeight'
             variant='transparentWhiteToGrayBackground'
-            onClick={onClose}
+            onClick={() => setVisibleModal(false)}
           >
             <CrossMenuIcon width={24} height={24} />
           </Button>
         </Box>
       </Box>
       <Layout flexBasis={52} flexShrink={0} />
-      <Form arrow />
+      <ConsultationForm
+        setVisibleModal={setVisibleModal}
+        textForCheckbox={consultation?.modal?.textForCheckbox}
+      />
     </>
   )
 }

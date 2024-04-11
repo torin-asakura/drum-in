@@ -31,7 +31,7 @@ export const CtaButton: FC<CtaButtonProps> = memo(({ title }) => {
           </Text>
         </Button>
       </Row>
-      <Consultation activeRender={visibleModal} onClose={() => setVisibleModal(false)} />
+      <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
     </>
   )
 })
