@@ -4,12 +4,10 @@ import { GET_PRIVACY_POLICY } from '@globals/data'
 import { PageID }             from '@globals/data'
 import { GET_SEO }            from '@globals/data'
 import { getClient }          from '@globals/data'
-import { setCacheHeader }     from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
+export const getStaticProps = async () => {
   const client = getClient()
 
-  setCacheHeader(res, 3600, 300)
   const { data } = await client.query({
     query: GET_PRIVACY_POLICY,
     variables: { id: GeneralFragmentID.PRIVACY_POLICY },
@@ -33,5 +31,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  return { props: { SEO, privacyPolicy, headerData } }
+  return { props: { SEO, privacyPolicy, headerData }, revalidate: 3600 }
 }

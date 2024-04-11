@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '@landing/connacol-page'
+export { default, getStaticProps } from '@landing/connacol-page'

@@ -5,25 +5,22 @@ import { CourseID }              from '@globals/data'
 import { GET_INDIVIDUAL_COURSE } from '@globals/data'
 import { PageID }                from '@globals/data'
 import { GET_SEO }               from '@globals/data'
-import { initializeApollo }      from '@globals/data'
-import { setCacheHeader }        from '@globals/data'
+import { getClient }             from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
-  const client = initializeApollo({})
+export const getStaticProps = async () => {
+  const client = getClient()
 
-  setCacheHeader(res, 3600, 300)
-
-  const { data } = await client.query({
+  const { data: course } = await client.query({
     query: GET_INDIVIDUAL_COURSE,
-    variables: { id: CourseID.CONNACOL },
+    variables: { id: CourseID.SEVENTH_HEAVEN },
   })
 
-  const connacolData = data?.individualCourse
-  const background = data?.individualCourse?.individualCourseData?.background
+  const seventhHeavenData = course?.individualCourse
+  const background = course?.individualCourse?.individualCourseData?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
-    variables: { id: PageID.CONNACOL },
+    variables: { id: PageID.SEVENTH_HEAVEN },
   })
 
   const SEO = {
@@ -31,13 +28,10 @@ export const getServerSideProps = async ({ res }) => {
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
-
   const { data: songData } = await client.query({
     query: GET_SONG,
     variables: { id: GeneralFragmentID.SONG },
   })
-
-  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
   const { data: header } = await client.query({
     query: GET_HEADER,
@@ -46,5 +40,6 @@ export const getServerSideProps = async ({ res }) => {
 
   const headerData = header?.generalFragment?.header
 
-  return { props: { SEO, connacolData, background, songUrl, headerData } }
+  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
+  return { props: { SEO, seventhHeavenData, background, songUrl, headerData }, revalidate: 3600 }
 }

@@ -5,25 +5,22 @@ import { CourseID }              from '@globals/data'
 import { GET_INDIVIDUAL_COURSE } from '@globals/data'
 import { PageID }                from '@globals/data'
 import { GET_SEO }               from '@globals/data'
-import { initializeApollo }      from '@globals/data'
-import { setCacheHeader }        from '@globals/data'
+import { getClient }             from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
-  const client = initializeApollo({})
-
-  setCacheHeader(res, 3600, 300)
+export const getStaticProps = async () => {
+  const client = getClient()
 
   const { data: course } = await client.query({
     query: GET_INDIVIDUAL_COURSE,
-    variables: { id: CourseID.SEVENTH_HEAVEN },
+    variables: { id: CourseID.POLYRYTHMIC_KEYS },
   })
 
-  const seventhHeavenData = course?.individualCourse
+  const polyrhythmicKeysData = course?.individualCourse
   const background = course?.individualCourse?.individualCourseData?.background
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
-    variables: { id: PageID.SEVENTH_HEAVEN },
+    variables: { id: PageID.POLYRYTHMIC_KEYS },
   })
 
   const SEO = {
@@ -44,5 +41,5 @@ export const getServerSideProps = async ({ res }) => {
   const headerData = header?.generalFragment?.header
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
-  return { props: { SEO, seventhHeavenData, background, songUrl, headerData } }
+  return { props: { SEO, polyrhythmicKeysData, background, songUrl, headerData }, revalidate: 3600 }
 }

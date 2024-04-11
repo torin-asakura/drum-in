@@ -5,12 +5,9 @@ import { GET_MAIN_PAGE }     from '@globals/data'
 import { PageID }            from '@globals/data'
 import { GET_SEO }           from '@globals/data'
 import { getClient }         from '@globals/data'
-import { setCacheHeader }    from '@globals/data'
 
-export const getServerSideProps = async ({ res }) => {
+export const getStaticProps = async () => {
   const client = getClient()
-
-  setCacheHeader(res, 3600, 300)
 
   const { data } = await client.query({
     query: GET_MAIN_PAGE,
@@ -45,5 +42,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
-  return { props: { SEO, mainPageData, background, headerData, songUrl } }
+  return { props: { SEO, mainPageData, background, headerData, songUrl }, revalidate: 3600 }
 }

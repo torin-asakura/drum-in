@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '@landing/polyrhythmic-keys-page'
+export { default, getStaticProps } from '@landing/polyrhythmic-keys-page'
