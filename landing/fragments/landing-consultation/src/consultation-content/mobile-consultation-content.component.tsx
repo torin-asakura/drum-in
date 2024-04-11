@@ -6,7 +6,7 @@ import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
-import { useConsultation }  from '@globals/data/src'
+import { useConsultation }  from '@globals/data'
 
 import { ConsultationForm } from './form'
 

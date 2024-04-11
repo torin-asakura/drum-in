@@ -1,4 +1,4 @@
-import { SubmitConsultationFormProps } from '@globals/data/src/hooks/forms/consultation/consultation-form.interfaces'
+import { SubmitConsultationFormProps } from '@globals/data'
 
 export interface ActionProps {
   fields: SubmitConsultationFormProps

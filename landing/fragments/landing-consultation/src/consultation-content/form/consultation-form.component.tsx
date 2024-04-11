@@ -8,7 +8,7 @@ import { Input }                      from '@ui/input'
 import { Box }                        from '@ui/layout'
 import { Column }                     from '@ui/layout'
 import { Layout }                     from '@ui/layout'
-import { useGetConsultationFormData } from '@globals/data/src/hooks/forms'
+import { useGetConsultationFormData } from '@globals/data'
 
 import { Action }                     from './action'
 import { ConsultationFormProps }      from './consultation-form.interfaces'
