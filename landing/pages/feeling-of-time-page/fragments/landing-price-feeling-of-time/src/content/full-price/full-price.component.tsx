@@ -21,6 +21,7 @@ const FullPrice: FC<FullPriceProps> = ({ feelingOfTimeData, fullCost }) => {
   return (
     <>
       <Box
+        width={580}
         {...hoverElementProps}
         display={['none', 'flex', 'flex']}
         alignItems='center'

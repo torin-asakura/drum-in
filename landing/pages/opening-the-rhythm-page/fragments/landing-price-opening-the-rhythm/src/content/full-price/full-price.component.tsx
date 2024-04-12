@@ -20,6 +20,7 @@ const FullPrice: FC<FullPriceProps> = ({ openingTheRhythm, fullCost }) => {
   return (
     <>
       <Box
+        width={580}
         {...hoverElementProps}
         display={['none', 'flex', 'flex']}
         alignItems='center'
