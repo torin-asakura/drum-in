@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
-    "@shared/course-program-steps": "workspace:0.0.1",
+    "@shared/course-program-parallax": "workspace:0.0.1",
     "@shared/utils": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",

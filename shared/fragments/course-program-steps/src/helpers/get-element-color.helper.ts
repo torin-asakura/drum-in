@@ -1,3 +1,5 @@
+/* eslint-disable no-eval */
+
 export const getElementColor = (
   progress: number,
   comparisonOperator: string,
