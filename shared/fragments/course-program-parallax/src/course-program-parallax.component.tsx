@@ -60,7 +60,12 @@ export const CourseProgramParallax: FC<CourseProgramParallaxProps> = ({ stepsCon
         <Box width={PROGRAM_ICON_SIZE} flexShrink={0}>
           <ProgramIcon width='100%' height='auto' />
         </Box>
-        <Box width={COURSE_PROGRAM_STEPS_WRAPPER_SIZE} position='relative' flexShrink={0}>
+        <Box
+          width={COURSE_PROGRAM_STEPS_WRAPPER_SIZE}
+          position='relative'
+          alignItems='center'
+          flexShrink={0}
+        >
           {stepsContent}
           <CourseProgramSteps containerID={SCROLL_CONTAINER_ID} elementID={SCROLL_ELEMENT_ID} />
           <Box

@@ -4395,6 +4395,7 @@ __metadata:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
     "@shared/course-program-parallax": "workspace:0.0.1"
+    "@shared/course-program-steps-information": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/uniqid": "npm:5.3.2"
@@ -4996,6 +4997,24 @@ __metadata:
   peerDependencies:
     "@forks/react-locomotive-scroll": "workspace:*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@shared/course-program-steps-information@workspace:0.0.1, @shared/course-program-steps-information@workspace:shared/fragments/course-program-steps-information":
+  version: 0.0.0-use.local
+  resolution: "@shared/course-program-steps-information@workspace:shared/fragments/course-program-steps-information"
+  dependencies:
+    "@shared/utils": "workspace:0.0.1"
+    "@types/react": "npm:18.2.20"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react-intl: "npm:5.24.3"
+    uniqid: "npm:5.4.0"
+  peerDependencies:
+    react: "*"
+    react-intl: "*"
+    uniqid: "*"
   languageName: unknown
   linkType: soft
 

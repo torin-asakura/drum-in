@@ -19,10 +19,13 @@ const ContentCourse: FC<ContentCourseInterfaces> = ({ connacolData }) => {
   const stepsArray = connacolData?.individualCourseData?.process?.step
 
   return (
-    <Column
-      flexShrink={0}
-      width={{ _: 0, tablet: 0, laptop: 2190, wide: 2430 }}
+    <Box
+      flexDirection='column'
+      width={2430}
       justifyContent='center'
+      position='absolute'
+      top={280}
+      right={230}
     >
       <Row flexShrink={0} alignItems='end'>
         <Box flexDirection='column' flexShrink={0}>
@@ -50,7 +53,9 @@ const ContentCourse: FC<ContentCourseInterfaces> = ({ connacolData }) => {
                   {stepsArray?.[0]?.title}
                 </Text>
               </Box>
+
               <Layout flexBasis={{ _: 0, tablet: 0, laptop: 12, wide: 16 }} flexShrink={0} />
+
               <Box>
                 <Text
                   fontWeight='medium'
@@ -70,7 +75,8 @@ const ContentCourse: FC<ContentCourseInterfaces> = ({ connacolData }) => {
           </Box>
           <Layout flexBasis={93} flexShrink={0} />
         </Box>
-        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 442 }} flexShrink={0} />
+        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 335, wide: 170 }} flexShrink={0} />
+
         <Column width={{ _: 0, tablet: 0, laptop: 395, wide: 470 }} flexShrink={0}>
           {splitAndSliceFirstItem(stepsArray?.[2]?.description)?.map((element) => (
             <Box key={uniqid()}>
@@ -91,13 +97,14 @@ const ContentCourse: FC<ContentCourseInterfaces> = ({ connacolData }) => {
               </Text>
             </Box>
           ))}
+          <Layout flexBasis={60} flexShrink={0} />
         </Column>
       </Row>
-      <Layout flexBasis={{ _: 0, tablet: 0, laptop: 130, wide: 153 }} flexShrink={0} />
+      <Layout flexBasis={{ _: 0, tablet: 0, laptop: 130, wide: 40 }} flexShrink={0} />
       <Row flexShrink={0}>
-        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 425, wide: 545 }} flexShrink={0} />
+        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 425, wide: 390 }} flexShrink={0} />
         <Box
-          width={{ _: 0, tablet: 0, laptop: 440, wide: 504 }}
+          width={{ _: 0, tablet: 0, laptop: 440, wide: 230 }}
           flexShrink={0}
           flexDirection='column'
         >
@@ -151,8 +158,9 @@ const ContentCourse: FC<ContentCourseInterfaces> = ({ connacolData }) => {
             </Box>
           </Box>
         </Box>
-        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 420 }} flexShrink={0} />
+        <Layout flexBasis={{ _: 0, tablet: 0, laptop: 255, wide: 230 }} flexShrink={0} />
         <Column width={{ _: 0, tablet: 0, laptop: 280, wide: 340 }} flexShrink={0}>
+          <Layout flexBasis={20} flexShrink={0} />
           {splitAndSliceFirstItem(stepsArray?.[4]?.description)?.map((element) => (
             <Box key={uniqid()}>
               <Text
@@ -174,7 +182,7 @@ const ContentCourse: FC<ContentCourseInterfaces> = ({ connacolData }) => {
           ))}
         </Column>
       </Row>
-    </Column>
+    </Box>
   )
 }
 
