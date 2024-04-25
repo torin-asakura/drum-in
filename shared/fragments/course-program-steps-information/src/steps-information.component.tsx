@@ -14,10 +14,10 @@ import { FOURTH_STEP_INDEX }        from './steps-information.constants'
 import { SECOND_STEP_INDEX }        from './steps-information.constants'
 import { THIRD_STEP_INDEX }         from './steps-information.constants'
 import { FIRST_STEP_INDEX }         from './steps-information.constants'
-import { FIFTH_STEP_INDENT_RIGHT }  from './steps-information.constants'
+import { FIFTH_STEP_INDENT_LEFT }  from './steps-information.constants'
 import { FIFTH_STEP_INDENT_TOP }    from './steps-information.constants'
 import { FOURTH_STEP_INDENT_TOP }   from './steps-information.constants'
-import { FOURTH_STEP_INDENT_RIGHT } from './steps-information.constants'
+import { FOURTH_STEP_INDENT_LEFT } from './steps-information.constants'
 import { THIRD_STEP_INDENT_BOTTOM } from './steps-information.constants'
 import { THIRD_STEP_INDENT_LEFT }   from './steps-information.constants'
 import { FIRST_STEP_INDENT_LEFT }   from './steps-information.constants'
@@ -35,7 +35,7 @@ export const StepsInformation: FC<StepsInformationProps> = ({ stepsData }) => (
   <Box position='absolute' height={CONTAINER_HEIGHT} left={CONTAINER_LEFT_INDENT}>
     <Box position='relative'>
       <Column>
-        <Box width={LAYER_WIDTH} height={LAYER_HEIGHT} position='relative'>
+        <Box width={LAYER_WIDTH} height={LAYER_HEIGHT} position='relative' flexShrink={0}>
           <Box position='absolute' left={FIRST_STEP_INDENT_LEFT} bottom={FIRST_STEP_INDENT_BOTTOM}>
             <FirstStep
               title={stepsData?.[FIRST_STEP_INDEX]?.title}
@@ -61,7 +61,7 @@ export const StepsInformation: FC<StepsInformationProps> = ({ stepsData }) => (
           </Box>
           <Box
             position='absolute'
-            right={FOURTH_STEP_INDENT_RIGHT}
+            left={FOURTH_STEP_INDENT_LEFT}
             top={FOURTH_STEP_INDENT_TOP}
             alignItems='center'
           >
@@ -72,7 +72,7 @@ export const StepsInformation: FC<StepsInformationProps> = ({ stepsData }) => (
           </Box>
           <Box
             position='absolute'
-            right={FIFTH_STEP_INDENT_RIGHT}
+            left={FIFTH_STEP_INDENT_LEFT}
             top={FIFTH_STEP_INDENT_TOP}
             alignItems='center'
           >
