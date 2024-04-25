@@ -298,6 +298,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:shared/fragments/bulleted-list"\
     },\
     {\
+      "name": "@shared/course-program-steps",\
+      "reference": "workspace:shared/fragments/course-program-steps"\
+    },\
+    {\
       "name": "@shared/seo-fragment",\
       "reference": "workspace:shared/fragments/seo"\
     },\
@@ -479,6 +483,7 @@ const RAW_RUNTIME_STATE =
     ["@landing/teacher-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:landing/fragments/landing-teacher", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:landing/fragments/landing-teacher", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher", "workspace:landing/fragments/landing-teacher"]],\
     ["@shared/bulleted-list-fragment", ["virtual:0c51a242ee5a622de6698860b7f2834f418618e2226a9ec16b1cb86e34fc9054a7a7b7f0fec6ce22bad2e2465a7e0545adc099b3643f931c866b054e13550afe#workspace:shared/fragments/bulleted-list", "virtual:3399d1b6dfe7d31728d71eb68946d2eaef2fa017cec730920916423636e26b454638f08651089eb315449ebe790500359773d21424361a4ca35823e2f504edcb#workspace:shared/fragments/bulleted-list", "virtual:dac73005220cd1684030fa782a94902347d075166720d4e69cbc9b576cadd17a820aebe5192d7e301d79ee51209d489d80eb9fab33dfe1f7b01a9cca87614480#workspace:shared/fragments/bulleted-list", "workspace:shared/fragments/bulleted-list"]],\
     ["@shared/constants", ["workspace:shared/constants"]],\
+    ["@shared/course-program-steps", ["virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:shared/fragments/course-program-steps", "virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:shared/fragments/course-program-steps", "workspace:shared/fragments/course-program-steps"]],\
     ["@shared/data", ["virtual:54fa3fe04d040d7e53d9e57da974b69ff017adc440d07822dfcba4225c0040aa2a47f3b9456938c4eebdf3c45e22a2646c0b2a6b0c7e55b56b777cc1af888139#workspace:shared/data", "virtual:56f503afbc55d8d6af53c3dc7b454c8f2e34acec5ad5f49580ff2f40335f1246c31881945d0cb873b82a51825a440ee5d6bdcd59fb676154b4a28d97157c6af8#workspace:shared/data", "workspace:shared/data"]],\
     ["@shared/seo-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:shared/fragments/seo", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:shared/fragments/seo", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/seo", "workspace:shared/fragments/seo"]],\
     ["@shared/utils", ["workspace:shared/utils"]],\
@@ -13431,6 +13436,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#npm:3.6.9"],\
           ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
           ["@globals/data", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:globals/data"],\
+          ["@shared/course-program-steps", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:shared/fragments/course-program-steps"],\
           ["@shared/utils", "workspace:shared/utils"],\
           ["@types/apollo__client", null],\
           ["@types/next", null],\
@@ -13465,6 +13471,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.6.9"],\
           ["@forks/react-locomotive-scroll", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll"],\
           ["@globals/data", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:globals/data"],\
+          ["@shared/course-program-steps", "virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:shared/fragments/course-program-steps"],\
           ["@shared/utils", "workspace:shared/utils"],\
           ["@types/apollo__client", null],\
           ["@types/next", null],\
@@ -13498,6 +13505,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#npm:3.6.9"],\
           ["@forks/react-locomotive-scroll", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll"],\
           ["@globals/data", "virtual:8db37093fe4f8cbb9814e3ac8c891470a3d599bec8e7442837183ebd91653640b47f529177fe7e104bed93243597f5f1e430598f73dc365f150571d7f1cc8ab1#workspace:globals/data"],\
+          ["@shared/course-program-steps", "virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:shared/fragments/course-program-steps"],\
           ["@shared/utils", "workspace:shared/utils"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/uniqid", "npm:5.3.2"],\
@@ -14988,6 +14996,54 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@shared/constants", "workspace:shared/constants"],\
           ["@types/react", "npm:18.2.20"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@shared/course-program-steps", [\
+      ["virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:shared/fragments/course-program-steps", {\
+        "packageLocation": "./.yarn/__virtual__/@shared-course-program-steps-virtual-316d4ccc39/1/shared/fragments/course-program-steps/",\
+        "packageDependencies": [\
+          ["@shared/course-program-steps", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:shared/fragments/course-program-steps"],\
+          ["@forks/react-locomotive-scroll", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:forks/react-locomotive-scroll"],\
+          ["@types/forks__react-locomotive-scroll", null],\
+          ["@types/react", "npm:18.2.20"],\
+          ["@ui/layout", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/layout"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@forks/react-locomotive-scroll",\
+          "@types/forks__react-locomotive-scroll",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:shared/fragments/course-program-steps", {\
+        "packageLocation": "./.yarn/__virtual__/@shared-course-program-steps-virtual-729b2c0fb3/1/shared/fragments/course-program-steps/",\
+        "packageDependencies": [\
+          ["@shared/course-program-steps", "virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:shared/fragments/course-program-steps"],\
+          ["@forks/react-locomotive-scroll", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll"],\
+          ["@types/forks__react-locomotive-scroll", null],\
+          ["@types/react", "npm:18.2.20"],\
+          ["@ui/layout", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/layout"],\
+          ["react", null]\
+        ],\
+        "packagePeers": [\
+          "@forks/react-locomotive-scroll",\
+          "@types/forks__react-locomotive-scroll",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:shared/fragments/course-program-steps", {\
+        "packageLocation": "./shared/fragments/course-program-steps/",\
+        "packageDependencies": [\
+          ["@shared/course-program-steps", "workspace:shared/fragments/course-program-steps"],\
+          ["@forks/react-locomotive-scroll", "virtual:a55058ed1ef15901c83c8cf1679eedbb6476068d8a7d1b02afa22142a55d41b48ddda54f0cf7f385a0842c047c48abdcaee32d3a71d49a1c997e21e8f6c7519d#workspace:forks/react-locomotive-scroll"],\
+          ["@types/react", "npm:18.2.20"],\
+          ["@ui/layout", "virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:ui/layout"]\
         ],\
         "linkType": "SOFT"\
       }]\

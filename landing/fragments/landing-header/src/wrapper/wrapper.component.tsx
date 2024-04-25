@@ -1,16 +1,16 @@
-import React                               from 'react'
-import { memo }                      from 'react'
+import React                   from 'react'
+import { AnimatePresence }     from 'framer-motion'
+import { PropsWithChildren }   from 'react'
+import { FC }                  from 'react'
+import { motion }              from 'framer-motion'
+import { memo }                from 'react'
 import { useEffect }           from 'react'
-import { useState } from 'react'
-import { AnimatePresence }                 from 'framer-motion'
-import { PropsWithChildren }               from 'react'
-import { FC }                              from 'react'
-import { motion }                          from 'framer-motion'
+import { useState }            from 'react'
 
-import { Box }                             from '@ui/layout/src'
-import { useLocomotiveScroll }             from '@forks/react-locomotive-scroll/src'
+import { Box }                 from '@ui/layout/src'
+import { useLocomotiveScroll } from '@forks/react-locomotive-scroll/src'
 
-import { wrapperTransition }               from './wrapper.constants'
+import { wrapperTransition }   from './wrapper.constants'
 
 export const Wrapper: FC<PropsWithChildren> = memo(({ children }) => {
   const { scroll } = useLocomotiveScroll()

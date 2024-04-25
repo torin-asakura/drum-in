@@ -4394,6 +4394,7 @@ __metadata:
     "@apollo/client": "npm:3.6.9"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
+    "@shared/course-program-steps": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/uniqid": "npm:5.3.2"
@@ -4980,6 +4981,19 @@ __metadata:
   resolution: "@shared/constants@workspace:shared/constants"
   dependencies:
     "@types/react": "npm:18.2.20"
+  languageName: unknown
+  linkType: soft
+
+"@shared/course-program-steps@workspace:0.0.1, @shared/course-program-steps@workspace:shared/fragments/course-program-steps":
+  version: 0.0.0-use.local
+  resolution: "@shared/course-program-steps@workspace:shared/fragments/course-program-steps"
+  dependencies:
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@types/react": "npm:18.2.20"
+    "@ui/layout": "workspace:0.0.1"
+  peerDependencies:
+    "@forks/react-locomotive-scroll": "workspace:*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
