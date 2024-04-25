@@ -1,8 +1,8 @@
-import { CourseProgramParallax } from '@shared/course-program-parallax/src'
-import { StepsInformation }      from '@shared/course-program-steps-information/src'
-import React                     from 'react'
-import { FC }                    from 'react'
+import React                            from 'react'
+import { FC }                           from 'react'
 
+import { CourseProgramParallax }        from '@shared/course-program-parallax/src'
+import { StepsInformation }             from '@shared/course-program-steps-information/src'
 import { ProgramIcon }                  from '@ui/icons'
 import { Box }                          from '@ui/layout'
 import { Row }                          from '@ui/layout'
@@ -10,16 +10,17 @@ import { Column }                       from '@ui/layout'
 import { Layout }                       from '@ui/layout'
 
 import { ContentMobileCourse }          from './content-mobile-course'
+import { PARALLAX_CONTAINER_HEIGHT }     from './program-polyrhythmic-keys.constants'
 import { ProgramPolyrhythmicKeysProps } from './program-polyrhythmic-keys.interfaces'
 
 const ProgramPolyrhythmicKeyslBlock: FC<ProgramPolyrhythmicKeysProps> = ({
   polyrhythmicKeysData,
-  background,
   scrollId,
 }) => (
   <>
     <Row justifyContent='center' display={['none', 'none', 'flex']}>
       <CourseProgramParallax
+        containerHeight={PARALLAX_CONTAINER_HEIGHT}
         stepsContent={
           <StepsInformation stepsData={polyrhythmicKeysData?.individualCourseData?.process?.step} />
         }

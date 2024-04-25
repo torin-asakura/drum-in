@@ -1,0 +1,1 @@
+export const PARALLAX_CONTAINER_HEIGHT = 6100

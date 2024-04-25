@@ -25,11 +25,15 @@ import { SCROLL_CONTAINER_ID }               from './course-program-parallax.con
 import { SCROLL_ELEMENT_ID }                 from './course-program-parallax.constants'
 import { CourseProgramParallaxProps }        from './course-program-parallax.interfaces'
 
-export const CourseProgramParallax: FC<CourseProgramParallaxProps> = ({ stepsContent }) => (
+export const CourseProgramParallax: FC<CourseProgramParallaxProps> = ({
+  stepsContent,
+  containerHeight,
+}) => (
   <Box
+    data-scroll
     data-scroll-position='bottom'
     id={SCROLL_CONTAINER_ID}
-    height={CONTAINER_HEIGHT}
+    height={containerHeight || CONTAINER_HEIGHT}
     width={CONTAINER_WIDTH}
     backgroundColor='black'
     position='relative'

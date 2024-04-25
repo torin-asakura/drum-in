@@ -1,8 +1,8 @@
-import { CourseProgramParallax } from '@shared/course-program-parallax/src'
-import { StepsInformation }      from '@shared/course-program-steps-information/src'
-import React                     from 'react'
-import { FC }                    from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
+import { CourseProgramParallax }     from '@shared/course-program-parallax/src'
+import { StepsInformation }          from '@shared/course-program-steps-information/src'
 import { ProgramIcon }               from '@ui/icons'
 import { Box }                       from '@ui/layout'
 import { Row }                       from '@ui/layout'
@@ -13,7 +13,6 @@ import { ContentMobileCourse }       from './content-mobile-course'
 import { ProgramFeelingOfTimeProps } from './program-feeling-of-time.interfaces'
 
 const ProgramFeelingOfTimeBlock: FC<ProgramFeelingOfTimeProps> = ({
-  background,
   feelingOfTimeData,
   scrollId,
 }) => (
