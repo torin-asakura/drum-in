@@ -4202,6 +4202,7 @@ __metadata:
     "@ui/figures": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/one-time-payment-prompt": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react: "npm:18.2.0"
@@ -6161,6 +6162,22 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/one-time-payment-prompt@workspace:0.0.1, @ui/one-time-payment-prompt@workspace:ui/one-time-payment-prompt":
+  version: 0.0.0-use.local
+  resolution: "@ui/one-time-payment-prompt@workspace:ui/one-time-payment-prompt"
+  dependencies:
+    "@types/react": "npm:18.2.20"
+    "@types/styled-system": "npm:5.1.16"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 

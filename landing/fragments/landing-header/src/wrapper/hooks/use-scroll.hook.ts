@@ -30,7 +30,6 @@ export const useScroll: UseScrollType = () => {
         }
       }
 
-
       scroll.on('scroll', handleScroll)
 
       return () => {
