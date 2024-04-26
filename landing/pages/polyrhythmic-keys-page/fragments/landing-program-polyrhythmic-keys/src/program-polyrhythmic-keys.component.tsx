@@ -10,7 +10,7 @@ import { Column }                       from '@ui/layout'
 import { Layout }                       from '@ui/layout'
 
 import { ContentMobileCourse }          from './content-mobile-course'
-import { PARALLAX_CONTAINER_HEIGHT }     from './program-polyrhythmic-keys.constants'
+import { PARALLAX_CONTAINER_HEIGHT }    from './program-polyrhythmic-keys.constants'
 import { ProgramPolyrhythmicKeysProps } from './program-polyrhythmic-keys.interfaces'
 
 const ProgramPolyrhythmicKeyslBlock: FC<ProgramPolyrhythmicKeysProps> = ({

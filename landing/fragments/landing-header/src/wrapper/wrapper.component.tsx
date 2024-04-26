@@ -1,66 +1,46 @@
-import React                   from 'react'
-import { AnimatePresence }     from 'framer-motion'
-import { PropsWithChildren }   from 'react'
-import { FC }                  from 'react'
-import { motion }              from 'framer-motion'
-import { memo }                from 'react'
-import { useEffect }           from 'react'
-import { useState }            from 'react'
+import React                                                                                                                                   from 'react'
+import { AnimatePresence }                                                                                                                     from 'framer-motion'
+import { PropsWithChildren }                                                                                                                   from 'react'
+import { FC }                                                                                                                                  from 'react'
+import { motion }                                                                                                                              from 'framer-motion'
+import { memo }                                                                                                                                from 'react'
 
-import { Box }                 from '@ui/layout/src'
-import { useLocomotiveScroll } from '@forks/react-locomotive-scroll/src'
+import { Box }                from '@ui/layout/src'
+import { WRAPPER_TRANSITION } from './wrapper.constants'
 
-import { wrapperTransition }   from './wrapper.constants'
+import { HIDE_CONTENT }                                                                                                                        from './wrapper.constants'
+import { SHOW_CONTENT }                                                                                                          from './wrapper.constants'
+import { WRAPPER_HEIGHT_FOR_SMALL_VIEWPORT }                                                                       from './wrapper.constants'
+import { WRAPPER_HEIGHT_FOR_WIDE_VIEWPORT }                                     from './wrapper.constants'
+import { WRAPPER_Z_INDEX }                    from './wrapper.constants'
+import { useScroll }                                                                                                                           from './hooks'
 
 export const Wrapper: FC<PropsWithChildren> = memo(({ children }) => {
-  const { scroll } = useLocomotiveScroll()
-  const [zeroOffsetY, setZeroOffsetY] = useState<boolean>(true)
-  const [isNavBackground, setNavBackground] = useState<boolean>(true)
-
-  useEffect(() => {
-    if (scroll) {
-      scroll?.on('scroll', (args) => {
-        if (args.scroll.y !== 0) {
-          setZeroOffsetY(false)
-        }
-        if (args.scroll.y === 0) {
-          setZeroOffsetY(true)
-        }
-      })
-
-      scroll.on('scroll', (instance) => {
-        if (instance.scroll.y === 0) {
-          setNavBackground(false)
-        }
-        if (instance.delta.y > instance.scroll.y && isNavBackground) {
-          setNavBackground(false)
-        }
-        if (instance.delta.y < instance.scroll.y && !isNavBackground) {
-          setNavBackground(true)
-        }
-      })
-    }
-  }, [scroll, isNavBackground, setNavBackground])
+  const { zeroOffsetY, isNavBackground } = useScroll()
 
   return (
     <Box
       width='100%'
-      zIndex={100}
-      height={[72, 72, 109]}
+      zIndex={WRAPPER_Z_INDEX}
+      height={[
+        WRAPPER_HEIGHT_FOR_SMALL_VIEWPORT,
+        WRAPPER_HEIGHT_FOR_SMALL_VIEWPORT,
+        WRAPPER_HEIGHT_FOR_WIDE_VIEWPORT,
+      ]}
       position='fixed'
       justifyContent='center'
       backgroundColor={isNavBackground ? 'background.blackAmber' : 'transparent'}
-      style={{ transition: `${wrapperTransition.duration}s` }}
+      style={{ transition: `${WRAPPER_TRANSITION.duration}s` }}
     >
       <AnimatePresence>
         {(zeroOffsetY || isNavBackground) && (
           <motion.div
             style={{ width: '100%' }}
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: SHOW_CONTENT }}
+            animate={{ opacity: HIDE_CONTENT }}
             exit={{
-              opacity: 0,
-              transition: { duration: wrapperTransition.duration, ease: wrapperTransition.style },
+              opacity: HIDE_CONTENT,
+              transition: { duration: WRAPPER_TRANSITION.duration, ease: WRAPPER_TRANSITION.style },
             }}
           >
             {children}
