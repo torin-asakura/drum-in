@@ -1,44 +1,25 @@
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useState }            from 'react'
-import { useEffect }           from 'react'
+import React               from 'react'
+import { FC }              from 'react'
+import { useState }        from 'react'
 
-import { NavigationBlock }     from '@landing/navigation-fragment'
-import { Button }              from '@ui/button'
-import { MenuIcon }            from '@ui/icons'
-import { ImageBlock }          from '@ui/image'
-import { Box }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { NextLink }            from '@ui/link'
-import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
+import { NavigationBlock } from '@landing/navigation-fragment'
+import { Button }          from '@ui/button'
+import { MenuIcon }        from '@ui/icons'
+import { ImageBlock }      from '@ui/image'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { NextLink }        from '@ui/link'
 
-import { CtaButton }           from './cta-button'
-import { DrawerButton }        from './drawer-button'
-import { HeaderProps }         from './header.interfaces'
-import { ItemLink }            from './item-link'
+import { CtaButton }       from './cta-button'
+import { DrawerButton }    from './drawer-button'
+import { HeaderProps }     from './header.interfaces'
+import { ItemLink }        from './item-link'
+import { Wrapper }         from './wrapper'
 
 const HeaderBlock: FC<HeaderProps> = ({ headerData }) => {
   const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
-  const [isNavBackground, setNavBackground] = useState<boolean>(true)
-  const { scroll } = useLocomotiveScroll()
-
-  useEffect(() => {
-    if (scroll) {
-      scroll.on('scroll', (instance) => {
-        if (instance.scroll.y === 0) {
-          setNavBackground(false)
-        }
-        if (instance.delta.y > instance.scroll.y && isNavBackground) {
-          setNavBackground(false)
-        }
-        if (instance.delta.y < instance.scroll.y && !isNavBackground) {
-          setNavBackground(true)
-        }
-      })
-    }
-  }, [scroll, isNavBackground, setNavBackground])
 
   return (
     <>
@@ -47,15 +28,7 @@ const HeaderBlock: FC<HeaderProps> = ({ headerData }) => {
         visible={visibleDrawer}
         setVisible={setVisibleDrawer}
       />
-      <Box
-        width='100%'
-        zIndex={100}
-        height={[72, 72, 109]}
-        position='fixed'
-        justifyContent='center'
-        backgroundColor={isNavBackground ? 'background.blackAmber' : 'transparent'}
-        style={{ transition: '0.3s' }}
-      >
+      <Wrapper>
         <Column width={['100%', '100%', '100%']} alignItems='center'>
           <Layout flexBasis={[24, 28, 32]} />
           <Box width='100%'>
@@ -92,7 +65,7 @@ const HeaderBlock: FC<HeaderProps> = ({ headerData }) => {
           </Box>
           <Layout flexBasis={[24, 28, 32]} />
         </Column>
-      </Box>
+      </Wrapper>
     </>
   )
 }
