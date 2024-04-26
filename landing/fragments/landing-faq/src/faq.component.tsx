@@ -8,15 +8,10 @@ import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
-import { useFaq }           from '@globals/data'
-
 import { ListDesktop }      from './list-desktop'
 import { ListMobile }       from './list-mobile'
 
-const FaqBlock = forwardRef(({ data }: any, ref: any) => {
-  const { faq } = useFaq()
-
-  return (
+const FaqBlock = forwardRef(({ faqData,data }: any, ref: any) => (
     <Row justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -38,13 +33,13 @@ const FaqBlock = forwardRef(({ data }: any, ref: any) => {
             </Box>
           </Box>
           <Layout flexBasis={[44, 62, 80]} flexShrink={0} />
-          <ListDesktop faq={faq} />
-          <ListMobile faq={faq} />
+          <ListDesktop faq={faqData} />
+          <ListMobile faq={faqData} />
           <Layout flexBasis={[20, 37, 60]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       </Box>
     </Row>
   )
-})
+)
 export { FaqBlock }

@@ -25,7 +25,7 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 
 import { IndexPageProps }           from './index-page.interfaces'
 
-export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl, headerData }) => {
+export const HomePage: FC<IndexPageProps> = ({teacherData,faqData,consultationData,footerData, mainPageData, background, songUrl, headerData }) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -108,6 +108,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               >
                 <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
                   <TeacherBlock
+                    teacherData={teacherData}
                     playSong={playSong}
                     setPlaySong={setPlaySong}
                     {...getObserverOptions('teacher')}
@@ -132,8 +133,8 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               studentsData={mainPageData.students}
               {...getObserverOptions('students')}
             />
-            <FaqBlock {...getObserverOptions('faq')} />
-            <CtaBlock {...getObserverOptions('cta')} />
+            <FaqBlock faqData={faqData} {...getObserverOptions('faq')} />
+            <CtaBlock consultationData={consultationData} {...getObserverOptions('cta')} />
             <Box
               display={['none', 'none', 'flex']}
               width='100%'
@@ -147,7 +148,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
                 backgroundSize='contain'
                 width='100%'
               >
-                <FooterBlock {...getObserverOptions('footer')} />
+                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
               </Box>
             </Box>
             <Box
@@ -163,7 +164,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
                 backgroundSize='contain'
                 width='100%'
               >
-                <FooterBlock {...getObserverOptions('footer')} />
+                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
               </Box>
             </Box>
           </main>

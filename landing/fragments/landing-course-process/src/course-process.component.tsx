@@ -10,9 +10,7 @@ import { useProcessEducation } from '@globals/data'
 import { DesktopSlider }       from './desktop-slider'
 import { MobileSlider }        from './mobile-slider'
 
-const CourseProcessBlock = () => {
-  const { processEducation } = useProcessEducation()
-  return (
+const CourseProcessBlock = ({processData}) => (
     <Row justifyContent='center' flexWrap='wrap'>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -27,16 +25,16 @@ const CourseProcessBlock = () => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {processEducation?.title}
+              {processData?.title}
             </Text>
           </Box>
           <Layout flexBasis={[24, 40, 80, 101]} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       </Box>
-      <DesktopSlider processEducation={processEducation} />
-      <MobileSlider processEducation={processEducation} />
+      <DesktopSlider processEducation={processData} />
+      <MobileSlider processEducation={processData} />
     </Row>
   )
-}
+
 export { CourseProcessBlock }

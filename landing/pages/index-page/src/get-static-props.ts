@@ -1,3 +1,7 @@
+import { GET_FOOTER }        from '@globals/data'
+import { GET_CONSULTATION }  from '@globals/data'
+import { GET_FAQ }           from '@globals/data'
+import { GET_TEACHER }       from '@globals/data'
 import { GET_HEADER }        from '@globals/data'
 import { GET_SONG }          from '@globals/data'
 import { GeneralFragmentID } from '@globals/data'
@@ -38,9 +42,21 @@ export const getStaticProps = async () => {
     variables: { id: GeneralFragmentID.HEADER },
   })
 
+  const {data:teacherContent} = await client.query({query:GET_TEACHER,variables:{id:GeneralFragmentID.TEACHER}})
+  const teacherData = teacherContent?.generalFragment?.teacher
+
+  const {data:faqContent} = await client.query({query:GET_FAQ,variables:{id:GeneralFragmentID.FAQ}})
+  const faqData = faqContent?.generalFragment?.faq?.content
+
+  const {data:consultationContent} = await client.query({query:GET_CONSULTATION,variables:{id:GeneralFragmentID.CONSULTATION}})
+  const consultationData = consultationContent?.generalFragment?.consultation
+
+  const {data:footerContent} = await client.query({query:GET_FOOTER,variables:{id:GeneralFragmentID.FOOTER}})
+  const footerData = footerContent?.generalFragment?.footer
+
   const headerData = header?.generalFragment?.header
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
-  return { props: { SEO, mainPageData, background, headerData, songUrl }, revalidate: 3600 }
+  return { props: { faqData,consultationData,footerData,teacherData, SEO, mainPageData, background, headerData, songUrl }, revalidate: 3600 }
 }

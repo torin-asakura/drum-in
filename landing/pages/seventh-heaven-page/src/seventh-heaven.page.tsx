@@ -23,6 +23,7 @@ import { Box }                          from '@ui/layout'
 import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 
 export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
+  faqData, consultationData, footerData, teacherData,processData,
   seventhHeavenData,
   background,
   songUrl,
@@ -78,7 +79,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
         <Seo id={PageID.SEVENTH_HEAVEN} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
-          <CourseProcessBlock />
+          <CourseProcessBlock processData={processData}/>
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -91,12 +92,12 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+              <TeacherBlock teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-          <FaqBlock />
-          <CtaBlock />
+          <FaqBlock faqData={faqData}/>
+          <CtaBlock consultationData={consultationData}/>
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -110,7 +111,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
           <Box
@@ -126,7 +127,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
         </main>

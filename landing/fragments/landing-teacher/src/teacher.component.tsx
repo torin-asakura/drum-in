@@ -7,16 +7,13 @@ import { Column }            from '@ui/layout'
 import { Layout }            from '@ui/layout'
 import { Row }               from '@ui/layout'
 import { Text }              from '@ui/text'
-import { useTeacher }        from '@globals/data'
 
 import { EducationMobile }   from './education-mobile'
 import { Info }              from './info'
 import { SliderBlock }       from './slider'
 import { TeacherBlockProps } from './teacher.interfaces'
 
-const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
-  const { teacherData } = useTeacher()
-  return (
+const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ teacherData,playSong, setPlaySong }, ref: any) => (
     <Row flexWrap='wrap' justifyContent={['center', 'center', 'center', 'center']} ref={ref}>
       <Box width={['100%', '100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -35,7 +32,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
                 'text.smokyWhite',
               ]}
             >
-              {teacherData.subtitle}
+              {teacherData?.subtitle}
             </Text>
           </Row>
           <Layout flexBasis={[8, 10, 12]} />
@@ -49,7 +46,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {teacherData.title}
+              {teacherData?.title}
             </Text>
           </Row>
           <Layout flexBasis={[12, 32, 52]} />
@@ -61,7 +58,7 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
               lineHeight='primary'
               color='text.transparentSmokyWhite'
             >
-              {teacherData.description}
+              {teacherData?.description}
             </Text>
           </Box>
           <Layout display={['flex', 'flex', 'none']} flexBasis={[12, 30, 30, 0]} />
@@ -72,13 +69,13 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong 
       <Box>
         <Column width='100%'>
           <Layout flexBasis={[24, 70, 70, 130]} />
-          <SliderBlock gallery={teacherData.gallery} />
+          <SliderBlock gallery={teacherData?.gallery} />
           <Layout flexBasis={[24, 70, 70, 155]} />
         </Column>
       </Box>
       <Info teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
     </Row>
   )
-})
+)
 
 export { TeacherBlock }

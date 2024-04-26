@@ -24,6 +24,7 @@ import { Box }                             from '@ui/layout'
 import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
+  faqData, consultationData, footerData, teacherData,processData,
   background,
   openingTheRhythm,
   songUrl,
@@ -80,7 +81,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
           <ProgramBlock openingTheRhythm={openingTheRhythm} />
-          <CourseProcessBlock />
+          <CourseProcessBlock processData={processData}/>
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -93,12 +94,12 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+              <TeacherBlock teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
-          <FaqBlock />
-          <CtaBlock />
+          <FaqBlock faqData={faqData}/>
+          <CtaBlock consultationData={consultationData}/>
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -112,7 +113,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
           <Box
@@ -128,7 +129,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
         </main>

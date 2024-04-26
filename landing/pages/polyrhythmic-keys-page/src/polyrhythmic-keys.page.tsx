@@ -23,6 +23,7 @@ import { Box }                             from '@ui/layout'
 import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
+  faqData, consultationData, footerData, teacherData,processData,
   polyrhythmicKeysData,
   background,
   songUrl,
@@ -81,7 +82,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
             background={background}
             polyrhythmicKeysData={polyrhythmicKeysData}
           />
-          <CourseProcessBlock />
+          <CourseProcessBlock processData={processData}/>
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -94,12 +95,12 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+              <TeacherBlock teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
-          <FaqBlock />
-          <CtaBlock />
+          <FaqBlock faqData={faqData}/>
+          <CtaBlock consultationData={consultationData}/>
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -113,7 +114,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
           <Box
@@ -129,7 +130,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
         </main>

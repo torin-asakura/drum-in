@@ -23,6 +23,7 @@ import { Box }                           from '@ui/layout'
 import { FifthDimensionProps }           from './fifth-dimension.interfaces'
 
 export const FifthDimensionPage: FC<FifthDimensionProps> = ({
+  faqData, consultationData, footerData, teacherData,processData,
   fifthDimensionData,
   background,
   songUrl,
@@ -81,7 +82,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             background={background}
             fifthDimensionData={fifthDimensionData}
           />
-          <CourseProcessBlock />
+          <CourseProcessBlock processData={processData}/>
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -89,18 +90,17 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='-100px -50px'
           >
-            {' '}
             <Box
               width='100%'
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+              <TeacherBlock teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
-          <FaqBlock />
-          <CtaBlock />
+          <FaqBlock faqData={faqData}/>
+          <CtaBlock consultationData={consultationData}/>
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -109,13 +109,12 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            {' '}
             <Box
               width='100%'
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
           <Box
@@ -126,13 +125,12 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            {' '}
             <Box
               width='100%'
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData}/>
             </Box>
           </Box>
         </main>
