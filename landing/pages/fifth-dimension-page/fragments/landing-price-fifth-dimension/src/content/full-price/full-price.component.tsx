@@ -13,10 +13,10 @@ import { useHover }                      from '@ui/utils'
 
 import { FullPriceProps }                from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
+
+export const FullPriceComponent = ({fullCost,desktopModal,showDesktopModal,mobileModal,showMobileModal}) =>{
+
   const [hoverElement, hoverElementProps] = useHover()
-  const [visibleModal, setVisibleModal] = useState<boolean>(false)
-  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   return (
     <>
@@ -27,7 +27,7 @@ const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
         alignItems='center'
         flexShrink={0}
         style={{ cursor: 'pointer' }}
-        onClick={() => setVisibleModal(true)}
+        onClick={showDesktopModal}
       >
         <Layout
           display={['none', 'none', 'flex']}
@@ -66,13 +66,14 @@ const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
           </Text>
         </Box>
       </Box>
+      {desktopModal}
       <Box
         {...hoverElementProps}
         display={['flex', 'none', 'none']}
         alignItems='center'
         flexShrink={0}
         style={{ cursor: 'pointer' }}
-        onClick={() => setVisibleModalMobile(true)}
+        onClick={showMobileModal}
       >
         <Box width={56} height={14} flexShrink={0}>
           <ArrowRightTailIcon
@@ -95,19 +96,41 @@ const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
           </Text>
         </Box>
       </Box>
-      <ModalFormFifthDimension
-        paymentPlan={RolePaymentForm.OneTimePayment}
-        fifthDimensionData={fifthDimensionData}
-        activeRender={visibleModal}
-        onClose={() => setVisibleModal(false)}
-      />
-      <ModalMobileFormFifthDimension
-        paymentPlan={RolePaymentForm.OneTimePayment}
-        fifthDimensionData={fifthDimensionData}
-        activeRender={visibleModalMobile}
-        onClose={() => setVisibleModalMobile(false)}
-      />
+      {mobileModal}
     </>
+
+  )
+}
+
+const FullPrice: FC<FullPriceProps> = ({ fifthDimensionData, fullCost }) => {
+  const [visibleModal, setVisibleModal] = useState<boolean>(false)
+  const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
+
+  const showDesktopModal = () => setVisibleModal(true)
+  const showMobileModal = () => setVisibleModalMobile(true)
+
+  return (
+      <FullPriceComponent
+        fullCost={fullCost}
+        showDesktopModal={showDesktopModal}
+        desktopModal={
+          <ModalFormFifthDimension
+          paymentPlan={RolePaymentForm.OneTimePayment}
+          fifthDimensionData={fifthDimensionData}
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+          />
+        }
+        showMobileModal={showMobileModal}
+        mobileModal={
+          <ModalMobileFormFifthDimension
+            paymentPlan={RolePaymentForm.OneTimePayment}
+            fifthDimensionData={fifthDimensionData}
+            activeRender={visibleModalMobile}
+            onClose={() => setVisibleModalMobile(false)}
+          />
+        }
+      />
   )
 }
 export { FullPrice }

@@ -8,7 +8,7 @@ import { useLocomotiveScroll }       from '@forks/react-locomotive-scroll'
 
 import { INITIAL_PROGRESS }          from './course-program-steps.constants'
 import { UseCourseProgramStepsType } from './course-program-steps.interfaces'
-import { getCalculateProgress }      from '../helpers'
+import { getPercentageProgress }      from '../helpers'
 
 export const useCourseProgramSteps: UseCourseProgramStepsType = (containerID, elementID) => {
   const { scroll } = useLocomotiveScroll()
@@ -22,7 +22,7 @@ export const useCourseProgramSteps: UseCourseProgramStepsType = (containerID, el
     if (scrollContainer && scrollElement) {
       const { bottom: containerBottom } = scrollContainer.getBoundingClientRect()
       const { bottom: elementBottom } = scrollElement.getBoundingClientRect()
-      const percentageProgress = getCalculateProgress(containerBottom, elementBottom)
+      const percentageProgress = getPercentageProgress(containerBottom, elementBottom)
       setProgress(percentageProgress)
     }
   }, [scroll, containerID, elementID])

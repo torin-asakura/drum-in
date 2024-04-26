@@ -18,21 +18,18 @@ export const useScroll: UseScrollType = () => {
       const handleScroll = (args) => {
         if (args.scroll.y !== 0) {
           setZeroOffsetY(false)
-        }
-        if (args.scroll.y === 0) {
+        } else {
           setZeroOffsetY(true)
+          setNavBackground(false)
         }
 
-        if (args.scroll.y === 0) {
-          setNavBackground(false)
-        }
         if (args.delta.y > args.scroll.y && isNavBackground) {
           setNavBackground(false)
-        }
-        if (args.delta.y < args.scroll.y && !isNavBackground) {
+        } else if (args.delta.y < args.scroll.y && !isNavBackground) {
           setNavBackground(true)
         }
       }
+
 
       scroll.on('scroll', handleScroll)
 
