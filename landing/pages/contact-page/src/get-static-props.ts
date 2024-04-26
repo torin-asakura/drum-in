@@ -1,3 +1,4 @@
+import { GET_FOOTER }        from '@globals/data'
 import { GET_HEADER }        from '@globals/data'
 import { GeneralFragmentID } from '@globals/data'
 import { GET_CONTACTS }      from '@globals/data'
@@ -33,5 +34,8 @@ export const getStaticProps = async () => {
 
   const headerData = header?.generalFragment?.header
 
-  return { props: { SEO, contactsData, headerData }, revalidate: 3600 }
+  const {data:footerContent} = await client.query({query:GET_FOOTER,variables:{id:GeneralFragmentID.FOOTER}})
+  const footerData = footerContent?.generalFragment?.footer
+
+  return { props: { footerData,SEO, contactsData, headerData }, revalidate: 3600 }
 }

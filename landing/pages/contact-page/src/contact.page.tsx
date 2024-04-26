@@ -12,7 +12,7 @@ import { Box }                      from '@ui/layout'
 
 import { ContactPageProps }         from './contact-page.interfaces'
 
-export const ContactPage: FC<ContactPageProps> = ({ contactsData, headerData }) => {
+export const ContactPage: FC<ContactPageProps> = ({ footerData,contactsData, headerData }) => {
   const containerRef = useRef(null)
 
   return (
@@ -52,7 +52,7 @@ export const ContactPage: FC<ContactPageProps> = ({ contactsData, headerData }) 
               backgroundSize='contain'
             >
               <ContactBlock contactsData={contactsData} />
-              <FooterBlock buttonUp={false} />
+              <FooterBlock footerData={footerData} buttonUp={false} />
             </Box>
           </Box>
           <Box
