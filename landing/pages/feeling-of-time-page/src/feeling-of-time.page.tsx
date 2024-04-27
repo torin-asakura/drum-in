@@ -23,7 +23,11 @@ import { Box }                          from '@ui/layout'
 import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
 
 export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
-  faqData, consultationData, footerData, teacherData,processData,
+  faqData,
+  consultationData,
+  footerData,
+  teacherData,
+  processData,
   feelingOfTimeData,
   background,
   songUrl,
@@ -79,7 +83,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
         <Seo id={PageID.FEELING_OF_TIME} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} />
-          <CourseProcessBlock processData={processData}/>
+          <CourseProcessBlock processData={processData} />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -92,12 +96,16 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
+              <TeacherBlock
+                teacherData={teacherData}
+                playSong={playSong}
+                setPlaySong={setPlaySong}
+              />
             </Box>
           </Box>
           <PriceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
-          <FaqBlock faqData={faqData}/>
-          <CtaBlock consultationData={consultationData}/>
+          <FaqBlock faqData={faqData} />
+          <CtaBlock consultationData={consultationData} />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -111,7 +119,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData}/>
+              <FooterBlock footerData={footerData} />
             </Box>
           </Box>
           <Box
@@ -127,7 +135,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData}/>
+              <FooterBlock footerData={footerData} />
             </Box>
           </Box>
         </main>

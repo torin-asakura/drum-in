@@ -23,7 +23,11 @@ import { Box }                             from '@ui/layout'
 import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
-  faqData, consultationData, footerData, teacherData,processData,
+  faqData,
+  consultationData,
+  footerData,
+  teacherData,
+  processData,
   polyrhythmicKeysData,
   background,
   songUrl,
@@ -82,7 +86,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
             background={background}
             polyrhythmicKeysData={polyrhythmicKeysData}
           />
-          <CourseProcessBlock processData={processData}/>
+          <CourseProcessBlock processData={processData} />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -95,12 +99,16 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock teacherData={teacherData} playSong={playSong} setPlaySong={setPlaySong} />
+              <TeacherBlock
+                teacherData={teacherData}
+                playSong={playSong}
+                setPlaySong={setPlaySong}
+              />
             </Box>
           </Box>
           <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
-          <FaqBlock faqData={faqData}/>
-          <CtaBlock consultationData={consultationData}/>
+          <FaqBlock faqData={faqData} />
+          <CtaBlock consultationData={consultationData} />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -114,7 +122,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData}/>
+              <FooterBlock footerData={footerData} />
             </Box>
           </Box>
           <Box
@@ -130,7 +138,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData}/>
+              <FooterBlock footerData={footerData} />
             </Box>
           </Box>
         </main>

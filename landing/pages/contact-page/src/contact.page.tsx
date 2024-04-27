@@ -12,7 +12,7 @@ import { Box }                      from '@ui/layout'
 
 import { ContactPageProps }         from './contact-page.interfaces'
 
-export const ContactPage: FC<ContactPageProps> = ({ footerData,contactsData, headerData }) => {
+export const ContactPage: FC<ContactPageProps> = ({ footerData, contactsData, headerData }) => {
   const containerRef = useRef(null)
 
   return (

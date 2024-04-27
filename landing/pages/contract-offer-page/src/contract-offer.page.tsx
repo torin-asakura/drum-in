@@ -12,7 +12,11 @@ import { Box }                      from '@ui/layout'
 
 import { ContractOfferProps }       from './contract-offer.interfaces'
 
-export const ContractOfferPage: FC<ContractOfferProps> = ({footerData, contractOfferData, headerData }) => {
+export const ContractOfferPage: FC<ContractOfferProps> = ({
+  footerData,
+  contractOfferData,
+  headerData,
+}) => {
   const containerRef = useRef(null)
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
@@ -44,7 +48,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({footerData, contractO
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock footerData={footerData}/>
+            <FooterBlock footerData={footerData} />
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -54,7 +58,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({footerData, contractO
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock footerData={footerData}/>
+            <FooterBlock footerData={footerData} />
           </Box>
         </main>
       </LocomotiveScrollProvider>

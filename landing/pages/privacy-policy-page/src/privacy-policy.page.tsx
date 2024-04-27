@@ -12,7 +12,11 @@ import { Box }                      from '@ui/layout'
 
 import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
 
-export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({footerData, privacyPolicy, headerData }) => {
+export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
+  footerData,
+  privacyPolicy,
+  headerData,
+}) => {
   const containerRef = useRef(null)
 
   return (
@@ -45,7 +49,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({footerData, priva
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock footerData={footerData}/>
+            <FooterBlock footerData={footerData} />
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -55,7 +59,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({footerData, priva
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock footerData={footerData}/>
+            <FooterBlock footerData={footerData} />
           </Box>
         </main>
       </LocomotiveScrollProvider>

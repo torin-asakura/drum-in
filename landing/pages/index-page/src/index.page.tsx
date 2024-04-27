@@ -25,7 +25,16 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 
 import { IndexPageProps }           from './index-page.interfaces'
 
-export const HomePage: FC<IndexPageProps> = ({teacherData,faqData,consultationData,footerData, mainPageData, background, songUrl, headerData }) => {
+export const HomePage: FC<IndexPageProps> = ({
+  teacherData,
+  faqData,
+  consultationData,
+  footerData,
+  mainPageData,
+  background,
+  songUrl,
+  headerData,
+}) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {

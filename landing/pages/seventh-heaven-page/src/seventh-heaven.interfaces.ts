@@ -1,3 +1,8 @@
+import { ProcessEducationDataProps }      from '@globals/data'
+import { TeacherDataProps }               from '@globals/data'
+import { FooterDataProps }                from '@globals/data'
+import { ConsultationDataProps }          from '@globals/data'
+import { FaqDataProps }                   from '@globals/data'
 import { HeaderDataProps }                from '@globals/data'
 import { SongUrlType }                    from '@globals/data'
 import { IndividualCourseBackgroundType } from '@globals/data'
@@ -8,4 +13,10 @@ export interface SeventhHeavenProps {
   background: IndividualCourseBackgroundType
   songUrl: SongUrlType
   headerData: HeaderDataProps
+
+  faqData: FaqDataProps
+  consultationData: ConsultationDataProps
+  footerData: FooterDataProps
+  teacherData: TeacherDataProps
+  processData: ProcessEducationDataProps
 }

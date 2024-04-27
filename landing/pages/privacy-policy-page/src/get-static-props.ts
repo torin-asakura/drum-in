@@ -32,8 +32,11 @@ export const getStaticProps = async () => {
 
   const headerData = header?.generalFragment?.header
 
-  const {data:footerContent} = await client.query({query:GET_FOOTER,variables:{id:GeneralFragmentID.FOOTER}})
+  const { data: footerContent } = await client.query({
+    query: GET_FOOTER,
+    variables: { id: GeneralFragmentID.FOOTER },
+  })
   const footerData = footerContent?.generalFragment?.footer
 
-  return { props: { footerData,SEO, privacyPolicy, headerData }, revalidate: 3600 }
+  return { props: { footerData, SEO, privacyPolicy, headerData }, revalidate: 3600 }
 }
