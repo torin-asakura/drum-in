@@ -1,3 +1,5 @@
+import { FormID }                 from '@globals/data'
+import { GET_CONSULTATION_FORM }  from '@globals/data'
 import { GET_PROCESS_EDUCATION }  from '@globals/data'
 import { GET_FOOTER }             from '@globals/data'
 import { GET_CONSULTATION }       from '@globals/data'
@@ -77,8 +79,15 @@ export const getStaticProps = async () => {
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
+  const { data: consultationFormContent } = await client.query({
+    query: GET_CONSULTATION_FORM,
+    variables: { id: FormID.consultation.id },
+  })
+  const consultationFormData = consultationFormContent?.form
+
   return {
     props: {
+      consultationFormData,
       faqData,
       consultationData,
       footerData,

@@ -1,14 +1,17 @@
-import { GET_FOOTER }        from '@globals/data'
-import { GET_CONSULTATION }  from '@globals/data'
-import { GET_FAQ }           from '@globals/data'
-import { GET_TEACHER }       from '@globals/data'
-import { GET_HEADER }        from '@globals/data'
-import { GET_SONG }          from '@globals/data'
-import { GeneralFragmentID } from '@globals/data'
-import { GET_MAIN_PAGE }     from '@globals/data'
-import { PageID }            from '@globals/data'
-import { GET_SEO }           from '@globals/data'
-import { getClient }         from '@globals/data'
+import { FormID }                from '@globals/data'
+import { GET_CONSULTATION_FORM } from '@globals/data'
+import { GET_STUDENTS }          from '@globals/data'
+import { GET_FOOTER }            from '@globals/data'
+import { GET_CONSULTATION }      from '@globals/data'
+import { GET_FAQ }               from '@globals/data'
+import { GET_TEACHER }           from '@globals/data'
+import { GET_HEADER }            from '@globals/data'
+import { GET_SONG }              from '@globals/data'
+import { GeneralFragmentID }     from '@globals/data'
+import { GET_MAIN_PAGE }         from '@globals/data'
+import { PageID }                from '@globals/data'
+import { GET_SEO }               from '@globals/data'
+import { getClient }             from '@globals/data'
 
 export const getStaticProps = async () => {
   const client = getClient()
@@ -66,12 +69,26 @@ export const getStaticProps = async () => {
   })
   const footerData = footerContent?.generalFragment?.footer
 
+  const { data: studentsContent } = await client.query({
+    query: GET_STUDENTS,
+    variables: { id: GeneralFragmentID.STUDENTS },
+  })
+  const studentsData = studentsContent?.generalFragment?.students
+
   const headerData = header?.generalFragment?.header
 
   const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
 
+  const { data: consultationFormContent } = await client.query({
+    query: GET_CONSULTATION_FORM,
+    variables: { id: FormID.consultation.id },
+  })
+  const consultationFormData = consultationFormContent?.form
+
   return {
     props: {
+      consultationFormData,
+      studentsData,
       faqData,
       consultationData,
       footerData,

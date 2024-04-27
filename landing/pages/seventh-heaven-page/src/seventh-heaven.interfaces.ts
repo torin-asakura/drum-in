@@ -1,3 +1,4 @@
+import { ConsultationFormDataProps }      from '@globals/data'
 import { ProcessEducationDataProps }      from '@globals/data'
 import { TeacherDataProps }               from '@globals/data'
 import { FooterDataProps }                from '@globals/data'
@@ -19,4 +20,5 @@ export interface SeventhHeavenProps {
   footerData: FooterDataProps
   teacherData: TeacherDataProps
   processData: ProcessEducationDataProps
+  consultationFormData: ConsultationFormDataProps
 }

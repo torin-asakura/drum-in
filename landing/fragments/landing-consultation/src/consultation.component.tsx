@@ -12,7 +12,13 @@ import { Backdrop }            from '@ui/modal'
 import { ConsultationContent } from './consultation-content'
 import { ConsultationProps }   from './consultation.interfaces'
 
-const Consultation: FC<ConsultationProps> = ({ activeRender, setVisibleModal, scroll = false }) => (
+const Consultation: FC<ConsultationProps> = ({
+  consultationFormData,
+  consultationData,
+  activeRender,
+  setVisibleModal,
+  scroll = false,
+}) => (
   <Renderer active={activeRender}>
     <motion.div
       style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 900 }}
@@ -35,7 +41,11 @@ const Consultation: FC<ConsultationProps> = ({ activeRender, setVisibleModal, sc
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
-            <ConsultationContent setVisibleModal={setVisibleModal} />
+            <ConsultationContent
+              consultationFormData={consultationFormData}
+              consultationData={consultationData}
+              setVisibleModal={setVisibleModal}
+            />
           </Column>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         </Box>

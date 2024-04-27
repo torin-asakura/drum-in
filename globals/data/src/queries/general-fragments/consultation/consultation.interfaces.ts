@@ -1,3 +1,10 @@
+export interface ModalConsultationDataProps {
+  __typename?: 'ConsultationModal'
+  title?: string | null
+  subtitle?: string | null
+  textForCheckbox?: string | null
+}
+
 export type ConsultationDataProps = {
   cta?: {
     __typename?: 'ConsultationCta'
@@ -10,10 +17,5 @@ export type ConsultationDataProps = {
       afterAccent?: string | null
     } | null
   } | null
-  modal?: {
-    __typename?: 'ConsultationModal'
-    title?: string | null
-    subtitle?: string | null
-    textForCheckbox?: string | null
-  } | null
+  modal?: ModalConsultationDataProps | null
 } | null

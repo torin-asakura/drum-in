@@ -1,3 +1,4 @@
+import { ConsultationFormDataProps }       from '@globals/data/src'
 import { ProcessEducationDataProps }       from '@globals/data/src'
 import { TeacherDataProps }                from '@globals/data/src'
 import { FooterDataProps }                 from '@globals/data/src'
@@ -19,4 +20,5 @@ export interface OpeningTheRhythmPageProps {
   footerData: FooterDataProps
   teacherData: TeacherDataProps
   processData: ProcessEducationDataProps
+  consultationFormData: ConsultationFormDataProps
 }

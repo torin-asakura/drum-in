@@ -23,6 +23,7 @@ import { Box }                             from '@ui/layout'
 import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
+  consultationFormData,
   faqData,
   consultationData,
   footerData,
@@ -108,7 +109,10 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
           </Box>
           <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
           <FaqBlock faqData={faqData} />
-          <CtaBlock consultationData={consultationData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'

@@ -1,3 +1,4 @@
+import { ConsultationFormDataProps }      from '@globals/data/src'
 import { HeaderDataProps }                from '@globals/data/src'
 import { SongUrlType }                    from '@globals/data/src'
 import { IndividualCourseBackgroundType } from '@globals/data/src'
@@ -19,4 +20,5 @@ export interface ConnacolPageProps {
   footerData: FooterDataProps
   teacherData: TeacherDataProps
   processData: ProcessEducationDataProps
+  consultationFormData: ConsultationFormDataProps
 }

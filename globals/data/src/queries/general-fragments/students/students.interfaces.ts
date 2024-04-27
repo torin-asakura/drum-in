@@ -5,7 +5,7 @@ export type StudentsListType = Array<{
   secondBadge?: string | null
 } | null>
 
-export type StudentDataProps = {
+export type StudentDataListProps = {
   __typename?: 'Students'
   title?: string | null
   description?: string | null

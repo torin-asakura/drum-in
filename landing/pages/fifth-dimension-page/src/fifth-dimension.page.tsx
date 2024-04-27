@@ -26,6 +26,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
   faqData,
   consultationData,
   footerData,
+  consultationFormData,
   teacherData,
   processData,
   fifthDimensionData,
@@ -108,7 +109,10 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
           </Box>
           <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
           <FaqBlock faqData={faqData} />
-          <CtaBlock consultationData={consultationData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'

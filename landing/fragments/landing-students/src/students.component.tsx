@@ -15,12 +15,16 @@ import { CardsStudent }       from './cards-student'
 import { ModalWindow }        from './modal-window'
 import { StudentsBlockProps } from './students.interfaces'
 
-const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref: any) => {
+const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ mainData, studentsData }, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
 
   return (
     <>
-      <ModalWindow active={visibleModal} onClose={() => setVisibleModal(false)} />
+      <ModalWindow
+        studentsData={studentsData}
+        active={visibleModal}
+        onClose={() => setVisibleModal(false)}
+      />
       <Row justifyContent='center' ref={ref}>
         <Box width={['100%', '100%', '100%']}>
           <Column width='100%'>
@@ -42,7 +46,7 @@ const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref:
                   lineHeight='default'
                   color='text.smokyWhite'
                 >
-                  {studentsData?.title}
+                  {mainData?.title}
                 </Text>
               </Box>
               <Layout display={['flex', 'flex', 'none']} flexBasis={[8, 12, 0]} />
@@ -55,7 +59,7 @@ const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref:
                     lineHeight={['primary', 'primary', 'medium']}
                     color='text.transparentSmokyWhite'
                   >
-                    {studentsData?.description}
+                    {mainData?.description}
                   </Text>
                 </Box>
                 <Layout flexBasis={[16, 20, 24]} />
@@ -69,7 +73,7 @@ const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref:
                     onClick={() => setVisibleModal(true)}
                   >
                     <Text textTransform='uppercase' fontWeight='semiBold' fontSize='medium'>
-                      {studentsData?.cta}
+                      {mainData?.cta}
                     </Text>
                   </Button>
                 </Box>
@@ -83,14 +87,14 @@ const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ studentsData }, ref:
                     onClick={() => setVisibleModal(true)}
                   >
                     <Text textTransform='uppercase' fontWeight='semiBold' fontSize='micro'>
-                      {studentsData?.cta}
+                      {mainData?.cta}
                     </Text>
                   </Button>
                 </Box>
               </Column>
             </Box>
             <Layout flexBasis={[32, 82, 175]} />
-            <CardsStudent studentCardsData={studentsData?.cards} />
+            <CardsStudent studentCardsData={mainData?.cards} />
             <Layout display={['flex', 'flex', 'none']} flexBasis={[24, 34, 0]} />
           </Column>
           <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

@@ -25,6 +25,7 @@ import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
   faqData,
   consultationData,
+  consultationFormData,
   footerData,
   teacherData,
   processData,
@@ -105,7 +106,10 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
           </Box>
           <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
           <FaqBlock faqData={faqData} />
-          <CtaBlock consultationData={consultationData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'

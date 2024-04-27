@@ -26,6 +26,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
   faqData,
   consultationData,
   footerData,
+  consultationFormData,
   teacherData,
   processData,
   connacolData,
@@ -105,7 +106,10 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
           </Box>
           <PriceConnacolBlock connacolData={connacolData} />
           <FaqBlock faqData={faqData} />
-          <CtaBlock consultationData={consultationData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'

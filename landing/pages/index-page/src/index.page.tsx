@@ -26,10 +26,12 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 import { IndexPageProps }           from './index-page.interfaces'
 
 export const HomePage: FC<IndexPageProps> = ({
+  studentsData,
   teacherData,
   faqData,
   consultationData,
   footerData,
+  consultationFormData,
   mainPageData,
   background,
   songUrl,
@@ -139,11 +141,16 @@ export const HomePage: FC<IndexPageProps> = ({
             </Box>
             <Layout height={[40, 0, 0, 0]} />
             <StudentsBlock
-              studentsData={mainPageData.students}
+              mainData={mainPageData.students}
+              studentsData={studentsData}
               {...getObserverOptions('students')}
             />
             <FaqBlock faqData={faqData} {...getObserverOptions('faq')} />
-            <CtaBlock consultationData={consultationData} {...getObserverOptions('cta')} />
+            <CtaBlock
+              consultationData={consultationData}
+              {...getObserverOptions('cta')}
+              consultationFormData={consultationFormData}
+            />
             <Box
               display={['none', 'none', 'flex']}
               width='100%'

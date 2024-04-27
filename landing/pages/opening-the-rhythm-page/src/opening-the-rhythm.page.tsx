@@ -25,6 +25,7 @@ import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.inter
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   faqData,
+  consultationFormData,
   consultationData,
   footerData,
   teacherData,
@@ -107,7 +108,10 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
           </Box>
           <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
           <FaqBlock faqData={faqData} />
-          <CtaBlock consultationData={consultationData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'

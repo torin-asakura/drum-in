@@ -25,6 +25,7 @@ import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
 export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
   faqData,
   consultationData,
+  consultationFormData,
   footerData,
   teacherData,
   processData,
@@ -105,7 +106,10 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
           </Box>
           <PriceFeelingOfTimeBlock feelingOfTimeData={feelingOfTimeData} />
           <FaqBlock faqData={faqData} />
-          <CtaBlock consultationData={consultationData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
