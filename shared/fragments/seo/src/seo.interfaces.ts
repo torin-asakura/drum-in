@@ -1,5 +1,5 @@
-import { PageID } from '@globals/data'
+import { SeoDataProps } from '@globals/data/src'
 
 export interface SeoProps {
-  id: PageID
+  seo: SeoDataProps
 }

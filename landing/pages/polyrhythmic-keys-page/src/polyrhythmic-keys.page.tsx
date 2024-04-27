@@ -5,7 +5,6 @@ import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
-import { PageID }                          from '@globals/data/src'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
 import { FaqBlock }                        from '@landing/faq'
@@ -23,6 +22,13 @@ import { Box }                             from '@ui/layout'
 import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
+  SEO,
+  consultationFormData,
+  faqData,
+  consultationData,
+  footerData,
+  teacherData,
+  processData,
   polyrhythmicKeysData,
   background,
   songUrl,
@@ -75,13 +81,13 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.POLYRYTHMIC_KEYS} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroPolyrhythmicKeysBlock
             background={background}
             polyrhythmicKeysData={polyrhythmicKeysData}
           />
-          <CourseProcessBlock />
+          <CourseProcessBlock processData={processData} />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -94,12 +100,19 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
+              <TeacherBlock
+                teacherData={teacherData}
+                playSong={playSong}
+                setPlaySong={setPlaySong}
+              />
             </Box>
           </Box>
           <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
-          <FaqBlock />
-          <CtaBlock />
+          <FaqBlock faqData={faqData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -113,7 +126,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData} />
             </Box>
           </Box>
           <Box
@@ -129,7 +142,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock />
+              <FooterBlock footerData={footerData} />
             </Box>
           </Box>
         </main>

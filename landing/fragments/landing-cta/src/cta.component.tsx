@@ -1,4 +1,5 @@
 import React                  from 'react'
+import { FC }                 from 'react'
 import { FormattedMessage }   from 'react-intl'
 import { useState }           from 'react'
 import { forwardRef }         from 'react'
@@ -13,12 +14,15 @@ import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
-import { useConsultation }    from '@globals/data'
 
-const CtaBlock = forwardRef(({ data }: any, ref: any) => {
+import { CtaProps }           from './cta.interfaces'
+
+const CtaBlock: FC<CtaProps> = forwardRef((
+  { consultationFormData, consultationData },
+  ref?: any
+) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-  const { consultation } = useConsultation()
 
   return (
     <Row justifyContent='center' ref={ref}>
@@ -35,7 +39,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
               lineHeight='default'
               color='text.smokyWhite'
             >
-              {consultation?.cta?.title}
+              {consultationData?.cta?.title}
             </Text>
           </Box>
           <Layout flexBasis={[8, 40, 86]} />
@@ -52,7 +56,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   lineHeight={['primary', 'medium', 'medium']}
                   color='text.gray'
                 >
-                  {consultation?.cta?.text?.beforeAccent}
+                  {consultationData?.cta?.text?.beforeAccent}
                   <Space />
                   <Text
                     fontWeight='medium'
@@ -60,7 +64,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                     lineHeight={['primary', 'medium', 'medium']}
                     color='text.smokyWhite'
                   >
-                    {consultation?.cta?.text?.accent}
+                    {consultationData?.cta?.text?.accent}
                   </Text>
                 </Text>
               </Box>
@@ -71,7 +75,7 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                   lineHeight={['primary', 'medium', 'medium']}
                   color='text.gray'
                 >
-                  {consultation?.cta?.text?.afterAccent}
+                  {consultationData?.cta?.text?.afterAccent}
                 </Text>
               </Box>
               <Layout flexBasis={[20, 26, 32]} />
@@ -106,12 +110,19 @@ const CtaBlock = forwardRef(({ data }: any, ref: any) => {
                     fontSize='semiMedium'
                     lineHeight='default'
                   >
-                    {consultation?.cta?.button}
+                    {consultationData?.cta?.button}
                   </Text>
                 </Button>
               </Box>
-              <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
+              <Consultation
+                consultationFormData={consultationFormData}
+                consultationData={consultationData?.modal}
+                activeRender={visibleModal}
+                setVisibleModal={setVisibleModal}
+              />
               <MobileConsultation
+                consultationFormData={consultationFormData}
+                consultationData={consultationData?.modal}
                 activeRender={visibleModalMobile}
                 setVisibleModal={setVisibleModalMobile}
               />

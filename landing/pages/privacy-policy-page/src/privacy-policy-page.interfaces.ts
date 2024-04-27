@@ -1,7 +1,12 @@
+import { SeoDataProps }           from '@globals/data'
+import { FooterDataProps }        from '@globals/data'
 import { HeaderDataProps }        from '@globals/data'
 import { PrivacyPolicyDataProps } from '@globals/data'
 
 export interface PrivacyPolicyPageProps {
   privacyPolicy?: PrivacyPolicyDataProps | null
   headerData: HeaderDataProps
+
+  SEO: SeoDataProps
+  footerData: FooterDataProps
 }

@@ -8,10 +8,9 @@ export enum PageID {
   FEELING_OF_TIME = 'cG9zdDo0OTk=',
   OPENING_RHYTHM = 'cG9zdDo0OTc=',
   MAIN = 'cG9zdDo0OTU=',
-  CONTRACT_OFFER = 'cG9zdDo1MDU=',
+  PRIVACY_POLICY = 'cG9zdDoyNjg5',
+  CONTRACT_OFFER = 'cG9zdDoyNjg2',
 }
-
-// TODO: change PageID for CONTRACT_OFFER
 
 export enum CourseID {
   CONNACOL = 'cG9zdDoyMjg5',

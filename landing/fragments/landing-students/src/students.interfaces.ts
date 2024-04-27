@@ -1,5 +1,7 @@
-import { StudentsDataProps } from '@globals/data/src'
+import { StudentDataListProps } from '@globals/data/src'
+import { StudentsDataProps }    from '@globals/data/src'
 
 export interface StudentsBlockProps {
-  studentsData?: StudentsDataProps | null
+  mainData?: StudentsDataProps | null
+  studentsData?: StudentDataListProps | null
 }

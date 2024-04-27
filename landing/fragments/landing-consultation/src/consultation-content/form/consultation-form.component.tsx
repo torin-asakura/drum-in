@@ -1,39 +1,38 @@
-import React                          from 'react'
-import { FC }                         from 'react'
-import { useState }                   from 'react'
-import { useIntl }                    from 'react-intl'
+import React                     from 'react'
+import { FC }                    from 'react'
+import { useState }              from 'react'
+import { useIntl }               from 'react-intl'
 
-import { ArrowLeftDownTailIcon }      from '@ui/icons'
-import { Input }                      from '@ui/input'
-import { Box }                        from '@ui/layout'
-import { Column }                     from '@ui/layout'
-import { Layout }                     from '@ui/layout'
-import { useGetConsultationFormData } from '@globals/data'
+import { ArrowLeftDownTailIcon } from '@ui/icons'
+import { Input }                 from '@ui/input'
+import { Box }                   from '@ui/layout'
+import { Column }                from '@ui/layout'
+import { Layout }                from '@ui/layout'
 
-import { Action }                     from './action'
-import { ConsultationFormProps }      from './consultation-form.interfaces'
+import { Action }                from './action'
+import { ConsultationFormProps } from './consultation-form.interfaces'
 
 export const ConsultationForm: FC<ConsultationFormProps> = ({
+  consultationFormData,
   textForCheckbox,
   setVisibleModal,
 }) => {
   const { formatMessage } = useIntl()
-  const { formData } = useGetConsultationFormData()
 
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [telegram, setTelegram] = useState<string>('')
 
   // @ts-ignore: Unreachable code error
-  const namePlaceholder = formData?.fields?.nodes[0].label
+  const namePlaceholder = consultationFormData?.fields?.nodes[0].label
   const phonePlaceholder = `${formatMessage({ id: 'symbol.plus' })}${
     // @ts-ignore: Unreachable code error
-    formData?.fields?.nodes[1].label
+    consultationFormData?.fields?.nodes[1].label
   }`
   // @ts-ignore: Unreachable code error
-  const telegramPlaceholder = formData?.fields?.nodes[2].label
+  const telegramPlaceholder = consultationFormData?.fields?.nodes[2].label
   // @ts-ignore: Unreachable code error
-  const submitButtonText = formData?.fields?.nodes[3].label
+  const submitButtonText = consultationFormData?.fields?.nodes[3].label
 
   const fields = { name, phone, telegram }
 

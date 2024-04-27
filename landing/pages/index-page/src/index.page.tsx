@@ -5,7 +5,6 @@ import { useEffect }                from 'react'
 import { useState }                 from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { PageID }                   from '@globals/data'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
@@ -25,7 +24,19 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 
 import { IndexPageProps }           from './index-page.interfaces'
 
-export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl, headerData }) => {
+export const HomePage: FC<IndexPageProps> = ({
+  SEO,
+  studentsData,
+  teacherData,
+  faqData,
+  consultationData,
+  footerData,
+  consultationFormData,
+  mainPageData,
+  background,
+  songUrl,
+  headerData,
+}) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { getObserverOptions } = useIntersectionObserver((id) => {
@@ -86,7 +97,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
         <SpyScrollProvider>
           <HeaderBlock headerData={headerData} />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
-          <Seo id={PageID.INDEX} />
+          <Seo seo={SEO} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero
               mainPageData={mainPageData}
@@ -108,6 +119,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
               >
                 <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
                   <TeacherBlock
+                    teacherData={teacherData}
                     playSong={playSong}
                     setPlaySong={setPlaySong}
                     {...getObserverOptions('teacher')}
@@ -129,11 +141,16 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
             </Box>
             <Layout height={[40, 0, 0, 0]} />
             <StudentsBlock
-              studentsData={mainPageData.students}
+              mainData={mainPageData.students}
+              studentsData={studentsData}
               {...getObserverOptions('students')}
             />
-            <FaqBlock {...getObserverOptions('faq')} />
-            <CtaBlock {...getObserverOptions('cta')} />
+            <FaqBlock faqData={faqData} {...getObserverOptions('faq')} />
+            <CtaBlock
+              consultationData={consultationData}
+              {...getObserverOptions('cta')}
+              consultationFormData={consultationFormData}
+            />
             <Box
               display={['none', 'none', 'flex']}
               width='100%'
@@ -147,7 +164,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
                 backgroundSize='contain'
                 width='100%'
               >
-                <FooterBlock {...getObserverOptions('footer')} />
+                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
               </Box>
             </Box>
             <Box
@@ -163,7 +180,7 @@ export const HomePage: FC<IndexPageProps> = ({ mainPageData, background, songUrl
                 backgroundSize='contain'
                 width='100%'
               >
-                <FooterBlock {...getObserverOptions('footer')} />
+                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
               </Box>
             </Box>
           </main>

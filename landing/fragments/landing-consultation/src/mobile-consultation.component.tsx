@@ -10,6 +10,8 @@ import { MobileConsultationContent } from './consultation-content'
 import { ConsultationProps }         from './consultation.interfaces'
 
 const MobileConsultation: FC<ConsultationProps> = ({
+  consultationFormData,
+  consultationData,
   activeRender,
   setVisibleModal,
   scroll = true,
@@ -32,7 +34,11 @@ const MobileConsultation: FC<ConsultationProps> = ({
       id='modal-form-mobile'
     >
       <ContainerMobile scroll={scroll}>
-        <MobileConsultationContent setVisibleModal={setVisibleModal} />
+        <MobileConsultationContent
+          consultationFormData={consultationFormData}
+          consultationData={consultationData}
+          setVisibleModal={setVisibleModal}
+        />
       </ContainerMobile>
     </motion.div>
   </Renderer>
