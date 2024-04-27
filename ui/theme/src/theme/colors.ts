@@ -1,4 +1,6 @@
 const colors = {
+  black: 'rgba(15, 12, 12, 1)',
+
   button: {
     transparentBackground: {
       default: {
