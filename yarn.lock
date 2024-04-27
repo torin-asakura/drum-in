@@ -5054,6 +5054,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@shared/google-tag-manager@workspace:shared/fragments/google-tag-manager":
+  version: 0.0.0-use.local
+  resolution: "@shared/google-tag-manager@workspace:shared/fragments/google-tag-manager"
+  dependencies:
+    "@types/react": "npm:18.2.20"
+    next: "npm:12.3.4"
+  peerDependencies:
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@shared/seo-fragment@workspace:*, @shared/seo-fragment@workspace:shared/fragments/seo":
   version: 0.0.0-use.local
   resolution: "@shared/seo-fragment@workspace:shared/fragments/seo"
