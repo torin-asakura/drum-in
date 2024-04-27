@@ -1,3 +1,4 @@
+import { SeoDataProps }                   from '@globals/data/src'
 import { ConsultationFormDataProps }      from '@globals/data/src'
 import { HeaderDataProps }                from '@globals/data/src'
 import { SongUrlType }                    from '@globals/data/src'
@@ -15,7 +16,7 @@ export interface ConnacolPageProps {
   songUrl: SongUrlType
   headerData: HeaderDataProps
 
-  SEO: any
+  SEO: SeoDataProps
   faqData: FaqDataProps
   consultationData: ConsultationDataProps
   footerData: FooterDataProps

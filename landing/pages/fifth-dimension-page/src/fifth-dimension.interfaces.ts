@@ -1,3 +1,4 @@
+import { SeoDataProps }                   from '@globals/data'
 import { ConsultationFormDataProps }      from '@globals/data'
 import { ProcessEducationDataProps }      from '@globals/data'
 import { TeacherDataProps }               from '@globals/data'
@@ -15,7 +16,7 @@ export interface FifthDimensionProps {
   songUrl: SongUrlType
   headerData: HeaderDataProps
 
-  SEO: any
+  SEO: SeoDataProps
   faqData: FaqDataProps
   consultationData: ConsultationDataProps
   footerData: FooterDataProps

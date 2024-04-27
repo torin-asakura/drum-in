@@ -5,7 +5,6 @@ import { useEffect }                    from 'react'
 import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
-import { PageID }                       from '@globals/data'
 import { CourseProcessBlock }           from '@landing/course-process-fragment'
 import { CtaBlock }                     from '@landing/cta-fragment'
 import { FaqBlock }                     from '@landing/faq'
