@@ -3,7 +3,6 @@ import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { PageID }                   from '@globals/data'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
 import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
@@ -13,6 +12,7 @@ import { Box }                      from '@ui/layout'
 import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
 
 export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
+  SEO,
   footerData,
   privacyPolicy,
   headerData,
@@ -38,7 +38,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.INDEX} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />
           <Box

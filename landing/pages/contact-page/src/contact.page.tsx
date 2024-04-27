@@ -3,7 +3,6 @@ import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { PageID }                   from '@globals/data'
 import { ContactBlock }             from '@landing/contact-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
@@ -12,7 +11,12 @@ import { Box }                      from '@ui/layout'
 
 import { ContactPageProps }         from './contact-page.interfaces'
 
-export const ContactPage: FC<ContactPageProps> = ({ footerData, contactsData, headerData }) => {
+export const ContactPage: FC<ContactPageProps> = ({
+  SEO,
+  footerData,
+  contactsData,
+  headerData,
+}) => {
   const containerRef = useRef(null)
 
   return (
@@ -34,7 +38,7 @@ export const ContactPage: FC<ContactPageProps> = ({ footerData, contactsData, he
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.CONTACT} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Box
             width='100%'

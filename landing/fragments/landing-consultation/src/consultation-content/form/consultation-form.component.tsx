@@ -27,7 +27,7 @@ export const ConsultationForm: FC<ConsultationFormProps> = ({
   const namePlaceholder = consultationFormData?.fields?.nodes[0].label
   const phonePlaceholder = `${formatMessage({ id: 'symbol.plus' })}${
     // @ts-ignore: Unreachable code error
-    consultationFormData?.fields?.nodes[1].label 
+    consultationFormData?.fields?.nodes[1].label
   }`
   // @ts-ignore: Unreachable code error
   const telegramPlaceholder = consultationFormData?.fields?.nodes[2].label

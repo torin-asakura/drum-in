@@ -6,5 +6,6 @@ export interface PrivacyPolicyPageProps {
   privacyPolicy?: PrivacyPolicyDataProps | null
   headerData: HeaderDataProps
 
+  SEO: any
   footerData: FooterDataProps
 }

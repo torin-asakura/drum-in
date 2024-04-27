@@ -5,7 +5,6 @@ import { useEffect }                from 'react'
 import { useState }                 from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { PageID }                   from '@globals/data'
 import { CourseProcessBlock }       from '@landing/course-process-fragment'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
@@ -23,6 +22,7 @@ import { Box }                      from '@ui/layout'
 import { ConnacolPageProps }        from './connacol.interfaces'
 
 export const ConnacolPage: FC<ConnacolPageProps> = ({
+  SEO,
   faqData,
   consultationData,
   footerData,
@@ -81,7 +81,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.CONNACOL} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroConnacolBlock background={background} connacolData={connacolData} />
           <CourseProcessBlock processData={processData} />

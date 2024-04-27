@@ -23,6 +23,7 @@ import { Box }                             from '@ui/layout'
 import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
+  SEO,
   consultationFormData,
   faqData,
   consultationData,
@@ -81,7 +82,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.POLYRYTHMIC_KEYS} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroPolyrhythmicKeysBlock
             background={background}

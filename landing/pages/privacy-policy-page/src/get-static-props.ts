@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
-    variables: { id: PageID.INDEX },
+    variables: { id: PageID.PRIVACY_POLICY },
   })
 
   const SEO = {

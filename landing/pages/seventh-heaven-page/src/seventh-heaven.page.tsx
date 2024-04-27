@@ -23,6 +23,7 @@ import { Box }                          from '@ui/layout'
 import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 
 export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
+  SEO,
   faqData,
   consultationData,
   consultationFormData,
@@ -81,7 +82,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.SEVENTH_HEAVEN} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
           <CourseProcessBlock processData={processData} />

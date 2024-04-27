@@ -3,7 +3,6 @@ import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { PageID }                   from '@globals/data'
 import { ContractOfferBlock }       from '@landing/contract-offer-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
@@ -13,6 +12,7 @@ import { Box }                      from '@ui/layout'
 import { ContractOfferProps }       from './contract-offer.interfaces'
 
 export const ContractOfferPage: FC<ContractOfferProps> = ({
+  SEO,
   footerData,
   contractOfferData,
   headerData,
@@ -37,7 +37,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.CONTRACT_OFFER} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <ContractOfferBlock contractOfferData={contractOfferData} />
           <Box

@@ -24,6 +24,7 @@ import { Box }                             from '@ui/layout'
 import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
+  SEO,
   faqData,
   consultationFormData,
   consultationData,
@@ -82,7 +83,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.OPENING_RHYTHM} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
           <ProgramBlock openingTheRhythm={openingTheRhythm} />

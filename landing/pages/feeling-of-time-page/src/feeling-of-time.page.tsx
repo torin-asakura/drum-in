@@ -23,6 +23,7 @@ import { Box }                          from '@ui/layout'
 import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
 
 export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
+  SEO,
   faqData,
   consultationData,
   consultationFormData,
@@ -81,7 +82,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.FEELING_OF_TIME} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} />
           <CourseProcessBlock processData={processData} />

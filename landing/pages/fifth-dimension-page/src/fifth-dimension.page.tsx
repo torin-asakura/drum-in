@@ -23,6 +23,7 @@ import { Box }                           from '@ui/layout'
 import { FifthDimensionProps }           from './fifth-dimension.interfaces'
 
 export const FifthDimensionPage: FC<FifthDimensionProps> = ({
+  SEO,
   faqData,
   consultationData,
   footerData,
@@ -81,7 +82,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
         watch={[]}
       >
         <HeaderBlock headerData={headerData} />
-        <Seo id={PageID.FIFTH_DIMENSION} />
+        <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroFifthDimensionBlock
             background={background}

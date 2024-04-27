@@ -2,13 +2,9 @@ import React        from 'react'
 import { FC }       from 'react'
 import { Helmet }   from 'react-helmet'
 
-import { useSeo }   from '@globals/data'
-
 import { SeoProps } from './seo.interfaces'
 
-export const Seo: FC<SeoProps> = ({ id }) => {
-  const seo = useSeo(id)
-
+export const Seo: FC<SeoProps> = ({ seo }) => {
   if (!seo) return null
 
   return (

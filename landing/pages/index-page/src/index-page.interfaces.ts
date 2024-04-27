@@ -15,6 +15,7 @@ export interface IndexPageProps {
   songUrl: SongUrlType
   headerData: HeaderDataProps
 
+  SEO: any
   faqData: FaqDataProps
   consultationData: ConsultationDataProps
   footerData: FooterDataProps

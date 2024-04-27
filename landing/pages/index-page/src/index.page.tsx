@@ -5,7 +5,6 @@ import { useEffect }                from 'react'
 import { useState }                 from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { PageID }                   from '@globals/data'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
 import { FooterBlock }              from '@landing/footer-fragment'
@@ -26,6 +25,7 @@ import { useSpyScroll }             from '@ui/spy-scroll'
 import { IndexPageProps }           from './index-page.interfaces'
 
 export const HomePage: FC<IndexPageProps> = ({
+  SEO,
   studentsData,
   teacherData,
   faqData,
@@ -97,7 +97,7 @@ export const HomePage: FC<IndexPageProps> = ({
         <SpyScrollProvider>
           <HeaderBlock headerData={headerData} />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
-          <Seo id={PageID.INDEX} />
+          <Seo seo={SEO} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Hero
               mainPageData={mainPageData}
