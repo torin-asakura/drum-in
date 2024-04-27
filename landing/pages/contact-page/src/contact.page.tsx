@@ -6,6 +6,7 @@ import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { ContactBlock }             from '@landing/contact-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
 import { HeaderBlock }              from '@landing/header-fragment'
+import { GoogleTagManager }          from '@shared/google-tag-manager'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
@@ -20,67 +21,69 @@ export const ContactPage: FC<ContactPageProps> = ({
   const containerRef = useRef(null)
 
   return (
-    <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
-      <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
+    <GoogleTagManager>
+      <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
+        <LocomotiveScrollProvider
+          options={{
             smooth: true,
             smartphone: {
               smooth: true,
+              smartphone: {
+                smooth: true,
+              },
+              tablet: {
+                smooth: true,
+              },
             },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
-        containerRef={containerRef}
-        watch={[]}
-      >
-        <HeaderBlock headerData={headerData} />
-        <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <Box
-            width='100%'
-            display={['none', 'none', 'flex']}
-            flexWrap='wrap'
-            backgroundImage={`url(${contactsData?.background?.desktop?.node.sourceUrl})`}
-            backgroundSize='100% 100%'
-            backgroundRepeat='no-repeat'
-            backgroundPosition='center bottom'
-          >
+          }}
+          containerRef={containerRef}
+          watch={[]}
+        >
+          <HeaderBlock headerData={headerData} />
+          <Seo seo={SEO} />
+          <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
             <Box
-              flexDirection='column'
               width='100%'
-              backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
-              backgroundSize='contain'
+              display={['none', 'none', 'flex']}
+              flexWrap='wrap'
+              backgroundImage={`url(${contactsData?.background?.desktop?.node.sourceUrl})`}
+              backgroundSize='100% 100%'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='center bottom'
             >
-              <ContactBlock contactsData={contactsData} />
-              <FooterBlock footerData={footerData} buttonUp={false} />
+              <Box
+                flexDirection='column'
+                width='100%'
+                backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+              >
+                <ContactBlock contactsData={contactsData} />
+                <FooterBlock footerData={footerData} buttonUp={false} />
+              </Box>
             </Box>
-          </Box>
-          <Box
-            width='100%'
-            display={['flex', 'flex', 'none']}
-            flexWrap='wrap'
-            backgroundImage={`url(${contactsData?.background?.mobile?.node.sourceUrl})`}
-            backgroundSize={['100%', '100%', '0']}
-            backgroundRepeat='no-repeat'
-            backgroundPosition={['center top', 'center top', 'center']}
-          >
             <Box
-              flexDirection='column'
               width='100%'
-              backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
-              backgroundSize='contain'
+              display={['flex', 'flex', 'none']}
+              flexWrap='wrap'
+              backgroundImage={`url(${contactsData?.background?.mobile?.node.sourceUrl})`}
+              backgroundSize={['100%', '100%', '0']}
+              backgroundRepeat='no-repeat'
+              backgroundPosition={['center top', 'center top', 'center']}
             >
-              <ContactBlock contactsData={contactsData} />
-              <FooterBlock buttonUp={false} />
+              <Box
+                flexDirection='column'
+                width='100%'
+                backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+              >
+                <ContactBlock contactsData={contactsData} />
+                <FooterBlock buttonUp={false} />
+              </Box>
             </Box>
-          </Box>
-        </main>
-      </LocomotiveScrollProvider>
-    </Box>
+          </main>
+        </LocomotiveScrollProvider>
+      </Box>
+    </GoogleTagManager>
   )
 }
 

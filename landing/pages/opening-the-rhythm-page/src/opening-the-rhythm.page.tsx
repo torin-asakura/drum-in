@@ -17,6 +17,7 @@ import { PriceOpeningTheRhythmBlock }      from '@landing/price-opening-the-rhyt
 import { ProgramBlock }                    from '@landing/program-fragment'
 import { StartLearningBlock }              from '@landing/start-learning-fragment'
 import { TeacherBlock }                    from '@landing/teacher-fragment'
+import { GoogleTagManager }                 from '@shared/google-tag-manager'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
@@ -64,103 +65,108 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   }, [playSong])
 
   return (
-    <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
-      <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
+    <GoogleTagManager>
+      <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
+        <LocomotiveScrollProvider
+          options={{
             smooth: true,
             smartphone: {
               smooth: true,
+              smartphone: {
+                smooth: true,
+              },
+              tablet: {
+                smooth: true,
+              },
             },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
-        containerRef={containerRef}
-        watch={[]}
-      >
-        <HeaderBlock headerData={headerData} />
-        <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
-          <ProgramBlock openingTheRhythm={openingTheRhythm} />
-          <CourseProcessBlock processData={processData} />
-          <Box
-            width='100%'
-            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
-            backgroundSize={['200%', '200% 100%', '1800px']}
-            backgroundRepeat='no-repeat'
-            backgroundPosition='center top'
-          >
+          }}
+          containerRef={containerRef}
+          watch={[]}
+        >
+          <HeaderBlock headerData={headerData} />
+          <Seo seo={SEO} />
+          <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+            <HeroOpeningTheRhythmBlock
+              background={background}
+              openingTheRhythm={openingTheRhythm}
+            />
+            <ProgramBlock openingTheRhythm={openingTheRhythm} />
+            <CourseProcessBlock processData={processData} />
             <Box
               width='100%'
-              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-              backgroundSize='contain'
+              backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
+              backgroundSize={['200%', '200% 100%', '1800px']}
+              backgroundRepeat='no-repeat'
+              backgroundPosition='center top'
             >
-              <TeacherBlock
-                teacherData={teacherData}
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <Box
+                width='100%'
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+              >
+                <TeacherBlock
+                  teacherData={teacherData}
+                  playSong={playSong}
+                  setPlaySong={setPlaySong}
+                />
+              </Box>
             </Box>
-          </Box>
-          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
-          <FaqBlock faqData={faqData} />
-          <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
+            <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
+            <FaqBlock faqData={faqData} />
+            <CtaBlock
+              consultationData={consultationData}
+              consultationFormData={consultationFormData}
+            />
+            <Box
+              display={['none', 'none', 'flex']}
+              width='100%'
+              backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
+              backgroundSize='80% 100%'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='left bottom'
+            >
+              <Box
+                width='100%'
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+              >
+                <FooterBlock footerData={footerData} />
+              </Box>
+            </Box>
+            <Box
+              display={['flex', 'flex', 'none']}
+              width='100%'
+              backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
+              backgroundSize='100% 80%'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='center bottom'
+            >
+              <Box
+                width='100%'
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+              >
+                <FooterBlock footerData={footerData} />
+              </Box>
+            </Box>
+          </main>
+          <StartLearningBlock
+            onClick={() => setVisibleModal(true)}
+            onClickMobile={() => setVisibleModalMobile(true)}
           />
-          <Box
-            display={['none', 'none', 'flex']}
-            width='100%'
-            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
-            backgroundSize='80% 100%'
-            backgroundRepeat='no-repeat'
-            backgroundPosition='left bottom'
-          >
-            <Box
-              width='100%'
-              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-              backgroundSize='contain'
-            >
-              <FooterBlock footerData={footerData} />
-            </Box>
-          </Box>
-          <Box
-            display={['flex', 'flex', 'none']}
-            width='100%'
-            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
-            backgroundSize='100% 80%'
-            backgroundRepeat='no-repeat'
-            backgroundPosition='center bottom'
-          >
-            <Box
-              width='100%'
-              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-              backgroundSize='contain'
-            >
-              <FooterBlock footerData={footerData} />
-            </Box>
-          </Box>
-        </main>
-        <StartLearningBlock
-          onClick={() => setVisibleModal(true)}
-          onClickMobile={() => setVisibleModalMobile(true)}
-        />
-        <ModalFormOpeningTheRhythm
-          openingTheRhythm={openingTheRhythm}
-          activeRender={visibleModal}
-          onClose={() => setVisibleModal(false)}
-        />
-        <ModalMobileFormOpeningTheRhythm
-          openingTheRhythm={openingTheRhythm}
-          activeRender={visibleModalMobile}
-          onClose={() => setVisibleModalMobile(false)}
-        />
-      </LocomotiveScrollProvider>
-    </Box>
+          <ModalFormOpeningTheRhythm
+            openingTheRhythm={openingTheRhythm}
+            activeRender={visibleModal}
+            onClose={() => setVisibleModal(false)}
+          />
+          <ModalMobileFormOpeningTheRhythm
+            openingTheRhythm={openingTheRhythm}
+            activeRender={visibleModalMobile}
+            onClose={() => setVisibleModalMobile(false)}
+          />
+        </LocomotiveScrollProvider>
+      </Box>
+    </GoogleTagManager>
   )
 }
 
