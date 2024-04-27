@@ -1,7 +1,9 @@
-import Head  from 'next/head'
-import React from 'react'
+import Head                  from 'next/head'
+import { PropsWithChildren } from 'react'
+import { FC }                from 'react'
+import React                 from 'react'
 
-export const GoogleTagManager = ({ children }) => (
+export const GoogleTagManager:FC<PropsWithChildren> = ({ children }) => (
   <>
     <Head>
       <script
