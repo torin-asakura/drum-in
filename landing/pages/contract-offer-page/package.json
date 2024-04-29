@@ -7,7 +7,6 @@
     "@landing/contract-offer-fragment": "workspace:0.0.1",
     "@landing/footer-fragment": "workspace:0.0.1",
     "@landing/header-fragment": "workspace:0.0.1",
-    "@shared/google-tag-manager": "workspace:0.0.1",
     "@shared/seo-fragment": "workspace:*",
     "@ui/layout": "workspace:0.0.1",
     "locomotive-scroll": "4.1.4"

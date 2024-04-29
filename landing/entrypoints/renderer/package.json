@@ -33,6 +33,7 @@
     "@landing/contract-offer-page": "workspace:0.0.1",
     "@landing/feeling-of-time-page": "workspace:0.0.1",
     "@landing/fifth-dimension-page": "workspace:0.0.1",
+    "@landing/google-tag-manager": "workspace:0.0.1",
     "@landing/index-page": "workspace:0.0.1",
     "@landing/opening-the-rhythm-page": "workspace:0.0.1",
     "@landing/polyrhythmic-keys-page": "workspace:0.0.1",

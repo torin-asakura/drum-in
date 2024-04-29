@@ -1,5 +1,5 @@
 {
-  "name": "@shared/google-tag-manager",
+  "name": "@landing/google-tag-manager",
   "version": "0.0.1",
   "main": "src/index.ts",
   "devDependencies": {

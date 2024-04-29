@@ -14,7 +14,6 @@ import { LearningProcessBlock }     from '@landing/learning-process-fragment'
 import { StudentsBlock }            from '@landing/learning-students'
 import { PrivateLessonBlock }       from '@landing/private-lesson-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
-import { GoogleTagManager }          from '@shared/google-tag-manager'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 import { Layout }                   from '@ui/layout'
@@ -81,119 +80,113 @@ export const HomePage: FC<IndexPageProps> = ({
   }, [playSong])
 
   return (
-    <GoogleTagManager>
-      <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
-        <LocomotiveScrollProvider
-          options={{
+    <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          smartphone: {
             smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          }}
-          containerRef={containerRef}
-          watch={[]}
-        >
-          <SpyScrollProvider>
-            <HeaderBlock headerData={headerData} />
-            <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
-            <Seo seo={SEO} />
-            <main
-              style={{ width: '100%', height: '100%' }}
-              data-scroll-container
-              ref={containerRef}
+          },
+          tablet: {
+            smooth: true,
+          },
+        }}
+        containerRef={containerRef}
+        watch={[]}
+      >
+        <SpyScrollProvider>
+          <HeaderBlock headerData={headerData} />
+          <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
+          <Seo seo={SEO} />
+          <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+            <Hero
+              mainPageData={mainPageData}
+              background={background}
+              {...getObserverOptions('hero')}
+            />
+            <Box
+              width='100%'
+              backgroundImage={`url(${background?.desktop?.teacher?.node?.sourceUrl})`}
+              backgroundSize={['200%', '100% auto', '1800px']}
+              backgroundRepeat='no-repeat'
+              backgroundPosition={['center 500px', 'center center', 'center 75%']}
             >
-              <Hero
-                mainPageData={mainPageData}
-                background={background}
-                {...getObserverOptions('hero')}
-              />
               <Box
-                width='100%'
-                backgroundImage={`url(${background?.desktop?.teacher?.node?.sourceUrl})`}
-                backgroundSize={['200%', '100% auto', '1800px']}
-                backgroundRepeat='no-repeat'
-                backgroundPosition={['center 500px', 'center center', 'center 75%']}
+                fill
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
+                flexWrap='wrap'
               >
-                <Box
-                  fill
-                  backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-                  backgroundSize='contain'
-                  flexWrap='wrap'
-                >
-                  <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
-                    <TeacherBlock
-                      teacherData={teacherData}
-                      playSong={playSong}
-                      setPlaySong={setPlaySong}
-                      {...getObserverOptions('teacher')}
-                    />
-                  </Box>
-                  <Box order={{ _: 2, laptop: 1, wide: 1 }}>
-                    <PrivateLessonBlock
-                      privateLessonData={mainPageData.individualLesson}
-                      {...getObserverOptions('private-lesson')}
-                    />
-                  </Box>
-                  <Box width='100%' order={{ _: 0, laptop: 2, wide: 2 }}>
-                    <LearningProcessBlock
-                      learningProcessData={mainPageData.slider}
-                      {...getObserverOptions('learning-process')}
-                    />
-                  </Box>
+                <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
+                  <TeacherBlock
+                    teacherData={teacherData}
+                    playSong={playSong}
+                    setPlaySong={setPlaySong}
+                    {...getObserverOptions('teacher')}
+                  />
+                </Box>
+                <Box order={{ _: 2, laptop: 1, wide: 1 }}>
+                  <PrivateLessonBlock
+                    privateLessonData={mainPageData.individualLesson}
+                    {...getObserverOptions('private-lesson')}
+                  />
+                </Box>
+                <Box width='100%' order={{ _: 0, laptop: 2, wide: 2 }}>
+                  <LearningProcessBlock
+                    learningProcessData={mainPageData.slider}
+                    {...getObserverOptions('learning-process')}
+                  />
                 </Box>
               </Box>
-              <Layout height={[40, 0, 0, 0]} />
-              <StudentsBlock
-                mainData={mainPageData.students}
-                studentsData={studentsData}
-                {...getObserverOptions('students')}
-              />
-              <FaqBlock faqData={faqData} {...getObserverOptions('faq')} />
-              <CtaBlock
-                consultationData={consultationData}
-                {...getObserverOptions('cta')}
-                consultationFormData={consultationFormData}
-              />
+            </Box>
+            <Layout height={[40, 0, 0, 0]} />
+            <StudentsBlock
+              mainData={mainPageData.students}
+              studentsData={studentsData}
+              {...getObserverOptions('students')}
+            />
+            <FaqBlock faqData={faqData} {...getObserverOptions('faq')} />
+            <CtaBlock
+              consultationData={consultationData}
+              {...getObserverOptions('cta')}
+              consultationFormData={consultationFormData}
+            />
+            <Box
+              display={['none', 'none', 'flex']}
+              width='100%'
+              backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
+              backgroundSize='80% 100%'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='left bottom'
+            >
               <Box
-                display={['none', 'none', 'flex']}
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
                 width='100%'
-                backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
-                backgroundSize='80% 100%'
-                backgroundRepeat='no-repeat'
-                backgroundPosition='left bottom'
               >
-                <Box
-                  backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-                  backgroundSize='contain'
-                  width='100%'
-                >
-                  <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
-                </Box>
+                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
               </Box>
+            </Box>
+            <Box
+              display={['flex', 'flex', 'none']}
+              width='100%'
+              backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
+              backgroundSize='100% 80%'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='center bottom'
+            >
               <Box
-                display={['flex', 'flex', 'none']}
+                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+                backgroundSize='contain'
                 width='100%'
-                backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
-                backgroundSize='100% 80%'
-                backgroundRepeat='no-repeat'
-                backgroundPosition='center bottom'
               >
-                <Box
-                  backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-                  backgroundSize='contain'
-                  width='100%'
-                >
-                  <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
-                </Box>
+                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
               </Box>
-            </main>
-          </SpyScrollProvider>
-        </LocomotiveScrollProvider>
-      </Box>
-    </GoogleTagManager>
+            </Box>
+          </main>
+        </SpyScrollProvider>
+      </LocomotiveScrollProvider>
+    </Box>
   )
 }
 

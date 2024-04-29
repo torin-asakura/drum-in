@@ -14,7 +14,6 @@
     "@landing/price-seventh-heaven-fragment": "workspace:0.0.1",
     "@landing/start-learning-fragment": "workspace:0.0.1",
     "@landing/teacher-fragment": "workspace:0.0.1",
-    "@shared/google-tag-manager": "workspace:0.0.1",
     "@shared/seo-fragment": "workspace:*",
     "@ui/layout": "workspace:0.0.1"
   },

@@ -3141,7 +3141,6 @@ __metadata:
     "@landing/price-connacol-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
@@ -3226,7 +3225,6 @@ __metadata:
     "@landing/contact-fragment": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@ui/layout": "workspace:0.0.1"
@@ -3279,7 +3277,6 @@ __metadata:
     "@landing/contract-offer-fragment": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@ui/layout": "workspace:0.0.1"
@@ -3396,7 +3393,6 @@ __metadata:
     "@landing/price-feeling-of-time-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
@@ -3437,7 +3433,6 @@ __metadata:
     "@landing/price-fifth-dimension-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
@@ -3485,6 +3480,20 @@ __metadata:
     "@emotion/react": "*"
     "@forks/react-locomotive-scroll": "*"
     react: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/google-tag-manager@workspace:0.0.1, @landing/google-tag-manager@workspace:landing/fragments/landing-google-tag-manager":
+  version: 0.0.0-use.local
+  resolution: "@landing/google-tag-manager@workspace:landing/fragments/landing-google-tag-manager"
+  dependencies:
+    "@types/react": "npm:18.2.20"
+    next: "npm:12.3.4"
+  peerDependencies:
+    next: "*"
+    react: "*"
+    react-dom: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -3711,7 +3720,6 @@ __metadata:
     "@landing/learning-students": "workspace:0.0.1"
     "@landing/private-lesson-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
@@ -4069,7 +4077,6 @@ __metadata:
     "@landing/program-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
@@ -4110,7 +4117,6 @@ __metadata:
     "@landing/price-polyrhythmic-keys-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
@@ -4361,7 +4367,6 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/header-fragment": "workspace:0.0.1"
     "@landing/privacy-policy-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@ui/layout": "workspace:0.0.1"
@@ -4568,6 +4573,7 @@ __metadata:
     "@landing/contract-offer-page": "workspace:0.0.1"
     "@landing/feeling-of-time-page": "workspace:0.0.1"
     "@landing/fifth-dimension-page": "workspace:0.0.1"
+    "@landing/google-tag-manager": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
     "@landing/opening-the-rhythm-page": "workspace:0.0.1"
     "@landing/polyrhythmic-keys-page": "workspace:0.0.1"
@@ -4614,7 +4620,6 @@ __metadata:
     "@landing/price-seventh-heaven-fragment": "workspace:0.0.1"
     "@landing/start-learning-fragment": "workspace:0.0.1"
     "@landing/teacher-fragment": "workspace:0.0.1"
-    "@shared/google-tag-manager": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
     "@types/react": "npm:18.2.20"
     "@ui/layout": "workspace:0.0.1"
@@ -5061,20 +5066,6 @@ __metadata:
     react: "npm:18.2.0"
   peerDependencies:
     react: "*"
-  languageName: unknown
-  linkType: soft
-
-"@shared/google-tag-manager@workspace:0.0.1, @shared/google-tag-manager@workspace:shared/fragments/google-tag-manager":
-  version: 0.0.0-use.local
-  resolution: "@shared/google-tag-manager@workspace:shared/fragments/google-tag-manager"
-  dependencies:
-    "@types/react": "npm:18.2.20"
-    next: "npm:12.3.4"
-  peerDependencies:
-    next: "*"
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 

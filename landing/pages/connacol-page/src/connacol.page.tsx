@@ -16,7 +16,6 @@ import { ModalMobileFormConnacol }  from '@landing/modal-form-connacol'
 import { PriceConnacolBlock }       from '@landing/price-connacol-fragment'
 import { StartLearningBlock }       from '@landing/start-learning-fragment'
 import { TeacherBlock }             from '@landing/teacher-fragment'
-import { GoogleTagManager }          from '@shared/google-tag-manager'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
@@ -64,104 +63,102 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
   }, [playSong])
 
   return (
-    <GoogleTagManager>
-      <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
-        <LocomotiveScrollProvider
-          options={{
+    <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          smartphone: {
             smooth: true,
             smartphone: {
               smooth: true,
-              smartphone: {
-                smooth: true,
-              },
-              tablet: {
-                smooth: true,
-              },
             },
-          }}
-          containerRef={containerRef}
-          watch={[]}
-        >
-          <HeaderBlock headerData={headerData} />
-          <Seo seo={SEO} />
-          <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-            <HeroConnacolBlock background={background} connacolData={connacolData} />
-            <CourseProcessBlock processData={processData} />
+            tablet: {
+              smooth: true,
+            },
+          },
+        }}
+        containerRef={containerRef}
+        watch={[]}
+      >
+        <HeaderBlock headerData={headerData} />
+        <Seo seo={SEO} />
+        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+          <HeroConnacolBlock background={background} connacolData={connacolData} />
+          <CourseProcessBlock processData={processData} />
+          <Box
+            width='100%'
+            backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
+            backgroundSize={['200%', '200% 100%', '1800px']}
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-100px -50px'
+          >
             <Box
               width='100%'
-              backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
-              backgroundSize={['200%', '200% 100%', '1800px']}
-              backgroundRepeat='no-repeat'
-              backgroundPosition='-100px -50px'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
             >
-              <Box
-                width='100%'
-                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-                backgroundSize='contain'
-              >
-                <TeacherBlock
-                  teacherData={teacherData}
-                  playSong={playSong}
-                  setPlaySong={setPlaySong}
-                />
-              </Box>
+              <TeacherBlock
+                teacherData={teacherData}
+                playSong={playSong}
+                setPlaySong={setPlaySong}
+              />
             </Box>
-            <PriceConnacolBlock connacolData={connacolData} />
-            <FaqBlock faqData={faqData} />
-            <CtaBlock
-              consultationData={consultationData}
-              consultationFormData={consultationFormData}
-            />
+          </Box>
+          <PriceConnacolBlock connacolData={connacolData} />
+          <FaqBlock faqData={faqData} />
+          <CtaBlock
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
+          <Box
+            display={['none', 'none', 'flex']}
+            width='100%'
+            backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
+            backgroundSize='80% 100%'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='left bottom'
+          >
             <Box
-              display={['none', 'none', 'flex']}
               width='100%'
-              backgroundImage={`url(${background?.desktop?.footer?.node.sourceUrl})`}
-              backgroundSize='80% 100%'
-              backgroundRepeat='no-repeat'
-              backgroundPosition='left bottom'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
             >
-              <Box
-                width='100%'
-                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-                backgroundSize='contain'
-              >
-                <FooterBlock footerData={footerData} />
-              </Box>
+              <FooterBlock footerData={footerData} />
             </Box>
+          </Box>
+          <Box
+            display={['flex', 'flex', 'none']}
+            width='100%'
+            backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
+            backgroundSize='100% 80%'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='center bottom'
+          >
             <Box
-              display={['flex', 'flex', 'none']}
               width='100%'
-              backgroundImage={`url(${background?.mobile?.footer?.node.sourceUrl})`}
-              backgroundSize='100% 80%'
-              backgroundRepeat='no-repeat'
-              backgroundPosition='center bottom'
+              backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
+              backgroundSize='contain'
             >
-              <Box
-                width='100%'
-                backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
-                backgroundSize='contain'
-              >
-                <FooterBlock footerData={footerData} />
-              </Box>
+              <FooterBlock footerData={footerData} />
             </Box>
-          </main>
-          <StartLearningBlock
-            onClick={() => setVisibleModal(true)}
-            onClickMobile={() => setVisibleModalMobile(true)}
-          />
-          <ModalFormConnacol
-            connacolData={connacolData}
-            activeRender={visibleModal}
-            onClose={() => setVisibleModal(false)}
-          />
-          <ModalMobileFormConnacol
-            connacolData={connacolData}
-            activeRender={visibleModalMobile}
-            onClose={() => setVisibleModalMobile(false)}
-          />
-        </LocomotiveScrollProvider>
-      </Box>
-    </GoogleTagManager>
+          </Box>
+        </main>
+        <StartLearningBlock
+          onClick={() => setVisibleModal(true)}
+          onClickMobile={() => setVisibleModalMobile(true)}
+        />
+        <ModalFormConnacol
+          connacolData={connacolData}
+          activeRender={visibleModal}
+          onClose={() => setVisibleModal(false)}
+        />
+        <ModalMobileFormConnacol
+          connacolData={connacolData}
+          activeRender={visibleModalMobile}
+          onClose={() => setVisibleModalMobile(false)}
+        />
+      </LocomotiveScrollProvider>
+    </Box>
   )
 }
 
