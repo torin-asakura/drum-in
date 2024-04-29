@@ -3484,6 +3484,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/google-tag-manager@workspace:0.0.1, @landing/google-tag-manager@workspace:landing/fragments/landing-google-tag-manager":
+  version: 0.0.0-use.local
+  resolution: "@landing/google-tag-manager@workspace:landing/fragments/landing-google-tag-manager"
+  dependencies:
+    "@types/react": "npm:18.2.20"
+    next: "npm:12.3.4"
+  peerDependencies:
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/header-fragment@workspace:0.0.1, @landing/header-fragment@workspace:landing/fragments/landing-header":
   version: 0.0.0-use.local
   resolution: "@landing/header-fragment@workspace:landing/fragments/landing-header"
@@ -4559,6 +4573,7 @@ __metadata:
     "@landing/contract-offer-page": "workspace:0.0.1"
     "@landing/feeling-of-time-page": "workspace:0.0.1"
     "@landing/fifth-dimension-page": "workspace:0.0.1"
+    "@landing/google-tag-manager": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
     "@landing/opening-the-rhythm-page": "workspace:0.0.1"
     "@landing/polyrhythmic-keys-page": "workspace:0.0.1"

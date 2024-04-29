@@ -1,0 +1,15 @@
+{
+  "name": "@landing/google-tag-manager",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/react": "18.2.20",
+    "next": "12.3.4"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-intl": "*"
+  }
+}
