@@ -27,9 +27,10 @@ const MobileCards: FC<MobileCardsProps> = ({ connacolData }) => {
       <Condition match={advantagesChildren !== undefined && advantagesChildren !== []}>
         <Slider
           clName='advantages-slider'
-          spaceBetween={16}
-          slidesPerView='auto'
-          slidesOffsetAfter={40}
+          spaceBetween={20}
+          slidesOffsetBefore={20}
+        slidesPerView='auto'
+          slidesOffsetAfter={20}
         >
           {Children.map(advantagesChildren, (child) => (
             <SwiperSlide>{child}</SwiperSlide>
