@@ -18,9 +18,9 @@ export interface ConnacolPageProps {
 
   SEO: SeoDataProps
   faqData: FaqDataProps
-  consultationData: ConsultationDataProps
   footerData: FooterDataProps
   teacherData: TeacherDataProps
   processData: ProcessEducationDataProps
   consultationFormData: ConsultationFormDataProps
+  consultationData: ConsultationDataProps
 }

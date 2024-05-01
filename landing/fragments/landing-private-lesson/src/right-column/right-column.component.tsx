@@ -13,7 +13,11 @@ import { Text }             from '@ui/text'
 import { Buttons }          from './buttons'
 import { RightColumnProps } from './right-column.interfaces'
 
-const RightColumn: FC<RightColumnProps> = ({ privateLessonData }) => {
+const RightColumn: FC<RightColumnProps> = ({
+  consultationData,
+  consultationFormData,
+  privateLessonData,
+}) => {
   const { formatMessage } = useIntl()
   return (
     <Column flexBasis='100%'>
@@ -84,7 +88,11 @@ const RightColumn: FC<RightColumnProps> = ({ privateLessonData }) => {
         </Text>
       </Box>
       <Layout order={[6, 6, 0]} flexShrink={0} flexBasis={65} />
-      <Buttons privateLessonData={privateLessonData} />
+      <Buttons
+        privateLessonData={privateLessonData}
+        consultationData={consultationData}
+        consultationFormData={consultationFormData}
+      />
     </Column>
   )
 }

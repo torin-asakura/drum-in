@@ -17,7 +17,13 @@ import { NextLink }        from '@ui/link/src'
 import { Elements }        from './elements'
 import { NavigationProps } from './navigation.interfaces'
 
-const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible }) => (
+const NavigationBlock: FC<NavigationProps> = ({
+  consultationData,
+  consultationFormData,
+  headerData,
+  visible,
+  setVisible,
+}) => (
   <Drawer active={visible} onClose={() => setVisible(false)}>
     {(stateHover) => (
       <Box
@@ -29,7 +35,7 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible 
       >
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
         <Column width='100%'>
-          <Layout flexBasis={[16, 25, 32]} flexShrink={0} />
+          <Layout flexBasis={[20, 25, 32]} flexShrink={0} />
           <Row alignItems='center'>
             <Box display={['flex', 'flex', 'none']} flexShrink={0}>
               <Button
@@ -58,11 +64,21 @@ const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible 
                 <ItemLink item={item} />
               ))}
             </Box>
-            <CtaButton title={headerData?.ctaButton} />
+            <CtaButton
+              consultationData={consultationData}
+              consultationFormData={consultationFormData}
+              title={headerData?.ctaButton}
+            />
           </Row>
           <Layout flexBasis={[60, 70, 125]} flexGrow={2} />
-          <Elements list={headerData?.dropdownList} stateHover={stateHover} />s
-          <Layout flexBasis={[55, 50, 40]} flexShrink={0} />
+          <Elements
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+            list={headerData?.dropdownList}
+            stateHover={stateHover}
+          />
+          s
+          <Layout flexBasis={[20, 50, 40]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       </Box>
