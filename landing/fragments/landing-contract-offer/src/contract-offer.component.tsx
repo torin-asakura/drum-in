@@ -12,11 +12,11 @@ import { ContractOfferBlockProps } from './contract-offer.interfaces'
 
 const ContractOfferBlock: FC<ContractOfferBlockProps> = ({ contractOfferData }) => (
   <Row justifyContent='center'>
-    <Box width={['100%', '100%', 1920]}>
+    <Box width={['100%', '100%', '100%']}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[80, 100, 142]} flexShrink={0} />
-        <Box width={[200, 200, 1050]}>
+        <Box width={[200, 250, 1000]}>
           <Text
             textTransform='uppercase'
             fontFamily='secondary'
@@ -29,7 +29,7 @@ const ContractOfferBlock: FC<ContractOfferBlockProps> = ({ contractOfferData }) 
           </Text>
         </Box>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
-        <Box width={[250, 250, 1300]}>
+        <Box width={[250, 250, 1000]}>
           <Text
             fontWeight='medium'
             fontSize={['semiMedium', 'regular', 'large']}
@@ -90,6 +90,7 @@ const ContractOfferBlock: FC<ContractOfferBlockProps> = ({ contractOfferData }) 
     <Row justifyContent='end'>
       <Column>
         <Layout flexBasis={[80, 100, 142]} flexShrink={0} />
+        <Box>
         <Text
           fontWeight='medium'
           fontSize={['semiMedium', 'regular', 'large']}
@@ -98,6 +99,7 @@ const ContractOfferBlock: FC<ContractOfferBlockProps> = ({ contractOfferData }) 
         >
           {contractOfferData?.creationYear}
         </Text>
+        </Box>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
     </Row>
