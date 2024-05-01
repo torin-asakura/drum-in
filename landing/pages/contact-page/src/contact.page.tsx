@@ -75,7 +75,7 @@ export const ContactPage: FC<ContactPageProps> = ({
               backgroundSize='contain'
             >
               <ContactBlock contactsData={contactsData} />
-              <FooterBlock buttonUp={false} />
+              <FooterBlock footerData={footerData} buttonUp={false} />
             </Box>
           </Box>
         </main>
