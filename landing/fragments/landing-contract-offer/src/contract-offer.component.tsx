@@ -91,14 +91,14 @@ const ContractOfferBlock: FC<ContractOfferBlockProps> = ({ contractOfferData }) 
       <Column>
         <Layout flexBasis={[80, 100, 142]} flexShrink={0} />
         <Box>
-        <Text
-          fontWeight='medium'
-          fontSize={['semiMedium', 'regular', 'large']}
-          lineHeight='primary'
-          color='text.smokyWhite'
-        >
-          {contractOfferData?.creationYear}
-        </Text>
+          <Text
+            fontWeight='medium'
+            fontSize={['semiMedium', 'regular', 'large']}
+            lineHeight='primary'
+            color='text.smokyWhite'
+          >
+            {contractOfferData?.creationYear}
+          </Text>
         </Box>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

@@ -28,7 +28,7 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {
           <Text
             textTransform='uppercase'
             fontFamily='secondary'
-            fontWeight='bold'
+            fontWeight='medium'
             fontSize={['semiModerate', 'semiIncreased', 'big']}
             color='text.smokyWhite'
           >
@@ -39,7 +39,7 @@ const Rectangle: FC<RectangleProps> = ({ color, firstLine, rotate }) => {
           <Text
             textTransform='uppercase'
             fontFamily='secondary'
-            fontWeight='bold'
+            fontWeight='medium'
             fontSize={['semiTiny', 'tiny', 'micro']}
             color='text.smokyWhite'
           >

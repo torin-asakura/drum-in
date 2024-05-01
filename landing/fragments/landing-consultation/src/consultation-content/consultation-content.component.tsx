@@ -15,8 +15,7 @@ const ConsultationContent: FC<ConsultationContentProps> = ({
   consultationFormData,
   consultationData,
   setVisibleModal,
-}) => {
-  return (
+}) => (
     <>
       <Box
         width='100%'
@@ -65,6 +64,6 @@ const ConsultationContent: FC<ConsultationContentProps> = ({
       />
     </>
   )
-}
+
 
 export { ConsultationContent }

@@ -26,7 +26,7 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine, gradient, rotate = 0 }
           <Text
             textTransform='uppercase'
             fontFamily='secondary'
-            fontWeight='bold'
+            fontWeight='medium'
             fontSize={['semiModerate', 'semiIncreased', 'big']}
             color='text.blackAmber'
           >
@@ -39,7 +39,7 @@ const Circle: FC<CircleProps> = ({ firstLine, secondLine, gradient, rotate = 0 }
           textAlign='center'
           textTransform='uppercase'
           fontFamily='secondary'
-          fontWeight='bold'
+          fontWeight='medium'
           fontSize={['semiTiny', 'tiny', 'micro']}
           color='text.blackAmber'
         >
