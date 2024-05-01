@@ -29,7 +29,7 @@ const MobileCards: FC<MobileCardsProps> = ({ connacolData }) => {
           clName='advantages-slider'
           spaceBetween={20}
           slidesOffsetBefore={20}
-        slidesPerView='auto'
+          slidesPerView='auto'
           slidesOffsetAfter={20}
         >
           {Children.map(advantagesChildren, (child) => (

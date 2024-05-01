@@ -18,9 +18,9 @@ const AdvantagesBlock: FC<AdvantagesProps> = ({ connacolData }) => (
       <Layout flexBasis={[0, 0, 40]} flexShrink={0} />
       <Column width='100%' alignItems={['start', 'start', 'center']}>
         <Layout flexBasis={[32, 72, 112]} flexShrink={0} />
-        <Box position='relative' width='100%' justifyContent={['start','start','center']}>
+        <Box position='relative' width='100%' justifyContent={['start', 'start', 'center']}>
           <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
-          <Box >
+          <Box>
             <Text
               textTransform='uppercase'
               fontFamily='secondary'
@@ -32,7 +32,7 @@ const AdvantagesBlock: FC<AdvantagesProps> = ({ connacolData }) => (
               {connacolData?.individualCourseData?.hero?.cta}
             </Text>
           </Box>
-          <Box display={['none', 'none', 'flex']} position='absolute'  top={-50} right={520}>
+          <Box display={['none', 'none', 'flex']} position='absolute' top={-50} right={520}>
             <OpenOvalIcon width={421} height={150} />
           </Box>
         </Box>
