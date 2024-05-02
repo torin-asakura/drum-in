@@ -33,6 +33,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
   background,
   songUrl,
   headerData,
+  paymentSettingsData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -111,7 +112,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               />
             </Box>
           </Box>
-          <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
+          <PricePolyrhythmicKeyslBlock paymentSettingsData={paymentSettingsData} polyrhythmicKeysData={polyrhythmicKeysData} />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}
@@ -155,11 +156,13 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormPolyrhythmicKeys
+          paymentSettingsData={paymentSettingsData}
           polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormPolyrhythmicKeys
+          paymentSettingsData={paymentSettingsData}
           polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

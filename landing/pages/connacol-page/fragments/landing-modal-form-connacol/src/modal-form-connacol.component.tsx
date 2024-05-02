@@ -16,6 +16,7 @@ import { ContentDesktop }         from './content'
 import { ModalFormConnacolProps } from './modal-form-connacol.interfaces'
 
 const ModalFormConnacol: FC<ModalFormConnacolProps> = ({
+  paymentSettingsData,
   paymentPlan,
   connacolData,
   activeRender,
@@ -80,6 +81,7 @@ const ModalFormConnacol: FC<ModalFormConnacolProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                paymentSettingsData={paymentSettingsData}
                 connacolData={connacolData}
                 onClose={onClose}
                 roleVar={roleVar}

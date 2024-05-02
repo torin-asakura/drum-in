@@ -1,13 +1,14 @@
-import { MediaUrl }               from '@globals/data'
-import { PageID }                 from '@globals/data'
-import { FormID }                 from '@globals/data'
-import { GET_CONSULTATION_FORM }  from '@globals/data'
-import { GET_PROCESS_EDUCATION }  from '@globals/data'
-import { GET_FOOTER }             from '@globals/data'
-import { GET_CONSULTATION }       from '@globals/data'
-import { GET_FAQ }                from '@globals/data'
-import { GET_TEACHER }            from '@globals/data'
-import { GET_HEADER }             from '@globals/data'
+import { GET_PAYMENT_SETTINGS }  from '@globals/data'
+import { MediaUrl }              from '@globals/data'
+import { PageID }                from '@globals/data'
+import { FormID }                from '@globals/data'
+import { GET_CONSULTATION_FORM } from '@globals/data'
+import { GET_PROCESS_EDUCATION } from '@globals/data'
+import { GET_FOOTER }            from '@globals/data'
+import { GET_CONSULTATION }      from '@globals/data'
+import { GET_FAQ }               from '@globals/data'
+import { GET_TEACHER }           from '@globals/data'
+import { GET_HEADER }            from '@globals/data'
 import { GeneralFragmentID }      from '@globals/data'
 import { GET_SONG }               from '@globals/data'
 import { GET_OPENING_THE_RHYTHM } from '@globals/data'
@@ -93,6 +94,12 @@ export const getStaticProps = async () => {
   })
   const consultationFormData = consultationFormContent?.form
 
+  const { data: paymentSettingsContent } = await client.query({
+    query: GET_PAYMENT_SETTINGS,
+    variables: { id: GeneralFragmentID.SETTINGS },
+  })
+  const paymentSettingsData = paymentSettingsContent?.generalFragment?.siteSettings?.paymentSettings
+
   return {
     props: {
       consultationFormData,
@@ -106,6 +113,7 @@ export const getStaticProps = async () => {
       openingTheRhythm,
       headerData,
       songUrl,
+      paymentSettingsData
     },
     revalidate: 3600,
   }

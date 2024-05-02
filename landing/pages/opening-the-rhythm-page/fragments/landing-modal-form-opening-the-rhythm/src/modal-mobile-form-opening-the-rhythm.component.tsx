@@ -13,6 +13,7 @@ import { ContentMobile }                  from './content'
 import { ModalFormOpeningTheRhythmProps } from './modal-form-opening-the-rhythm.interfaces'
 
 const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
+  paymentSettingsData,
   isOneTimePaymentPlan,
   activeRender,
   onClose,
@@ -74,6 +75,7 @@ const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
         <ContainerMobile scroll={scroll}>
           <ContentMobile
             onClose={onClose}
+            paymentSettingsData={paymentSettingsData}
             openingTheRhythm={openingTheRhythm}
             roleVar={roleVar}
             options={options}

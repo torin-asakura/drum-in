@@ -21,6 +21,7 @@ import { ContentProps }           from './content.interfaces'
 import { useContent }             from './content.hook'
 
 const ContentDesktop: FC<ContentProps> = ({
+  paymentSettingsData,
   onClose,
   roleVar,
   options,
@@ -125,7 +126,7 @@ const ContentDesktop: FC<ContentProps> = ({
               ? openingTheRhythm?.price?.priceMonthly || 0
               : amount
           }
-          form='payment'
+          storeId={paymentSettingsData?.storeID}
           key={amount}
         />
       </Condition>

@@ -1,4 +1,5 @@
 import { MediaUrl }              from '@globals/data'
+import { GET_PAYMENT_SETTINGS }  from '@globals/data'
 import { FormID }                from '@globals/data'
 import { GET_CONSULTATION_FORM } from '@globals/data'
 import { GET_PROCESS_EDUCATION } from '@globals/data'
@@ -93,8 +94,15 @@ export const getStaticProps = async () => {
   })
   const consultationFormData = consultationFormContent?.form
 
+  const { data: paymentSettingsContent } = await client.query({
+    query: GET_PAYMENT_SETTINGS,
+    variables: { id: GeneralFragmentID.SETTINGS },
+  })
+  const paymentSettingsData = paymentSettingsContent?.generalFragment?.siteSettings?.paymentSettings
+
   return {
     props: {
+      paymentSettingsData,
       consultationFormData,
       faqData,
       consultationData,

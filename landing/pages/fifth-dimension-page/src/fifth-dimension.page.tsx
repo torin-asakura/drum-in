@@ -33,6 +33,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
   background,
   songUrl,
   headerData,
+  paymentSettingsData
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -111,7 +112,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
               />
             </Box>
           </Box>
-          <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
+          <PriceFifthDimensionBlock paymentSettingsData={paymentSettingsData} fifthDimensionData={fifthDimensionData} />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}
@@ -155,11 +156,13 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormFifthDimension
+          paymentSettingsData={paymentSettingsData}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFifthDimension
+          paymentSettingsData={paymentSettingsData}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

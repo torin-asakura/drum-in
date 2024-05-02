@@ -23,6 +23,7 @@ const ContentMobile: FC<ContentProps> = ({
   setRole,
   openingTheRhythm,
   onClose,
+  paymentSettingsData
 }) => {
   const { amount, recalculateAmount, months, recalculateMonths } = useContent(
     roleVar[0],
@@ -97,7 +98,7 @@ const ContentMobile: FC<ContentProps> = ({
           />
         </Condition>
         <Condition match={!!amount && amount > 0}>
-          <Form amount={amount} form='payment' key={amount} />
+          <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
         </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

@@ -34,6 +34,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   openingTheRhythm,
   songUrl,
   headerData,
+  paymentSettingsData
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -110,7 +111,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               />
             </Box>
           </Box>
-          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
+          <PriceOpeningTheRhythmBlock paymentSettingsData={paymentSettingsData} openingTheRhythm={openingTheRhythm} />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}
@@ -154,11 +155,13 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormOpeningTheRhythm
+          paymentSettingsData={paymentSettingsData}
           openingTheRhythm={openingTheRhythm}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
+          paymentSettingsData={paymentSettingsData}
           openingTheRhythm={openingTheRhythm}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

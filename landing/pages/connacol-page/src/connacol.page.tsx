@@ -33,6 +33,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
   background,
   songUrl,
   headerData,
+  paymentSettingsData
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -108,7 +109,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               />
             </Box>
           </Box>
-          <PriceConnacolBlock connacolData={connacolData} />
+          <PriceConnacolBlock paymentSettingsData={paymentSettingsData} connacolData={connacolData} />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}
@@ -152,11 +153,13 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormConnacol
+          paymentSettingsData={paymentSettingsData}
           connacolData={connacolData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormConnacol
+          paymentSettingsData={paymentSettingsData}
           connacolData={connacolData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

@@ -19,7 +19,7 @@ import { FullPrice }                     from './full-price'
 import { ShortCourseContentList }        from './short-course-content-list'
 import { Title }                         from './title'
 
-const Content: FC<ContentProps> = ({ fifthDimensionData }) => {
+const Content: FC<ContentProps> = ({ fifthDimensionData,paymentSettingsData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
@@ -113,11 +113,13 @@ const Content: FC<ContentProps> = ({ fifthDimensionData }) => {
           </Button>
         </Box>
         <ModalFormFifthDimension
+          paymentSettingsData={paymentSettingsData}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFifthDimension
+          paymentSettingsData={paymentSettingsData}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

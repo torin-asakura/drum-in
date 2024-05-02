@@ -16,6 +16,7 @@ import { ContentDesktop }              from './content'
 import { ModalFormSeventhHeavenProps } from './modal-form-seventh-heaven.interfaces'
 
 const ModalFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
+  paymentSettingsData,
   paymentPlan,
   seventhHeavenData,
   activeRender,
@@ -80,6 +81,7 @@ const ModalFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                paymentSettingsData={paymentSettingsData}
                 seventhHeavenData={seventhHeavenData}
                 onClose={onClose}
                 roleVar={roleVar}

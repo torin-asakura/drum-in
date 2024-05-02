@@ -16,6 +16,7 @@ import { ContentDesktop }               from './content'
 import { ModalFormFifthDimensionProps } from './modal-form-fifth-dimension.interfaces'
 
 const ModalFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
+  paymentSettingsData,
   paymentPlan,
   activeRender,
   onClose,
@@ -80,6 +81,7 @@ const ModalFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
+                paymentSettingsData={paymentSettingsData}
                 fifthDimensionData={fifthDimensionData}
                 onClose={onClose}
                 roleVar={roleVar}

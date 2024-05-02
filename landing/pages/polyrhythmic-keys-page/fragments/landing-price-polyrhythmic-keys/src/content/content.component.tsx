@@ -17,7 +17,7 @@ import { Figures }                         from './figures'
 import { ShortCourseContentList }          from './short-course-content-list'
 import { Title }                           from './title'
 
-const Content: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
+const Content: FC<ContentProps> = ({ polyrhythmicKeysData,paymentSettingsData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
@@ -86,11 +86,13 @@ const Content: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
           </Button>
         </Box>
         <ModalFormPolyrhythmicKeys
+          paymentSettingsData={paymentSettingsData}
           polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormPolyrhythmicKeys
+          paymentSettingsData={paymentSettingsData}
           polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

@@ -19,7 +19,7 @@ import { Text }                 from '@ui/text'
 import { TerminalScreen }       from './terminal.enum'
 import { TerminalProps }        from './terminal.interfaces'
 
-const Terminal: FC<TerminalProps> = ({ amount, disabled, screen }) => {
+const Terminal: FC<TerminalProps> = ({storeId, amount, disabled, screen }) => {
   const { formatMessage } = useIntl()
   const inputProps = screen === TerminalScreen.Desktop ? {} : { size: 'small' as InputSize }
   const layoutProps = {
@@ -39,8 +39,6 @@ const Terminal: FC<TerminalProps> = ({ amount, disabled, screen }) => {
     textTransform: 'uppercase',
   }
 
-  // TODO: fix env's in runtime
-  const storeId = process.env.NEXT_PUBLIC_TINKOFF_TERMINAL_ID ?? '1698844342541DEMO'
   return (
     <Widget amount={amount} settings={{ storeId }} disabled={disabled}>
       <InputWrapper name={AdditionalFieldsType.Name}>

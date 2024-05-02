@@ -23,4 +23,5 @@ export interface FeelingOfTimeProps {
   teacherData: TeacherDataProps
   processData: ProcessEducationDataProps
   consultationFormData: ConsultationFormDataProps
+  paymentSettingsData:any
 }

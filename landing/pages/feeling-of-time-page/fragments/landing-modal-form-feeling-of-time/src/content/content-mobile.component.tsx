@@ -24,6 +24,7 @@ const ContentMobile: FC<ContentProps> = ({
   options,
   setRole,
   onClose,
+  paymentSettingsData
 }) => {
   const { formatMessage } = useIntl()
 
@@ -92,7 +93,7 @@ const ContentMobile: FC<ContentProps> = ({
           <ContentOneTimePayment feelingOfTimeData={feelingOfTimeData} />
         </Condition>
         <Condition match={!!amount && amount > 0}>
-          <Form amount={amount} form='payment' key={amount} />
+          <Form storeId={paymentSettingsData?.storeID} amount={amount} key={amount} />
         </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

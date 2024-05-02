@@ -13,6 +13,7 @@ import { ContentMobile }               from './content'
 import { ModalFormFeelingOfTimeProps } from './modal-form-feeling-of-time.interfaces'
 
 const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
+  paymentSettingsData,
   paymentPlan,
   feelingOfTimeData,
   activeRender,
@@ -74,6 +75,7 @@ const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
         <ContainerMobile scroll={scroll}>
           <ContentMobile
             onClose={onClose}
+            paymentSettingsData={paymentSettingsData}
             feelingOfTimeData={feelingOfTimeData}
             roleVar={roleVar}
             options={options}

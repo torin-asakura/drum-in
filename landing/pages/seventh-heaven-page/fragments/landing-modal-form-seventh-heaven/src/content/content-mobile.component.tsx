@@ -24,6 +24,7 @@ const ContentMobile: FC<ContentProps> = ({
   options,
   setRole,
   onClose,
+  paymentSettingsData
 }) => {
   const installmentAmount = seventhHeavenData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = seventhHeavenData?.individualCourseData?.price?.fullPrice
@@ -89,7 +90,7 @@ const ContentMobile: FC<ContentProps> = ({
           <ContentOneTimePayment seventhHeavenData={seventhHeavenData} />
         </Condition>
         <Condition match={!!amount}>
-          <Form amount={amount} form='payment' key={amount} />
+          <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
         </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

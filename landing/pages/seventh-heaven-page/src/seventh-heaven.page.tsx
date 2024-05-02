@@ -22,6 +22,7 @@ import { Box }                          from '@ui/layout'
 import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 
 export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
+  paymentSettingsData,
   SEO,
   faqData,
   consultationData,
@@ -108,7 +109,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               />
             </Box>
           </Box>
-          <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
+          <PriceSeventhHeavenBlock paymentSettingsData={paymentSettingsData} seventhHeavenData={seventhHeavenData} />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}
@@ -152,11 +153,13 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormSeventhHeaven
+          paymentSettingsData={paymentSettingsData}
           seventhHeavenData={seventhHeavenData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormSeventhHeaven
+          paymentSettingsData={paymentSettingsData}
           seventhHeavenData={seventhHeavenData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

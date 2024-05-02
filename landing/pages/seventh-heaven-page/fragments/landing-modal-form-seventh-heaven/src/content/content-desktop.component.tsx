@@ -22,6 +22,7 @@ import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
 const ContentDesktop: FC<ContentProps> = ({
+  paymentSettingsData,
   seventhHeavenData,
   onClose,
   roleVar,
@@ -114,7 +115,7 @@ const ContentDesktop: FC<ContentProps> = ({
         <ContentOneTimePayment seventhHeavenData={seventhHeavenData} />
       </Condition>
       <Condition match={!!amount}>
-        <Form amount={amount} form='payment' key={amount} />
+        <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
       </Condition>
     </>
   )

@@ -17,6 +17,7 @@ const ModalMobileFormConnacol: FC<ModalFormConnacolProps> = ({
   connacolData,
   activeRender,
   onClose,
+  paymentSettingsData,
   scroll = true,
 }) => {
   const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
@@ -74,6 +75,7 @@ const ModalMobileFormConnacol: FC<ModalFormConnacolProps> = ({
         <ContainerMobile scroll={scroll}>
           <ContentMobile
             onClose={onClose}
+            paymentSettingsData={paymentSettingsData}
             connacolData={connacolData}
             roleVar={roleVar}
             options={options}

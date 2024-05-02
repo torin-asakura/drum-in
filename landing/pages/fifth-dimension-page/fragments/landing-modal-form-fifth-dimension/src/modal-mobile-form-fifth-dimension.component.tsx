@@ -13,6 +13,7 @@ import { ContentMobile }                from './content'
 import { ModalFormFifthDimensionProps } from './modal-form-fifth-dimension.interfaces'
 
 const ModalMobileFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
+  paymentSettingsData,
   paymentPlan,
   activeRender,
   onClose,
@@ -74,6 +75,7 @@ const ModalMobileFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
         <ContainerMobile scroll={scroll}>
           <ContentMobile
             onClose={onClose}
+            paymentSettingsData={paymentSettingsData}
             fifthDimensionData={fifthDimensionData}
             roleVar={roleVar}
             options={options}
