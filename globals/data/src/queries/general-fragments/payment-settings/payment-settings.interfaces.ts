@@ -1,3 +1,4 @@
-import {PaymentSettingsQuery} from '../../../__generated__'
-
-export type PaymentSettingsDataProps = PaymentSettingsQuery
+export type PaymentSettingsDataProps = {
+  __typename?: 'SiteSettingsPaymentSettings'
+  storeID?: string | null
+}

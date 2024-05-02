@@ -1,5 +1,4 @@
 export interface FormContentProps {
   amount?: number
-  storeId:string
-
+  storeId?: string | null
 }

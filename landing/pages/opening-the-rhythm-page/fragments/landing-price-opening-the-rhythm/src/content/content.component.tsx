@@ -19,7 +19,7 @@ import { FullPrice }                       from './full-price'
 import { Specifications }                  from './specifications'
 import { Title }                           from './title'
 
-const Content: FC<ContentProps> = ({ openingTheRhythm,paymentSettingsData }) => {
+const Content: FC<ContentProps> = ({ openingTheRhythm, paymentSettingsData }) => {
   const { formatMessage } = useIntl()
 
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -71,7 +71,11 @@ const Content: FC<ContentProps> = ({ openingTheRhythm,paymentSettingsData }) => 
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice openingTheRhythm={openingTheRhythm} fullCost={fullPrice} />
+        <FullPrice
+          paymentSettingsData={paymentSettingsData}
+          openingTheRhythm={openingTheRhythm}
+          fullCost={fullPrice}
+        />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text

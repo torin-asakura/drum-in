@@ -7,15 +7,9 @@ import { FormProps }               from './form.interfaces'
 
 const sitekey = '6LeivSwlAAAAAL1abQj0DBd-w7zVtCHFHGge_Z7S'
 
-const Form: FC<FormProps> = ({
-  amount,
-storeId
-}) => (
+const Form: FC<FormProps> = ({ amount, storeId }) => (
   <GoogleReCaptchaProvider reCaptchaKey={sitekey}>
-    <FormContent
-      amount={amount}
-      storeId={storeId}
-    />
+    <FormContent amount={amount} storeId={storeId} />
   </GoogleReCaptchaProvider>
 )
 

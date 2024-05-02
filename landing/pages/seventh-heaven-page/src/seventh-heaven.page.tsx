@@ -109,7 +109,10 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               />
             </Box>
           </Box>
-          <PriceSeventhHeavenBlock paymentSettingsData={paymentSettingsData} seventhHeavenData={seventhHeavenData} />
+          <PriceSeventhHeavenBlock
+            paymentSettingsData={paymentSettingsData}
+            seventhHeavenData={seventhHeavenData}
+          />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}

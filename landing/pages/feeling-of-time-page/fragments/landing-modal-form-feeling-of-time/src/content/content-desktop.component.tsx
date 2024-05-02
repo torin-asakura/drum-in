@@ -27,7 +27,7 @@ const ContentDesktop: FC<ContentProps> = ({
   roleVar,
   options,
   setRole,
-  paymentSettingsData
+  paymentSettingsData,
 }) => {
   const { formatMessage } = useIntl()
 
@@ -35,7 +35,6 @@ const ContentDesktop: FC<ContentProps> = ({
   const oneTimeAmount = feelingOfTimeData?.individualCourseData?.price?.fullPrice
 
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
-  console.log(paymentSettingsData)
   return (
     <>
       <Box
@@ -119,7 +118,7 @@ const ContentDesktop: FC<ContentProps> = ({
         <ContentOneTimePayment feelingOfTimeData={feelingOfTimeData} />
       </Condition>
       <Condition match={!!amount}>
-        <Form amount={amount} storeId={paymentSettingsData?.storeID}  key={amount} />
+        <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
       </Condition>
     </>
   )

@@ -1,6 +1,7 @@
 import { SetStateAction }            from 'react'
 import { Dispatch }                  from 'react'
 
+import { PaymentSettingsDataProps }  from '@globals/data/src'
 import { OpeningTheRhythmDataProps } from '@globals/data/src'
 import { RolePaymentForm }           from '@shared/constants'
 
@@ -14,6 +15,7 @@ export interface ContentProps {
     mutuallyExclusive: boolean
   }>
   setRole: Dispatch<SetStateAction<Array<RolePaymentForm>>>
+  paymentSettingsData: PaymentSettingsDataProps
 }
 
 export interface Content {

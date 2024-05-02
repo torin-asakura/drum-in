@@ -10,7 +10,10 @@ import { Text }                    from '@ui/text'
 import { Content }                 from './content'
 import { PriceSeventhHeavenProps } from './price-seventh-heaven.interfaces'
 
-const PriceSeventhHeavenBlock: FC<PriceSeventhHeavenProps> = ({ seventhHeavenData,paymentSettingsData }) => (
+const PriceSeventhHeavenBlock: FC<PriceSeventhHeavenProps> = ({
+  seventhHeavenData,
+  paymentSettingsData,
+}) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

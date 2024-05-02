@@ -17,7 +17,7 @@ import { Text }             from '@ui/text'
 import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
 
-const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData,paymentSettingsData, onClose }) => {
+const ContentMobile: FC<ContentProps> = ({paymentSettingsData, polyrhythmicKeysData,paymentSettingsData, onClose }) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -73,7 +73,8 @@ const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData,paymentSettingsD
         <Condition match={!!polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice}>
           <Form
             amount={polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice || 0}
-            storeId={paymentSettingsData?.storeID}          />
+            storeId={paymentSettingsData?.storeID}
+          />
         </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

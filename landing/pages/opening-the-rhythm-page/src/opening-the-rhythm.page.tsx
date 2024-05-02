@@ -34,7 +34,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   openingTheRhythm,
   songUrl,
   headerData,
-  paymentSettingsData
+  paymentSettingsData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -111,7 +111,10 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               />
             </Box>
           </Box>
-          <PriceOpeningTheRhythmBlock paymentSettingsData={paymentSettingsData} openingTheRhythm={openingTheRhythm} />
+          <PriceOpeningTheRhythmBlock
+            paymentSettingsData={paymentSettingsData}
+            openingTheRhythm={openingTheRhythm}
+          />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}

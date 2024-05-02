@@ -113,7 +113,7 @@ export const getStaticProps = async () => {
       openingTheRhythm,
       headerData,
       songUrl,
-      paymentSettingsData
+      paymentSettingsData,
     },
     revalidate: 3600,
   }

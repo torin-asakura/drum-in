@@ -1,3 +1,4 @@
+import { PaymentSettingsDataProps }       from '@globals/data/src'
 import { SeoDataProps }                   from '@globals/data/src'
 import { ConsultationFormDataProps }      from '@globals/data/src'
 import { ProcessEducationDataProps }      from '@globals/data/src'
@@ -15,6 +16,8 @@ export interface PolyrhythmicKeysProps {
   background: IndividualCourseBackgroundType
   songUrl: SongUrlType
   headerData: HeaderDataProps
+
+  paymentSettingsData: PaymentSettingsDataProps
 
   SEO: SeoDataProps
   faqData: FaqDataProps

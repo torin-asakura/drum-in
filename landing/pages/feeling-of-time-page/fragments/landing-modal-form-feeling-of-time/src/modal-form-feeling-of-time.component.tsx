@@ -21,7 +21,7 @@ const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
   activeRender,
   onClose,
   scroll = true,
-  paymentSettingsData
+  paymentSettingsData,
 }) => {
   const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
     paymentPlan ? [paymentPlan] : [RolePaymentForm.InstallmentPlan]

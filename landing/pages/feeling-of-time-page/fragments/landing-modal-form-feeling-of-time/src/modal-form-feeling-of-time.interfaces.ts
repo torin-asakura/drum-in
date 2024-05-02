@@ -1,3 +1,4 @@
+import { PaymentSettingsDataProps } from '@globals/data/src'
 import { IndividualCourseDataType } from '@globals/data/src'
 import { RolePaymentForm }          from '@shared/constants/src'
 
@@ -8,4 +9,5 @@ export interface ModalFormFeelingOfTimeProps {
   activeRender: boolean
   onClose: () => any
   scroll?: boolean
+  paymentSettingsData: PaymentSettingsDataProps
 }

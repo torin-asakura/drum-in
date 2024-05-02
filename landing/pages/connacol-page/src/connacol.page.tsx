@@ -33,7 +33,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
   background,
   songUrl,
   headerData,
-  paymentSettingsData
+  paymentSettingsData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -109,7 +109,10 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               />
             </Box>
           </Box>
-          <PriceConnacolBlock paymentSettingsData={paymentSettingsData} connacolData={connacolData} />
+          <PriceConnacolBlock
+            paymentSettingsData={paymentSettingsData}
+            connacolData={connacolData}
+          />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}

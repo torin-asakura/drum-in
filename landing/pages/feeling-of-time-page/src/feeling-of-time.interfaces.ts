@@ -1,3 +1,4 @@
+import { PaymentSettingsDataProps }       from '@globals/data'
 import { SeoDataProps }                   from '@globals/data'
 import { ConsultationFormDataProps }      from '@globals/data'
 import { ProcessEducationDataProps }      from '@globals/data'
@@ -23,5 +24,5 @@ export interface FeelingOfTimeProps {
   teacherData: TeacherDataProps
   processData: ProcessEducationDataProps
   consultationFormData: ConsultationFormDataProps
-  paymentSettingsData:any
+  paymentSettingsData: PaymentSettingsDataProps
 }

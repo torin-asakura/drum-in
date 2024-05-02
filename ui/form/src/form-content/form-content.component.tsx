@@ -16,46 +16,53 @@ import { Terminal }         from './terminal'
 import { TerminalScreen }   from './terminal'
 import { messages }         from '../messages'
 
-const FormContent: FC<FormContentProps> = ({
-  amount = 0,
-  storeId
-}) => {
+const FormContent: FC<FormContentProps> = ({ amount = 0, storeId }) => {
   const [privacyPolicy, setPrivacyPolicy] = useState<boolean>(false)
 
   return (
-    <Box flexDirection='column' >
-        <Box display={['none', 'flex', 'flex']} flexDirection='column'>
-          <Terminal storeId={storeId} amount={amount} disabled={!privacyPolicy} screen={TerminalScreen.Desktop} />
-          <Layout flexBasis={20} flexShrink={0} />
-          <Row>
-            <Checkbox checked={privacyPolicy} onCheck={setPrivacyPolicy}>
-              {messages.accept}
-              <Space />
-              <NextLink path='/contract-offer'>
-                <Text textTransform='lowercase'>{messages.offerAgreement}</Text>
-              </NextLink>
-              <Space />
-              {messages.giveConsent}
-            </Checkbox>
-          </Row>
-        </Box>
-        <Box display={['flex', 'none', 'none']} flexDirection='column'>
-          <Terminal storeId={storeId} amount={amount} disabled={!privacyPolicy} screen={TerminalScreen.Mobile} />
-          <Layout flexBasis={16} flexShrink={0} />
-          <Row>
-            <CheckboxMobile checked={privacyPolicy} onCheck={setPrivacyPolicy}>
-              {messages.accept}
-              <Space />
-              <NextLink path='/contract-offer'>
-                <Text textTransform='lowercase' fontSize='semiMicro'>
-                  {messages.offerAgreement}
-                </Text>
-              </NextLink>
-              <Space />
-              {messages.giveConsent}
-            </CheckboxMobile>
-          </Row>
-        </Box>
+    <Box flexDirection='column'>
+      <Box display={['none', 'flex', 'flex']} flexDirection='column'>
+        <Terminal
+          terminalStoreId={storeId}
+          amount={amount}
+          disabled={!privacyPolicy}
+          screen={TerminalScreen.Desktop}
+        />
+        <Layout flexBasis={20} flexShrink={0} />
+        <Row>
+          <Checkbox checked={privacyPolicy} onCheck={setPrivacyPolicy}>
+            {messages.accept}
+            <Space />
+            <NextLink path='/contract-offer'>
+              <Text textTransform='lowercase'>{messages.offerAgreement}</Text>
+            </NextLink>
+            <Space />
+            {messages.giveConsent}
+          </Checkbox>
+        </Row>
+      </Box>
+      <Box display={['flex', 'none', 'none']} flexDirection='column'>
+        <Terminal
+          terminalStoreId={storeId}
+          amount={amount}
+          disabled={!privacyPolicy}
+          screen={TerminalScreen.Mobile}
+        />
+        <Layout flexBasis={16} flexShrink={0} />
+        <Row>
+          <CheckboxMobile checked={privacyPolicy} onCheck={setPrivacyPolicy}>
+            {messages.accept}
+            <Space />
+            <NextLink path='/contract-offer'>
+              <Text textTransform='lowercase' fontSize='semiMicro'>
+                {messages.offerAgreement}
+              </Text>
+            </NextLink>
+            <Space />
+            {messages.giveConsent}
+          </CheckboxMobile>
+        </Row>
+      </Box>
       <Layout flexBasis={[42, 102, 102]} flexShrink={0} />
     </Box>
   )

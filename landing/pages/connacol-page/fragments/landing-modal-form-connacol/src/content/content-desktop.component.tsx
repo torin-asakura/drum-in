@@ -21,7 +21,14 @@ import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
-const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, options, setRole,paymentSettingsData }) => {
+const ContentDesktop: FC<ContentProps> = ({
+  connacolData,
+  onClose,
+  roleVar,
+  options,
+  setRole,
+  paymentSettingsData,
+}) => {
   const installmentAmount = connacolData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = connacolData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
@@ -110,7 +117,7 @@ const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, opti
         <ContentOneTimePayment connacolData={connacolData} />
       </Condition>
       <Condition match={!!amount}>
-        <Form amount={amount} storeId={paymentSettingsData?.storeID}key={amount} />
+        <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
       </Condition>
     </>
   )

@@ -1,3 +1,4 @@
+import { PaymentSettingsDataProps } from '@globals/data/src'
 import { IndividualCourseDataType } from '@globals/data/src'
 import { RolePaymentForm }          from '@shared/constants/src'
 
@@ -7,4 +8,5 @@ export interface ModalFormSeventhHeavenProps {
   activeRender: boolean
   onClose: () => any
   scroll?: boolean
+  paymentSettingsData: PaymentSettingsDataProps
 }

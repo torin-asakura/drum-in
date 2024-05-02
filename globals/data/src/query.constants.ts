@@ -22,7 +22,7 @@ export enum CourseID {
 }
 
 export enum GeneralFragmentID {
-  SETTINGS='cG9zdDoyNzUx',
+  SETTINGS = 'cG9zdDoyNzUx',
   TEACHER = 'cG9zdDoyNTQ2',
   HEADER = 'cG9zdDoyNTUw',
   FOOTER = 'cG9zdDoyNTUx',

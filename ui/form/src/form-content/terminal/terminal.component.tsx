@@ -19,7 +19,7 @@ import { Text }                 from '@ui/text'
 import { TerminalScreen }       from './terminal.enum'
 import { TerminalProps }        from './terminal.interfaces'
 
-const Terminal: FC<TerminalProps> = ({storeId, amount, disabled, screen }) => {
+const Terminal: FC<TerminalProps> = ({ terminalStoreId, amount, disabled, screen }) => {
   const { formatMessage } = useIntl()
   const inputProps = screen === TerminalScreen.Desktop ? {} : { size: 'small' as InputSize }
   const layoutProps = {
@@ -38,6 +38,8 @@ const Terminal: FC<TerminalProps> = ({storeId, amount, disabled, screen }) => {
     fontSize: screen === TerminalScreen.Desktop ? 'medium' : 'semiMedium',
     textTransform: 'uppercase',
   }
+
+  const storeId = typeof terminalStoreId === 'string' ? terminalStoreId : ''
 
   return (
     <Widget amount={amount} settings={{ storeId }} disabled={disabled}>

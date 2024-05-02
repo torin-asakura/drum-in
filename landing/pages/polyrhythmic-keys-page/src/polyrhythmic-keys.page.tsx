@@ -112,7 +112,10 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               />
             </Box>
           </Box>
-          <PricePolyrhythmicKeyslBlock paymentSettingsData={paymentSettingsData} polyrhythmicKeysData={polyrhythmicKeysData} />
+          <PricePolyrhythmicKeyslBlock
+            paymentSettingsData={paymentSettingsData}
+            polyrhythmicKeysData={polyrhythmicKeysData}
+          />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}

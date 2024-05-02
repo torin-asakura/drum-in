@@ -17,7 +17,11 @@ import { Text }             from '@ui/text'
 import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
 
-const ContentDesktop: FC<ContentProps> = ({ polyrhythmicKeysData, onClose,paymentSettingsData }) => {
+const ContentDesktop: FC<ContentProps> = ({
+  polyrhythmicKeysData,
+  onClose,
+  paymentSettingsData,
+}) => {
   const { formatMessage } = useIntl()
   return (
     <>

@@ -33,7 +33,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
   background,
   songUrl,
   headerData,
-  paymentSettingsData
+  paymentSettingsData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -109,7 +109,10 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               />
             </Box>
           </Box>
-          <PriceFeelingOfTimeBlock paymentSettingsData={paymentSettingsData} feelingOfTimeData={feelingOfTimeData} />
+          <PriceFeelingOfTimeBlock
+            paymentSettingsData={paymentSettingsData}
+            feelingOfTimeData={feelingOfTimeData}
+          />
           <FaqBlock faqData={faqData} />
           <CtaBlock
             consultationData={consultationData}
