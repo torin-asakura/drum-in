@@ -19,7 +19,7 @@ import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
-const ContentMobile: FC<ContentProps> = ({ connacolData, roleVar, options, setRole }) => {
+const ContentMobile: FC<ContentProps> = ({ connacolData, roleVar, options, setRole, onClose }) => {
   const installmentAmount = connacolData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = connacolData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
@@ -31,7 +31,9 @@ const ContentMobile: FC<ContentProps> = ({ connacolData, roleVar, options, setRo
       <Column width='100%'>
         <Layout flexBasis={12} flexShrink={0} />
         <Row justifyContent='center'>
-          <RoundedLineIcon width={36} height={3} />
+          <Box onClick={onClose} height={6} width={50} justifyContent='center' alignItems='center'>
+            <RoundedLineIcon width={36} height={3} />
+          </Box>
         </Row>
         <Layout flexBasis={20} flexShrink={0} />
         <Box

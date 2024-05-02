@@ -73,6 +73,7 @@ const ModalMobileFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
       >
         <ContainerMobile scroll={scroll}>
           <ContentMobile
+            onClose={onClose}
             openingTheRhythm={openingTheRhythm}
             roleVar={roleVar}
             options={options}

@@ -73,6 +73,7 @@ const ModalMobileFormFifthDimension: FC<ModalFormFifthDimensionProps> = ({
       >
         <ContainerMobile scroll={scroll}>
           <ContentMobile
+            onClose={onClose}
             fifthDimensionData={fifthDimensionData}
             roleVar={roleVar}
             options={options}

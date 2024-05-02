@@ -73,6 +73,7 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
       >
         <ContainerMobile scroll={scroll}>
           <ContentMobile
+            onClose={onClose}
             seventhHeavenData={seventhHeavenData}
             roleVar={roleVar}
             options={options}

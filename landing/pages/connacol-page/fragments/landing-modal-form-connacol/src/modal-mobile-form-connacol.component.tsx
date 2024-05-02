@@ -73,6 +73,7 @@ const ModalMobileFormConnacol: FC<ModalFormConnacolProps> = ({
       >
         <ContainerMobile scroll={scroll}>
           <ContentMobile
+            onClose={onClose}
             connacolData={connacolData}
             roleVar={roleVar}
             options={options}

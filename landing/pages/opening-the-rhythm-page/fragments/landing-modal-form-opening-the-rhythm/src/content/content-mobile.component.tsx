@@ -17,7 +17,13 @@ import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 import { useContent }             from './content.hook'
 
-const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingTheRhythm }) => {
+const ContentMobile: FC<ContentProps> = ({
+  roleVar,
+  options,
+  setRole,
+  openingTheRhythm,
+  onClose,
+}) => {
   const { amount, recalculateAmount, months, recalculateMonths } = useContent(
     roleVar[0],
     openingTheRhythm
@@ -28,7 +34,9 @@ const ContentMobile: FC<ContentProps> = ({ roleVar, options, setRole, openingThe
       <Column width='100%'>
         <Layout flexBasis={12} flexShrink={0} />
         <Row justifyContent='center'>
-          <RoundedLineIcon width={36} height={3} />
+          <Box onClick={onClose} height={6} width={50} justifyContent='center' alignItems='center'>
+            <RoundedLineIcon width={36} height={3} />
+          </Box>
         </Row>
         <Layout flexBasis={20} flexShrink={0} />
         <Box
