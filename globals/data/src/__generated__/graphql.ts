@@ -4046,6 +4046,7 @@ export type GeneralFragment = ContentNode &
   WithAcfLearningProcess &
   WithAcfMain &
   WithAcfPrivacyPolicy &
+  WithAcfSiteSettings &
   WithAcfStudents &
   WithAcfTeacher & {
     __typename?: 'GeneralFragment'
@@ -4130,6 +4131,8 @@ export type GeneralFragment = ContentNode &
     privacyPolicy?: Maybe<PrivacyPolicy>
     /** The Yoast SEO data of the ContentNode */
     seo?: Maybe<PostTypeSeo>
+    /** Fields of the SiteSettings ACF Field Group */
+    siteSettings?: Maybe<SiteSettings>
     /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
     slug?: Maybe<Scalars['String']['output']>
     /** The current status of the object */
@@ -11943,6 +11946,56 @@ export type Settings = {
   writingSettingsUseSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
+/** The &quot;SiteSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type SiteSettings = AcfFieldGroup &
+  AcfFieldGroupFields &
+  SiteSettings_Fields & {
+    __typename?: 'SiteSettings'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;SiteSettings&quot; Field Group */
+    paymentSettings?: Maybe<SiteSettingsPaymentSettings>
+  }
+
+/** The &quot;SiteSettingsPaymentSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type SiteSettingsPaymentSettings = AcfFieldGroup &
+  AcfFieldGroupFields &
+  SiteSettingsPaymentSettings_Fields & {
+    __typename?: 'SiteSettingsPaymentSettings'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;SiteSettingsPaymentSettings&quot; Field Group */
+    storeID?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;SiteSettingsPaymentSettings&quot; Field Group */
+export type SiteSettingsPaymentSettings_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;SiteSettingsPaymentSettings&quot; Field Group */
+  storeID?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;SiteSettings&quot; Field Group */
+export type SiteSettings_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;SiteSettings&quot; Field Group */
+  paymentSettings?: Maybe<SiteSettingsPaymentSettings>
+}
+
 /** The &quot;Students&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type Students = AcfFieldGroup &
   AcfFieldGroupFields &
@@ -14426,6 +14479,12 @@ export type WithAcfMain = {
 export type WithAcfPrivacyPolicy = {
   /** Fields of the PrivacyPolicy ACF Field Group */
   privacyPolicy?: Maybe<PrivacyPolicy>
+}
+
+/** Provides access to fields of the &quot;SiteSettings&quot; ACF Field Group via the &quot;siteSettings&quot; field */
+export type WithAcfSiteSettings = {
+  /** Fields of the SiteSettings ACF Field Group */
+  siteSettings?: Maybe<SiteSettings>
 }
 
 /** Provides access to fields of the &quot;Students&quot; ACF Field Group via the &quot;students&quot; field */

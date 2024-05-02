@@ -6,8 +6,8 @@ import React                         from 'react'
 import { FC }                        from 'react'
 
 import { CheckIcon }                 from '@ui/icons'
+import { Row }                       from '@ui/layout/src'
 import { doNothing }                 from '@shared/utils'
-import { useHover }                  from '@ui/utils'
 
 import { CheckboxProps }             from './checkbox.interfaces'
 import { containerBaseStyles }       from './checkbox.styles'
@@ -47,22 +47,20 @@ export const CheckboxMobile: FC<CheckboxProps> = ({
   checked,
   onCheck = (newState) => doNothing(),
   ...props
-}) => {
-  const [hover, hoverProps] = useHover()
-
-  return (
-    <Container labelPosition='end' onClick={() => onCheck(!checked)} {...hoverProps} {...props}>
+}) => (
+  <Row alignItems='center'>
+    <Container onClick={() => onCheck(!checked)} {...props}>
       <HiddenInput
         type='checkbox'
         checked={checked}
         onChange={(event) => onCheck(event.currentTarget.checked)}
       />
-      <Box checked={checked} hover={hover}>
+      <Box checked={checked}>
         <Checkmark checked={checked}>
           <CheckIcon width={14} height={14} />
         </Checkmark>
       </Box>
-      <Label position='end'>{children}</Label>
     </Container>
-  )
-}
+    <Label>{children}</Label>
+  </Row>
+)

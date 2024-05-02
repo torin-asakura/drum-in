@@ -5918,6 +5918,7 @@ __metadata:
     "@shared/utils": "workspace:0.0.1"
     "@types/styled-system": "npm:5.1.16"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
     "@ui/theme": "workspace:"
     "@ui/utils": "workspace:0.0.1"
     react: "npm:18.2.0"
