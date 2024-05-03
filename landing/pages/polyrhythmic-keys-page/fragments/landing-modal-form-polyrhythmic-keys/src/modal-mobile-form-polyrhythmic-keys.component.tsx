@@ -33,7 +33,7 @@ const ModalMobileFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
       id='modal-form-mobile'
     >
       <ContainerMobile scroll={scroll}>
-        <ContentMobile polyrhythmicKeysData={polyrhythmicKeysData} onClose={onClose}/>
+        <ContentMobile polyrhythmicKeysData={polyrhythmicKeysData} onClose={onClose} />
       </ContainerMobile>
     </motion.div>
   </Renderer>

@@ -12,7 +12,7 @@ import { ContractOfferBlockProps } from './contract-offer.interfaces'
 
 const ContractOfferBlock: FC<ContractOfferBlockProps> = ({ contractOfferData }) => (
   <Row justifyContent='center'>
-    <Box width={['100%', '100%', '100%']}>
+    <Box width='100%'>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[80, 100, 142]} flexShrink={0} />

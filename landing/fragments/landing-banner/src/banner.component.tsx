@@ -16,7 +16,7 @@ import { TagBlock }             from './tag'
 
 const BannerBlock: FC<BannerBlockProps> = ({ heroData }) => (
   <Row justifyContent='center' height={['100%', '100%', '100vh']}>
-    <Box width={['100%', '100%', '100%']}>
+    <Box width='100%'>
       <Layout flexBasis={[20, 30, 40]} />
       <Column width='100%'>
         <Layout order={[1, 1, -1]} flexBasis={[124, 133, 179]} />
