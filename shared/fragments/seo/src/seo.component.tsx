@@ -6,12 +6,29 @@ import { SeoProps } from './seo.interfaces'
 
 export const Seo: FC<SeoProps> = ({ seo }) => {
   if (!seo) return null
-
   return (
     // @ts-ignore null check
     <Helmet
       title={seo.title}
+      link={[
+        {
+          rel: 'icon',
+          href: seo.defaultIcon,
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: seo.appleIcon,
+        },
+      ]}
       meta={[
+        {
+          name: 'og:image',
+          content: seo.opengraphImage?.mediaItemUrl,
+        },
+        {
+          name: 'image',
+          content: seo.opengraphImage?.mediaItemUrl,
+        },
         {
           name: 'description',
           content: seo.metaDesc,

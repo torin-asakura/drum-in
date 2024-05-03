@@ -15339,10 +15339,14 @@ export type GetPreviewQuery = {
 
 export type GetSeoQueryVariables = Exact<{
   id: Scalars['ID']['input']
+  uriDefaultIcon?: InputMaybe<Scalars['String']['input']>
+  uriAppleIcon?: InputMaybe<Scalars['String']['input']>
 }>
 
 export type GetSeoQuery = {
   __typename?: 'RootQuery'
+  defaultIcon?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
+  appleIcon?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
   page?: {
     __typename?: 'Page'
     seo?: {
@@ -15358,19 +15362,7 @@ export type GetSeoQuery = {
       twitterDescription?: string | null
       twitterTitle?: string | null
       title?: string | null
-      opengraphImage?: {
-        __typename?: 'MediaItem'
-        mediaDetails?: {
-          __typename?: 'MediaDetails'
-          sizes?: Array<{
-            __typename?: 'MediaSize'
-            height?: string | null
-            width?: string | null
-            name?: string | null
-            sourceUrl?: string | null
-          } | null> | null
-        } | null
-      } | null
+      opengraphImage?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
       twitterImage?: { __typename?: 'MediaItem'; sourceUrl?: string | null } | null
       breadcrumbs?: Array<{
         __typename?: 'SEOPostTypeBreadcrumbs'
@@ -18384,10 +18376,52 @@ export const GetSeoDocument = {
             type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
           },
         },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'uriDefaultIcon' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'uriAppleIcon' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
       ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
+          {
+            kind: 'Field',
+            alias: { kind: 'Name', value: 'defaultIcon' },
+            name: { kind: 'Name', value: 'mediaItemBy' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'uri' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'uriDefaultIcon' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'Field', name: { kind: 'Name', value: 'mediaItemUrl' } }],
+            },
+          },
+          {
+            kind: 'Field',
+            alias: { kind: 'Name', value: 'appleIcon' },
+            name: { kind: 'Name', value: 'mediaItemBy' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'uri' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'uriAppleIcon' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'Field', name: { kind: 'Name', value: 'mediaItemUrl' } }],
+            },
+          },
           {
             kind: 'Field',
             name: { kind: 'Name', value: 'page' },
@@ -18422,31 +18456,7 @@ export const GetSeoDocument = {
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'mediaDetails' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'sizes' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        { kind: 'Field', name: { kind: 'Name', value: 'height' } },
-                                        { kind: 'Field', name: { kind: 'Name', value: 'width' } },
-                                        { kind: 'Field', name: { kind: 'Name', value: 'name' } },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'mediaItemUrl' } },
                           ],
                         },
                       },
