@@ -12,12 +12,12 @@ export const Seo: FC<SeoProps> = ({ seo }) => {
       title={seo.title}
       link={[
         {
-          name: 'icon',
-          content: seo.defaultIcon,
+          rel: 'icon',
+          href: seo.defaultIcon,
         },
         {
-          name: 'apple-touch-icon',
-          content: seo.appleIcon,
+          rel: 'apple-touch-icon',
+          href: seo.appleIcon,
         },
       ]}
       meta={[
