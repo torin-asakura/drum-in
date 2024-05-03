@@ -7,9 +7,8 @@ import { GeneralFragmentID }     from '@globals/data'
 import { GET_CONTACTS }          from '@globals/data'
 import { PageID }                from '@globals/data'
 import { GET_SEO }               from '@globals/data'
+import { MediaUrl }              from '@globals/data'
 import { getClient }             from '@globals/data'
-import { MediaUrl }          from '@globals/data'
-
 
 export const getStaticProps = async () => {
   const client = getClient()

@@ -1,15 +1,14 @@
-import { MediaUrl }           from '@globals/data'
-import { GET_FOOTER }         from '@globals/data'
-import { GET_HEADER }         from '@globals/data'
-import { GeneralFragmentID }  from '@globals/data'
-import { GET_PRIVACY_POLICY } from '@globals/data'
-import { PageID }             from '@globals/data'
-import { GET_SEO }            from '@globals/data'
-import { getClient }          from '@globals/data'
+import { MediaUrl }              from '@globals/data'
+import { GET_FOOTER }            from '@globals/data'
+import { GET_HEADER }            from '@globals/data'
+import { GeneralFragmentID }     from '@globals/data'
+import { GET_PRIVACY_POLICY }    from '@globals/data'
+import { PageID }                from '@globals/data'
+import { GET_SEO }               from '@globals/data'
 import { FormID }                from '@globals/data'
 import { GET_CONSULTATION_FORM } from '@globals/data'
 import { GET_CONSULTATION }      from '@globals/data'
-
+import { getClient }             from '@globals/data'
 
 export const getStaticProps = async () => {
   const client = getClient()

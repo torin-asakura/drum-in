@@ -22,11 +22,11 @@ export const Seo: FC<SeoProps> = ({ seo }) => {
       ]}
       meta={[
         {
-          name: 'og:image',
+          property: 'og:image',
           content: seo.opengraphImage?.mediaItemUrl,
         },
         {
-          name: 'image',
+          property: 'image',
           content: seo.opengraphImage?.mediaItemUrl,
         },
         {
