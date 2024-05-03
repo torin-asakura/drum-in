@@ -39,3 +39,8 @@ export enum GeneralFragmentID {
 export const FormID = {
   consultation: { number: 3, id: 'TmluamFGb3JtOjM=' },
 }
+
+export enum MediaUrl {
+  DEFAULT_ICON = 'favicon',
+  APPLE_ICON = 'apple_touch_icon',
+}

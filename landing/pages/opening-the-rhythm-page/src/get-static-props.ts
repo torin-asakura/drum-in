@@ -1,3 +1,5 @@
+import { MediaUrl }               from '@globals/data'
+import { PageID }                 from '@globals/data'
 import { FormID }                 from '@globals/data'
 import { GET_CONSULTATION_FORM }  from '@globals/data'
 import { GET_PROCESS_EDUCATION }  from '@globals/data'
@@ -26,11 +28,17 @@ export const getStaticProps = async () => {
 
   const { data: seoData } = await client.query({
     query: GET_SEO,
-    variables: { id: CourseID.OPENING_RHYTHM },
+    variables: {
+      id: PageID.OPENING_RHYTHM,
+      uriDefaultIcon: MediaUrl.DEFAULT_ICON,
+      uriAppleIcon: MediaUrl.APPLE_ICON,
+    },
   })
 
   const SEO = {
-    ...seoData?.page?.seo,
+    ...seoData.page?.seo,
+    defaultIcon: seoData.defaultIcon?.mediaItemUrl,
+    appleIcon: seoData.appleIcon?.mediaItemUrl,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
