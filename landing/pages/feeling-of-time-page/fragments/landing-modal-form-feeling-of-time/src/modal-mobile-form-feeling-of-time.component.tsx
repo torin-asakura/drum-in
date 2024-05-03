@@ -73,6 +73,7 @@ const ModalMobileFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
       >
         <ContainerMobile scroll={scroll}>
           <ContentMobile
+            onClose={onClose}
             feelingOfTimeData={feelingOfTimeData}
             roleVar={roleVar}
             options={options}

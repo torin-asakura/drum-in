@@ -16,6 +16,8 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
   footerData,
   privacyPolicy,
   headerData,
+  consultationData,
+  consultationFormData,
 }) => {
   const containerRef = useRef(null)
 
@@ -37,7 +39,11 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock headerData={headerData} />
+        <HeaderBlock
+          headerData={headerData}
+          consultationData={consultationData}
+          consultationFormData={consultationFormData}
+        />
         <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />

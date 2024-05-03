@@ -40,7 +40,7 @@ const MobileList: FC<MobileListProps> = ({ openingTheRhythm }) => {
 
   return (
     <Box display={['flex', 'flex', 'none']}>
-      <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
+      <Layout flexBasis={[0, 10, 40]} flexShrink={0} />
       <Condition
         match={
           programOpeningTheRhythmChildren !== [] && programOpeningTheRhythmChildren !== undefined
@@ -48,8 +48,9 @@ const MobileList: FC<MobileListProps> = ({ openingTheRhythm }) => {
       >
         <Slider
           clName='program-slider'
-          spaceBetween={16}
+          spaceBetween={20}
           slidesPerView='auto'
+          slidesOffsetBefore={20}
           autoHeight
           slidesOffsetAfter={20}
         >

@@ -8,6 +8,7 @@
     "@atls-ui-parts/hidden-input": "0.0.6",
     "@shared/utils": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
     "@ui/theme": "workspace:",
     "@ui/utils": "workspace:0.0.1",
     "styled-tools": "1.7.2"

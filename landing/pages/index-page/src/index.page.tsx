@@ -95,7 +95,11 @@ export const HomePage: FC<IndexPageProps> = ({
         watch={[]}
       >
         <SpyScrollProvider>
-          <HeaderBlock headerData={headerData} />
+          <HeaderBlock
+            headerData={headerData}
+            consultationData={consultationData}
+            consultationFormData={consultationFormData}
+          />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo seo={SEO} />
           <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
@@ -127,6 +131,8 @@ export const HomePage: FC<IndexPageProps> = ({
                 </Box>
                 <Box order={{ _: 2, laptop: 1, wide: 1 }}>
                   <PrivateLessonBlock
+                    consultationData={consultationData}
+                    consultationFormData={consultationFormData}
                     privateLessonData={mainPageData.individualLesson}
                     {...getObserverOptions('private-lesson')}
                   />

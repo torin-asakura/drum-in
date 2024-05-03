@@ -11,7 +11,11 @@ import { Text }               from '@ui/text'
 
 import { ButtonsProps }       from './buttons.interfaces'
 
-const Buttons: FC<ButtonsProps> = ({ privateLessonData }) => {
+const Buttons: FC<ButtonsProps> = ({
+  consultationData,
+  consultationFormData,
+  privateLessonData,
+}) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
@@ -50,8 +54,15 @@ const Buttons: FC<ButtonsProps> = ({ privateLessonData }) => {
           </Text>
         </Button>
       </Row>
-      <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
+      <Consultation
+        consultationData={consultationData?.modal}
+        consultationFormData={consultationFormData}
+        activeRender={visibleModal}
+        setVisibleModal={setVisibleModal}
+      />
       <MobileConsultation
+        consultationData={consultationData?.modal}
+        consultationFormData={consultationFormData}
         activeRender={visibleModalMobile}
         setVisibleModal={setVisibleModalMobile}
       />

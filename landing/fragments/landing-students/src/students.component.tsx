@@ -26,7 +26,7 @@ const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ mainData, studentsDa
         onClose={() => setVisibleModal(false)}
       />
       <Row justifyContent='center' ref={ref}>
-        <Box width={['100%', '100%', '100%']}>
+        <Box width='100%'>
           <Column width='100%'>
             <Layout flexBasis={[0, 77, 120]} />
             <Box

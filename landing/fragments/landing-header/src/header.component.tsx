@@ -18,7 +18,7 @@ import { HeaderProps }     from './header.interfaces'
 import { ItemLink }        from './item-link'
 import { Wrapper }         from './wrapper'
 
-const HeaderBlock: FC<HeaderProps> = ({ headerData }) => {
+const HeaderBlock: FC<HeaderProps> = ({ consultationFormData, consultationData, headerData }) => {
   const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
 
   return (
@@ -27,6 +27,8 @@ const HeaderBlock: FC<HeaderProps> = ({ headerData }) => {
         headerData={headerData}
         visible={visibleDrawer}
         setVisible={setVisibleDrawer}
+        consultationData={consultationData}
+        consultationFormData={consultationFormData}
       />
       <Wrapper>
         <Column width={['100%', '100%', '100%']} alignItems='center'>
@@ -59,7 +61,11 @@ const HeaderBlock: FC<HeaderProps> = ({ headerData }) => {
               {headerData?.navigationElements?.map((item) => (
                 <ItemLink item={item} />
               ))}
-              <CtaButton title={headerData?.ctaButton} />
+              <CtaButton
+                consultationData={consultationData}
+                consultationFormData={consultationFormData}
+                title={headerData?.ctaButton}
+              />
             </Row>
             <Layout flexBasis={[26, 33, 40]} />
           </Box>

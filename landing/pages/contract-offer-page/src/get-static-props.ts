@@ -1,11 +1,14 @@
-import { MediaUrl }           from '@globals/data'
-import { GET_FOOTER }         from '@globals/data'
-import { GET_HEADER }         from '@globals/data'
-import { GeneralFragmentID }  from '@globals/data'
-import { PageID }             from '@globals/data'
-import { GET_CONTRACT_OFFER } from '@globals/data'
-import { GET_SEO }            from '@globals/data'
-import { getClient }          from '@globals/data'
+import { FormID }                from '@globals/data'
+import { GET_CONSULTATION_FORM } from '@globals/data'
+import { GET_CONSULTATION }      from '@globals/data'
+import { GET_FOOTER }            from '@globals/data'
+import { GET_HEADER }            from '@globals/data'
+import { GeneralFragmentID }     from '@globals/data'
+import { PageID }                from '@globals/data'
+import { GET_CONTRACT_OFFER }    from '@globals/data'
+import { GET_SEO }               from '@globals/data'
+import { MediaUrl }              from '@globals/data'
+import { getClient }             from '@globals/data'
 
 export const getStaticProps = async () => {
   const client = getClient()
@@ -46,5 +49,27 @@ export const getStaticProps = async () => {
   })
   const footerData = footerContent?.generalFragment?.footer
 
-  return { props: { footerData, SEO, contractOfferData, headerData }, revalidate: 3600 }
+  const { data: consultationContent } = await client.query({
+    query: GET_CONSULTATION,
+    variables: { id: GeneralFragmentID.CONSULTATION },
+  })
+  const consultationData = consultationContent?.generalFragment?.consultation
+
+  const { data: consultationFormContent } = await client.query({
+    query: GET_CONSULTATION_FORM,
+    variables: { id: FormID.consultation.id },
+  })
+  const consultationFormData = consultationFormContent?.form
+
+  return {
+    props: {
+      footerData,
+      SEO,
+      contractOfferData,
+      headerData,
+      consultationData,
+      consultationFormData,
+    },
+    revalidate: 3600,
+  }
 }

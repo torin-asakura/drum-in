@@ -1,18 +1,19 @@
-import styled        from '@emotion/styled'
-import { keyframes } from '@emotion/react'
+import styled                          from '@emotion/styled'
+import { keyframes }                   from '@emotion/react'
 
-import React         from 'react'
-import uniqid        from 'uniqid'
-import { FC }        from 'react'
-import { useMemo }   from 'react'
+import React                           from 'react'
+import uniqid                          from 'uniqid'
+import { FC }                          from 'react'
+import { useMemo }                     from 'react'
 
-import { Box }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Text }      from '@ui/text'
-import { Repeater }  from '@ui/utils'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Text }                        from '@ui/text'
+import { Repeater }                    from '@ui/utils'
 
-import { TapeProps } from './tape.interfaces'
+import { RUNNING_LINE_WRAPPER_RADIUS } from './tape.constants'
+import { TapeProps }                   from './tape.interfaces'
 
 const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
   const infinityLine = useMemo(
@@ -32,9 +33,9 @@ const Tape: FC<TapeProps> = ({ firstLine, secondLine, thirdLine }) => {
       top={[104, 155, 85]}
       width={[266, 570, 940]}
       backgroundColor='background.blackAmber'
-      borderTopLeftRadius={['giant', 'gigantic', 'biggest']}
-      borderBottomLeftRadius={['giant', 'gigantic', 'biggest']}
-      overflow='hidden'
+      style={{
+        clipPath: `inset(0 round ${RUNNING_LINE_WRAPPER_RADIUS} 0 0 ${RUNNING_LINE_WRAPPER_RADIUS})`,
+      }}
     >
       <Layout flexBasis={[15, 27, 38]} flexShrink={0} />
       <Column width='100%'>

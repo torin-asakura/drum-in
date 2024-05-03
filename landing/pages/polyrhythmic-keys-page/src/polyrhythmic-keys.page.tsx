@@ -80,7 +80,11 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock headerData={headerData} />
+        <HeaderBlock
+          headerData={headerData}
+          consultationData={consultationData}
+          consultationFormData={consultationFormData}
+        />
         <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroPolyrhythmicKeysBlock

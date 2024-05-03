@@ -1,7 +1,9 @@
-import { SeoDataProps }           from '@globals/data'
-import { FooterDataProps }        from '@globals/data'
-import { HeaderDataProps }        from '@globals/data'
-import { PrivacyPolicyDataProps } from '@globals/data'
+import { ConsultationDataProps }     from '@globals/data'
+import { ConsultationFormDataProps } from '@globals/data'
+import { SeoDataProps }              from '@globals/data'
+import { FooterDataProps }           from '@globals/data'
+import { HeaderDataProps }           from '@globals/data'
+import { PrivacyPolicyDataProps }    from '@globals/data'
 
 export interface PrivacyPolicyPageProps {
   privacyPolicy?: PrivacyPolicyDataProps | null
@@ -9,4 +11,6 @@ export interface PrivacyPolicyPageProps {
 
   SEO: SeoDataProps
   footerData: FooterDataProps
+  consultationFormData: ConsultationFormDataProps
+  consultationData: ConsultationDataProps
 }

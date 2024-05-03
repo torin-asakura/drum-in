@@ -17,7 +17,7 @@ import { Text }             from '@ui/text'
 import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
 
-const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
+const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData, onClose }) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -26,7 +26,9 @@ const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData }) => {
       <Column width='100%'>
         <Layout flexBasis={12} flexShrink={0} />
         <Row justifyContent='center'>
-          <RoundedLineIcon width={36} height={3} />
+          <Box onClick={onClose} height={6} width={50} justifyContent='center' alignItems='center'>
+            <RoundedLineIcon width={36} height={3} />
+          </Box>
         </Row>
         <Layout flexBasis={32} flexShrink={0} />
         <Box width={300}>

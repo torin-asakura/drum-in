@@ -15,21 +15,24 @@ import { MobileCards }     from './mobile-cards'
 const AdvantagesBlock: FC<AdvantagesProps> = ({ connacolData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
-      <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
+      <Layout flexBasis={[0, 0, 40]} flexShrink={0} />
       <Column width='100%' alignItems={['start', 'start', 'center']}>
         <Layout flexBasis={[32, 72, 112]} flexShrink={0} />
-        <Box position='relative'>
-          <Text
-            textTransform='uppercase'
-            fontFamily='secondary'
-            fontWeight='bold'
-            fontSize={['regular', 'mild', 'big']}
-            lineHeight='default'
-            color='text.smokyWhite'
-          >
-            {connacolData?.individualCourseData?.hero?.cta}
-          </Text>
-          <Box display={['none', 'none', 'flex']} position='absolute' right={-23} top={-47}>
+        <Box position='relative' width='100%' justifyContent={['start', 'start', 'center']}>
+          <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
+          <Box>
+            <Text
+              textTransform='uppercase'
+              fontFamily='secondary'
+              fontWeight='bold'
+              fontSize={['regular', 'mild', 'big']}
+              lineHeight='default'
+              color='text.smokyWhite'
+            >
+              {connacolData?.individualCourseData?.hero?.cta}
+            </Text>
+          </Box>
+          <Box display={['none', 'none', 'flex']} position='absolute' top={-50} right={520}>
             <OpenOvalIcon width={421} height={150} />
           </Box>
         </Box>

@@ -16,6 +16,8 @@ export const ContactPage: FC<ContactPageProps> = ({
   footerData,
   contactsData,
   headerData,
+  consultationData,
+  consultationFormData,
 }) => {
   const containerRef = useRef(null)
 
@@ -37,7 +39,11 @@ export const ContactPage: FC<ContactPageProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock headerData={headerData} />
+        <HeaderBlock
+          headerData={headerData}
+          consultationData={consultationData}
+          consultationFormData={consultationFormData}
+        />
         <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <Box
@@ -75,7 +81,7 @@ export const ContactPage: FC<ContactPageProps> = ({
               backgroundSize='contain'
             >
               <ContactBlock contactsData={contactsData} />
-              <FooterBlock buttonUp={false} />
+              <FooterBlock footerData={footerData} buttonUp={false} />
             </Box>
           </Box>
         </main>
