@@ -4046,6 +4046,7 @@ export type GeneralFragment = ContentNode &
   WithAcfLearningProcess &
   WithAcfMain &
   WithAcfPrivacyPolicy &
+  WithAcfSiteSettings &
   WithAcfStudents &
   WithAcfTeacher & {
     __typename?: 'GeneralFragment'
@@ -4130,6 +4131,8 @@ export type GeneralFragment = ContentNode &
     privacyPolicy?: Maybe<PrivacyPolicy>
     /** The Yoast SEO data of the ContentNode */
     seo?: Maybe<PostTypeSeo>
+    /** Fields of the SiteSettings ACF Field Group */
+    siteSettings?: Maybe<SiteSettings>
     /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
     slug?: Maybe<Scalars['String']['output']>
     /** The current status of the object */
@@ -11943,6 +11946,56 @@ export type Settings = {
   writingSettingsUseSmilies?: Maybe<Scalars['Boolean']['output']>
 }
 
+/** The &quot;SiteSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type SiteSettings = AcfFieldGroup &
+  AcfFieldGroupFields &
+  SiteSettings_Fields & {
+    __typename?: 'SiteSettings'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;SiteSettings&quot; Field Group */
+    paymentSettings?: Maybe<SiteSettingsPaymentSettings>
+  }
+
+/** The &quot;SiteSettingsPaymentSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type SiteSettingsPaymentSettings = AcfFieldGroup &
+  AcfFieldGroupFields &
+  SiteSettingsPaymentSettings_Fields & {
+    __typename?: 'SiteSettingsPaymentSettings'
+    /**
+     * The name of the field group
+     * @deprecated Use __typename instead
+     */
+    fieldGroupName?: Maybe<Scalars['String']['output']>
+    /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;SiteSettingsPaymentSettings&quot; Field Group */
+    storeID?: Maybe<Scalars['String']['output']>
+  }
+
+/** Interface representing fields of the ACF &quot;SiteSettingsPaymentSettings&quot; Field Group */
+export type SiteSettingsPaymentSettings_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;SiteSettingsPaymentSettings&quot; Field Group */
+  storeID?: Maybe<Scalars['String']['output']>
+}
+
+/** Interface representing fields of the ACF &quot;SiteSettings&quot; Field Group */
+export type SiteSettings_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;SiteSettings&quot; Field Group */
+  paymentSettings?: Maybe<SiteSettingsPaymentSettings>
+}
+
 /** The &quot;Students&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type Students = AcfFieldGroup &
   AcfFieldGroupFields &
@@ -14428,6 +14481,12 @@ export type WithAcfPrivacyPolicy = {
   privacyPolicy?: Maybe<PrivacyPolicy>
 }
 
+/** Provides access to fields of the &quot;SiteSettings&quot; ACF Field Group via the &quot;siteSettings&quot; field */
+export type WithAcfSiteSettings = {
+  /** Fields of the SiteSettings ACF Field Group */
+  siteSettings?: Maybe<SiteSettings>
+}
+
 /** Provides access to fields of the &quot;Students&quot; ACF Field Group via the &quot;students&quot; field */
 export type WithAcfStudents = {
   /** Fields of the Students ACF Field Group */
@@ -15280,10 +15339,14 @@ export type GetPreviewQuery = {
 
 export type GetSeoQueryVariables = Exact<{
   id: Scalars['ID']['input']
+  uriDefaultIcon?: InputMaybe<Scalars['String']['input']>
+  uriAppleIcon?: InputMaybe<Scalars['String']['input']>
 }>
 
 export type GetSeoQuery = {
   __typename?: 'RootQuery'
+  defaultIcon?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
+  appleIcon?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
   page?: {
     __typename?: 'Page'
     seo?: {
@@ -15299,19 +15362,7 @@ export type GetSeoQuery = {
       twitterDescription?: string | null
       twitterTitle?: string | null
       title?: string | null
-      opengraphImage?: {
-        __typename?: 'MediaItem'
-        mediaDetails?: {
-          __typename?: 'MediaDetails'
-          sizes?: Array<{
-            __typename?: 'MediaSize'
-            height?: string | null
-            width?: string | null
-            name?: string | null
-            sourceUrl?: string | null
-          } | null> | null
-        } | null
-      } | null
+      opengraphImage?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
       twitterImage?: { __typename?: 'MediaItem'; sourceUrl?: string | null } | null
       breadcrumbs?: Array<{
         __typename?: 'SEOPostTypeBreadcrumbs'
@@ -18325,10 +18376,52 @@ export const GetSeoDocument = {
             type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
           },
         },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'uriDefaultIcon' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'uriAppleIcon' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
       ],
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
+          {
+            kind: 'Field',
+            alias: { kind: 'Name', value: 'defaultIcon' },
+            name: { kind: 'Name', value: 'mediaItemBy' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'uri' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'uriDefaultIcon' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'Field', name: { kind: 'Name', value: 'mediaItemUrl' } }],
+            },
+          },
+          {
+            kind: 'Field',
+            alias: { kind: 'Name', value: 'appleIcon' },
+            name: { kind: 'Name', value: 'mediaItemBy' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'uri' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'uriAppleIcon' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'Field', name: { kind: 'Name', value: 'mediaItemUrl' } }],
+            },
+          },
           {
             kind: 'Field',
             name: { kind: 'Name', value: 'page' },
@@ -18363,31 +18456,7 @@ export const GetSeoDocument = {
                         selectionSet: {
                           kind: 'SelectionSet',
                           selections: [
-                            {
-                              kind: 'Field',
-                              name: { kind: 'Name', value: 'mediaDetails' },
-                              selectionSet: {
-                                kind: 'SelectionSet',
-                                selections: [
-                                  {
-                                    kind: 'Field',
-                                    name: { kind: 'Name', value: 'sizes' },
-                                    selectionSet: {
-                                      kind: 'SelectionSet',
-                                      selections: [
-                                        { kind: 'Field', name: { kind: 'Name', value: 'height' } },
-                                        { kind: 'Field', name: { kind: 'Name', value: 'width' } },
-                                        { kind: 'Field', name: { kind: 'Name', value: 'name' } },
-                                        {
-                                          kind: 'Field',
-                                          name: { kind: 'Name', value: 'sourceUrl' },
-                                        },
-                                      ],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'mediaItemUrl' } },
                           ],
                         },
                       },
