@@ -20,8 +20,8 @@ import { Seo }                           from '@shared/seo-fragment'
 import { Box }                           from '@ui/layout'
 import { usePlayer }                     from '@shared/utils/src'
 
-import { LOCOMOTIVE_SCROLL_OPTIONS }     from './fifth-dimension.constacts'
-import { LOCOMOTIVE_SCROLL_WATCH }       from './fifth-dimension.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS }     from './fifth-dimension.constants'
+import { LOCOMOTIVE_SCROLL_WATCH }       from './fifth-dimension.constants'
 import { FifthDimensionProps }           from './fifth-dimension.interfaces'
 
 export const FifthDimensionPage: FC<FifthDimensionProps> = ({

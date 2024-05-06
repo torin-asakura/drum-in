@@ -10,8 +10,8 @@ import { MainScrollContainer }       from '@shared/main-scroll-container'
 import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
 
-import { LOCOMOTIVE_SCROLL_WATCH }   from './contract-offer.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS } from './contract-offer.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './contract-offer.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './contract-offer.constants'
 import { ContractOfferProps }        from './contract-offer.interfaces'
 
 export const ContractOfferPage: FC<ContractOfferProps> = ({ SEO, contractOfferData }) => {

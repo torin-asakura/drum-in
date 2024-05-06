@@ -20,8 +20,8 @@ import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
 import { usePlayer }                    from '@shared/utils/src'
 
-import { LOCOMOTIVE_SCROLL_WATCH }      from './seventh-heaven.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS }    from './seventh-heaven.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }      from './seventh-heaven.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS }    from './seventh-heaven.constants'
 import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 
 export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({

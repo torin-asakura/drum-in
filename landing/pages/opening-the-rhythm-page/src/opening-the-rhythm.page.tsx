@@ -22,8 +22,8 @@ import { Box }                             from '@ui/layout'
 import { usePlayer }                       from '@shared/utils/src'
 
 import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
-import { LOCOMOTIVE_SCROLL_WATCH }         from './opening-the-rhythm.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS }       from './opening-the-rhythm.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }         from './opening-the-rhythm.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS }       from './opening-the-rhythm.constants'
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   SEO,

@@ -15,7 +15,7 @@ import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
 import { useConsultation }    from '@globals/data/src'
 
-const CtaBlock = forwardRef(({...props},ref?: any) => {
+const CtaBlock = forwardRef(({ ...props }, ref?: any) => {
   const { consultationData } = useConsultation()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)

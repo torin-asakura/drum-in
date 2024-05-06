@@ -20,8 +20,8 @@ import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
 import { usePlayer }                 from '@shared/utils/src'
 
-import { LOCOMOTIVE_SCROLL_WATCH }   from './connacol.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS } from './connacol.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './connacol.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './connacol.constants'
 import { ConnacolPageProps }         from './connacol.interfaces'
 
 export const ConnacolPage: FC<ConnacolPageProps> = ({ SEO, connacolData, background, songUrl }) => {

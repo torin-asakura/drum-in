@@ -20,8 +20,8 @@ import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 import { usePlayer }                       from '@shared/utils'
 
-import { LOCOMOTIVE_SCROLL_WATCH }         from './polyrhythmic-keys.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS }       from './polyrhythmic-keys.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }         from './polyrhythmic-keys.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS }       from './polyrhythmic-keys.constants'
 import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({

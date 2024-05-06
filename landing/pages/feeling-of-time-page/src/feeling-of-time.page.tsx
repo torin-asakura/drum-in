@@ -20,8 +20,8 @@ import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
 import { usePlayer }                    from '@shared/utils/src'
 
-import { LOCOMOTIVE_SCROLL_WATCH }      from './feeling-of-time.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS }    from './feeling-of-time.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }      from './feeling-of-time.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS }    from './feeling-of-time.constants'
 import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
 
 export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({

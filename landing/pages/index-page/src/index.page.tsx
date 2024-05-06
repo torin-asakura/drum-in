@@ -22,10 +22,10 @@ import { usePlayer }                 from '@shared/utils'
 import { useIntersectionObserver }   from '@ui/intersection-observer'
 import { useSpyScroll }              from '@ui/spy-scroll'
 
-import { ModuleID }                  from './index-page.constacts'
-import { MODULES_ORDER }             from './index-page.constacts'
-import { LOCOMOTIVE_SCROLL_WATCH }   from './index-page.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS } from './index-page.constacts'
+import { ModuleID }                  from './index-page.constants'
+import { MODULES_ORDER }             from './index-page.constants'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './index-page.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './index-page.constants'
 import { IndexPageProps }            from './index-page.interfaces'
 
 export const HomePage: FC<IndexPageProps> = ({

@@ -11,8 +11,8 @@ import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
 
 import { ContactPageProps }          from './contact-page.interfaces'
-import { LOCOMOTIVE_SCROLL_WATCH }   from './contact.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS } from './contact.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './contact.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './contact.constants'
 
 export const ContactPage: FC<ContactPageProps> = ({ SEO, contactsData }) => {
   const containerRef = useRef(null)

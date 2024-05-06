@@ -11,8 +11,8 @@ import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
 
 import { PrivacyPolicyPageProps }    from './privacy-policy-page.interfaces'
-import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constacts'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constants'
 
 export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ SEO, privacyPolicy }) => {
   const containerRef = useRef(null)
