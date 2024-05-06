@@ -1,13 +1,15 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
-import {MainScrollContainer} from '@shared/main-scroll-container'
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { ContractOfferBlock }       from '@landing/contract-offer-fragment'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
+import {MainScrollContainer}         from '@shared/main-scroll-container'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { ContractOfferBlock }        from '@landing/contract-offer-fragment'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './contract-offer.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './contract-offer.constacts'
 
 import { ContractOfferProps }       from './contract-offer.interfaces'
 
@@ -23,20 +25,9 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <HeaderBlock
           headerData={headerData}

@@ -9,18 +9,20 @@ import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { CourseProcessBlock }       from '@landing/course-process-fragment'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
-import { FooterBlock }             from '@landing/footer-fragment'
-import { HeaderBlock }             from '@landing/header-fragment'
-import { HeroConnacolBlock }       from '@landing/hero-connacol-fragment'
-import { ModalFormConnacol }       from '@landing/modal-form-connacol'
-import { ModalMobileFormConnacol } from '@landing/modal-form-connacol'
-import { PriceConnacolBlock }      from '@landing/price-connacol-fragment'
-import { StartLearningBlock }      from '@landing/start-learning-fragment'
-import { TeacherBlock }            from '@landing/teacher-fragment'
-import { Seo }                     from '@shared/seo-fragment'
-import { Box }                     from '@ui/layout'
-import {MainScrollContainer}       from '@shared/main-scroll-container'
-import { ConnacolPageProps }       from './connacol.interfaces'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { HeroConnacolBlock }         from '@landing/hero-connacol-fragment'
+import { ModalFormConnacol }         from '@landing/modal-form-connacol'
+import { ModalMobileFormConnacol }   from '@landing/modal-form-connacol'
+import { PriceConnacolBlock }        from '@landing/price-connacol-fragment'
+import { StartLearningBlock }        from '@landing/start-learning-fragment'
+import { TeacherBlock }              from '@landing/teacher-fragment'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
+import {MainScrollContainer}         from '@shared/main-scroll-container'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './connacol.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './connacol.constacts'
+import { ConnacolPageProps }         from './connacol.interfaces'
 
 export const ConnacolPage: FC<ConnacolPageProps> = ({
   SEO,
@@ -46,20 +48,9 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <HeaderBlock
           headerData={headerData}

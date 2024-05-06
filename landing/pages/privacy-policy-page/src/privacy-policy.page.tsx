@@ -10,7 +10,9 @@ import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
+import { PrivacyPolicyPageProps }    from './privacy-policy-page.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constacts'
 
 export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
   SEO,
@@ -25,20 +27,9 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
         containerRef={containerRef}
-        watch={[]}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
       >
         <HeaderBlock
           headerData={headerData}

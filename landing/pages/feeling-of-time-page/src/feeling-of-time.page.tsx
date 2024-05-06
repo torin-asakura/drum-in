@@ -20,6 +20,8 @@ import { StartLearningBlock }           from '@landing/start-learning-fragment'
 import { TeacherBlock }                 from '@landing/teacher-fragment'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
+import { LOCOMOTIVE_SCROLL_WATCH }      from './feeling-of-time.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS }    from './feeling-of-time.constacts'
 
 import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
 
@@ -46,20 +48,9 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <HeaderBlock
           headerData={headerData}

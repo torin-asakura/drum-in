@@ -9,7 +9,9 @@ import { HeaderBlock }              from '@landing/header-fragment'
 import { Seo }                      from '@shared/seo-fragment'
 import { Box }                      from '@ui/layout'
 
-import { ContactPageProps }         from './contact-page.interfaces'
+import { ContactPageProps }          from './contact-page.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './contact.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './contact.constacts'
 
 export const ContactPage: FC<ContactPageProps> = ({
   SEO,
@@ -24,20 +26,9 @@ export const ContactPage: FC<ContactPageProps> = ({
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <HeaderBlock
           headerData={headerData}

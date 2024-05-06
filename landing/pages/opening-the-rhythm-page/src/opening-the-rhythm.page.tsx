@@ -22,7 +22,9 @@ import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
 
-import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
+import { OpeningTheRhythmPageProps } from './opening-the-rhythm-page.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './opening-the-rhythm.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './opening-the-rhythm.constacts'
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   SEO,
@@ -47,20 +49,9 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <HeaderBlock
           headerData={headerData}
