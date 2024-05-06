@@ -1,9 +1,10 @@
-import { usePlayer } from '@shared/utils/src'
-import React         from 'react'
-import { FC }        from 'react'
-import { useRef }    from 'react'
-import { useEffect } from 'react'
-import { useState }  from 'react'
+import { MainScrollContainer } from '@shared/main-scroll-container/src'
+import { usePlayer }           from '@shared/utils/src'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { useRef }              from 'react'
+import { useEffect }           from 'react'
+import { useState }            from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
@@ -67,7 +68,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
           consultationFormData={consultationFormData}
         />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
           <ProgramBlock openingTheRhythm={openingTheRhythm} />
           <CourseProcessBlock processData={processData} />
@@ -131,7 +132,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               <FooterBlock footerData={footerData} />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}

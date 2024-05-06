@@ -9,18 +9,18 @@ import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { CourseProcessBlock }       from '@landing/course-process-fragment'
 import { CtaBlock }                 from '@landing/cta-fragment'
 import { FaqBlock }                 from '@landing/faq'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { HeroConnacolBlock }        from '@landing/hero-connacol-fragment'
-import { ModalFormConnacol }        from '@landing/modal-form-connacol'
-import { ModalMobileFormConnacol }  from '@landing/modal-form-connacol'
-import { PriceConnacolBlock }       from '@landing/price-connacol-fragment'
-import { StartLearningBlock }       from '@landing/start-learning-fragment'
-import { TeacherBlock }             from '@landing/teacher-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
-
-import { ConnacolPageProps }        from './connacol.interfaces'
+import { FooterBlock }             from '@landing/footer-fragment'
+import { HeaderBlock }             from '@landing/header-fragment'
+import { HeroConnacolBlock }       from '@landing/hero-connacol-fragment'
+import { ModalFormConnacol }       from '@landing/modal-form-connacol'
+import { ModalMobileFormConnacol } from '@landing/modal-form-connacol'
+import { PriceConnacolBlock }      from '@landing/price-connacol-fragment'
+import { StartLearningBlock }      from '@landing/start-learning-fragment'
+import { TeacherBlock }            from '@landing/teacher-fragment'
+import { Seo }                     from '@shared/seo-fragment'
+import { Box }                     from '@ui/layout'
+import {MainScrollContainer}       from '@shared/main-scroll-container'
+import { ConnacolPageProps }       from './connacol.interfaces'
 
 export const ConnacolPage: FC<ConnacolPageProps> = ({
   SEO,
@@ -67,7 +67,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
           consultationFormData={consultationFormData}
         />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <HeroConnacolBlock background={background} connacolData={connacolData} />
           <CourseProcessBlock processData={processData} />
           <Box
@@ -130,7 +130,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               <FooterBlock footerData={footerData} />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}

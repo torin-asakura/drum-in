@@ -1,7 +1,7 @@
 import React                        from 'react'
 import { FC }                       from 'react'
 import { useRef }                   from 'react'
-
+import {MainScrollContainer} from '@shared/main-scroll-container'
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { ContractOfferBlock }       from '@landing/contract-offer-fragment'
 import { FooterBlock }              from '@landing/footer-fragment'
@@ -44,7 +44,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
           consultationFormData={consultationFormData}
         />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <ContractOfferBlock contractOfferData={contractOfferData} />
           <Box
             display={['none', 'none', 'flex']}
@@ -66,7 +66,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
           >
             <FooterBlock footerData={footerData} />
           </Box>
-        </main>
+        </MainScrollContainer>
       </LocomotiveScrollProvider>
     </Box>
   )

@@ -1,6 +1,7 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
+import { MainScrollContainer } from '@shared/main-scroll-container/src'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { useRef }              from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { FooterBlock }              from '@landing/footer-fragment'
@@ -45,7 +46,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
           consultationFormData={consultationFormData}
         />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />
           <Box
             display={['none', 'none', 'flex']}
@@ -67,7 +68,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
           >
             <FooterBlock footerData={footerData} />
           </Box>
-        </main>
+        </MainScrollContainer>
       </LocomotiveScrollProvider>
     </Box>
   )

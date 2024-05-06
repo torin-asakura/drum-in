@@ -1,8 +1,9 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
-import { useEffect }                from 'react'
-import { useState }                 from 'react'
+import { MainScrollContainer } from '@shared/main-scroll-container/src'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { useRef }              from 'react'
+import { useEffect }           from 'react'
+import { useState }            from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { CtaBlock }                 from '@landing/cta-fragment'
@@ -102,7 +103,7 @@ export const HomePage: FC<IndexPageProps> = ({
           />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo seo={SEO} />
-          <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+          <MainScrollContainer containerRef={containerRef}>
             <Hero
               mainPageData={mainPageData}
               background={background}
@@ -189,7 +190,7 @@ export const HomePage: FC<IndexPageProps> = ({
                 <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
               </Box>
             </Box>
-          </main>
+          </MainScrollContainer>
         </SpyScrollProvider>
       </LocomotiveScrollProvider>
     </Box>

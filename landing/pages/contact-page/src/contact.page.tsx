@@ -45,7 +45,7 @@ export const ContactPage: FC<ContactPageProps> = ({
           consultationFormData={consultationFormData}
         />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <Box
             width='100%'
             display={['none', 'none', 'flex']}
@@ -84,7 +84,7 @@ export const ContactPage: FC<ContactPageProps> = ({
               <FooterBlock footerData={footerData} buttonUp={false} />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
       </LocomotiveScrollProvider>
     </Box>
   )
