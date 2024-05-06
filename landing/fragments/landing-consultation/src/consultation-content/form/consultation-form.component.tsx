@@ -1,7 +1,8 @@
-import React                     from 'react'
-import { FC }                    from 'react'
-import { useState }              from 'react'
-import { useIntl }               from 'react-intl'
+import { useGetConsultationFormData } from '@globals/data/src'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { useState }                   from 'react'
+import { useIntl }                    from 'react-intl'
 
 import { ArrowLeftDownTailIcon } from '@ui/icons'
 import { Input }                 from '@ui/input'
@@ -13,10 +14,12 @@ import { Action }                from './action'
 import { ConsultationFormProps } from './consultation-form.interfaces'
 
 export const ConsultationForm: FC<ConsultationFormProps> = ({
-  consultationFormData,
   textForCheckbox,
   setVisibleModal,
 }) => {
+
+  const {consultationFormData} = useGetConsultationFormData()
+
   const { formatMessage } = useIntl()
 
   const [name, setName] = useState<string>('')

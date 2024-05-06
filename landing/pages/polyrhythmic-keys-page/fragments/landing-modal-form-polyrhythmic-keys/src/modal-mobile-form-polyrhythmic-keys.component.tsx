@@ -10,7 +10,6 @@ import { ContentMobile }                   from './content'
 import { ModalFormPolyrhythmicKeyslProps } from './modal-form-polyrhythmic-keys.interfaces'
 
 const ModalMobileFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
-  paymentSettingsData,
   polyrhythmicKeysData,
   activeRender,
   onClose,
@@ -36,7 +35,6 @@ const ModalMobileFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
       <ContainerMobile scroll={scroll}>
         <ContentMobile
           onClose={onClose}
-          paymentSettingsData={paymentSettingsData}
           polyrhythmicKeysData={polyrhythmicKeysData}
         />
       </ContainerMobile>

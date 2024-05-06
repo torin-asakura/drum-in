@@ -13,7 +13,6 @@ import { ContentDesktop }                  from './content'
 import { ModalFormPolyrhythmicKeyslProps } from './modal-form-polyrhythmic-keys.interfaces'
 
 const ModalFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
-  paymentSettingsData,
   polyrhythmicKeysData,
   activeRender,
   onClose,
@@ -42,7 +41,6 @@ const ModalFormPolyrhythmicKeys: FC<ModalFormPolyrhythmicKeyslProps> = ({
           <Column width='100%'>
             <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
             <ContentDesktop
-              paymentSettingsData={paymentSettingsData}
               onClose={onClose}
               polyrhythmicKeysData={polyrhythmicKeysData}
             />

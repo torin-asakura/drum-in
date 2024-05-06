@@ -1,8 +1,9 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
-import { useIntl }          from 'react-intl'
+import { usePaymentSettings } from '@globals/data/src'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { FormattedNumber }    from 'react-intl'
+import { useIntl }            from 'react-intl'
 
 import { Condition }        from '@ui/condition'
 import { Form }             from '@ui/form'
@@ -17,8 +18,9 @@ import { Text }             from '@ui/text'
 import { ContentProps }     from './content.interfaces'
 import { SelectedCourse }   from './selected-course'
 
-const ContentMobile: FC<ContentProps> = ({paymentSettingsData, polyrhythmicKeysData,paymentSettingsData, onClose }) => {
+const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData, onClose }) => {
   const { formatMessage } = useIntl()
+  const {paymentSettingsData} = usePaymentSettings()
 
   return (
     <Row height={540}>

@@ -5,5 +5,4 @@ export interface ModalFormPolyrhythmicKeyslProps {
   onClose: () => any
   scroll?: boolean
   polyrhythmicKeysData: IndividualCourseDataType
-  paymentSettingsData: PaymentSettingsDataProps
 }

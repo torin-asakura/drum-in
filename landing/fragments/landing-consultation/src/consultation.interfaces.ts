@@ -8,6 +8,4 @@ export interface ConsultationProps {
   activeRender: boolean
   setVisibleModal: Dispatch<SetStateAction<boolean>>
   scroll?: boolean
-  consultationData?: ModalConsultationDataProps | null
-  consultationFormData?: ConsultationFormDataProps
 }

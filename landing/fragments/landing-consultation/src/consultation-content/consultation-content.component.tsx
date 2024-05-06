@@ -1,5 +1,6 @@
-import React                        from 'react'
-import { FC }                       from 'react'
+import { useConsultation } from '@globals/data/src'
+import React               from 'react'
+import { FC }              from 'react'
 
 import { Button }                   from '@ui/button'
 import { CrossMenuIcon }            from '@ui/icons'
@@ -12,57 +13,59 @@ import { ConsultationContentProps } from './consultation-content.interfaces'
 import { ConsultationForm }         from './form'
 
 const ConsultationContent: FC<ConsultationContentProps> = ({
-  consultationFormData,
-  consultationData,
   setVisibleModal,
-}) => (
-  <>
-    <Box
-      width='100%'
-      flexDirection={['column', 'row', 'row']}
-      justifyContent={['start', 'space-between', 'space-between']}
-      alignItems='start'
-    >
-      <Column width={['100%', 450, 450]}>
-        <Box>
-          <Text
-            fontWeight='medium'
-            fontSize={['large', 'moderate', 'semiIncreased']}
-            lineHeight='default'
-            color='text.smokyWhite'
+}) => {
+
+  const {consultationData} = useConsultation()
+
+  return(
+    <>
+      <Box
+        width='100%'
+        flexDirection={['column', 'row', 'row']}
+        justifyContent={['start', 'space-between', 'space-between']}
+        alignItems='start'
+      >
+        <Column width={['100%', 450, 450]}>
+          <Box>
+            <Text
+              fontWeight='medium'
+              fontSize={['large', 'moderate', 'semiIncreased']}
+              lineHeight='default'
+              color='text.smokyWhite'
+            >
+              {consultationData?.modal?.title}
+            </Text>
+          </Box>
+          <Layout flexBasis={[6, 9, 12]} flexShrink={0} />
+          <Box>
+            <Text
+              fontWeight='medium'
+              fontSize={['semiMedium', 'semiMedium', 'medium']}
+              lineHeight='medium'
+              color='text.transparentSmokyWhite'
+            >
+              {consultationData?.modal?.subtitle}
+            </Text>
+          </Box>
+        </Column>
+        <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
+          <Button
+            size='littlePaddingMediumHeight'
+            variant='transparentWhiteToGrayBackground'
+            onClick={() => setVisibleModal(false)}
           >
-            {consultationData?.title}
-          </Text>
+            <CrossMenuIcon width={24} height={24} />
+          </Button>
         </Box>
-        <Layout flexBasis={[6, 9, 12]} flexShrink={0} />
-        <Box>
-          <Text
-            fontWeight='medium'
-            fontSize={['semiMedium', 'semiMedium', 'medium']}
-            lineHeight='medium'
-            color='text.transparentSmokyWhite'
-          >
-            {consultationData?.subtitle}
-          </Text>
-        </Box>
-      </Column>
-      <Box width={['100%', 'auto', 'auto']} justifyContent='end'>
-        <Button
-          size='littlePaddingMediumHeight'
-          variant='transparentWhiteToGrayBackground'
-          onClick={() => setVisibleModal(false)}
-        >
-          <CrossMenuIcon width={24} height={24} />
-        </Button>
       </Box>
-    </Box>
-    <Layout flexBasis={52} flexShrink={0} />
-    <ConsultationForm
-      consultationFormData={consultationFormData}
-      setVisibleModal={setVisibleModal}
-      textForCheckbox={consultationData?.textForCheckbox}
-    />
-  </>
-)
+      <Layout flexBasis={52} flexShrink={0} />
+      <ConsultationForm
+        setVisibleModal={setVisibleModal}
+        textForCheckbox={consultationData?.modal?.textForCheckbox}
+      />
+    </>
+  )
+}
 
 export { ConsultationContent }

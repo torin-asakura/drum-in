@@ -13,8 +13,6 @@ import { ConsultationContent } from './consultation-content'
 import { ConsultationProps }   from './consultation.interfaces'
 
 const Consultation: FC<ConsultationProps> = ({
-  consultationFormData,
-  consultationData,
   activeRender,
   setVisibleModal,
   scroll = false,
@@ -42,8 +40,6 @@ const Consultation: FC<ConsultationProps> = ({
           <Column width='100%'>
             <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
             <ConsultationContent
-              consultationFormData={consultationFormData}
-              consultationData={consultationData}
               setVisibleModal={setVisibleModal}
             />
           </Column>

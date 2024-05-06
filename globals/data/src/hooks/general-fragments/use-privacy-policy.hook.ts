@@ -5,7 +5,7 @@ import { GeneralFragmentID }  from '../../query.constants'
 
 export const usePrivacyPolicy = () => {
   const { data } = useQuery(GET_PRIVACY_POLICY, {
-    variables: { id: GeneralFragmentID.PRIVACY_POLICY },
+    variables: { id: GeneralFragmentID.PRIVACY_POLICY },fetchPolicy:'cache-only'
   })
   const privacyPolicy = data?.generalFragment?.privacyPolicy
   return { privacyPolicy }

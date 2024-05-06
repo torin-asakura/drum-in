@@ -12,7 +12,6 @@ import { PricePolyrhythmicKeysProps } from './price-polyrhythmic-keys.interfaces
 
 const PricePolyrhythmicKeyslBlock: FC<PricePolyrhythmicKeysProps> = ({
   polyrhythmicKeysData,
-  paymentSettingsData,
 }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
@@ -35,7 +34,6 @@ const PricePolyrhythmicKeyslBlock: FC<PricePolyrhythmicKeysProps> = ({
         <Layout flexBasis={[24, 44, 64]} />
         <Content
           polyrhythmicKeysData={polyrhythmicKeysData}
-          paymentSettingsData={paymentSettingsData}
         />
         <Layout flexBasis={[24, 32, 120]} />
       </Column>

@@ -1,10 +1,6 @@
-import React                               from 'react'
-import { FC }                              from 'react'
-import { useRef }                          from 'react'
-import { useEffect }                       from 'react'
-import { useState }                        from 'react'
-
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
+import { PageID }                          from '@globals/data/src'
+import { useSeo }                          from '@globals/data/src'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
 import { FaqBlock }                        from '@landing/faq'
@@ -18,23 +14,22 @@ import { StartLearningBlock }              from '@landing/start-learning-fragmen
 import { TeacherBlock }                    from '@landing/teacher-fragment'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
+import React                               from 'react'
+import { FC }                              from 'react'
+import { useRef }                          from 'react'
+import { useEffect }                       from 'react'
+import { useState }                        from 'react'
 
-import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
+import { PolyrhythmicKeysProps } from './polyrhythmic-keys.interfaces'
+
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
-  SEO,
-  consultationFormData,
-  faqData,
-  consultationData,
-  footerData,
-  teacherData,
-  processData,
   polyrhythmicKeysData,
   background,
   songUrl,
-  headerData,
-  paymentSettingsData,
+  SEO
 }) => {
+
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -81,18 +76,14 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
         containerRef={containerRef}
         watch={[]}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock />
         <Seo seo={SEO} />
         <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
           <HeroPolyrhythmicKeysBlock
             background={background}
             polyrhythmicKeysData={polyrhythmicKeysData}
           />
-          <CourseProcessBlock processData={processData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -106,20 +97,16 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundSize='contain'
             >
               <TeacherBlock
-                teacherData={teacherData}
                 playSong={playSong}
                 setPlaySong={setPlaySong}
               />
             </Box>
           </Box>
           <PricePolyrhythmicKeyslBlock
-            paymentSettingsData={paymentSettingsData}
             polyrhythmicKeysData={polyrhythmicKeysData}
           />
-          <FaqBlock faqData={faqData} />
+          <FaqBlock />
           <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
           />
           <Box
             display={['none', 'none', 'flex']}
@@ -134,7 +121,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock  />
             </Box>
           </Box>
           <Box
@@ -150,7 +137,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock  />
             </Box>
           </Box>
         </main>
@@ -159,13 +146,11 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormPolyrhythmicKeys
-          paymentSettingsData={paymentSettingsData}
           polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormPolyrhythmicKeys
-          paymentSettingsData={paymentSettingsData}
           polyrhythmicKeysData={polyrhythmicKeysData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

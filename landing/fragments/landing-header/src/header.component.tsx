@@ -1,6 +1,7 @@
-import React               from 'react'
-import { FC }              from 'react'
-import { useState }        from 'react'
+import { useHeader } from '@globals/data/src'
+import React         from 'react'
+import { FC }        from 'react'
+import { useState }  from 'react'
 
 import { NavigationBlock } from '@landing/navigation-fragment'
 import { Button }          from '@ui/button'
@@ -18,17 +19,15 @@ import { HeaderProps }     from './header.interfaces'
 import { ItemLink }        from './item-link'
 import { Wrapper }         from './wrapper'
 
-const HeaderBlock: FC<HeaderProps> = ({ consultationFormData, consultationData, headerData }) => {
+const HeaderBlock: FC<HeaderProps> = ( ) => {
   const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
-
+  const {headerData} = useHeader()
   return (
     <>
       <NavigationBlock
         headerData={headerData}
         visible={visibleDrawer}
         setVisible={setVisibleDrawer}
-        consultationData={consultationData}
-        consultationFormData={consultationFormData}
       />
       <Wrapper>
         <Column width={['100%', '100%', '100%']} alignItems='center'>
@@ -61,11 +60,7 @@ const HeaderBlock: FC<HeaderProps> = ({ consultationFormData, consultationData, 
               {headerData?.navigationElements?.map((item) => (
                 <ItemLink item={item} />
               ))}
-              <CtaButton
-                consultationData={consultationData}
-                consultationFormData={consultationFormData}
-                title={headerData?.ctaButton}
-              />
+              <CtaButton title={headerData?.ctaButton} />
             </Row>
             <Layout flexBasis={[26, 33, 40]} />
           </Box>

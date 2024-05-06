@@ -1,8 +1,9 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
-import { useIntl }          from 'react-intl'
+import { usePaymentSettings } from '@globals/data/src'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { FormattedNumber }    from 'react-intl'
+import { useIntl }            from 'react-intl'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
@@ -20,8 +21,8 @@ import { SelectedCourse }   from './selected-course'
 const ContentDesktop: FC<ContentProps> = ({
   polyrhythmicKeysData,
   onClose,
-  paymentSettingsData,
 }) => {
+  const {paymentSettingsData} = usePaymentSettings()
   const { formatMessage } = useIntl()
   return (
     <>
