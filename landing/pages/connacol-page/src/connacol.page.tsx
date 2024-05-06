@@ -1,14 +1,12 @@
-import { usePlayer } from '@shared/utils/src'
-import React         from 'react'
-import { FC }        from 'react'
-import { useRef }    from 'react'
-import { useEffect } from 'react'
-import { useState }  from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
+import { useState }                  from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { CourseProcessBlock }       from '@landing/course-process-fragment'
-import { CtaBlock }                 from '@landing/cta-fragment'
-import { FaqBlock }                 from '@landing/faq'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { CourseProcessBlock }        from '@landing/course-process-fragment'
+import { CtaBlock }                  from '@landing/cta-fragment'
+import { FaqBlock }                  from '@landing/faq'
 import { FooterBlock }               from '@landing/footer-fragment'
 import { HeaderBlock }               from '@landing/header-fragment'
 import { HeroConnacolBlock }         from '@landing/hero-connacol-fragment'
@@ -17,33 +15,26 @@ import { ModalMobileFormConnacol }   from '@landing/modal-form-connacol'
 import { PriceConnacolBlock }        from '@landing/price-connacol-fragment'
 import { StartLearningBlock }        from '@landing/start-learning-fragment'
 import { TeacherBlock }              from '@landing/teacher-fragment'
+import { MainScrollContainer }        from '@shared/main-scroll-container'
 import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
-import {MainScrollContainer}         from '@shared/main-scroll-container'
+import { usePlayer }                 from '@shared/utils/src'
+
 import { LOCOMOTIVE_SCROLL_WATCH }   from './connacol.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './connacol.constacts'
 import { ConnacolPageProps }         from './connacol.interfaces'
 
 export const ConnacolPage: FC<ConnacolPageProps> = ({
   SEO,
-  faqData,
-  consultationData,
-  footerData,
-  consultationFormData,
-  teacherData,
-  processData,
   connacolData,
   background,
   songUrl,
-  headerData,
-  paymentSettingsData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
   const { playSong, setPlaySong } = usePlayer(songUrl)
-
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
@@ -52,15 +43,11 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock/>
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroConnacolBlock background={background} connacolData={connacolData} />
-          <CourseProcessBlock processData={processData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -74,20 +61,17 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               backgroundSize='contain'
             >
               <TeacherBlock
-                teacherData={teacherData}
                 playSong={playSong}
                 setPlaySong={setPlaySong}
               />
             </Box>
           </Box>
           <PriceConnacolBlock
-            paymentSettingsData={paymentSettingsData}
+            paymentSettingsData={{}}
             connacolData={connacolData}
           />
-          <FaqBlock faqData={faqData} />
+          <FaqBlock  />
           <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
           />
           <Box
             display={['none', 'none', 'flex']}
@@ -102,7 +86,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -118,7 +102,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
         </MainScrollContainer>
@@ -127,13 +111,13 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormConnacol
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{}}
           connacolData={connacolData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormConnacol
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{}}
           connacolData={connacolData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

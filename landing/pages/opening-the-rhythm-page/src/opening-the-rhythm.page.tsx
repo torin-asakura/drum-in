@@ -1,10 +1,7 @@
-import { MainScrollContainer } from '@shared/main-scroll-container/src'
-import { usePlayer }           from '@shared/utils/src'
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useRef }              from 'react'
-import { useEffect }           from 'react'
-import { useState }            from 'react'
+import React                               from 'react'
+import { FC }                              from 'react'
+import { useRef }                          from 'react'
+import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
@@ -19,26 +16,20 @@ import { PriceOpeningTheRhythmBlock }      from '@landing/price-opening-the-rhyt
 import { ProgramBlock }                    from '@landing/program-fragment'
 import { StartLearningBlock }              from '@landing/start-learning-fragment'
 import { TeacherBlock }                    from '@landing/teacher-fragment'
+import { MainScrollContainer }             from '@shared/main-scroll-container/src'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
+import { usePlayer }                       from '@shared/utils/src'
 
-import { OpeningTheRhythmPageProps } from './opening-the-rhythm-page.interfaces'
-import { LOCOMOTIVE_SCROLL_WATCH }   from './opening-the-rhythm.constacts'
-import { LOCOMOTIVE_SCROLL_OPTIONS } from './opening-the-rhythm.constacts'
+import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }         from './opening-the-rhythm.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS }       from './opening-the-rhythm.constacts'
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   SEO,
-  faqData,
-  consultationFormData,
-  consultationData,
-  footerData,
-  teacherData,
-  processData,
   background,
   openingTheRhythm,
   songUrl,
-  headerData,
-  paymentSettingsData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -53,16 +44,12 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock/>
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
           <ProgramBlock openingTheRhythm={openingTheRhythm} />
-          <CourseProcessBlock processData={processData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -76,20 +63,17 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundSize='contain'
             >
               <TeacherBlock
-                teacherData={teacherData}
                 playSong={playSong}
                 setPlaySong={setPlaySong}
               />
             </Box>
           </Box>
           <PriceOpeningTheRhythmBlock
-            paymentSettingsData={paymentSettingsData}
+            paymentSettingsData={{ }}
             openingTheRhythm={openingTheRhythm}
           />
-          <FaqBlock faqData={faqData} />
+          <FaqBlock  />
           <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
           />
           <Box
             display={['none', 'none', 'flex']}
@@ -104,7 +88,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock  />
             </Box>
           </Box>
           <Box
@@ -120,7 +104,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
         </MainScrollContainer>
@@ -129,13 +113,13 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormOpeningTheRhythm
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{ }}
           openingTheRhythm={openingTheRhythm}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{ }}
           openingTheRhythm={openingTheRhythm}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

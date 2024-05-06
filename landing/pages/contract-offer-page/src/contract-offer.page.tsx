@@ -1,25 +1,22 @@
 import React                         from 'react'
 import { FC }                        from 'react'
 import { useRef }                    from 'react'
-import {MainScrollContainer}         from '@shared/main-scroll-container'
+
 import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
 import { ContractOfferBlock }        from '@landing/contract-offer-fragment'
 import { FooterBlock }               from '@landing/footer-fragment'
 import { HeaderBlock }               from '@landing/header-fragment'
+import { MainScrollContainer }        from '@shared/main-scroll-container'
 import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
+
 import { LOCOMOTIVE_SCROLL_WATCH }   from './contract-offer.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './contract-offer.constacts'
-
-import { ContractOfferProps }       from './contract-offer.interfaces'
+import { ContractOfferProps }        from './contract-offer.interfaces'
 
 export const ContractOfferPage: FC<ContractOfferProps> = ({
   SEO,
-  footerData,
   contractOfferData,
-  headerData,
-  consultationData,
-  consultationFormData,
 }) => {
   const containerRef = useRef(null)
   return (
@@ -29,11 +26,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock/>
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <ContractOfferBlock contractOfferData={contractOfferData} />
@@ -45,7 +38,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock />
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -55,7 +48,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock />
           </Box>
         </MainScrollContainer>
       </LocomotiveScrollProvider>

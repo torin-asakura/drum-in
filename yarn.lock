@@ -3729,6 +3729,7 @@ __metadata:
     "@landing/teacher-fragment": "workspace:0.0.1"
     "@shared/main-scroll-container": "workspace:0.0.1"
     "@shared/seo-fragment": "workspace:*"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": "npm:18.2.20"
     "@types/react-dom": "npm:17.0.20"
     "@types/react-helmet": "npm:6.1.6"

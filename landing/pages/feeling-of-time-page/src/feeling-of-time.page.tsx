@@ -1,10 +1,7 @@
-import { MainScrollContainer } from '@shared/main-scroll-container/src'
-import { usePlayer }           from '@shared/utils/src'
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useRef }              from 'react'
-import { useEffect }           from 'react'
-import { useState }            from 'react'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { useRef }                       from 'react'
+import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
 import { CourseProcessBlock }           from '@landing/course-process-fragment'
@@ -18,26 +15,20 @@ import { ModalMobileFormFeelingOfTime } from '@landing/modal-form-feeling-of-tim
 import { PriceFeelingOfTimeBlock }      from '@landing/price-feeling-of-time-fragment'
 import { StartLearningBlock }           from '@landing/start-learning-fragment'
 import { TeacherBlock }                 from '@landing/teacher-fragment'
+import { MainScrollContainer }          from '@shared/main-scroll-container/src'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
+import { usePlayer }                    from '@shared/utils/src'
+
 import { LOCOMOTIVE_SCROLL_WATCH }      from './feeling-of-time.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS }    from './feeling-of-time.constacts'
-
 import { FeelingOfTimeProps }           from './feeling-of-time.interfaces'
 
 export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
   SEO,
-  faqData,
-  consultationData,
-  consultationFormData,
-  footerData,
-  teacherData,
-  processData,
   feelingOfTimeData,
   background,
   songUrl,
-  headerData,
-  paymentSettingsData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -52,15 +43,11 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock/>
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} />
-          <CourseProcessBlock processData={processData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -74,20 +61,17 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               backgroundSize='contain'
             >
               <TeacherBlock
-                teacherData={teacherData}
                 playSong={playSong}
                 setPlaySong={setPlaySong}
               />
             </Box>
           </Box>
           <PriceFeelingOfTimeBlock
-            paymentSettingsData={paymentSettingsData}
+            paymentSettingsData={{}}
             feelingOfTimeData={feelingOfTimeData}
           />
-          <FaqBlock faqData={faqData} />
+          <FaqBlock />
           <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
           />
           <Box
             display={['none', 'none', 'flex']}
@@ -102,7 +86,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -118,7 +102,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
         </MainScrollContainer>
@@ -127,13 +111,13 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormFeelingOfTime
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{}}
           feelingOfTimeData={feelingOfTimeData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFeelingOfTime
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{}}
           feelingOfTimeData={feelingOfTimeData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

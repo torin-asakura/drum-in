@@ -10536,6 +10536,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/teacher-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher"],\
           ["@shared/main-scroll-container", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/main-scroll-container"],\
           ["@shared/seo-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/seo"],\
+          ["@shared/utils", "workspace:shared/utils"],\
           ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
@@ -10596,6 +10597,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/teacher-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:landing/fragments/landing-teacher"],\
           ["@shared/main-scroll-container", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/main-scroll-container"],\
           ["@shared/seo-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:shared/fragments/seo"],\
+          ["@shared/utils", "workspace:shared/utils"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.17"],\
           ["@types/react-helmet", "npm:6.1.6"],\

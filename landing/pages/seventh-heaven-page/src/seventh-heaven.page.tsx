@@ -1,10 +1,7 @@
-import { MainScrollContainer } from '@shared/main-scroll-container/src'
-import { usePlayer }           from '@shared/utils/src'
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useRef }              from 'react'
-import { useEffect }           from 'react'
-import { useState }            from 'react'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { useRef }                       from 'react'
+import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
 import { CourseProcessBlock }           from '@landing/course-process-fragment'
@@ -18,26 +15,20 @@ import { ModalMobileFormSeventhHeaven } from '@landing/modal-form-seventh-heaven
 import { PriceSeventhHeavenBlock }      from '@landing/price-seventh-heaven-fragment'
 import { StartLearningBlock }           from '@landing/start-learning-fragment'
 import { TeacherBlock }                 from '@landing/teacher-fragment'
+import { MainScrollContainer }          from '@shared/main-scroll-container/src'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
+import { usePlayer }                    from '@shared/utils/src'
+
 import { LOCOMOTIVE_SCROLL_WATCH }      from './seventh-heaven.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS }    from './seventh-heaven.constacts'
-
 import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 
 export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
-  paymentSettingsData,
   SEO,
-  faqData,
-  consultationData,
-  consultationFormData,
-  footerData,
-  teacherData,
-  processData,
   seventhHeavenData,
   background,
   songUrl,
-  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
@@ -52,15 +43,11 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock/>
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
-          <CourseProcessBlock processData={processData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -74,20 +61,17 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundSize='contain'
             >
               <TeacherBlock
-                teacherData={teacherData}
                 playSong={playSong}
                 setPlaySong={setPlaySong}
               />
             </Box>
           </Box>
           <PriceSeventhHeavenBlock
-            paymentSettingsData={paymentSettingsData}
+            paymentSettingsData={{}}
             seventhHeavenData={seventhHeavenData}
           />
-          <FaqBlock faqData={faqData} />
+          <FaqBlock/>
           <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
           />
           <Box
             display={['none', 'none', 'flex']}
@@ -102,7 +86,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -118,7 +102,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
         </MainScrollContainer>
@@ -127,13 +111,13 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormSeventhHeaven
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{}}
           seventhHeavenData={seventhHeavenData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormSeventhHeaven
-          paymentSettingsData={paymentSettingsData}
+          paymentSettingsData={{ }}
           seventhHeavenData={seventhHeavenData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

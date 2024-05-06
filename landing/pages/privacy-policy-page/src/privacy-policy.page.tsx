@@ -1,14 +1,14 @@
-import { MainScrollContainer } from '@shared/main-scroll-container/src'
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useRef }              from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { PrivacyPolicyBlock }        from '@landing/privacy-policy-fragment'
+import { MainScrollContainer }       from '@shared/main-scroll-container/src'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
 
 import { PrivacyPolicyPageProps }    from './privacy-policy-page.interfaces'
 import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constacts'
@@ -16,11 +16,7 @@ import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constacts'
 
 export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
   SEO,
-  footerData,
   privacyPolicy,
-  headerData,
-  consultationData,
-  consultationFormData,
 }) => {
   const containerRef = useRef(null)
 
@@ -31,11 +27,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
         containerRef={containerRef}
         watch={LOCOMOTIVE_SCROLL_WATCH}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock/>
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />
@@ -47,7 +39,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock />
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -57,7 +49,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock />
           </Box>
         </MainScrollContainer>
       </LocomotiveScrollProvider>

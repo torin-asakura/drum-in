@@ -1,13 +1,14 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
+import { MainScrollContainer } from '@shared/main-scroll-container/src'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { useRef }              from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { ContactBlock }             from '@landing/contact-fragment'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { ContactBlock }              from '@landing/contact-fragment'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
 
 import { ContactPageProps }          from './contact-page.interfaces'
 import { LOCOMOTIVE_SCROLL_WATCH }   from './contact.constacts'
@@ -15,11 +16,7 @@ import { LOCOMOTIVE_SCROLL_OPTIONS } from './contact.constacts'
 
 export const ContactPage: FC<ContactPageProps> = ({
   SEO,
-  footerData,
   contactsData,
-  headerData,
-  consultationData,
-  consultationFormData,
 }) => {
   const containerRef = useRef(null)
 
@@ -30,11 +27,7 @@ export const ContactPage: FC<ContactPageProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock/>
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <Box
@@ -53,7 +46,7 @@ export const ContactPage: FC<ContactPageProps> = ({
               backgroundSize='contain'
             >
               <ContactBlock contactsData={contactsData} />
-              <FooterBlock footerData={footerData} buttonUp={false} />
+              <FooterBlock buttonUp={false} />
             </Box>
           </Box>
           <Box
@@ -72,7 +65,7 @@ export const ContactPage: FC<ContactPageProps> = ({
               backgroundSize='contain'
             >
               <ContactBlock contactsData={contactsData} />
-              <FooterBlock footerData={footerData} buttonUp={false} />
+              <FooterBlock buttonUp={false} />
             </Box>
           </Box>
         </MainScrollContainer>
