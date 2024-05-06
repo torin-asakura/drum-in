@@ -20,7 +20,6 @@ import { getCoursePath }    from './helpers'
 
 const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }, ref: any) => {
   const { footerData } = useFooter()
-
   return (
     <Row justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>

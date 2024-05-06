@@ -1,5 +1,4 @@
 import React               from 'react'
-import { FC }              from 'react'
 import { useState }        from 'react'
 
 import { NavigationBlock } from '@landing/navigation-fragment'
@@ -15,11 +14,10 @@ import { useHeader }       from '@globals/data/src'
 
 import { CtaButton }       from './cta-button'
 import { DrawerButton }    from './drawer-button'
-import { HeaderProps }     from './header.interfaces'
 import { ItemLink }        from './item-link'
 import { Wrapper }         from './wrapper'
 
-const HeaderBlock: FC<HeaderProps> = () => {
+const HeaderBlock = () => {
   const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false)
   const { headerData } = useHeader()
   return (

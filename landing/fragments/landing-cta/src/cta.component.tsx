@@ -1,5 +1,4 @@
 import React                  from 'react'
-import { FC }                 from 'react'
 import { FormattedMessage }   from 'react-intl'
 import { useState }           from 'react'
 import { forwardRef }         from 'react'
@@ -16,9 +15,7 @@ import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
 import { useConsultation }    from '@globals/data/src'
 
-import { CtaProps }           from './cta.interfaces'
-
-const CtaBlock: FC<CtaProps> = forwardRef(({}, ref?: any) => {
+const CtaBlock = forwardRef(({}, ref?: any) => {
   const { consultationData } = useConsultation()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)

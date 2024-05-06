@@ -15,10 +15,10 @@ import { ModalMobileFormPolyrhythmicKeys } from '@landing/modal-form-polyrhythmi
 import { PricePolyrhythmicKeyslBlock }     from '@landing/price-polyrhythmic-keys-fragment'
 import { StartLearningBlock }              from '@landing/start-learning-fragment'
 import { TeacherBlock }                    from '@landing/teacher-fragment'
-import { MainScrollContainer }              from '@shared/main-scroll-container'
+import { MainScrollContainer }             from '@shared/main-scroll-container'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
-import { usePlayer }                        from '@shared/utils'
+import { usePlayer }                       from '@shared/utils'
 
 import { LOCOMOTIVE_SCROLL_WATCH }         from './polyrhythmic-keys.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS }       from './polyrhythmic-keys.constacts'
