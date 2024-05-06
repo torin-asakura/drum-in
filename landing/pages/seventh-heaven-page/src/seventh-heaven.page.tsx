@@ -1,8 +1,9 @@
-import React                            from 'react'
-import { FC }                           from 'react'
-import { useRef }                       from 'react'
-import { useEffect }                    from 'react'
-import { useState }                     from 'react'
+import { usePlayer } from '@shared/utils/src'
+import React         from 'react'
+import { FC }        from 'react'
+import { useRef }    from 'react'
+import { useEffect } from 'react'
+import { useState }  from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
 import { CourseProcessBlock }           from '@landing/course-process-fragment'
@@ -39,29 +40,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
-  const [playSong, setPlaySong] = useState<boolean>(false)
-  const songElement = useRef<HTMLAudioElement | undefined>()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && songUrl !== undefined) {
-      songElement.current = new Audio(songUrl || '')
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        songElement.current?.pause()
-        songElement.current = undefined
-      }
-    }
-  }, [songUrl])
-
-  useEffect(() => {
-    if (playSong) {
-      songElement?.current?.play()
-    } else {
-      songElement?.current?.pause()
-    }
-  }, [playSong])
+  const { playSong, setPlaySong } = usePlayer(songUrl)
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>

@@ -14,7 +14,9 @@
     "@landing/price-seventh-heaven-fragment": "workspace:0.0.1",
     "@landing/start-learning-fragment": "workspace:0.0.1",
     "@landing/teacher-fragment": "workspace:0.0.1",
+    "@shared/main-scroll-container": "workspace:0.0.1",
     "@shared/seo-fragment": "workspace:*",
+    "@shared/utils": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {
