@@ -1,24 +1,23 @@
-import { useGetConsultationFormData } from '@globals/data/src'
 import React                          from 'react'
 import { FC }                         from 'react'
 import { useState }                   from 'react'
 import { useIntl }                    from 'react-intl'
 
-import { ArrowLeftDownTailIcon } from '@ui/icons'
-import { Input }                 from '@ui/input'
-import { Box }                   from '@ui/layout'
-import { Column }                from '@ui/layout'
-import { Layout }                from '@ui/layout'
+import { ArrowLeftDownTailIcon }      from '@ui/icons'
+import { Input }                      from '@ui/input'
+import { Box }                        from '@ui/layout'
+import { Column }                     from '@ui/layout'
+import { Layout }                     from '@ui/layout'
+import { useGetConsultationFormData } from '@globals/data/src'
 
-import { Action }                from './action'
-import { ConsultationFormProps } from './consultation-form.interfaces'
+import { Action }                     from './action'
+import { ConsultationFormProps }      from './consultation-form.interfaces'
 
 export const ConsultationForm: FC<ConsultationFormProps> = ({
   textForCheckbox,
   setVisibleModal,
 }) => {
-
-  const {consultationFormData} = useGetConsultationFormData()
+  const { consultationFormData } = useGetConsultationFormData()
 
   const { formatMessage } = useIntl()
 

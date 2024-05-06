@@ -1,4 +1,3 @@
-import { useFooter }        from '@globals/data/src'
 import React                from 'react'
 import uniqid               from 'uniqid'
 import { FormattedMessage } from 'react-intl'
@@ -11,6 +10,7 @@ import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
+import { useFooter }        from '@globals/data/src'
 
 import { BottomRow }        from './bottom-row'
 import { ButtonUp }         from './button-up'
@@ -18,14 +18,10 @@ import { FooterProps }      from './footer.interfaces'
 import { LinkSocial }       from './link-social'
 import { getCoursePath }    from './helpers'
 
-const FooterBlock = forwardRef<HTMLDivElement, FooterProps>((
-  {  buttonUp = true },
-  ref: any
-) => {
+const FooterBlock = forwardRef<HTMLDivElement, FooterProps>(({ buttonUp = true }, ref: any) => {
+  const { footerData } = useFooter()
 
-  const{footerData} = useFooter()
-
-  return(
+  return (
     <Row justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

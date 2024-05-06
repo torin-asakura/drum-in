@@ -1,0 +1,12 @@
+{
+  "name": "@shared/main-scroll-container",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/react": "18.2.20"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

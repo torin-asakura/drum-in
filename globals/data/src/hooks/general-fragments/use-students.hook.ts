@@ -4,7 +4,10 @@ import { GET_STUDENTS }      from '../../queries'
 import { GeneralFragmentID } from '../../query.constants'
 
 export const useStudents = () => {
-  const { data } = useQuery(GET_STUDENTS, { variables: { id: GeneralFragmentID.STUDENTS },fetchPolicy:'cache-only' })
+  const { data } = useQuery(GET_STUDENTS, {
+    variables: { id: GeneralFragmentID.STUDENTS },
+    fetchPolicy: 'cache-only',
+  })
   const students = data?.generalFragment?.students
   return { students }
 }

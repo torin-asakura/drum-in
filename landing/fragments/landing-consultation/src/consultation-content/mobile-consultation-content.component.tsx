@@ -1,6 +1,5 @@
-import { useConsultation } from '@globals/data/src'
-import React               from 'react'
-import { FC }              from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
 
 import { RoundedLineIcon }          from '@ui/icons'
 import { Column }                   from '@ui/layout'
@@ -8,18 +7,15 @@ import { Layout }                   from '@ui/layout'
 import { Box }                      from '@ui/layout'
 import { Row }                      from '@ui/layout'
 import { Text }                     from '@ui/text'
+import { useConsultation }          from '@globals/data/src'
 
 import { ConsultationContentProps } from './consultation-content.interfaces'
 import { ConsultationForm }         from './form'
 
-const MobileConsultationContent: FC<ConsultationContentProps> = ({
-  setVisibleModal,
-}) => {
+const MobileConsultationContent: FC<ConsultationContentProps> = ({ setVisibleModal }) => {
+  const { consultationData } = useConsultation()
 
-  const {consultationData} = useConsultation()
-
-
-  return(
+  return (
     <Row height={472}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
       <Column width='100%'>

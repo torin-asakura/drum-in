@@ -1,27 +1,23 @@
-import { useTeacher } from '@globals/data/src'
-import React          from 'react'
-import { FC }         from 'react'
-import { forwardRef } from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
+import { forwardRef }        from 'react'
 
 import { Box }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Layout }            from '@ui/layout'
 import { Row }               from '@ui/layout'
 import { Text }              from '@ui/text'
+import { useTeacher }        from '@globals/data/src'
 
 import { EducationMobile }   from './education-mobile'
 import { Info }              from './info'
 import { SliderBlock }       from './slider'
 import { TeacherBlockProps } from './teacher.interfaces'
 
-const TeacherBlock: FC<TeacherBlockProps> = forwardRef((
-  {  playSong, setPlaySong },
-  ref: any
-) => {
+const TeacherBlock: FC<TeacherBlockProps> = forwardRef(({ playSong, setPlaySong }, ref: any) => {
+  const { teacherData } = useTeacher()
 
-  const {teacherData} = useTeacher()
-
-  return(
+  return (
     <Row flexWrap='wrap' justifyContent={['center', 'center', 'center', 'center']} ref={ref}>
       <Box width={['100%', '100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -34,7 +30,11 @@ const TeacherBlock: FC<TeacherBlockProps> = forwardRef((
               fontWeight='bold'
               fontSize={['medium', 'moderate', 'moderate', 'big']}
               lineHeight='default'
-              color={['text.transparentSmokyWhite', 'text.transparentSmokyWhite', 'text.smokyWhite']}
+              color={[
+                'text.transparentSmokyWhite',
+                'text.transparentSmokyWhite',
+                'text.smokyWhite',
+              ]}
             >
               {teacherData?.subtitle}
             </Text>

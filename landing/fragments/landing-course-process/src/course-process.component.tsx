@@ -1,22 +1,21 @@
-import { useProcessEducation } from '@globals/data/src'
 import React                   from 'react'
 import { FC }                  from 'react'
 
-import { Box }                from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Text }               from '@ui/text'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Text }                from '@ui/text'
+import { useProcessEducation } from '@globals/data/src'
 
-import { CourseProcessProps } from './course-process.interfaces'
-import { DesktopSlider }      from './desktop-slider'
-import { MobileSlider }       from './mobile-slider'
+import { CourseProcessProps }  from './course-process.interfaces'
+import { DesktopSlider }       from './desktop-slider'
+import { MobileSlider }        from './mobile-slider'
 
-const CourseProcessBlock: FC<CourseProcessProps> = ( ) => {
+const CourseProcessBlock: FC<CourseProcessProps> = () => {
+  const { processEducationData } = useProcessEducation()
 
-  const {processEducationData} = useProcessEducation()
-
-  return(
+  return (
     <Row justifyContent='center' flexWrap='wrap'>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

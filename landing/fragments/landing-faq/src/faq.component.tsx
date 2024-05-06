@@ -1,4 +1,3 @@
-import { useFaq }           from '@globals/data/src'
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
@@ -10,16 +9,16 @@ import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
+import { useFaq }           from '@globals/data/src'
 
 import { FaqProps }         from './faq.interfaces'
 import { ListDesktop }      from './list-desktop'
 import { ListMobile }       from './list-mobile'
 
-const FaqBlock: FC<FaqProps> = forwardRef(({ }, ref?: any) => {
+const FaqBlock: FC<FaqProps> = forwardRef(({}, ref?: any) => {
+  const { faqData } = useFaq()
 
-  const {faqData} = useFaq()
-
-  return(
+  return (
     <Row justifyContent='center' ref={ref}>
       <Box width={['100%', '100%', 1920]}>
         <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

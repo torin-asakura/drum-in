@@ -314,6 +314,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:shared/fragments/course-program-steps-information"\
     },\
     {\
+      "name": "@shared/main-scroll-container",\
+      "reference": "workspace:shared/fragments/main-scroll-container"\
+    },\
+    {\
       "name": "@shared/seo-fragment",\
       "reference": "workspace:shared/fragments/seo"\
     },\
@@ -504,6 +508,7 @@ const RAW_RUNTIME_STATE =
     ["@shared/course-program-steps", ["virtual:d7f9cf947b1b20fe386ddf41575c9de6e33344c41a1404afe3a18f0bb899015cea5afaf686d3488d0d38972c7d111d9d6d3f8aebc13e74d8ddd49098675028a5#workspace:shared/fragments/course-program-steps", "virtual:f3031278c4a0530bfc48baf9f29d0e154195a4cd1f7d62fdedab3a2969eda8e4bd7e8317b00372a5116cde72533332063cd44635706fa8f93780561415c3176f#workspace:shared/fragments/course-program-steps", "workspace:shared/fragments/course-program-steps"]],\
     ["@shared/course-program-steps-information", ["virtual:6cb472b6552b2c10f4f5792c664672c92744ad8ebe5c3c1e0496515dd220fdfe8764799d528697cb6c24c640645bc39cac3fee4784e325065da550366bce5a40#workspace:shared/fragments/course-program-steps-information", "virtual:7a26eb20a37416891fe6df30becf312cb5160bdad2feb77a89a3f66e6fc749d1afb27bb80a7b1dc7a7bae78e3748d63c20b3b8a60c7931a301441661e152f56c#workspace:shared/fragments/course-program-steps-information", "virtual:8eab175eb1a582d12231e2a201c04f993750fef36679e0f5ce40164871fa49973d6b1cec360073358b95906f7d3ebf506964c77989e8b4be8bb07a4c36c61a2f#workspace:shared/fragments/course-program-steps-information", "virtual:9d863786e7d10436473d42e5cb514e7a8cf3d276d7b38f616074c474413b0d07dc50844f81600507b597399d9c4f1204e5965b4a14d24e5261ce611e3f64a679#workspace:shared/fragments/course-program-steps-information", "virtual:ae29eb03cd6e59df149f7c898a11383fc014952a008d89e95826ee49d2f28f4a9571c82e958d760a9c13746e9ab340c296dcc37ea314db032f902868813cda4b#workspace:shared/fragments/course-program-steps-information", "virtual:d6ac1c2d5179fa2d157796a870add406953dd1ef9525fc183a4242b94633ec2adcd2e6286b7702a5827e615501908b678da45cf32910c70bb8f5e91020e7a79a#workspace:shared/fragments/course-program-steps-information", "workspace:shared/fragments/course-program-steps-information"]],\
     ["@shared/data", ["virtual:54fa3fe04d040d7e53d9e57da974b69ff017adc440d07822dfcba4225c0040aa2a47f3b9456938c4eebdf3c45e22a2646c0b2a6b0c7e55b56b777cc1af888139#workspace:shared/data", "virtual:56f503afbc55d8d6af53c3dc7b454c8f2e34acec5ad5f49580ff2f40335f1246c31881945d0cb873b82a51825a440ee5d6bdcd59fb676154b4a28d97157c6af8#workspace:shared/data", "workspace:shared/data"]],\
+    ["@shared/main-scroll-container", ["virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:shared/fragments/main-scroll-container", "workspace:shared/fragments/main-scroll-container"]],\
     ["@shared/seo-fragment", ["virtual:37739a861a684a5eb5559eac24d82693ded4621e488c50da81a966eb4ea849154758743bea80218d971520de2c348231f3b7ff5ddf62ce999c288cba54aea30c#workspace:shared/fragments/seo", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:shared/fragments/seo", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/seo", "workspace:shared/fragments/seo"]],\
     ["@shared/utils", ["workspace:shared/utils"]],\
     ["@shared/validators", ["workspace:shared/validators"]],\
@@ -12499,7 +12504,9 @@ const RAW_RUNTIME_STATE =
           ["@landing/price-polyrhythmic-keys-fragment", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"],\
           ["@landing/start-learning-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-start-learning"],\
           ["@landing/teacher-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:landing/fragments/landing-teacher"],\
+          ["@shared/main-scroll-container", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:shared/fragments/main-scroll-container"],\
           ["@shared/seo-fragment", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:shared/fragments/seo"],\
+          ["@shared/utils", "workspace:shared/utils"],\
           ["@types/apollo__client", null],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
@@ -12557,7 +12564,9 @@ const RAW_RUNTIME_STATE =
           ["@landing/price-polyrhythmic-keys-fragment", "virtual:58c9b4a69af26f8d264b9eeeda068198ad8c2aa6f6545be250e422f00d5c6b78a62cd9fee0b85e5222a500f5ca9f4dc7bc8b07db5507a409e739f679169ab8ac#workspace:landing/pages/polyrhythmic-keys-page/fragments/landing-price-polyrhythmic-keys"],\
           ["@landing/start-learning-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:landing/fragments/landing-start-learning"],\
           ["@landing/teacher-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:landing/fragments/landing-teacher"],\
+          ["@shared/main-scroll-container", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:shared/fragments/main-scroll-container"],\
           ["@shared/seo-fragment", "virtual:8f02cb883098f3b9dfaf25d1789ad4d1121141e6656ce4e0d7e413c8c885cf08784bd9fc9fd6e03b6741cc5c57fc7eb7f55a5016a6993905dc34153bc3c10cf0#workspace:shared/fragments/seo"],\
+          ["@shared/utils", "workspace:shared/utils"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.17"],\
           ["@ui/layout", "virtual:c38c12ba2f876f43056ddb86374f602967573b2cb1bed7599d3b8590812164a5a3c52e906a751efd0b566641b6d0060681a822e20ee6da7aeb4396f378cb8948#workspace:ui/layout"],\
@@ -15399,6 +15408,29 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@shared/data", "workspace:shared/data"],\
           ["react", "npm:18.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@shared/main-scroll-container", [\
+      ["virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:shared/fragments/main-scroll-container", {\
+        "packageLocation": "./.yarn/__virtual__/@shared-main-scroll-container-virtual-e5a54ec56c/1/shared/fragments/main-scroll-container/",\
+        "packageDependencies": [\
+          ["@shared/main-scroll-container", "virtual:4e2d2e19246a0dc9cd91d5dec8e53b92ee6de7fa8f0b86a580790a2df5b9c0223eea7d6cac589e28eea1d85114f0541d59c7c0f10e69721501060e88fb61bfcc#workspace:shared/fragments/main-scroll-container"],\
+          ["@types/react", "npm:18.2.20"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:shared/fragments/main-scroll-container", {\
+        "packageLocation": "./shared/fragments/main-scroll-container/",\
+        "packageDependencies": [\
+          ["@shared/main-scroll-container", "workspace:shared/fragments/main-scroll-container"],\
+          ["@types/react", "npm:18.2.20"]\
         ],\
         "linkType": "SOFT"\
       }]\

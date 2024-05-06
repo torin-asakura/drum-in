@@ -1,6 +1,9 @@
+import React                               from 'react'
+import { FC }                              from 'react'
+import { useRef }                          from 'react'
+import { useState }                        from 'react'
+
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
-import { PageID }                          from '@globals/data/src'
-import { useSeo }                          from '@globals/data/src'
 import { CourseProcessBlock }              from '@landing/course-process-fragment'
 import { CtaBlock }                        from '@landing/cta-fragment'
 import { FaqBlock }                        from '@landing/faq'
@@ -12,73 +15,36 @@ import { ModalMobileFormPolyrhythmicKeys } from '@landing/modal-form-polyrhythmi
 import { PricePolyrhythmicKeyslBlock }     from '@landing/price-polyrhythmic-keys-fragment'
 import { StartLearningBlock }              from '@landing/start-learning-fragment'
 import { TeacherBlock }                    from '@landing/teacher-fragment'
+import { MainScrollContainer }              from '@shared/main-scroll-container'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
-import React                               from 'react'
-import { FC }                              from 'react'
-import { useRef }                          from 'react'
-import { useEffect }                       from 'react'
-import { useState }                        from 'react'
+import { usePlayer }                        from '@shared/utils'
 
-import { PolyrhythmicKeysProps } from './polyrhythmic-keys.interfaces'
-
+import { LOCOMOTIVE_SCROLL_WATCH }         from './polyrhythmic-keys.constacts'
+import { LOCOMOTIVE_SCROLL_OPTIONS }       from './polyrhythmic-keys.constacts'
+import { PolyrhythmicKeysProps }           from './polyrhythmic-keys.interfaces'
 
 export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
   polyrhythmicKeysData,
   background,
   songUrl,
-  SEO
+  SEO,
 }) => {
-
   const containerRef = useRef(null)
+  const { playSong, setPlaySong } = usePlayer(songUrl)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
-
-  const [playSong, setPlaySong] = useState<boolean>(false)
-  const songElement = useRef<HTMLAudioElement | undefined>()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && songUrl !== undefined) {
-      songElement.current = new Audio(songUrl || '')
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        songElement.current?.pause()
-        songElement.current = undefined
-      }
-    }
-  }, [songUrl])
-
-  useEffect(() => {
-    if (playSong) {
-      songElement?.current?.play()
-    } else {
-      songElement?.current?.pause()
-    }
-  }, [playSong])
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <HeaderBlock />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <HeroPolyrhythmicKeysBlock
             background={background}
             polyrhythmicKeysData={polyrhythmicKeysData}
@@ -96,18 +62,12 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PricePolyrhythmicKeyslBlock
-            polyrhythmicKeysData={polyrhythmicKeysData}
-          />
+          <PricePolyrhythmicKeyslBlock polyrhythmicKeysData={polyrhythmicKeysData} />
           <FaqBlock />
-          <CtaBlock
-          />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -121,7 +81,7 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock  />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -137,10 +97,10 @@ export const PolyrhythmicKeysPage: FC<PolyrhythmicKeysProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock  />
+              <FooterBlock />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}

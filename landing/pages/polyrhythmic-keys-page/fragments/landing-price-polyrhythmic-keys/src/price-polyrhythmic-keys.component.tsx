@@ -10,9 +10,7 @@ import { Text }                       from '@ui/text'
 import { Content }                    from './content'
 import { PricePolyrhythmicKeysProps } from './price-polyrhythmic-keys.interfaces'
 
-const PricePolyrhythmicKeyslBlock: FC<PricePolyrhythmicKeysProps> = ({
-  polyrhythmicKeysData,
-}) => (
+const PricePolyrhythmicKeyslBlock: FC<PricePolyrhythmicKeysProps> = ({ polyrhythmicKeysData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -32,9 +30,7 @@ const PricePolyrhythmicKeyslBlock: FC<PricePolyrhythmicKeysProps> = ({
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
-        <Content
-          polyrhythmicKeysData={polyrhythmicKeysData}
-        />
+        <Content polyrhythmicKeysData={polyrhythmicKeysData} />
         <Layout flexBasis={[24, 32, 120]} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

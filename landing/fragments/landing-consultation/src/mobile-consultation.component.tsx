@@ -32,9 +32,7 @@ const MobileConsultation: FC<ConsultationProps> = ({
       id='modal-form-mobile'
     >
       <ContainerMobile scroll={scroll}>
-        <MobileConsultationContent
-          setVisibleModal={setVisibleModal}
-        />
+        <MobileConsultationContent setVisibleModal={setVisibleModal} />
       </ContainerMobile>
     </motion.div>
   </Renderer>
