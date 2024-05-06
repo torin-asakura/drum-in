@@ -22,7 +22,6 @@ export enum ModuleID {
   FAQ = 'faq',
   CTA = 'cta',
   FOOTER = 'footer',
-
 }
 
 export const MODULES_ORDER = [
@@ -33,5 +32,5 @@ export const MODULES_ORDER = [
   ModuleID.STUDENTS,
   ModuleID.FAQ,
   ModuleID.CTA,
-  ModuleID.FOOTER
+  ModuleID.FOOTER,
 ]

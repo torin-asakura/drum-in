@@ -14,10 +14,7 @@ import { PrivacyPolicyPageProps }    from './privacy-policy-page.interfaces'
 import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constacts'
 
-export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
-  SEO,
-  privacyPolicy,
-}) => {
+export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ SEO, privacyPolicy }) => {
   const containerRef = useRef(null)
 
   return (
@@ -27,7 +24,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
         containerRef={containerRef}
         watch={LOCOMOTIVE_SCROLL_WATCH}
       >
-        <HeaderBlock/>
+        <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />

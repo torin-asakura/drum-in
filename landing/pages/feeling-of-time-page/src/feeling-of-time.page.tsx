@@ -43,7 +43,7 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock/>
+        <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroFeelingOfTimeBlock background={background} feelingOfTimeData={feelingOfTimeData} />
@@ -60,19 +60,12 @@ export const FeelingOfTimePage: FC<FeelingOfTimeProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceFeelingOfTimeBlock
-            paymentSettingsData={{}}
-            feelingOfTimeData={feelingOfTimeData}
-          />
+          <PriceFeelingOfTimeBlock paymentSettingsData={{}} feelingOfTimeData={feelingOfTimeData} />
           <FaqBlock />
-          <CtaBlock
-          />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'

@@ -43,7 +43,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock/>
+        <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
@@ -60,19 +60,12 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceSeventhHeavenBlock
-            paymentSettingsData={{}}
-            seventhHeavenData={seventhHeavenData}
-          />
-          <FaqBlock/>
-          <CtaBlock
-          />
+          <PriceSeventhHeavenBlock paymentSettingsData={{}} seventhHeavenData={seventhHeavenData} />
+          <FaqBlock />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -117,7 +110,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormSeventhHeaven
-          paymentSettingsData={{ }}
+          paymentSettingsData={{}}
           seventhHeavenData={seventhHeavenData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

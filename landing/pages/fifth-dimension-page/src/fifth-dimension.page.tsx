@@ -43,7 +43,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock/>
+        <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroFifthDimensionBlock
@@ -63,10 +63,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PriceFifthDimensionBlock
@@ -74,8 +71,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
             fifthDimensionData={fifthDimensionData}
           />
           <FaqBlock />
-          <CtaBlock
-          />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'

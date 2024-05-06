@@ -1,4 +1,3 @@
-import { PaymentSettingsDataProps } from '@globals/data'
 import { IndividualCourseDataType } from '@globals/data'
 import { RolePaymentForm }          from '@shared/constants'
 
@@ -8,5 +7,4 @@ export interface ModalFormConnacolProps {
   onClose: () => any
   scroll?: boolean
   connacolData: IndividualCourseDataType
-  paymentSettingsData: PaymentSettingsDataProps
 }

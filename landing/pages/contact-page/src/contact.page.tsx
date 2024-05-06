@@ -1,12 +1,12 @@
-import { MainScrollContainer } from '@shared/main-scroll-container/src'
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useRef }              from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
 import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
 import { ContactBlock }              from '@landing/contact-fragment'
 import { FooterBlock }               from '@landing/footer-fragment'
 import { HeaderBlock }               from '@landing/header-fragment'
+import { MainScrollContainer }       from '@shared/main-scroll-container/src'
 import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
 
@@ -14,10 +14,7 @@ import { ContactPageProps }          from './contact-page.interfaces'
 import { LOCOMOTIVE_SCROLL_WATCH }   from './contact.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './contact.constacts'
 
-export const ContactPage: FC<ContactPageProps> = ({
-  SEO,
-  contactsData,
-}) => {
+export const ContactPage: FC<ContactPageProps> = ({ SEO, contactsData }) => {
   const containerRef = useRef(null)
 
   return (
@@ -27,7 +24,7 @@ export const ContactPage: FC<ContactPageProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock/>
+        <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <Box

@@ -13,7 +13,7 @@ import { useFaq }           from '@globals/data/src'
 import { ListDesktop }      from './list-desktop'
 import { ListMobile }       from './list-mobile'
 
-const FaqBlock = forwardRef(({}, ref?: any) => {
+const FaqBlock = forwardRef(({...props},ref?: any) => {
   const { faqData } = useFaq()
   return (
     <Row justifyContent='center' ref={ref}>

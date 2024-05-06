@@ -1,13 +1,14 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { CtaBlock }                 from '@landing/cta-fragment'
-import { FaqBlock }                 from '@landing/faq'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { Hero }                     from '@landing/hero-fragment'
-import { LearningProcessBlock }     from '@landing/learning-process-fragment'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
+
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { CtaBlock }                  from '@landing/cta-fragment'
+import { FaqBlock }                  from '@landing/faq'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { Hero }                      from '@landing/hero-fragment'
+import { LearningProcessBlock }      from '@landing/learning-process-fragment'
 import { StudentsBlock }             from '@landing/learning-students'
 import { PrivateLessonBlock }        from '@landing/private-lesson-fragment'
 import { TeacherBlock }              from '@landing/teacher-fragment'
@@ -17,13 +18,14 @@ import { Box }                       from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { SpyScroll }                 from '@ui/spy-scroll'
 import { SpyScrollProvider }         from '@ui/spy-scroll'
+import { usePlayer }                 from '@shared/utils'
 import { useIntersectionObserver }   from '@ui/intersection-observer'
 import { useSpyScroll }              from '@ui/spy-scroll'
+
 import { ModuleID }                  from './index-page.constacts'
 import { MODULES_ORDER }             from './index-page.constacts'
 import { LOCOMOTIVE_SCROLL_WATCH }   from './index-page.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './index-page.constacts'
-import {usePlayer}                   from '@shared/utils'
 import { IndexPageProps }            from './index-page.interfaces'
 
 export const HomePage: FC<IndexPageProps> = ({
@@ -35,9 +37,9 @@ export const HomePage: FC<IndexPageProps> = ({
 }) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
-  const {playSong,setPlaySong} = usePlayer(songUrl)
+  const { playSong, setPlaySong } = usePlayer(songUrl)
   // @ts-ignore next-line
-  const { getObserverOptions } = useIntersectionObserver((id:ModuleID) => {
+  const { getObserverOptions } = useIntersectionObserver((id: ModuleID) => {
     spyScrollStore.setActive(MODULES_ORDER.indexOf(id))
   })
 
@@ -49,7 +51,7 @@ export const HomePage: FC<IndexPageProps> = ({
         containerRef={containerRef}
       >
         <SpyScrollProvider>
-          <HeaderBlock/>
+          <HeaderBlock />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo seo={SEO} />
           <MainScrollContainer containerRef={containerRef}>
@@ -98,7 +100,7 @@ export const HomePage: FC<IndexPageProps> = ({
               studentsData={studentsData}
               {...getObserverOptions(ModuleID.STUDENTS)}
             />
-            <FaqBlock  {...getObserverOptions(ModuleID.FAQ)} />
+            <FaqBlock {...getObserverOptions(ModuleID.FAQ)} />
             <CtaBlock {...getObserverOptions(ModuleID.CTA)} />
             <Box
               display={['none', 'none', 'flex']}

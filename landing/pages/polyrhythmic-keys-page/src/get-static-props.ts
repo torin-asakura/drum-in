@@ -1,3 +1,5 @@
+/* eslint-disable one-var */
+
 import { GET_PAYMENT_SETTINGS }  from '@globals/data'
 import { FormID }                from '@globals/data'
 import { GET_CONSULTATION_FORM } from '@globals/data'
@@ -112,9 +114,7 @@ export const getStaticProps = async () => {
       consultationFormPromise,
       paymentSettingsPromise,
     ])
-  } catch (err) {
-    console.error('Error fetching data:', err)
-  }
+  } catch (err) {}
 
   const consultationFormData = consultationFormContent?.value?.data?.form || null
   const faqData = faqContent?.value?.data?.faq?.content || null

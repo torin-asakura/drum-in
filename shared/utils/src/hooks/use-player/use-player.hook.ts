@@ -2,9 +2,9 @@ import { useEffect }     from 'react'
 import { useState }      from 'react'
 import { useRef }        from 'react'
 
-import { usePlayerType } from './use-player.interfaces'
+import { UsePlayerType } from './use-player.interfaces'
 
-export const usePlayer: usePlayerType = (songUrl) => {
+export const usePlayer: UsePlayerType = (songUrl) => {
   const [playSong, setPlaySong] = useState<boolean>(false)
   const songElement = useRef<HTMLAudioElement | undefined>()
 

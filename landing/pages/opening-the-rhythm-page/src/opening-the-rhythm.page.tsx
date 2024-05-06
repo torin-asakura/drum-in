@@ -44,7 +44,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock/>
+        <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
@@ -62,19 +62,15 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PriceOpeningTheRhythmBlock
-            paymentSettingsData={{ }}
+            paymentSettingsData={{}}
             openingTheRhythm={openingTheRhythm}
           />
-          <FaqBlock  />
-          <CtaBlock
-          />
+          <FaqBlock />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -88,7 +84,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock  />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -113,13 +109,13 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormOpeningTheRhythm
-          paymentSettingsData={{ }}
+          paymentSettingsData={{}}
           openingTheRhythm={openingTheRhythm}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
-          paymentSettingsData={{ }}
+          paymentSettingsData={{}}
           openingTheRhythm={openingTheRhythm}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

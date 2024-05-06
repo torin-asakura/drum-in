@@ -15,7 +15,7 @@ import { ModalMobileFormConnacol }   from '@landing/modal-form-connacol'
 import { PriceConnacolBlock }        from '@landing/price-connacol-fragment'
 import { StartLearningBlock }        from '@landing/start-learning-fragment'
 import { TeacherBlock }              from '@landing/teacher-fragment'
-import { MainScrollContainer }        from '@shared/main-scroll-container'
+import { MainScrollContainer }       from '@shared/main-scroll-container'
 import { Seo }                       from '@shared/seo-fragment'
 import { Box }                       from '@ui/layout'
 import { usePlayer }                 from '@shared/utils/src'
@@ -24,12 +24,7 @@ import { LOCOMOTIVE_SCROLL_WATCH }   from './connacol.constacts'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './connacol.constacts'
 import { ConnacolPageProps }         from './connacol.interfaces'
 
-export const ConnacolPage: FC<ConnacolPageProps> = ({
-  SEO,
-  connacolData,
-  background,
-  songUrl,
-}) => {
+export const ConnacolPage: FC<ConnacolPageProps> = ({ SEO, connacolData, background, songUrl }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
@@ -43,7 +38,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
         watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
       >
-        <HeaderBlock/>
+        <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
           <HeroConnacolBlock background={background} connacolData={connacolData} />
@@ -60,19 +55,12 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceConnacolBlock
-            paymentSettingsData={{}}
-            connacolData={connacolData}
-          />
-          <FaqBlock  />
-          <CtaBlock
-          />
+          <PriceConnacolBlock paymentSettingsData={{}} connacolData={connacolData} />
+          <FaqBlock />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
