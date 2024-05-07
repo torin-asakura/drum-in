@@ -23,7 +23,7 @@ export const getStaticProps = async () => {
 
     const seoPromise = client.query({
       query: GET_SEO,
-      variables: { id: PageID.CONNACOL },
+      variables: { id: PageID.CONTACT },
     })
 
     const headerPromise = client.query({
