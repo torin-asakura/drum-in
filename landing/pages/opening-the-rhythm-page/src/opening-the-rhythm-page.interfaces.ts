@@ -12,7 +12,7 @@ import { OpeningTheRhythmBackgroundProps } from '@globals/data/src'
 import { OpeningTheRhythmDataProps }       from '@globals/data/src'
 
 export interface OpeningTheRhythmPageProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
+  openingTheRhythmData?: OpeningTheRhythmDataProps | null
   background?: OpeningTheRhythmBackgroundProps | null
   songUrl: SongUrlType
   headerData: HeaderDataProps

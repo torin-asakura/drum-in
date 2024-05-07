@@ -9,7 +9,7 @@ import { OneTimePaymentPrompt }    from '@ui/one-time-payment-prompt'
 
 import { FullPriceProps }          from './full-price.interfaces'
 
-const FullPrice: FC<FullPriceProps> = ({ connacolData, fullCost, paymentSettingsData }) => {
+const FullPrice: FC<FullPriceProps> = ({ connacolData, fullCost }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const showDesktopModal = () => setVisibleModal(true)
@@ -20,7 +20,6 @@ const FullPrice: FC<FullPriceProps> = ({ connacolData, fullCost, paymentSettings
       showDesktopModal={showDesktopModal}
       desktopModal={
         <ModalFormConnacol
-          paymentSettingsData={paymentSettingsData}
           paymentPlan={RolePaymentForm.OneTimePayment}
           connacolData={connacolData}
           activeRender={visibleModal}
@@ -30,7 +29,6 @@ const FullPrice: FC<FullPriceProps> = ({ connacolData, fullCost, paymentSettings
       showMobileModal={showMobileModal}
       mobileModal={
         <ModalMobileFormConnacol
-          paymentSettingsData={paymentSettingsData}
           paymentPlan={RolePaymentForm.OneTimePayment}
           connacolData={connacolData}
           activeRender={visibleModalMobile}

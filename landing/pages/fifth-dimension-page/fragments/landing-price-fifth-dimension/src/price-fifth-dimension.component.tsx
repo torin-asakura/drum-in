@@ -10,10 +10,7 @@ import { Text }                     from '@ui/text'
 import { Content }                  from './content'
 import { PriceFifthDimensionProps } from './price-fifth-dimension.interfaces'
 
-const PriceFifthDimensionBlock: FC<PriceFifthDimensionProps> = ({
-  fifthDimensionData,
-  paymentSettingsData,
-}) => (
+const PriceFifthDimensionBlock: FC<PriceFifthDimensionProps> = ({ fifthDimensionData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -33,10 +30,7 @@ const PriceFifthDimensionBlock: FC<PriceFifthDimensionProps> = ({
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
-        <Content
-          fifthDimensionData={fifthDimensionData}
-          paymentSettingsData={paymentSettingsData}
-        />
+        <Content fifthDimensionData={fifthDimensionData} />
         <Layout flexBasis={[24, 32, 120]} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

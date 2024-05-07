@@ -15,25 +15,19 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Space }                  from '@ui/text'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
-const ContentDesktop: FC<ContentProps> = ({
-  connacolData,
-  onClose,
-  roleVar,
-  options,
-  setRole,
-  paymentSettingsData,
-}) => {
+const ContentDesktop: FC<ContentProps> = ({ connacolData, onClose, roleVar, options, setRole }) => {
   const installmentAmount = connacolData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = connacolData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
   const { formatMessage } = useIntl()
-
+  const { paymentSettingsData } = usePaymentSettings()
   return (
     <>
       <Box

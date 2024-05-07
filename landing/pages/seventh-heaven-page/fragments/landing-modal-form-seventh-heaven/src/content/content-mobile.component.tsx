@@ -12,24 +12,21 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
-const ContentMobile: FC<ContentProps> = ({
-  seventhHeavenData,
-  roleVar,
-  options,
-  setRole,
-  onClose,
-  paymentSettingsData
-}) => {
+const ContentMobile: FC<ContentProps> = ({   onClose,
+  seventhHeavenData, roleVar, options, setRole }) => {
   const installmentAmount = seventhHeavenData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = seventhHeavenData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
   const { formatMessage } = useIntl()
+  const { paymentSettingsData } = usePaymentSettings()
+
   return (
     <Row height={540}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

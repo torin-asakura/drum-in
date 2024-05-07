@@ -10,7 +10,7 @@ import { Text }               from '@ui/text'
 import { Content }            from './content'
 import { PriceConnacolProps } from './price-connacol.interfaces'
 
-const PriceConnacolBlock: FC<PriceConnacolProps> = ({ connacolData, paymentSettingsData }) => (
+const PriceConnacolBlock: FC<PriceConnacolProps> = ({ connacolData }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -30,7 +30,7 @@ const PriceConnacolBlock: FC<PriceConnacolProps> = ({ connacolData, paymentSetti
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
-        <Content connacolData={connacolData} paymentSettingsData={paymentSettingsData} />
+        <Content connacolData={connacolData} />
         <Layout flexBasis={[24, 32, 120]} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

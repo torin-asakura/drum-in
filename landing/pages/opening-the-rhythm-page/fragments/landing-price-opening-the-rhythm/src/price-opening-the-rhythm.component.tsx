@@ -10,10 +10,7 @@ import { Text }                       from '@ui/text'
 import { Content }                    from './content'
 import { PriceOpeningTheRhythmProps } from './price-opening-the-rhythm.interfaces'
 
-const PriceOpeningTheRhythmBlock: FC<PriceOpeningTheRhythmProps> = ({
-  openingTheRhythm,
-  paymentSettingsData,
-}) => (
+const PriceOpeningTheRhythmBlock: FC<PriceOpeningTheRhythmProps> = ({ openingTheRhythm }) => (
   <Row justifyContent='center'>
     <Box width={['100%', '100%', 1920]}>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />
@@ -33,7 +30,7 @@ const PriceOpeningTheRhythmBlock: FC<PriceOpeningTheRhythmProps> = ({
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
-        <Content openingTheRhythm={openingTheRhythm} paymentSettingsData={paymentSettingsData} />
+        <Content openingTheRhythm={openingTheRhythm} />
         <Layout flexBasis={[24, 32, 120]} />
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

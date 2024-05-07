@@ -58,7 +58,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ SEO, connacolData, backgro
               <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceConnacolBlock paymentSettingsData={{}} connacolData={connacolData} />
+          <PriceConnacolBlock connacolData={connacolData} />
           <FaqBlock />
           <CtaBlock />
           <Box
@@ -99,13 +99,11 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({ SEO, connacolData, backgro
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormConnacol
-          paymentSettingsData={{}}
           connacolData={connacolData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormConnacol
-          paymentSettingsData={{}}
           connacolData={connacolData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

@@ -15,11 +15,11 @@ import { CourseID }              from '@globals/data'
 import { GET_INDIVIDUAL_COURSE } from '@globals/data'
 import { PageID }                from '@globals/data'
 import { GET_SEO }               from '@globals/data'
-import { initializeApollo }      from '@globals/data'
+import { useApolloOnServer }     from '@globals/data'
 import { addApolloState }        from '@globals/data'
 
 export const getStaticProps = async () => {
-  const client = initializeApollo({})
+  const client = useApolloOnServer({})
 
   let course,
     seoData,

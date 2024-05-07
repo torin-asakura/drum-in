@@ -12,6 +12,7 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
@@ -19,15 +20,12 @@ import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
 const ContentMobile: FC<ContentProps> = ({
-  feelingOfTimeData,
-  roleVar,
-  options,
-  setRole,
+  feelingOfTimeData, roleVar, options, setRole
   onClose,
-  paymentSettingsData
+
 }) => {
   const { formatMessage } = useIntl()
-
+  const { paymentSettingsData } = usePaymentSettings()
   const installmentAmount = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = feelingOfTimeData?.individualCourseData?.price?.fullPrice
 

@@ -13,7 +13,6 @@ import { ContentMobile }               from './content'
 import { ModalFormSeventhHeavenProps } from './modal-form-seventh-heaven.interfaces'
 
 const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
-  paymentSettingsData,
   paymentPlan,
   seventhHeavenData,
   activeRender,
@@ -74,7 +73,6 @@ const ModalMobileFormSeventhHeaven: FC<ModalFormSeventhHeavenProps> = ({
       >
         <ContainerMobile scroll={scroll}>
           <ContentMobile
-            paymentSettingsData={paymentSettingsData}
             onClose={onClose}
             seventhHeavenData={seventhHeavenData}
             roleVar={roleVar}

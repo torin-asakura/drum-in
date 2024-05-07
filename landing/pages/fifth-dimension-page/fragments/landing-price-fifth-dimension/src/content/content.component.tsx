@@ -19,7 +19,7 @@ import { FullPrice }                     from './full-price'
 import { ShortCourseContentList }        from './short-course-content-list'
 import { Title }                         from './title'
 
-const Content: FC<ContentProps> = ({ fifthDimensionData, paymentSettingsData }) => {
+const Content: FC<ContentProps> = ({ fifthDimensionData }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
   const { formatMessage } = useIntl()
@@ -66,11 +66,7 @@ const Content: FC<ContentProps> = ({ fifthDimensionData, paymentSettingsData }) 
           </Button>
         </Box>
         <Layout flexBasis={[44, 70, 96]} />
-        <FullPrice
-          paymentSettingsData={paymentSettingsData}
-          fifthDimensionData={fifthDimensionData}
-          fullCost={fullPrice}
-        />
+        <FullPrice fifthDimensionData={fifthDimensionData} fullCost={fullPrice} />
         <Layout flexBasis={[16, 18, 20]} />
         <Box>
           <Text
@@ -117,13 +113,11 @@ const Content: FC<ContentProps> = ({ fifthDimensionData, paymentSettingsData }) 
           </Button>
         </Box>
         <ModalFormFifthDimension
-          paymentSettingsData={paymentSettingsData}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFifthDimension
-          paymentSettingsData={paymentSettingsData}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

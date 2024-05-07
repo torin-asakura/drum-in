@@ -21,7 +21,6 @@ const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
   activeRender,
   onClose,
   scroll = true,
-  paymentSettingsData,
 }) => {
   const [roleVar, setRole] = useState<Array<RolePaymentForm>>(
     paymentPlan ? [paymentPlan] : [RolePaymentForm.InstallmentPlan]
@@ -81,7 +80,6 @@ const ModalFormFeelingOfTime: FC<ModalFormFeelingOfTimeProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
-                paymentSettingsData={paymentSettingsData}
                 feelingOfTimeData={feelingOfTimeData}
                 onClose={onClose}
                 roleVar={roleVar}

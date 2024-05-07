@@ -28,7 +28,7 @@ import { LOCOMOTIVE_SCROLL_OPTIONS }       from './opening-the-rhythm.constants'
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   SEO,
   background,
-  openingTheRhythm,
+  openingTheRhythmData,
   songUrl,
 }) => {
   const containerRef = useRef(null)
@@ -47,8 +47,11 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
         <HeaderBlock />
         <Seo seo={SEO} />
         <MainScrollContainer containerRef={containerRef}>
-          <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
-          <ProgramBlock openingTheRhythm={openingTheRhythm} />
+          <HeroOpeningTheRhythmBlock
+            background={background}
+            openingTheRhythm={openingTheRhythmData}
+          />
+          <ProgramBlock openingTheRhythm={openingTheRhythmData} />
           <CourseProcessBlock />
           <Box
             width='100%'
@@ -65,10 +68,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceOpeningTheRhythmBlock
-            paymentSettingsData={{}}
-            openingTheRhythm={openingTheRhythm}
-          />
+          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythmData} />
           <FaqBlock />
           <CtaBlock />
           <Box
@@ -109,14 +109,12 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormOpeningTheRhythm
-          paymentSettingsData={{}}
-          openingTheRhythm={openingTheRhythm}
+          openingTheRhythm={openingTheRhythmData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
-          paymentSettingsData={{}}
-          openingTheRhythm={openingTheRhythm}
+          openingTheRhythm={openingTheRhythmData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

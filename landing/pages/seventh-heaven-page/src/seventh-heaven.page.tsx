@@ -63,7 +63,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceSeventhHeavenBlock paymentSettingsData={{}} seventhHeavenData={seventhHeavenData} />
+          <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
           <FaqBlock />
           <CtaBlock />
           <Box
@@ -104,13 +104,11 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormSeventhHeaven
-          paymentSettingsData={{}}
           seventhHeavenData={seventhHeavenData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormSeventhHeaven
-          paymentSettingsData={{}}
           seventhHeavenData={seventhHeavenData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

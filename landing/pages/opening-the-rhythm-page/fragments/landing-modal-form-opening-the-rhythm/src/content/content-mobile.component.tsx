@@ -11,20 +11,19 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 import { useContent }             from './content.hook'
 
-const ContentMobile: FC<ContentProps> = ({
-  roleVar,
-  options,
-  setRole,
-  openingTheRhythm,
-  onClose,
-  paymentSettingsData
+const ContentMobile: FC<ContentProps> = ({   onClose,
+
+  roleVar, options, setRole, openingTheRhythm
 }) => {
+  const { paymentSettingsData } = usePaymentSettings()
+
   const { amount, recalculateAmount, months, recalculateMonths } = useContent(
     roleVar[0],
     openingTheRhythm

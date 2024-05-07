@@ -66,10 +66,7 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
               <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceFifthDimensionBlock
-            paymentSettingsData={{}}
-            fifthDimensionData={fifthDimensionData}
-          />
+          <PriceFifthDimensionBlock fifthDimensionData={fifthDimensionData} />
           <FaqBlock />
           <CtaBlock />
           <Box
@@ -110,13 +107,11 @@ export const FifthDimensionPage: FC<FifthDimensionProps> = ({
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormFifthDimension
-          paymentSettingsData={{}}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormFifthDimension
-          paymentSettingsData={{}}
           fifthDimensionData={fifthDimensionData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}

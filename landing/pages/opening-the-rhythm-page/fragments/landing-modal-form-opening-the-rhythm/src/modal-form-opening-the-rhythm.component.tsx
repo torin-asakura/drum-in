@@ -16,7 +16,6 @@ import { ContentDesktop }                 from './content'
 import { ModalFormOpeningTheRhythmProps } from './modal-form-opening-the-rhythm.interfaces'
 
 const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
-  paymentSettingsData,
   isOneTimePaymentPlan,
   activeRender,
   onClose,
@@ -81,7 +80,6 @@ const ModalFormOpeningTheRhythm: FC<ModalFormOpeningTheRhythmProps> = ({
             <Column width='100%'>
               <Layout flexBasis={[15, 42, 48]} flexShrink={0} />
               <ContentDesktop
-                paymentSettingsData={paymentSettingsData}
                 openingTheRhythm={openingTheRhythm}
                 onClose={onClose}
                 roleVar={roleVar}
