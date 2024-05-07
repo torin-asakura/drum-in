@@ -16,7 +16,6 @@ import { LOCOMOTIVE_SCROLL_OPTIONS } from './contact.constants'
 
 export const ContactPage: FC<ContactPageProps> = ({ SEO, contactsData }) => {
   const containerRef = useRef(null)
-
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
