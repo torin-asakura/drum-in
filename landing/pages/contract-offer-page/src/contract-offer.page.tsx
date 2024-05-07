@@ -35,7 +35,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({ SEO, contractOfferDa
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock />
+            <FooterBlock buttonUp={false} />
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -45,7 +45,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({ SEO, contractOfferDa
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock />
+            <FooterBlock buttonUp={false} />
           </Box>
         </MainScrollContainer>
       </LocomotiveScrollProvider>

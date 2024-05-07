@@ -15,16 +15,12 @@ import { CardsStudent }       from './cards-student'
 import { ModalWindow }        from './modal-window'
 import { StudentsBlockProps } from './students.interfaces'
 
-const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ mainData, studentsData }, ref: any) => {
+const StudentsBlock: FC<StudentsBlockProps> = forwardRef(({ mainData }, ref: any) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
 
   return (
     <>
-      <ModalWindow
-        studentsData={studentsData}
-        active={visibleModal}
-        onClose={() => setVisibleModal(false)}
-      />
+      <ModalWindow active={visibleModal} onClose={() => setVisibleModal(false)} />
       <Row justifyContent='center' ref={ref}>
         <Box width='100%'>
           <Column width='100%'>

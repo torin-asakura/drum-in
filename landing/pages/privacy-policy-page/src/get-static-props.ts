@@ -1,4 +1,5 @@
 /* eslint-disable one-var */
+/* eslint-disable prefer-const */
 
 import { GET_FOOTER }         from '@globals/data'
 import { GET_HEADER }         from '@globals/data'
@@ -6,58 +7,45 @@ import { GeneralFragmentID }  from '@globals/data'
 import { GET_PRIVACY_POLICY } from '@globals/data'
 import { PageID }             from '@globals/data'
 import { GET_SEO }            from '@globals/data'
-import { useApolloOnServer }     from '@globals/data'
-import { addApolloState }        from '@globals/data'
+import { initializeApollo }   from '@globals/data'
+import { addApolloState }     from '@globals/data'
 
 export const getStaticProps = async () => {
-  const client = useApolloOnServer({})
+  const client = initializeApollo({})
 
-  let
-    seoData,
-    header,
-    footerContent,
-    privacyPolicyContent
+  let seoData, header, footerContent, privacyPolicyContent
 
-  try {
+  const seoPromise = client.query({
+    query: GET_SEO,
+    variables: { id: PageID.PRIVACY_POLICY },
+  })
 
+  const headerPromise = client.query({
+    query: GET_HEADER,
+    variables: { id: GeneralFragmentID.HEADER },
+  })
 
-    const seoPromise = client.query({
-      query: GET_SEO,
-      variables: { id: PageID.PRIVACY_POLICY },
-    })
+  const footerPromise = client.query({
+    query: GET_FOOTER,
+    variables: { id: GeneralFragmentID.FOOTER },
+  })
 
-    const headerPromise = client.query({
-      query: GET_HEADER,
-      variables: { id: GeneralFragmentID.HEADER },
-    })
+  const privacyPolicyPromise = client.query({
+    query: GET_PRIVACY_POLICY,
+    variables: { id: GeneralFragmentID.PRIVACY_POLICY },
+  })
 
-    const footerPromise = client.query({
-      query: GET_FOOTER,
-      variables: { id: GeneralFragmentID.FOOTER },
-    })
-
-    const privacyPolicyPromise = client.query({
-            query: GET_PRIVACY_POLICY,
-            variables: { id: GeneralFragmentID.PRIVACY_POLICY },
-          })
-
-
-    ;[
-      seoData,
-      header,
-      privacyPolicyContent,
-      footerContent,
-    ] = await Promise.allSettled([
-      seoPromise,
-      headerPromise,
-      privacyPolicyPromise,
-      footerPromise,
-    ])
-  } catch (err) {}
+  ;[seoData, header, privacyPolicyContent, footerContent] = await Promise.allSettled([
+    seoPromise,
+    headerPromise,
+    privacyPolicyPromise,
+    footerPromise,
+  ])
 
   const footerData = footerContent?.value?.data?.footer || null
   const headerData = header?.value?.data?.generalFragment?.header || null
-  const privacyPolicyData = privacyPolicyContent?.value?.data?.generalFragment?.privacyPolicy || null
+  const privacyPolicyData =
+    privacyPolicyContent?.value?.data?.generalFragment?.privacyPolicy || null
   const SEO = {
     ...seoData?.value?.data?.page?.seo,
     ogLocale: 'ru_RU',

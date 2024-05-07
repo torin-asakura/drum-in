@@ -1,5 +1,6 @@
 import { SetStateAction }           from 'react'
 import { Dispatch }                 from 'react'
+
 import { IndividualCourseDataType } from '@globals/data/src'
 import { RolePaymentForm }          from '@shared/constants'
 

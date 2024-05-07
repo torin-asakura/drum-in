@@ -28,13 +28,7 @@ import { LOCOMOTIVE_SCROLL_WATCH }   from './index-page.constants'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './index-page.constants'
 import { IndexPageProps }            from './index-page.interfaces'
 
-export const HomePage: FC<IndexPageProps> = ({
-  SEO,
-  studentsData,
-  mainPageData,
-  background,
-  songUrl,
-}) => {
+export const HomePage: FC<IndexPageProps> = ({ SEO, mainPageData, background, songUrl }) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
   const { playSong, setPlaySong } = usePlayer(songUrl)
@@ -97,7 +91,6 @@ export const HomePage: FC<IndexPageProps> = ({
             <Layout height={[40, 0, 0, 0]} />
             <StudentsBlock
               mainData={mainPageData.students}
-              studentsData={studentsData}
               {...getObserverOptions(ModuleID.STUDENTS)}
             />
             <FaqBlock {...getObserverOptions(ModuleID.FAQ)} />

@@ -8,6 +8,6 @@ export const useStudents = () => {
     variables: { id: GeneralFragmentID.STUDENTS },
     fetchPolicy: 'cache-only',
   })
-  const students = data?.generalFragment?.students
-  return { students }
+  const studentsData = data?.generalFragment?.students
+  return { studentsData }
 }
