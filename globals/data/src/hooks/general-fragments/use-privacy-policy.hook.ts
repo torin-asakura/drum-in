@@ -8,6 +8,6 @@ export const usePrivacyPolicy = () => {
     variables: { id: GeneralFragmentID.PRIVACY_POLICY },
     fetchPolicy: 'cache-only',
   })
-  const privacyPolicy = data?.generalFragment?.privacyPolicy
-  return { privacyPolicy }
+  const privacyPolicyData = data?.generalFragment?.privacyPolicy
+  return { privacyPolicyData }
 }

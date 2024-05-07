@@ -41,7 +41,7 @@ export const ContactPage: FC<ContactPageProps> = ({ SEO, contactsData }) => {
               backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <ContactBlock contactsData={contactsData} />
+              <ContactBlock />
               <FooterBlock buttonUp={false} />
             </Box>
           </Box>
@@ -60,7 +60,7 @@ export const ContactPage: FC<ContactPageProps> = ({ SEO, contactsData }) => {
               backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <ContactBlock contactsData={contactsData} />
+              <ContactBlock />
               <FooterBlock buttonUp={false} />
             </Box>
           </Box>

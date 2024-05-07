@@ -8,6 +8,6 @@ export const useContacts = () => {
     variables: { id: GeneralFragmentID.CONTACTS },
     fetchPolicy: 'cache-only',
   })
-  const contacts = data?.generalFragment?.contacts
-  return { contacts }
+  const contactsData = data?.generalFragment?.contacts
+  return { contactsData }
 }
