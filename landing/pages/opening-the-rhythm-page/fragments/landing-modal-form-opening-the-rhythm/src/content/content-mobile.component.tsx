@@ -18,9 +18,13 @@ import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 import { useContent }             from './content.hook'
 
-const ContentMobile: FC<ContentProps> = ({   onClose,
+const ContentMobile: FC<ContentProps> = ({
+  onClose,
 
-  roleVar, options, setRole, openingTheRhythm
+  roleVar,
+  options,
+  setRole,
+  openingTheRhythm,
 }) => {
   const { paymentSettingsData } = usePaymentSettings()
 

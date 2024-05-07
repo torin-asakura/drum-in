@@ -36,7 +36,6 @@ export const HomePage: FC<IndexPageProps> = ({ SEO, mainPageData, background, so
   const { getObserverOptions } = useIntersectionObserver((id: ModuleID) => {
     spyScrollStore.setActive(MODULES_ORDER.indexOf(id))
   })
-
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider

@@ -1,8 +1,10 @@
-import React        from 'react'
-import { FC }       from 'react'
-import { Helmet }   from 'react-helmet'
+import React               from 'react'
+import { FC }              from 'react'
+import { Helmet }          from 'react-helmet'
 
-import { SeoProps } from './seo.interfaces'
+import { OG_IMAGE_HEIGHT } from './seo.constacts'
+import { OG_IMAGE_WIDTH }  from './seo.constacts'
+import { SeoProps }        from './seo.interfaces'
 
 export const Seo: FC<SeoProps> = ({ seo }) => {
   if (!seo) return null
@@ -26,8 +28,12 @@ export const Seo: FC<SeoProps> = ({ seo }) => {
           content: seo.opengraphImage?.mediaItemUrl,
         },
         {
-          property: 'image',
-          content: seo.opengraphImage?.mediaItemUrl,
+          property: 'og:image:width',
+          content: OG_IMAGE_WIDTH,
+        },
+        {
+          property: 'og:image:height',
+          content: OG_IMAGE_HEIGHT,
         },
         {
           name: 'description',

@@ -19,8 +19,13 @@ import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
-const ContentMobile: FC<ContentProps> = ({   onClose,
-  seventhHeavenData, roleVar, options, setRole }) => {
+const ContentMobile: FC<ContentProps> = ({
+  onClose,
+  seventhHeavenData,
+  roleVar,
+  options,
+  setRole,
+}) => {
   const installmentAmount = seventhHeavenData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = seventhHeavenData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)

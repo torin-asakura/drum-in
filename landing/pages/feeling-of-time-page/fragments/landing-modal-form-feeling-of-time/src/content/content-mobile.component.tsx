@@ -20,9 +20,11 @@ import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
 const ContentMobile: FC<ContentProps> = ({
-  feelingOfTimeData, roleVar, options, setRole
+  feelingOfTimeData,
+  roleVar,
+  options,
+  setRole,
   onClose,
-
 }) => {
   const { formatMessage } = useIntl()
   const { paymentSettingsData } = usePaymentSettings()

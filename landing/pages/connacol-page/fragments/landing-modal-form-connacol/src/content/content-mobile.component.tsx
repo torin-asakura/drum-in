@@ -20,8 +20,7 @@ import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
-const ContentMobile: FC<ContentProps> = ({  onClose,
-  connacolData, roleVar, options, setRole }) => {
+const ContentMobile: FC<ContentProps> = ({ onClose, connacolData, roleVar, options, setRole }) => {
   const installmentAmount = connacolData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = connacolData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)

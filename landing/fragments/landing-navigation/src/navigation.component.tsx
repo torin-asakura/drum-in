@@ -17,13 +17,7 @@ import { NextLink }        from '@ui/link/src'
 import { Elements }        from './elements'
 import { NavigationProps } from './navigation.interfaces'
 
-const NavigationBlock: FC<NavigationProps> = ({
-  consultationData,
-  consultationFormData,
-  headerData,
-  visible,
-  setVisible,
-}) => (
+const NavigationBlock: FC<NavigationProps> = ({ headerData, visible, setVisible }) => (
   <Drawer active={visible} onClose={() => setVisible(false)}>
     {(stateHover) => (
       <Box
@@ -64,19 +58,10 @@ const NavigationBlock: FC<NavigationProps> = ({
                 <ItemLink item={item} />
               ))}
             </Box>
-            <CtaButton
-              consultationData={consultationData}
-              consultationFormData={consultationFormData}
-              title={headerData?.ctaButton}
-            />
+            <CtaButton title={headerData?.ctaButton} />
           </Row>
           <Layout flexBasis={[60, 70, 125]} flexGrow={2} />
-          <Elements
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
-            list={headerData?.dropdownList}
-            stateHover={stateHover}
-          />
+          <Elements list={headerData?.dropdownList} stateHover={stateHover} />
           s
           <Layout flexBasis={[20, 50, 40]} flexShrink={0} />
         </Column>

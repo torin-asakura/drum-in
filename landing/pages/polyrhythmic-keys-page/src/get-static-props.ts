@@ -1,6 +1,7 @@
 /* eslint-disable one-var */
 /* eslint-disable prefer-const */
 
+import { MediaUrl }              from '@globals/data'
 import { GET_PAYMENT_SETTINGS }  from '@globals/data'
 import { FormID }                from '@globals/data'
 import { GET_CONSULTATION_FORM } from '@globals/data'
@@ -41,7 +42,11 @@ export const getStaticProps = async () => {
 
   const seoPromise = client.query({
     query: GET_SEO,
-    variables: { id: PageID.POLYRYTHMIC_KEYS },
+    variables: {
+      id: PageID.POLYRYTHMIC_KEYS,
+      uriDefaultIcon: MediaUrl.DEFAULT_ICON,
+      uriAppleIcon: MediaUrl.APPLE_ICON,
+    },
   })
 
   const songPromise = client.query({
@@ -127,7 +132,9 @@ export const getStaticProps = async () => {
     paymentSettingsContent?.value?.data?.generalFragment?.siteSettings?.paymentSettings || null
   const polyrhythmicKeysData = course?.value?.data?.individualCourse || null
   const SEO = {
-    ...seoData?.value?.data?.page?.seo,
+    ...(seoData?.value.data?.page?.seo || null),
+    defaultIcon: seoData.value.data?.defaultIcon?.mediaItemUrl || null,
+    appleIcon: seoData.value.data?.appleIcon?.mediaItemUrl || null,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }

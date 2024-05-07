@@ -1,6 +1,7 @@
 /* eslint-disable one-var */
 /* eslint-disable prefer-const */
 
+import { MediaUrl }          from '@globals/data'
 import { GET_FOOTER }        from '@globals/data'
 import { GET_HEADER }        from '@globals/data'
 import { GeneralFragmentID } from '@globals/data'
@@ -17,7 +18,11 @@ export const getStaticProps = async () => {
 
   const seoPromise = client.query({
     query: GET_SEO,
-    variables: { id: PageID.CONTACT },
+    variables: {
+      id: PageID.CONTACT,
+      uriDefaultIcon: MediaUrl.DEFAULT_ICON,
+      uriAppleIcon: MediaUrl.APPLE_ICON,
+    },
   })
 
   const headerPromise = client.query({
@@ -46,7 +51,9 @@ export const getStaticProps = async () => {
   const headerData = header?.value?.data?.generalFragment?.header || null
   const contactsData = contactsContent?.value?.data?.generalFragment?.contacts || null
   const SEO = {
-    ...seoData?.value?.data?.page?.seo,
+    ...(seoData?.value.data?.page?.seo || null),
+    defaultIcon: seoData.value.data?.defaultIcon?.mediaItemUrl || null,
+    appleIcon: seoData.value.data?.appleIcon?.mediaItemUrl || null,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }

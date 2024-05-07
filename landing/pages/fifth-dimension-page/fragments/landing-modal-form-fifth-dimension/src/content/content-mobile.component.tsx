@@ -19,9 +19,13 @@ import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
-const ContentMobile: FC<ContentProps> = ({   onClose,
+const ContentMobile: FC<ContentProps> = ({
+  onClose,
 
-  fifthDimensionData, roleVar, options, setRole
+  fifthDimensionData,
+  roleVar,
+  options,
+  setRole,
 }) => {
   const installmentAmount = fifthDimensionData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = fifthDimensionData?.individualCourseData?.price?.fullPrice

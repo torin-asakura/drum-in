@@ -1,6 +1,7 @@
 /* eslint-disable one-var */
 /* eslint-disable prefer-const */
 
+import { MediaUrl }              from '@globals/data'
 import { GET_MAIN_PAGE }         from '@globals/data'
 import { GET_STUDENTS }          from '@globals/data'
 import { FormID }                from '@globals/data'
@@ -33,7 +34,11 @@ export const getStaticProps = async () => {
 
   const seoPromise = client.query({
     query: GET_SEO,
-    variables: { id: PageID.MAIN },
+    variables: {
+      id: PageID.INDEX,
+      uriDefaultIcon: MediaUrl.DEFAULT_ICON,
+      uriAppleIcon: MediaUrl.APPLE_ICON,
+    },
   })
 
   const songPromise = client.query({
@@ -114,9 +119,11 @@ export const getStaticProps = async () => {
   const teacherData = teacherContent?.value?.data?.teacher || null
   const headerData = header?.value?.data?.generalFragment?.header || null
   const songUrl = songData?.value?.data?.generalFragment?.audio?.song?.node?.mediaItemUrl || null
-  const background = mainPageContent?.value?.data?.generalFragment?.main?.background
+  const background = mainPageContent?.value?.data?.generalFragment?.main?.background || null
   const SEO = {
-    ...seoData?.value?.data?.page?.seo,
+    ...(seoData?.value.data?.page?.seo || null),
+    defaultIcon: seoData.value.data?.defaultIcon?.mediaItemUrl || null,
+    appleIcon: seoData.value.data?.appleIcon?.mediaItemUrl || null,
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
