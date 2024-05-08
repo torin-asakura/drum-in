@@ -10,11 +10,7 @@ import { Text }           from '@ui/text'
 
 import { CtaButtonProps } from './cta-button.interfaces'
 
-export const CtaButton: FC<CtaButtonProps> = memo(({
-  consultationFormData,
-  consultationData,
-  title,
-}) => {
+export const CtaButton: FC<CtaButtonProps> = memo(({ title }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
 
   return (
@@ -35,12 +31,7 @@ export const CtaButton: FC<CtaButtonProps> = memo(({
           </Text>
         </Button>
       </Row>
-      <Consultation
-        consultationData={consultationData?.modal}
-        consultationFormData={consultationFormData}
-        activeRender={visibleModal}
-        setVisibleModal={setVisibleModal}
-      />
+      <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
     </>
   )
 })

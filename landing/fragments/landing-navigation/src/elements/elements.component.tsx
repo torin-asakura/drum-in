@@ -18,12 +18,7 @@ import { ElementsProps }         from './elements.interfaces'
 import { IndividualCourseItems } from './individual-course-items'
 import { MainCourseItem }        from './main-course-item'
 
-const Elements: FC<ElementsProps> = ({
-  list,
-  consultationData,
-  consultationFormData,
-  stateHover,
-}) => {
+const Elements: FC<ElementsProps> = ({ list, stateHover }) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
@@ -99,18 +94,8 @@ const Elements: FC<ElementsProps> = ({
             </Text>
           </Button>
         </Box>
-        <Consultation
-          consultationData={consultationData?.modal}
-          consultationFormData={consultationFormData}
-          activeRender={visibleModal}
-          setVisibleModal={setVisibleModal}
-        />
-        <MobileConsultation
-          consultationData={consultationData?.modal}
-          consultationFormData={consultationFormData}
-          activeRender={visibleModalMobile}
-          setVisibleModal={setVisibleModal}
-        />
+        <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
+        <MobileConsultation activeRender={visibleModalMobile} setVisibleModal={setVisibleModal} />
       </Column>
     </Row>
   )

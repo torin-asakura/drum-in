@@ -1,3 +1,5 @@
+import { PaymentSettingsDataProps }       from '@globals/data'
+import { SeoDataProps }                   from '@globals/data'
 import { ConsultationFormDataProps }      from '@globals/data'
 import { ProcessEducationDataProps }      from '@globals/data'
 import { TeacherDataProps }               from '@globals/data'
@@ -15,7 +17,9 @@ export interface SeventhHeavenProps {
   songUrl: SongUrlType
   headerData: HeaderDataProps
 
-  SEO: any
+  paymentSettingsData: PaymentSettingsDataProps
+
+  SEO: SeoDataProps
   faqData: FaqDataProps
   consultationData: ConsultationDataProps
   footerData: FooterDataProps

@@ -1,7 +1,6 @@
 import React                               from 'react'
 import { FC }                              from 'react'
 import { useRef }                          from 'react'
-import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { LocomotiveScrollProvider }        from '@forks/react-locomotive-scroll'
@@ -17,80 +16,43 @@ import { PriceOpeningTheRhythmBlock }      from '@landing/price-opening-the-rhyt
 import { ProgramBlock }                    from '@landing/program-fragment'
 import { StartLearningBlock }              from '@landing/start-learning-fragment'
 import { TeacherBlock }                    from '@landing/teacher-fragment'
+import { MainScrollContainer }             from '@shared/main-scroll-container/src'
 import { Seo }                             from '@shared/seo-fragment'
 import { Box }                             from '@ui/layout'
+import { usePlayer }                       from '@shared/utils/src'
 
 import { OpeningTheRhythmPageProps }       from './opening-the-rhythm-page.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }         from './opening-the-rhythm.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS }       from './opening-the-rhythm.constants'
 
 export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
   SEO,
-  faqData,
-  consultationFormData,
-  consultationData,
-  footerData,
-  teacherData,
-  processData,
   background,
-  openingTheRhythm,
+  openingTheRhythmData,
   songUrl,
-  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
-  const [playSong, setPlaySong] = useState<boolean>(false)
-  const songElement = useRef<HTMLAudioElement | undefined>()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && songUrl !== undefined) {
-      songElement.current = new Audio(songUrl || '')
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        songElement.current?.pause()
-        songElement.current = undefined
-      }
-    }
-  }, [songUrl])
-
-  useEffect(() => {
-    if (playSong) {
-      songElement?.current?.play()
-    } else {
-      songElement?.current?.pause()
-    }
-  }, [playSong])
+  const { playSong, setPlaySong } = usePlayer(songUrl)
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <HeroOpeningTheRhythmBlock background={background} openingTheRhythm={openingTheRhythm} />
-          <ProgramBlock openingTheRhythm={openingTheRhythm} />
-          <CourseProcessBlock processData={processData} />
+        <MainScrollContainer containerRef={containerRef}>
+          <HeroOpeningTheRhythmBlock
+            background={background}
+            openingTheRhythm={openingTheRhythmData}
+          />
+          <ProgramBlock openingTheRhythm={openingTheRhythmData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -103,19 +65,12 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                teacherData={teacherData}
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
-          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythm} />
-          <FaqBlock faqData={faqData} />
-          <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
-          />
+          <PriceOpeningTheRhythmBlock openingTheRhythm={openingTheRhythmData} />
+          <FaqBlock />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -129,7 +84,7 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -145,21 +100,21 @@ export const OpeningTheRhythmPage: FC<OpeningTheRhythmPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}
         />
         <ModalFormOpeningTheRhythm
-          openingTheRhythm={openingTheRhythm}
+          openingTheRhythm={openingTheRhythmData}
           activeRender={visibleModal}
           onClose={() => setVisibleModal(false)}
         />
         <ModalMobileFormOpeningTheRhythm
-          openingTheRhythm={openingTheRhythm}
+          openingTheRhythm={openingTheRhythmData}
           activeRender={visibleModalMobile}
           onClose={() => setVisibleModalMobile(false)}
         />

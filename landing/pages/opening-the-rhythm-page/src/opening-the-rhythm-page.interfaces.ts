@@ -1,3 +1,4 @@
+import { PaymentSettingsDataProps }        from '@globals/data/src'
 import { SeoDataProps }                    from '@globals/data/src'
 import { ConsultationFormDataProps }       from '@globals/data/src'
 import { ProcessEducationDataProps }       from '@globals/data/src'
@@ -11,10 +12,11 @@ import { OpeningTheRhythmBackgroundProps } from '@globals/data/src'
 import { OpeningTheRhythmDataProps }       from '@globals/data/src'
 
 export interface OpeningTheRhythmPageProps {
-  openingTheRhythm?: OpeningTheRhythmDataProps | null
+  openingTheRhythmData?: OpeningTheRhythmDataProps | null
   background?: OpeningTheRhythmBackgroundProps | null
   songUrl: SongUrlType
   headerData: HeaderDataProps
+  paymentSettingsData: PaymentSettingsDataProps
 
   SEO: SeoDataProps
   faqData: FaqDataProps

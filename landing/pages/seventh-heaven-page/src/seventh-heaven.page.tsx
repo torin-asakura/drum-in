@@ -1,7 +1,6 @@
 import React                            from 'react'
 import { FC }                           from 'react'
 import { useRef }                       from 'react'
-import { useEffect }                    from 'react'
 import { useState }                     from 'react'
 
 import { LocomotiveScrollProvider }     from '@forks/react-locomotive-scroll'
@@ -16,79 +15,39 @@ import { ModalMobileFormSeventhHeaven } from '@landing/modal-form-seventh-heaven
 import { PriceSeventhHeavenBlock }      from '@landing/price-seventh-heaven-fragment'
 import { StartLearningBlock }           from '@landing/start-learning-fragment'
 import { TeacherBlock }                 from '@landing/teacher-fragment'
+import { MainScrollContainer }          from '@shared/main-scroll-container/src'
 import { Seo }                          from '@shared/seo-fragment'
 import { Box }                          from '@ui/layout'
+import { usePlayer }                    from '@shared/utils/src'
 
+import { LOCOMOTIVE_SCROLL_WATCH }      from './seventh-heaven.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS }    from './seventh-heaven.constants'
 import { SeventhHeavenProps }           from './seventh-heaven.interfaces'
 
 export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
   SEO,
-  faqData,
-  consultationData,
-  consultationFormData,
-  footerData,
-  teacherData,
-  processData,
   seventhHeavenData,
   background,
   songUrl,
-  headerData,
 }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
-  const [playSong, setPlaySong] = useState<boolean>(false)
-  const songElement = useRef<HTMLAudioElement | undefined>()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && songUrl !== undefined) {
-      songElement.current = new Audio(songUrl || '')
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        songElement.current?.pause()
-        songElement.current = undefined
-      }
-    }
-  }, [songUrl])
-
-  useEffect(() => {
-    if (playSong) {
-      songElement?.current?.play()
-    } else {
-      songElement?.current?.pause()
-    }
-  }, [playSong])
+  const { playSong, setPlaySong } = usePlayer(songUrl)
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <HeroSeventhHeavenBlock background={background} seventhHeavenData={seventhHeavenData} />
-          <CourseProcessBlock processData={processData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -101,19 +60,12 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                teacherData={teacherData}
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PriceSeventhHeavenBlock seventhHeavenData={seventhHeavenData} />
-          <FaqBlock faqData={faqData} />
-          <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
-          />
+          <FaqBlock />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -127,7 +79,7 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -143,10 +95,10 @@ export const SeventhHeavenPage: FC<SeventhHeavenProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}

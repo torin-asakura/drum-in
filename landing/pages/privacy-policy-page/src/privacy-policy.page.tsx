@@ -1,52 +1,33 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { PrivacyPolicyBlock }       from '@landing/privacy-policy-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { PrivacyPolicyBlock }        from '@landing/privacy-policy-fragment'
+import { MainScrollContainer }       from '@shared/main-scroll-container/src'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
 
-import { PrivacyPolicyPageProps }   from './privacy-policy-page.interfaces'
+import { PrivacyPolicyPageProps }    from './privacy-policy-page.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constants'
 
-export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
-  SEO,
-  footerData,
-  privacyPolicy,
-  headerData,
-  consultationData,
-  consultationFormData,
-}) => {
+export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ SEO }) => {
   const containerRef = useRef(null)
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
         containerRef={containerRef}
-        watch={[]}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
-          <PrivacyPolicyBlock privacyPolicy={privacyPolicy} />
+        <MainScrollContainer containerRef={containerRef}>
+          <PrivacyPolicyBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -55,7 +36,7 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock />
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -65,9 +46,9 @@ export const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock />
           </Box>
-        </main>
+        </MainScrollContainer>
       </LocomotiveScrollProvider>
     </Box>
   )

@@ -1,24 +1,26 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { FormattedNumber }  from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { FormattedNumber }    from 'react-intl'
+import { useIntl }            from 'react-intl'
 
-import { Condition }        from '@ui/condition'
-import { Form }             from '@ui/form'
-import { RoundedLineIcon }  from '@ui/icons'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Condition }          from '@ui/condition'
+import { Form }               from '@ui/form'
+import { RoundedLineIcon }    from '@ui/icons'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Space }              from '@ui/text'
+import { Text }               from '@ui/text'
+import { usePaymentSettings } from '@globals/data/src'
 
-import { ContentProps }     from './content.interfaces'
-import { SelectedCourse }   from './selected-course'
+import { ContentProps }       from './content.interfaces'
+import { SelectedCourse }     from './selected-course'
 
 const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData, onClose }) => {
   const { formatMessage } = useIntl()
+  const { paymentSettingsData } = usePaymentSettings()
 
   return (
     <Row height={540}>
@@ -73,7 +75,7 @@ const ContentMobile: FC<ContentProps> = ({ polyrhythmicKeysData, onClose }) => {
         <Condition match={!!polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice}>
           <Form
             amount={polyrhythmicKeysData?.individualCourseData?.price?.monthlyPrice || 0}
-            form='payment'
+            storeId={paymentSettingsData?.storeID}
           />
         </Condition>
       </Column>

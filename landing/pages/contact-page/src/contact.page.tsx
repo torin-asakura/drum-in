@@ -1,51 +1,31 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { ContactBlock }             from '@landing/contact-fragment'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { ContactBlock }              from '@landing/contact-fragment'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { MainScrollContainer }       from '@shared/main-scroll-container/src'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
 
-import { ContactPageProps }         from './contact-page.interfaces'
+import { ContactPageProps }          from './contact-page.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './contact.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './contact.constants'
 
-export const ContactPage: FC<ContactPageProps> = ({
-  SEO,
-  footerData,
-  contactsData,
-  headerData,
-  consultationData,
-  consultationFormData,
-}) => {
+export const ContactPage: FC<ContactPageProps> = ({ SEO, contactsData }) => {
   const containerRef = useRef(null)
-
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <Box
             width='100%'
             display={['none', 'none', 'flex']}
@@ -61,8 +41,8 @@ export const ContactPage: FC<ContactPageProps> = ({
               backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <ContactBlock contactsData={contactsData} />
-              <FooterBlock footerData={footerData} buttonUp={false} />
+              <ContactBlock />
+              <FooterBlock buttonUp={false} />
             </Box>
           </Box>
           <Box
@@ -80,11 +60,11 @@ export const ContactPage: FC<ContactPageProps> = ({
               backgroundImage={`url(${contactsData?.background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <ContactBlock contactsData={contactsData} />
-              <FooterBlock footerData={footerData} buttonUp={false} />
+              <ContactBlock />
+              <FooterBlock buttonUp={false} />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
       </LocomotiveScrollProvider>
     </Box>
   )

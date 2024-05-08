@@ -4,4 +4,5 @@ export interface TerminalProps {
   amount: number
   disabled: boolean
   screen: TerminalScreen
+  terminalStoreId?: string | null
 }

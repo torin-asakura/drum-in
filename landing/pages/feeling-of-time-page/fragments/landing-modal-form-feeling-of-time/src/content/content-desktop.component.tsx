@@ -15,6 +15,7 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Space }                  from '@ui/text'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 import { usePaymentAmount }       from '@shared/utils/src/hooks/payment-amount/payment-amount.hook'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
@@ -29,12 +30,12 @@ const ContentDesktop: FC<ContentProps> = ({
   setRole,
 }) => {
   const { formatMessage } = useIntl()
+  const { paymentSettingsData } = usePaymentSettings()
 
   const installmentAmount = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = feelingOfTimeData?.individualCourseData?.price?.fullPrice
 
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
-
   return (
     <>
       <Box
@@ -118,7 +119,7 @@ const ContentDesktop: FC<ContentProps> = ({
         <ContentOneTimePayment feelingOfTimeData={feelingOfTimeData} />
       </Condition>
       <Condition match={!!amount}>
-        <Form amount={amount} form='payment' key={amount} />
+        <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
       </Condition>
     </>
   )

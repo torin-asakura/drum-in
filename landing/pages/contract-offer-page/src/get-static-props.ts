@@ -1,25 +1,22 @@
-import { FormID }                from '@globals/data'
-import { GET_CONSULTATION_FORM } from '@globals/data'
-import { GET_CONSULTATION }      from '@globals/data'
-import { GET_FOOTER }            from '@globals/data'
-import { GET_HEADER }            from '@globals/data'
-import { GeneralFragmentID }     from '@globals/data'
-import { PageID }                from '@globals/data'
-import { GET_CONTRACT_OFFER }    from '@globals/data'
-import { GET_SEO }               from '@globals/data'
-import { MediaUrl }              from '@globals/data'
-import { getClient }             from '@globals/data'
+/* eslint-disable one-var */
+/* eslint-disable prefer-const */
+
+import { MediaUrl }           from '@globals/data'
+import { GET_CONTRACT_OFFER } from '@globals/data'
+import { GET_FOOTER }         from '@globals/data'
+import { GET_HEADER }         from '@globals/data'
+import { GeneralFragmentID }  from '@globals/data'
+import { PageID }             from '@globals/data'
+import { GET_SEO }            from '@globals/data'
+import { initializeApollo }   from '@globals/data'
+import { addApolloState }     from '@globals/data'
 
 export const getStaticProps = async () => {
-  const client = getClient()
+  const client = initializeApollo({})
 
-  const { data } = await client.query({
-    query: GET_CONTRACT_OFFER,
-    variables: { id: GeneralFragmentID.CONTRACT_OFFER },
-  })
-  const contractOfferData = data?.generalFragment?.contractOffer
+  let seoData, header, footerContent, contractOfferContent
 
-  const { data: seoData } = await client.query({
+  const seoPromise = client.query({
     query: GET_SEO,
     variables: {
       id: PageID.CONTRACT_OFFER,
@@ -28,48 +25,47 @@ export const getStaticProps = async () => {
     },
   })
 
-  const SEO = {
-    ...seoData.page?.seo,
-    defaultIcon: seoData.defaultIcon?.mediaItemUrl,
-    appleIcon: seoData.appleIcon?.mediaItemUrl,
-    ogLocale: 'ru_RU',
-    twitterCard: 'summary_large_image',
-  }
-
-  const { data: header } = await client.query({
+  const headerPromise = client.query({
     query: GET_HEADER,
     variables: { id: GeneralFragmentID.HEADER },
   })
 
-  const headerData = header?.generalFragment?.header
-
-  const { data: footerContent } = await client.query({
+  const footerPromise = client.query({
     query: GET_FOOTER,
     variables: { id: GeneralFragmentID.FOOTER },
   })
-  const footerData = footerContent?.generalFragment?.footer
 
-  const { data: consultationContent } = await client.query({
-    query: GET_CONSULTATION,
-    variables: { id: GeneralFragmentID.CONSULTATION },
+  const contractOfferPromise = client.query({
+    query: GET_CONTRACT_OFFER,
+    variables: { id: GeneralFragmentID.CONTRACT_OFFER },
   })
-  const consultationData = consultationContent?.generalFragment?.consultation
 
-  const { data: consultationFormContent } = await client.query({
-    query: GET_CONSULTATION_FORM,
-    variables: { id: FormID.consultation.id },
-  })
-  const consultationFormData = consultationFormContent?.form
+  ;[seoData, header, contractOfferContent, footerContent] = await Promise.allSettled([
+    seoPromise,
+    headerPromise,
+    contractOfferPromise,
+    footerPromise,
+  ])
 
-  return {
+  const footerData = footerContent?.value?.data?.footer || null
+  const headerData = header?.value?.data?.generalFragment?.header || null
+  const contractOfferData =
+    contractOfferContent?.value?.data?.generalFragment?.contractOffer || null
+  const SEO = {
+    ...(seoData?.value.data?.page?.seo || null),
+    defaultIcon: seoData.value.data?.defaultIcon?.mediaItemUrl || null,
+    appleIcon: seoData.value.data?.appleIcon?.mediaItemUrl || null,
+    ogLocale: 'ru_RU',
+    twitterCard: 'summary_large_image',
+  }
+
+  return addApolloState(client, {
     props: {
+      contractOfferData,
       footerData,
       SEO,
-      contractOfferData,
       headerData,
-      consultationData,
-      consultationFormData,
     },
     revalidate: 3600,
-  }
+  })
 }

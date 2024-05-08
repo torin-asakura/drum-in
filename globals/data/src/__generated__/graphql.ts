@@ -14974,6 +14974,24 @@ export type MainPageQuery = {
   } | null
 }
 
+export type PaymentSettingsQueryVariables = Exact<{
+  id: Scalars['ID']['input']
+}>
+
+export type PaymentSettingsQuery = {
+  __typename?: 'RootQuery'
+  generalFragment?: {
+    __typename?: 'GeneralFragment'
+    siteSettings?: {
+      __typename?: 'SiteSettings'
+      paymentSettings?: {
+        __typename?: 'SiteSettingsPaymentSettings'
+        storeID?: string | null
+      } | null
+    } | null
+  } | null
+}
+
 export type PrivacyPolicyQueryVariables = Exact<{
   id: Scalars['ID']['input']
 }>
@@ -17103,6 +17121,64 @@ export const MainPageDocument = {
     },
   ],
 } as unknown as DocumentNode<MainPageQuery, MainPageQueryVariables>
+export const PaymentSettingsDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'PaymentSettings' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'ID' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'generalFragment' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'siteSettings' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'paymentSettings' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [{ kind: 'Field', name: { kind: 'Name', value: 'storeID' } }],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<PaymentSettingsQuery, PaymentSettingsQueryVariables>
 export const PrivacyPolicyDocument = {
   kind: 'Document',
   definitions: [

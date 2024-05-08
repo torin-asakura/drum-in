@@ -1,50 +1,31 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { ContractOfferBlock }       from '@landing/contract-offer-fragment'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { ContractOfferBlock }        from '@landing/contract-offer-fragment'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { MainScrollContainer }       from '@shared/main-scroll-container'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
 
-import { ContractOfferProps }       from './contract-offer.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './contract-offer.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './contract-offer.constants'
+import { ContractOfferProps }        from './contract-offer.interfaces'
 
-export const ContractOfferPage: FC<ContractOfferProps> = ({
-  SEO,
-  footerData,
-  contractOfferData,
-  headerData,
-  consultationData,
-  consultationFormData,
-}) => {
+export const ContractOfferPage: FC<ContractOfferProps> = ({ SEO, contractOfferData }) => {
   const containerRef = useRef(null)
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <ContractOfferBlock contractOfferData={contractOfferData} />
           <Box
             display={['none', 'none', 'flex']}
@@ -54,7 +35,7 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='left bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock buttonUp={false} />
           </Box>
           <Box
             display={['flex', 'flex', 'none']}
@@ -64,9 +45,9 @@ export const ContractOfferPage: FC<ContractOfferProps> = ({
             backgroundRepeat='no-repeat'
             backgroundPosition='center bottom'
           >
-            <FooterBlock footerData={footerData} />
+            <FooterBlock buttonUp={false} />
           </Box>
-        </main>
+        </MainScrollContainer>
       </LocomotiveScrollProvider>
     </Box>
   )

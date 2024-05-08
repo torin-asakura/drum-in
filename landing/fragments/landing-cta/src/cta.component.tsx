@@ -1,5 +1,4 @@
 import React                  from 'react'
-import { FC }                 from 'react'
 import { FormattedMessage }   from 'react-intl'
 import { useState }           from 'react'
 import { forwardRef }         from 'react'
@@ -14,13 +13,10 @@ import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Space }              from '@ui/text'
 import { Text }               from '@ui/text'
+import { useConsultation }    from '@globals/data/src'
 
-import { CtaProps }           from './cta.interfaces'
-
-const CtaBlock: FC<CtaProps> = forwardRef((
-  { consultationFormData, consultationData },
-  ref?: any
-) => {
+const CtaBlock = forwardRef(({ ...props }, ref?: any) => {
+  const { consultationData } = useConsultation()
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
@@ -114,15 +110,8 @@ const CtaBlock: FC<CtaProps> = forwardRef((
                   </Text>
                 </Button>
               </Box>
-              <Consultation
-                consultationFormData={consultationFormData}
-                consultationData={consultationData?.modal}
-                activeRender={visibleModal}
-                setVisibleModal={setVisibleModal}
-              />
+              <Consultation activeRender={visibleModal} setVisibleModal={setVisibleModal} />
               <MobileConsultation
-                consultationFormData={consultationFormData}
-                consultationData={consultationData?.modal}
                 activeRender={visibleModalMobile}
                 setVisibleModal={setVisibleModalMobile}
               />

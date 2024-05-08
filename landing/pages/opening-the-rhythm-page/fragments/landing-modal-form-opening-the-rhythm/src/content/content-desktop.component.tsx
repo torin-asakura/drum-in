@@ -14,6 +14,7 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
 import { ContentOneTimePayment }  from './content-one-time-payment'
@@ -27,6 +28,7 @@ const ContentDesktop: FC<ContentProps> = ({
   setRole,
   openingTheRhythm,
 }) => {
+  const { paymentSettingsData } = usePaymentSettings()
   const { amount, recalculateAmount, months, recalculateMonths } = useContent(
     roleVar[0],
     openingTheRhythm
@@ -125,7 +127,7 @@ const ContentDesktop: FC<ContentProps> = ({
               ? openingTheRhythm?.price?.priceMonthly || 0
               : amount
           }
-          form='payment'
+          storeId={paymentSettingsData?.storeID}
           key={amount}
         />
       </Condition>

@@ -1,3 +1,4 @@
+import { PaymentSettingsDataProps }       from '@globals/data'
 import { SeoDataProps }                   from '@globals/data'
 import { ConsultationFormDataProps }      from '@globals/data'
 import { ProcessEducationDataProps }      from '@globals/data'
@@ -15,6 +16,7 @@ export interface FifthDimensionProps {
   background: IndividualCourseBackgroundType
   songUrl: SongUrlType
   headerData: HeaderDataProps
+  paymentSettingsData: PaymentSettingsDataProps
 
   SEO: SeoDataProps
   faqData: FaqDataProps

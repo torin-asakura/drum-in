@@ -15,6 +15,7 @@ import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
 import { Space }                  from '@ui/text/src'
+import { usePaymentSettings }     from '@globals/data/src'
 import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
@@ -32,7 +33,7 @@ const ContentDesktop: FC<ContentProps> = ({
   const oneTimeAmount = fifthDimensionData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
   const { formatMessage } = useIntl()
-
+  const { paymentSettingsData } = usePaymentSettings()
   return (
     <>
       <Box
@@ -115,7 +116,7 @@ const ContentDesktop: FC<ContentProps> = ({
         <ContentOneTimePayment fifthDimensionData={fifthDimensionData} />
       </Condition>
       <Condition match={!!amount}>
-        <Form amount={amount} form='payment' key={amount} />
+        <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
       </Condition>
     </>
   )

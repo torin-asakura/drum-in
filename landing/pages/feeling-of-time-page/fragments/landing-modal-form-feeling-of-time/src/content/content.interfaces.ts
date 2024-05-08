@@ -8,6 +8,7 @@ export interface ContentProps {
   feelingOfTimeData: IndividualCourseDataType
   onClose?: () => any
   roleVar: Array<RolePaymentForm>
+
   options: Array<{
     value: RolePaymentForm
     label: string

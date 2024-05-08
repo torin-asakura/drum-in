@@ -12,6 +12,7 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
@@ -19,16 +20,18 @@ import { ContentOneTimePayment }  from './content-one-time-payment'
 import { ContentProps }           from './content.interfaces'
 
 const ContentMobile: FC<ContentProps> = ({
+  onClose,
+
   fifthDimensionData,
   roleVar,
   options,
   setRole,
-  onClose,
 }) => {
   const installmentAmount = fifthDimensionData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = fifthDimensionData?.individualCourseData?.price?.fullPrice
   const { amount } = usePaymentAmount(roleVar[0], installmentAmount, oneTimeAmount)
   const { formatMessage } = useIntl()
+  const { paymentSettingsData } = usePaymentSettings()
 
   return (
     <Row height={540}>
@@ -90,7 +93,7 @@ const ContentMobile: FC<ContentProps> = ({
           <ContentOneTimePayment fifthDimensionData={fifthDimensionData} />
         </Condition>
         <Condition match={!!amount}>
-          <Form amount={amount} form='payment' key={amount} />
+          <Form amount={amount} storeId={paymentSettingsData?.storeID} key={amount} />
         </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

@@ -12,6 +12,7 @@ import { Row }                    from '@ui/layout'
 import { Switch }                 from '@ui/switch'
 import { Option }                 from '@ui/switch'
 import { Text }                   from '@ui/text'
+import { usePaymentSettings }     from '@globals/data/src'
 import { usePaymentAmount }       from '@shared/utils/src'
 
 import { ContentInstallmentPlan } from './content-installment-plan'
@@ -26,7 +27,7 @@ const ContentMobile: FC<ContentProps> = ({
   onClose,
 }) => {
   const { formatMessage } = useIntl()
-
+  const { paymentSettingsData } = usePaymentSettings()
   const installmentAmount = feelingOfTimeData?.individualCourseData?.price?.monthlyPrice
   const oneTimeAmount = feelingOfTimeData?.individualCourseData?.price?.fullPrice
 
@@ -92,7 +93,7 @@ const ContentMobile: FC<ContentProps> = ({
           <ContentOneTimePayment feelingOfTimeData={feelingOfTimeData} />
         </Condition>
         <Condition match={!!amount && amount > 0}>
-          <Form amount={amount} form='payment' key={amount} />
+          <Form storeId={paymentSettingsData?.storeID} amount={amount} key={amount} />
         </Condition>
       </Column>
       <Layout flexBasis={[20, 30, 40]} flexShrink={0} />

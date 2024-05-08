@@ -1,112 +1,57 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
-import { useEffect }                from 'react'
-import { useState }                 from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { CtaBlock }                 from '@landing/cta-fragment'
-import { FaqBlock }                 from '@landing/faq'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { Hero }                     from '@landing/hero-fragment'
-import { LearningProcessBlock }     from '@landing/learning-process-fragment'
-import { StudentsBlock }            from '@landing/learning-students'
-import { PrivateLessonBlock }       from '@landing/private-lesson-fragment'
-import { TeacherBlock }             from '@landing/teacher-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
-import { Layout }                   from '@ui/layout'
-import { SpyScroll }                from '@ui/spy-scroll'
-import { SpyScrollProvider }        from '@ui/spy-scroll'
-import { useIntersectionObserver }  from '@ui/intersection-observer'
-import { useSpyScroll }             from '@ui/spy-scroll'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { CtaBlock }                  from '@landing/cta-fragment'
+import { FaqBlock }                  from '@landing/faq'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { Hero }                      from '@landing/hero-fragment'
+import { LearningProcessBlock }      from '@landing/learning-process-fragment'
+import { StudentsBlock }             from '@landing/learning-students'
+import { PrivateLessonBlock }        from '@landing/private-lesson-fragment'
+import { TeacherBlock }              from '@landing/teacher-fragment'
+import { MainScrollContainer }       from '@shared/main-scroll-container/src'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { SpyScroll }                 from '@ui/spy-scroll'
+import { SpyScrollProvider }         from '@ui/spy-scroll'
+import { usePlayer }                 from '@shared/utils'
+import { useIntersectionObserver }   from '@ui/intersection-observer'
+import { useSpyScroll }              from '@ui/spy-scroll'
 
-import { IndexPageProps }           from './index-page.interfaces'
+import { ModuleID }                  from './index-page.constants'
+import { MODULES_ORDER }             from './index-page.constants'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './index-page.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './index-page.constants'
+import { IndexPageProps }            from './index-page.interfaces'
 
-export const HomePage: FC<IndexPageProps> = ({
-  SEO,
-  studentsData,
-  teacherData,
-  faqData,
-  consultationData,
-  footerData,
-  consultationFormData,
-  mainPageData,
-  background,
-  songUrl,
-  headerData,
-}) => {
+export const HomePage: FC<IndexPageProps> = ({ SEO, mainPageData, background, songUrl }) => {
   const containerRef = useRef(null)
   const spyScrollStore = useSpyScroll()
-  const { getObserverOptions } = useIntersectionObserver((id) => {
-    const order = [
-      'hero',
-      'teacher',
-      'private-lesson',
-      'learning-process',
-      'students',
-      'faq',
-      'cta',
-      'footer',
-    ]
-
-    spyScrollStore.setActive(order.indexOf(id))
+  const { playSong, setPlaySong } = usePlayer(songUrl)
+  // @ts-ignore next-line
+  const { getObserverOptions } = useIntersectionObserver((id: ModuleID) => {
+    spyScrollStore.setActive(MODULES_ORDER.indexOf(id))
   })
-
-  const [playSong, setPlaySong] = useState<boolean>(false)
-
-  const songElement = useRef<HTMLAudioElement | undefined>()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && songUrl !== undefined) {
-      songElement.current = new Audio(songUrl || '')
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        songElement.current?.pause()
-        songElement.current = undefined
-      }
-    }
-  }, [songUrl])
-
-  useEffect(() => {
-    if (playSong) {
-      songElement?.current?.play()
-    } else {
-      songElement?.current?.pause()
-    }
-  }, [playSong])
-
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-          },
-          tablet: {
-            smooth: true,
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <SpyScrollProvider>
-          <HeaderBlock
-            headerData={headerData}
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
-          />
+          <HeaderBlock />
           <SpyScroll playSong={playSong} setPlaySong={setPlaySong} />
           <Seo seo={SEO} />
-          <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+          <MainScrollContainer containerRef={containerRef}>
             <Hero
               mainPageData={mainPageData}
               background={background}
-              {...getObserverOptions('hero')}
+              {...getObserverOptions(ModuleID.HERO)}
             />
             <Box
               width='100%'
@@ -123,24 +68,21 @@ export const HomePage: FC<IndexPageProps> = ({
               >
                 <Box fill order={{ _: 1, laptop: 0, wide: 0 }}>
                   <TeacherBlock
-                    teacherData={teacherData}
                     playSong={playSong}
                     setPlaySong={setPlaySong}
-                    {...getObserverOptions('teacher')}
+                    {...getObserverOptions(ModuleID.TEACHER)}
                   />
                 </Box>
                 <Box order={{ _: 2, laptop: 1, wide: 1 }}>
                   <PrivateLessonBlock
-                    consultationData={consultationData}
-                    consultationFormData={consultationFormData}
                     privateLessonData={mainPageData.individualLesson}
-                    {...getObserverOptions('private-lesson')}
+                    {...getObserverOptions(ModuleID.PRIVATE_LESSON)}
                   />
                 </Box>
                 <Box width='100%' order={{ _: 0, laptop: 2, wide: 2 }}>
                   <LearningProcessBlock
                     learningProcessData={mainPageData.slider}
-                    {...getObserverOptions('learning-process')}
+                    {...getObserverOptions(ModuleID.LEARNING_PROCESS)}
                   />
                 </Box>
               </Box>
@@ -148,15 +90,10 @@ export const HomePage: FC<IndexPageProps> = ({
             <Layout height={[40, 0, 0, 0]} />
             <StudentsBlock
               mainData={mainPageData.students}
-              studentsData={studentsData}
-              {...getObserverOptions('students')}
+              {...getObserverOptions(ModuleID.STUDENTS)}
             />
-            <FaqBlock faqData={faqData} {...getObserverOptions('faq')} />
-            <CtaBlock
-              consultationData={consultationData}
-              {...getObserverOptions('cta')}
-              consultationFormData={consultationFormData}
-            />
+            <FaqBlock {...getObserverOptions(ModuleID.FAQ)} />
+            <CtaBlock {...getObserverOptions(ModuleID.CTA)} />
             <Box
               display={['none', 'none', 'flex']}
               width='100%'
@@ -170,7 +107,7 @@ export const HomePage: FC<IndexPageProps> = ({
                 backgroundSize='contain'
                 width='100%'
               >
-                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
+                <FooterBlock {...getObserverOptions(ModuleID.FOOTER)} />
               </Box>
             </Box>
             <Box
@@ -186,10 +123,10 @@ export const HomePage: FC<IndexPageProps> = ({
                 backgroundSize='contain'
                 width='100%'
               >
-                <FooterBlock footerData={footerData} {...getObserverOptions('footer')} />
+                <FooterBlock {...getObserverOptions(ModuleID.FOOTER)} />
               </Box>
             </Box>
-          </main>
+          </MainScrollContainer>
         </SpyScrollProvider>
       </LocomotiveScrollProvider>
     </Box>

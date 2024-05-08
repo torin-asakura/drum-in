@@ -1,3 +1,4 @@
+import { PaymentSettingsDataProps }       from '@globals/data/src'
 import { SeoDataProps }                   from '@globals/data/src'
 import { ConsultationFormDataProps }      from '@globals/data/src'
 import { HeaderDataProps }                from '@globals/data/src'
@@ -16,6 +17,7 @@ export interface ConnacolPageProps {
   songUrl: SongUrlType
   headerData: HeaderDataProps
 
+  paymentSettingsData: PaymentSettingsDataProps
   SEO: SeoDataProps
   faqData: FaqDataProps
   footerData: FooterDataProps

@@ -14,7 +14,7 @@ import { PrivateLessonBlockProps } from './private-lesson.interfaces'
 import { RightColumn }             from './right-column'
 
 const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
-  { consultationData, consultationFormData, privateLessonData },
+  { privateLessonData },
   ref: any
 ) => (
   <Row justifyContent='center' ref={ref}>
@@ -50,11 +50,7 @@ const PrivateLessonBlock: FC<PrivateLessonBlockProps> = forwardRef((
                 <Box display={['none', 'none', 'flex']} alignItems='center' height='100%'>
                   <RightDownArrowIcon width={105} height={130} />
                 </Box>
-                <RightColumn
-                  privateLessonData={privateLessonData}
-                  consultationData={consultationData}
-                  consultationFormData={consultationFormData}
-                />
+                <RightColumn privateLessonData={privateLessonData} />
               </Row>
               <Layout flexBasis={[24, 38, 52]} flexShrink={0} flexGrow={3} />
             </Row>

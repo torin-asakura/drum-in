@@ -1,5 +1,9 @@
+/* eslint-disable one-var */
+/* eslint-disable prefer-const */
+
 import { MediaUrl }               from '@globals/data'
-import { PageID }                 from '@globals/data'
+import { GET_OPENING_THE_RHYTHM } from '@globals/data'
+import { GET_PAYMENT_SETTINGS }   from '@globals/data'
 import { FormID }                 from '@globals/data'
 import { GET_CONSULTATION_FORM }  from '@globals/data'
 import { GET_PROCESS_EDUCATION }  from '@globals/data'
@@ -10,23 +14,33 @@ import { GET_TEACHER }            from '@globals/data'
 import { GET_HEADER }             from '@globals/data'
 import { GeneralFragmentID }      from '@globals/data'
 import { GET_SONG }               from '@globals/data'
-import { GET_OPENING_THE_RHYTHM } from '@globals/data'
 import { CourseID }               from '@globals/data'
+import { PageID }                 from '@globals/data'
 import { GET_SEO }                from '@globals/data'
-import { getClient }              from '@globals/data'
+import { initializeApollo }       from '@globals/data'
+import { addApolloState }         from '@globals/data'
 
 export const getStaticProps = async () => {
-  const client = getClient()
+  const client = initializeApollo({})
 
-  const { data } = await client.query({
+  let course,
+    seoData,
+    songData,
+    header,
+    teacherContent,
+    faqContent,
+    consultationContent,
+    footerContent,
+    processContent,
+    consultationFormContent,
+    paymentSettingsContent
+
+  const coursePromise = client.query({
     query: GET_OPENING_THE_RHYTHM,
     variables: { id: CourseID.OPENING_RHYTHM },
   })
 
-  const openingTheRhythm = data?.course?.content
-  const background = data?.course?.content?.background
-
-  const { data: seoData } = await client.query({
+  const seoPromise = client.query({
     query: GET_SEO,
     variables: {
       id: PageID.OPENING_RHYTHM,
@@ -35,65 +49,98 @@ export const getStaticProps = async () => {
     },
   })
 
-  const SEO = {
-    ...seoData.page?.seo,
-    defaultIcon: seoData.defaultIcon?.mediaItemUrl,
-    appleIcon: seoData.appleIcon?.mediaItemUrl,
-    ogLocale: 'ru_RU',
-    twitterCard: 'summary_large_image',
-  }
-
-  const { data: songData } = await client.query({
+  const songPromise = client.query({
     query: GET_SONG,
     variables: { id: GeneralFragmentID.SONG },
   })
 
-  const { data: header } = await client.query({
+  const headerPromise = client.query({
     query: GET_HEADER,
     variables: { id: GeneralFragmentID.HEADER },
   })
 
-  const { data: teacherContent } = await client.query({
+  const teacherPromise = client.query({
     query: GET_TEACHER,
     variables: { id: GeneralFragmentID.TEACHER },
   })
-  const teacherData = teacherContent?.generalFragment?.teacher
 
-  const { data: faqContent } = await client.query({
+  const faqPromise = client.query({
     query: GET_FAQ,
     variables: { id: GeneralFragmentID.FAQ },
   })
-  const faqData = faqContent?.generalFragment?.faq?.content
 
-  const { data: consultationContent } = await client.query({
+  const consultationPromise = client.query({
     query: GET_CONSULTATION,
     variables: { id: GeneralFragmentID.CONSULTATION },
   })
-  const consultationData = consultationContent?.generalFragment?.consultation
 
-  const { data: footerContent } = await client.query({
+  const footerPromise = client.query({
     query: GET_FOOTER,
     variables: { id: GeneralFragmentID.FOOTER },
   })
-  const footerData = footerContent?.generalFragment?.footer
 
-  const { data: processContent } = await client.query({
+  const processPromise = client.query({
     query: GET_PROCESS_EDUCATION,
     variables: { id: GeneralFragmentID.PROCESS },
   })
-  const processData = processContent?.generalFragment?.learningProcess
 
-  const headerData = header?.generalFragment?.header
-
-  const songUrl = songData?.generalFragment?.audio?.song?.node?.mediaItemUrl
-
-  const { data: consultationFormContent } = await client.query({
+  const consultationFormPromise = client.query({
     query: GET_CONSULTATION_FORM,
     variables: { id: FormID.consultation.id },
   })
-  const consultationFormData = consultationFormContent?.form
 
-  return {
+  const paymentSettingsPromise = client.query({
+    query: GET_PAYMENT_SETTINGS,
+    variables: { id: GeneralFragmentID.SETTINGS },
+  })
+
+  ;[
+    course,
+    seoData,
+    songData,
+    header,
+    teacherContent,
+    faqContent,
+    consultationContent,
+    footerContent,
+    processContent,
+    consultationFormContent,
+    paymentSettingsContent,
+  ] = await Promise.allSettled([
+    coursePromise,
+    seoPromise,
+    songPromise,
+    headerPromise,
+    teacherPromise,
+    faqPromise,
+    consultationPromise,
+    footerPromise,
+    processPromise,
+    consultationFormPromise,
+    paymentSettingsPromise,
+  ])
+
+  const consultationFormData = consultationFormContent?.value?.data?.form || null
+  const faqData = faqContent?.value?.data?.faq?.content || null
+  const consultationData = consultationContent?.value?.data?.consultation || null
+  const footerData = footerContent?.value?.data?.footer || null
+  const teacherData = teacherContent?.value?.data?.teacher || null
+  const processData = processContent?.value?.data?.learningProcess || null
+  const background = course?.value?.data?.course?.content?.background || null
+  const headerData = header?.value?.data?.generalFragment?.header || null
+  const songUrl = songData?.value?.data?.generalFragment?.audio?.song?.node?.mediaItemUrl || null
+  const paymentSettingsData =
+    paymentSettingsContent?.value?.data?.generalFragment?.siteSettings?.paymentSettings || null
+  const openingTheRhythmData = course?.value?.data?.course?.content || null
+  const SEO = {
+    ...(seoData?.value.data?.page?.seo || null),
+    defaultIcon: seoData.value.data?.defaultIcon?.mediaItemUrl || null,
+    appleIcon: seoData.value.data?.appleIcon?.mediaItemUrl || null,
+    ogLocale: 'ru_RU',
+    twitterCard: 'summary_large_image',
+  }
+
+  return addApolloState(client, {
     props: {
       consultationFormData,
       faqData,
@@ -102,11 +149,12 @@ export const getStaticProps = async () => {
       teacherData,
       processData,
       SEO,
+      openingTheRhythmData,
       background,
-      openingTheRhythm,
       headerData,
       songUrl,
+      paymentSettingsData,
     },
     revalidate: 3600,
-  }
+  })
 }

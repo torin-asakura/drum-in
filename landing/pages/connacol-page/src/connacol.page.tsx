@@ -1,94 +1,48 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
-import { useEffect }                from 'react'
-import { useState }                 from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
+import { useState }                  from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { CourseProcessBlock }       from '@landing/course-process-fragment'
-import { CtaBlock }                 from '@landing/cta-fragment'
-import { FaqBlock }                 from '@landing/faq'
-import { FooterBlock }              from '@landing/footer-fragment'
-import { HeaderBlock }              from '@landing/header-fragment'
-import { HeroConnacolBlock }        from '@landing/hero-connacol-fragment'
-import { ModalFormConnacol }        from '@landing/modal-form-connacol'
-import { ModalMobileFormConnacol }  from '@landing/modal-form-connacol'
-import { PriceConnacolBlock }       from '@landing/price-connacol-fragment'
-import { StartLearningBlock }       from '@landing/start-learning-fragment'
-import { TeacherBlock }             from '@landing/teacher-fragment'
-import { Seo }                      from '@shared/seo-fragment'
-import { Box }                      from '@ui/layout'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { CourseProcessBlock }        from '@landing/course-process-fragment'
+import { CtaBlock }                  from '@landing/cta-fragment'
+import { FaqBlock }                  from '@landing/faq'
+import { FooterBlock }               from '@landing/footer-fragment'
+import { HeaderBlock }               from '@landing/header-fragment'
+import { HeroConnacolBlock }         from '@landing/hero-connacol-fragment'
+import { ModalFormConnacol }         from '@landing/modal-form-connacol'
+import { ModalMobileFormConnacol }   from '@landing/modal-form-connacol'
+import { PriceConnacolBlock }        from '@landing/price-connacol-fragment'
+import { StartLearningBlock }        from '@landing/start-learning-fragment'
+import { TeacherBlock }              from '@landing/teacher-fragment'
+import { MainScrollContainer }       from '@shared/main-scroll-container'
+import { Seo }                       from '@shared/seo-fragment'
+import { Box }                       from '@ui/layout'
+import { usePlayer }                 from '@shared/utils/src'
 
-import { ConnacolPageProps }        from './connacol.interfaces'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './connacol.constants'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './connacol.constants'
+import { ConnacolPageProps }         from './connacol.interfaces'
 
-export const ConnacolPage: FC<ConnacolPageProps> = ({
-  SEO,
-  faqData,
-  consultationData,
-  footerData,
-  consultationFormData,
-  teacherData,
-  processData,
-  connacolData,
-  background,
-  songUrl,
-  headerData,
-}) => {
+export const ConnacolPage: FC<ConnacolPageProps> = ({ SEO, connacolData, background, songUrl }) => {
   const containerRef = useRef(null)
   const [visibleModal, setVisibleModal] = useState<boolean>(false)
   const [visibleModalMobile, setVisibleModalMobile] = useState<boolean>(false)
 
-  const [playSong, setPlaySong] = useState<boolean>(false)
-  const songElement = useRef<HTMLAudioElement | undefined>()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && songUrl !== undefined) {
-      songElement.current = new Audio(songUrl || '')
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        songElement.current?.pause()
-        songElement.current = undefined
-      }
-    }
-  }, [songUrl])
-
-  useEffect(() => {
-    if (playSong) {
-      songElement?.current?.play()
-    } else {
-      songElement?.current?.pause()
-    }
-  }, [playSong])
+  const { playSong, setPlaySong } = usePlayer(songUrl)
 
   return (
     <Box backgroundColor='background.blackAmber' flexWrap='wrap'>
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
-        <HeaderBlock
-          headerData={headerData}
-          consultationData={consultationData}
-          consultationFormData={consultationFormData}
-        />
+        <HeaderBlock />
         <Seo seo={SEO} />
-        <main style={{ width: '100%', height: '100%' }} data-scroll-container ref={containerRef}>
+        <MainScrollContainer containerRef={containerRef}>
           <HeroConnacolBlock background={background} connacolData={connacolData} />
-          <CourseProcessBlock processData={processData} />
+          <CourseProcessBlock />
           <Box
             width='100%'
             backgroundImage={`url(${background?.desktop?.teacher?.node.sourceUrl})`}
@@ -101,19 +55,12 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <TeacherBlock
-                teacherData={teacherData}
-                playSong={playSong}
-                setPlaySong={setPlaySong}
-              />
+              <TeacherBlock playSong={playSong} setPlaySong={setPlaySong} />
             </Box>
           </Box>
           <PriceConnacolBlock connacolData={connacolData} />
-          <FaqBlock faqData={faqData} />
-          <CtaBlock
-            consultationData={consultationData}
-            consultationFormData={consultationFormData}
-          />
+          <FaqBlock />
+          <CtaBlock />
           <Box
             display={['none', 'none', 'flex']}
             width='100%'
@@ -127,7 +74,7 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
           <Box
@@ -143,10 +90,10 @@ export const ConnacolPage: FC<ConnacolPageProps> = ({
               backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
               backgroundSize='contain'
             >
-              <FooterBlock footerData={footerData} />
+              <FooterBlock />
             </Box>
           </Box>
-        </main>
+        </MainScrollContainer>
         <StartLearningBlock
           onClick={() => setVisibleModal(true)}
           onClickMobile={() => setVisibleModalMobile(true)}
