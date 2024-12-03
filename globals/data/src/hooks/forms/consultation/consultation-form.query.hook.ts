@@ -6,7 +6,7 @@ import { FormID }                from '../../../query.constants'
 export const useGetConsultationFormData = () => {
   const { data } = useQuery(GET_CONSULTATION_FORM, {
     variables: { id: FormID.consultation.id },
-    fetchPolicy: 'cache-only',
+    fetchPolicy: 'cache-and-network',
   })
   const consultationFormData = data?.form
   return { consultationFormData }

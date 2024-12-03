@@ -6,7 +6,7 @@ import { GeneralFragmentID } from '../../query.constants'
 export const useHeader = () => {
   const { data } = useQuery(GET_HEADER, {
     variables: { id: GeneralFragmentID.HEADER },
-    fetchPolicy: 'cache-only',
+    fetchPolicy: 'cache-and-network',
   })
   const headerData = data?.generalFragment?.header
 
