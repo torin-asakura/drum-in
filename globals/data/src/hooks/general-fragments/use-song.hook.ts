@@ -6,7 +6,7 @@ import { GeneralFragmentID } from '../../query.constants'
 export const useSong = () => {
   const { data } = useQuery(GET_SONG, {
     variables: { id: GeneralFragmentID.SONG },
-    fetchPolicy: 'cache-only',
+    fetchPolicy: 'cache-and-network',
   })
 
   const songUrl = data?.generalFragment?.audio?.song?.node?.mediaItemUrl

@@ -6,7 +6,7 @@ import { GeneralFragmentID }     from '../../query.constants'
 export const useProcessEducation = () => {
   const { data } = useQuery(GET_PROCESS_EDUCATION, {
     variables: { id: GeneralFragmentID.PROCESS },
-    fetchPolicy: 'cache-only',
+    fetchPolicy: 'cache-and-network',
   })
   const processEducationData = data?.generalFragment?.learningProcess
   return { processEducationData }

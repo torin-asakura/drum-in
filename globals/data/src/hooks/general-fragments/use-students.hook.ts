@@ -6,7 +6,7 @@ import { GeneralFragmentID } from '../../query.constants'
 export const useStudents = () => {
   const { data } = useQuery(GET_STUDENTS, {
     variables: { id: GeneralFragmentID.STUDENTS },
-    fetchPolicy: 'cache-only',
+    fetchPolicy: 'cache-and-network',
   })
   const studentsData = data?.generalFragment?.students
   return { studentsData }
