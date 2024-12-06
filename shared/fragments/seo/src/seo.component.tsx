@@ -15,7 +15,13 @@ export const Seo: FC<SeoProps> = ({ seo }) => {
       link={[
         {
           rel: 'icon',
-          href: seo.defaultIcon,
+          href: seo.lightThemeIcon,
+          media: '(prefers-color-scheme: light)',
+        },
+        {
+          rel: 'icon',
+          href: seo.darkThemeIcon,
+          media: '(prefers-color-scheme: dark)',
         },
         {
           rel: 'apple-touch-icon',
