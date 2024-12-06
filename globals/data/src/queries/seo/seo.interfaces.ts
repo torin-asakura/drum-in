@@ -1,8 +1,9 @@
 export type SeoDataProps = {
   ogLocale: string
   twitterCard: string
-  defaultIcon?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
-  appleIcon?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
+  lightThemeIcon: string
+  darkThemeIcon: string
+  appleIcon: string
   metaDesc?: string | null
   focuskw?: string | null
   opengraphType?: string | null
@@ -14,7 +15,10 @@ export type SeoDataProps = {
   twitterDescription?: string | null
   twitterTitle?: string | null
   title?: string | null
-  opengraphImage?: { __typename?: 'MediaItem'; mediaItemUrl?: string | null } | null
+  opengraphImage?: {
+    __typename?: 'MediaItem'
+    mediaItemUrl?: string | null
+  } | null
   twitterImage?: { __typename?: 'MediaItem'; sourceUrl?: string | null } | null
   breadcrumbs?: Array<{
     __typename?: 'SEOPostTypeBreadcrumbs'
