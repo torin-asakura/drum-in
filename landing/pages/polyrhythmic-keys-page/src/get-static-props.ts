@@ -133,8 +133,9 @@ export const getStaticProps = async () => {
   const polyrhythmicKeysData = course?.value?.data?.individualCourse || null
   const SEO = {
     ...(seoData?.value.data?.page?.seo || null),
-    defaultIcon: seoData.value.data?.defaultIcon?.mediaItemUrl || null,
-    appleIcon: seoData.value.data?.appleIcon?.mediaItemUrl || null,
+    lightThemeIcon: '/drum-in__favicon_dark.png',
+    darkThemeIcon: '/drum-in__favicon_light.png',
+    appleIcon: '/drum-in__favicon_apple-touch-icon.png',
     ogLocale: 'ru_RU',
     twitterCard: 'summary_large_image',
   }
