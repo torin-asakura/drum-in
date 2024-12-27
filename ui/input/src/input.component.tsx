@@ -49,9 +49,11 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   const { triggerProps, layerProps, render, setOpen } = usePopover('bottom-center', 9, 'custom')
 
   useEffect(() => {
-    if (errorText) setOpen(true)
-    else setOpen(false)
-  }, [value])
+    if (focus) {
+      if (errorText) setOpen(true)
+      else setOpen(false)
+    }
+  }, [value, focus])
 
   return (
     <Container
