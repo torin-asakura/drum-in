@@ -546,9 +546,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/tinkoff-payment-widget@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@atls/tinkoff-payment-widget@npm:0.0.3"
+"@atls/tinkoff-payment-widget@portal:/home/operator/work/atls_reactjs/packages/payment-widget::locator=drum-in%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@atls/tinkoff-payment-widget@portal:/home/operator/work/atls_reactjs/packages/payment-widget::locator=drum-in%40workspace%3A."
   dependencies:
     "@atls-ui-parts/button": "npm:0.0.12"
     "@atls-ui-parts/condition": "npm:0.0.4"
@@ -563,9 +563,8 @@ __metadata:
     "@emotion/react": 11.9.3
     "@emotion/styled": 11.9.3
     react: 18.2.0
-  checksum: e3757edd2f223341ad5fcda5d283077e14627ea55c06a1f599958fef1f9ae3abd5584bf8c204b905784cb8296793280f7b2688e0ce9ff698364770fbab2115bb
   languageName: node
-  linkType: hard
+  linkType: soft
 
 "@atls/webpack-proto-imports-loader@npm:0.0.9":
   version: 0.0.9
@@ -6037,6 +6036,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-google-recaptcha-v3: "npm:1.10.1"
@@ -9106,6 +9106,7 @@ __metadata:
     "@types/react-dom": "npm:17.0.20"
     eslint: "npm:=8.18.0"
     husky: "npm:8.0.3"
+    prettier: "npm:2.8.8"
     typescript: "npm:4.6.2"
   languageName: unknown
   linkType: soft
@@ -14306,7 +14307,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1, prettier@npm:^2.6.2":
+"prettier@npm:2.8.8, prettier@npm:^2.5.1, prettier@npm:^2.6.2":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:

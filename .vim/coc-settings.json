@@ -1,0 +1,9 @@
+{
+  "eslint.packageManager": "yarn",
+  "eslint.nodePath": ".yarn/sdks",
+  "workspace.workspaceFolderCheckCwd": false,
+  "prettier.configPath": ".vim/prettier.config.cjs",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+  "tsserver.useLocalTsdk": true,
+  "tsserver.tsdk": ".yarn/sdks/typescript/lib"
+}
