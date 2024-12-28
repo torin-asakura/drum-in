@@ -6,6 +6,5 @@ import { popoverPartStyles } from './error-popover-part.styles'
 
 const Container = styled.div(() => popoverPartStyles)
 
-export const ErrorPopoverPart = ({ render, layerProps, text }) => {
-  return render(<Container {...layerProps}>{text}</Container>)
-}
+export const ErrorPopoverPart = ({ render, layerProps, text }) =>
+  render(<Container {...layerProps}>{text}</Container>)

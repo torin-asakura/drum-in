@@ -27,9 +27,7 @@ const usePopover = (placement, offset = 9, trigger = 'click') => {
       }
     }
     if (value === 'custom') {
-      return {
-        ...triggerProps,
-      }
+      return triggerProps
     }
 
     return {}

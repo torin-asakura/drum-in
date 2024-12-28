@@ -2,7 +2,7 @@ import { TerminalScreen } from './terminal.enum'
 
 export interface TerminalProps {
   amount: number
-  disabled: boolean
+  privacyPolicy: boolean
   screen: TerminalScreen
   terminalStoreId?: string | null
 }

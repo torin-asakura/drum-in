@@ -25,8 +25,8 @@ const FormContent: FC<FormContentProps> = ({ amount = 0, storeId }) => {
         <Terminal
           terminalStoreId={storeId}
           amount={amount}
-          disabled={!privacyPolicy}
           screen={TerminalScreen.Desktop}
+          privacyPolicy={privacyPolicy}
         />
         <Layout flexBasis={20} flexShrink={0} />
         <Row>
@@ -45,8 +45,8 @@ const FormContent: FC<FormContentProps> = ({ amount = 0, storeId }) => {
         <Terminal
           terminalStoreId={storeId}
           amount={amount}
-          disabled={!privacyPolicy}
           screen={TerminalScreen.Mobile}
+          privacyPolicy={privacyPolicy}
         />
         <Layout flexBasis={16} flexShrink={0} />
         <Row>

@@ -6,15 +6,12 @@ import React                        from 'react'
 import { ForwardRefRenderFunction } from 'react'
 import { useState }                 from 'react'
 import { useRef }                   from 'react'
-import { useEffect }                from 'react'
 import { forwardRef }               from 'react'
 import { layout }                   from 'styled-system'
 
 import { useHover }                 from '@ui/utils'
-import { usePopover }               from '@ui/utils'
 
 import { InputProps }               from './input.interfaces'
-import { ErrorPopoverPart }         from './popover-part'
 import { baseStyles }               from './input.styles'
 import { shapeStyles }              from './input.styles'
 import { appearanceStyles }         from './input.styles'
@@ -46,18 +43,8 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
     ref = useRef(null) // eslint-disable-line
   }
 
-  const { triggerProps, layerProps, render, setOpen } = usePopover('bottom-center', 9, 'custom')
-
-  useEffect(() => {
-    if (focus) {
-      if (errorText) setOpen(true)
-      else setOpen(false)
-    }
-  }, [value, focus])
-
   return (
     <Container
-      {...triggerProps}
       type={type}
       // @ts-ignore
       onBlur={() => {
@@ -70,7 +57,6 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
       }}
       {...hoverProps}
     >
-      <ErrorPopoverPart render={render} layerProps={layerProps} text={errorText} />
       <InputElement
         {...props}
         size={size}

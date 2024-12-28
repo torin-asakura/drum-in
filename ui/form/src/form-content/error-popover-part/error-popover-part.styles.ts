@@ -8,6 +8,6 @@ export const popoverPartStyles: styleFn = ({ theme }) => ({
   fontFamily: theme.fonts.primary,
   padding: 20,
   borderRadius: 20,
-  whiteSpace: 'nowrap',
+  whiteSpace: 'pre-wrap',
   zIndex: 10000,
 })
