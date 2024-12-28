@@ -11,7 +11,6 @@
   ],
   "resolutions": {
     "@apollo/client": "3.6.9",
-    "@atls/tinkoff-payment-widget": "portal:/home/operator/work/atls_reactjs/packages/payment-widget",
     "@emotion/react": "11.9.3",
     "@types/eslint": "8",
     "@types/node": "16",
