@@ -26,6 +26,9 @@ const usePopover = (placement, offset = 9, trigger = 'click') => {
         onMouseLeave: () => setOpen(false),
       }
     }
+    if (value === 'custom') {
+      return triggerProps
+    }
 
     return {}
   }

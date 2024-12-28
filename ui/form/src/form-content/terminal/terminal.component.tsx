@@ -5,22 +5,23 @@ import { Widget }               from '@atls/tinkoff-payment-widget'
 
 import React                    from 'react'
 import { FC }                   from 'react'
+import { useState }             from 'react'
 import { useIntl }              from 'react-intl'
 
-import { Button }               from '@ui/button'
 import { ButtonSize }           from '@ui/button'
 import { ButtonVariant }        from '@ui/button'
 import { Input }                from '@ui/input'
 import { InputSize }            from '@ui/input'
 import { Box }                  from '@ui/layout'
 import { Layout }               from '@ui/layout'
-import { Text }                 from '@ui/text'
 
+import { ButtonPart }           from './button-part'
 import { TerminalScreen }       from './terminal.enum'
 import { TerminalProps }        from './terminal.interfaces'
 
-const Terminal: FC<TerminalProps> = ({ terminalStoreId, amount, disabled, screen }) => {
+const Terminal: FC<TerminalProps> = ({ terminalStoreId, amount, screen, privacyPolicy }) => {
   const { formatMessage } = useIntl()
+  const [resultErrorMessage, setResultErrorMessage] = useState<string>('')
   const inputProps = screen === TerminalScreen.Desktop ? {} : { size: 'small' as InputSize }
   const layoutProps = {
     flexBasis: screen === TerminalScreen.Desktop ? 28 : 16,
@@ -42,7 +43,7 @@ const Terminal: FC<TerminalProps> = ({ terminalStoreId, amount, disabled, screen
   const storeId = typeof terminalStoreId === 'string' ? terminalStoreId : ''
 
   return (
-    <Widget amount={amount} settings={{ storeId }} disabled={disabled}>
+    <Widget amount={amount} settings={{ storeId }} disabled={false}>
       <InputWrapper name={AdditionalFieldsType.Name}>
         {(props) => (
           <Box flexDirection='column'>
@@ -87,15 +88,15 @@ const Terminal: FC<TerminalProps> = ({ terminalStoreId, amount, disabled, screen
       </InputWrapper>
       <ButtonWrapper>
         {(props) => (
-          <Box>
-            <Button {...props} {...buttonProps}>
-              <Text {...textProps}>
-                {formatMessage({
-                  id: 'landing_modal_forms.pay',
-                })}
-              </Text>
-            </Button>
-          </Box>
+          <ButtonPart
+            formatMessage={formatMessage}
+            privacyPolicy={privacyPolicy}
+            resultErrorMessage={resultErrorMessage}
+            setResultErrorMessage={setResultErrorMessage}
+            buttonProps={buttonProps}
+            textProps={textProps}
+            {...props}
+          />
         )}
       </ButtonWrapper>
     </Widget>
