@@ -546,9 +546,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/tinkoff-payment-widget@portal:/home/operator/work/atls_reactjs/packages/payment-widget::locator=drum-in%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@atls/tinkoff-payment-widget@portal:/home/operator/work/atls_reactjs/packages/payment-widget::locator=drum-in%40workspace%3A."
+"@atls/tinkoff-payment-widget@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@atls/tinkoff-payment-widget@npm:0.1.5"
   dependencies:
     "@atls-ui-parts/button": "npm:0.0.12"
     "@atls-ui-parts/condition": "npm:0.0.4"
@@ -563,8 +563,9 @@ __metadata:
     "@emotion/react": 11.9.3
     "@emotion/styled": 11.9.3
     react: 18.2.0
+  checksum: d85f81f3186c3b6a05fdb701521928f0a7f940f0202b3754c120108689c586077696c618ebef3e3596e14c7c8bc1d5229f0f5724fa46278fa5bbadf0bf0af128
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@atls/webpack-proto-imports-loader@npm:0.0.9":
   version: 0.0.9
@@ -6023,7 +6024,7 @@ __metadata:
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
     "@apollo/client": "npm:3.6.9"
-    "@atls/tinkoff-payment-widget": "npm:0.1.4"
+    "@atls/tinkoff-payment-widget": "npm:0.1.5"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"
