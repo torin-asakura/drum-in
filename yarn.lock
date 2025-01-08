@@ -546,9 +546,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/tinkoff-payment-widget@npm:0.1.4":
-  version: 0.1.4
-  resolution: "@atls/tinkoff-payment-widget@npm:0.1.4"
+"@atls/tinkoff-payment-widget@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@atls/tinkoff-payment-widget@npm:0.1.5"
   dependencies:
     "@atls-ui-parts/button": "npm:0.0.12"
     "@atls-ui-parts/condition": "npm:0.0.4"
@@ -563,7 +563,7 @@ __metadata:
     "@emotion/react": 11.9.3
     "@emotion/styled": 11.9.3
     react: 18.2.0
-  checksum: d08fa0d52c1ba99a472f1f93cfed09cefd1868fabd6d2b5b1ee9cbbe4ed14bab42d04a59a61d852f049a9f04deb3818b041087c89e88087579ceea4241950d7f
+  checksum: d85f81f3186c3b6a05fdb701521928f0a7f940f0202b3754c120108689c586077696c618ebef3e3596e14c7c8bc1d5229f0f5724fa46278fa5bbadf0bf0af128
   languageName: node
   linkType: hard
 
@@ -6024,7 +6024,7 @@ __metadata:
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
     "@apollo/client": "npm:3.6.9"
-    "@atls/tinkoff-payment-widget": "npm:0.1.4"
+    "@atls/tinkoff-payment-widget": "npm:0.1.5"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"
