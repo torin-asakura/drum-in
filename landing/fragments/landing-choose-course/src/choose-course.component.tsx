@@ -29,7 +29,7 @@ const ChooseCourseBlock: FC<ChooseCourseBlockProps> = ({ mainPageData }) => (
           </Text>
         </Box>
         <Layout flexBasis={[24, 44, 64]} />
-        <SliderBlock chooseCourseData={mainPageData.chooseCourse} />
+        <SliderBlock chooseCourseData={mainPageData?.chooseCourse} />
         <Layout flexBasis={[32, 60, 90]} />
       </Column>
     </Box>

@@ -25,7 +25,7 @@ const Hero: FC<HeroProps> = forwardRef(({ mainPageData, background }, ref: any) 
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-        <BannerBlock heroData={mainPageData.hero} />
+        <BannerBlock heroData={mainPageData?.hero} />
         <TapeBlock runningLineData={mainPageData?.runningLine} />
         <ChooseCourseBlock mainPageData={mainPageData} />
       </Box>
@@ -44,7 +44,7 @@ const Hero: FC<HeroProps> = forwardRef(({ mainPageData, background }, ref: any) 
         backgroundImage={`url(${background?.noise?.node.sourceUrl})`}
         backgroundSize='contain'
       >
-        <BannerBlock heroData={mainPageData.hero} />
+        <BannerBlock heroData={mainPageData?.hero} />
         <TapeBlock runningLineData={mainPageData?.runningLine} />
         <ChooseCourseBlock mainPageData={mainPageData} />
       </Box>
