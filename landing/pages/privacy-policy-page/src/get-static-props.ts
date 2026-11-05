@@ -52,7 +52,7 @@ export const getStaticProps = async () => {
   const privacyPolicyData =
     privacyPolicyContent?.value?.data?.generalFragment?.privacyPolicy || null
   const SEO = {
-    ...(seoData?.value.data?.page?.seo || null),
+    ...(seoData?.value?.data?.page?.seo || null),
     lightThemeIcon: '/drum-in__favicon_dark.png',
     darkThemeIcon: '/drum-in__favicon_light.png',
     appleIcon: '/drum-in__favicon_apple-touch-icon.png',

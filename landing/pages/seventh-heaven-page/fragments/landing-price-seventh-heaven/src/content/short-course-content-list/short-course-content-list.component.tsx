@@ -4,6 +4,10 @@ import { FormattedMessage } from 'react-intl'
 import { BulletedList }     from '@shared/bulleted-list-fragment'
 
 export const ShortCourseContentList = ({ connacolData }) => {
+  if (!connacolData?.individualCourseData?.price) {
+    return null
+  }
+
   const videoLessonCount = parseInt(
     connacolData.individualCourseData.price.videoTrainingsNumber,
     10

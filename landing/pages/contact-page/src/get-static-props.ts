@@ -51,7 +51,7 @@ export const getStaticProps = async () => {
   const headerData = header?.value?.data?.generalFragment?.header || null
   const contactsData = contactsContent?.value?.data?.generalFragment?.contacts || null
   const SEO = {
-    ...(seoData?.value.data?.page?.seo || null),
+    ...(seoData?.value?.data?.page?.seo || null),
     lightThemeIcon: '/drum-in__favicon_dark.png',
     darkThemeIcon: '/drum-in__favicon_light.png',
     appleIcon: '/drum-in__favicon_apple-touch-icon.png',

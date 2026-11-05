@@ -75,13 +75,13 @@ export const HomePage: FC<IndexPageProps> = ({ SEO, mainPageData, background, so
                 </Box>
                 <Box order={{ _: 2, laptop: 1, wide: 1 }}>
                   <PrivateLessonBlock
-                    privateLessonData={mainPageData.individualLesson}
+                    privateLessonData={mainPageData?.individualLesson}
                     {...getObserverOptions(ModuleID.PRIVATE_LESSON)}
                   />
                 </Box>
                 <Box width='100%' order={{ _: 0, laptop: 2, wide: 2 }}>
                   <LearningProcessBlock
-                    learningProcessData={mainPageData.slider}
+                    learningProcessData={mainPageData?.slider}
                     {...getObserverOptions(ModuleID.LEARNING_PROCESS)}
                   />
                 </Box>
@@ -89,7 +89,7 @@ export const HomePage: FC<IndexPageProps> = ({ SEO, mainPageData, background, so
             </Box>
             <Layout height={[40, 0, 0, 0]} />
             <StudentsBlock
-              mainData={mainPageData.students}
+              mainData={mainPageData?.students}
               {...getObserverOptions(ModuleID.STUDENTS)}
             />
             <FaqBlock {...getObserverOptions(ModuleID.FAQ)} />
