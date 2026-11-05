@@ -1,0 +1,15 @@
+diff --git a/dist/ui/input/input.component.d.ts b/dist/ui/input/input.component.d.ts
+index 2450465003d1ebb22aaa9079c746cf6d7917a063..d6431f74a1cac0cb553e2a8002b0244aecb531c2 100644
+--- a/dist/ui/input/input.component.d.ts
++++ b/dist/ui/input/input.component.d.ts
+@@ -1,8 +1,8 @@
+ import type { InputProps as BaseInputProps } from '@atls-ui-parts/input';
+ import type { ForwardRefRenderFunction } from 'react';
+-import styled from '@emotion/styled';
++import type { StyledComponent } from '@emotion/styled';
+ import React from 'react';
+-export declare const InputElement: styled.StyledComponent<any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
++export declare const InputElement: StyledComponent<any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
+ interface InputProps extends BaseInputProps {
+     errorText?: string;
+ }
