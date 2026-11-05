@@ -110,7 +110,7 @@ export const getStaticProps = async () => {
     mainPagePromise,
   ])
 
-  const studentsData = studentsContent?.value?.data?.generalFragment?.students
+  const studentsData = studentsContent?.value?.data?.generalFragment?.students ?? null
   const mainPageData = mainPageContent?.value?.data?.generalFragment?.main || null
   const consultationFormData = consultationFormContent?.value?.data?.form || null
   const faqData = faqContent?.value?.data?.faq?.content || null
