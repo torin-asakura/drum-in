@@ -567,6 +567,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/tinkoff-payment-widget@patch:@atls/tinkoff-payment-widget@npm%3A0.1.5#~/.yarn/patches/@atls-tinkoff-payment-widget-npm-0.1.5-3d90437d59.patch":
+  version: 0.1.5
+  resolution: "@atls/tinkoff-payment-widget@patch:@atls/tinkoff-payment-widget@npm%3A0.1.5#~/.yarn/patches/@atls-tinkoff-payment-widget-npm-0.1.5-3d90437d59.patch::version=0.1.5&hash=6f4d34"
+  dependencies:
+    "@atls-ui-parts/button": "npm:0.0.12"
+    "@atls-ui-parts/condition": "npm:0.0.4"
+    "@atls-ui-parts/hidden-input": "npm:0.0.6"
+    "@atls-ui-parts/input": "npm:0.0.13"
+    "@atls-ui-parts/layout": "npm:0.0.7"
+    "@atls-ui-parts/text": "npm:0.0.11"
+    react-intl: "npm:6.4.4"
+    react-laag: "npm:2.0.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+  checksum: f0e91608252ae933277e13196d033a3b1a608c57630e8507dd91ed31ecfcf11e8c29e5b00413c11bb656785e2966beefaea898ecfdf1bbae5f6ec8f8efccb0f8
+  languageName: node
+  linkType: hard
+
 "@atls/webpack-proto-imports-loader@npm:0.0.9":
   version: 0.0.9
   resolution: "@atls/webpack-proto-imports-loader@npm:0.0.9"
@@ -6024,7 +6045,7 @@ __metadata:
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
     "@apollo/client": "npm:3.6.9"
-    "@atls/tinkoff-payment-widget": "npm:0.1.5"
+    "@atls/tinkoff-payment-widget": "patch:@atls/tinkoff-payment-widget@npm%3A0.1.5#~/.yarn/patches/@atls-tinkoff-payment-widget-npm-0.1.5-3d90437d59.patch"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"

@@ -5,20 +5,26 @@ on:
     types: [closed]
     branches:
       - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   run:
     name: Release
+    if: (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master') || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6.0.2
         with:
           ref: master
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: '18.13'
 
@@ -29,13 +35,18 @@ jobs:
         run: |
           (curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.23.0/pack-v0.23.0-linux.tgz" | sudo tar -C /usr/local/bin/ --no-same-owner -xzv pack)
 
-      - name: Login to Yandex Container Registry
-        run: echo -e $YCR_KEYFILE | docker login -u json_key --password-stdin cr.yandex
+      - name: Login to GitHub Container Registry
+        run: printf '%s' "$GHCR_TOKEN" | docker login ghcr.io --username "$GHCR_USER" --password-stdin
         env:
-          YCR_KEYFILE: ${{ secrets.YCR_KEYFILE }}
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GHCR_USER: ${{ github.actor }}
 
       - name: Release
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         run: |
-          yarn workspaces changed foreach image pack --publish --tag-policy hash-timestamp --registry 'cr.yandex/${{ secrets.YCR_PROJECT_ID }}/drum-instructor-'
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
+            yarn workspace @landing/renderer-entrypoint image pack --publish --tag-policy hash-timestamp --registry ghcr.io/torin-asakura/drum-instructor-
+          else
+            yarn workspaces changed foreach image pack --publish --tag-policy hash-timestamp --registry ghcr.io/torin-asakura/drum-instructor-
+          fi
