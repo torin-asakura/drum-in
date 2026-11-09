@@ -95,7 +95,9 @@ jobs:
             docker pull "$image"
           fi
           docker image inspect --format '{{.Architecture}} {{.Config.User}}' "$image"
-          docker run --detach --name drumin-acceptance --read-only --tmpfs /tmp:rw,nosuid,size=64m --publish 127.0.0.1:3000:3000 --env PORT=3000 --env HOSTNAME=0.0.0.0 --entrypoint /usr/bin/node --workdir /workspace/landing/entrypoints/renderer "$image" --require /workspace/.pnp.cjs dist/index.js
+          docker create --name drumin-artifact --entrypoint /usr/bin/true "$image"
+          docker cp drumin-artifact:/workspace/landing/entrypoints/renderer/dist/.next "$RUNNER_TEMP/drumin-next"
+          docker run --detach --name drumin-acceptance --read-only --tmpfs /tmp:rw,nosuid,size=64m --volume "$RUNNER_TEMP/drumin-next:/workspace/landing/entrypoints/renderer/dist/.next:rw" --publish 127.0.0.1:3000:3000 --add-host wp.drumin.pro:37.140.192.245 --env PORT=3000 --env HOSTNAME=0.0.0.0 --env WORDPRESS_GRAPHQL_URL=https://wp.drumin.pro/graphql --env REVALIDATE_DATA_TOKEN=acceptance-only-synthetic-token --entrypoint /usr/bin/node --workdir /workspace/landing/entrypoints/renderer "$image" --require /workspace/.pnp.cjs dist/index.js
           curl --fail --silent --show-error --retry 12 --retry-connrefused --retry-all-errors --retry-delay 2 --max-time 10 http://127.0.0.1:3000/ --output "$RUNNER_TEMP/drumin-home.html"
           for source in landing/entrypoints/renderer/src/public/*.png; do
             name="${source##*/}"
@@ -104,6 +106,10 @@ jobs:
           done
           status=$(curl --silent --show-error --max-time 10 --output /dev/null --write-out '%{http_code}' http://127.0.0.1:3000/api/revalidate)
           test "$status" = 401
+          status=$(curl --silent --show-error --max-time 10 --header 'Authorization: Bearer acceptance-invalid-token' --output /dev/null --write-out '%{http_code}' http://127.0.0.1:3000/api/revalidate)
+          test "$status" = 401
+          curl --fail --silent --show-error --max-time 180 --request POST --header 'Authorization: Bearer acceptance-only-synthetic-token' http://127.0.0.1:3000/api/revalidate --output "$RUNNER_TEMP/revalidation.json"
+          jq -e '.revalidated == true' "$RUNNER_TEMP/revalidation.json"
           python3 - "$RUNNER_TEMP/drumin-home.html" <<'PY'
           import json
           import sys
@@ -138,7 +144,11 @@ jobs:
         if: always()
         shell: bash
         run: |
-          if docker container inspect drumin-acceptance > /dev/null 2>&1; then
-            docker logs --tail 30 drumin-acceptance
-            docker rm --force drumin-acceptance
-          fi
+          for name in drumin-acceptance drumin-artifact; do
+            if docker container inspect "$name" > /dev/null 2>&1; then
+              if [ "$name" = drumin-acceptance ]; then
+                docker logs --tail 30 "$name"
+              fi
+              docker rm --force "$name"
+            fi
+          done

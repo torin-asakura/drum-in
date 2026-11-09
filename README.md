@@ -52,3 +52,9 @@ Bao delivery. No live token belongs in this repository or the image. Without
 the variable the explicit revalidation endpoint returns 401, while ordinary
 page delivery and scheduled ISR remain available. The empty .env.example is
 only a field reference; a local .env.local is ignored.
+
+Send the configured token in the Authorization Bearer header, not in the URL.
+The existing query parameter remains compatible with prior callers. Image
+acceptance uses an unrelated synthetic token to test refusal and successful
+revalidation against real CMS data with a writable Next cache and a read-only
+root filesystem. Production credentials are never passed to CI acceptance.

@@ -1,6 +1,7 @@
 export default async function handler(req, res) {
   const token = process.env.REVALIDATE_DATA_TOKEN
-  if (!token || req.query.secret !== token) {
+  const bearerToken = /^Bearer\s+(.+)$/i.exec(req.headers.authorization ?? '')?.[1]
+  if (!token || (bearerToken ?? req.query.secret) !== token) {
     return res.status(401).json({ message: 'Invalid token' })
   }
 
