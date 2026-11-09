@@ -43,3 +43,18 @@ WordPress hostname is available, builds select it without the legacy mapping.
 The workflow verifies real homepage content before building. Successful image
 publication does not prove the new WordPress hostname, media URLs, forms,
 DNS, or public TLS are ready; those remain deployment acceptance checks.
+
+The standalone package includes its public assets. Image acceptance verifies
+the real homepage and byte-for-byte public PNG delivery.
+
+Configure `REVALIDATE_DATA_TOKEN` only at runtime through the infrastructure's
+Bao delivery. No live token belongs in this repository or the image. Without
+the variable the explicit revalidation endpoint returns 401, while ordinary
+page delivery and scheduled ISR remain available. The empty .env.example is
+only a field reference; a local .env.local is ignored.
+
+Send the configured token in the Authorization Bearer header, not in the URL.
+The existing query parameter remains compatible with prior callers. Image
+acceptance uses an unrelated synthetic token to test refusal and successful
+revalidation against real CMS data with a writable Next cache and a read-only
+root filesystem. Production credentials are never passed to CI acceptance.

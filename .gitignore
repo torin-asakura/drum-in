@@ -66,6 +66,8 @@ credentials.json
 # local
 .ini
 .ignore
+landing/entrypoints/renderer/src/.env*
+!landing/entrypoints/renderer/src/.env.example
 
 # Next static dir
 out
