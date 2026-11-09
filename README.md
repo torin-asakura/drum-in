@@ -27,10 +27,10 @@ ATLS Node 24 builder and Yarn workspace buildpack. Pull requests build locally
 on the hosted ARM64 runner; accepted master revisions publish to GHCR with
 an immutable commit tag and the `arm64` channel tag.
 
-The Node 24 build uses Yarn's native `node-modules` linker through a build-only
-environment setting. Existing Node 18 checks retain their Plug'n'Play setup.
-Deploy the standalone server directly with Node from the renderer workspace;
-do not require a production Yarn Plug'n'Play loader for this image.
+The Node 24 build retains Yarn Plug'n'Play and disables its old experimental
+ESM loader through the native build-only `YARN_PNP_ENABLE_ESM_LOADER` setting.
+Existing Node 18 checks retain their setup. Deploy the standalone server
+directly with Node from the renderer workspace.
 
 The browser uses `https://wp.druminstructor.online/graphql`. Server-side builds
 may set `WORDPRESS_GRAPHQL_URL`; it is not a browser configuration variable.
