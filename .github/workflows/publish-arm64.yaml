@@ -79,7 +79,7 @@ jobs:
           WORDPRESS_HOSTS: ${{ steps.wordpress.outputs.hosts }}
         run: |
           image="ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/drum-instructor-landing-renderer-entrypoint:$GITHUB_SHA-arm64"
-          args=(build "$image" --builder ghcr.io/atls/builder-base:24 --buildpack ghcr.io/atls/buildpack-yarn-workspace:24 --path "$GITHUB_WORKSPACE" --env WORKSPACE=@landing/renderer-entrypoint --env SKILLS_NPM_TOKEN --env WORDPRESS_GRAPHQL_URL --trust-builder)
+          args=(build "$image" --builder ghcr.io/atls/builder-base:24 --buildpack ghcr.io/atls/buildpack-yarn-workspace:24 --path "$GITHUB_WORKSPACE" --env WORKSPACE=@landing/renderer-entrypoint --env SKILLS_NPM_TOKEN --env WORDPRESS_GRAPHQL_URL --env YARN_NODE_LINKER=node-modules --trust-builder)
           if [ -n "$WORDPRESS_HOSTS" ]; then
             args+=(--volume "$WORDPRESS_HOSTS:/etc/hosts:ro")
           fi
