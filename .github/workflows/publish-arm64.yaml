@@ -27,7 +27,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    if: github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
     runs-on: ubuntu-24.04-arm
     permissions:
       contents: read
@@ -52,7 +52,7 @@ jobs:
         shell: bash
         run: |
           endpoint='https://wp.druminstructor.online/graphql'
-          if ! curl --fail --silent --show-error --max-time 20 "$endpoint?query=%7B__typename%7D" > /dev/null; then
+          if ! curl --fail --silent --show-error --max-time 20 "$endpoint?query=%7B__typename%7D" | jq -e '.data.__typename | type == "string"' > /dev/null; then
             endpoint='https://wp.drumin.pro/graphql'
             printf '127.0.0.1 localhost\n37.140.192.245 wp.drumin.pro\n' > "$RUNNER_TEMP/wordpress-hosts"
             curl --fail --silent --show-error --max-time 20 --resolve wp.drumin.pro:443:37.140.192.245 "$endpoint?query=%7B__typename%7D" > /dev/null
