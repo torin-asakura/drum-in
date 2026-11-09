@@ -95,8 +95,8 @@ jobs:
             docker pull "$image"
           fi
           docker image inspect --format '{{.Architecture}} {{.Config.User}}' "$image"
-          docker run --detach --name drumin-acceptance --read-only --tmpfs /tmp:rw,nosuid,size=64m --publish 127.0.0.1:3000:3000 --env PORT=3000 --env HOSTNAME=0.0.0.0 --entrypoint /usr/bin/node --workdir /workspace/landing/entrypoints/renderer "$image" dist/index.js
-          curl --fail --silent --show-error --retry 12 --retry-connrefused --retry-delay 2 --max-time 10 http://127.0.0.1:3000/ --output "$RUNNER_TEMP/drumin-home.html"
+          docker run --detach --name drumin-acceptance --read-only --tmpfs /tmp:rw,nosuid,size=64m --publish 127.0.0.1:3000:3000 --env PORT=3000 --env HOSTNAME=0.0.0.0 --entrypoint /usr/bin/node --workdir /workspace/landing/entrypoints/renderer "$image" --require /workspace/.pnp.cjs dist/index.js
+          curl --fail --silent --show-error --retry 12 --retry-connrefused --retry-all-errors --retry-delay 2 --max-time 10 http://127.0.0.1:3000/ --output "$RUNNER_TEMP/drumin-home.html"
           python3 - "$RUNNER_TEMP/drumin-home.html" <<'PY'
           import json
           import sys

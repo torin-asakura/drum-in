@@ -30,7 +30,8 @@ an immutable commit tag and the `arm64` channel tag.
 The Node 24 build retains Yarn Plug'n'Play and disables its old experimental
 ESM loader through the native build-only `YARN_PNP_ENABLE_ESM_LOADER` setting.
 Existing Node 18 checks retain their setup. Deploy the standalone server
-directly with Node from the renderer workspace.
+directly with Node from the renderer workspace, preloading `/workspace/.pnp.cjs`
+with Node's native `--require` option so production dependencies remain available.
 
 The browser uses `https://wp.druminstructor.online/graphql`. Server-side builds
 may set `WORDPRESS_GRAPHQL_URL`; it is not a browser configuration variable.
